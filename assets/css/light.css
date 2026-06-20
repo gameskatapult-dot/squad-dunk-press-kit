@@ -1198,3 +1198,14 @@ h4 {
 #logo + .block__notice {
   margin-bottom: 0;
 }
+
+.gallery__caption {
+  margin: 8px 4px 0;
+  color: var(--sd-muted);
+  font-size: 1.36rem;
+  line-height: 1.4;
+}
+
+.media-placeholder-link {
+  margin-top: 12px;
+}

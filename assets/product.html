@@ -15,26 +15,73 @@
         </header>
 
         <main class="page-content" role="main">
-          <section class="block grid">
-            {{>factsheet}}
+          {{#if presskit.sections}}
+            {{#each presskit.sections}}
+              {{#ifEq id "overview"}}
+              <section class="block grid">
+                {{#if showFactsheet}}
+                {{>factsheet ..}}
+                {{/if}}
 
-            <article class="description grid__item">
-              {{>description}}
+                {{#if showDescription}}
+                <article class="description grid__item">
+                  {{>description ..}}
 
-              <h2 id="features">Features</h2>
-              <ul>
-                {{#each presskit.features}}
-                <li>{{.}}</li>
-                {{/each}}
-              </ul>
-            </article>
-          </section>
+                  {{#if showFeatures}}
+                  <h2 id="features">Features</h2>
+                  <ul>
+                    {{#each ../presskit.features}}
+                    <li>{{.}}</li>
+                    {{/each}}
+                  </ul>
+                  {{/if}}
+                </article>
+                {{/if}}
+              </section>
+              {{/ifEq}}
+
+              {{#ifEq id "media"}}
+              {{>media ..}}
+              {{/ifEq}}
+
+              {{#ifEq id "branding"}}
+              {{>branding ..}}
+              {{/ifEq}}
+
+              {{#ifEq id "links"}}
+              {{>links ..}}
+              {{/ifEq}}
+
+              {{#ifEq id "team-contact"}}
+              {{>team ..}}
+              {{/ifEq}}
+            {{/each}}
+          {{else}}
+            <section class="block grid">
+              {{>factsheet}}
+
+              <article class="description grid__item">
+                {{>description}}
+
+                <h2 id="features">Features</h2>
+                <ul>
+                  {{#each presskit.features}}
+                  <li>{{.}}</li>
+                  {{/each}}
+                </ul>
+              </article>
+            </section>
+
+            {{>mailchimp}}
+            {{>assets}}
+            {{>widgets}}
+            {{>recognition}}
+            {{>team}}
+          {{/if}}
 
           {{>mailchimp}}
-          {{>assets}}
           {{>widgets}}
           {{>recognition}}
-          {{>team}}
         </main>
 
         {{>footer}}

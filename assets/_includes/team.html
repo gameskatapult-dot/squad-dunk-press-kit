@@ -1,16 +1,18 @@
 <section class="block grid team-block">
+  {{#if presskit.showTeamSection}}
+  {{#if presskit.team}}
   <article class="grid__item grid__item--flexible team-card">
     <h2 id="credits">Team</h2>
 
-    {{#if company.title}}
-    <h3>About {{company.title}}</h3>
+    {{#if presskit.team.aboutTitle}}
+    <h3>{{presskit.team.aboutTitle}}</h3>
     <dl>
-      <dt>Boilerplate</dt>
-      <dd>{{company.description}}</dd>
+      <dt>{{presskit.team.boilerplateTitle}}</dt>
+      <dd>{{presskit.team.boilerplate}}</dd>
     </dl>
     {{/if}}
 
-    <h3>Credits</h3>
+    <h3>{{presskit.team.creditsTitle}}</h3>
     {{#if presskit.credits}}
     <dl>
       {{#each presskit.credits}}
@@ -25,10 +27,28 @@
       {{/each}}
     </dl>
     {{else}}
-    <p>Team credits are currently [TBD].</p>
+    <p>{{presskit.team.credits}}</p>
     {{/if}}
   </article>
+  {{else}}
+  <article class="grid__item grid__item--flexible team-card">
+    <h2 id="credits">Team</h2>
 
+    {{#if company.title}}
+    <h3>About {{company.title}}</h3>
+    <dl>
+      <dt>Boilerplate</dt>
+      <dd>{{company.description}}</dd>
+    </dl>
+    {{/if}}
+
+    <h3>Credits</h3>
+    <p>Team credits are currently [TBD].</p>
+  </article>
+  {{/if}}
+  {{/if}}
+
+  {{#if presskit.showContactSection}}
   {{#if presskit.contacts}}
   <article class="grid__item grid__item--flexible team-card team-card--contact">
     <h2 id="contact">Contact</h2>
@@ -49,4 +69,6 @@
     </dl>
   </article>
   {{/if}}
+  {{/if}}
 </section>
+

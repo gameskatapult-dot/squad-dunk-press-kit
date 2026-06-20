@@ -38,6 +38,200 @@
     <feature>Availability: in development. Price TBA. Languages TBD. Engine TBD.</feature>
     <feature>School squad energy: a playful schoolyard sports tone supports the game's bright arcade basketball identity.</feature>
   </features>
+  <sections>
+    <section>
+      <id>overview</id>
+      <showFactsheet>true</showFactsheet>
+      <showDescription>true</showDescription>
+      <showFeatures>true</showFeatures>
+    </section>
+    <section>
+      <id>media</id>
+    </section>
+    <section>
+      <id>branding</id>
+    </section>
+    <section>
+      <id>team-contact</id>
+      <showTeam>true</showTeam>
+      <showContact>true</showContact>
+    </section>
+  </sections>
+  <nav-sections>
+    <nav-section>
+      <id>factsheet</id>
+      <title>Factsheet</title>
+      <href>#factsheet</href>
+    </nav-section>
+    <nav-section>
+      <id>description</id>
+      <title>Description</title>
+      <href>#description</href>
+    </nav-section>
+    <nav-section>
+      <id>media</id>
+      <title>Media</title>
+      <href>#media</href>
+    </nav-section>
+    <nav-section>
+      <id>branding</id>
+      <title>Branding</title>
+      <href>#logo</href>
+    </nav-section>
+    <nav-section>
+      <id>team</id>
+      <title>Team</title>
+      <href>#credits</href>
+    </nav-section>
+    <nav-section>
+      <id>contact</id>
+      <title>Contact</title>
+      <href>#contact</href>
+    </nav-section>
+  </nav-sections>
+  <media-videos>
+    <media-video>
+      <id>prerelease-gameplay-reel</id>
+      <title>Pre-release Gameplay Reel</title>
+      <label>Private press preview</label>
+      <description>Private press preview. Link coming soon.</description>
+      <url/>
+      <status>request_access</status>
+      <enabled>true</enabled>
+    </media-video>
+    <media-video>
+      <id>reveal-trailer</id>
+      <title>Reveal Trailer</title>
+      <label>Coming soon</label>
+      <description>Coming soon.</description>
+      <url/>
+      <status>coming_soon</status>
+      <enabled>true</enabled>
+    </media-video>
+  </media-videos>
+  <manifest-screenshots>
+    <manifest-screenshot>
+      <id>first-person-possession</id>
+      <file>images/screenshots/01-first-person-possession.png</file>
+      <thumb>images/screenshots/01-first-person-possession.png.thumb.jpg</thumb>
+      <title>First-person possession</title>
+      <caption/>
+      <alt>First-person basketball possession on a colorful school court.</alt>
+      <featured>true</featured>
+    </manifest-screenshot>
+    <manifest-screenshot>
+      <id>shot-at-hoop</id>
+      <file>images/screenshots/02-shot-at-hoop.png</file>
+      <thumb>images/screenshots/02-shot-at-hoop.png.thumb.jpg</thumb>
+      <title>Shot at the hoop</title>
+      <caption/>
+      <alt>First-person shot attempt toward the basketball hoop.</alt>
+      <featured/>
+    </manifest-screenshot>
+    <manifest-screenshot>
+      <id>made-basket</id>
+      <file>images/screenshots/03-made-basket.png</file>
+      <thumb>images/screenshots/03-made-basket.png.thumb.jpg</thumb>
+      <title>Made basket</title>
+      <caption/>
+      <alt>Basketball going through the hoop during first-person gameplay.</alt>
+      <featured/>
+    </manifest-screenshot>
+    <manifest-screenshot>
+      <id>defender-pressure</id>
+      <file>images/screenshots/04-defender-pressure.png</file>
+      <thumb>images/screenshots/04-defender-pressure.png.thumb.jpg</thumb>
+      <title>Defender pressure</title>
+      <caption/>
+      <alt>Opposing player applying pressure on the court.</alt>
+      <featured/>
+    </manifest-screenshot>
+    <manifest-screenshot>
+      <id>team-setup</id>
+      <file>images/screenshots/05-team-setup.png</file>
+      <thumb>images/screenshots/05-team-setup.png.thumb.jpg</thumb>
+      <title>Team setup</title>
+      <caption/>
+      <alt>Multiplayer team setup on the Squad Dunk court.</alt>
+      <featured/>
+    </manifest-screenshot>
+    <manifest-screenshot>
+      <id>shot-preparation</id>
+      <file>images/screenshots/06-shot-preparation.png</file>
+      <thumb>images/screenshots/06-shot-preparation.png.thumb.jpg</thumb>
+      <title>Shot preparation</title>
+      <caption/>
+      <alt>First-person player preparing a basketball shot.</alt>
+      <featured/>
+    </manifest-screenshot>
+    <manifest-screenshot>
+      <id>under-rim-play</id>
+      <file>images/screenshots/07-under-rim-play.png</file>
+      <thumb>images/screenshots/07-under-rim-play.png.thumb.jpg</thumb>
+      <title>Under-rim play</title>
+      <caption/>
+      <alt>Close play under the basketball rim.</alt>
+      <featured/>
+    </manifest-screenshot>
+    <manifest-screenshot>
+      <id>jump-play</id>
+      <file>images/screenshots/08-jump-play.png</file>
+      <thumb>images/screenshots/08-jump-play.png.thumb.jpg</thumb>
+      <title>Jump play</title>
+      <caption/>
+      <alt>Player jumping during an energetic basketball play.</alt>
+      <featured/>
+    </manifest-screenshot>
+  </manifest-screenshots>
+  <branding-assets>
+    <branding-asset>
+      <id>ball-hand-icon</id>
+      <type>icon</type>
+      <file>images/logo-site-icon.png</file>
+      <title>Basketball hand icon</title>
+      <alt>Squad Dunk basketball hand icon.</alt>
+      <enabled>true</enabled>
+    </branding-asset>
+    <branding-asset>
+      <id>squad-dunk-logo</id>
+      <type>logo</type>
+      <file>images/logo.png</file>
+      <title>Squad Dunk logo</title>
+      <alt>Squad Dunk white graffiti-style logo.</alt>
+      <enabled>true</enabled>
+    </branding-asset>
+  </branding-assets>
+  <downloads>
+    <download>
+      <id>screenshots-zip</id>
+      <title>download all screenshots as .zip</title>
+      <file>images/images.zip</file>
+      <section>media</section>
+      <generated>true</generated>
+      <enabled>true</enabled>
+    </download>
+    <download>
+      <id>branding-zip</id>
+      <title>download logo files as .zip</title>
+      <file>images/logo.zip</file>
+      <section>branding</section>
+      <generated>true</generated>
+      <enabled>true</enabled>
+    </download>
+  </downloads>
+  <media-download-title>download all screenshots as .zip</media-download-title>
+  <media-download-file>images/images.zip</media-download-file>
+  <branding-download-title>download logo files as .zip</branding-download-title>
+  <branding-download-file>images/logo.zip</branding-download-file>
+  <show-team-section>true</show-team-section>
+  <show-contact-section>true</show-contact-section>
+  <team>
+    <about-title>About Katapult Games</about-title>
+    <boilerplate-title>Boilerplate</boilerplate-title>
+    <boilerplate>Katapult Games is a small video game studio based in Berlin, Germany. The team is developing Squad Dunk, a first-person, physics-based basketball game focused on online team play, readable action, and playful sports energy.</boilerplate>
+    <credits-title>Credits</credits-title>
+    <credits>Team credits are currently [TBD].</credits>
+  </team>
   <contacts>
     <contact>
       <name>Press / Business Inquiries</name>
@@ -48,4 +242,13 @@
       <link>https://katapultgames.de/</link>
     </contact>
   </contacts>
+  <links>
+    <link>
+      <id>website</id>
+      <title>Website</title>
+      <url>https://katapultgames.de/</url>
+      <label/>
+      <enabled>true</enabled>
+    </link>
+  </links>
 </product>

@@ -1,0 +1,118 @@
+{{#if presskit.mediaVideos}}
+<section class="block">
+  <h2 id="media">Media</h2>
+
+  <h3 id="videos">Videos</h3>
+  <div class="media-placeholders">
+    {{#each presskit.mediaVideos}}
+    <article class="media-placeholder-card">
+      <strong>{{title}}</strong>
+      {{#if description}}
+      <span>{{description}}</span>
+      {{else}}
+      <span>{{label}}</span>
+      {{/if}}
+      {{#if url}}
+      <a class="button media-placeholder-link" href="{{url}}">{{label}}</a>
+      {{/if}}
+    </article>
+    {{/each}}
+  </div>
+
+  {{#if presskit.manifestScreenshots}}
+  <h3 id="screenshots">Screenshots</h3>
+  {{#if presskit.mediaDownloadFile}}
+  <aside class="block__notice">
+    <a href="{{presskit.mediaDownloadFile}}">
+      {{presskit.mediaDownloadTitle}}
+    </a>
+  </aside>
+  {{/if}}
+
+  <div class="gallery clearfix" id="gallery">
+    {{#each presskit.manifestScreenshots}}
+    <div class="gallery__item">
+      <a href="{{file}}" title="{{title}}">
+        {{#if thumb}}
+        <img src="{{thumb}}" alt="{{alt}}">
+        {{else}}
+        <img src="{{file}}" alt="{{alt}}">
+        {{/if}}
+      </a>
+      {{#if caption}}
+      <p class="gallery__caption">{{caption}}</p>
+      {{/if}}
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</section>
+{{else}}
+  {{#if presskit.manifestScreenshots}}
+  <section class="block">
+    <h2 id="media">Media</h2>
+    <h3 id="screenshots">Screenshots</h3>
+    {{#if presskit.mediaDownloadFile}}
+    <aside class="block__notice">
+      <a href="{{presskit.mediaDownloadFile}}">
+        {{presskit.mediaDownloadTitle}}
+      </a>
+    </aside>
+    {{/if}}
+
+    <div class="gallery clearfix" id="gallery">
+      {{#each presskit.manifestScreenshots}}
+      <div class="gallery__item">
+        <a href="{{file}}" title="{{title}}">
+          {{#if thumb}}
+          <img src="{{thumb}}" alt="{{alt}}">
+          {{else}}
+          <img src="{{file}}" alt="{{alt}}">
+          {{/if}}
+        </a>
+        {{#if caption}}
+        <p class="gallery__caption">{{caption}}</p>
+        {{/if}}
+      </div>
+      {{/each}}
+    </div>
+  </section>
+  {{else}}
+    {{#if hasScreenshots}}
+    <section class="block">
+      <h2 id="media">Media</h2>
+      <h3 id="screenshots">Screenshots</h3>
+      <aside class="block__notice">
+        <a href="images/images.zip">
+          download all screenshots as .zip
+        </a>
+      </aside>
+
+      <div class="gallery clearfix" id="gallery">
+        {{#each images.screenshots}}
+        <div class="gallery__item">
+          <a href="images/{{.}}">
+            <img src="{{thumbOrImage .}}" alt="{{basename .}}">
+          </a>
+        </div>
+        {{/each}}
+      </div>
+
+      {{#each images.screenshotsWithCategory}}
+      <section>
+        <h4 class="capitalize screenshots-gallery-title" id="gallery-{{title}}">{{title}}</h4>
+        <div class="gallery clearfix">
+          {{#each elements}}
+          <div class="gallery__item">
+            <a href="images/{{.}}">
+              <img src="{{thumbOrImage .}}" alt="{{basename .}}">
+            </a>
+          </div>
+          {{/each}}
+        </div>
+      </section>
+      {{/each}}
+    </section>
+    {{/if}}
+  {{/if}}
+{{/if}}

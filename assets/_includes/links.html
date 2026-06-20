@@ -1,0 +1,14 @@
+{{#if presskit.links}}
+<section class="block">
+  <h2 id="links">Links</h2>
+
+  <dl>
+    {{#each presskit.links}}
+    <dt>{{title}}</dt>
+    <dd>
+      {{#if label}}{{label}} {{/if}}<a href="{{url}}">{{prettyURL url}}</a>
+    </dd>
+    {{/each}}
+  </dl>
+</section>
+{{/if}}

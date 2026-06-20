@@ -1,0 +1,47 @@
+{{#if presskit.brandingAssets}}
+<section class="block">
+  <h2 id="logo">Branding</h2>
+
+  {{#if presskit.brandingDownloadFile}}
+  <aside class="block__notice">
+    <a href="{{presskit.brandingDownloadFile}}">
+      {{presskit.brandingDownloadTitle}}
+    </a>
+  </aside>
+  {{/if}}
+
+  <div class="branding-assets">
+    {{#each presskit.brandingAssets}}
+    <a href="{{file}}" class="branding-asset" title="{{title}}">
+      <img src="{{file}}" alt="{{alt}}" class="logo">
+    </a>
+    {{/each}}
+  </div>
+</section>
+{{else}}
+  {{#if images.logos}}
+  <section class="block">
+    <h2 id="logo">Branding</h2>
+
+    <aside class="block__notice">
+      <a href="images/logo.zip">
+        download logo files as .zip
+      </a>
+    </aside>
+
+    <div class="branding-assets">
+      {{#each images.logos}}
+      <a href="images/{{.}}" class="branding-asset">
+        <img src="images/{{.}}" alt="{{basename .}}" class="logo">
+      </a>
+      {{/each}}
+    </div>
+  </section>
+  {{else}}
+  <section class="block">
+    <h2 id="logo">Branding</h2>
+
+    <p>There are currently no logos or icons available for {{presskit.title}}. Check back later for more or <a href="#contact">contact us</a> for specific requests!</p>
+  </section>
+  {{/if}}
+{{/if}}

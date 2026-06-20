@@ -1,6 +1,20 @@
 title: Squad Dunk
 website: https://katapultgames.de/
 
+sections:
+  - id: factsheet
+    enabled: true
+  - id: description
+    enabled: true
+  - id: media
+    enabled: true
+  - id: branding
+    enabled: true
+  - id: team
+    enabled: true
+  - id: contact
+    enabled: true
+
 release_dates:
   - TBA
 
@@ -45,8 +59,136 @@ features:
   - "Availability: in development. Price TBA. Languages TBD. Engine TBD."
   - "School squad energy: a playful schoolyard sports tone supports the game's bright arcade basketball identity."
 
+media:
+  videos:
+    - id: prerelease-gameplay-reel
+      title: Pre-release Gameplay Reel
+      label: Private press preview
+      description: Private press preview. Link coming soon.
+      url: ""
+      status: request_access
+      enabled: true
+    - id: reveal-trailer
+      title: Reveal Trailer
+      label: Coming soon
+      description: Coming soon.
+      url: ""
+      status: coming_soon
+      enabled: true
+  screenshots:
+    download_zip: images/images.zip
+    download_label: download all screenshots as .zip
+    items:
+      - id: first-person-possession
+        file: images/screenshots/01-first-person-possession.png
+        thumb: images/screenshots/01-first-person-possession.png.thumb.jpg
+        title: First-person possession
+        alt: First-person basketball possession on a colorful school court.
+        featured: true
+        enabled: true
+      - id: shot-at-hoop
+        file: images/screenshots/02-shot-at-hoop.png
+        thumb: images/screenshots/02-shot-at-hoop.png.thumb.jpg
+        title: Shot at the hoop
+        alt: First-person shot attempt toward the basketball hoop.
+        enabled: true
+      - id: made-basket
+        file: images/screenshots/03-made-basket.png
+        thumb: images/screenshots/03-made-basket.png.thumb.jpg
+        title: Made basket
+        alt: Basketball going through the hoop during first-person gameplay.
+        enabled: true
+      - id: defender-pressure
+        file: images/screenshots/04-defender-pressure.png
+        thumb: images/screenshots/04-defender-pressure.png.thumb.jpg
+        title: Defender pressure
+        alt: Opposing player applying pressure on the court.
+        enabled: true
+      - id: team-setup
+        file: images/screenshots/05-team-setup.png
+        thumb: images/screenshots/05-team-setup.png.thumb.jpg
+        title: Team setup
+        alt: Multiplayer team setup on the Squad Dunk court.
+        enabled: true
+      - id: shot-preparation
+        file: images/screenshots/06-shot-preparation.png
+        thumb: images/screenshots/06-shot-preparation.png.thumb.jpg
+        title: Shot preparation
+        alt: First-person player preparing a basketball shot.
+        enabled: true
+      - id: under-rim-play
+        file: images/screenshots/07-under-rim-play.png
+        thumb: images/screenshots/07-under-rim-play.png.thumb.jpg
+        title: Under-rim play
+        alt: Close play under the basketball rim.
+        enabled: true
+      - id: jump-play
+        file: images/screenshots/08-jump-play.png
+        thumb: images/screenshots/08-jump-play.png.thumb.jpg
+        title: Jump play
+        alt: Player jumping during an energetic basketball play.
+        enabled: true
+
+branding:
+  download_zip: images/logo.zip
+  download_label: download logo files as .zip
+  assets:
+    - id: ball-hand-icon
+      type: icon
+      file: images/logo-site-icon.png
+      title: Basketball hand icon
+      alt: Squad Dunk basketball hand icon.
+      enabled: true
+    - id: squad-dunk-logo
+      type: logo
+      file: images/logo.png
+      title: Squad Dunk logo
+      alt: Squad Dunk white graffiti-style logo.
+      enabled: true
+
+downloads:
+  - id: screenshots-zip
+    title: download all screenshots as .zip
+    file: images/images.zip
+    section: media
+    generated: true
+    enabled: true
+  - id: branding-zip
+    title: download logo files as .zip
+    file: images/logo.zip
+    section: branding
+    generated: true
+    enabled: true
+
+team:
+  about_title: About Katapult Games
+  boilerplate_title: Boilerplate
+  boilerplate: >-
+    Katapult Games is a small video game studio based in Berlin, Germany. The
+    team is developing Squad Dunk, a first-person, physics-based basketball game
+    focused on online team play, readable action, and playful sports energy.
+  credits_title: Credits
+  credits: Team credits are currently [TBD].
+
 contacts:
-  - name: Press / Business Inquiries
-    mail: games.katapult@gmail.com
-  - name: Katapult Games
-    link: https://katapultgames.de/
+  - title: Press / Business Inquiries
+    email: games.katapult@gmail.com
+    enabled: true
+  - title: Katapult Games
+    url: https://katapultgames.de/
+    enabled: true
+
+links:
+  - id: steam
+    title: Steam
+    url: ""
+    label: Store page coming soon
+    enabled: false
+  - id: discord
+    title: Discord
+    url: ""
+    enabled: false
+  - id: website
+    title: Website
+    url: https://katapultgames.de/
+    enabled: true
