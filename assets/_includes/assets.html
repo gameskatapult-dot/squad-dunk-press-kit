@@ -1,7 +1,19 @@
-{{#if presskit.trailers}}
 <section class="block">
-  <h2 id="videos">Videos</h2>
+  <h2 id="media">Media</h2>
 
+  <h3 id="videos">Videos</h3>
+  <div class="media-placeholders">
+    <article class="media-placeholder-card">
+      <strong>Pre-release Gameplay Reel</strong>
+      <span>Work-in-progress gameplay reel for press preview. Link coming soon.</span>
+    </article>
+    <article class="media-placeholder-card">
+      <strong>Reveal Trailer</strong>
+      <span>Coming soon.</span>
+    </article>
+  </div>
+
+  {{#if presskit.trailers}}
   {{#each presskit.trailers}}
   <div>
     {{#youtube}}
@@ -35,22 +47,13 @@
     {{/unless}}
   </div>
   {{/each}}
-</section>
-{{else}}
-<section class="block">
-  <h2 id="videos">Videos</h2>
+  {{/if}}
 
-  <p>There are currently no trailers available for {{presskit.title}}. Check back later for more or <a href="#contact">contact us</a> for specific requests!</p>
-</section>
-{{/if}}
-
-{{#if hasScreenshots}}
-<section class="block">
-  <h2 id="images">Images</h2>
-
+  {{#if hasScreenshots}}
+  <h3 id="screenshots">Screenshots</h3>
   <aside class="block__notice">
     <a href="images/images.zip">
-      download all screenshots & photos as .zip
+      download all screenshots as .zip
     </a>
   </aside>
 
@@ -66,7 +69,7 @@
 
   {{#each images.screenshotsWithCategory}}
   <section>
-    <h3 class="capitalize" id="gallery-{{title}}">{{title}}</h3>
+    <h4 class="capitalize" id="gallery-{{title}}">{{title}}</h4>
     <div class="gallery clearfix">
       {{#each elements}}
       <div class="gallery__item">
@@ -78,12 +81,12 @@
     </div>
   </section>
   {{/each}}
+  {{/if}}
 </section>
-{{/if}}
 
 {{#if images.logos}}
 <section class="block">
-  <h2 id="logo">Logo & Icon</h2>
+  <h2 id="logo">Branding</h2>
 
   <aside class="block__notice">
     <a href="images/logo.zip">
@@ -99,7 +102,7 @@
 </section>
 {{else}}
 <section class="block">
-  <h2 id="logo">Logo & Icon</h2>
+  <h2 id="logo">Branding</h2>
 
   <p>There are currently no logos or icons available for {{presskit.title}}. Check back later for more or <a href="#contact">contact us</a> for specific requests!</p>
 </section>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<company>
+  <title>Katapult Games</title>
+  <based-in>Berlin, Germany</based-in>
+  <founding-date>[TBD]</founding-date>
+  <website>https://katapultgames.de/</website>
+  <press-contact>games.katapult@gmail.com</press-contact>
+  <description>Katapult Games is a small video game studio based in Berlin, Germany. The team is developing Squad Dunk, a first-person, physics-based basketball game focused on online team play, readable action, and playful sports energy.</description>
+  <history>Katapult Games is building Squad Dunk around the feeling of being physically present on the court. The project focuses on first-person play, physics-based interaction, and team cooperation, aiming to make basketball feel immediate, social, and readable without becoming a strict simulation.</history>
+  <contacts>
+    <contact>
+      <name>Press / Business Inquiries</name>
+      <mail>games.katapult@gmail.com</mail>
+    </contact>
+    <contact>
+      <name>Website</name>
+      <link>https://katapultgames.de/</link>
+    </contact>
+  </contacts>
+</company>

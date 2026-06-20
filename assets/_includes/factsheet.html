@@ -91,6 +91,13 @@
     {{/each}}
     {{/if}}
 
+    {{#if presskit.genres}}
+    <dt>Genres:</dt>
+    {{#each presskit.genres}}
+    <dd>{{.}}</dd>
+    {{/each}}
+    {{/if}}
+
     {{#if presskit.platforms}}
     <dt>Platforms:</dt>
     {{#each presskit.platforms}}

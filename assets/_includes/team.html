@@ -1,16 +1,20 @@
-<section class="block grid _team-fix-margin-top">
-  {{#if presskit.credits}}
-  <article class="grid__item grid__item--flexible">
-    {{#if title}}
-    <h2 id="credits">{{title}}</h2>
-    {{else}}
-    <h2 id="credits">{{presskit.title}} Credits</h2>
+<section class="block grid team-block">
+  <article class="grid__item grid__item--flexible team-card">
+    <h2 id="credits">Team</h2>
+
+    {{#if company.title}}
+    <h3>About {{company.title}}</h3>
+    <dl>
+      <dt>Boilerplate</dt>
+      <dd>{{company.description}}</dd>
+    </dl>
     {{/if}}
 
+    <h3>Credits</h3>
+    {{#if presskit.credits}}
     <dl>
       {{#each presskit.credits}}
       <dt>{{person}}</dt>
-
       <dd>
         {{#if website}}
           <a href="{{website}}">{{role}}</a>
@@ -20,17 +24,18 @@
       </dd>
       {{/each}}
     </dl>
+    {{else}}
+    <p>Team credits are currently [TBD].</p>
+    {{/if}}
   </article>
-  {{/if}}
 
   {{#if presskit.contacts}}
-  <article class="grid__item grid__item--flexible">
+  <article class="grid__item grid__item--flexible team-card team-card--contact">
     <h2 id="contact">Contact</h2>
 
     <dl>
       {{#each presskit.contacts}}
       <dt>{{name}}</dt>
-
       <dd>
         {{#if mail}}
         <a href="mailto:{{mail}}">{{mail}}</a>

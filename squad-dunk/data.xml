@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<product>
+  
+  
+  <title>Squad Dunk</title>
+  
+  
+  <website>https://katapultgames.de/</website>
+  
+  
+  <release-dates>
+    
+    
+    <release-date>TBA</release-date>
+    
+  
+  </release-dates>
+  
+  
+  <genres>
+    <genre>First-Person</genre>
+    <genre>Physics-Based</genre>
+    <genre>Basketball</genre>
+    <genre>Multiplayer</genre>
+    <genre>Online PvP</genre>
+    <genre>Team-Based</genre>
+    <genre>Arcade</genre>
+    <genre>Sports</genre>
+    <genre>Indie</genre>
+  </genres>
+  <platforms>
+    
+    
+    <platform>
+      
+      
+      <name>PC</name>
+      
+    
+    </platform>
+    
+    
+    <platform>
+      
+      
+      <name>Steam [TBD store page URL]</name>
+      
+    
+    </platform>
+    
+  
+  </platforms>
+  
+  
+  <description>Squad Dunk is a first-person basketball game with physics-based mechanics. Team up with friends and compete in online matches.</description>
+  
+  
+  <history>Squad Dunk began from the idea that basketball could feel different when played from the athlete's point of view. Instead of focusing on managing an entire roster from a distant camera, the game asks players to inhabit one body on the court, read the movement of teammates and opponents, and create plays through physical interaction. The team is focusing on a multiplayer experience where the fun comes from cooperation, improvisation, clean feedback, and the satisfying chaos of a ball that behaves like a real object inside an arcade sports game.</history>
+  
+  
+  <features>
+    
+    
+    <feature>First-person basketball: experience the court from the player's perspective instead of controlling a whole team from above.</feature>
+    
+    
+    <feature>Physics-based mechanics: shooting, passing, steals, ball control, and movement are built around physical interaction.</feature>
+    
+    
+    <feature>Online team matches: team up with friends and compete against other squads.</feature>
+    
+    
+    <feature>Teamwork-first design: passing, assists, spacing, defence, and movement are central to winning.</feature>
+    
+    
+    <feature>Arcade-leaning readability: the game prioritises clear action, fast decisions, and low downtime over strict sports simulation.</feature>
+    
+    
+    <feature>Anti-ball-hogging direction: mechanics should encourage cooperation and reduce spammy solo play where possible.</feature>
+    
+    
+    <feature>Genre: first-person sports / arcade basketball / online multiplayer.</feature>
+    
+    
+    <feature>Players: online team-based multiplayer; exact player count TBD.</feature>
+    
+    
+    <feature>Availability: in development. Price TBA. Languages TBD. Engine TBD.</feature>
+    
+    
+    <feature>School squad energy: a playful schoolyard sports tone supports the game's bright arcade basketball identity.</feature>
+    
+  
+  </features>
+  
+  
+  <contacts>
+    
+    
+    <contact>
+      
+      
+      <name>Press / Business Inquiries</name>
+      
+      
+      <mail>games.katapult@gmail.com</mail>
+      
+    
+    </contact>
+    
+    
+    <contact>
+      
+      
+      <name>Katapult Games</name>
+      
+      
+      <link>https://katapultgames.de/</link>
+      
+    
+    </contact>
+    
+  
+  </contacts>
+  
+
+</product>

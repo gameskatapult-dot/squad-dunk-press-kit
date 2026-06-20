@@ -2,20 +2,21 @@
   <h1 class="nav__title">
     {{#if isCompany}}
     <a href=".">{{presskit.title}}</a>
-    {{else if company.title}}
-    <a href="..">{{company.title}}</a>
     {{else}}
-    <a href=".">{{presskit.title}}</a>
+    <a class="nav__brand" href=".">
+      <img class="nav__brand-icon" src="images/logo-site-icon.png" alt="{{presskit.title}} icon">
+      <span>{{presskit.title}}</span>
+    </a>
     {{/if}}
   </h1>
 
+  {{#if isCompany}}
   <aside class="nav__subtitle">
-    {{#if company.title}}
-    <a href="..">press kit</a>
-    {{else}}
+    {{#if presskit.website}}
     <a href="{{presskit.website}}">{{prettyURL presskit.website}}</a>
     {{/if}}
   </aside>
+  {{/if}}
 
   <div class="nav__toggle" id="hamburger">
     <a href="#" class="button" id="hamburger-toggle">
@@ -29,102 +30,48 @@
   </div>
 
   <ul class="nav__list" id="hamburger-target">
-    <li>
-      <a class="nav__item" href="#factsheet">Factsheet</a>
-    </li>
+    <li><a class="nav__item" href="#factsheet">Factsheet</a></li>
 
     {{#if presskit.description}}
-    <li>
-      <a class="nav__item" href="#description">Description</a>
-    </li>
-    {{/if}}
-
-    {{#if presskit.history}}
-    <li>
-      <a class="nav__item" href="#history">History</a>
-    </li>
-    {{/if}}
-
-    {{#if presskit.histories}}
-    <li>
-      <a class="nav__item" href="#history">History</a>
-    </li>
+    <li><a class="nav__item" href="#description">Description</a></li>
     {{/if}}
 
     {{#if products}}
-    <li>
-      <a class="nav__item" href="#projects">Projects</a>
-    </li>
+    <li><a class="nav__item" href="#projects">Projects</a></li>
     {{/if}}
 
     {{#if presskit.widgets.mailchimp}}
-    <li>
-      <a class="nav__item" href="#mailing-list">Mailing List</a>
-    </li>
+    <li><a class="nav__item" href="#mailing-list">Mailing List</a></li>
     {{/if}}
 
     {{#if presskit.trailers}}
-    <li>
-      <a class="nav__item" href="#videos">Videos</a>
-    </li>
-    {{/if}}
-
-    {{#if images.screenshots}}
-    <li>
-      <a class="nav__item" href="#images">Images</a>
-    </li>
+    <li><a class="nav__item" href="#media">Media</a></li>
+    {{else}}
+      {{#if hasScreenshots}}
+      <li><a class="nav__item" href="#media">Media</a></li>
+      {{/if}}
     {{/if}}
 
     {{#if images.logos}}
-    <li>
-      <a class="nav__item" href="#logo">Logo & Icon</a>
-    </li>
+    <li><a class="nav__item" href="#logo">Branding</a></li>
     {{/if}}
 
     {{#if presskit.widgets}}
-    <li>
-      <a class="nav__item" href="#widgets">Widgets</a>
-    </li>
+    <li><a class="nav__item" href="#widgets">Widgets</a></li>
     {{/if}}
 
     {{#if presskit.awards}}
-    <li>
-      <a class="nav__item" href="#awards">Awards & Recognition</a>
-    </li>
+    <li><a class="nav__item" href="#awards">Awards & Recognition</a></li>
     {{/if}}
 
     {{#if presskit.quotes}}
-    <li>
-      <a class="nav__item" href="#articles">Selected Articles</a>
-    </li>
+    <li><a class="nav__item" href="#articles">Selected Articles</a></li>
     {{/if}}
 
     {{#if presskit.additionals}}
-    <li>
-      <a class="nav__item" href="#links">Additional Links</a>
-    </li>
+    <li><a class="nav__item" href="#links">Additional Links</a></li>
     {{/if}}
 
-    {{#if company.title}}
-    <li>
-      <a class="nav__item" href="#about">About {{company.title}}</a>
-    </li>
-    {{/if}}
-
-    {{#each presskit.abouts}}
-    <li>
-      <a class="nav__item" href="#about_{{title}}">About {{title}}</a>
-    </li>
-    {{/each}}
-
-    <li>
-      <a class="nav__item" href="#credits">Team</a>
-    </li>
-
-    {{#if presskit.contacts}}
-    <li>
-      <a class="nav__item" href="#contact">Contact</a>
-    </li>
-    {{/if}}
+    <li><a class="nav__item" href="#credits">Team</a></li>
   </ul>
 </nav>
