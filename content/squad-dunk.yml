@@ -1,0 +1,52 @@
+title: Squad Dunk
+website: https://katapultgames.de/
+
+release_dates:
+  - TBA
+
+genres:
+  - First-Person
+  - Physics-Based
+  - Basketball
+  - Multiplayer
+  - Online PvP
+  - Team-Based
+  - Arcade
+  - Sports
+  - Indie
+
+platforms:
+  - name: PC
+  - name: Steam [TBD store page URL]
+
+description: >-
+  Squad Dunk is a first-person basketball game with physics-based mechanics.
+  Team up with friends and compete in online matches.
+
+history: >-
+  Squad Dunk began from the idea that basketball could feel different when
+  played from the athlete's point of view. Instead of focusing on managing an
+  entire roster from a distant camera, the game asks players to inhabit one body
+  on the court, read the movement of teammates and opponents, and create plays
+  through physical interaction. The team is focusing on a multiplayer experience
+  where the fun comes from cooperation, improvisation, clean feedback, and the
+  satisfying chaos of a ball that behaves like a real object inside an arcade
+  sports game.
+
+features:
+  - "First-person basketball: experience the court from the player's perspective instead of controlling a whole team from above."
+  - "Physics-based mechanics: shooting, passing, steals, ball control, and movement are built around physical interaction."
+  - "Online team matches: team up with friends and compete against other squads."
+  - "Teamwork-first design: passing, assists, spacing, defence, and movement are central to winning."
+  - "Arcade-leaning readability: the game prioritises clear action, fast decisions, and low downtime over strict sports simulation."
+  - "Anti-ball-hogging direction: mechanics should encourage cooperation and reduce spammy solo play where possible."
+  - "Genre: first-person sports / arcade basketball / online multiplayer."
+  - "Players: online team-based multiplayer; exact player count TBD."
+  - "Availability: in development. Price TBA. Languages TBD. Engine TBD."
+  - "School squad energy: a playful schoolyard sports tone supports the game's bright arcade basketball identity."
+
+contacts:
+  - name: Press / Business Inquiries
+    mail: games.katapult@gmail.com
+  - name: Katapult Games
+    link: https://katapultgames.de/
