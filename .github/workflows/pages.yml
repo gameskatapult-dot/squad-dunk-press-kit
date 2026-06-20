@@ -37,8 +37,11 @@ jobs:
       - name: Build press kit
         run: node bin/presskit build --pretty-links --collapse-menu
 
-      - name: Keep GitHub Pages from running Jekyll
-        run: touch build/.nojekyll
+      - name: Prepare custom domain root
+        run: |
+          cp CNAME build/CNAME
+          cp pages/root-redirect.html build/index.html
+          touch build/.nojekyll
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
@@ -51,3 +54,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
