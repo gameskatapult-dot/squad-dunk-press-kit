@@ -1094,3 +1094,107 @@ h4,
     border-radius: 14px;
   }
 }
+
+/* ---------------------------------------------------------- *\
+ * Final polish pass.
+\* ---------------------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+.nav__title,
+.media-placeholder-card strong {
+  font-family: "Fredoka", "Nunito Sans", "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: clamp(3rem, 4.4vw, 4.4rem);
+  line-height: 1.04;
+}
+
+h2 {
+  font-size: clamp(2.35rem, 2.5vw, 3.15rem);
+  line-height: 1.12;
+}
+
+h3 {
+  font-size: 1.95rem;
+  line-height: 1.2;
+}
+
+h4 {
+  font-size: 1.65rem;
+  line-height: 1.24;
+}
+
+.nav__title span {
+  font-size: clamp(2.15rem, 2.85vw, 3.05rem);
+  line-height: 1;
+}
+
+.nav__item,
+.nav__item:visited,
+.factsheet__list dt,
+.factsheet__list dd,
+.media-placeholder-card span,
+.button,
+.block__notice,
+.branding-asset {
+  font-family: "Nunito Sans", "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+@media (min-width: 800px) {
+  .grid > .factsheet {
+    align-self: flex-start;
+    height: auto;
+  }
+}
+
+.screenshots-gallery-title {
+  display: none;
+}
+
+.media-placeholder-card {
+  min-height: 112px;
+  padding: 18px 20px;
+}
+
+.media-placeholder-card strong {
+  margin-bottom: 6px;
+  font-size: 1.78rem;
+}
+
+.media-placeholder-card span {
+  font-size: 1.48rem;
+}
+
+.branding-assets {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.branding-asset {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: min(100%, 360px);
+  padding: 0;
+  color: inherit;
+}
+
+.branding-asset:hover {
+  transform: translateY(-1px);
+}
+
+.branding-asset .logo {
+  margin: 0;
+}
+
+#logo + .block__notice {
+  margin-bottom: 0;
+}

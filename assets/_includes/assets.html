@@ -5,7 +5,7 @@
   <div class="media-placeholders">
     <article class="media-placeholder-card">
       <strong>Pre-release Gameplay Reel</strong>
-      <span>Work-in-progress gameplay reel for press preview. Link coming soon.</span>
+      <span>Private press preview. Link coming soon.</span>
     </article>
     <article class="media-placeholder-card">
       <strong>Reveal Trailer</strong>
@@ -69,7 +69,7 @@
 
   {{#each images.screenshotsWithCategory}}
   <section>
-    <h4 class="capitalize" id="gallery-{{title}}">{{title}}</h4>
+    <h4 class="capitalize screenshots-gallery-title" id="gallery-{{title}}">{{title}}</h4>
     <div class="gallery clearfix">
       {{#each elements}}
       <div class="gallery__item">
@@ -94,11 +94,13 @@
     </a>
   </aside>
 
-  {{#each images.logos}}
-  <a href="images/{{.}}">
-    <img src="images/{{.}}" alt="{{basename .}}" class="logo">
-  </a>
-  {{/each}}
+  <div class="branding-assets">
+    {{#each images.logos}}
+    <a href="images/{{.}}" class="branding-asset">
+      <img src="images/{{.}}" alt="{{basename .}}" class="logo">
+    </a>
+    {{/each}}
+  </div>
 </section>
 {{else}}
 <section class="block">
@@ -107,3 +109,4 @@
   <p>There are currently no logos or icons available for {{presskit.title}}. Check back later for more or <a href="#contact">contact us</a> for specific requests!</p>
 </section>
 {{/if}}
+
