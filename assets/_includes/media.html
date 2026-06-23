@@ -1,29 +1,29 @@
 {{#if presskit.mediaVideos}}
 <section class="block">
-  <h2 id="media">Media</h2>
+  <h2 id="media" data-l10n="ui.media.title">Media</h2>
 
-  <h3 id="videos">Videos</h3>
+  <h3 id="videos" data-l10n="ui.media.videos">Videos</h3>
   <div class="media-placeholders">
     {{#each presskit.mediaVideos}}
     <article class="media-placeholder-card">
-      <strong>{{title}}</strong>
+      <strong data-l10n="ui.media.video_cards.{{@index}}.title">{{title}}</strong>
       {{#if description}}
-      <span>{{description}}</span>
+      <span data-l10n="ui.media.video_cards.{{@index}}.description">{{description}}</span>
       {{else}}
-      <span>{{label}}</span>
+      <span data-l10n="ui.media.video_cards.{{@index}}.label">{{label}}</span>
       {{/if}}
       {{#if url}}
-      <a class="button media-placeholder-link" href="{{url}}">{{label}}</a>
+      <a class="button media-placeholder-link" href="{{url}}" data-l10n="ui.media.video_cards.{{@index}}.label">{{label}}</a>
       {{/if}}
     </article>
     {{/each}}
   </div>
 
   {{#if presskit.manifestScreenshots}}
-  <h3 id="screenshots">Screenshots</h3>
+  <h3 id="screenshots" data-l10n="ui.media.screenshots">Screenshots</h3>
   {{#if presskit.mediaDownloadFile}}
   <aside class="block__notice">
-    <a href="{{presskit.mediaDownloadFile}}">
+    <a href="{{presskit.mediaDownloadFile}}" data-l10n="ui.media.download">
       {{presskit.mediaDownloadTitle}}
     </a>
   </aside>
@@ -50,11 +50,11 @@
 {{else}}
   {{#if presskit.manifestScreenshots}}
   <section class="block">
-    <h2 id="media">Media</h2>
-    <h3 id="screenshots">Screenshots</h3>
+    <h2 id="media" data-l10n="ui.media.title">Media</h2>
+    <h3 id="screenshots" data-l10n="ui.media.screenshots">Screenshots</h3>
     {{#if presskit.mediaDownloadFile}}
     <aside class="block__notice">
-      <a href="{{presskit.mediaDownloadFile}}">
+      <a href="{{presskit.mediaDownloadFile}}" data-l10n="ui.media.download">
         {{presskit.mediaDownloadTitle}}
       </a>
     </aside>
@@ -80,10 +80,10 @@
   {{else}}
     {{#if hasScreenshots}}
     <section class="block">
-      <h2 id="media">Media</h2>
-      <h3 id="screenshots">Screenshots</h3>
+      <h2 id="media" data-l10n="ui.media.title">Media</h2>
+      <h3 id="screenshots" data-l10n="ui.media.screenshots">Screenshots</h3>
       <aside class="block__notice">
-        <a href="images/images.zip">
+        <a href="images/images.zip" data-l10n="ui.media.download">
           download all screenshots as .zip
         </a>
       </aside>

@@ -2,17 +2,17 @@
   {{#if presskit.showTeamSection}}
   {{#if presskit.team}}
   <article class="grid__item grid__item--flexible team-card">
-    <h2 id="credits">Team</h2>
+    <h2 id="credits" data-l10n="ui.team.title">Team</h2>
 
     {{#if presskit.team.aboutTitle}}
-    <h3>{{presskit.team.aboutTitle}}</h3>
+    <h3 data-l10n="ui.team.about_title">{{presskit.team.aboutTitle}}</h3>
     <dl>
-      <dt>{{presskit.team.boilerplateTitle}}</dt>
-      <dd>{{presskit.team.boilerplate}}</dd>
+      <dt data-l10n="ui.team.boilerplate_title">{{presskit.team.boilerplateTitle}}</dt>
+      <dd data-l10n="ui.team.boilerplate">{{presskit.team.boilerplate}}</dd>
     </dl>
     {{/if}}
 
-    <h3>{{presskit.team.creditsTitle}}</h3>
+    <h3 data-l10n="ui.team.credits_title">{{presskit.team.creditsTitle}}</h3>
     {{#if presskit.credits}}
     <dl>
       {{#each presskit.credits}}
@@ -27,7 +27,7 @@
       {{/each}}
     </dl>
     {{else}}
-    <p>{{presskit.team.credits}}</p>
+    <p data-l10n="ui.team.credits">{{presskit.team.credits}}</p>
     {{/if}}
   </article>
   {{else}}
@@ -51,11 +51,11 @@
   {{#if presskit.showContactSection}}
   {{#if presskit.contacts}}
   <article class="grid__item grid__item--flexible team-card team-card--contact">
-    <h2 id="contact">Contact</h2>
+    <h2 id="contact" data-l10n="ui.contact.title">Contact</h2>
 
     <dl>
       {{#each presskit.contacts}}
-      <dt>{{name}}</dt>
+      <dt {{#ifEq name "Email"}}data-l10n="ui.contact.email"{{/ifEq}}{{#ifEq name "Bug Reports"}}data-l10n="ui.contact.bug_reports"{{/ifEq}}>{{name}}</dt>
       <dd>
         {{#if mail}}
         <a href="mailto:{{mail}}">{{mail}}</a>

@@ -1388,12 +1388,13 @@ html {
   display: flex;
   align-items: center;
   min-height: 100svh;
-  padding: clamp(116px, 11vw, 164px) clamp(22px, 5vw, 86px) clamp(54px, 7vw, 96px);
+  padding: clamp(116px, 11vw, 164px) clamp(22px, 5vw, 86px) clamp(132px, 12vw, 210px);
   overflow: hidden;
   background:
-    radial-gradient(circle at 18% 18%, rgba(255,255,255,0.96), transparent 30rem),
-    radial-gradient(circle at 78% 12%, rgba(218,235,255,0.82), transparent 36rem),
-    linear-gradient(180deg, #FFFFFF 0%, #F6FBFF 54%, #EEF7FF 100%);
+    radial-gradient(ellipse at 18% 20%, rgba(255,255,255,0.98), transparent 32rem),
+    radial-gradient(ellipse at 76% 16%, rgba(218,235,255,0.72), transparent 40rem),
+    radial-gradient(ellipse at 52% 90%, rgba(255,255,255,0.92), transparent 28rem),
+    linear-gradient(180deg, #FFFFFF 0%, #F7FCFF 52%, #FFFFFF 100%);
 }
 
 .landing-video::before {
@@ -1402,6 +1403,21 @@ html {
   background:
     linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.58) 15%, rgba(255,255,255,0) 34%),
     radial-gradient(ellipse at 52% 20%, rgba(255,255,255,0.50), transparent 34rem);
+  content: "";
+  pointer-events: none;
+}
+
+.landing-video::after {
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  z-index: 2;
+  height: clamp(150px, 18vw, 280px);
+  background:
+    radial-gradient(ellipse at 22% 72%, rgba(255,255,255,0.92), transparent 24rem),
+    radial-gradient(ellipse at 70% 64%, rgba(255,255,255,0.86), transparent 30rem),
+    linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.84) 58%, #FFFFFF 100%);
   content: "";
   pointer-events: none;
 }
@@ -1461,6 +1477,11 @@ html {
   box-shadow: 0 26px 76px rgba(83, 113, 146, 0.20);
 }
 
+.landing-video__frame--button {
+  padding: 0;
+  cursor: pointer;
+}
+
 .landing-video__frame img {
   display: block;
   width: 100%;
@@ -1469,7 +1490,7 @@ html {
   transition: transform 260ms ease;
 }
 
-.landing-video__frame--link::after {
+.landing-video__frame--button::after {
   position: absolute;
   inset: 0;
   background:
@@ -1478,14 +1499,14 @@ html {
   content: "";
 }
 
-.landing-video__frame--link:hover img,
-.landing-video__frame--link:focus img {
+.landing-video__frame--button:hover img,
+.landing-video__frame--button:focus img {
   transform: scale(1.025);
 }
 
-.landing-video__frame--link:hover,
-.landing-video__frame--link:focus {
-  text-decoration: none;
+.landing-video__frame--button:focus {
+  outline: 3px solid rgba(110, 90, 126, 0.32);
+  outline-offset: 4px;
 }
 
 .landing-video__play {
@@ -1521,11 +1542,25 @@ html {
   position: relative;
   display: grid;
   min-height: 100svh;
+  margin-top: clamp(-150px, -10vw, -92px);
   overflow: hidden;
   color: var(--sd-heading);
   background:
     linear-gradient(180deg, #FFFFFF 0%, #F6FBFF 46%, #EEF7FF 100%);
   isolation: isolate;
+}
+
+.landing-hero::before {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: -1;
+  height: clamp(150px, 18vw, 280px);
+  background:
+    radial-gradient(ellipse at 30% 12%, rgba(255,255,255,0.96), transparent 26rem),
+    radial-gradient(ellipse at 72% 10%, rgba(255,255,255,0.88), transparent 30rem),
+    linear-gradient(180deg, #FFFFFF 0%, rgba(255,255,255,0.82) 42%, rgba(255,255,255,0) 100%);
+  content: "";
+  pointer-events: none;
 }
 
 .landing-hero__backdrop {
@@ -1695,6 +1730,99 @@ html {
   height: auto;
 }
 
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.has-video-modal {
+  overflow: hidden;
+}
+
+.video-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(18px, 5vw, 72px);
+}
+
+.video-modal.is-open {
+  display: flex;
+}
+
+.video-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 18%, rgba(255,255,255,0.22), transparent 28rem),
+    rgba(43, 39, 48, 0.66);
+  backdrop-filter: blur(10px);
+}
+
+.video-modal__dialog {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 1180px);
+  aspect-ratio: 16 / 9;
+  background: rgba(255, 255, 255, 0.86);
+  border: 10px solid rgba(255, 255, 255, 0.74);
+  border-radius: 18px;
+  box-shadow: 0 30px 100px rgba(20, 24, 36, 0.40);
+}
+
+.video-modal__dialog iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 8px;
+  background: #111;
+}
+
+.video-modal__close {
+  position: absolute;
+  top: -18px;
+  right: -18px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  color: var(--sd-heading);
+  font-size: 3rem;
+  line-height: 1;
+  background: rgba(255, 255, 255, 0.94);
+  border: 0;
+  border-radius: 999px;
+  box-shadow: 0 12px 28px rgba(43, 39, 48, 0.22);
+  cursor: pointer;
+}
+
+.video-modal__fallback,
+.video-modal__fallback:visited {
+  position: absolute;
+  right: 16px;
+  bottom: 14px;
+  z-index: 2;
+  padding: 8px 12px;
+  color: var(--sd-heading);
+  font-family: "Nunito Sans", "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  background: rgba(255, 255, 255, 0.86);
+  border-radius: 999px;
+  text-decoration: none;
+}
+
 @media (max-width: 799px) {
   .product-page {
     padding-top: 0;
@@ -1707,12 +1835,13 @@ html {
 
   .landing-hero {
     min-height: 78svh;
+    margin-top: -64px;
   }
 
   .landing-video {
     align-items: flex-start;
     min-height: auto;
-    padding: 110px 18px 42px;
+    padding: 110px 18px 128px;
   }
 
   .landing-video__inner {
@@ -1726,6 +1855,21 @@ html {
 
   .landing-video__frame {
     border-width: 6px;
+    border-radius: 12px;
+  }
+
+  .landing-video__play {
+    min-height: 46px;
+    padding: 10px 16px;
+    font-size: 1.25rem;
+  }
+
+  .video-modal {
+    padding: 14px;
+  }
+
+  .video-modal__dialog {
+    border-width: 5px;
     border-radius: 12px;
   }
 
@@ -1960,6 +2104,31 @@ html {
 .product-page .description-long,
 .product-page .description-features {
   padding: 20px 22px;
+}
+
+.product-page .description-inline-features {
+  display: grid;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.product-page .description-inline-feature {
+  padding-top: 14px;
+  border-top: 1px solid rgba(126, 142, 175, 0.10);
+}
+
+.product-page .description-inline-feature h4 {
+  margin: 0 0 6px;
+  color: rgba(110, 90, 126, 0.78);
+  font-family: "Nunito Sans", "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-size: 1.62rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.product-page .description-inline-feature p {
+  margin: 0;
 }
 
 .product-page .description-feature {

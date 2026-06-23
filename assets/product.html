@@ -10,27 +10,27 @@
       </a>
 
       <nav class="landing-nav__links" aria-label="Landing navigation">
-        <a href="#home">Home</a>
-        <a href="#description">About</a>
-        <a href="#press-kit">Press</a>
+        <a href="#home" data-l10n="ui.landing.nav.home">Home</a>
+        <a href="#description" data-l10n="ui.landing.nav.about">About</a>
+        <a href="#press-kit" data-l10n="ui.landing.nav.press">Press</a>
       </nav>
     </header>
 
     <section class="landing-video" id="home" aria-labelledby="gameplay-reel-title">
       <div class="landing-video__inner">
         <div class="landing-video__copy">
-          <p class="landing-video__eyebrow">Gameplay Reel</p>
+          <p class="landing-video__eyebrow" data-l10n="ui.landing.eyebrow">Gameplay Reel</p>
           <h1 id="gameplay-reel-title">Squad Dunk</h1>
-          <p>First-person, physics-based online basketball built for arcade team play.</p>
+          <p data-l10n="ui.landing.tagline">First-person, physics-based online basketball built for arcade team play.</p>
         </div>
 
-        <a class="landing-video__frame landing-video__frame--link" href="https://youtu.be/k8J8c510mhU" target="_blank" rel="noopener" aria-label="Watch the Squad Dunk gameplay reel on YouTube">
+        <button class="landing-video__frame landing-video__frame--button" type="button" data-video-trigger aria-label="Watch the Squad Dunk gameplay reel">
           <img src="./images/youtube-gameplay-reel.jpg" alt="Squad Dunk gameplay reel thumbnail">
           <span class="landing-video__play" aria-hidden="true">
             <span class="landing-video__play-icon"></span>
-            Watch Gameplay Reel
+            <span data-l10n="ui.landing.play">Watch Gameplay Reel</span>
           </span>
-        </a>
+        </button>
       </div>
     </section>
 
@@ -66,10 +66,10 @@
                   {{>description ..}}
 
                   {{#if showFeatures}}
-                  <h2 id="features">Features</h2>
+                  <h2 id="features" data-l10n="ui.features.title">Features</h2>
                   <ul>
                     {{#each ../presskit.features}}
-                    <li>{{.}}</li>
+                    <li data-l10n="ui.features.items.{{@index}}">{{.}}</li>
                     {{/each}}
                   </ul>
                   {{/if}}
@@ -101,10 +101,10 @@
               <article class="description grid__item">
                 {{>description}}
 
-                <h2 id="features">Features</h2>
+                <h2 id="features" data-l10n="ui.features.title">Features</h2>
                 <ul>
                   {{#each presskit.features}}
-                  <li>{{.}}</li>
+                  <li data-l10n="ui.features.items.{{@index}}">{{.}}</li>
                   {{/each}}
                 </ul>
               </article>
@@ -129,6 +129,25 @@
     <section class="funding-banner" aria-label="Funding support">
       <img src="./images/press-start-logo-bar.png" alt="Founders supported by Press Start. Press Start: Games Founding Grant is a project by game, The German Games Industry Association, and Stiftung Digitale Spielekultur. Funded by Der Beauftragte der Bundesregierung fur Kultur und Medien.">
     </section>
+
+    <div class="video-modal" data-video-modal aria-hidden="true">
+      <div class="video-modal__backdrop" data-video-close></div>
+      <div class="video-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="video-modal-title">
+        <button class="video-modal__close" type="button" data-video-close aria-label="Close video">
+          <span aria-hidden="true">&times;</span>
+          <span class="visually-hidden" data-l10n="ui.landing.close">Close video</span>
+        </button>
+        <h2 id="video-modal-title" class="visually-hidden">Squad Dunk Gameplay Reel</h2>
+        <iframe
+          data-video-iframe
+          title="Squad Dunk gameplay reel"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+        <a class="video-modal__fallback" href="https://youtu.be/k8J8c510mhU" target="_blank" rel="noopener" data-l10n="ui.landing.fallback">Open on YouTube</a>
+      </div>
+    </div>
 
     {{>scripts}}
   </body>

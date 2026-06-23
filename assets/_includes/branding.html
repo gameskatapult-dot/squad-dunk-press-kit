@@ -1,10 +1,10 @@
 {{#if presskit.brandingAssets}}
 <section class="block">
-  <h2 id="logo">Branding</h2>
+  <h2 id="logo" data-l10n="ui.branding.title">Branding</h2>
 
   {{#if presskit.brandingDownloadFile}}
   <aside class="block__notice">
-    <a href="{{presskit.brandingDownloadFile}}">
+    <a href="{{presskit.brandingDownloadFile}}" data-l10n="ui.branding.download">
       {{presskit.brandingDownloadTitle}}
     </a>
   </aside>
@@ -21,10 +21,10 @@
 {{else}}
   {{#if images.logos}}
   <section class="block">
-    <h2 id="logo">Branding</h2>
+    <h2 id="logo" data-l10n="ui.branding.title">Branding</h2>
 
     <aside class="block__notice">
-      <a href="images/logo.zip">
+      <a href="images/logo.zip" data-l10n="ui.branding.download">
         download logo files as .zip
       </a>
     </aside>
@@ -39,7 +39,7 @@
   </section>
   {{else}}
   <section class="block">
-    <h2 id="logo">Branding</h2>
+    <h2 id="logo" data-l10n="ui.branding.title">Branding</h2>
 
     <p>There are currently no logos or icons available for {{presskit.title}}. Check back later for more or <a href="#contact">contact us</a> for specific requests!</p>
   </section>

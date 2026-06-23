@@ -22,7 +22,7 @@ sections:
 factsheet:
   about: Squad Dunk
   development: In active development by Katapult Games.
-  developers: Bruno Braghetto, Matias Nicolini and Anahi Mou
+  developers: Katapult Games
   publisher: TBA
   cost: TBA
   steam:
@@ -111,6 +111,100 @@ localization:
             body: >-
               Each court adds its own twist, with new mechanics and layouts that
               make teams adapt in different ways.
+      ui:
+        landing:
+          nav:
+            home: Home
+            about: About
+            press: Press
+          eyebrow: Gameplay Reel
+          tagline: First-person, physics-based online basketball built for arcade team play.
+          play: Watch Gameplay Reel
+          close: Close video
+          fallback: Open on YouTube
+        nav:
+          language: Language
+          menu: Menu
+          sections:
+            factsheet: Factsheet
+            description: Description
+            features: Features
+            media: Media
+            branding: Branding
+            links: Links
+            team: Team
+            contact: Contact
+        factsheet:
+          title: Factsheet
+          labels:
+            about: "About:"
+            developer: "Developer:"
+            development: "Development:"
+            developers: "Developers:"
+            publisher: "Publisher:"
+            release_date: "Release date:"
+            genres: "Genres:"
+            platforms: "Platforms:"
+            cost: "Cost:"
+            steam: "Steam:"
+            trailer: "Trailer:"
+            press_kit: "Press Kit:"
+            website: "Website:"
+          values:
+            about: Squad Dunk
+            development: In active development by Katapult Games.
+            developers: Katapult Games
+            based_in: Based in Berlin, Germany
+            publisher: TBA
+            cost: TBA
+            steam: Click here for Steam Link
+            trailer: Click here for Trailer Link
+            press_kit: Click here for Press Kit Link
+        features:
+          title: Features
+          items:
+            - First-person view
+            - Physics-based shots, passes, steals, and rebounds
+            - 3 players teams
+            - Simple and accessible
+            - Different courts and scenarios
+            - Character and team customization
+        media:
+          title: Media
+          videos: Videos
+          screenshots: Screenshots
+          download: download all screenshots as .zip
+          video_cards:
+            - title: Gameplay Reel
+              description: First-person physics-based basketball gameplay reel.
+              label: Watch on YouTube
+            - title: Reveal Trailer
+              description: Watch the current Squad Dunk trailer link.
+              label: Click here for Trailer Link
+        branding:
+          title: Branding
+          download: download logo files as .zip
+        links:
+          title: Links
+        team:
+          title: Team
+          about_title: About Katapult Games
+          boilerplate_title: About
+          boilerplate: >-
+            A small indie video game studio based in Berlin.
+
+            We are Katapult Games and we build games with our community, not
+            just for them. Driven by transparency, flexibility and a love for
+            modern gaming trends, our mission is to create high energy
+            multiplayer experiences that truly connect with players. We don't
+            just want you to play our games, we want you to help us shape them.
+            Welcome to the squad!
+          credits_title: Team
+          credits: Katapult Games
+        contact:
+          title: Contact
+          email: Email
+          bug_reports: Bug Reports
     es: {}
     ru: {}
     ja:
@@ -147,6 +241,95 @@ localization:
             title: コートごとにゲームが変わる
             body: >-
               それぞれのコートには独自の仕掛けやレイアウトがあり、チームは状況に合わせてプレイを変える必要があります。
+      ui:
+        landing:
+          nav:
+            home: ホーム
+            about: 概要
+            press: プレス
+          eyebrow: ゲームプレイリール
+          tagline: 一人称視点、物理ベース、オンラインチームプレイのためのアーケードバスケットボール。
+          play: ゲームプレイリールを見る
+          close: 動画を閉じる
+          fallback: YouTubeで開く
+        nav:
+          language: 言語
+          menu: メニュー
+          sections:
+            factsheet: ファクトシート
+            description: 説明
+            features: 特徴
+            media: メディア
+            branding: ブランディング
+            links: リンク
+            team: チーム
+            contact: 連絡先
+        factsheet:
+          title: ファクトシート
+          labels:
+            about: "概要:"
+            developer: "開発:"
+            development: "開発状況:"
+            developers: "開発者:"
+            publisher: "パブリッシャー:"
+            release_date: "発売日:"
+            genres: "ジャンル:"
+            platforms: "プラットフォーム:"
+            cost: "価格:"
+            steam: "Steam:"
+            trailer: "トレーラー:"
+            press_kit: "プレスキット:"
+            website: "ウェブサイト:"
+          values:
+            about: Squad Dunk
+            development: Katapult Gamesが現在開発中。
+            developers: Katapult Games
+            based_in: ドイツ・ベルリン拠点
+            publisher: TBA
+            cost: TBA
+            steam: Steamリンクはこちら
+            trailer: トレーラーリンクはこちら
+            press_kit: プレスキットリンクはこちら
+        features:
+          title: 特徴
+          items:
+            - 一人称視点
+            - 物理ベースのシュート、パス、スティール、リバウンド
+            - 3人チーム
+            - シンプルで遊びやすい
+            - さまざまなコートとシナリオ
+            - キャラクターとチームのカスタマイズ
+        media:
+          title: メディア
+          videos: 動画
+          screenshots: スクリーンショット
+          download: スクリーンショットを.zipでダウンロード
+          video_cards:
+            - title: ゲームプレイリール
+              description: 一人称視点、物理ベースのバスケットボールゲームプレイリール。
+              label: YouTubeで見る
+            - title: リビールトレーラー
+              description: 現在のSquad Dunkトレーラーリンク。
+              label: トレーラーリンクはこちら
+        branding:
+          title: ブランディング
+          download: ロゴファイルを.zipでダウンロード
+        links:
+          title: リンク
+        team:
+          title: チーム
+          about_title: Katapult Gamesについて
+          boilerplate_title: 概要
+          boilerplate: >-
+            ベルリンを拠点とする小さなインディーゲームスタジオです。
+
+            私たちはKatapult Gamesです。私たちはコミュニティのためだけでなく、コミュニティと一緒にゲームを作ります。透明性、柔軟性、現代のゲームトレンドへの愛を大切にし、プレイヤーと本当に繋がる高エネルギーなマルチプレイヤー体験を目指しています。私たちはただ遊んでもらうだけでなく、一緒に形作ってほしいと考えています。Welcome to the squad!
+          credits_title: チーム
+          credits: Katapult Games
+        contact:
+          title: 連絡先
+          email: メール
+          bug_reports: バグ報告
     zh: {}
     de:
       description:
@@ -199,6 +382,101 @@ localization:
             body: >-
               Jeder Court bringt eigene Twists, Mechaniken und Layouts mit, an
               die sich Teams auf unterschiedliche Weise anpassen müssen.
+      ui:
+        landing:
+          nav:
+            home: Home
+            about: Über das Spiel
+            press: Presse
+          eyebrow: Gameplay-Reel
+          tagline: First-Person, physikbasierter Online-Basketball für Arcade-Teamplay.
+          play: Gameplay-Reel ansehen
+          close: Video schließen
+          fallback: Auf YouTube öffnen
+        nav:
+          language: Sprache
+          menu: Menü
+          sections:
+            factsheet: Factsheet
+            description: Beschreibung
+            features: Features
+            media: Medien
+            branding: Branding
+            links: Links
+            team: Team
+            contact: Kontakt
+        factsheet:
+          title: Factsheet
+          labels:
+            about: "Über:"
+            developer: "Entwickler:"
+            development: "Entwicklung:"
+            developers: "Entwickler:"
+            publisher: "Publisher:"
+            release_date: "Veröffentlichung:"
+            genres: "Genres:"
+            platforms: "Plattformen:"
+            cost: "Preis:"
+            steam: "Steam:"
+            trailer: "Trailer:"
+            press_kit: "Press Kit:"
+            website: "Website:"
+          values:
+            about: Squad Dunk
+            development: In aktiver Entwicklung bei Katapult Games.
+            developers: Katapult Games
+            based_in: Sitz in Berlin, Deutschland
+            publisher: TBA
+            cost: TBA
+            steam: Hier zum Steam-Link
+            trailer: Hier zum Trailer-Link
+            press_kit: Hier zum Press-Kit-Link
+        features:
+          title: Features
+          items:
+            - First-Person-Perspektive
+            - Physikbasierte Würfe, Pässe, Steals und Rebounds
+            - Teams mit 3 Spielerinnen und Spielern
+            - Einfach und zugänglich
+            - Verschiedene Courts und Szenarien
+            - Charakter- und Team-Anpassung
+        media:
+          title: Medien
+          videos: Videos
+          screenshots: Screenshots
+          download: Alle Screenshots als .zip herunterladen
+          video_cards:
+            - title: Gameplay-Reel
+              description: First-Person, physikbasiertes Basketball-Gameplay-Reel.
+              label: Auf YouTube ansehen
+            - title: Reveal-Trailer
+              description: Aktueller Squad Dunk Trailer-Link.
+              label: Hier zum Trailer-Link
+        branding:
+          title: Branding
+          download: Logodateien als .zip herunterladen
+        links:
+          title: Links
+        team:
+          title: Team
+          about_title: Über Katapult Games
+          boilerplate_title: Über uns
+          boilerplate: >-
+            Ein kleines Indie-Videospielstudio mit Sitz in Berlin.
+
+            Wir sind Katapult Games und wir entwickeln Spiele mit unserer
+            Community, nicht nur für sie. Angetrieben von Transparenz,
+            Flexibilität und einer Liebe für moderne Gaming-Trends wollen wir
+            energiegeladene Multiplayer-Erlebnisse schaffen, die Spielerinnen
+            und Spieler wirklich verbinden. Wir möchten nicht nur, dass ihr
+            unsere Spiele spielt, sondern dass ihr helft, sie mitzugestalten.
+            Welcome to the squad!
+          credits_title: Team
+          credits: Katapult Games
+        contact:
+          title: Kontakt
+          email: E-Mail
+          bug_reports: Bug Reports
     fr: {}
     pt: {}
 
@@ -341,8 +619,8 @@ team:
     trends, our mission is to create high energy multiplayer experiences that
     truly connect with players. We don't just want you to play our games, we
     want you to help us shape them. Welcome to the squad!
-  credits_title: Developers
-  credits: Bruno Braghetto, Matias Nicolini and Anahi Mou
+  credits_title: Team
+  credits: Katapult Games
 
 contacts:
   - title: Email
@@ -387,5 +665,5 @@ links:
     enabled: true
   - id: katapult-website
     title: Katapult Games Website
-    url: https://www.katapultgames.com
+    url: https://katapultgames.de/
     enabled: true

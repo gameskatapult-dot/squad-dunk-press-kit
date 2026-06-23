@@ -19,7 +19,7 @@
   {{else}}
     {{#if presskit.languages}}
     <div class="language-switcher">
-      <label class="language-switcher__label" for="language-select">Language</label>
+      <label class="language-switcher__label" for="language-select" data-l10n="ui.nav.language">Language</label>
       <select class="language-switcher__select" id="language-select" data-language-select aria-label="Select language">
         {{#each presskit.languages}}
         <option value="{{code}}">{{label}}</option>
@@ -36,14 +36,14 @@
           <path d="M0 16h19v3H0zM0 8h19v3H0zM0 0h19v3H0z" />
         </g>
       </svg>
-      &nbsp;Menu
+      &nbsp;<span data-l10n="ui.nav.menu">Menu</span>
     </a>
   </div>
 
   <ul class="nav__list" id="hamburger-target">
     {{#if presskit.navSections}}
       {{#each presskit.navSections}}
-      <li><a class="nav__item" href="{{href}}">{{title}}</a></li>
+      <li><a class="nav__item" href="{{href}}" data-l10n="ui.nav.sections.{{id}}">{{title}}</a></li>
       {{/each}}
     {{else}}
       <li><a class="nav__item" href="#factsheet">Factsheet</a></li>

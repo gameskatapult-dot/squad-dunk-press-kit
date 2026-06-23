@@ -11,22 +11,16 @@
     {{#each presskit.longDescriptions}}
     <p data-l10n="description.long.paragraphs.{{@index}}">{{.}}</p>
     {{/each}}
-  </section>
 
-  {{#if presskit.keyFeatures}}
-  <section class="description-features" aria-labelledby="key-features-title">
-    <h3 id="key-features-title" data-l10n="description.keyFeaturesTitle">{{presskit.keyFeaturesTitle}}</h3>
-    <div class="description-feature-list">
+    {{#if presskit.keyFeatures}}
+    <div class="description-inline-features">
       {{#each presskit.keyFeatures}}
-      <article class="description-feature">
-        <span class="description-feature__icon" aria-hidden="true">{{icon}}</span>
-        <div>
-          <h4 data-l10n="description.keyFeatures.{{@index}}.title">{{title}}</h4>
-          <p data-l10n="description.keyFeatures.{{@index}}.body">{{body}}</p>
-        </div>
-      </article>
+      <section class="description-inline-feature">
+        <h4 data-l10n="description.keyFeatures.{{@index}}.title">{{title}}</h4>
+        <p data-l10n="description.keyFeatures.{{@index}}.body">{{body}}</p>
+      </section>
       {{/each}}
     </div>
+    {{/if}}
   </section>
-  {{/if}}
 </div>

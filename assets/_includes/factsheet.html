@@ -1,5 +1,5 @@
 <aside class="factsheet grid__item">
-  <h2 id="factsheet" class="factsheet__title">Factsheet</h2>
+  <h2 id="factsheet" class="factsheet__title" data-l10n="ui.factsheet.title">Factsheet</h2>
 
   {{#if isCompany}}
   <dl class="factsheet__list">
@@ -65,31 +65,31 @@
   {{#if isProduct}}
   <dl class="factsheet__list">
     {{#if presskit.about}}
-    <dt>About:</dt>
-    <dd>{{presskit.about}}</dd>
+    <dt data-l10n="ui.factsheet.labels.about">About:</dt>
+    <dd data-l10n="ui.factsheet.values.about">{{presskit.about}}</dd>
     {{/if}}
 
     {{#if company.title}}
-    <dt>Developer:</dt>
+    <dt data-l10n="ui.factsheet.labels.developer">Developer:</dt>
     <dd>
       <a href="..">{{company.title}}</a>
     </dd>
-    {{#if company.basedIn}}<dd>Based in {{company.basedIn}}</dd>{{/if}}
+    {{#if company.basedIn}}<dd data-l10n="ui.factsheet.values.based_in">Based in {{company.basedIn}}</dd>{{/if}}
     {{/if}}
 
     {{#if presskit.development}}
-    <dt>Development:</dt>
-    <dd>{{presskit.development}}</dd>
+    <dt data-l10n="ui.factsheet.labels.development">Development:</dt>
+    <dd data-l10n="ui.factsheet.values.development">{{presskit.development}}</dd>
     {{/if}}
 
     {{#if presskit.developers}}
-    <dt>Developers:</dt>
-    <dd>{{presskit.developers}}</dd>
+    <dt data-l10n="ui.factsheet.labels.developers">Developers:</dt>
+    <dd data-l10n="ui.factsheet.values.developers">{{presskit.developers}}</dd>
     {{/if}}
 
     {{#if presskit.publisher}}
-    <dt>Publisher:</dt>
-    <dd>{{presskit.publisher}}</dd>
+    <dt data-l10n="ui.factsheet.labels.publisher">Publisher:</dt>
+    <dd data-l10n="ui.factsheet.values.publisher">{{presskit.publisher}}</dd>
     {{/if}}
 
     {{#each presskit.partners}}
@@ -105,21 +105,21 @@
     {{/each}}
 
     {{#if presskit.releaseDates}}
-    <dt>Release date:</dt>
+    <dt data-l10n="ui.factsheet.labels.release_date">Release date:</dt>
     {{#each presskit.releaseDates}}
     <dd>{{.}}</dd>
     {{/each}}
     {{/if}}
 
     {{#if presskit.genres}}
-    <dt>Genres:</dt>
+    <dt data-l10n="ui.factsheet.labels.genres">Genres:</dt>
     {{#each presskit.genres}}
     <dd>{{.}}</dd>
     {{/each}}
     {{/if}}
 
     {{#if presskit.platforms}}
-    <dt>Platforms:</dt>
+    <dt data-l10n="ui.factsheet.labels.platforms">Platforms:</dt>
     {{#each presskit.platforms}}
     <dd>
       {{#if link}}
@@ -132,45 +132,45 @@
     {{/if}}
 
     {{#if presskit.cost}}
-    <dt>Cost:</dt>
-    <dd>{{presskit.cost}}</dd>
+    <dt data-l10n="ui.factsheet.labels.cost">Cost:</dt>
+    <dd data-l10n="ui.factsheet.values.cost">{{presskit.cost}}</dd>
     {{/if}}
 
     {{#if presskit.steamLink}}
-    <dt>Steam:</dt>
+    <dt data-l10n="ui.factsheet.labels.steam">Steam:</dt>
     <dd>
       {{#if presskit.steamLink.url}}
-        <a href="{{presskit.steamLink.url}}">{{presskit.steamLink.label}}</a>
+        <a href="{{presskit.steamLink.url}}" data-l10n="ui.factsheet.values.steam">{{presskit.steamLink.label}}</a>
       {{else}}
-        {{presskit.steamLink.label}}
+        <span data-l10n="ui.factsheet.values.steam">{{presskit.steamLink.label}}</span>
       {{/if}}
     </dd>
     {{/if}}
 
     {{#if presskit.trailerLink}}
-    <dt>Trailer:</dt>
+    <dt data-l10n="ui.factsheet.labels.trailer">Trailer:</dt>
     <dd>
       {{#if presskit.trailerLink.url}}
-        <a href="{{presskit.trailerLink.url}}">{{presskit.trailerLink.label}}</a>
+        <a href="{{presskit.trailerLink.url}}" data-l10n="ui.factsheet.values.trailer">{{presskit.trailerLink.label}}</a>
       {{else}}
-        {{presskit.trailerLink.label}}
+        <span data-l10n="ui.factsheet.values.trailer">{{presskit.trailerLink.label}}</span>
       {{/if}}
     </dd>
     {{/if}}
 
     {{#if presskit.pressKitLink}}
-    <dt>Press Kit:</dt>
+    <dt data-l10n="ui.factsheet.labels.press_kit">Press Kit:</dt>
     <dd>
       {{#if presskit.pressKitLink.url}}
-        <a href="{{presskit.pressKitLink.url}}">{{presskit.pressKitLink.label}}</a>
+        <a href="{{presskit.pressKitLink.url}}" data-l10n="ui.factsheet.values.press_kit">{{presskit.pressKitLink.label}}</a>
       {{else}}
-        {{presskit.pressKitLink.label}}
+        <span data-l10n="ui.factsheet.values.press_kit">{{presskit.pressKitLink.label}}</span>
       {{/if}}
     </dd>
     {{/if}}
 
     {{#if presskit.website}}
-    <dt>Website:</dt>
+    <dt data-l10n="ui.factsheet.labels.website">Website:</dt>
     <dd>
       <a href="{{presskit.website}}">{{prettyURL presskit.website}}</a>
     </dd>
