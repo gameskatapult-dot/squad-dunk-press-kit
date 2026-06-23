@@ -3,12 +3,6 @@
 
   const storageKey = 'squad-dunk-presskit-language'
 
-  function enforceHttps () {
-    if (window.location.hostname === 'press.squaddunk.com' && window.location.protocol === 'http:') {
-      window.location.replace('https://' + window.location.host + window.location.pathname + window.location.search + window.location.hash)
-    }
-  }
-
   function getPathValue (source, path) {
     return path.split('.').reduce(function (value, segment) {
       if (value == null) return undefined
@@ -153,7 +147,6 @@
   }
 
   document.addEventListener('DOMContentLoaded', function () {
-    enforceHttps()
     setupLanguageSelector()
     setupNavigation()
   })

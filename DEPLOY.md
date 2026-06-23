@@ -49,8 +49,8 @@ Name: press
 Value: gameskatapult-dot.github.io
 ```
 
-The site JavaScript redirects `http://press.squaddunk.com` to HTTPS when the browser can load the page. The real HTTPS enforcement should still be enabled in GitHub Pages once DNS resolves and GitHub has issued the certificate:
+HTTPS enforcement should be enabled in GitHub Pages once DNS resolves and GitHub has issued the certificate:
 
 `Settings` -> `Pages` -> `Enforce HTTPS`
 
-If the checkbox is unavailable, wait for DNS propagation and certificate provisioning, then try again.
+If the checkbox is unavailable, wait for DNS propagation and certificate provisioning, then try again. Do not add a client-side HTTP-to-HTTPS redirect before the certificate is ready, because that can send visitors to a browser certificate warning instead of the working HTTP page.
