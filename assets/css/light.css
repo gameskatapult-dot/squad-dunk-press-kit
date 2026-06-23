@@ -1710,7 +1710,12 @@ html {
 \* ---------------------------------------------------------- */
 
 .landing-hero__backdrop {
-  background-size: min(1600px, 90vw) auto;
+  background-size: cover;
+}
+
+.landing-hero__shade {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.82) 7%, rgba(255,255,255,0.34) 15%, rgba(255,255,255,0) 24%);
 }
 
 .landing-hero__cta,
@@ -1730,10 +1735,10 @@ html {
 }
 
 .product-page .page-wrapper {
-  background: rgba(255, 255, 255, 0.84);
-  border-color: rgba(193, 216, 240, 0.78);
-  border-radius: 12px;
-  box-shadow: 0 18px 44px rgba(91, 116, 145, 0.10);
+  background: rgba(255, 255, 255, 0.68);
+  border-color: rgba(255, 255, 255, 0.78);
+  border-radius: 14px;
+  box-shadow: 0 24px 60px rgba(96, 130, 165, 0.09);
 }
 
 .product-page .description,
@@ -1746,16 +1751,16 @@ html {
 .product-page .language-switcher,
 .product-page .logo,
 .product-page .gallery__item a {
-  background: rgba(255, 255, 255, 0.84);
-  border-color: rgba(193, 216, 240, 0.74);
-  border-radius: 9px;
-  box-shadow: 0 10px 28px rgba(91, 116, 145, 0.08);
+  background: rgba(255, 255, 255, 0.76);
+  border-color: rgba(255, 255, 255, 0.82);
+  border-radius: 12px;
+  box-shadow: 0 14px 34px rgba(96, 130, 165, 0.07);
 }
 
 .product-page .factsheet,
 .product-page .description-summary,
 .product-page .block__notice {
-  background: rgba(255, 255, 255, 0.86);
+  background: rgba(255, 255, 255, 0.80);
 }
 
 .product-page .nav__item,
@@ -1768,8 +1773,8 @@ html {
 .product-page .nav__item[aria-current="true"],
 .product-page .nav__item:hover,
 .product-page .nav__item:focus {
-  background: rgba(234, 244, 255, 0.82);
-  box-shadow: inset 3px 0 0 rgba(110, 90, 126, 0.32);
+  background: rgba(255, 255, 255, 0.42);
+  box-shadow: inset 2px 0 0 rgba(126, 142, 175, 0.24);
 }
 
 .product-page .language-switcher {
@@ -1777,8 +1782,8 @@ html {
 }
 
 .product-page .language-switcher__select {
-  background: rgba(247, 251, 255, 0.96);
-  border-color: rgba(154, 185, 220, 0.58);
+  background: rgba(255, 255, 255, 0.76);
+  border-color: rgba(255, 255, 255, 0.88);
   border-radius: 7px;
 }
 
@@ -1792,25 +1797,44 @@ html {
 
 .product-page .button,
 .product-page .block__notice {
-  background: rgba(247, 251, 255, 0.92);
-  border-color: rgba(154, 185, 220, 0.52);
-  box-shadow: 0 8px 20px rgba(91, 116, 145, 0.07);
+  background: rgba(255, 255, 255, 0.74);
+  border-color: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 10px 24px rgba(96, 130, 165, 0.07);
 }
 
 .product-page .gallery__item a:hover {
-  border-color: rgba(141, 183, 242, 0.82);
-  box-shadow: 0 14px 30px rgba(91, 116, 145, 0.12);
+  border-color: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 18px 38px rgba(96, 130, 165, 0.12);
 }
 
 .product-page .description-feature__icon {
-  background: rgba(234, 244, 255, 0.90);
-  border-color: rgba(154, 185, 220, 0.54);
+  background: rgba(255, 255, 255, 0.62);
+  border-color: rgba(255, 255, 255, 0.80);
   border-radius: 8px;
+}
+
+.product-page .description-summary,
+.product-page .description-long,
+.product-page .description-features {
+  padding: 20px 22px;
+}
+
+.product-page .description-feature {
+  border-top-color: rgba(126, 142, 175, 0.10);
+}
+
+.product-page .block {
+  border-bottom-color: rgba(126, 142, 175, 0.10);
+}
+
+.product-page .factsheet {
+  border-right: 0;
 }
 
 @media (max-width: 799px) {
   .landing-hero__backdrop {
-    background-size: contain;
+    background-position: 52% center;
+    background-size: cover;
   }
 
   .product-page .page-wrapper {
