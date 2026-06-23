@@ -146,8 +146,34 @@
     updateActive()
   }
 
+  function setupLandingHero () {
+    const nav = document.querySelector('.landing-nav')
+    const hero = document.querySelector('.landing-hero')
+    if (!nav || !hero) return
+
+    function updateLandingState () {
+      const threshold = Math.min(120, Math.max(48, hero.offsetHeight * 0.12))
+      nav.classList.toggle('is-scrolled', window.scrollY > threshold)
+    }
+
+    let ticking = false
+    function requestUpdate () {
+      if (ticking) return
+      ticking = true
+      window.requestAnimationFrame(function () {
+        updateLandingState()
+        ticking = false
+      })
+    }
+
+    window.addEventListener('scroll', requestUpdate, { passive: true })
+    window.addEventListener('resize', requestUpdate)
+    updateLandingState()
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     setupLanguageSelector()
     setupNavigation()
+    setupLandingHero()
   })
 }())

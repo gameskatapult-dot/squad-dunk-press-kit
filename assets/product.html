@@ -3,8 +3,37 @@
   <head>
     {{>head}}
   </head>
-  <body>
-    <div class="page grid">
+  <body class="product-page">
+    <section class="landing-hero" id="home" aria-label="{{presskit.title}}">
+      {{#if images.header}}
+      <div class="landing-hero__backdrop" style="background-image: url('./images/{{images.header}}');"></div>
+      {{/if}}
+      <div class="landing-hero__shade"></div>
+
+      <header class="landing-nav" aria-label="Primary">
+        <a class="landing-nav__brand" href="#home" aria-label="Katapult Games home">
+          <img src="./images/katapult-logo.png" alt="Katapult Games">
+        </a>
+
+        <nav class="landing-nav__links" aria-label="Landing navigation">
+          <a href="#home">Home</a>
+          <a href="#description">About</a>
+          <a href="#press-kit">Press</a>
+        </nav>
+      </header>
+
+      <div class="landing-hero__title" aria-hidden="true">
+        {{#if images.logo}}
+        <img src="./images/{{images.logo}}" alt="">
+        {{else}}
+        <span>{{presskit.title}}</span>
+        {{/if}}
+      </div>
+
+      <a class="landing-hero__cta" href="#press-kit">Press Kit</a>
+    </section>
+
+    <div class="page grid" id="press-kit">
       {{>nav}}
 
       <div class="page-wrapper grid__item">
