@@ -4,24 +4,41 @@
     {{>head}}
   </head>
   <body class="product-page">
-    <section class="landing-hero" id="home" aria-label="{{presskit.title}}">
+    <header class="landing-nav" aria-label="Primary">
+      <a class="landing-nav__brand" href="#home" aria-label="Katapult Games home">
+        <img src="./images/katapult-logo.png" alt="Katapult Games">
+      </a>
+
+      <nav class="landing-nav__links" aria-label="Landing navigation">
+        <a href="#home">Home</a>
+        <a href="#description">About</a>
+        <a href="#press-kit">Press</a>
+      </nav>
+    </header>
+
+    <section class="landing-video" id="home" aria-labelledby="gameplay-reel-title">
+      <div class="landing-video__inner">
+        <div class="landing-video__copy">
+          <p class="landing-video__eyebrow">Gameplay Reel</p>
+          <h1 id="gameplay-reel-title">Squad Dunk</h1>
+          <p>First-person, physics-based online basketball built for arcade team play.</p>
+        </div>
+
+        <a class="landing-video__frame landing-video__frame--link" href="https://youtu.be/k8J8c510mhU" target="_blank" rel="noopener" aria-label="Watch the Squad Dunk gameplay reel on YouTube">
+          <img src="./images/youtube-gameplay-reel.jpg" alt="Squad Dunk gameplay reel thumbnail">
+          <span class="landing-video__play" aria-hidden="true">
+            <span class="landing-video__play-icon"></span>
+            Watch Gameplay Reel
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <section class="landing-hero" aria-label="{{presskit.title}} artwork">
       {{#if images.header}}
       <div class="landing-hero__backdrop" style="background-image: url('./images/{{images.header}}');"></div>
       {{/if}}
       <div class="landing-hero__shade"></div>
-
-      <header class="landing-nav" aria-label="Primary">
-        <a class="landing-nav__brand" href="#home" aria-label="Katapult Games home">
-          <img src="./images/katapult-logo.png" alt="Katapult Games">
-        </a>
-
-        <nav class="landing-nav__links" aria-label="Landing navigation">
-          <a href="#home">Home</a>
-          <a href="#description">About</a>
-          <a href="#press-kit">Press</a>
-        </nav>
-      </header>
-
       <a class="landing-hero__cta" href="#press-kit">Press Kit</a>
     </section>
 

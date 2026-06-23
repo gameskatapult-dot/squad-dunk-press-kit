@@ -187,6 +187,40 @@ function normalizeVideos (content) {
   return videos
 }
 
+function normalizeFactLink (source, fieldName) {
+  const value = source || {}
+  if (typeof value !== 'object') fail(`${fieldName} must be an object`)
+
+  return {
+    label: optionalString(value.label),
+    url: optionalString(value.url)
+  }
+}
+
+function factLinkNode (link) {
+  if (!link.label && !link.url) return null
+  return {
+    ...(link.label ? { label: link.label } : {}),
+    ...(link.url ? { url: link.url } : {})
+  }
+}
+
+function normalizeFactsheet (content) {
+  const factsheet = content.factsheet || {}
+  if (typeof factsheet !== 'object') fail('factsheet must be an object')
+
+  return {
+    about: optionalString(factsheet.about),
+    development: optionalString(factsheet.development),
+    developers: optionalString(factsheet.developers),
+    publisher: optionalString(factsheet.publisher),
+    cost: optionalString(factsheet.cost),
+    steam: normalizeFactLink(factsheet.steam, 'factsheet.steam'),
+    trailer: normalizeFactLink(factsheet.trailer, 'factsheet.trailer'),
+    pressKit: normalizeFactLink(factsheet.press_kit, 'factsheet.press_kit')
+  }
+}
+
 function normalizeBrandingAssets (content) {
   const brandingConfig = content.branding || {}
   const assets = asArray(brandingConfig.assets, 'branding.assets').map((asset) => ({
@@ -382,6 +416,7 @@ function buildProductData (content) {
   const downloads = normalizeDownloads(content)
   const screenshots = normalizeScreenshots(content)
   const videos = normalizeVideos(content)
+  const factsheet = normalizeFactsheet(content)
   const brandingAssets = normalizeBrandingAssets(content)
   const contacts = normalizeContacts(content)
   const links = normalizeLinks(content)
@@ -395,6 +430,7 @@ function buildProductData (content) {
   const enabledVideos = videos.filter(enabled)
   const enabledContacts = contacts.filter(enabled)
   const enabledLinks = links.filter(enabled)
+  const featureList = optionalArray(content.features).map((feature) => requireString(feature, 'features[]'))
 
   if (enabledScreenshots.length === 0) fail('media.screenshots.items needs at least one enabled screenshot')
   if (enabledBrandingAssets.length === 0) fail('branding.assets needs at least one enabled asset')
@@ -418,8 +454,18 @@ function buildProductData (content) {
       description: descriptionContent.short.text,
       history: descriptionContent.long.paragraphs.join(' '),
       features: {
-        feature: descriptionContent.keyFeatures.map((feature) => `${feature.title}: ${feature.body}`)
+        feature: featureList.length
+          ? featureList
+          : descriptionContent.keyFeatures.map((feature) => `${feature.title}: ${feature.body}`)
       },
+      ...(factsheet.about ? { about: factsheet.about } : {}),
+      ...(factsheet.development ? { development: factsheet.development } : {}),
+      ...(factsheet.developers ? { developers: factsheet.developers } : {}),
+      ...(factsheet.publisher ? { publisher: factsheet.publisher } : {}),
+      ...(factsheet.cost ? { cost: factsheet.cost } : {}),
+      ...(factLinkNode(factsheet.steam) ? { 'steam-link': factLinkNode(factsheet.steam) } : {}),
+      ...(factLinkNode(factsheet.trailer) ? { 'trailer-link': factLinkNode(factsheet.trailer) } : {}),
+      ...(factLinkNode(factsheet.pressKit) ? { 'press-kit-link': factLinkNode(factsheet.pressKit) } : {}),
       'description-heading': descriptionContent.heading,
       'short-description-title': descriptionContent.short.title,
       'short-description': descriptionContent.short.text,

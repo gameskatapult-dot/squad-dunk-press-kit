@@ -1,72 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <product>
   <title>Squad Dunk</title>
-  <website>https://katapultgames.de/</website>
+  <website>https://www.squaddunk.com</website>
   <release-dates>
     <release-date>TBA</release-date>
   </release-dates>
   <genres>
-    <genre>First-Person</genre>
-    <genre>Physics-Based</genre>
     <genre>Basketball</genre>
-    <genre>Multiplayer</genre>
-    <genre>Online PvP</genre>
-    <genre>Team-Based</genre>
-    <genre>Arcade</genre>
     <genre>Sports</genre>
+    <genre>Multiplayer</genre>
+    <genre>PvP</genre>
+    <genre>First-Person</genre>
+    <genre>Arcade</genre>
+    <genre>Physics</genre>
+    <genre>Team-Based</genre>
     <genre>Indie</genre>
+    <genre>Physics-Based</genre>
+    <genre>Online PvP</genre>
   </genres>
   <platforms>
     <platform>
-      <name>PC</name>
-    </platform>
-    <platform>
-      <name>Steam [TBD store page URL]</name>
+      <name>PC - Steam</name>
     </platform>
   </platforms>
-  <description>Squad Dunk is a first-person online basketball game with physics-based mechanics, built around team play, timing and playing with friends from inside the court.</description>
-  <history>Squad Dunk reimagines basketball as a first-person online game where players are inside the play rather than watching the sport from above. Control a single player, read the court in real time and work with your squad to create shots, passes, steals and defensive plays. Physics-based shots, passes, and steals make timing, positioning, and teamwork central to every match. The game is not a strict basketball simulation. It is designed to be easy to understand from the first match, with readable action, low downtime, and a skill curve built around movement, coordination, and physical ball control.</history>
+  <description>Squad Dunk is a first-person online basketball game with physics-based mechanics, built around team play and arcade accessibility.</description>
+  <history>Squad Dunk is a first-person online basketball game where each player controls one character on the court and competes as part of a team. Instead of relying on canned sports animations and distant cameras, physics-based mechanics make the game highly immersive, allowing players to lose themselves in the plays like kids. The game is designed to be easy to pick up, with simple rules and fast arcade-style logic, while still giving players room to improve. Players can customize their character, build their squad identity, and play online with friends.</history>
   <features>
-    <feature>FIRST-PERSON BASKETBALL: Play basketball from inside the court. Instead of managing a full team from a distant camera, you control one player directly in first person and experience every pass, steal, shot, and defensive play from your own perspective.</feature>
-    <feature>PHYSICS-BASED BALL CONTROL: Shots, passes, steals, and rebounds are shaped by physical interaction with the ball. Timing, angle, movement, and positioning matter, making each successful play feel readable and earned.</feature>
-    <feature>TEAM PLAY: Squad Dunk is built around playing with friends online. Move into space, call for the ball, make the extra pass, defend together, and turn individual actions into coordinated team plays.</feature>
-    <feature>EASY TO START, FUN TO IMPROVE: Squad Dunk is designed to be accessible from the first match. Players can quickly understand what is happening, while still finding room to improve through movement, timing, team coordination, and ball control.</feature>
-    <feature>SCHOOL-COURT ENERGY: Squad Dunk is inspired by the feeling of playing basketball with friends after class: quick to understand, social, competitive, and built around that "one more game" feeling.</feature>
+    <feature>First-person view</feature>
+    <feature>Physics-based shots, passes, steals, and rebounds</feature>
+    <feature>3 players teams</feature>
+    <feature>Simple and accessible</feature>
+    <feature>Different courts and scenarios</feature>
+    <feature>Character and team customization</feature>
   </features>
+  <about>Squad Dunk</about>
+  <development>In active development by Katapult Games.</development>
+  <developers>Bruno Braghetto, Matias Nicolini and Anahi Mou</developers>
+  <publisher>TBA</publisher>
+  <cost>TBA</cost>
+  <steam-link>
+    <label>Click here for Steam Link</label>
+  </steam-link>
+  <trailer-link>
+    <label>Click here for Trailer Link</label>
+    <url>https://youtu.be/k8J8c510mhU</url>
+  </trailer-link>
+  <press-kit-link>
+    <label>Click here for Press Kit Link</label>
+    <url>https://drive.google.com/drive/folders/1G_cmvMlNz9NgyuEXS32lV81ek7wmlIOt?usp=sharing</url>
+  </press-kit-link>
   <description-heading>WHAT IS SQUAD DUNK?</description-heading>
-  <short-description-title>Short Description</short-description-title>
-  <short-description>Squad Dunk is a first-person online basketball game with physics-based mechanics, built around team play, timing and playing with friends from inside the court.</short-description>
-  <long-description-title>Long Description</long-description-title>
+  <short-description-title>SHORT DESCRIPTION</short-description-title>
+  <short-description>Squad Dunk is a first-person online basketball game with physics-based mechanics, built around team play and arcade accessibility.</short-description>
+  <long-description-title>LONG DESCRIPTION</long-description-title>
   <long-descriptions>
-    <long-description>Squad Dunk reimagines basketball as a first-person online game where players are inside the play rather than watching the sport from above. Control a single player, read the court in real time and work with your squad to create shots, passes, steals and defensive plays. Physics-based shots, passes, and steals make timing, positioning, and teamwork central to every match.</long-description>
-    <long-description>The game is not a strict basketball simulation. It is designed to be easy to understand from the first match, with readable action, low downtime, and a skill curve built around movement, coordination, and physical ball control.</long-description>
+    <long-description>Squad Dunk is a first-person online basketball game where each player controls one character on the court and competes as part of a team.</long-description>
+    <long-description>Instead of relying on canned sports animations and distant cameras, physics-based mechanics make the game highly immersive, allowing players to lose themselves in the plays like kids.</long-description>
+    <long-description>The game is designed to be easy to pick up, with simple rules and fast arcade-style logic, while still giving players room to improve. Players can customize their character, build their squad identity, and play online with friends.</long-description>
   </long-descriptions>
   <key-features-title>Key Features</key-features-title>
   <key-features>
     <key-feature>
       <icon>🏀</icon>
-      <title>FIRST-PERSON BASKETBALL</title>
-      <body>Play basketball from inside the court. Instead of managing a full team from a distant camera, you control one player directly in first person and experience every pass, steal, shot, and defensive play from your own perspective.</body>
+      <title>PLAY FROM THE COURT</title>
+      <body>Control one player in first person and experience the match from inside the action, not from a distant camera.</body>
     </key-feature>
     <key-feature>
       <icon>🏀</icon>
-      <title>PHYSICS-BASED BALL CONTROL</title>
-      <body>Shots, passes, steals, and rebounds are shaped by physical interaction with the ball. Timing, angle, movement, and positioning matter, making each successful play feel readable and earned.</body>
+      <title>FEEL THE PHYSICS</title>
+      <body>Squad Dunk uses physics-based mechanics to make basketball feel more alive, physical, and unpredictable. Blocks, shots, steals, rebounds, movement, and contact all become part of the moment.</body>
     </key-feature>
     <key-feature>
       <icon>🏀</icon>
-      <title>TEAM PLAY</title>
-      <body>Squad Dunk is built around playing with friends online. Move into space, call for the ball, make the extra pass, defend together, and turn individual actions into coordinated team plays.</body>
+      <title>BUILD YOUR SQUAD</title>
+      <body>Play online with friends, customize your character, and build your team identity as you compete together.</body>
     </key-feature>
     <key-feature>
       <icon>🏀</icon>
-      <title>EASY TO START, FUN TO IMPROVE</title>
-      <body>Squad Dunk is designed to be accessible from the first match. Players can quickly understand what is happening, while still finding room to improve through movement, timing, team coordination, and ball control.</body>
-    </key-feature>
-    <key-feature>
-      <icon>🏀</icon>
-      <title>SCHOOL-COURT ENERGY</title>
-      <body>Squad Dunk is inspired by the feeling of playing basketball with friends after class: quick to understand, social, competitive, and built around that "one more game" feeling.</body>
+      <title>EVERY COURT CHANGES THE GAME</title>
+      <body>Each court adds its own twist, with new mechanics and layouts that make teams adapt in different ways.</body>
     </key-feature>
   </key-features>
   <default-language>en</default-language>
@@ -112,18 +124,22 @@
       <name>Portuguese</name>
     </language>
   </languages>
-  <localization-json>{"defaultLanguage":"en","languages":[{"code":"en","label":"EN","name":"English"},{"code":"es","label":"ES","name":"Spanish"},{"code":"ru","label":"RU","name":"Russian"},{"code":"ja","label":"JA","name":"Japanese"},{"code":"zh","label":"ZH","name":"Chinese"},{"code":"de","label":"DE","name":"German"},{"code":"fr","label":"FR","name":"French"},{"code":"pt","label":"PT","name":"Portuguese"}],"translations":{"en":{"description":{"heading":"WHAT IS SQUAD DUNK?","short":{"title":"Short Description","text":"Squad Dunk is a first-person online basketball game with physics-based mechanics, built around team play, timing and playing with friends from inside the court."},"long":{"title":"Long Description","paragraphs":["Squad Dunk reimagines basketball as a first-person online game where players are inside the play rather than watching the sport from above. Control a single player, read the court in real time and work with your squad to create shots, passes, steals and defensive plays. Physics-based shots, passes, and steals make timing, positioning, and teamwork central to every match.","The game is not a strict basketball simulation. It is designed to be easy to understand from the first match, with readable action, low downtime, and a skill curve built around movement, coordination, and physical ball control."]},"keyFeaturesTitle":"Key Features","keyFeatures":[{"icon":"🏀","title":"FIRST-PERSON BASKETBALL","body":"Play basketball from inside the court. Instead of managing a full team from a distant camera, you control one player directly in first person and experience every pass, steal, shot, and defensive play from your own perspective."},{"icon":"🏀","title":"PHYSICS-BASED BALL CONTROL","body":"Shots, passes, steals, and rebounds are shaped by physical interaction with the ball. Timing, angle, movement, and positioning matter, making each successful play feel readable and earned."},{"icon":"🏀","title":"TEAM PLAY","body":"Squad Dunk is built around playing with friends online. Move into space, call for the ball, make the extra pass, defend together, and turn individual actions into coordinated team plays."},{"icon":"🏀","title":"EASY TO START, FUN TO IMPROVE","body":"Squad Dunk is designed to be accessible from the first match. Players can quickly understand what is happening, while still finding room to improve through movement, timing, team coordination, and ball control."},{"icon":"🏀","title":"SCHOOL-COURT ENERGY","body":"Squad Dunk is inspired by the feeling of playing basketball with friends after class: quick to understand, social, competitive, and built around that \"one more game\" feeling."}]}},"es":{},"ru":{},"ja":{},"zh":{},"de":{},"fr":{},"pt":{}}}</localization-json>
+  <localization-json>{"defaultLanguage":"en","languages":[{"code":"en","label":"EN","name":"English"},{"code":"es","label":"ES","name":"Spanish"},{"code":"ru","label":"RU","name":"Russian"},{"code":"ja","label":"JA","name":"Japanese"},{"code":"zh","label":"ZH","name":"Chinese"},{"code":"de","label":"DE","name":"German"},{"code":"fr","label":"FR","name":"French"},{"code":"pt","label":"PT","name":"Portuguese"}],"translations":{"en":{"description":{"heading":"WHAT IS SQUAD DUNK?","short":{"title":"SHORT DESCRIPTION","text":"Squad Dunk is a first-person online basketball game with physics-based mechanics, built around team play and arcade accessibility."},"long":{"title":"LONG DESCRIPTION","paragraphs":["Squad Dunk is a first-person online basketball game where each player controls one character on the court and competes as part of a team.","Instead of relying on canned sports animations and distant cameras, physics-based mechanics make the game highly immersive, allowing players to lose themselves in the plays like kids.","The game is designed to be easy to pick up, with simple rules and fast arcade-style logic, while still giving players room to improve. Players can customize their character, build their squad identity, and play online with friends."]},"keyFeaturesTitle":"Key Features","keyFeatures":[{"icon":"🏀","title":"PLAY FROM THE COURT","body":"Control one player in first person and experience the match from inside the action, not from a distant camera."},{"icon":"🏀","title":"FEEL THE PHYSICS","body":"Squad Dunk uses physics-based mechanics to make basketball feel more alive, physical, and unpredictable. Blocks, shots, steals, rebounds, movement, and contact all become part of the moment."},{"icon":"🏀","title":"BUILD YOUR SQUAD","body":"Play online with friends, customize your character, and build your team identity as you compete together."},{"icon":"🏀","title":"EVERY COURT CHANGES THE GAME","body":"Each court adds its own twist, with new mechanics and layouts that make teams adapt in different ways."}]}},"es":{},"ru":{},"ja":{"description":{"heading":"SQUAD DUNKとは？","short":{"title":"ショート説明","text":"Squad Dunkは、一人称視点、物理ベースのメカニクス、チームプレイ、そして遊びやすいアーケード感を軸にしたオンラインバスケットボールゲームです。"},"long":{"title":"ロング説明","paragraphs":["Squad Dunkは、各プレイヤーがコート上の1人のキャラクターを操作し、チームの一員として競い合う一人称視点のオンラインバスケットボールゲームです。","決められたスポーツアニメーションや遠いカメラに頼るのではなく、物理ベースのメカニクスによって、子どものようにプレイに夢中になれる高い没入感を生み出します。","シンプルなルールとテンポの速いアーケードスタイルで、すぐに遊び始められる一方、動き、タイミング、チームワーク、ボールコントロールを通じて上達の余地があります。プレイヤーはキャラクターをカスタマイズし、スクワッドの個性を作り、友達とオンラインで遊べます。"]},"keyFeaturesTitle":"主な特徴","keyFeatures":[{"icon":"🏀","title":"コートの中からプレイ","body":"遠くのカメラではなく、一人称視点で1人の選手を操作し、アクションの内側から試合を体験します。"},{"icon":"🏀","title":"物理を感じる","body":"物理ベースのメカニクスにより、ブロック、シュート、スティール、リバウンド、移動、接触のすべてが、その瞬間のプレイに影響します。"},{"icon":"🏀","title":"スクワッドを作る","body":"友達とオンラインで遊び、キャラクターをカスタマイズし、チームの個性を作りながら一緒に競い合います。"},{"icon":"🏀","title":"コートごとにゲームが変わる","body":"それぞれのコートには独自の仕掛けやレイアウトがあり、チームは状況に合わせてプレイを変える必要があります。"}]}},"zh":{},"de":{"description":{"heading":"WAS IST SQUAD DUNK?","short":{"title":"KURZBESCHREIBUNG","text":"Squad Dunk ist ein Online-Basketballspiel aus der First-Person-Perspektive mit physikbasierten Mechaniken, das auf Teamplay und Arcade-Zugänglichkeit ausgelegt ist."},"long":{"title":"LANGE BESCHREIBUNG","paragraphs":["Squad Dunk ist ein Online-Basketballspiel aus der First-Person-Perspektive, in dem jede Person einen Charakter auf dem Court steuert und als Teil eines Teams antritt.","Statt auf vorgefertigte Sportanimationen und entfernte Kameras zu setzen, sorgen physikbasierte Mechaniken für ein besonders immersives Spielgefühl, bei dem man sich wie Kinder direkt in den Spielzügen verlieren kann.","Das Spiel ist leicht zugänglich, mit einfachen Regeln und schneller Arcade-Logik, bietet aber trotzdem Raum, besser zu werden. Spielerinnen und Spieler können ihren Charakter anpassen, eine eigene Squad-Identität aufbauen und online mit Freundinnen und Freunden spielen."]},"keyFeaturesTitle":"Hauptfeatures","keyFeatures":[{"icon":"🏀","title":"SPIEL DIREKT VOM COURT","body":"Steuere einen Spieler in der First-Person-Perspektive und erlebe das Match mitten aus der Action heraus, nicht aus einer entfernten Kamera."},{"icon":"🏀","title":"SPÜRE DIE PHYSIK","body":"Physikbasierte Mechaniken machen Basketball lebendiger, körperlicher und unvorhersehbarer. Blocks, Würfe, Steals, Rebounds, Bewegung und Kontakt werden Teil jedes Moments."},{"icon":"🏀","title":"BAUE DEIN SQUAD","body":"Spiele online mit Freunden, passe deinen Charakter an und baue gemeinsam mit deinem Team eine eigene Identität auf."},{"icon":"🏀","title":"JEDER COURT VERÄNDERT DAS SPIEL","body":"Jeder Court bringt eigene Twists, Mechaniken und Layouts mit, an die sich Teams auf unterschiedliche Weise anpassen müssen."}]}},"fr":{},"pt":{}}}</localization-json>
   <sections>
     <section>
       <id>overview</id>
       <showFactsheet>true</showFactsheet>
       <showDescription>true</showDescription>
+      <showFeatures>true</showFeatures>
     </section>
     <section>
       <id>media</id>
     </section>
     <section>
       <id>branding</id>
+    </section>
+    <section>
+      <id>links</id>
     </section>
     <section>
       <id>team-contact</id>
@@ -143,6 +159,11 @@
       <href>#description</href>
     </nav-section>
     <nav-section>
+      <id>features</id>
+      <title>Features</title>
+      <href>#features</href>
+    </nav-section>
+    <nav-section>
       <id>media</id>
       <title>Media</title>
       <href>#media</href>
@@ -151,6 +172,11 @@
       <id>branding</id>
       <title>Branding</title>
       <href>#logo</href>
+    </nav-section>
+    <nav-section>
+      <id>links</id>
+      <title>Links</title>
+      <href>#links</href>
     </nav-section>
     <nav-section>
       <id>team</id>
@@ -165,21 +191,21 @@
   </nav-sections>
   <media-videos>
     <media-video>
-      <id>prerelease-gameplay-reel</id>
-      <title>Pre-release Gameplay Reel</title>
-      <label>Private press preview</label>
-      <description>Private press preview. Link coming soon.</description>
-      <url/>
-      <status>request_access</status>
+      <id>gameplay-reel</id>
+      <title>Gameplay Reel</title>
+      <label>Watch on YouTube</label>
+      <description>First-person physics-based basketball gameplay reel.</description>
+      <url>https://youtu.be/k8J8c510mhU</url>
+      <status>available</status>
       <enabled>true</enabled>
     </media-video>
     <media-video>
       <id>reveal-trailer</id>
       <title>Reveal Trailer</title>
-      <label>Coming soon</label>
-      <description>Coming soon.</description>
-      <url/>
-      <status>coming_soon</status>
+      <label>Click here for Trailer Link</label>
+      <description>Watch the current Squad Dunk trailer link.</description>
+      <url>https://youtu.be/k8J8c510mhU</url>
+      <status>available</status>
       <enabled>true</enabled>
     </media-video>
   </media-videos>
@@ -301,26 +327,83 @@
   <show-contact-section>true</show-contact-section>
   <team>
     <about-title>About Katapult Games</about-title>
-    <boilerplate-title>Boilerplate</boilerplate-title>
-    <boilerplate>Katapult Games is a small video game studio based in Berlin, Germany. The team is developing Squad Dunk, a first-person, physics-based basketball game focused on online team play, readable action, and playful sports energy.</boilerplate>
-    <credits-title>Credits</credits-title>
-    <credits>Team credits are currently [TBD].</credits>
+    <boilerplate-title>About</boilerplate-title>
+    <boilerplate>A small indie video game studio based in Berlin.
+We are Katapult Games and we build games with our community, not just for them. Driven by transparency, flexibility and a love for modern gaming trends, our mission is to create high energy multiplayer experiences that truly connect with players. We don't just want you to play our games, we want you to help us shape them. Welcome to the squad!</boilerplate>
+    <credits-title>Developers</credits-title>
+    <credits>Bruno Braghetto, Matias Nicolini and Anahi Mou</credits>
   </team>
   <contacts>
     <contact>
-      <name>Press / Business Inquiries</name>
+      <name>Email</name>
       <mail>games.katapult@gmail.com</mail>
     </contact>
     <contact>
-      <name>Katapult Games</name>
-      <link>https://katapultgames.de/</link>
+      <name>Bug Reports</name>
+      <link>https://discord.com/channels/1352308997365043250/1518207906778972271</link>
     </contact>
   </contacts>
   <links>
     <link>
-      <id>website</id>
-      <title>Website</title>
-      <url>https://katapultgames.de/</url>
+      <id>squad-dunk-tiktok</id>
+      <title>Squad Dunk TikTok</title>
+      <url>https://www.tiktok.com/@squaddunkgame</url>
+      <label/>
+      <enabled>true</enabled>
+    </link>
+    <link>
+      <id>squad-dunk-instagram</id>
+      <title>Squad Dunk Instagram</title>
+      <url>https://www.instagram.com/squaddunkgame/</url>
+      <label/>
+      <enabled>true</enabled>
+    </link>
+    <link>
+      <id>squad-dunk-discord</id>
+      <title>Squad Dunk Discord</title>
+      <url>https://discord.gg/tDUuwSfxrS</url>
+      <label/>
+      <enabled>true</enabled>
+    </link>
+    <link>
+      <id>squad-dunk-website</id>
+      <title>Squad Dunk Website</title>
+      <url>https://www.squaddunk.com</url>
+      <label/>
+      <enabled>true</enabled>
+    </link>
+    <link>
+      <id>katapult-bluesky</id>
+      <title>Katapult Games Bluesky</title>
+      <url>https://bsky.app/profile/katapultgames.bsky.social</url>
+      <label/>
+      <enabled>true</enabled>
+    </link>
+    <link>
+      <id>katapult-instagram</id>
+      <title>Katapult Games Instagram</title>
+      <url>https://www.instagram.com/katapultgames/</url>
+      <label/>
+      <enabled>true</enabled>
+    </link>
+    <link>
+      <id>katapult-youtube</id>
+      <title>Katapult Games YouTube</title>
+      <url>https://www.youtube.com/@KatapultGames</url>
+      <label/>
+      <enabled>true</enabled>
+    </link>
+    <link>
+      <id>katapult-newsletter</id>
+      <title>Katapult Games Newsletter</title>
+      <url>https://substack.com/@katapultgames</url>
+      <label/>
+      <enabled>true</enabled>
+    </link>
+    <link>
+      <id>katapult-website</id>
+      <title>Katapult Games Website</title>
+      <url>https://www.katapultgames.com</url>
       <label/>
       <enabled>true</enabled>
     </link>
