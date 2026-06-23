@@ -1,5 +1,9 @@
 <script src="{{assets}}/js/masonry.min.js"></script>
 <script src="{{assets}}/js/imagesloaded.min.js"></script>
+{{#if presskit.localizationJson}}
+<script type="application/json" id="presskit-localization">{{{presskit.localizationJson}}}</script>
+{{/if}}
+<script src="{{assets}}/js/presskit-page.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function onContentLoaded() {
     // Add masonry layout on the galleries.

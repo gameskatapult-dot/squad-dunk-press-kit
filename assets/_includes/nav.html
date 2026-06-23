@@ -16,6 +16,17 @@
     <a href="{{presskit.website}}">{{prettyURL presskit.website}}</a>
     {{/if}}
   </aside>
+  {{else}}
+    {{#if presskit.languages}}
+    <div class="language-switcher">
+      <label class="language-switcher__label" for="language-select">Language</label>
+      <select class="language-switcher__select" id="language-select" data-language-select aria-label="Select language">
+        {{#each presskit.languages}}
+        <option value="{{code}}">{{label}}</option>
+        {{/each}}
+      </select>
+    </div>
+    {{/if}}
   {{/if}}
 
   <div class="nav__toggle" id="hamburger">

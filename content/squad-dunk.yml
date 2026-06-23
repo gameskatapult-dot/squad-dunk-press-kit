@@ -6,6 +6,8 @@ sections:
     enabled: true
   - id: description
     enabled: true
+  - id: features
+    enabled: false
   - id: media
     enabled: true
   - id: branding
@@ -14,6 +16,100 @@ sections:
     enabled: true
   - id: contact
     enabled: true
+
+localization:
+  default: en
+  languages:
+    - code: en
+      label: EN
+      name: English
+    - code: es
+      label: ES
+      name: Spanish
+    - code: ru
+      label: RU
+      name: Russian
+    - code: ja
+      label: JA
+      name: Japanese
+    - code: zh
+      label: ZH
+      name: Chinese
+    - code: de
+      label: DE
+      name: German
+    - code: fr
+      label: FR
+      name: French
+    - code: pt
+      label: PT
+      name: Portuguese
+  translations:
+    en:
+      description:
+        heading: WHAT IS SQUAD DUNK?
+        short:
+          title: Short Description
+          text: >-
+            Squad Dunk is a first-person online basketball game with
+            physics-based mechanics, built around team play, timing and playing
+            with friends from inside the court.
+        long:
+          title: Long Description
+          paragraphs:
+            - >-
+              Squad Dunk reimagines basketball as a first-person online game
+              where players are inside the play rather than watching the sport
+              from above. Control a single player, read the court in real time
+              and work with your squad to create shots, passes, steals and
+              defensive plays. Physics-based shots, passes, and steals make
+              timing, positioning, and teamwork central to every match.
+            - >-
+              The game is not a strict basketball simulation. It is designed to
+              be easy to understand from the first match, with readable action,
+              low downtime, and a skill curve built around movement,
+              coordination, and physical ball control.
+        key_features_title: Key Features
+        key_features:
+          - icon: "🏀"
+            title: FIRST-PERSON BASKETBALL
+            body: >-
+              Play basketball from inside the court. Instead of managing a full
+              team from a distant camera, you control one player directly in
+              first person and experience every pass, steal, shot, and defensive
+              play from your own perspective.
+          - icon: "🏀"
+            title: PHYSICS-BASED BALL CONTROL
+            body: >-
+              Shots, passes, steals, and rebounds are shaped by physical
+              interaction with the ball. Timing, angle, movement, and positioning
+              matter, making each successful play feel readable and earned.
+          - icon: "🏀"
+            title: TEAM PLAY
+            body: >-
+              Squad Dunk is built around playing with friends online. Move into
+              space, call for the ball, make the extra pass, defend together, and
+              turn individual actions into coordinated team plays.
+          - icon: "🏀"
+            title: EASY TO START, FUN TO IMPROVE
+            body: >-
+              Squad Dunk is designed to be accessible from the first match.
+              Players can quickly understand what is happening, while still
+              finding room to improve through movement, timing, team
+              coordination, and ball control.
+          - icon: "🏀"
+            title: SCHOOL-COURT ENERGY
+            body: >-
+              Squad Dunk is inspired by the feeling of playing basketball with
+              friends after class: quick to understand, social, competitive, and
+              built around that "one more game" feeling.
+    es: {}
+    ru: {}
+    ja: {}
+    zh: {}
+    de: {}
+    fr: {}
+    pt: {}
 
 release_dates:
   - TBA
@@ -32,32 +128,6 @@ genres:
 platforms:
   - name: PC
   - name: Steam [TBD store page URL]
-
-description: >-
-  Squad Dunk is a first-person basketball game with physics-based mechanics.
-  Team up with friends and compete in online matches.
-
-history: >-
-  Squad Dunk began from the idea that basketball could feel different when
-  played from the athlete's point of view. Instead of focusing on managing an
-  entire roster from a distant camera, the game asks players to inhabit one body
-  on the court, read the movement of teammates and opponents, and create plays
-  through physical interaction. The team is focusing on a multiplayer experience
-  where the fun comes from cooperation, improvisation, clean feedback, and the
-  satisfying chaos of a ball that behaves like a real object inside an arcade
-  sports game.
-
-features:
-  - "First-person basketball: experience the court from the player's perspective instead of controlling a whole team from above."
-  - "Physics-based mechanics: shooting, passing, steals, ball control, and movement are built around physical interaction."
-  - "Online team matches: team up with friends and compete against other squads."
-  - "Teamwork-first design: passing, assists, spacing, defence, and movement are central to winning."
-  - "Arcade-leaning readability: the game prioritises clear action, fast decisions, and low downtime over strict sports simulation."
-  - "Anti-ball-hogging direction: mechanics should encourage cooperation and reduce spammy solo play where possible."
-  - "Genre: first-person sports / arcade basketball / online multiplayer."
-  - "Players: online team-based multiplayer; exact player count TBD."
-  - "Availability: in development. Price TBA. Languages TBD. Engine TBD."
-  - "School squad energy: a playful schoolyard sports tone supports the game's bright arcade basketball identity."
 
 media:
   videos:

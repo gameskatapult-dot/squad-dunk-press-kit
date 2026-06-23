@@ -1,12 +1,32 @@
-<h2 id="description">Description</h2>
-<p>{{rawText presskit.description}}</p>
+<h2 id="description" data-l10n="description.heading">{{presskit.descriptionHeading}}</h2>
 
-<h2 id="history">History</h2>
-{{#if presskit.history}}
-<p>{{rawText presskit.history}}</p>
-{{/if}}
+<div class="description-copy">
+  <section class="description-summary" aria-labelledby="short-description-title">
+    <h3 id="short-description-title" data-l10n="description.short.title">{{presskit.shortDescriptionTitle}}</h3>
+    <p data-l10n="description.short.text">{{presskit.shortDescription}}</p>
+  </section>
 
-{{#each presskit.histories}}
-<h3>{{header}}</h3>
-<p>{{rawText text}}</p>
-{{/each}}
+  <section class="description-long" aria-labelledby="long-description-title">
+    <h3 id="long-description-title" data-l10n="description.long.title">{{presskit.longDescriptionTitle}}</h3>
+    {{#each presskit.longDescriptions}}
+    <p data-l10n="description.long.paragraphs.{{@index}}">{{.}}</p>
+    {{/each}}
+  </section>
+
+  {{#if presskit.keyFeatures}}
+  <section class="description-features" aria-labelledby="key-features-title">
+    <h3 id="key-features-title" data-l10n="description.keyFeaturesTitle">{{presskit.keyFeaturesTitle}}</h3>
+    <div class="description-feature-list">
+      {{#each presskit.keyFeatures}}
+      <article class="description-feature">
+        <span class="description-feature__icon" aria-hidden="true">{{icon}}</span>
+        <div>
+          <h4 data-l10n="description.keyFeatures.{{@index}}.title">{{title}}</h4>
+          <p data-l10n="description.keyFeatures.{{@index}}.body">{{body}}</p>
+        </div>
+      </article>
+      {{/each}}
+    </div>
+  </section>
+  {{/if}}
+</div>
