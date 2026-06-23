@@ -22,14 +22,6 @@
         </nav>
       </header>
 
-      <div class="landing-hero__title" aria-hidden="true">
-        {{#if images.logo}}
-        <img src="./images/{{images.logo}}" alt="">
-        {{else}}
-        <span>{{presskit.title}}</span>
-        {{/if}}
-      </div>
-
       <a class="landing-hero__cta" href="#press-kit">Press Kit</a>
     </section>
 
@@ -116,6 +108,10 @@
         {{>footer}}
       </div>
     </div>
+
+    <section class="funding-banner" aria-label="Funding support">
+      <img src="./images/press-start-logo-bar.png" alt="Founders supported by Press Start. Press Start: Games Founding Grant is a project by game, The German Games Industry Association, and Stiftung Digitale Spielekultur. Funded by Der Beauftragte der Bundesregierung fur Kultur und Medien.">
+    </section>
 
     {{>scripts}}
   </body>
