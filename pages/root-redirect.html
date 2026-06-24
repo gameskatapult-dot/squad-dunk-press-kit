@@ -3,14 +3,175 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Squad Dunk Press Kit</title>
-    <meta http-equiv="refresh" content="0; url=./presskit/">
-    <link rel="canonical" href="./presskit/">
-    <script>
-      window.location.replace('./presskit/' + window.location.search + window.location.hash);
-    </script>
+    <title>Squad Dunk</title>
+    <meta name="description" content="Squad Dunk press kit by Katapult Games.">
+    <link rel="canonical" href="./">
+    <style>
+      :root {
+        --ink: #332d35;
+        --white: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--white);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .site-shell {
+        min-height: 100vh;
+        background: var(--white);
+      }
+
+      .hero {
+        position: relative;
+        overflow: hidden;
+        background: #eef6ff;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0 0 auto;
+        z-index: 1;
+        height: clamp(120px, 18vw, 250px);
+        pointer-events: none;
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0.96) 0%,
+          rgba(255, 255, 255, 0.76) 44%,
+          rgba(255, 255, 255, 0) 100%
+        );
+      }
+
+      .hero__art {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .topbar {
+        position: absolute;
+        top: clamp(18px, 2.4vw, 46px);
+        left: clamp(22px, 4.2vw, 82px);
+        right: clamp(22px, 4.2vw, 82px);
+        z-index: 2;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+      }
+
+      .brand img {
+        display: block;
+        width: clamp(92px, 8vw, 150px);
+        height: auto;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: clamp(28px, 4vw, 78px);
+        padding-top: clamp(8px, 0.8vw, 14px);
+      }
+
+      .nav a {
+        color: var(--ink);
+        font-size: clamp(16px, 1.2vw, 24px);
+        font-weight: 900;
+        line-height: 1;
+        text-decoration: none;
+        letter-spacing: 0;
+        text-transform: uppercase;
+        text-shadow: 0 1px 18px rgba(255, 255, 255, 0.75);
+      }
+
+      .nav a:hover,
+      .nav a:focus-visible {
+        text-decoration: underline;
+        text-underline-offset: 0.24em;
+      }
+
+      .partners {
+        padding: clamp(24px, 3vw, 54px) clamp(18px, 4vw, 78px);
+        background: #fff;
+      }
+
+      .partners img {
+        display: block;
+        width: min(100%, 1760px);
+        height: auto;
+        margin: 0 auto;
+      }
+
+      @media (max-width: 760px) {
+        .topbar {
+          align-items: center;
+        }
+
+        .brand img {
+          width: clamp(70px, 18vw, 96px);
+        }
+
+        .nav {
+          gap: 16px;
+          padding-top: 0;
+        }
+
+        .nav a {
+          font-size: 13px;
+        }
+
+        .hero__art {
+          width: auto;
+          max-width: none;
+          height: 78vh;
+          min-height: 520px;
+          object-fit: cover;
+          object-position: center center;
+        }
+
+        .partners {
+          padding: 22px 14px;
+        }
+      }
+    </style>
   </head>
   <body>
-    <p><a href="./presskit/">Open the Squad Dunk press kit</a></p>
+    <main class="site-shell">
+      <section class="hero" aria-label="Squad Dunk">
+        <img class="hero__art" src="./presskit/images/header.png" alt="Squad Dunk key art">
+        <header class="topbar">
+          <a class="brand" href="https://katapultgames.de/" aria-label="Katapult Games">
+            <img src="./presskit/images/katapult-logo.png" alt="Katapult Games">
+          </a>
+          <nav class="nav" aria-label="Main navigation">
+            <a href="./">Home</a>
+            <a href="https://katapultgames.de/#about">About</a>
+            <a href="./presskit/">Press</a>
+          </nav>
+        </header>
+      </section>
+
+      <section class="partners" aria-label="Funding partners">
+        <img src="./presskit/images/press-start-logo-bar.png" alt="Founders supported by Press Start; Press Start Games Founding Grant project by game and Stiftung Digitale Spielekultur; funded by the German Federal Government Commissioner for Culture and Media">
+      </section>
+    </main>
   </body>
 </html>
