@@ -187,10 +187,108 @@
     })
   }
 
+  function setupGalleryLightbox () {
+    const links = Array.prototype.slice.call(document.querySelectorAll('[data-gallery="screenshots"]'))
+    if (!links.length) return
+
+    const items = links.map(function (link) {
+      const image = link.querySelector('img')
+      return {
+        href: link.getAttribute('href'),
+        title: link.getAttribute('data-gallery-title') || link.getAttribute('title') || '',
+        alt: image ? image.getAttribute('alt') || '' : ''
+      }
+    }).filter(function (item) {
+      return item.href
+    })
+
+    if (!items.length) return
+
+    let currentIndex = 0
+    const lightbox = document.createElement('div')
+    lightbox.className = 'gallery-lightbox'
+    lightbox.setAttribute('role', 'dialog')
+    lightbox.setAttribute('aria-modal', 'true')
+    lightbox.setAttribute('aria-label', 'Screenshot viewer')
+    lightbox.innerHTML = [
+      '<div class="gallery-lightbox__dialog">',
+      '  <figure class="gallery-lightbox__figure">',
+      '    <img class="gallery-lightbox__image" alt="">',
+      '  </figure>',
+      '  <div class="gallery-lightbox__caption">',
+      '    <span class="gallery-lightbox__title"></span>',
+      '    <span class="gallery-lightbox__count"></span>',
+      '  </div>',
+      '  <button class="gallery-lightbox__button gallery-lightbox__close" type="button" aria-label="Close screenshot viewer">×</button>',
+      '  <button class="gallery-lightbox__button gallery-lightbox__prev" type="button" aria-label="Previous screenshot">‹</button>',
+      '  <button class="gallery-lightbox__button gallery-lightbox__next" type="button" aria-label="Next screenshot">›</button>',
+      '</div>'
+    ].join('')
+
+    document.body.appendChild(lightbox)
+
+    const image = lightbox.querySelector('.gallery-lightbox__image')
+    const title = lightbox.querySelector('.gallery-lightbox__title')
+    const count = lightbox.querySelector('.gallery-lightbox__count')
+    const closeButton = lightbox.querySelector('.gallery-lightbox__close')
+    const prevButton = lightbox.querySelector('.gallery-lightbox__prev')
+    const nextButton = lightbox.querySelector('.gallery-lightbox__next')
+
+    function render () {
+      const item = items[currentIndex]
+      image.setAttribute('src', item.href)
+      image.setAttribute('alt', item.alt || item.title)
+      title.textContent = item.title
+      count.textContent = (currentIndex + 1) + ' / ' + items.length
+    }
+
+    function open (index) {
+      currentIndex = index
+      render()
+      lightbox.classList.add('is-open')
+      document.body.classList.add('gallery-lightbox-open')
+      closeButton.focus()
+    }
+
+    function close () {
+      lightbox.classList.remove('is-open')
+      document.body.classList.remove('gallery-lightbox-open')
+    }
+
+    function move (direction) {
+      currentIndex = (currentIndex + direction + items.length) % items.length
+      render()
+    }
+
+    links.forEach(function (link, index) {
+      link.addEventListener('click', function (event) {
+        event.preventDefault()
+        open(index)
+      })
+    })
+
+    closeButton.addEventListener('click', close)
+    prevButton.addEventListener('click', function () { move(-1) })
+    nextButton.addEventListener('click', function () { move(1) })
+
+    lightbox.addEventListener('click', function (event) {
+      if (event.target === lightbox) close()
+    })
+
+    document.addEventListener('keydown', function (event) {
+      if (!lightbox.classList.contains('is-open')) return
+
+      if (event.key === 'Escape') close()
+      if (event.key === 'ArrowLeft') move(-1)
+      if (event.key === 'ArrowRight') move(1)
+    })
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     setupLanguageSelector()
     setupNavigation()
     setupLandingHero()
     setupYoutubeEmbeds()
+    setupGalleryLightbox()
   })
 }())

@@ -173,7 +173,7 @@ localization:
           title: Media
           videos: Videos
           screenshots: Screenshots
-          download: download all screenshots as .zip
+          download: download press kit as .rar
           video_cards:
             - title: Gameplay Reel
               description: First-person physics-based basketball gameplay reel.
@@ -303,7 +303,7 @@ localization:
           title: メディア
           videos: 動画
           screenshots: スクリーンショット
-          download: スクリーンショットを.zipでダウンロード
+          download: プレスキットを.rarでダウンロード
           video_cards:
             - title: ゲームプレイリール
               description: 一人称視点、物理ベースのバスケットボールゲームプレイリール。
@@ -444,7 +444,7 @@ localization:
           title: Medien
           videos: Videos
           screenshots: Screenshots
-          download: Alle Screenshots als .zip herunterladen
+          download: Press Kit als .rar herunterladen
           video_cards:
             - title: Gameplay-Reel
               description: First-Person, physikbasiertes Basketball-Gameplay-Reel.
@@ -524,57 +524,39 @@ media:
       status: available
       enabled: true
   screenshots:
-    download_zip: images/images.zip
-    download_label: download all screenshots as .zip
+    download_zip: images/press-kit.rar
+    download_label: download press kit as .rar
     items:
-      - id: first-person-possession
-        file: images/screenshots/01-first-person-possession.png
-        thumb: images/screenshots/01-first-person-possession.png.thumb.jpg
-        title: First-person possession
-        alt: First-person basketball possession on a colorful school court.
+      - id: gameplay-01
+        file: images/screenshots/01-gameplay.png
+        thumb: images/screenshots/01-gameplay.png.thumb.jpg
+        title: Gameplay screenshot 01
+        alt: Squad Dunk first-person basketball gameplay screenshot.
         featured: true
         enabled: true
-      - id: shot-at-hoop
-        file: images/screenshots/02-shot-at-hoop.png
-        thumb: images/screenshots/02-shot-at-hoop.png.thumb.jpg
-        title: Shot at the hoop
-        alt: First-person shot attempt toward the basketball hoop.
+      - id: gameplay-02
+        file: images/screenshots/02-gameplay.png
+        thumb: images/screenshots/02-gameplay.png.thumb.jpg
+        title: Gameplay screenshot 02
+        alt: Squad Dunk multiplayer basketball gameplay screenshot.
         enabled: true
-      - id: made-basket
-        file: images/screenshots/03-made-basket.png
-        thumb: images/screenshots/03-made-basket.png.thumb.jpg
-        title: Made basket
-        alt: Basketball going through the hoop during first-person gameplay.
+      - id: gameplay-03
+        file: images/screenshots/03-gameplay.png
+        thumb: images/screenshots/03-gameplay.png.thumb.jpg
+        title: Gameplay screenshot 03
+        alt: Squad Dunk physics-based basketball gameplay screenshot.
         enabled: true
-      - id: defender-pressure
-        file: images/screenshots/04-defender-pressure.png
-        thumb: images/screenshots/04-defender-pressure.png.thumb.jpg
-        title: Defender pressure
-        alt: Opposing player applying pressure on the court.
+      - id: jungle-court
+        file: images/screenshots/04-jungle-court.png
+        thumb: images/screenshots/04-jungle-court.png.thumb.jpg
+        title: Jungle court
+        alt: Squad Dunk jungle court screenshot.
         enabled: true
-      - id: team-setup
-        file: images/screenshots/05-team-setup.png
-        thumb: images/screenshots/05-team-setup.png.thumb.jpg
-        title: Team setup
-        alt: Multiplayer team setup on the Squad Dunk court.
-        enabled: true
-      - id: shot-preparation
-        file: images/screenshots/06-shot-preparation.png
-        thumb: images/screenshots/06-shot-preparation.png.thumb.jpg
-        title: Shot preparation
-        alt: First-person player preparing a basketball shot.
-        enabled: true
-      - id: under-rim-play
-        file: images/screenshots/07-under-rim-play.png
-        thumb: images/screenshots/07-under-rim-play.png.thumb.jpg
-        title: Under-rim play
-        alt: Close play under the basketball rim.
-        enabled: true
-      - id: jump-play
-        file: images/screenshots/08-jump-play.png
-        thumb: images/screenshots/08-jump-play.png.thumb.jpg
-        title: Jump play
-        alt: Player jumping during an energetic basketball play.
+      - id: school-court
+        file: images/screenshots/05-school-court.png
+        thumb: images/screenshots/05-school-court.png.thumb.jpg
+        title: School court
+        alt: Squad Dunk school court screenshot.
         enabled: true
 
 branding:
@@ -596,10 +578,10 @@ branding:
 
 downloads:
   - id: screenshots-zip
-    title: download all screenshots as .zip
-    file: images/images.zip
+    title: download press kit as .rar
+    file: images/press-kit.rar
     section: media
-    generated: true
+    generated: false
     enabled: true
   - id: branding-zip
     title: download logo files as .zip

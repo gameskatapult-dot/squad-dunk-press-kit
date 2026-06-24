@@ -32,7 +32,7 @@
   <div class="gallery clearfix" id="gallery">
     {{#each presskit.manifestScreenshots}}
     <div class="gallery__item">
-      <a href="{{file}}" title="{{title}}">
+      <a href="{{file}}" title="{{title}}" data-gallery="screenshots" data-gallery-title="{{title}}">
         {{#if thumb}}
         <img src="{{thumb}}" alt="{{alt}}">
         {{else}}
@@ -63,7 +63,7 @@
     <div class="gallery clearfix" id="gallery">
       {{#each presskit.manifestScreenshots}}
       <div class="gallery__item">
-        <a href="{{file}}" title="{{title}}">
+        <a href="{{file}}" title="{{title}}" data-gallery="screenshots" data-gallery-title="{{title}}">
           {{#if thumb}}
           <img src="{{thumb}}" alt="{{alt}}">
           {{else}}
@@ -91,7 +91,7 @@
       <div class="gallery clearfix" id="gallery">
         {{#each images.screenshots}}
         <div class="gallery__item">
-          <a href="images/{{.}}">
+          <a href="images/{{.}}" data-gallery="screenshots" data-gallery-title="{{basename .}}">
             <img src="{{thumbOrImage .}}" alt="{{basename .}}">
           </a>
         </div>
@@ -104,7 +104,7 @@
         <div class="gallery clearfix">
           {{#each elements}}
           <div class="gallery__item">
-            <a href="images/{{.}}">
+            <a href="images/{{.}}" data-gallery="screenshots" data-gallery-title="{{basename .}}">
               <img src="{{thumbOrImage .}}" alt="{{basename .}}">
             </a>
           </div>

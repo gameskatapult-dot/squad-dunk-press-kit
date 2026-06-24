@@ -26,7 +26,7 @@
     "docs": "./documentation",
     "docs:example": "node bin/presskit build -DLM -o docs/example data",
     "content": "node scripts/build-content.js",
-    "build:presskit": "npm run content && node bin/presskit build --pretty-links --collapse-menu"
+    "build:presskit": "node -e \"require('fs').rmSync('build',{recursive:true,force:true})\" && npm run content && node bin/presskit build --pretty-links --collapse-menu"
   },
   "dependencies": {
     "archiver": "^7.0.1",
