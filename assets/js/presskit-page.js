@@ -171,40 +171,19 @@
     updateLandingState()
   }
 
-  function setupVideoModal () {
+  function setupYoutubeEmbeds () {
     const trigger = document.querySelector('[data-video-trigger]')
-    const modal = document.querySelector('[data-video-modal]')
-    const iframe = document.querySelector('[data-video-iframe]')
-    if (!trigger || !modal || !iframe) return
+    const frame = document.querySelector('[data-youtube-src]')
+    const container = document.querySelector('.landing-video__frame')
+    if (!trigger || !frame || !container) return
 
-    const closeButtons = Array.prototype.slice.call(document.querySelectorAll('[data-video-close]'))
-    const videoUrl = 'https://www.youtube.com/embed/k8J8c510mhU?autoplay=1&rel=0&modestbranding=1&playsinline=1&origin=' + encodeURIComponent(window.location.origin)
+    trigger.addEventListener('click', function () {
+      const source = frame.getAttribute('data-youtube-src')
+      if (!source) return
 
-    function openModal () {
-      iframe.setAttribute('src', videoUrl)
-      modal.classList.add('is-open')
-      modal.setAttribute('aria-hidden', 'false')
-      document.body.classList.add('has-video-modal')
-    }
-
-    function closeModal () {
-      modal.classList.remove('is-open')
-      modal.setAttribute('aria-hidden', 'true')
-      iframe.removeAttribute('src')
-      document.body.classList.remove('has-video-modal')
-      trigger.focus()
-    }
-
-    trigger.addEventListener('click', openModal)
-
-    closeButtons.forEach(function (button) {
-      button.addEventListener('click', closeModal)
-    })
-
-    window.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape' && modal.classList.contains('is-open')) {
-        closeModal()
-      }
+      const separator = source.indexOf('?') === -1 ? '?' : '&'
+      frame.setAttribute('src', source + separator + 'autoplay=1&origin=' + encodeURIComponent(window.location.origin))
+      container.classList.add('is-playing')
     })
   }
 
@@ -212,6 +191,6 @@
     setupLanguageSelector()
     setupNavigation()
     setupLandingHero()
-    setupVideoModal()
+    setupYoutubeEmbeds()
   })
 }())

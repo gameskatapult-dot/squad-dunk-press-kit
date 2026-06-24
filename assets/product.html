@@ -24,13 +24,24 @@
           <p data-l10n="ui.landing.tagline">First-person, physics-based online basketball built for arcade team play.</p>
         </div>
 
-        <button class="landing-video__frame landing-video__frame--button" type="button" data-video-trigger aria-label="Watch the Squad Dunk gameplay reel">
-          <img src="./images/youtube-gameplay-reel.jpg" alt="Squad Dunk gameplay reel thumbnail">
-          <span class="landing-video__play" aria-hidden="true">
-            <span class="landing-video__play-icon"></span>
-            <span data-l10n="ui.landing.play">Watch Gameplay Reel</span>
-          </span>
-        </button>
+        <div class="landing-video__frame">
+          <button class="landing-video__poster" type="button" data-video-trigger aria-label="Watch the Squad Dunk gameplay reel">
+            <img src="./images/youtube-gameplay-reel.jpg" alt="Squad Dunk gameplay reel thumbnail">
+            <span class="landing-video__play" aria-hidden="true">
+              <span class="landing-video__play-icon"></span>
+              <span class="visually-hidden" data-l10n="ui.landing.play">Watch Gameplay Reel</span>
+            </span>
+          </button>
+          <iframe
+            class="landing-video__iframe"
+            data-youtube-src="https://www.youtube.com/embed/k8J8c510mhU?rel=0&modestbranding=1&playsinline=1&vq=hd1080&hd=1"
+            title="Squad Dunk gameplay reel"
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+          <a class="landing-video__fallback" href="https://youtu.be/k8J8c510mhU" target="_blank" rel="noopener" data-l10n="ui.landing.fallback">Open on YouTube</a>
+        </div>
       </div>
     </section>
 
@@ -129,25 +140,6 @@
     <section class="funding-banner" aria-label="Funding support">
       <img src="./images/press-start-logo-bar.png" alt="Founders supported by Press Start. Press Start: Games Founding Grant is a project by game, The German Games Industry Association, and Stiftung Digitale Spielekultur. Funded by Der Beauftragte der Bundesregierung fur Kultur und Medien.">
     </section>
-
-    <div class="video-modal" data-video-modal aria-hidden="true">
-      <div class="video-modal__backdrop" data-video-close></div>
-      <div class="video-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="video-modal-title">
-        <button class="video-modal__close" type="button" data-video-close aria-label="Close video">
-          <span aria-hidden="true">&times;</span>
-          <span class="visually-hidden" data-l10n="ui.landing.close">Close video</span>
-        </button>
-        <h2 id="video-modal-title" class="visually-hidden">Squad Dunk Gameplay Reel</h2>
-        <iframe
-          data-video-iframe
-          title="Squad Dunk gameplay reel"
-          loading="lazy"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen></iframe>
-        <a class="video-modal__fallback" href="https://youtu.be/k8J8c510mhU" target="_blank" rel="noopener" data-l10n="ui.landing.fallback">Open on YouTube</a>
-      </div>
-    </div>
 
     {{>scripts}}
   </body>
