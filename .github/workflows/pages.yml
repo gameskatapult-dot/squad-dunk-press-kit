@@ -42,6 +42,8 @@ jobs:
 
       - name: Prepare GitHub Pages root
         run: |
+          rm -rf build/presskit
+          cp -R build/squad-dunk build/presskit
           cp pages/root-redirect.html build/index.html
           touch build/.nojekyll
 
