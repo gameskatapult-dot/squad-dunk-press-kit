@@ -43,7 +43,7 @@
   </steam-link>
   <trailer-link>
     <label>Click here for Trailer Link</label>
-    <url>https://youtu.be/k8J8c510mhU</url>
+    <url>https://youtu.be/WeQM8VHjZio</url>
   </trailer-link>
   <press-kit-link>
     <label>Click here for Press Kit Link</label>
@@ -195,7 +195,7 @@
       <title>Gameplay Reel</title>
       <label>Watch on YouTube</label>
       <description>First-person physics-based basketball gameplay reel.</description>
-      <url>https://youtu.be/k8J8c510mhU</url>
+      <url>https://youtu.be/WeQM8VHjZio</url>
       <status>available</status>
       <enabled>true</enabled>
     </media-video>
@@ -204,7 +204,7 @@
       <title>Reveal Trailer</title>
       <label>Click here for Trailer Link</label>
       <description>Watch the current Squad Dunk trailer link.</description>
-      <url>https://youtu.be/k8J8c510mhU</url>
+      <url>https://youtu.be/WeQM8VHjZio</url>
       <status>available</status>
       <enabled>true</enabled>
     </media-video>

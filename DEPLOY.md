@@ -7,8 +7,8 @@ This press kit is generated with `pixelnest/presskit.html`. The static site live
 From the press kit folder:
 
 ```powershell
-cd "D:\Squad Dunk\DATA\press kit"
-node bin/presskit build --pretty-links --collapse-menu
+cd "D:\Squad Dunk\DATA\New folder"
+npm run build:presskit
 ```
 
 Open the generated product page locally:
@@ -19,38 +19,21 @@ build/squad-dunk/index.html
 
 ## Publish with GitHub Pages
 
-Recommended simple setup:
+This repository deploys through GitHub Actions on pushes to `main`.
 
-1. Commit the press kit source and generated `build/` folder.
-2. Push to GitHub.
-3. In GitHub, go to `Settings` -> `Pages`.
-4. Set the source to deploy from the branch/folder that contains `build/`.
-5. If GitHub Pages cannot use `build/` directly for your repo setup, copy the generated `build/` contents to the Pages publishing folder required by the repository, such as `/docs`, and publish that folder instead.
+The deployment uses the default GitHub Pages domain. No custom domain is currently configured.
+
+Expected public URL format:
+
+```text
+https://gameskatapult-dot.github.io/squad-dunk-press-kit/squad-dunk/
+```
+
+The root of the Pages site redirects to `./squad-dunk/`.
 
 ## Notes
 
 - The generated HTML uses relative asset paths, so it can be hosted as a static website.
 - Do not commit private press links, credentials, or unannounced trailer URLs.
-- Re-run the build after changing XML, images, partials, or CSS.
-
-## Custom domain and HTTPS
-
-The Pages artifact includes `CNAME` with:
-
-```text
-press.squaddunk.com
-```
-
-The DNS provider for `squaddunk.com` must point the subdomain to GitHub Pages:
-
-```text
-Type: CNAME
-Name: press
-Value: gameskatapult-dot.github.io
-```
-
-HTTPS enforcement should be enabled in GitHub Pages once DNS resolves and GitHub has issued the certificate:
-
-`Settings` -> `Pages` -> `Enforce HTTPS`
-
-If the checkbox is unavailable, wait for DNS propagation and certificate provisioning, then try again. Do not add a client-side HTTP-to-HTTPS redirect before the certificate is ready, because that can send visitors to a browser certificate warning instead of the working HTTP page.
+- Re-run the build after changing YAML, XML, images, partials, JavaScript, or CSS.
+- To restore a custom domain later, add a root `CNAME` file and update `.github/workflows/pages.yml` to copy it into `build/CNAME` before uploading the Pages artifact.

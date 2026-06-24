@@ -30,7 +30,7 @@ factsheet:
     url: ""
   trailer:
     label: Click here for Trailer Link
-    url: https://youtu.be/k8J8c510mhU
+    url: https://youtu.be/WeQM8VHjZio
   press_kit:
     label: Click here for Press Kit Link
     url: https://drive.google.com/drive/folders/1G_cmvMlNz9NgyuEXS32lV81ek7wmlIOt?usp=sharing
@@ -513,14 +513,14 @@ media:
       title: Gameplay Reel
       label: Watch on YouTube
       description: First-person physics-based basketball gameplay reel.
-      url: https://youtu.be/k8J8c510mhU
+      url: https://youtu.be/WeQM8VHjZio
       status: available
       enabled: true
     - id: reveal-trailer
       title: Reveal Trailer
       label: Click here for Trailer Link
       description: Watch the current Squad Dunk trailer link.
-      url: https://youtu.be/k8J8c510mhU
+      url: https://youtu.be/WeQM8VHjZio
       status: available
       enabled: true
   screenshots:
@@ -667,3 +667,4 @@ links:
     title: Katapult Games Website
     url: https://katapultgames.de/
     enabled: true
+

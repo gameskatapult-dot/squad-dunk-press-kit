@@ -40,9 +40,8 @@ jobs:
       - name: Build press kit
         run: node bin/presskit build --pretty-links --collapse-menu
 
-      - name: Prepare custom domain root
+      - name: Prepare GitHub Pages root
         run: |
-          cp CNAME build/CNAME
           cp pages/root-redirect.html build/index.html
           touch build/.nojekyll
 
