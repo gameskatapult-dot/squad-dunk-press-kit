@@ -122,11 +122,12 @@
 
       @media (max-width: 760px) {
         .topbar {
-          align-items: center;
+          align-items: flex-start;
+          gap: 18px;
         }
 
         .brand img {
-          width: clamp(70px, 18vw, 96px);
+          width: clamp(64px, 17vw, 90px);
         }
 
         .nav {
@@ -151,6 +152,31 @@
           padding: 22px 14px;
         }
       }
+
+      @media (max-width: 520px) {
+        .topbar {
+          top: 14px;
+          left: 14px;
+          right: 14px;
+        }
+
+        .brand img {
+          width: 62px;
+        }
+
+        .nav {
+          gap: 12px;
+        }
+
+        .nav a {
+          font-size: 12px;
+          text-shadow: 0 1px 12px rgba(255, 255, 255, 0.9);
+        }
+
+        .hero__art {
+          object-position: center top;
+        }
+      }
     </style>
   </head>
   <body>
@@ -158,12 +184,12 @@
       <section class="hero" aria-label="Squad Dunk">
         <img class="hero__art" src="./presskit/images/header.png" alt="Squad Dunk key art">
         <header class="topbar">
-          <a class="brand" href="https://katapultgames.de/" aria-label="Katapult Games">
+          <a class="brand" href="./" aria-label="Katapult Games home">
             <img src="./presskit/images/katapult-logo.png" alt="Katapult Games">
           </a>
           <nav class="nav" aria-label="Main navigation">
             <a href="./">Home</a>
-            <a href="https://katapultgames.de/#about">About</a>
+            <a href="./presskit/#description">About</a>
             <a href="./presskit/">Press</a>
           </nav>
         </header>
