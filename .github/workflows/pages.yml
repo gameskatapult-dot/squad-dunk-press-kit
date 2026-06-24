@@ -45,6 +45,7 @@ jobs:
           rm -rf build/presskit
           cp -R build/squad-dunk build/presskit
           cp pages/root-redirect.html build/index.html
+          cp CNAME build/CNAME
           touch build/.nojekyll
 
       - name: Configure GitHub Pages
