@@ -1385,12 +1385,18 @@ media:
     download_zip: images/press-kit.rar
     download_label: download press kit as .rar
     items:
+      - id: ball-at-rim
+        file: images/screenshots/06-ball-at-rim.png
+        thumb: images/screenshots/06-ball-at-rim.png.thumb.jpg
+        title: Ball at the rim
+        alt: Squad Dunk first-person shot at the basketball hoop.
+        featured: true
+        enabled: true
       - id: gameplay-01
         file: images/screenshots/01-gameplay.png
         thumb: images/screenshots/01-gameplay.png.thumb.jpg
         title: Gameplay screenshot 01
         alt: Squad Dunk first-person basketball gameplay screenshot.
-        featured: true
         enabled: true
       - id: gameplay-02
         file: images/screenshots/02-gameplay.png
@@ -1415,6 +1421,18 @@ media:
         thumb: images/screenshots/05-school-court.png.thumb.jpg
         title: School court
         alt: Squad Dunk school court screenshot.
+        enabled: true
+      - id: schoolyard-referee
+        file: images/screenshots/07-schoolyard-referee.png
+        thumb: images/screenshots/07-schoolyard-referee.png.thumb.jpg
+        title: Schoolyard referee
+        alt: Squad Dunk schoolyard character screenshot.
+        enabled: true
+      - id: cafeteria-scene
+        file: images/screenshots/08-cafeteria-scene.png
+        thumb: images/screenshots/08-cafeteria-scene.png.thumb.jpg
+        title: Cafeteria scene
+        alt: Squad Dunk school cafeteria environment screenshot.
         enabled: true
 
 branding:

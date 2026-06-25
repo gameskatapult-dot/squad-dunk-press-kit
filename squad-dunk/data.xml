@@ -220,13 +220,22 @@
   </media-videos>
   <manifest-screenshots>
     <manifest-screenshot>
+      <id>ball-at-rim</id>
+      <file>images/screenshots/06-ball-at-rim.png</file>
+      <thumb>images/screenshots/06-ball-at-rim.png.thumb.jpg</thumb>
+      <title>Ball at the rim</title>
+      <caption/>
+      <alt>Squad Dunk first-person shot at the basketball hoop.</alt>
+      <featured>true</featured>
+    </manifest-screenshot>
+    <manifest-screenshot>
       <id>gameplay-01</id>
       <file>images/screenshots/01-gameplay.png</file>
       <thumb>images/screenshots/01-gameplay.png.thumb.jpg</thumb>
       <title>Gameplay screenshot 01</title>
       <caption/>
       <alt>Squad Dunk first-person basketball gameplay screenshot.</alt>
-      <featured>true</featured>
+      <featured/>
     </manifest-screenshot>
     <manifest-screenshot>
       <id>gameplay-02</id>
@@ -262,6 +271,24 @@
       <title>School court</title>
       <caption/>
       <alt>Squad Dunk school court screenshot.</alt>
+      <featured/>
+    </manifest-screenshot>
+    <manifest-screenshot>
+      <id>schoolyard-referee</id>
+      <file>images/screenshots/07-schoolyard-referee.png</file>
+      <thumb>images/screenshots/07-schoolyard-referee.png.thumb.jpg</thumb>
+      <title>Schoolyard referee</title>
+      <caption/>
+      <alt>Squad Dunk schoolyard character screenshot.</alt>
+      <featured/>
+    </manifest-screenshot>
+    <manifest-screenshot>
+      <id>cafeteria-scene</id>
+      <file>images/screenshots/08-cafeteria-scene.png</file>
+      <thumb>images/screenshots/08-cafeteria-scene.png.thumb.jpg</thumb>
+      <title>Cafeteria scene</title>
+      <caption/>
+      <alt>Squad Dunk school cafeteria environment screenshot.</alt>
       <featured/>
     </manifest-screenshot>
   </manifest-screenshots>
