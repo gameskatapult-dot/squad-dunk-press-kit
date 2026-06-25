@@ -22,7 +22,7 @@ sections:
 factsheet:
   about: Squad Dunk
   development: In active development by Katapult Games.
-  developers: Katapult Games
+  developers: Bruno Braghetto, Matias Nicolini and Anahi Mou
   publisher: TBA
   cost: TBA
   steam:
@@ -30,7 +30,10 @@ factsheet:
     url: ""
   trailer:
     label: Click here for Trailer Link
-    url: https://youtu.be/WeQM8VHjZio
+    url: ""
+  preview:
+    label: https://youtu.be/D1QhwKqHKwI
+    url: https://youtu.be/D1QhwKqHKwI
   press_kit:
     label: Click here for Press Kit Link
     url: https://drive.google.com/drive/folders/1G_cmvMlNz9NgyuEXS32lV81ek7wmlIOt?usp=sharing
@@ -69,48 +72,47 @@ localization:
         short:
           title: SHORT DESCRIPTION
           text: >-
-            Squad Dunk is a first-person online basketball game with
-            physics-based mechanics, built around team play and arcade
-            accessibility.
+            Squad Dunk is a physics-based first-person basketball game. Team up
+            with friends for casual or competitive matches. No auto-aim. Every
+            play, good or terrible, is yours. Ready to make basketball physical?
         long:
           title: LONG DESCRIPTION
           paragraphs:
             - >-
-              Squad Dunk is a first-person online basketball game where each
-              player controls one character on the court and competes as part of
-              a team.
-            - >-
-              Instead of relying on canned sports animations and distant
-              cameras, physics-based mechanics make the game highly immersive,
-              allowing players to lose themselves in the plays like kids.
-            - >-
-              The game is designed to be easy to pick up, with simple rules and
-              fast arcade-style logic, while still giving players room to
-              improve. Players can customize their character, build their squad
-              identity, and play online with friends.
+              Squad Dunk is basketball built around physics. Each player
+              controls one character on the court, teaming up with friends in
+              casual or competitive online matches across courts with their own
+              twists. No auto-aim, every play, good or terrible, is yours.
         key_features_title: Key Features
         key_features:
-          - icon: "🏀"
+          - icon: ""
             title: PLAY FROM THE COURT
             body: >-
               Control one player in first person and experience the match from
               inside the action, not from a distant camera.
-          - icon: "🏀"
+          - icon: ""
             title: FEEL THE PHYSICS
             body: >-
               Squad Dunk uses physics-based mechanics to make basketball feel
               more alive, physical, and unpredictable. Blocks, shots, steals,
               rebounds, movement, and contact all become part of the moment.
-          - icon: "🏀"
-            title: BUILD YOUR SQUAD
+          - icon: ""
+            title: PLAY AS A TEAM
             body: >-
-              Play online with friends, customize your character, and build your
-              team identity as you compete together.
-          - icon: "🏀"
+              Play solo or with friends in casual or competitive matches. Team
+              up, give your squad a leg up, literally, and go for the kind of
+              plays normal basketball would keep illegal, turning questionable
+              ideas into real plays.
+          - icon: ""
             title: EVERY COURT CHANGES THE GAME
             body: >-
-              Each court adds its own twist, with new mechanics and layouts that
-              make teams adapt in different ways.
+              Each court adds its own twist, with new mechanics and environments
+              that make teams adapt in different ways.
+          - icon: ""
+            title: CUSTOMIZE YOUR CHARACTER
+            body: >-
+              Create your look, build your squad identity, and give your team
+              its own style.
       ui:
         landing:
           nav:
@@ -118,7 +120,7 @@ localization:
             about: About
             press: Press
           eyebrow: Gameplay Reel
-          tagline: First-person, physics-based online basketball built for arcade team play.
+          tagline: Physics-based first-person basketball. No auto-aim. Every play is yours.
           play: Watch Gameplay Reel
           close: Close video
           fallback: Open on YouTube
@@ -148,39 +150,42 @@ localization:
             cost: "Cost:"
             steam: "Steam:"
             trailer: "Trailer:"
+            preview: "Pre-view:"
             press_kit: "Press Kit:"
             website: "Website:"
           values:
             about: Squad Dunk
             development: In active development by Katapult Games.
-            developers: Katapult Games
+            developers: Bruno Braghetto, Matias Nicolini and Anahi Mou
             based_in: Based in Berlin, Germany
             publisher: TBA
             cost: TBA
             steam: Click here for Steam Link
             trailer: Click here for Trailer Link
+            preview: https://youtu.be/D1QhwKqHKwI
             press_kit: Click here for Press Kit Link
         features:
           title: Features
           items:
             - First-person view
             - Physics-based shots, passes, steals, and rebounds
-            - 3 players teams
-            - Simple and accessible
-            - Different courts and scenarios
+            - Up to 3 players per team
+            - Simple to start, plenty of room to improve
+            - Different courts and scenarios, each with its own twist
             - Character and team customization
+            - An unpaid referee in constant danger
         media:
           title: Media
           videos: Videos
           screenshots: Screenshots
           download: download press kit as .rar
           video_cards:
-            - title: Gameplay Reel
-              description: First-person physics-based basketball gameplay reel.
+            - title: Pre-view
+              description: Physics-based first-person basketball gameplay preview.
               label: Watch on YouTube
             - title: Reveal Trailer
-              description: Watch the current Squad Dunk trailer link.
-              label: Click here for Trailer Link
+              description: Coming soon.
+              label: Coming soon
         branding:
           title: Branding
           download: download logo files as .zip
@@ -213,34 +218,34 @@ localization:
         short:
           title: ショート説明
           text: >-
-            Squad Dunkは、一人称視点、物理ベースのメカニクス、チームプレイ、そして遊びやすいアーケード感を軸にしたオンラインバスケットボールゲームです。
+            Squad Dunkは、物理ベースの一人称視点バスケットボールゲームです。友達とチームを組み、カジュアルまたは競技的な試合を楽しめます。オートエイムはありません。良いプレイもひどいプレイも、すべてあなた自身のものです。バスケットボールをもっとフィジカルにする準備はできていますか？
         long:
           title: ロング説明
           paragraphs:
             - >-
-              Squad Dunkは、各プレイヤーがコート上の1人のキャラクターを操作し、チームの一員として競い合う一人称視点のオンラインバスケットボールゲームです。
-            - >-
-              決められたスポーツアニメーションや遠いカメラに頼るのではなく、物理ベースのメカニクスによって、子どものようにプレイに夢中になれる高い没入感を生み出します。
-            - >-
-              シンプルなルールとテンポの速いアーケードスタイルで、すぐに遊び始められる一方、動き、タイミング、チームワーク、ボールコントロールを通じて上達の余地があります。プレイヤーはキャラクターをカスタマイズし、スクワッドの個性を作り、友達とオンラインで遊べます。
+              Squad Dunkは、物理を中心に作られたバスケットボールです。各プレイヤーはコート上の1人のキャラクターを操作し、友達とチームを組んで、それぞれ独自の仕掛けを持つコートでカジュアルまたは競技的なオンラインマッチをプレイします。オートエイムはありません。良いプレイもひどいプレイも、すべてあなた自身のものです。
         keyFeaturesTitle: 主な特徴
         keyFeatures:
-          - icon: "🏀"
+          - icon: ""
             title: コートの中からプレイ
             body: >-
               遠くのカメラではなく、一人称視点で1人の選手を操作し、アクションの内側から試合を体験します。
-          - icon: "🏀"
+          - icon: ""
             title: 物理を感じる
             body: >-
               物理ベースのメカニクスにより、ブロック、シュート、スティール、リバウンド、移動、接触のすべてが、その瞬間のプレイに影響します。
-          - icon: "🏀"
-            title: スクワッドを作る
+          - icon: ""
+            title: チームでプレイ
             body: >-
-              友達とオンラインで遊び、キャラクターをカスタマイズし、チームの個性を作りながら一緒に競い合います。
-          - icon: "🏀"
+              ソロでも友達とでも、カジュアルまたは競技的な試合を遊べます。チームを組み、普通のバスケットボールなら反則になりそうなアイデアを本物のプレイに変えましょう。
+          - icon: ""
             title: コートごとにゲームが変わる
             body: >-
-              それぞれのコートには独自の仕掛けやレイアウトがあり、チームは状況に合わせてプレイを変える必要があります。
+              それぞれのコートには独自の仕掛け、メカニクス、環境があり、チームは状況に合わせてプレイを変える必要があります。
+          - icon: ""
+            title: キャラクターをカスタマイズ
+            body: >-
+              自分の見た目を作り、スクワッドの個性を築き、チーム独自のスタイルを与えましょう。
       ui:
         landing:
           nav:
@@ -248,7 +253,7 @@ localization:
             about: 概要
             press: プレス
           eyebrow: ゲームプレイリール
-          tagline: 一人称視点、物理ベース、オンラインチームプレイのためのアーケードバスケットボール。
+          tagline: 物理ベースの一人称視点バスケットボール。オートエイムなし。すべてのプレイはあなたのもの。
           play: ゲームプレイリールを見る
           close: 動画を閉じる
           fallback: YouTubeで開く
@@ -278,39 +283,42 @@ localization:
             cost: "価格:"
             steam: "Steam:"
             trailer: "トレーラー:"
+            preview: "プレビュー:"
             press_kit: "プレスキット:"
             website: "ウェブサイト:"
           values:
             about: Squad Dunk
             development: Katapult Gamesが現在開発中。
-            developers: Katapult Games
+            developers: Bruno Braghetto、Matias Nicolini、Anahi Mou
             based_in: ドイツ・ベルリン拠点
             publisher: TBA
             cost: TBA
             steam: Steamリンクはこちら
             trailer: トレーラーリンクはこちら
+            preview: https://youtu.be/D1QhwKqHKwI
             press_kit: プレスキットリンクはこちら
         features:
           title: 特徴
           items:
             - 一人称視点
             - 物理ベースのシュート、パス、スティール、リバウンド
-            - 3人チーム
-            - シンプルで遊びやすい
-            - さまざまなコートとシナリオ
+            - 1チーム最大3人
+            - 始めやすく、上達の余地がたっぷり
+            - それぞれ独自の仕掛けを持つさまざまなコートとシナリオ
             - キャラクターとチームのカスタマイズ
+            - 常に危険にさらされる無給の審判
         media:
           title: メディア
           videos: 動画
           screenshots: スクリーンショット
           download: プレスキットを.rarでダウンロード
           video_cards:
-            - title: ゲームプレイリール
-              description: 一人称視点、物理ベースのバスケットボールゲームプレイリール。
+            - title: プレビュー
+              description: 物理ベースの一人称視点バスケットボールのゲームプレイプレビュー。
               label: YouTubeで見る
             - title: リビールトレーラー
-              description: 現在のSquad Dunkトレーラーリンク。
-              label: トレーラーリンクはこちら
+              description: 近日公開。
+              label: 近日公開
         branding:
           title: ブランディング
           download: ロゴファイルを.zipでダウンロード
@@ -337,51 +345,49 @@ localization:
         short:
           title: KURZBESCHREIBUNG
           text: >-
-            Squad Dunk ist ein Online-Basketballspiel aus der
-            First-Person-Perspektive mit physikbasierten Mechaniken, das auf
-            Teamplay und Arcade-Zugänglichkeit ausgelegt ist.
+            Squad Dunk ist ein physikbasiertes First-Person-Basketballspiel.
+            Spiele mit Freundinnen und Freunden in lockeren oder kompetitiven
+            Matches. Kein Auto-Aim. Jeder Spielzug, gut oder katastrophal,
+            gehört dir. Bereit, Basketball körperlicher zu machen?
         long:
           title: LANGE BESCHREIBUNG
           paragraphs:
             - >-
-              Squad Dunk ist ein Online-Basketballspiel aus der
-              First-Person-Perspektive, in dem jede Person einen Charakter auf
-              dem Court steuert und als Teil eines Teams antritt.
-            - >-
-              Statt auf vorgefertigte Sportanimationen und entfernte Kameras zu
-              setzen, sorgen physikbasierte Mechaniken für ein besonders
-              immersives Spielgefühl, bei dem man sich wie Kinder direkt in den
-              Spielzügen verlieren kann.
-            - >-
-              Das Spiel ist leicht zugänglich, mit einfachen Regeln und schneller
-              Arcade-Logik, bietet aber trotzdem Raum, besser zu werden.
-              Spielerinnen und Spieler können ihren Charakter anpassen, eine
-              eigene Squad-Identität aufbauen und online mit Freundinnen und
-              Freunden spielen.
+              Squad Dunk ist Basketball, der rund um Physik gebaut ist. Jede
+              Person steuert einen Charakter auf dem Court und spielt mit
+              Freundinnen und Freunden in lockeren oder kompetitiven
+              Online-Matches auf Courts mit eigenen Twists. Kein Auto-Aim,
+              jeder Spielzug, gut oder katastrophal, gehört dir.
         keyFeaturesTitle: Hauptfeatures
         keyFeatures:
-          - icon: "🏀"
+          - icon: ""
             title: SPIEL DIREKT VOM COURT
             body: >-
               Steuere einen Spieler in der First-Person-Perspektive und erlebe
               das Match mitten aus der Action heraus, nicht aus einer entfernten
               Kamera.
-          - icon: "🏀"
+          - icon: ""
             title: SPÜRE DIE PHYSIK
             body: >-
               Physikbasierte Mechaniken machen Basketball lebendiger,
               körperlicher und unvorhersehbarer. Blocks, Würfe, Steals,
               Rebounds, Bewegung und Kontakt werden Teil jedes Moments.
-          - icon: "🏀"
-            title: BAUE DEIN SQUAD
+          - icon: ""
+            title: SPIEL ALS TEAM
             body: >-
-              Spiele online mit Freunden, passe deinen Charakter an und baue
-              gemeinsam mit deinem Team eine eigene Identität auf.
-          - icon: "🏀"
+              Spiele solo oder mit Freundinnen und Freunden in lockeren oder
+              kompetitiven Matches. Arbeitet zusammen und verwandelt fragwürdige
+              Ideen in echte Spielzüge.
+          - icon: ""
             title: JEDER COURT VERÄNDERT DAS SPIEL
             body: >-
-              Jeder Court bringt eigene Twists, Mechaniken und Layouts mit, an
-              die sich Teams auf unterschiedliche Weise anpassen müssen.
+              Jeder Court bringt eigene Twists, Mechaniken und Umgebungen mit,
+              an die sich Teams auf unterschiedliche Weise anpassen müssen.
+          - icon: ""
+            title: PASSE DEINEN CHARAKTER AN
+            body: >-
+              Erstelle deinen Look, baue eine Squad-Identität auf und gib deinem
+              Team einen eigenen Stil.
       ui:
         landing:
           nav:
@@ -389,7 +395,7 @@ localization:
             about: Über das Spiel
             press: Presse
           eyebrow: Gameplay-Reel
-          tagline: First-Person, physikbasierter Online-Basketball für Arcade-Teamplay.
+          tagline: Physikbasierter First-Person-Basketball. Kein Auto-Aim. Jeder Spielzug gehört dir.
           play: Gameplay-Reel ansehen
           close: Video schließen
           fallback: Auf YouTube öffnen
@@ -419,39 +425,42 @@ localization:
             cost: "Preis:"
             steam: "Steam:"
             trailer: "Trailer:"
+            preview: "Pre-view:"
             press_kit: "Press Kit:"
             website: "Website:"
           values:
             about: Squad Dunk
             development: In aktiver Entwicklung bei Katapult Games.
-            developers: Katapult Games
+            developers: Bruno Braghetto, Matias Nicolini und Anahi Mou
             based_in: Sitz in Berlin, Deutschland
             publisher: TBA
             cost: TBA
             steam: Hier zum Steam-Link
             trailer: Hier zum Trailer-Link
+            preview: https://youtu.be/D1QhwKqHKwI
             press_kit: Hier zum Press-Kit-Link
         features:
           title: Features
           items:
             - First-Person-Perspektive
             - Physikbasierte Würfe, Pässe, Steals und Rebounds
-            - Teams mit 3 Spielerinnen und Spielern
-            - Einfach und zugänglich
-            - Verschiedene Courts und Szenarien
+            - Bis zu 3 Spielerinnen und Spieler pro Team
+            - Leicht zu starten, mit viel Raum zur Verbesserung
+            - Verschiedene Courts und Szenarien, jeweils mit eigenem Twist
             - Charakter- und Team-Anpassung
+            - Ein unbezahlter Schiedsrichter in ständiger Gefahr
         media:
           title: Medien
           videos: Videos
           screenshots: Screenshots
           download: Press Kit als .rar herunterladen
           video_cards:
-            - title: Gameplay-Reel
-              description: First-Person, physikbasiertes Basketball-Gameplay-Reel.
+            - title: Pre-view
+              description: Physikbasierte First-Person-Basketball-Gameplay-Preview.
               label: Auf YouTube ansehen
             - title: Reveal-Trailer
-              description: Aktueller Squad Dunk Trailer-Link.
-              label: Hier zum Trailer-Link
+              description: Bald verfügbar.
+              label: Bald verfügbar
         branding:
           title: Branding
           download: Logodateien als .zip herunterladen
@@ -493,6 +502,7 @@ genres:
   - Physics
   - Team-Based
   - Indie
+  - First-Person
   - Physics-Based
   - Online PvP
 
@@ -502,26 +512,27 @@ platforms:
 features:
   - First-person view
   - Physics-based shots, passes, steals, and rebounds
-  - 3 players teams
-  - Simple and accessible
-  - Different courts and scenarios
+  - Up to 3 players per team
+  - Simple to start, plenty of room to improve
+  - Different courts and scenarios, each with its own twist
   - Character and team customization
+  - An unpaid referee in constant danger
 
 media:
   videos:
-    - id: gameplay-reel
-      title: Gameplay Reel
+    - id: preview
+      title: Pre-view
       label: Watch on YouTube
-      description: First-person physics-based basketball gameplay reel.
-      url: https://youtu.be/WeQM8VHjZio
+      description: Physics-based first-person basketball gameplay preview.
+      url: https://youtu.be/D1QhwKqHKwI
       status: available
       enabled: true
     - id: reveal-trailer
       title: Reveal Trailer
-      label: Click here for Trailer Link
-      description: Watch the current Squad Dunk trailer link.
-      url: https://youtu.be/WeQM8VHjZio
-      status: available
+      label: Coming soon
+      description: Coming soon.
+      url: ""
+      status: coming soon
       enabled: true
   screenshots:
     download_zip: images/press-kit.rar

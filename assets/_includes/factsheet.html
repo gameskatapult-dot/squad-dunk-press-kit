@@ -158,6 +158,17 @@
     </dd>
     {{/if}}
 
+    {{#if presskit.preViewLink}}
+    <dt data-l10n="ui.factsheet.labels.preview">Pre-view:</dt>
+    <dd>
+      {{#if presskit.preViewLink.url}}
+        <a href="{{presskit.preViewLink.url}}" data-l10n="ui.factsheet.values.preview">{{presskit.preViewLink.label}}</a>
+      {{else}}
+        <span data-l10n="ui.factsheet.values.preview">{{presskit.preViewLink.label}}</span>
+      {{/if}}
+    </dd>
+    {{/if}}
+
     {{#if presskit.pressKitLink}}
     <dt data-l10n="ui.factsheet.labels.press_kit">Press Kit:</dt>
     <dd>

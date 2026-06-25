@@ -217,6 +217,7 @@ function normalizeFactsheet (content) {
     cost: optionalString(factsheet.cost),
     steam: normalizeFactLink(factsheet.steam, 'factsheet.steam'),
     trailer: normalizeFactLink(factsheet.trailer, 'factsheet.trailer'),
+    preview: normalizeFactLink(factsheet.preview, 'factsheet.preview'),
     pressKit: normalizeFactLink(factsheet.press_kit, 'factsheet.press_kit')
   }
 }
@@ -281,7 +282,7 @@ function normalizeLocalization (content) {
   const short = english.short || {}
   const long = english.long || {}
   const keyFeatures = asArray(english.key_features, 'localization.translations.en.description.key_features').map((feature) => ({
-    icon: optionalString(feature.icon) || '🏀',
+    icon: optionalString(feature.icon),
     title: requireString(feature.title, 'localization.translations.en.description.key_features[].title'),
     body: requireString(feature.body, 'localization.translations.en.description.key_features[].body')
   }))
@@ -465,6 +466,7 @@ function buildProductData (content) {
       ...(factsheet.cost ? { cost: factsheet.cost } : {}),
       ...(factLinkNode(factsheet.steam) ? { 'steam-link': factLinkNode(factsheet.steam) } : {}),
       ...(factLinkNode(factsheet.trailer) ? { 'trailer-link': factLinkNode(factsheet.trailer) } : {}),
+      ...(factLinkNode(factsheet.preview) ? { 'pre-view-link': factLinkNode(factsheet.preview) } : {}),
       ...(factLinkNode(factsheet.pressKit) ? { 'press-kit-link': factLinkNode(factsheet.pressKit) } : {}),
       'description-heading': descriptionContent.heading,
       'short-description-title': descriptionContent.short.title,
