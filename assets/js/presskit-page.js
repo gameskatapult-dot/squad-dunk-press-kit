@@ -36,17 +36,67 @@
       return supported.indexOf(language) !== -1
     }
 
-    function applyLanguage (language, updateUrl) {
-      const selectedLanguage = isSupported(language) ? language : defaultLanguage
+    function fallbackLanguage () {
+      if (isSupported('en')) return 'en'
+      if (isSupported(defaultLanguage)) return defaultLanguage
+      return supported[0]
+    }
+
+    function normalizeLanguageCode (language) {
+      if (typeof language !== 'string') return ''
+      return language.trim().toLowerCase().replace('_', '-')
+    }
+
+    function matchSupportedLanguage (language) {
+      const normalized = normalizeLanguageCode(language)
+      if (!normalized) return ''
+      if (isSupported(normalized)) return normalized
+
+      const primary = normalized.split('-')[0]
+      if (isSupported(primary)) return primary
+
+      return ''
+    }
+
+    function detectBrowserLanguage () {
+      const browserLanguages = []
+      if (window.navigator) {
+        if (Array.isArray(window.navigator.languages)) {
+          browserLanguages.push.apply(browserLanguages, window.navigator.languages)
+        }
+        if (window.navigator.language) browserLanguages.push(window.navigator.language)
+      }
+
+      for (let i = 0; i < browserLanguages.length; i++) {
+        const match = matchSupportedLanguage(browserLanguages[i])
+        if (match) return match
+      }
+
+      return fallbackLanguage()
+    }
+
+    function initialLanguage () {
+      const storedMatch = matchSupportedLanguage(storedLanguage)
+      if (storedMatch) return storedMatch
+
+      const urlMatch = matchSupportedLanguage(urlLanguage)
+      if (urlMatch) return urlMatch
+
+      return detectBrowserLanguage()
+    }
+
+    function applyLanguage (language, options) {
+      const settings = options || {}
+      const selectedLanguage = matchSupportedLanguage(language) || fallbackLanguage()
       const activeLanguage = data.translations && data.translations[selectedLanguage] && Object.keys(data.translations[selectedLanguage]).length
         ? selectedLanguage
-        : defaultLanguage
+        : fallbackLanguage()
       const activeTranslation = data.translations ? data.translations[activeLanguage] : null
 
       select.value = selectedLanguage
       document.documentElement.setAttribute('lang', activeLanguage)
 
-      if (window.localStorage) window.localStorage.setItem(storageKey, selectedLanguage)
+      if (settings.persist && window.localStorage) window.localStorage.setItem(storageKey, selectedLanguage)
 
       if (activeTranslation) {
         const nodes = document.querySelectorAll('[data-l10n]')
@@ -57,7 +107,7 @@
         }
       }
 
-      if (updateUrl && window.history && window.history.replaceState) {
+      if (settings.updateUrl && window.history && window.history.replaceState) {
         const nextUrl = new URL(window.location.href)
         nextUrl.searchParams.set('lang', selectedLanguage)
         window.history.replaceState({}, '', nextUrl.toString())
@@ -65,10 +115,10 @@
     }
 
     select.addEventListener('change', function () {
-      applyLanguage(select.value, true)
+      applyLanguage(select.value, { updateUrl: true, persist: true })
     })
 
-    applyLanguage(isSupported(urlLanguage) ? urlLanguage : storedLanguage, Boolean(urlLanguage))
+    applyLanguage(initialLanguage(), { updateUrl: Boolean(urlLanguage && !matchSupportedLanguage(storedLanguage)), persist: false })
   }
 
   function setupNavigation () {

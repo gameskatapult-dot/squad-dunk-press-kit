@@ -107,21 +107,21 @@
     {{#if presskit.releaseDates}}
     <dt data-l10n="ui.factsheet.labels.release_date">Release date:</dt>
     {{#each presskit.releaseDates}}
-    <dd>{{.}}</dd>
+    <dd data-l10n="ui.factsheet.release_dates.{{@index}}">{{.}}</dd>
     {{/each}}
     {{/if}}
 
     {{#if presskit.genres}}
     <dt data-l10n="ui.factsheet.labels.genres">Genres:</dt>
     {{#each presskit.genres}}
-    <dd>{{.}}</dd>
+    <dd data-l10n="ui.factsheet.genres_items.{{@index}}">{{.}}</dd>
     {{/each}}
     {{/if}}
 
     {{#if presskit.platforms}}
     <dt data-l10n="ui.factsheet.labels.platforms">Platforms:</dt>
     {{#each presskit.platforms}}
-    <dd>
+    <dd data-l10n="ui.factsheet.platforms_items.{{@index}}">
       {{#if link}}
         <a href="{{link}}">{{name}}</a>
       {{else}}
