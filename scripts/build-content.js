@@ -424,6 +424,10 @@ function buildProductData (content) {
   const mediaDownload = downloadForSection(downloads, 'media', content.media.screenshots.download_label || 'download all screenshots as .zip', content.media.screenshots.download_zip || 'images/images.zip')
   const brandingDownload = downloadForSection(downloads, 'branding', content.branding.download_label || 'download logo files as .zip', content.branding.download_zip || 'images/logo.zip')
   const team = content.team || {}
+  const analytics = content.analytics || {}
+  const goatcounterEndpoint = optionalString(analytics.goatcounter_endpoint)
+  const goatcounterConfigured = /^https:\/\/[a-z0-9-]+\.goatcounter\.com\/count$/i.test(goatcounterEndpoint) &&
+    !goatcounterEndpoint.includes('REPLACE_WITH_GOATCOUNTER_CODE')
   const descriptionContent = localization.englishDescription
 
   const enabledScreenshots = screenshots.filter(enabled)
@@ -440,6 +444,7 @@ function buildProductData (content) {
     product: {
       title: requireString(content.title, 'title'),
       website: requireString(content.website, 'website'),
+      ...(goatcounterConfigured ? { 'goatcounter-endpoint': goatcounterEndpoint } : {}),
       'release-dates': {
         'release-date': asArray(content.release_dates, 'release_dates').map((date) => requireString(date, 'release_dates[]'))
       },
