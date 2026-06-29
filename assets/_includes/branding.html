@@ -4,7 +4,7 @@
 
   {{#if presskit.brandingDownloadFile}}
   <aside class="block__notice">
-    <a href="{{presskit.brandingDownloadFile}}" data-l10n="ui.branding.download">
+    <a href="{{presskit.brandingDownloadFile}}" data-analytics-event="Assets Download" data-l10n="ui.branding.download">
       {{presskit.brandingDownloadTitle}}
     </a>
   </aside>
@@ -12,7 +12,7 @@
 
   <div class="branding-assets">
     {{#each presskit.brandingAssets}}
-    <a href="{{file}}" class="branding-asset" title="{{title}}">
+    <a href="{{file}}" class="branding-asset" title="{{title}}" data-analytics-event="Assets Download">
       <img src="{{file}}" alt="{{alt}}" class="logo">
     </a>
     {{/each}}
@@ -24,14 +24,14 @@
     <h2 id="logo" data-l10n="ui.branding.title">Branding</h2>
 
     <aside class="block__notice">
-      <a href="images/logo.zip" data-l10n="ui.branding.download">
+      <a href="images/logo.zip" data-analytics-event="Assets Download" data-l10n="ui.branding.download">
         download logo files as .zip
       </a>
     </aside>
 
     <div class="branding-assets">
       {{#each images.logos}}
-      <a href="images/{{.}}" class="branding-asset">
+      <a href="images/{{.}}" class="branding-asset" data-analytics-event="Assets Download">
         <img src="images/{{.}}" alt="{{basename .}}" class="logo">
       </a>
       {{/each}}

@@ -3,6 +3,34 @@
 
   const storageKey = 'squad-dunk-presskit-language'
 
+  function trackAnalyticsEvent (name, details) {
+    if (!name || !window.goatcounter || typeof window.goatcounter.count !== 'function') return
+
+    const eventData = {
+      path: name,
+      title: details && details.language ? name + ': ' + details.language : name,
+      event: true
+    }
+
+    try {
+      window.goatcounter.count(eventData)
+    } catch {
+      // Analytics must never interrupt the visitor experience.
+    }
+  }
+
+  function setupAnalyticsEvents () {
+    document.addEventListener('click', function (event) {
+      const origin = event.target
+      if (!origin || typeof origin.closest !== 'function') return
+
+      const target = origin.closest('[data-analytics-event]')
+      if (!target) return
+
+      trackAnalyticsEvent(target.getAttribute('data-analytics-event'))
+    })
+  }
+
   function getPathValue (source, path) {
     return path.split('.').reduce(function (value, segment) {
       if (value == null) return undefined
@@ -108,14 +136,19 @@
       }
 
       if (settings.updateUrl && window.history && window.history.replaceState) {
+        // Preserve every incoming query parameter, including press outreach UTMs:
+        // ?utm_source=email&utm_medium=press&utm_campaign=squad_dunk_announcement
         const nextUrl = new URL(window.location.href)
         nextUrl.searchParams.set('lang', selectedLanguage)
         window.history.replaceState({}, '', nextUrl.toString())
       }
+
+      return activeLanguage
     }
 
     select.addEventListener('change', function () {
-      applyLanguage(select.value, { updateUrl: true, persist: true })
+      const activeLanguage = applyLanguage(select.value, { updateUrl: true, persist: true })
+      trackAnalyticsEvent('Language Changed', { language: activeLanguage })
     })
 
     applyLanguage(initialLanguage(), { updateUrl: Boolean(urlLanguage && !matchSupportedLanguage(storedLanguage)), persist: false })
@@ -335,6 +368,7 @@
   }
 
   document.addEventListener('DOMContentLoaded', function () {
+    setupAnalyticsEvents()
     setupLanguageSelector()
     setupNavigation()
     setupLandingHero()

@@ -13,7 +13,7 @@
       <span data-l10n="ui.media.video_cards.{{@index}}.label">{{label}}</span>
       {{/if}}
       {{#if url}}
-      <a class="button media-placeholder-link" href="{{url}}" data-l10n="ui.media.video_cards.{{@index}}.label">{{label}}</a>
+      <a class="button media-placeholder-link" href="{{url}}" data-analytics-event="Trailer Click" data-l10n="ui.media.video_cards.{{@index}}.label">{{label}}</a>
       {{/if}}
     </article>
     {{/each}}
@@ -23,7 +23,7 @@
   <h3 id="screenshots" data-l10n="ui.media.screenshots">Screenshots</h3>
   {{#if presskit.mediaDownloadFile}}
   <aside class="block__notice">
-    <a href="{{presskit.mediaDownloadFile}}" data-l10n="ui.media.download">
+    <a href="{{presskit.mediaDownloadFile}}" data-analytics-event="Press Kit Download" data-l10n="ui.media.download">
       {{presskit.mediaDownloadTitle}}
     </a>
   </aside>
@@ -54,7 +54,7 @@
     <h3 id="screenshots" data-l10n="ui.media.screenshots">Screenshots</h3>
     {{#if presskit.mediaDownloadFile}}
     <aside class="block__notice">
-      <a href="{{presskit.mediaDownloadFile}}" data-l10n="ui.media.download">
+      <a href="{{presskit.mediaDownloadFile}}" data-analytics-event="Press Kit Download" data-l10n="ui.media.download">
         {{presskit.mediaDownloadTitle}}
       </a>
     </aside>
@@ -83,7 +83,7 @@
       <h2 id="media" data-l10n="ui.media.title">Media</h2>
       <h3 id="screenshots" data-l10n="ui.media.screenshots">Screenshots</h3>
       <aside class="block__notice">
-        <a href="images/images.zip" data-l10n="ui.media.download">
+        <a href="images/images.zip" data-analytics-event="Press Kit Download" data-l10n="ui.media.download">
           download all screenshots as .zip
         </a>
       </aside>

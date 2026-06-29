@@ -1,6 +1,9 @@
 title: Squad Dunk
 website: https://www.squaddunk.com
 
+analytics:
+  goatcounter_endpoint: https://katapultgames.goatcounter.com/count
+
 sections:
   - id: factsheet
     enabled: true
@@ -228,6 +231,16 @@ localization:
           title: Contact
           email: Email
           bug_reports: Bug Reports
+        privacy:
+          label: Privacy
+          title: Privacy-friendly analytics
+          body: >-
+            We use privacy-friendly analytics to understand aggregate traffic
+            and improve this press kit. We do
+            not use analytics cookies, track visitors across websites, create
+            personal profiles, or sell visitor data. We collect aggregate
+            information such as page views, referral source, approximate
+            country, device type, browser, and interactions with press links.
     es:
       description:
         heading: ¿QUÉ ES SQUAD DUNK?
@@ -391,6 +404,18 @@ localization:
           title: Contacto
           email: Email
           bug_reports: Reportar bugs
+        privacy:
+          label: Privacidad
+          title: Analítica respetuosa con la privacidad
+          body: >-
+            Usamos analítica respetuosa con la privacidad para comprender el
+            tráfico agregado y mejorar este
+            press kit. No usamos cookies de analítica, no rastreamos a los
+            visitantes entre sitios web, no creamos perfiles personales ni
+            vendemos datos de visitantes. Recopilamos información agregada,
+            como visualizaciones de páginas, fuente de referencia, país
+            aproximado, tipo de dispositivo, navegador e interacciones con los
+            enlaces de prensa.
     ru:
       description:
         heading: ЧТО ТАКОЕ SQUAD DUNK?
@@ -554,6 +579,18 @@ localization:
           title: Контакты
           email: Email
           bug_reports: Сообщить о баге
+        privacy:
+          label: Конфиденциальность
+          title: Аналитика с уважением к конфиденциальности
+          body: >-
+            Мы используем аналитику, сохраняющую конфиденциальность, чтобы
+            понимать общую посещаемость и улучшать
+            этот пресс-кит. Мы не используем аналитические cookie, не
+            отслеживаем посетителей на разных сайтах, не создаём персональные
+            профили и не продаём данные посетителей. Мы собираем только
+            агрегированную информацию: просмотры страниц, источник перехода,
+            примерную страну, тип устройства, браузер и взаимодействия со
+            ссылками для прессы.
     ja:
       description:
         heading: SQUAD DUNKとは？
@@ -698,6 +735,12 @@ localization:
           title: 連絡先
           email: メール
           bug_reports: バグ報告
+        privacy:
+          label: プライバシー
+          title: プライバシーに配慮したアクセス解析
+          body: >-
+            このプレスキットでは、アクセス状況を集計して改善に役立てるため、プライバシーに配慮したアクセス解析を使用しています。解析用 Cookie
+            は使用せず、複数のウェブサイトにまたがる追跡、個人プロファイルの作成、訪問者データの販売も行いません。ページビュー、参照元、おおよその国、端末の種類、ブラウザ、プレス向けリンクのクリックなど、集計された情報のみを収集します。
     zh:
       description:
         heading: SQUAD DUNK 是什么？
@@ -842,6 +885,12 @@ localization:
           title: 联系方式
           email: Email
           bug_reports: 提交 Bug
+        privacy:
+          label: 隐私
+          title: 尊重隐私的访问分析
+          body: >-
+            我们使用注重隐私的访问分析来了解汇总访问情况并改进本新闻资料包。我们不使用分析
+            Cookie，不跨网站跟踪访客，不建立个人档案，也不出售访客数据。我们只收集页面浏览量、来源网站、大致国家或地区、设备类型、浏览器以及新闻链接点击情况等汇总信息。
     de:
       description:
         heading: WAS IST SQUAD DUNK?
@@ -1007,6 +1056,18 @@ localization:
           title: Kontakt
           email: E-Mail
           bug_reports: Bug Reports
+        privacy:
+          label: Datenschutz
+          title: Datenschutzfreundliche Analyse
+          body: >-
+            Wir verwenden datenschutzfreundliche Analysen, um aggregierte
+            Zugriffe zu verstehen und dieses
+            Pressekit zu verbessern. Wir verwenden keine Analyse-Cookies,
+            verfolgen Besucher nicht über verschiedene Websites hinweg,
+            erstellen keine persönlichen Profile und verkaufen keine
+            Besucherdaten. Wir erfassen aggregierte Informationen wie
+            Seitenaufrufe, Verweisquelle, ungefähres Land, Gerätetyp, Browser
+            und Interaktionen mit Presselinks.
     fr:
       description:
         heading: QU'EST-CE QUE SQUAD DUNK ?
@@ -1172,6 +1233,19 @@ localization:
           title: Contact
           email: Email
           bug_reports: Signaler un bug
+        privacy:
+          label: Confidentialité
+          title: Analyse respectueuse de la vie privée
+          body: >-
+            Nous utilisons une analyse respectueuse de la vie privée afin de
+            comprendre le trafic agrégé
+            et d'améliorer ce press kit. Nous n'utilisons pas de cookies
+            d'analyse, ne suivons pas les visiteurs d'un site à l'autre, ne
+            créons pas de profils personnels et ne vendons pas les données des
+            visiteurs. Nous recueillons des informations agrégées telles que
+            les pages vues, la source de référence, le pays approximatif, le
+            type d'appareil, le navigateur et les interactions avec les liens
+            presse.
     pt:
       description:
         heading: O QUE É SQUAD DUNK?
@@ -1335,6 +1409,17 @@ localization:
           title: Contato
           email: Email
           bug_reports: Reportar bugs
+        privacy:
+          label: Privacidade
+          title: Análise que respeita a privacidade
+          body: >-
+            Usamos uma análise que respeita a privacidade para entender o
+            tráfego agregado e melhorar este press
+            kit. Não usamos cookies de análise, não rastreamos visitantes entre
+            sites, não criamos perfis pessoais e não vendemos dados de
+            visitantes. Coletamos informações agregadas, como visualizações de
+            páginas, fonte de referência, país aproximado, tipo de dispositivo,
+            navegador e interações com links de imprensa.
 
 release_dates:
   - TBA

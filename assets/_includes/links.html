@@ -6,7 +6,7 @@
     {{#each presskit.links}}
     <dt>{{title}}</dt>
     <dd>
-      {{#if label}}{{label}} {{/if}}<a href="{{url}}">{{prettyURL url}}</a>
+      {{#if label}}{{label}} {{/if}}<a href="{{url}}" data-analytics-event="Social Link Click">{{prettyURL url}}</a>
     </dd>
     {{/each}}
   </dl>

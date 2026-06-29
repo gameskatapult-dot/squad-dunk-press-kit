@@ -26,7 +26,7 @@
     {{#if presskit.pressContact}}
     <dt>Press / Business contact:</dt>
     <dd>
-      <a href="mailto:{{presskit.pressContact}}">{{presskit.pressContact}}</a>
+      <a href="mailto:{{presskit.pressContact}}" data-analytics-event="Contact Email Click">{{presskit.pressContact}}</a>
     </dd>
     {{/if}}
 
@@ -140,7 +140,7 @@
     <dt data-l10n="ui.factsheet.labels.steam">Steam:</dt>
     <dd>
       {{#if presskit.steamLink.url}}
-        <a href="{{presskit.steamLink.url}}" data-l10n="ui.factsheet.values.steam">{{presskit.steamLink.label}}</a>
+        <a href="{{presskit.steamLink.url}}" data-analytics-event="Steam Click" data-l10n="ui.factsheet.values.steam">{{presskit.steamLink.label}}</a>
       {{else}}
         <span data-l10n="ui.factsheet.values.steam">{{presskit.steamLink.label}}</span>
       {{/if}}
@@ -151,7 +151,7 @@
     <dt data-l10n="ui.factsheet.labels.trailer">Trailer:</dt>
     <dd>
       {{#if presskit.trailerLink.url}}
-        <a href="{{presskit.trailerLink.url}}" data-l10n="ui.factsheet.values.trailer">{{presskit.trailerLink.label}}</a>
+        <a href="{{presskit.trailerLink.url}}" data-analytics-event="Trailer Click" data-l10n="ui.factsheet.values.trailer">{{presskit.trailerLink.label}}</a>
       {{else}}
         <span data-l10n="ui.factsheet.values.trailer">{{presskit.trailerLink.label}}</span>
       {{/if}}
@@ -162,7 +162,7 @@
     <dt data-l10n="ui.factsheet.labels.preview">Pre-view:</dt>
     <dd>
       {{#if presskit.preViewLink.url}}
-        <a href="{{presskit.preViewLink.url}}" data-l10n="ui.factsheet.values.preview">{{presskit.preViewLink.label}}</a>
+        <a href="{{presskit.preViewLink.url}}" data-analytics-event="Trailer Click" data-l10n="ui.factsheet.values.preview">{{presskit.preViewLink.label}}</a>
       {{else}}
         <span data-l10n="ui.factsheet.values.preview">{{presskit.preViewLink.label}}</span>
       {{/if}}
@@ -173,7 +173,7 @@
     <dt data-l10n="ui.factsheet.labels.press_kit">Press Kit:</dt>
     <dd>
       {{#if presskit.pressKitLink.url}}
-        <a href="{{presskit.pressKitLink.url}}" data-l10n="ui.factsheet.values.press_kit">{{presskit.pressKitLink.label}}</a>
+        <a href="{{presskit.pressKitLink.url}}" data-analytics-event="Press Kit Download" data-l10n="ui.factsheet.values.press_kit">{{presskit.pressKitLink.label}}</a>
       {{else}}
         <span data-l10n="ui.factsheet.values.press_kit">{{presskit.pressKitLink.label}}</span>
       {{/if}}

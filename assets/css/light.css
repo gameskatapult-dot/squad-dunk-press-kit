@@ -851,6 +851,49 @@ a:hover {
 
 .page-footer {
   min-height: 18px;
+  padding: 10px 0 4px;
+  color: var(--sd-muted);
+  text-align: center;
+}
+
+.privacy-disclosure summary {
+  display: inline-block;
+  font-size: 0.85em;
+  color: var(--sd-muted);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.privacy-disclosure summary::-webkit-details-marker {
+  display: none;
+}
+
+.privacy-disclosure summary:focus-visible {
+  outline: 2px solid var(--sd-orange);
+  outline-offset: 4px;
+}
+
+.privacy-disclosure__content {
+  max-width: 680px;
+  margin: 14px auto 0;
+  padding-top: 12px;
+  border-top: 1px solid var(--sd-border);
+  text-align: left;
+}
+
+.privacy-disclosure__content h2 {
+  margin: 0 0 6px;
+  font-family: inherit;
+  font-size: 1em;
+  font-weight: 700;
+  color: var(--sd-heading);
+}
+
+.privacy-disclosure__content p {
+  margin: 0;
+  font-size: 0.9em;
 }
 
 @media (min-width: 800px) {

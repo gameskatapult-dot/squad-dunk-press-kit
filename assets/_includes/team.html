@@ -58,7 +58,7 @@
       <dt {{#ifEq name "Email"}}data-l10n="ui.contact.email"{{/ifEq}}{{#ifEq name "Bug Reports"}}data-l10n="ui.contact.bug_reports"{{/ifEq}}>{{name}}</dt>
       <dd>
         {{#if mail}}
-        <a href="mailto:{{mail}}">{{mail}}</a>
+        <a href="mailto:{{mail}}" data-analytics-event="Contact Email Click">{{mail}}</a>
         {{/if}}
 
         {{#if link}}
