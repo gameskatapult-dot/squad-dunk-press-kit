@@ -35,8 +35,8 @@ factsheet:
     label: TBA
     url: ""
   preview:
-    label: https://youtu.be/t_48G850yR8
-    url: https://youtu.be/t_48G850yR8
+    label: https://youtu.be/dTgzuh5B6HM
+    url: https://youtu.be/dTgzuh5B6HM
   press_kit:
     label: Open Press Kit
     url: https://drive.google.com/drive/folders/1G_cmvMlNz9NgyuEXS32lV81ek7wmlIOt?usp=sharing
@@ -166,7 +166,7 @@ localization:
             cost: TBA
             steam: https://store.steampowered.com/app/4591520/Squad_Dunk/
             trailer: TBA
-            preview: https://youtu.be/t_48G850yR8
+            preview: https://youtu.be/dTgzuh5B6HM
             press_kit: Open Press Kit
           release_dates:
             - TBA
@@ -339,7 +339,7 @@ localization:
             cost: TBA
             steam: https://store.steampowered.com/app/4591520/Squad_Dunk/
             trailer: TBA
-            preview: https://youtu.be/t_48G850yR8
+            preview: https://youtu.be/dTgzuh5B6HM
             press_kit: Abrir Press Kit
           release_dates:
             - TBA
@@ -514,7 +514,7 @@ localization:
             cost: TBA
             steam: https://store.steampowered.com/app/4591520/Squad_Dunk/
             trailer: TBA
-            preview: https://youtu.be/t_48G850yR8
+            preview: https://youtu.be/dTgzuh5B6HM
             press_kit: Открыть Press Kit
           release_dates:
             - TBA
@@ -675,7 +675,7 @@ localization:
             cost: TBA
             steam: https://store.steampowered.com/app/4591520/Squad_Dunk/
             trailer: TBA
-            preview: https://youtu.be/t_48G850yR8
+            preview: https://youtu.be/dTgzuh5B6HM
             press_kit: プレスキットリンクはこちら
           release_dates:
             - TBA
@@ -825,7 +825,7 @@ localization:
             cost: TBA
             steam: https://store.steampowered.com/app/4591520/Squad_Dunk/
             trailer: TBA
-            preview: https://youtu.be/t_48G850yR8
+            preview: https://youtu.be/dTgzuh5B6HM
             press_kit: 打开 Press Kit
           release_dates:
             - TBA
@@ -990,7 +990,7 @@ localization:
             cost: TBA
             steam: https://store.steampowered.com/app/4591520/Squad_Dunk/
             trailer: TBA
-            preview: https://youtu.be/t_48G850yR8
+            preview: https://youtu.be/dTgzuh5B6HM
             press_kit: Hier zum Press-Kit-Link
           release_dates:
             - TBA
@@ -1167,7 +1167,7 @@ localization:
             cost: TBA
             steam: https://store.steampowered.com/app/4591520/Squad_Dunk/
             trailer: TBA
-            preview: https://youtu.be/t_48G850yR8
+            preview: https://youtu.be/dTgzuh5B6HM
             press_kit: Ouvrir le Press Kit
           release_dates:
             - TBA
@@ -1344,7 +1344,7 @@ localization:
             cost: TBA
             steam: https://store.steampowered.com/app/4591520/Squad_Dunk/
             trailer: TBA
-            preview: https://youtu.be/t_48G850yR8
+            preview: https://youtu.be/dTgzuh5B6HM
             press_kit: Abrir Press Kit
           release_dates:
             - TBA
@@ -1456,7 +1456,7 @@ media:
       title: Pre-view
       label: Watch on YouTube
       description: Physics-based first-person basketball gameplay preview.
-      url: https://youtu.be/t_48G850yR8
+      url: https://youtu.be/dTgzuh5B6HM
       status: available
       enabled: true
     - id: reveal-trailer
