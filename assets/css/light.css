@@ -1805,19 +1805,6 @@ html {
   text-decoration: none;
 }
 
-.funding-banner {
-  display: flex;
-  justify-content: center;
-  padding: clamp(26px, 4vw, 54px) clamp(18px, 5vw, 72px);
-  background: #FFFFFF;
-}
-
-.funding-banner img {
-  display: block;
-  width: min(100%, 1480px);
-  height: auto;
-}
-
 .visually-hidden {
   position: absolute !important;
   width: 1px;
