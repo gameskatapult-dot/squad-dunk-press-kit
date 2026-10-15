@@ -120,6 +120,7 @@
 .product-page ._team-fix-margin-top article { min-width: 0; padding: 0; background: none; border: 0; border-radius: 0; box-shadow: none; }
 .product-page .description-summary { margin-bottom: 28px; padding: 18px 22px; background: #edf1e9; border-radius: 12px; }
 .product-page .description-inline-feature h4 { color: #356068; }
+.product-page .description-inline-feature p { white-space: pre-line; }
 .product-page .factsheet__list dt { margin-top: 18px; font-size: 1.25rem; letter-spacing: .04em; text-transform: uppercase; }
 .product-page .factsheet__list dd { font-size: 1.45rem; overflow-wrap: anywhere; }
 .product-page .factsheet__tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 6px; }

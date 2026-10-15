@@ -120,6 +120,15 @@
     </dd>
     {{/if}}
 
+    {{#if presskit.storeTags}}
+    <dt data-l10n="ui.factsheet.labels.tags">Tags:</dt>
+    <dd class="factsheet__tags">
+      {{#each presskit.storeTags}}
+      <span data-l10n="ui.factsheet.tags_items.{{@index}}">{{.}}</span>
+      {{/each}}
+    </dd>
+    {{/if}}
+
     {{#if presskit.platforms}}
     <dt data-l10n="ui.factsheet.labels.platforms">Platforms:</dt>
     {{#each presskit.platforms}}

@@ -21,8 +21,7 @@ remain in Drive.
 - The five Drive screenshots were uploaded on 24 June. They do not establish a
   new screenshot set for October.
 - `About: Squad Dunk` was last modified on 25 June and contains two copy variants.
-  Existing website copy is retained, with the name updated to DUNK in all eight
-  languages. The alternate text is not assumed to be final Steam copy.
+  It is superseded by the current Steam content supplied by the owner below.
 - `TRAILERS`, `GIFS` and `TEAM` were empty when inspected.
 - The Katapult white logo in Drive dates from 22 June. The studio identity is
   retained; the game branding is updated.
@@ -51,9 +50,27 @@ navigation, keyboard navigation and a full-screen viewer. Download actions
 are plain text links. The earlier pill buttons and colored download panels
 have been removed from the home page and press kit.
 
+## Current Steam content
+
+The owner supplied three screenshots of the current Steam listing on 15 October.
+These establish the short description, About This Game copy, three description
+sections, three genres, twenty tags and Katapult Games as both developer and
+publisher. They replace the June descriptions.
+
+The English descriptions follow the supplied Steam text. One repeated word in
+"a private 5v1 private lobby" is removed. The feature bullets and short homepage
+line summarize only the supplied content: 1–6 players, 1v1–3v3, solo play,
+physics-based actions, proximity chat, court mechanics, unlockable cosmetics,
+emotes and private 5v1 lobbies.
+
+The eight press kit languages are updated consistently. These are website
+translations, not a claim about supported in-game languages. Steam platform
+details such as Family Sharing, profile restrictions, EULA and Steam Deck
+compatibility are not presented as new gameplay features.
+
 ## Next content update
 
-Add final Steam copy, a public trailer URL and any approved GIFs as they become
+Add a public trailer URL and any approved GIFs as they become
 available. The media section is now enabled for the October screenshots; the
 previous video remains hidden. No release date, pricing or new feature claims
 have been inferred from the illustration or screenshots.

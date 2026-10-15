@@ -305,7 +305,18 @@ function normalizeLocalization (content) {
 
   const normalizedTranslations = {}
   for (const language of languages) {
-    normalizedTranslations[language.code] = translations[language.code] || {}
+    const translation = translations[language.code] || {}
+    const description = translation.description
+    normalizedTranslations[language.code] = {
+      ...translation,
+      ...(description ? {
+        description: {
+          ...description,
+          keyFeaturesTitle: description.key_features_title,
+          keyFeatures: description.key_features
+        }
+      } : {})
+    }
   }
   normalizedTranslations.en = {
     ...(normalizedTranslations.en || {}),
@@ -453,6 +464,9 @@ function buildProductData (content) {
       },
       genres: {
         genre: asArray(content.genres, 'genres').map((genre) => requireString(genre, 'genres[]'))
+      },
+      'store-tags': {
+        'store-tag': optionalArray(content.tags).map((tag) => requireString(tag, 'tags[]'))
       },
       platforms: {
         platform: asArray(content.platforms, 'platforms').map((platform) => ({

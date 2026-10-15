@@ -28,7 +28,7 @@ factsheet:
   about: DUNK
   development: In active development by Katapult Games.
   developers: Bruno Braghetto, Matias Nicolini and Anahi Mou
-  publisher: ""
+  publisher: Katapult Games
   cost: ""
   steam:
     label: https://store.steampowered.com/app/4591520/Squad_Dunk/
@@ -76,48 +76,56 @@ localization:
         heading: WHAT IS DUNK?
         short:
           title: SHORT DESCRIPTION
-          text: >-
-            DUNK is a physics-based first-person basketball game. Team up
-            with friends for casual or competitive matches. No auto-aim. Every
-            play, good or terrible, is yours. Ready to make basketball physical?
+          text: A first-person 1-6 player basketball game where every physics-based pass,
+            block, and DUNK comes down to skill. Hit unique courts across the universe,
+            hang out over proximity chat, or finesse your 1st-person skills in solo
+            play. Unlock new looks, emotes, and more, to flex on your mates!
         long:
           title: LONG DESCRIPTION
           paragraphs:
-            - >-
-              DUNK is basketball built around physics. Each player
-              controls one character on the court, teaming up with friends in
-              casual or competitive online matches across courts with their own
-              twists. No auto-aim, every play, good or terrible, is yours.
+            - A first-person basketball game for 1-6 players in matches of 1v1 to 3v3.
+              Hang out with friends over proximity chat or let your skills do the
+              talking as you intercept, tackle, pass, and DUNK.
         key_features_title: Key Features
         key_features:
           - icon: ""
-            title: PLAY FROM THE COURT
+            title: Balling Out
             body: >-
-              Control one player in first person and experience the match from
-              inside the action, not from a distant camera.
+              Enjoy an easy-to-pick up but hard to master first-person basketball
+              experience for players of all skill levels. Learn to time your shots, pick
+              the right pass, and steal the ball, or add to the chaos and enjoy simply
+              hanging with friends. Grow from asking “how did that go in?” to “I
+              absolutely meant for that to happen.”
+
+
+              Strong teams and players will channel their inner Bulls and learn how to
+              work together to defend and attack as a unit. (Don’t worry, we expect most
+              of you to fall into name-calling and general chaos).
           - icon: ""
-            title: FEEL THE PHYSICS
+            title: The Courts Are Waiting
             body: >-
-              DUNK uses physics-based mechanics to make basketball feel
-              more alive, physical, and unpredictable. Blocks, shots, steals,
-              rebounds, movement, and contact all become part of the moment.
+              Pull up to courts, from the classic schoolyard to the moon, each with
+              their own unique characteristics to master. Use the hanging vines in the
+              jungle and make the most of low gravity on the moon to get an edge over
+              your opponents.
+
+
+              Some courts may even hide further secrets worth investigating - like what
+              exactly is that monkey waiting for in the jungle?
           - icon: ""
-            title: PLAY AS A TEAM
+            title: Friendly Competition
             body: >-
-              Play solo or with friends in casual or competitive matches. Team
-              up, give your squad a leg up, literally, and go for the kind of
-              plays normal basketball would keep illegal, turning questionable
-              ideas into real plays.
-          - icon: ""
-            title: EVERY COURT CHANGES THE GAME
-            body: >-
-              Each court adds its own twist, with new mechanics and environments
-              that make teams adapt in different ways.
-          - icon: ""
-            title: CUSTOMIZE YOUR CHARACTER
-            body: >-
-              Create your look, build your squad identity, and give your team
-              its own style.
+              What would a game of pick-up basketball look like without a bit of
+              friendly banter? Proximity chat, unlockable cosmetics, and a range of
+              emotes give you a way to flex on opponents, so long as you’re prepared to
+              back it up on the courts and make a name for yourself.
+
+
+              Play however you choose online, with matches up to 3v3 available for solo
+              players and teams. Set up a private 5v1 lobby and see just how long your
+              friend Alex can hold on! Join our Discord to find players and a community
+              to play with.
+
       ui:
         landing:
           nav:
@@ -125,7 +133,8 @@ localization:
             about: About
             press: Press
           eyebrow: Gameplay Reel
-          tagline: Physics-based first-person basketball. No auto-aim. Every play is yours.
+          tagline: First-person basketball for 1–6 players. From 1v1 to 3v3.
+
           play: Watch Gameplay Reel
           close: Close video
           fallback: Open on YouTube
@@ -159,12 +168,13 @@ localization:
             preview: "Pre-view:"
             press_kit: "Press Kit:"
             website: "Website:"
+            tags: "Tags:"
           values:
             about: DUNK
             development: In active development by Katapult Games.
             developers: Bruno Braghetto, Matias Nicolini and Anahi Mou
             based_in: Based in Berlin, Germany
-            publisher: TBA
+            publisher: Katapult Games
             cost: TBA
             steam: https://store.steampowered.com/app/4591520/Squad_Dunk/
             trailer: TBA
@@ -173,29 +183,45 @@ localization:
           release_dates:
             - TBA
           genres_items:
-            - Basketball
-            - Sports
-            - Multiplayer
-            - PvP
-            - First-Person
-            - Arcade
-            - Physics
-            - Team-Based
             - Indie
-            - Physics-Based
-            - Online PvP
+            - Simulation
+            - Sports
           platforms_items:
             - PC - Steam
+          tags_items:
+            - Sports
+            - Basketball
+            - Online Co-Op
+            - Physics
+            - PvP
+            - Arcade
+            - Party Game
+            - Character Customization
+            - 3D
+            - First-Person
+            - Funny
+            - Team-Based
+            - Simulation
+            - Colorful
+            - Casual
+            - Stylized
+            - Co-op
+            - Multiplayer
+            - FPS
+            - Singleplayer
+
         features:
           title: Features
           items:
-            - First-person view
-            - Physics-based shots, passes, steals, and rebounds
-            - Up to 3 players per team
-            - Simple to start, plenty of room to improve
-            - Different courts and scenarios, each with its own twist
-            - Character and team customization
-            - An unpaid referee in constant danger
+            - First-person basketball for 1–6 players
+            - Online matches from 1v1 to 3v3
+            - Physics-based passing, blocking, tackling and dunking
+            - Solo play to hone your skills
+            - Proximity chat
+            - Schoolyard, jungle and moon courts with their own mechanics
+            - Unlockable looks, cosmetics and emotes
+            - Private lobbies, including 5v1 matches
+
         media:
           title: Media
           videos: Videos
@@ -248,49 +274,78 @@ localization:
         heading: ¿QUÉ ES DUNK?
         short:
           title: DESCRIPCIÓN CORTA
-          text: >-
-            DUNK es un juego de básquetbol en primera persona basado en
-            físicas. Forma equipo con amigos para partidas casuales o
-            competitivas. Sin autoapuntado. Cada jugada, buena o terrible, es
-            tuya. ¿Listo para hacer que el básquetbol se sienta físico?
+          text: Un juego de básquetbol en primera persona para 1–6 jugadores donde cada
+            pase, bloqueo y DUNK basado en físicas depende de tu habilidad. Recorre
+            canchas únicas por el universo, conversa por chat de proximidad o
+            perfecciona tu juego en solitario. ¡Desbloquea nuevos looks, emotes y mucho
+            más para presumir ante tus amigos!
         long:
           title: DESCRIPCIÓN LARGA
           paragraphs:
-            - >-
-              DUNK es básquetbol construido alrededor de la física. Cada
-              jugador controla un personaje en la cancha y forma equipo con
-              amigos en partidas online casuales o competitivas, en canchas con
-              sus propios giros. Sin autoapuntado: cada jugada, buena o
-              terrible, es tuya.
+            - Un juego de básquetbol en primera persona para 1–6 jugadores, con partidas
+              de 1v1 a 3v3. Pasa el rato con amigos por chat de proximidad o deja que tu
+              habilidad hable mientras interceptas, derribas, pasas y haces DUNK.
         keyFeaturesTitle: Características principales
         keyFeatures:
           - icon: ""
             title: JUEGA DESDE LA CANCHA
-            body: >-
-              Controla a un jugador en primera persona y vive el partido desde
-              dentro de la acción, no desde una cámara distante.
+            body: Controla a un jugador en primera persona y vive el partido desde dentro de
+              la acción, no desde una cámara distante.
           - icon: ""
             title: SIENTE LA FÍSICA
-            body: >-
-              DUNK usa mecánicas basadas en físicas para que el
-              básquetbol se sienta más vivo, físico e impredecible. Bloqueos,
-              tiros, robos, rebotes, movimiento y contacto forman parte de cada
-              momento.
+            body: DUNK usa mecánicas basadas en físicas para que el básquetbol se sienta más
+              vivo, físico e impredecible. Bloqueos, tiros, robos, rebotes, movimiento y
+              contacto forman parte de cada momento.
           - icon: ""
             title: JUEGA EN EQUIPO
-            body: >-
-              Juega solo o con amigos en partidas casuales o competitivas.
-              Coordínense y conviertan ideas cuestionables en jugadas reales.
+            body: Juega solo o con amigos en partidas casuales o competitivas. Coordínense y
+              conviertan ideas cuestionables en jugadas reales.
           - icon: ""
             title: CADA CANCHA CAMBIA EL JUEGO
-            body: >-
-              Cada cancha suma su propio giro, con mecánicas y entornos que
-              obligan a los equipos a adaptarse de distintas maneras.
+            body: Cada cancha suma su propio giro, con mecánicas y entornos que obligan a los
+              equipos a adaptarse de distintas maneras.
           - icon: ""
             title: PERSONALIZA TU PERSONAJE
+            body: Crea tu apariencia, construye la identidad de tu squad y dale un estilo
+              propio a tu equipo.
+        key_features:
+          - icon: ""
+            title: A jugar
             body: >-
-              Crea tu apariencia, construye la identidad de tu squad y dale un
-              estilo propio a tu equipo.
+              Disfruta una experiencia de básquetbol en primera persona fácil de
+              aprender y difícil de dominar, para jugadores de todos los niveles.
+              Aprende a calcular tus tiros, elegir el pase correcto y robar la pelota, o
+              súmate al caos y disfruta pasando el rato con amigos. Pasa de preguntar
+              «¿cómo entró eso?» a «lo hice totalmente a propósito».
+
+
+              Los equipos y jugadores más fuertes sacarán a relucir sus Bulls interiores
+              y aprenderán a defender y atacar como una unidad. (No te preocupes:
+              esperamos que la mayoría termine entre insultos amistosos y caos general).
+          - icon: ""
+            title: Las canchas te esperan
+            body: >-
+              Desde el clásico patio de colegio hasta la luna, cada cancha tiene
+              características únicas que dominar. Usa las lianas de la jungla y
+              aprovecha la baja gravedad en la luna para sacar ventaja a tus rivales.
+
+
+              Algunas canchas incluso podrían esconder secretos que vale la pena
+              investigar: ¿qué estará esperando ese mono en la jungla?
+          - icon: ""
+            title: Competencia entre amigos
+            body: >-
+              ¿Qué sería de una partida de básquetbol sin un poco de bromas entre
+              amigos? El chat de proximidad, los cosméticos desbloqueables y los emotes
+              te permiten presumir ante tus rivales, siempre que puedas respaldarlo en
+              la cancha y hacerte un nombre.
+
+
+              Juega online a tu manera, con partidas de hasta 3v3 para quienes se
+              conectan solos o en equipo. ¡Arma una sala privada 5v1 y descubre cuánto
+              aguanta tu amigo Alex! Únete a nuestro Discord para encontrar jugadores y
+              una comunidad con la que jugar.
+
       ui:
         landing:
           nav:
@@ -298,7 +353,8 @@ localization:
             about: Acerca de
             press: Prensa
           eyebrow: Reel de gameplay
-          tagline: Básquetbol en primera persona basado en físicas. Sin autoapuntado. Cada jugada es tuya.
+          tagline: Básquetbol en primera persona para 1–6 jugadores. De 1v1 a 3v3.
+
           play: Ver reel de gameplay
           close: Cerrar video
           fallback: Abrir en YouTube
@@ -332,12 +388,13 @@ localization:
             preview: "Pre-view:"
             press_kit: "Press Kit:"
             website: "Sitio web:"
+            tags: "Etiquetas:"
           values:
             about: DUNK
             development: En desarrollo activo por Katapult Games.
             developers: Bruno Braghetto, Matias Nicolini y Anahi Mou
             based_in: Basado en Berlín, Alemania
-            publisher: TBA
+            publisher: Katapult Games
             cost: TBA
             steam: https://store.steampowered.com/app/4591520/Squad_Dunk/
             trailer: TBA
@@ -346,29 +403,45 @@ localization:
           release_dates:
             - TBA
           genres_items:
-            - Básquetbol
-            - Deportes
-            - Multijugador
-            - PvP
-            - Primera persona
-            - Arcade
-            - Físicas
-            - Basado en equipos
             - Indie
-            - Basado en físicas
-            - PvP online
+            - Simulación
+            - Deportes
           platforms_items:
             - PC - Steam
+          tags_items:
+            - Sports
+            - Basketball
+            - Online Co-Op
+            - Physics
+            - PvP
+            - Arcade
+            - Party Game
+            - Character Customization
+            - 3D
+            - First-Person
+            - Funny
+            - Team-Based
+            - Simulation
+            - Colorful
+            - Casual
+            - Stylized
+            - Co-op
+            - Multiplayer
+            - FPS
+            - Singleplayer
+
         features:
           title: Características
           items:
-            - Vista en primera persona
-            - Tiros, pases, robos y rebotes basados en físicas
-            - Hasta 3 jugadores por equipo
-            - Fácil de empezar, con mucho espacio para mejorar
-            - Distintas canchas y escenarios, cada uno con su propio giro
-            - Personalización de personaje y equipo
-            - Un árbitro no remunerado en peligro constante
+            - Básquetbol en primera persona para 1–6 jugadores
+            - Partidas online de 1v1 a 3v3
+            - Pases, bloqueos, derribos y dunks basados en físicas
+            - Juego en solitario para perfeccionar tu habilidad
+            - Chat de proximidad
+            - Canchas de colegio, jungla y luna con mecánicas propias
+            - Looks, cosméticos y emotes desbloqueables
+            - Salas privadas, incluidas partidas 5v1
+
         media:
           title: Medios
           videos: Videos
@@ -423,49 +496,78 @@ localization:
         heading: ЧТО ТАКОЕ DUNK?
         short:
           title: КРАТКОЕ ОПИСАНИЕ
-          text: >-
-            DUNK — это баскетбол от первого лица на основе физики.
-            Объединяйтесь с друзьями для казуальных или соревновательных
-            матчей. Без автонаведения. Каждая удачная или ужасная игра — ваша.
-            Готовы сделать баскетбол по-настоящему физическим?
+          text: Баскетбол от первого лица для 1–6 игроков, где каждый физически просчитанный
+            пас, блок и DUNK зависит от мастерства. Играйте на необычных площадках по
+            всей вселенной, общайтесь в голосовом чате по близости или оттачивайте
+            навыки в одиночку. Открывайте новые образы, эмоции и многое другое, чтобы
+            покрасоваться перед друзьями!
         long:
           title: ПОДРОБНОЕ ОПИСАНИЕ
           paragraphs:
-            - >-
-              DUNK — это баскетбол, построенный вокруг физики. Каждый
-              игрок управляет одним персонажем на площадке и играет с друзьями
-              в казуальных или соревновательных онлайн-матчах на площадках со
-              своими особенностями. Без автонаведения: каждая удачная или
-              ужасная игра — ваша.
+            - "Баскетбол от первого лица для 1–6 игроков с матчами от 1 на 1 до 3 на 3.
+              Общайтесь с друзьями в чате по близости или доказывайте своё мастерство:
+              перехватывайте, сбивайте соперников, пасуйте и делайте DUNK."
         keyFeaturesTitle: Ключевые особенности
         keyFeatures:
           - icon: ""
             title: ИГРАЙТЕ С ПЛОЩАДКИ
-            body: >-
-              Управляйте одним игроком от первого лица и переживайте матч
-              изнутри действия, а не с далекой камеры.
+            body: Управляйте одним игроком от первого лица и переживайте матч изнутри
+              действия, а не с далекой камеры.
           - icon: ""
             title: ЧУВСТВУЙТЕ ФИЗИКУ
-            body: >-
-              Физические механики делают баскетбол более живым, контактным и
+            body: Физические механики делают баскетбол более живым, контактным и
               непредсказуемым. Блоки, броски, перехваты, подборы, движение и
               столкновения становятся частью каждого момента.
           - icon: ""
             title: ИГРАЙТЕ КОМАНДОЙ
-            body: >-
-              Играйте в одиночку или с друзьями в казуальных и
-              соревновательных матчах. Действуйте вместе и превращайте
-              сомнительные идеи в реальные игровые моменты.
+            body: Играйте в одиночку или с друзьями в казуальных и соревновательных матчах.
+              Действуйте вместе и превращайте сомнительные идеи в реальные игровые
+              моменты.
           - icon: ""
             title: КАЖДАЯ ПЛОЩАДКА МЕНЯЕТ ИГРУ
-            body: >-
-              Каждая площадка добавляет собственный поворот: новые механики и
-              окружение заставляют команды адаптироваться по-разному.
+            body: "Каждая площадка добавляет собственный поворот: новые механики и окружение
+              заставляют команды адаптироваться по-разному."
           - icon: ""
             title: НАСТРОЙТЕ ПЕРСОНАЖА
+            body: Создайте свой образ, сформируйте стиль своей команды и дайте ей собственную
+              идентичность.
+        key_features:
+          - icon: ""
+            title: Покажите класс
             body: >-
-              Создайте свой образ, сформируйте стиль своей команды и дайте ей
-              собственную идентичность.
+              Баскетбол от первого лица, который легко освоить, но трудно довести до
+              совершенства, подойдёт игрокам любого уровня. Выбирайте момент для броска,
+              находите верный пас и перехватывайте мяч — или просто устраивайте хаос с
+              друзьями. Пройдите путь от «Как это вообще залетело?» до «Именно так я всё
+              и задумал».
+
+
+              Сильные команды раскроют в себе дух Bulls и научатся атаковать и
+              защищаться сообща. (Но от большинства мы ожидаем дружеских обзывательств и
+              всеобщего хаоса).
+          - icon: ""
+            title: Площадки ждут
+            body: >-
+              От школьного двора до Луны — у каждой площадки свои особенности.
+              Используйте лианы в джунглях и низкую лунную гравитацию, чтобы получить
+              преимущество над соперниками.
+
+
+              На некоторых площадках могут скрываться и другие секреты. Чего, например,
+              ждёт та обезьяна в джунглях?
+          - icon: ""
+            title: Дружеское соперничество
+            body: >-
+              Какой уличный баскетбол обходится без дружеских подколов? Чат по близости,
+              открываемая косметика и эмоции помогут покрасоваться перед соперниками —
+              если вы готовы подтвердить свои слова игрой.
+
+
+              Играйте онлайн по-своему: приходите в одиночку или командой на матчи до 3
+              на 3. Создайте приватную комнату 5 на 1 и проверьте, сколько продержится
+              ваш друг Алекс! Присоединяйтесь к нашему Discord, чтобы найти игроков и
+              сообщество.
+
       ui:
         landing:
           nav:
@@ -473,7 +575,8 @@ localization:
             about: Об игре
             press: Пресса
           eyebrow: Геймплейный ролик
-          tagline: Баскетбол от первого лица на основе физики. Без автонаведения. Каждая игра — ваша.
+          tagline: Баскетбол от первого лица для 1–6 игроков. От 1 на 1 до 3 на 3.
+
           play: Смотреть геймплейный ролик
           close: Закрыть видео
           fallback: Открыть на YouTube
@@ -507,12 +610,13 @@ localization:
             preview: "Pre-view:"
             press_kit: "Press Kit:"
             website: "Сайт:"
+            tags: "Метки:"
           values:
             about: DUNK
             development: В активной разработке Katapult Games.
             developers: Bruno Braghetto, Matias Nicolini and Anahi Mou
             based_in: Базируется в Берлине, Германия
-            publisher: TBA
+            publisher: Katapult Games
             cost: TBA
             steam: https://store.steampowered.com/app/4591520/Squad_Dunk/
             trailer: TBA
@@ -521,29 +625,45 @@ localization:
           release_dates:
             - TBA
           genres_items:
-            - Баскетбол
-            - Спорт
-            - Мультиплеер
-            - PvP
-            - От первого лица
-            - Аркада
-            - Физика
-            - Командная игра
             - Инди
-            - На основе физики
-            - Онлайн PvP
+            - Симулятор
+            - Спорт
           platforms_items:
             - PC - Steam
+          tags_items:
+            - Sports
+            - Basketball
+            - Online Co-Op
+            - Physics
+            - PvP
+            - Arcade
+            - Party Game
+            - Character Customization
+            - 3D
+            - First-Person
+            - Funny
+            - Team-Based
+            - Simulation
+            - Colorful
+            - Casual
+            - Stylized
+            - Co-op
+            - Multiplayer
+            - FPS
+            - Singleplayer
+
         features:
           title: Особенности
           items:
-            - Вид от первого лица
-            - Физические броски, передачи, перехваты и подборы
-            - До 3 игроков в команде
-            - Легко начать, есть куда расти
-            - Разные площадки и сценарии, каждый со своим поворотом
-            - Настройка персонажа и команды
-            - Неоплачиваемый судья в постоянной опасности
+            - Баскетбол от первого лица для 1–6 игроков
+            - Онлайн-матчи от 1 на 1 до 3 на 3
+            - Пасы, блоки, силовые приёмы и данки на основе физики
+            - Одиночная игра для оттачивания навыков
+            - Чат по близости
+            - Школьный двор, джунгли и Луна со своими механиками
+            - Открываемые образы, косметика и эмоции
+            - Приватные комнаты, включая матчи 5 на 1
+
         media:
           title: Медиа
           videos: Видео
@@ -598,35 +718,48 @@ localization:
         heading: DUNKとは？
         short:
           title: ショート説明
-          text: >-
-            DUNKは、物理ベースの一人称視点バスケットボールゲームです。友達とチームを組み、カジュアルまたは競技的な試合を楽しめます。オートエイムはありません。良いプレイもひどいプレイも、すべてあなた自身のものです。バスケットボールをもっとフィジカルにする準備はできていますか？
+          text: 1～6人で遊ぶ一人称視点のバスケットボール。物理演算に基づくパス、ブロック、DUNKのすべてが腕次第。宇宙各地の個性的なコートを巡り、近接チャットで交流したり、ソロプレイで技を磨いたり。新しい見た目やエモートなどをアンロックして、友達に自慢しよう！
         long:
           title: ロング説明
           paragraphs:
-            - >-
-              DUNKは、物理を中心に作られたバスケットボールです。各プレイヤーはコート上の1人のキャラクターを操作し、友達とチームを組んで、それぞれ独自の仕掛けを持つコートでカジュアルまたは競技的なオンラインマッチをプレイします。オートエイムはありません。良いプレイもひどいプレイも、すべてあなた自身のものです。
+            - 1～6人向けの一人称視点バスケットボール。1対1から3対3までの試合を楽しめます。近接チャットで友達と過ごすもよし、インターセプト、タックル、パス、DUNKで腕前を見せるもよし。
         keyFeaturesTitle: 主な特徴
         keyFeatures:
           - icon: ""
             title: コートの中からプレイ
-            body: >-
-              遠くのカメラではなく、一人称視点で1人の選手を操作し、アクションの内側から試合を体験します。
+            body: 遠くのカメラではなく、一人称視点で1人の選手を操作し、アクションの内側から試合を体験します。
           - icon: ""
             title: 物理を感じる
-            body: >-
-              物理ベースのメカニクスにより、ブロック、シュート、スティール、リバウンド、移動、接触のすべてが、その瞬間のプレイに影響します。
+            body: 物理ベースのメカニクスにより、ブロック、シュート、スティール、リバウンド、移動、接触のすべてが、その瞬間のプレイに影響します。
           - icon: ""
             title: チームでプレイ
-            body: >-
-              ソロでも友達とでも、カジュアルまたは競技的な試合を遊べます。チームを組み、普通のバスケットボールなら反則になりそうなアイデアを本物のプレイに変えましょう。
+            body: ソロでも友達とでも、カジュアルまたは競技的な試合を遊べます。チームを組み、普通のバスケットボールなら反則になりそうなアイデアを本物のプレイに変えましょう。
           - icon: ""
             title: コートごとにゲームが変わる
-            body: >-
-              それぞれのコートには独自の仕掛け、メカニクス、環境があり、チームは状況に合わせてプレイを変える必要があります。
+            body: それぞれのコートには独自の仕掛け、メカニクス、環境があり、チームは状況に合わせてプレイを変える必要があります。
           - icon: ""
             title: キャラクターをカスタマイズ
-            body: >-
-              自分の見た目を作り、スクワッドの個性を築き、チーム独自のスタイルを与えましょう。
+            body: 自分の見た目を作り、スクワッドの個性を築き、チーム独自のスタイルを与えましょう。
+        key_features:
+          - icon: ""
+            title: コートで魅せよう
+            body: |-
+              始めやすく、極めがいのある一人称視点バスケットボール。どんな腕前でも楽しめます。シュートのタイミング、パスの選択、スティールを学ぶもよし、友達と騒いで過ごすもよし。「どうして入ったの？」から「完全に狙い通り」へ成長しよう。
+
+              強いチームは内なるブルズ魂を発揮し、一丸となって攻め、守ることを学びます。（もちろん、大半の皆さんは軽口と大騒ぎに夢中になるはずです）。
+          - icon: ""
+            title: コートが待っている
+            body: |-
+              おなじみの校庭から月まで、コートにはそれぞれ独自の特徴があります。ジャングルのつるや月の低重力を使いこなして、相手より優位に立とう。
+
+              コートには、調べる価値のある秘密が隠れているかもしれません。ジャングルにいるあのサルは、一体何を待っているのでしょう？
+          - icon: ""
+            title: 仲間との競い合い
+            body: |-
+              気軽なバスケに、ちょっとした軽口はつきもの。近接チャット、アンロックできるコスメ、多彩なエモートで相手にアピールしよう。ただし、コートでも実力を証明することを忘れずに。
+
+              オンラインでは、ソロ参加でもチームでも最大3対3で遊べます。5対1のプライベートロビーを作って、友達のアレックスがどこまで耐えられるか試そう！プレイヤーや仲間を探すなら、Discordに参加してください。
+
       ui:
         landing:
           nav:
@@ -634,7 +767,8 @@ localization:
             about: 概要
             press: プレス
           eyebrow: ゲームプレイリール
-          tagline: 物理ベースの一人称視点バスケットボール。オートエイムなし。すべてのプレイはあなたのもの。
+          tagline: 1～6人で遊ぶ一人称視点バスケットボール。1対1から3対3まで。
+
           play: ゲームプレイリールを見る
           close: 動画を閉じる
           fallback: YouTubeで開く
@@ -668,12 +802,13 @@ localization:
             preview: "プレビュー:"
             press_kit: "プレスキット:"
             website: "ウェブサイト:"
+            tags: "タグ:"
           values:
             about: DUNK
             development: Katapult Gamesが現在開発中。
             developers: Bruno Braghetto、Matias Nicolini、Anahi Mou
             based_in: ドイツ・ベルリン拠点
-            publisher: TBA
+            publisher: Katapult Games
             cost: TBA
             steam: https://store.steampowered.com/app/4591520/Squad_Dunk/
             trailer: TBA
@@ -682,29 +817,45 @@ localization:
           release_dates:
             - TBA
           genres_items:
-            - バスケットボール
-            - スポーツ
-            - マルチプレイヤー
-            - PvP
-            - 一人称視点
-            - アーケード
-            - 物理
-            - チームベース
             - インディー
-            - 物理ベース
-            - オンラインPvP
+            - シミュレーション
+            - スポーツ
           platforms_items:
             - PC - Steam
+          tags_items:
+            - Sports
+            - Basketball
+            - Online Co-Op
+            - Physics
+            - PvP
+            - Arcade
+            - Party Game
+            - Character Customization
+            - 3D
+            - First-Person
+            - Funny
+            - Team-Based
+            - Simulation
+            - Colorful
+            - Casual
+            - Stylized
+            - Co-op
+            - Multiplayer
+            - FPS
+            - Singleplayer
+
         features:
           title: 特徴
           items:
-            - 一人称視点
-            - 物理ベースのシュート、パス、スティール、リバウンド
-            - 1チーム最大3人
-            - 始めやすく、上達の余地がたっぷり
-            - それぞれ独自の仕掛けを持つさまざまなコートとシナリオ
-            - キャラクターとチームのカスタマイズ
-            - 常に危険にさらされる無給の審判
+            - 1～6人向けの一人称視点バスケットボール
+            - 1対1から3対3のオンライン対戦
+            - 物理演算に基づくパス、ブロック、タックル、ダンク
+            - ソロプレイで腕を磨く
+            - 近接チャット
+            - 独自の仕掛けを持つ校庭、ジャングル、月のコート
+            - アンロック可能な見た目、コスメ、エモート
+            - 5対1を含むプライベートロビー
+
         media:
           title: メディア
           videos: 動画
@@ -748,35 +899,48 @@ localization:
         heading: DUNK 是什么？
         short:
           title: 简短介绍
-          text: >-
-            DUNK 是一款基于物理的第一人称篮球游戏。你可以和朋友组队，进行休闲或竞技比赛。没有自动瞄准。每一次精彩或糟糕的发挥，都由你自己完成。准备好让篮球更有身体对抗感了吗？
+          text: 一款支持1–6人的第一人称篮球游戏，每一次基于物理的传球、盖帽和DUNK都取决于你的技巧。踏上遍布宇宙的独特球场，用近距离聊天和朋友闲聊，或通过单人游玩磨练第一人称球技。解锁新造型、表情等内容，在朋友面前秀一把！
         long:
           title: 详细介绍
           paragraphs:
-            - >-
-              DUNK 是围绕物理互动打造的篮球游戏。每位玩家控制球场上的一个角色，与朋友组队，在拥有不同变化的球场中进行休闲或竞技在线比赛。没有自动瞄准：每一次精彩或糟糕的发挥，都由你自己完成。
+            - 支持1–6人的第一人称篮球游戏，比赛规模从1v1到3v3。通过近距离聊天和朋友相聚，或者用拦截、冲撞、传球和DUNK展现实力。
         keyFeaturesTitle: 核心特色
         keyFeatures:
           - icon: ""
             title: 从球场内部开始比赛
-            body: >-
-              以第一人称控制一名球员，从球场内部体验传球、抢断、投篮和防守，而不是从远处俯视比赛。
+            body: 以第一人称控制一名球员，从球场内部体验传球、抢断、投篮和防守，而不是从远处俯视比赛。
           - icon: ""
             title: 感受物理互动
-            body: >-
-              DUNK 使用基于物理的机制，让篮球更鲜活、更有身体感，也更不可预测。盖帽、投篮、抢断、篮板、移动和碰撞都会成为比赛的一部分。
+            body: DUNK 使用基于物理的机制，让篮球更鲜活、更有身体感，也更不可预测。盖帽、投篮、抢断、篮板、移动和碰撞都会成为比赛的一部分。
           - icon: ""
             title: 团队配合
-            body: >-
-              你可以单人游玩，也可以和朋友一起进行休闲或竞技比赛。协作配合，把看似离谱的想法变成真实可行的战术。
+            body: 你可以单人游玩，也可以和朋友一起进行休闲或竞技比赛。协作配合，把看似离谱的想法变成真实可行的战术。
           - icon: ""
             title: 每个球场都会改变比赛
-            body: >-
-              每个球场都有自己的变化、机制和环境，迫使队伍用不同方式适应局势。
+            body: 每个球场都有自己的变化、机制和环境，迫使队伍用不同方式适应局势。
           - icon: ""
             title: 自定义你的角色
-            body: >-
-              打造自己的外观，建立队伍身份，让你的队伍拥有独特风格。
+            body: 打造自己的外观，建立队伍身份，让你的队伍拥有独特风格。
+        key_features:
+          - icon: ""
+            title: 尽情打球
+            body: |-
+              享受易于上手、难于精通的第一人称篮球，适合各种水平的玩家。学习掌握投篮时机、选择合适的传球和抢断，或者加入混乱，单纯享受与朋友相处的时光。从“这都能进？”成长到“完全在我计划之中”。
+
+              强大的球队和球员会唤醒内心的公牛队之魂，学会团结一致地进攻和防守。（别担心，我们预计大多数人最终都会沉迷于互相调侃和一片混乱）。
+          - icon: ""
+            title: 球场在等你
+            body: |-
+              从经典校园球场到月球，每块场地都有独特的特点等你掌握。利用丛林里的藤蔓和月球的低重力，在对手面前取得优势。
+
+              有些球场或许还藏着值得探索的秘密——比如，丛林里那只猴子到底在等什么？
+          - icon: ""
+            title: 友谊与竞争
+            body: |-
+              没有几句朋友间的玩笑，还算什么街头篮球？近距离聊天、可解锁的外观和各种表情，让你能向对手炫耀，只要你准备好在球场上用实力证明自己。
+
+              在线游玩随你选择，单独加入或组队都能参加最高3v3的比赛。创建5v1私人大厅，看看朋友Alex能撑多久！加入我们的Discord，寻找玩家和一起游玩的伙伴。
+
       ui:
         landing:
           nav:
@@ -784,7 +948,8 @@ localization:
             about: 关于
             press: 媒体
           eyebrow: 游戏玩法视频
-          tagline: 基于物理的第一人称篮球。没有自动瞄准。每一次发挥都属于你。
+          tagline: 支持1–6人的第一人称篮球。从1v1到3v3。
+
           play: 观看游戏玩法视频
           close: 关闭视频
           fallback: 在 YouTube 打开
@@ -818,12 +983,13 @@ localization:
             preview: "Pre-view:"
             press_kit: "Press Kit:"
             website: "网站:"
+            tags: "标签:"
           values:
             about: DUNK
             development: 由 Katapult Games 积极开发中。
             developers: Bruno Braghetto, Matias Nicolini and Anahi Mou
             based_in: 位于德国柏林
-            publisher: TBA
+            publisher: Katapult Games
             cost: TBA
             steam: https://store.steampowered.com/app/4591520/Squad_Dunk/
             trailer: TBA
@@ -832,29 +998,45 @@ localization:
           release_dates:
             - TBA
           genres_items:
-            - 篮球
+            - 独立
+            - 模拟
             - 体育
-            - 多人游戏
-            - PvP
-            - 第一人称
-            - 街机
-            - 物理
-            - 团队制
-            - 独立游戏
-            - 基于物理
-            - 在线 PvP
           platforms_items:
             - PC - Steam
+          tags_items:
+            - Sports
+            - Basketball
+            - Online Co-Op
+            - Physics
+            - PvP
+            - Arcade
+            - Party Game
+            - Character Customization
+            - 3D
+            - First-Person
+            - Funny
+            - Team-Based
+            - Simulation
+            - Colorful
+            - Casual
+            - Stylized
+            - Co-op
+            - Multiplayer
+            - FPS
+            - Singleplayer
+
         features:
           title: 特色
           items:
-            - 第一人称视角
-            - 基于物理的投篮、传球、抢断和篮板
-            - 每队最多 3 名玩家
-            - 容易上手，也有足够的提升空间
-            - 多种球场和场景，每个都有自己的变化
-            - 角色和队伍自定义
-            - 一名长期处于危险中的无薪裁判
+            - 支持1–6人的第一人称篮球
+            - 1v1至3v3在线比赛
+            - 基于物理的传球、盖帽、冲撞和扣篮
+            - 通过单人游玩磨练技巧
+            - 近距离聊天
+            - 具有独特机制的校园、丛林和月球球场
+            - 可解锁的造型、外观和表情
+            - 私人大厅，支持5v1比赛
+
         media:
           title: 媒体
           videos: 视频
@@ -898,50 +1080,79 @@ localization:
         heading: WAS IST DUNK?
         short:
           title: KURZBESCHREIBUNG
-          text: >-
-            DUNK ist ein physikbasiertes First-Person-Basketballspiel.
-            Spiele mit Freundinnen und Freunden in lockeren oder kompetitiven
-            Matches. Kein Auto-Aim. Jeder Spielzug, gut oder katastrophal,
-            gehört dir. Bereit, Basketball körperlicher zu machen?
+          text: Ein First-Person-Basketballspiel für 1–6 Spieler, bei dem jeder
+            physikbasierte Pass, Block und DUNK auf Können ankommt. Entdecke
+            einzigartige Courts im ganzen Universum, quatsche im Proximity-Chat oder
+            feile im Solospiel an deinen Fähigkeiten. Schalte neue Looks, Emotes und
+            mehr frei, um vor deinen Freunden anzugeben!
         long:
           title: LANGE BESCHREIBUNG
           paragraphs:
-            - >-
-              DUNK ist Basketball, der rund um Physik gebaut ist. Jede
-              Person steuert einen Charakter auf dem Court und spielt mit
-              Freundinnen und Freunden in lockeren oder kompetitiven
-              Online-Matches auf Courts mit eigenen Twists. Kein Auto-Aim,
-              jeder Spielzug, gut oder katastrophal, gehört dir.
+            - "First-Person-Basketball für 1–6 Spieler in Matches von 1v1 bis 3v3.
+              Verbring Zeit mit Freunden im Proximity-Chat oder lass dein Können
+              sprechen: abfangen, tackeln, passen und DUNK."
         keyFeaturesTitle: Hauptfeatures
         keyFeatures:
           - icon: ""
             title: SPIEL DIREKT VOM COURT
-            body: >-
-              Steuere einen Spieler in der First-Person-Perspektive und erlebe
-              das Match mitten aus der Action heraus, nicht aus einer entfernten
-              Kamera.
+            body: Steuere einen Spieler in der First-Person-Perspektive und erlebe das Match
+              mitten aus der Action heraus, nicht aus einer entfernten Kamera.
           - icon: ""
             title: SPÜRE DIE PHYSIK
-            body: >-
-              Physikbasierte Mechaniken machen Basketball lebendiger,
-              körperlicher und unvorhersehbarer. Blocks, Würfe, Steals,
-              Rebounds, Bewegung und Kontakt werden Teil jedes Moments.
+            body: Physikbasierte Mechaniken machen Basketball lebendiger, körperlicher und
+              unvorhersehbarer. Blocks, Würfe, Steals, Rebounds, Bewegung und Kontakt
+              werden Teil jedes Moments.
           - icon: ""
             title: SPIEL ALS TEAM
-            body: >-
-              Spiele solo oder mit Freundinnen und Freunden in lockeren oder
-              kompetitiven Matches. Arbeitet zusammen und verwandelt fragwürdige
-              Ideen in echte Spielzüge.
+            body: Spiele solo oder mit Freundinnen und Freunden in lockeren oder kompetitiven
+              Matches. Arbeitet zusammen und verwandelt fragwürdige Ideen in echte
+              Spielzüge.
           - icon: ""
             title: JEDER COURT VERÄNDERT DAS SPIEL
-            body: >-
-              Jeder Court bringt eigene Twists, Mechaniken und Umgebungen mit,
-              an die sich Teams auf unterschiedliche Weise anpassen müssen.
+            body: Jeder Court bringt eigene Twists, Mechaniken und Umgebungen mit, an die sich
+              Teams auf unterschiedliche Weise anpassen müssen.
           - icon: ""
             title: PASSE DEINEN CHARAKTER AN
+            body: Erstelle deinen Look, baue eine Squad-Identität auf und gib deinem Team
+              einen eigenen Stil.
+        key_features:
+          - icon: ""
+            title: Ab auf den Court
             body: >-
-              Erstelle deinen Look, baue eine Squad-Identität auf und gib deinem
-              Team einen eigenen Stil.
+              Erlebe First-Person-Basketball, das leicht zugänglich und schwer zu
+              meistern ist – für jedes Spielniveau. Lerne, deine Würfe zu timen, den
+              richtigen Pass zu wählen und den Ball zu stehlen. Oder stürz dich mit
+              deinen Freunden ins Chaos. Aus „Wie ist der denn reingegangen?“ wird „Das
+              war absolut geplant“.
+
+
+              Starke Teams lassen ihre inneren Bulls raus und lernen, gemeinsam
+              anzugreifen und zu verteidigen. (Keine Sorge: Bei den meisten rechnen wir
+              eher mit gegenseitigen Sprüchen und allgemeinem Chaos).
+          - icon: ""
+            title: Die Courts warten
+            body: >-
+              Vom klassischen Schulhof bis zum Mond: Jeder Court hat eigene
+              Besonderheiten. Nutze die Lianen im Dschungel und die geringe Schwerkraft
+              auf dem Mond, um dir einen Vorteil zu verschaffen.
+
+
+              Manche Courts verbergen vielleicht weitere Geheimnisse. Worauf wartet zum
+              Beispiel dieser Affe im Dschungel?
+          - icon: ""
+            title: Freundschaftlicher Wettkampf
+            body: >-
+              Was wäre eine Runde Basketball ohne freundschaftliche Sticheleien?
+              Proximity-Chat, freischaltbare Kosmetik und verschiedene Emotes lassen
+              dich vor Gegnern angeben – solange du es auf dem Court auch beweisen
+              kannst.
+
+
+              Spiele online nach deinen Wünschen: allein oder als Team in Matches bis
+              3v3. Erstelle eine private 5v1-Lobby und finde heraus, wie lange dein
+              Freund Alex durchhält! In unserem Discord findest du Mitspieler und eine
+              Community.
+
       ui:
         landing:
           nav:
@@ -949,7 +1160,8 @@ localization:
             about: Über das Spiel
             press: Presse
           eyebrow: Gameplay-Reel
-          tagline: Physikbasierter First-Person-Basketball. Kein Auto-Aim. Jeder Spielzug gehört dir.
+          tagline: First-Person-Basketball für 1–6 Spieler. Von 1v1 bis 3v3.
+
           play: Gameplay-Reel ansehen
           close: Video schließen
           fallback: Auf YouTube öffnen
@@ -983,12 +1195,13 @@ localization:
             preview: "Pre-view:"
             press_kit: "Press Kit:"
             website: "Website:"
+            tags: "Tags:"
           values:
             about: DUNK
             development: In aktiver Entwicklung bei Katapult Games.
             developers: Bruno Braghetto, Matias Nicolini und Anahi Mou
             based_in: Sitz in Berlin, Deutschland
-            publisher: TBA
+            publisher: Katapult Games
             cost: TBA
             steam: https://store.steampowered.com/app/4591520/Squad_Dunk/
             trailer: TBA
@@ -997,29 +1210,45 @@ localization:
           release_dates:
             - TBA
           genres_items:
-            - Basketball
-            - Sport
-            - Multiplayer
-            - PvP
-            - First-Person
-            - Arcade
-            - Physik
-            - Teambasiert
             - Indie
-            - Physikbasiert
-            - Online-PvP
+            - Simulation
+            - Sport
           platforms_items:
             - PC - Steam
+          tags_items:
+            - Sports
+            - Basketball
+            - Online Co-Op
+            - Physics
+            - PvP
+            - Arcade
+            - Party Game
+            - Character Customization
+            - 3D
+            - First-Person
+            - Funny
+            - Team-Based
+            - Simulation
+            - Colorful
+            - Casual
+            - Stylized
+            - Co-op
+            - Multiplayer
+            - FPS
+            - Singleplayer
+
         features:
           title: Features
           items:
-            - First-Person-Perspektive
-            - Physikbasierte Würfe, Pässe, Steals und Rebounds
-            - Bis zu 3 Spielerinnen und Spieler pro Team
-            - Leicht zu starten, mit viel Raum zur Verbesserung
-            - Verschiedene Courts und Szenarien, jeweils mit eigenem Twist
-            - Charakter- und Team-Anpassung
-            - Ein unbezahlter Schiedsrichter in ständiger Gefahr
+            - First-Person-Basketball für 1–6 Spieler
+            - Online-Matches von 1v1 bis 3v3
+            - Physikbasierte Pässe, Blocks, Tackles und Dunks
+            - Solospiel zum Verbessern deiner Fähigkeiten
+            - Proximity-Chat
+            - Schulhof-, Dschungel- und Mond-Courts mit eigenen Mechaniken
+            - Freischaltbare Looks, Kosmetik und Emotes
+            - Private Lobbys, einschließlich 5v1-Matches
+
         media:
           title: Medien
           videos: Videos
@@ -1075,50 +1304,79 @@ localization:
         heading: QU'EST-CE QUE DUNK ?
         short:
           title: DESCRIPTION COURTE
-          text: >-
-            DUNK est un jeu de basket en première personne basé sur la
-            physique. Faites équipe avec vos amis pour des matchs casual ou
-            compétitifs. Pas d'auto-aim. Chaque action, brillante ou désastreuse,
-            est la vôtre. Prêt à rendre le basket vraiment physique ?
+          text: Un jeu de basket à la première personne pour 1 à 6 joueurs où chaque passe,
+            contre et DUNK basé sur la physique dépend de votre talent. Explorez des
+            terrains uniques à travers l’univers, discutez via le chat de proximité ou
+            perfectionnez votre jeu en solo. Débloquez des looks, des emotes et bien
+            plus pour frimer devant vos amis !
         long:
           title: DESCRIPTION LONGUE
           paragraphs:
-            - >-
-              DUNK est un jeu de basket construit autour de la physique.
-              Chaque joueur contrôle un personnage sur le terrain et fait équipe
-              avec ses amis dans des matchs en ligne casual ou compétitifs, sur
-              des terrains qui ont chacun leurs propres twists. Pas d'auto-aim :
-              chaque action, brillante ou désastreuse, est la vôtre.
+            - "Un jeu de basket à la première personne pour 1 à 6 joueurs, dans des
+              matchs de 1v1 à 3v3. Retrouvez vos amis via le chat de proximité ou
+              laissez votre talent parler : interceptez, bousculez, passez et DUNK."
         keyFeaturesTitle: Points clés
         keyFeatures:
           - icon: ""
             title: JOUEZ DEPUIS LE TERRAIN
-            body: >-
-              Contrôlez un joueur en première personne et vivez le match depuis
+            body: Contrôlez un joueur en première personne et vivez le match depuis
               l'intérieur de l'action, pas depuis une caméra éloignée.
           - icon: ""
             title: RESSENTEZ LA PHYSIQUE
-            body: >-
-              DUNK utilise des mécaniques basées sur la physique pour
-              rendre le basket plus vivant, plus physique et plus imprévisible.
-              Contres, tirs, interceptions, rebonds, mouvements et contacts font
-              partie de chaque moment.
+            body: DUNK utilise des mécaniques basées sur la physique pour rendre le basket
+              plus vivant, plus physique et plus imprévisible. Contres, tirs,
+              interceptions, rebonds, mouvements et contacts font partie de chaque
+              moment.
           - icon: ""
             title: JOUEZ EN ÉQUIPE
-            body: >-
-              Jouez en solo ou avec des amis dans des matchs casual ou
-              compétitifs. Coopérez et transformez des idées discutables en
-              vraies actions de jeu.
+            body: Jouez en solo ou avec des amis dans des matchs casual ou compétitifs.
+              Coopérez et transformez des idées discutables en vraies actions de jeu.
           - icon: ""
             title: CHAQUE TERRAIN CHANGE LE JEU
-            body: >-
-              Chaque terrain ajoute son propre twist, avec des mécaniques et
-              des environnements qui obligent les équipes à s'adapter.
+            body: Chaque terrain ajoute son propre twist, avec des mécaniques et des
+              environnements qui obligent les équipes à s'adapter.
           - icon: ""
             title: PERSONNALISEZ VOTRE PERSONNAGE
+            body: Créez votre look, construisez l'identité de votre squad et donnez un style
+              propre à votre équipe.
+        key_features:
+          - icon: ""
+            title: À vous de jouer
             body: >-
-              Créez votre look, construisez l'identité de votre squad et donnez
-              un style propre à votre équipe.
+              Profitez d’un basket à la première personne facile à prendre en main et
+              difficile à maîtriser, quel que soit votre niveau. Apprenez à choisir le
+              bon moment pour tirer, la bonne passe et à voler le ballon, ou semez le
+              chaos avec vos amis. Passez de « Comment c’est rentré ? » à « C’était
+              totalement calculé ».
+
+
+              Les meilleures équipes feront ressortir les Bulls qui sommeillent en elles
+              et apprendront à attaquer et défendre ensemble. (Pas d’inquiétude : nous
+              nous attendons surtout à des noms d’oiseaux amicaux et à un joyeux chaos).
+          - icon: ""
+            title: Les terrains vous attendent
+            body: >-
+              De la cour d’école classique à la Lune, chaque terrain possède ses
+              particularités. Utilisez les lianes de la jungle et profitez de la faible
+              gravité lunaire pour prendre l’avantage.
+
+
+              Certains terrains cachent peut-être d’autres secrets à découvrir.
+              Qu’attend donc ce singe dans la jungle ?
+          - icon: ""
+            title: Une compétition amicale
+            body: >-
+              Que serait une partie de basket entre amis sans quelques taquineries ? Le
+              chat de proximité, les cosmétiques à débloquer et les emotes vous
+              permettent de frimer face à vos adversaires, à condition d’assumer sur le
+              terrain et de vous faire un nom.
+
+
+              Jouez en ligne comme vous voulez, seul ou en équipe, dans des matchs
+              jusqu’à 3v3. Créez un salon privé 5v1 et voyez combien de temps votre ami
+              Alex tient le coup ! Rejoignez notre Discord pour trouver des joueurs et
+              une communauté.
+
       ui:
         landing:
           nav:
@@ -1126,7 +1384,8 @@ localization:
             about: À propos
             press: Presse
           eyebrow: Vidéo de gameplay
-          tagline: Basket en première personne basé sur la physique. Pas d'auto-aim. Chaque action est la vôtre.
+          tagline: Du basket à la première personne pour 1 à 6 joueurs. Du 1v1 au 3v3.
+
           play: Regarder le gameplay reel
           close: Fermer la vidéo
           fallback: Ouvrir sur YouTube
@@ -1160,12 +1419,13 @@ localization:
             preview: "Pre-view :"
             press_kit: "Press Kit :"
             website: "Site web :"
+            tags: "Tags:"
           values:
             about: DUNK
             development: En développement actif chez Katapult Games.
             developers: Bruno Braghetto, Matias Nicolini et Anahi Mou
             based_in: Basé à Berlin, Allemagne
-            publisher: TBA
+            publisher: Katapult Games
             cost: TBA
             steam: https://store.steampowered.com/app/4591520/Squad_Dunk/
             trailer: TBA
@@ -1174,29 +1434,45 @@ localization:
           release_dates:
             - TBA
           genres_items:
-            - Basket
+            - Indépendant
+            - Simulation
             - Sport
-            - Multijoueur
-            - PvP
-            - Première personne
-            - Arcade
-            - Physique
-            - En équipe
-            - Indie
-            - Basé sur la physique
-            - PvP en ligne
           platforms_items:
             - PC - Steam
+          tags_items:
+            - Sports
+            - Basketball
+            - Online Co-Op
+            - Physics
+            - PvP
+            - Arcade
+            - Party Game
+            - Character Customization
+            - 3D
+            - First-Person
+            - Funny
+            - Team-Based
+            - Simulation
+            - Colorful
+            - Casual
+            - Stylized
+            - Co-op
+            - Multiplayer
+            - FPS
+            - Singleplayer
+
         features:
           title: Fonctionnalités
           items:
-            - Vue à la première personne
-            - Tirs, passes, interceptions et rebonds basés sur la physique
-            - Jusqu'à 3 joueurs par équipe
-            - Facile à prendre en main, avec une vraie marge de progression
-            - Différents terrains et scénarios, chacun avec son propre twist
-            - Personnalisation du personnage et de l'équipe
-            - Un arbitre non rémunéré en danger permanent
+            - Basket à la première personne pour 1 à 6 joueurs
+            - Matchs en ligne de 1v1 à 3v3
+            - Passes, contres, contacts et dunks basés sur la physique
+            - Jeu en solo pour perfectionner votre technique
+            - Chat de proximité
+            - Terrains d’école, de jungle et lunaires aux mécaniques propres
+            - Looks, cosmétiques et emotes à débloquer
+            - Salons privés, dont des matchs 5v1
+
         media:
           title: Médias
           videos: Vidéos
@@ -1253,49 +1529,78 @@ localization:
         heading: O QUE É DUNK?
         short:
           title: DESCRIÇÃO CURTA
-          text: >-
-            DUNK é um jogo de basquete em primeira pessoa baseado em
-            física. Junte-se a amigos para partidas casuais ou competitivas. Sem
-            mira automática. Cada jogada, boa ou terrível, é sua. Pronto para
-            deixar o basquete mais físico?
+          text: Um jogo de basquete em primeira pessoa para 1–6 jogadores em que cada passe,
+            bloqueio e DUNK baseado em física depende da sua habilidade. Explore quadras
+            únicas pelo universo, converse pelo chat de proximidade ou aperfeiçoe suas
+            jogadas no modo solo. Desbloqueie novos visuais, emotes e muito mais para se
+            exibir para os amigos!
         long:
           title: DESCRIÇÃO LONGA
           paragraphs:
-            - >-
-              DUNK é basquete construído ao redor da física. Cada jogador
-              controla um personagem na quadra e joga com amigos em partidas
-              online casuais ou competitivas, em quadras com seus próprios
-              twists. Sem mira automática: cada jogada, boa ou terrível, é sua.
+            - Um jogo de basquete em primeira pessoa para 1–6 jogadores, com partidas de
+              1v1 a 3v3. Passe um tempo com os amigos pelo chat de proximidade ou deixe
+              suas habilidades falarem enquanto intercepta, derruba, passa e faz DUNK.
         keyFeaturesTitle: Principais recursos
         keyFeatures:
           - icon: ""
             title: JOGUE DE DENTRO DA QUADRA
-            body: >-
-              Controle um jogador em primeira pessoa e viva a partida de dentro
-              da ação, não a partir de uma câmera distante.
+            body: Controle um jogador em primeira pessoa e viva a partida de dentro da ação,
+              não a partir de uma câmera distante.
           - icon: ""
             title: SINTA A FÍSICA
-            body: >-
-              DUNK usa mecânicas baseadas em física para tornar o
-              basquete mais vivo, físico e imprevisível. Bloqueios, arremessos,
-              roubadas, rebotes, movimento e contato fazem parte de cada
-              momento.
+            body: DUNK usa mecânicas baseadas em física para tornar o basquete mais vivo,
+              físico e imprevisível. Bloqueios, arremessos, roubadas, rebotes, movimento
+              e contato fazem parte de cada momento.
           - icon: ""
             title: JOGUE EM EQUIPE
-            body: >-
-              Jogue sozinho ou com amigos em partidas casuais ou competitivas.
-              Trabalhem juntos e transformem ideias questionáveis em jogadas
-              reais.
+            body: Jogue sozinho ou com amigos em partidas casuais ou competitivas. Trabalhem
+              juntos e transformem ideias questionáveis em jogadas reais.
           - icon: ""
             title: CADA QUADRA MUDA O JOGO
-            body: >-
-              Cada quadra traz seu próprio twist, com mecânicas e ambientes que
-              fazem as equipes se adaptarem de formas diferentes.
+            body: Cada quadra traz seu próprio twist, com mecânicas e ambientes que fazem as
+              equipes se adaptarem de formas diferentes.
           - icon: ""
             title: PERSONALIZE SEU PERSONAGEM
+            body: Crie seu visual, construa a identidade do seu squad e dê um estilo próprio
+              ao seu time.
+        key_features:
+          - icon: ""
+            title: Hora de jogar
             body: >-
-              Crie seu visual, construa a identidade do seu squad e dê um estilo
-              próprio ao seu time.
+              Curta uma experiência de basquete em primeira pessoa fácil de aprender e
+              difícil de dominar, para jogadores de todos os níveis. Aprenda a acertar o
+              tempo dos arremessos, escolher o passe certo e roubar a bola, ou entre no
+              caos e divirta-se com os amigos. Vá de “como isso entrou?” a “era
+              exatamente isso que eu queria fazer”.
+
+
+              Times e jogadores fortes vão despertar seus Bulls interiores e aprender a
+              atacar e defender como uma unidade. (Não se preocupe: esperamos que a
+              maioria acabe nas provocações e no caos geral).
+          - icon: ""
+            title: As quadras estão esperando
+            body: >-
+              Do pátio clássico da escola à Lua, cada quadra tem características
+              próprias para dominar. Use os cipós da selva e aproveite a baixa gravidade
+              lunar para ganhar vantagem sobre seus adversários.
+
+
+              Algumas quadras podem esconder outros segredos que merecem ser
+              investigados. Afinal, o que aquele macaco está esperando na selva?
+          - icon: ""
+            title: Competição entre amigos
+            body: >-
+              Como seria uma partida de basquete sem um pouco de provocação amigável? O
+              chat de proximidade, os cosméticos desbloqueáveis e os emotes permitem se
+              exibir diante dos adversários, desde que você consiga provar seu valor na
+              quadra e fazer seu nome.
+
+
+              Jogue online do seu jeito, sozinho ou em equipe, com partidas de até 3v3.
+              Monte um lobby privado 5v1 e veja quanto tempo seu amigo Alex aguenta!
+              Entre no nosso Discord para encontrar jogadores e uma comunidade para
+              jogar junto.
+
       ui:
         landing:
           nav:
@@ -1303,7 +1608,8 @@ localization:
             about: Sobre
             press: Imprensa
           eyebrow: Vídeo de gameplay
-          tagline: Basquete em primeira pessoa baseado em física. Sem mira automática. Cada jogada é sua.
+          tagline: Basquete em primeira pessoa para 1–6 jogadores. De 1v1 a 3v3.
+
           play: Assistir ao gameplay reel
           close: Fechar vídeo
           fallback: Abrir no YouTube
@@ -1337,12 +1643,13 @@ localization:
             preview: "Pre-view:"
             press_kit: "Press Kit:"
             website: "Site:"
+            tags: "Marcadores:"
           values:
             about: DUNK
             development: Em desenvolvimento ativo pela Katapult Games.
             developers: Bruno Braghetto, Matias Nicolini e Anahi Mou
             based_in: Baseado em Berlim, Alemanha
-            publisher: TBA
+            publisher: Katapult Games
             cost: TBA
             steam: https://store.steampowered.com/app/4591520/Squad_Dunk/
             trailer: TBA
@@ -1351,29 +1658,45 @@ localization:
           release_dates:
             - TBA
           genres_items:
-            - Basquete
-            - Esportes
-            - Multiplayer
-            - PvP
-            - Primeira pessoa
-            - Arcade
-            - Física
-            - Baseado em equipe
             - Indie
-            - Baseado em física
-            - PvP online
+            - Simulação
+            - Esportes
           platforms_items:
             - PC - Steam
+          tags_items:
+            - Sports
+            - Basketball
+            - Online Co-Op
+            - Physics
+            - PvP
+            - Arcade
+            - Party Game
+            - Character Customization
+            - 3D
+            - First-Person
+            - Funny
+            - Team-Based
+            - Simulation
+            - Colorful
+            - Casual
+            - Stylized
+            - Co-op
+            - Multiplayer
+            - FPS
+            - Singleplayer
+
         features:
           title: Recursos
           items:
-            - Visão em primeira pessoa
-            - Arremessos, passes, roubadas e rebotes baseados em física
-            - Até 3 jogadores por equipe
-            - Simples de começar, com muito espaço para melhorar
-            - Diferentes quadras e cenários, cada um com seu próprio twist
-            - Personalização de personagem e equipe
-            - Um árbitro não remunerado em perigo constante
+            - Basquete em primeira pessoa para 1–6 jogadores
+            - Partidas online de 1v1 a 3v3
+            - Passes, bloqueios, contatos e dunks baseados em física
+            - Jogo solo para aperfeiçoar suas habilidades
+            - Chat de proximidade
+            - Quadras de escola, selva e Lua com mecânicas próprias
+            - Visuais, cosméticos e emotes desbloqueáveis
+            - Lobbies privados, incluindo partidas 5v1
+
         media:
           title: Mídia
           videos: Vídeos
@@ -1427,29 +1750,44 @@ release_dates:
   - TBA
 
 genres:
-  - Basketball
-  - Sports
-  - Multiplayer
-  - PvP
-  - First-Person
-  - Arcade
-  - Physics
-  - Team-Based
   - Indie
-  - Physics-Based
-  - Online PvP
+  - Simulation
+  - Sports
+
+tags:
+  - Sports
+  - Basketball
+  - Online Co-Op
+  - Physics
+  - PvP
+  - Arcade
+  - Party Game
+  - Character Customization
+  - 3D
+  - First-Person
+  - Funny
+  - Team-Based
+  - Simulation
+  - Colorful
+  - Casual
+  - Stylized
+  - Co-op
+  - Multiplayer
+  - FPS
+  - Singleplayer
 
 platforms:
   - name: PC - Steam
 
 features:
-  - First-person view
-  - Physics-based shots, passes, steals, and rebounds
-  - Up to 3 players per team
-  - Simple to start, plenty of room to improve
-  - Different courts and scenarios, each with its own twist
-  - Character and team customization
-  - An unpaid referee in constant danger
+  - First-person basketball for 1–6 players
+  - Online matches from 1v1 to 3v3
+  - Physics-based passing, blocking, tackling and dunking
+  - Solo play to hone your skills
+  - Proximity chat
+  - Schoolyard, jungle and moon courts with their own mechanics
+  - Unlockable looks, cosmetics and emotes
+  - Private lobbies, including 5v1 matches
 
 media:
   videos:
