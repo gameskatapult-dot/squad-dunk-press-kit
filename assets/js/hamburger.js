@@ -10,6 +10,9 @@
   // To disable this feature, just remove the script tag.
 
   window.addEventListener('DOMContentLoaded', function () {
+    // The product press kit exposes its compact section links at every width.
+    if (document.body.classList.contains('product-page')) return
+
     const container = document.querySelector('#hamburger')
     const button = document.querySelector('#hamburger-toggle')
     const target = document.querySelector('#hamburger-target')

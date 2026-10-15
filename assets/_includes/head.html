@@ -7,7 +7,16 @@
 <title>{{presskit.title}}</title>
 {{/if}}
 
+{{#if isProduct}}
+<meta name="description" content="{{presskit.shortDescription}}">
+<meta property="og:title" content="{{presskit.title}} — Katapult Games">
+<meta property="og:description" content="{{presskit.shortDescription}}">
+<meta property="og:image" content="https://squaddunk.com/presskit/images/key-art-2026-web.jpg">
+<link rel="canonical" href="https://squaddunk.com/presskit/">
+<link rel="shortcut icon" href="images/favicon-2026.png">
+{{else}}
 <link rel="shortcut icon" href="images/favicon.ico?t={{buildTime}}">
+{{/if}}
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +24,7 @@
 
 <link rel="stylesheet" href="{{assets}}/css/normalize.css">
 <link rel="stylesheet" href="{{assets}}/css/theme.css">
+<link rel="stylesheet" href="{{assets}}/css/refresh.css">
 <link rel="stylesheet" href="{{assets}}/css/print.css" media="print">
 
 <!-- GoatCounter is emitted only for a validated, non-placeholder endpoint. -->

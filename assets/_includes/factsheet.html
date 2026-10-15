@@ -113,9 +113,11 @@
 
     {{#if presskit.genres}}
     <dt data-l10n="ui.factsheet.labels.genres">Genres:</dt>
+    <dd class="factsheet__tags">
     {{#each presskit.genres}}
-    <dd data-l10n="ui.factsheet.genres_items.{{@index}}">{{.}}</dd>
+      <span data-l10n="ui.factsheet.genres_items.{{@index}}">{{.}}</span>
     {{/each}}
+    </dd>
     {{/if}}
 
     {{#if presskit.platforms}}

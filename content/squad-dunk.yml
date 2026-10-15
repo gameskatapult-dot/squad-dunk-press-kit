@@ -1,10 +1,14 @@
-title: Squad Dunk
+# October 2026: old media retained but hidden; current art uploaded 2026-10-15.
+# Name confirmed as DUNK by the owner. Existing domain and URLs retained.
+title: DUNK
 website: https://www.squaddunk.com
 
 analytics:
   goatcounter_endpoint: https://katapultgames.goatcounter.com/count
 
 sections:
+  - id: branding
+    enabled: true
   - id: factsheet
     enabled: true
   - id: description
@@ -12,9 +16,7 @@ sections:
   - id: features
     enabled: true
   - id: media
-    enabled: true
-  - id: branding
-    enabled: true
+    enabled: false
   - id: links
     enabled: true
   - id: team
@@ -23,20 +25,20 @@ sections:
     enabled: true
 
 factsheet:
-  about: Squad Dunk
+  about: DUNK
   development: In active development by Katapult Games.
   developers: Bruno Braghetto, Matias Nicolini and Anahi Mou
-  publisher: TBA
-  cost: TBA
+  publisher: ""
+  cost: ""
   steam:
     label: https://store.steampowered.com/app/4591520/Squad_Dunk/
     url: https://store.steampowered.com/app/4591520/Squad_Dunk/
   trailer:
-    label: TBA
+    label: ""
     url: ""
   preview:
-    label: https://youtu.be/3_ZVMG2Rg3g
-    url: https://youtu.be/3_ZVMG2Rg3g
+    label: ""
+    url: ""
   press_kit:
     label: Open Press Kit
     url: https://drive.google.com/drive/folders/1G_cmvMlNz9NgyuEXS32lV81ek7wmlIOt?usp=sharing
@@ -71,18 +73,18 @@ localization:
   translations:
     en:
       description:
-        heading: WHAT IS SQUAD DUNK?
+        heading: WHAT IS DUNK?
         short:
           title: SHORT DESCRIPTION
           text: >-
-            Squad Dunk is a physics-based first-person basketball game. Team up
+            DUNK is a physics-based first-person basketball game. Team up
             with friends for casual or competitive matches. No auto-aim. Every
             play, good or terrible, is yours. Ready to make basketball physical?
         long:
           title: LONG DESCRIPTION
           paragraphs:
             - >-
-              Squad Dunk is basketball built around physics. Each player
+              DUNK is basketball built around physics. Each player
               controls one character on the court, teaming up with friends in
               casual or competitive online matches across courts with their own
               twists. No auto-aim, every play, good or terrible, is yours.
@@ -96,7 +98,7 @@ localization:
           - icon: ""
             title: FEEL THE PHYSICS
             body: >-
-              Squad Dunk uses physics-based mechanics to make basketball feel
+              DUNK uses physics-based mechanics to make basketball feel
               more alive, physical, and unpredictable. Blocks, shots, steals,
               rebounds, movement, and contact all become part of the moment.
           - icon: ""
@@ -136,7 +138,7 @@ localization:
             description: Description
             features: Features
             media: Media
-            branding: Branding
+            branding: Key art & logos
             links: Links
             team: Team
             contact: Contact
@@ -158,7 +160,7 @@ localization:
             press_kit: "Press Kit:"
             website: "Website:"
           values:
-            about: Squad Dunk
+            about: DUNK
             development: In active development by Katapult Games.
             developers: Bruno Braghetto, Matias Nicolini and Anahi Mou
             based_in: Based in Berlin, Germany
@@ -180,7 +182,6 @@ localization:
             - Physics
             - Team-Based
             - Indie
-            - First-Person
             - Physics-Based
             - Online PvP
           platforms_items:
@@ -208,8 +209,8 @@ localization:
               description: Coming soon.
               label: Coming soon
         branding:
-          title: Branding
-          download: download logo files as .zip
+          title: Key art & logos
+          download: Download key art & logo (.zip)
         links:
           title: Links
         team:
@@ -243,11 +244,11 @@ localization:
             country, device type, browser, and interactions with press links.
     es:
       description:
-        heading: ¿QUÉ ES SQUAD DUNK?
+        heading: ¿QUÉ ES DUNK?
         short:
           title: DESCRIPCIÓN CORTA
           text: >-
-            Squad Dunk es un juego de básquetbol en primera persona basado en
+            DUNK es un juego de básquetbol en primera persona basado en
             físicas. Forma equipo con amigos para partidas casuales o
             competitivas. Sin autoapuntado. Cada jugada, buena o terrible, es
             tuya. ¿Listo para hacer que el básquetbol se sienta físico?
@@ -255,7 +256,7 @@ localization:
           title: DESCRIPCIÓN LARGA
           paragraphs:
             - >-
-              Squad Dunk es básquetbol construido alrededor de la física. Cada
+              DUNK es básquetbol construido alrededor de la física. Cada
               jugador controla un personaje en la cancha y forma equipo con
               amigos en partidas online casuales o competitivas, en canchas con
               sus propios giros. Sin autoapuntado: cada jugada, buena o
@@ -270,7 +271,7 @@ localization:
           - icon: ""
             title: SIENTE LA FÍSICA
             body: >-
-              Squad Dunk usa mecánicas basadas en físicas para que el
+              DUNK usa mecánicas basadas en físicas para que el
               básquetbol se sienta más vivo, físico e impredecible. Bloqueos,
               tiros, robos, rebotes, movimiento y contacto forman parte de cada
               momento.
@@ -309,7 +310,7 @@ localization:
             description: Descripción
             features: Características
             media: Medios
-            branding: Marca
+            branding: Arte y logos
             links: Enlaces
             team: Equipo
             contact: Contacto
@@ -331,7 +332,7 @@ localization:
             press_kit: "Press Kit:"
             website: "Sitio web:"
           values:
-            about: Squad Dunk
+            about: DUNK
             development: En desarrollo activo por Katapult Games.
             developers: Bruno Braghetto, Matias Nicolini y Anahi Mou
             based_in: Basado en Berlín, Alemania
@@ -353,7 +354,6 @@ localization:
             - Físicas
             - Basado en equipos
             - Indie
-            - Primera persona
             - Basado en físicas
             - PvP online
           platforms_items:
@@ -381,8 +381,8 @@ localization:
               description: Próximamente.
               label: Próximamente
         branding:
-          title: Marca
-          download: descargar logos como .zip
+          title: Arte y logos
+          download: Descargar arte y logo (.zip)
         links:
           title: Enlaces
         team:
@@ -418,11 +418,11 @@ localization:
             enlaces de prensa.
     ru:
       description:
-        heading: ЧТО ТАКОЕ SQUAD DUNK?
+        heading: ЧТО ТАКОЕ DUNK?
         short:
           title: КРАТКОЕ ОПИСАНИЕ
           text: >-
-            Squad Dunk — это баскетбол от первого лица на основе физики.
+            DUNK — это баскетбол от первого лица на основе физики.
             Объединяйтесь с друзьями для казуальных или соревновательных
             матчей. Без автонаведения. Каждая удачная или ужасная игра — ваша.
             Готовы сделать баскетбол по-настоящему физическим?
@@ -430,7 +430,7 @@ localization:
           title: ПОДРОБНОЕ ОПИСАНИЕ
           paragraphs:
             - >-
-              Squad Dunk — это баскетбол, построенный вокруг физики. Каждый
+              DUNK — это баскетбол, построенный вокруг физики. Каждый
               игрок управляет одним персонажем на площадке и играет с друзьями
               в казуальных или соревновательных онлайн-матчах на площадках со
               своими особенностями. Без автонаведения: каждая удачная или
@@ -484,7 +484,7 @@ localization:
             description: Описание
             features: Особенности
             media: Медиа
-            branding: Брендинг
+            branding: Арт и логотипы
             links: Ссылки
             team: Команда
             contact: Контакты
@@ -506,7 +506,7 @@ localization:
             press_kit: "Press Kit:"
             website: "Сайт:"
           values:
-            about: Squad Dunk
+            about: DUNK
             development: В активной разработке Katapult Games.
             developers: Bruno Braghetto, Matias Nicolini and Anahi Mou
             based_in: Базируется в Берлине, Германия
@@ -528,7 +528,6 @@ localization:
             - Физика
             - Командная игра
             - Инди
-            - От первого лица
             - На основе физики
             - Онлайн PvP
           platforms_items:
@@ -556,8 +555,8 @@ localization:
               description: Скоро.
               label: Скоро
         branding:
-          title: Брендинг
-          download: скачать файлы логотипа в формате .zip
+          title: Арт и логотипы
+          download: Скачать арт и логотип (.zip)
         links:
           title: Ссылки
         team:
@@ -593,16 +592,16 @@ localization:
             ссылками для прессы.
     ja:
       description:
-        heading: SQUAD DUNKとは？
+        heading: DUNKとは？
         short:
           title: ショート説明
           text: >-
-            Squad Dunkは、物理ベースの一人称視点バスケットボールゲームです。友達とチームを組み、カジュアルまたは競技的な試合を楽しめます。オートエイムはありません。良いプレイもひどいプレイも、すべてあなた自身のものです。バスケットボールをもっとフィジカルにする準備はできていますか？
+            DUNKは、物理ベースの一人称視点バスケットボールゲームです。友達とチームを組み、カジュアルまたは競技的な試合を楽しめます。オートエイムはありません。良いプレイもひどいプレイも、すべてあなた自身のものです。バスケットボールをもっとフィジカルにする準備はできていますか？
         long:
           title: ロング説明
           paragraphs:
             - >-
-              Squad Dunkは、物理を中心に作られたバスケットボールです。各プレイヤーはコート上の1人のキャラクターを操作し、友達とチームを組んで、それぞれ独自の仕掛けを持つコートでカジュアルまたは競技的なオンラインマッチをプレイします。オートエイムはありません。良いプレイもひどいプレイも、すべてあなた自身のものです。
+              DUNKは、物理を中心に作られたバスケットボールです。各プレイヤーはコート上の1人のキャラクターを操作し、友達とチームを組んで、それぞれ独自の仕掛けを持つコートでカジュアルまたは競技的なオンラインマッチをプレイします。オートエイムはありません。良いプレイもひどいプレイも、すべてあなた自身のものです。
         keyFeaturesTitle: 主な特徴
         keyFeatures:
           - icon: ""
@@ -645,7 +644,7 @@ localization:
             description: 説明
             features: 特徴
             media: メディア
-            branding: ブランディング
+            branding: キーアートとロゴ
             links: リンク
             team: チーム
             contact: 連絡先
@@ -667,7 +666,7 @@ localization:
             press_kit: "プレスキット:"
             website: "ウェブサイト:"
           values:
-            about: Squad Dunk
+            about: DUNK
             development: Katapult Gamesが現在開発中。
             developers: Bruno Braghetto、Matias Nicolini、Anahi Mou
             based_in: ドイツ・ベルリン拠点
@@ -689,7 +688,6 @@ localization:
             - 物理
             - チームベース
             - インディー
-            - 一人称視点
             - 物理ベース
             - オンラインPvP
           platforms_items:
@@ -717,8 +715,8 @@ localization:
               description: 近日公開。
               label: 近日公開
         branding:
-          title: ブランディング
-          download: ロゴファイルを.zipでダウンロード
+          title: キーアートとロゴ
+          download: キーアートとロゴをダウンロード (.zip)
         links:
           title: リンク
         team:
@@ -743,16 +741,16 @@ localization:
             は使用せず、複数のウェブサイトにまたがる追跡、個人プロファイルの作成、訪問者データの販売も行いません。ページビュー、参照元、おおよその国、端末の種類、ブラウザ、プレス向けリンクのクリックなど、集計された情報のみを収集します。
     zh:
       description:
-        heading: SQUAD DUNK 是什么？
+        heading: DUNK 是什么？
         short:
           title: 简短介绍
           text: >-
-            Squad Dunk 是一款基于物理的第一人称篮球游戏。你可以和朋友组队，进行休闲或竞技比赛。没有自动瞄准。每一次精彩或糟糕的发挥，都由你自己完成。准备好让篮球更有身体对抗感了吗？
+            DUNK 是一款基于物理的第一人称篮球游戏。你可以和朋友组队，进行休闲或竞技比赛。没有自动瞄准。每一次精彩或糟糕的发挥，都由你自己完成。准备好让篮球更有身体对抗感了吗？
         long:
           title: 详细介绍
           paragraphs:
             - >-
-              Squad Dunk 是围绕物理互动打造的篮球游戏。每位玩家控制球场上的一个角色，与朋友组队，在拥有不同变化的球场中进行休闲或竞技在线比赛。没有自动瞄准：每一次精彩或糟糕的发挥，都由你自己完成。
+              DUNK 是围绕物理互动打造的篮球游戏。每位玩家控制球场上的一个角色，与朋友组队，在拥有不同变化的球场中进行休闲或竞技在线比赛。没有自动瞄准：每一次精彩或糟糕的发挥，都由你自己完成。
         keyFeaturesTitle: 核心特色
         keyFeatures:
           - icon: ""
@@ -762,7 +760,7 @@ localization:
           - icon: ""
             title: 感受物理互动
             body: >-
-              Squad Dunk 使用基于物理的机制，让篮球更鲜活、更有身体感，也更不可预测。盖帽、投篮、抢断、篮板、移动和碰撞都会成为比赛的一部分。
+              DUNK 使用基于物理的机制，让篮球更鲜活、更有身体感，也更不可预测。盖帽、投篮、抢断、篮板、移动和碰撞都会成为比赛的一部分。
           - icon: ""
             title: 团队配合
             body: >-
@@ -795,7 +793,7 @@ localization:
             description: 游戏介绍
             features: 特色
             media: 媒体
-            branding: 品牌素材
+            branding: 主视觉与标志
             links: 链接
             team: 团队
             contact: 联系方式
@@ -817,7 +815,7 @@ localization:
             press_kit: "Press Kit:"
             website: "网站:"
           values:
-            about: Squad Dunk
+            about: DUNK
             development: 由 Katapult Games 积极开发中。
             developers: Bruno Braghetto, Matias Nicolini and Anahi Mou
             based_in: 位于德国柏林
@@ -839,7 +837,6 @@ localization:
             - 物理
             - 团队制
             - 独立游戏
-            - 第一人称
             - 基于物理
             - 在线 PvP
           platforms_items:
@@ -867,8 +864,8 @@ localization:
               description: 即将公开。
               label: 即将公开
         branding:
-          title: 品牌素材
-          download: 下载 .zip 格式 Logo 文件
+          title: 主视觉与标志
+          download: 下载主视觉与标志 (.zip)
         links:
           title: 链接
         team:
@@ -893,11 +890,11 @@ localization:
             Cookie，不跨网站跟踪访客，不建立个人档案，也不出售访客数据。我们只收集页面浏览量、来源网站、大致国家或地区、设备类型、浏览器以及新闻链接点击情况等汇总信息。
     de:
       description:
-        heading: WAS IST SQUAD DUNK?
+        heading: WAS IST DUNK?
         short:
           title: KURZBESCHREIBUNG
           text: >-
-            Squad Dunk ist ein physikbasiertes First-Person-Basketballspiel.
+            DUNK ist ein physikbasiertes First-Person-Basketballspiel.
             Spiele mit Freundinnen und Freunden in lockeren oder kompetitiven
             Matches. Kein Auto-Aim. Jeder Spielzug, gut oder katastrophal,
             gehört dir. Bereit, Basketball körperlicher zu machen?
@@ -905,7 +902,7 @@ localization:
           title: LANGE BESCHREIBUNG
           paragraphs:
             - >-
-              Squad Dunk ist Basketball, der rund um Physik gebaut ist. Jede
+              DUNK ist Basketball, der rund um Physik gebaut ist. Jede
               Person steuert einen Charakter auf dem Court und spielt mit
               Freundinnen und Freunden in lockeren oder kompetitiven
               Online-Matches auf Courts mit eigenen Twists. Kein Auto-Aim,
@@ -960,7 +957,7 @@ localization:
             description: Beschreibung
             features: Features
             media: Medien
-            branding: Branding
+            branding: Key Art & Logos
             links: Links
             team: Team
             contact: Kontakt
@@ -982,7 +979,7 @@ localization:
             press_kit: "Press Kit:"
             website: "Website:"
           values:
-            about: Squad Dunk
+            about: DUNK
             development: In aktiver Entwicklung bei Katapult Games.
             developers: Bruno Braghetto, Matias Nicolini und Anahi Mou
             based_in: Sitz in Berlin, Deutschland
@@ -1004,7 +1001,6 @@ localization:
             - Physik
             - Teambasiert
             - Indie
-            - First-Person
             - Physikbasiert
             - Online-PvP
           platforms_items:
@@ -1032,8 +1028,8 @@ localization:
               description: Bald verfügbar.
               label: Bald verfügbar
         branding:
-          title: Branding
-          download: Logodateien als .zip herunterladen
+          title: Key Art & Logos
+          download: Key Art und Logo herunterladen (.zip)
         links:
           title: Links
         team:
@@ -1070,11 +1066,11 @@ localization:
             und Interaktionen mit Presselinks.
     fr:
       description:
-        heading: QU'EST-CE QUE SQUAD DUNK ?
+        heading: QU'EST-CE QUE DUNK ?
         short:
           title: DESCRIPTION COURTE
           text: >-
-            Squad Dunk est un jeu de basket en première personne basé sur la
+            DUNK est un jeu de basket en première personne basé sur la
             physique. Faites équipe avec vos amis pour des matchs casual ou
             compétitifs. Pas d'auto-aim. Chaque action, brillante ou désastreuse,
             est la vôtre. Prêt à rendre le basket vraiment physique ?
@@ -1082,7 +1078,7 @@ localization:
           title: DESCRIPTION LONGUE
           paragraphs:
             - >-
-              Squad Dunk est un jeu de basket construit autour de la physique.
+              DUNK est un jeu de basket construit autour de la physique.
               Chaque joueur contrôle un personnage sur le terrain et fait équipe
               avec ses amis dans des matchs en ligne casual ou compétitifs, sur
               des terrains qui ont chacun leurs propres twists. Pas d'auto-aim :
@@ -1097,7 +1093,7 @@ localization:
           - icon: ""
             title: RESSENTEZ LA PHYSIQUE
             body: >-
-              Squad Dunk utilise des mécaniques basées sur la physique pour
+              DUNK utilise des mécaniques basées sur la physique pour
               rendre le basket plus vivant, plus physique et plus imprévisible.
               Contres, tirs, interceptions, rebonds, mouvements et contacts font
               partie de chaque moment.
@@ -1137,7 +1133,7 @@ localization:
             description: Description
             features: Fonctionnalités
             media: Médias
-            branding: Identité visuelle
+            branding: Visuels et logos
             links: Liens
             team: Équipe
             contact: Contact
@@ -1159,7 +1155,7 @@ localization:
             press_kit: "Press Kit :"
             website: "Site web :"
           values:
-            about: Squad Dunk
+            about: DUNK
             development: En développement actif chez Katapult Games.
             developers: Bruno Braghetto, Matias Nicolini et Anahi Mou
             based_in: Basé à Berlin, Allemagne
@@ -1181,7 +1177,6 @@ localization:
             - Physique
             - En équipe
             - Indie
-            - Première personne
             - Basé sur la physique
             - PvP en ligne
           platforms_items:
@@ -1209,8 +1204,8 @@ localization:
               description: Bientôt disponible.
               label: Bientôt disponible
         branding:
-          title: Identité visuelle
-          download: télécharger les logos en .zip
+          title: Visuels et logos
+          download: Télécharger le visuel et le logo (.zip)
         links:
           title: Liens
         team:
@@ -1248,11 +1243,11 @@ localization:
             presse.
     pt:
       description:
-        heading: O QUE É SQUAD DUNK?
+        heading: O QUE É DUNK?
         short:
           title: DESCRIÇÃO CURTA
           text: >-
-            Squad Dunk é um jogo de basquete em primeira pessoa baseado em
+            DUNK é um jogo de basquete em primeira pessoa baseado em
             física. Junte-se a amigos para partidas casuais ou competitivas. Sem
             mira automática. Cada jogada, boa ou terrível, é sua. Pronto para
             deixar o basquete mais físico?
@@ -1260,7 +1255,7 @@ localization:
           title: DESCRIÇÃO LONGA
           paragraphs:
             - >-
-              Squad Dunk é basquete construído ao redor da física. Cada jogador
+              DUNK é basquete construído ao redor da física. Cada jogador
               controla um personagem na quadra e joga com amigos em partidas
               online casuais ou competitivas, em quadras com seus próprios
               twists. Sem mira automática: cada jogada, boa ou terrível, é sua.
@@ -1274,7 +1269,7 @@ localization:
           - icon: ""
             title: SINTA A FÍSICA
             body: >-
-              Squad Dunk usa mecânicas baseadas em física para tornar o
+              DUNK usa mecânicas baseadas em física para tornar o
               basquete mais vivo, físico e imprevisível. Bloqueios, arremessos,
               roubadas, rebotes, movimento e contato fazem parte de cada
               momento.
@@ -1314,7 +1309,7 @@ localization:
             description: Descrição
             features: Recursos
             media: Mídia
-            branding: Identidade visual
+            branding: Arte e logos
             links: Links
             team: Equipe
             contact: Contato
@@ -1336,7 +1331,7 @@ localization:
             press_kit: "Press Kit:"
             website: "Site:"
           values:
-            about: Squad Dunk
+            about: DUNK
             development: Em desenvolvimento ativo pela Katapult Games.
             developers: Bruno Braghetto, Matias Nicolini e Anahi Mou
             based_in: Baseado em Berlim, Alemanha
@@ -1358,7 +1353,6 @@ localization:
             - Física
             - Baseado em equipe
             - Indie
-            - Primeira pessoa
             - Baseado em física
             - PvP online
           platforms_items:
@@ -1386,8 +1380,8 @@ localization:
               description: Em breve.
               label: Em breve
         branding:
-          title: Identidade visual
-          download: baixar logos em .zip
+          title: Arte e logos
+          download: Baixar arte e logo (.zip)
         links:
           title: Links
         team:
@@ -1434,7 +1428,6 @@ genres:
   - Physics
   - Team-Based
   - Indie
-  - First-Person
   - Physics-Based
   - Online PvP
 
@@ -1458,14 +1451,14 @@ media:
       description: Physics-based first-person basketball gameplay preview.
       url: https://youtu.be/3_ZVMG2Rg3g
       status: available
-      enabled: true
+      enabled: false
     - id: reveal-trailer
       title: Reveal Trailer
       label: Coming soon
       description: Coming soon.
       url: ""
       status: coming soon
-      enabled: true
+      enabled: false
   screenshots:
     download_zip: images/press-kit.rar
     download_label: download press kit as .rar
@@ -1474,67 +1467,79 @@ media:
         file: images/screenshots/06-ball-at-rim.png
         thumb: images/screenshots/06-ball-at-rim.png.thumb.jpg
         title: Ball at the rim
-        alt: Squad Dunk first-person shot at the basketball hoop.
+        alt: DUNK first-person shot at the basketball hoop.
         featured: true
-        enabled: true
+        enabled: false
       - id: gameplay-01
         file: images/screenshots/01-gameplay.png
         thumb: images/screenshots/01-gameplay.png.thumb.jpg
         title: Gameplay screenshot 01
-        alt: Squad Dunk first-person basketball gameplay screenshot.
-        enabled: true
+        alt: DUNK first-person basketball gameplay screenshot.
+        enabled: false
       - id: gameplay-02
         file: images/screenshots/02-gameplay.png
         thumb: images/screenshots/02-gameplay.png.thumb.jpg
         title: Gameplay screenshot 02
-        alt: Squad Dunk multiplayer basketball gameplay screenshot.
-        enabled: true
+        alt: DUNK multiplayer basketball gameplay screenshot.
+        enabled: false
       - id: gameplay-03
         file: images/screenshots/03-gameplay.png
         thumb: images/screenshots/03-gameplay.png.thumb.jpg
         title: Gameplay screenshot 03
-        alt: Squad Dunk physics-based basketball gameplay screenshot.
-        enabled: true
+        alt: DUNK physics-based basketball gameplay screenshot.
+        enabled: false
       - id: jungle-court
         file: images/screenshots/04-jungle-court.png
         thumb: images/screenshots/04-jungle-court.png.thumb.jpg
         title: Jungle court
-        alt: Squad Dunk jungle court screenshot.
-        enabled: true
+        alt: DUNK jungle court screenshot.
+        enabled: false
       - id: school-court
         file: images/screenshots/05-school-court.png
         thumb: images/screenshots/05-school-court.png.thumb.jpg
         title: School court
-        alt: Squad Dunk school court screenshot.
-        enabled: true
+        alt: DUNK school court screenshot.
+        enabled: false
       - id: schoolyard-referee
         file: images/screenshots/07-schoolyard-referee.png
         thumb: images/screenshots/07-schoolyard-referee.png.thumb.jpg
         title: Schoolyard referee
-        alt: Squad Dunk schoolyard character screenshot.
-        enabled: true
+        alt: DUNK schoolyard character screenshot.
+        enabled: false
       - id: cafeteria-scene
         file: images/screenshots/08-cafeteria-scene.png
         thumb: images/screenshots/08-cafeteria-scene.png.thumb.jpg
         title: Cafeteria scene
-        alt: Squad Dunk school cafeteria environment screenshot.
-        enabled: true
+        alt: DUNK school cafeteria environment screenshot.
+        enabled: false
 
 branding:
   download_zip: images/logo.zip
-  download_label: download logo files as .zip
+  download_label: Download key art & logo (.zip)
   assets:
     - id: ball-hand-icon
       type: icon
       file: images/logo-site-icon.png
       title: Basketball hand icon
-      alt: Squad Dunk basketball hand icon.
-      enabled: true
+      alt: DUNK basketball hand icon.
+      enabled: false
     - id: squad-dunk-logo
       type: logo
       file: images/logo.png
-      title: Squad Dunk logo
-      alt: Squad Dunk white graffiti-style logo.
+      title: DUNK logo
+      alt: DUNK white graffiti-style logo.
+      enabled: false
+    - id: october-key-art
+      type: key-art
+      file: images/key-art-2026.jpg
+      title: Key art · JPG
+      alt: "DUNK key art: a basketball player leaps toward a hoop against a bright blue sky."
+      enabled: true
+    - id: october-logo
+      type: logo
+      file: images/dunk-logo-2026.png
+      title: DUNK logo · PNG
+      alt: DUNK white logo on a transparent background.
       enabled: true
 
 downloads:
@@ -1543,9 +1548,9 @@ downloads:
     file: images/press-kit.rar
     section: media
     generated: false
-    enabled: true
+    enabled: false
   - id: branding-zip
-    title: download logo files as .zip
+    title: Download key art & logo (.zip)
     file: images/logo.zip
     section: branding
     generated: true
@@ -1575,19 +1580,19 @@ contacts:
 
 links:
   - id: squad-dunk-tiktok
-    title: Squad Dunk TikTok
+    title: DUNK TikTok
     url: https://www.tiktok.com/@squaddunkgame
     enabled: true
   - id: squad-dunk-instagram
-    title: Squad Dunk Instagram
+    title: DUNK Instagram
     url: https://www.instagram.com/squaddunkgame/
     enabled: true
   - id: squad-dunk-discord
-    title: Squad Dunk Discord
+    title: DUNK Discord
     url: https://discord.gg/tDUuwSfxrS
     enabled: true
   - id: squad-dunk-website
-    title: Squad Dunk Website
+    title: DUNK Website
     url: https://www.squaddunk.com
     enabled: true
   - id: katapult-bluesky

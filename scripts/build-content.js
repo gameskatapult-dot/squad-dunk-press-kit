@@ -437,7 +437,8 @@ function buildProductData (content) {
   const enabledLinks = links.filter(enabled)
   const featureList = optionalArray(content.features).map((feature) => requireString(feature, 'features[]'))
 
-  if (enabledScreenshots.length === 0) fail('media.screenshots.items needs at least one enabled screenshot')
+  const showMedia = sections.some((section) => section.id === 'media' && enabled(section))
+  if (showMedia && enabledScreenshots.length === 0 && enabledVideos.length === 0) fail('Enabled media section needs at least one screenshot or video')
   if (enabledBrandingAssets.length === 0) fail('branding.assets needs at least one enabled asset')
 
   return {

@@ -40,7 +40,7 @@ https://squaddunk.com/presskit/
 https://squaddunk.com/
 ```
 
-The root of the Pages site redirects to `./presskit/`, so visitors to `https://squaddunk.com/` land on the press kit for now.
+The root of the Pages site shows the current DUNK key art and links to `./presskit/`. The press kit uses the same visual style and offers the current key art and logo for download.
 
 The workflow publishes:
 
