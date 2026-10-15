@@ -1,4 +1,12 @@
 /* DUNK · October 2026. Shared home and press kit presentation. */
+html:lang(ja) .product-page,
+html:lang(ja) .product-page :is(h1, h2, h3, h4, p, dt, dd, a, span, button, select, label, summary) {
+  font-family: "Yu Gothic", Meiryo, "Hiragino Kaku Gothic ProN", sans-serif;
+}
+html:lang(zh) .product-page,
+html:lang(zh) .product-page :is(h1, h2, h3, h4, p, dt, dd, a, span, button, select, label, summary) {
+  font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+}
 .product-page {
   --sd-bg: #faf9f4;
   --sd-text: #263a3b;
