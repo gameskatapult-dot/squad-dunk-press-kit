@@ -1,7 +1,7 @@
 # October 2026: old media retained but hidden; current art uploaded 2026-10-15.
 # Name confirmed as DUNK by the owner. Existing domain and URLs retained.
 title: DUNK
-website: https://www.squaddunk.com
+website: https://squaddunk.com/
 
 analytics:
   goatcounter_endpoint: https://katapultgames.goatcounter.com/count
@@ -27,7 +27,6 @@ sections:
 factsheet:
   about: DUNK
   development: In active development by Katapult Games.
-  developers: Bruno Braghetto, Matias Nicolini and Anahi Mou
   publisher: Katapult Games
   cost: ""
   steam:
@@ -149,15 +148,14 @@ localization:
             media: Screenshots
             branding: Key art & logos
             links: Links
-            team: Team
+            team: Studio
             contact: Contact
         factsheet:
           title: Factsheet
           labels:
             about: "About:"
-            developer: "Developer:"
+            location: "Based in:"
             development: "Development:"
-            developers: "Developers:"
             publisher: "Publisher:"
             release_date: "Release date:"
             genres: "Genres:"
@@ -172,8 +170,7 @@ localization:
           values:
             about: DUNK
             development: In active development by Katapult Games.
-            developers: Bruno Braghetto, Matias Nicolini and Anahi Mou
-            based_in: Based in Berlin, Germany
+            based_in: Ireland
             publisher: Katapult Games
             cost: TBA
             steam: https://store.steampowered.com/app/4591520/Squad_Dunk/
@@ -241,11 +238,11 @@ localization:
         links:
           title: Links
         team:
-          title: Team
+          title: Studio
           about_title: About Katapult Games
           boilerplate_title: About
           boilerplate: >-
-            A small indie video game studio based in Berlin.
+            A small indie video game studio based in Ireland.
 
             We are Katapult Games and we build games with our community, not
             just for them. Driven by transparency, flexibility and a love for
@@ -369,15 +366,14 @@ localization:
             media: Capturas
             branding: Arte y logos
             links: Enlaces
-            team: Equipo
+            team: Estudio
             contact: Contacto
         factsheet:
           title: Ficha técnica
           labels:
             about: "Acerca de:"
-            developer: "Desarrollador:"
+            location: "Ubicación:"
             development: "Desarrollo:"
-            developers: "Desarrolladores:"
             publisher: "Publisher:"
             release_date: "Fecha de lanzamiento:"
             genres: "Géneros:"
@@ -392,8 +388,7 @@ localization:
           values:
             about: DUNK
             development: En desarrollo activo por Katapult Games.
-            developers: Bruno Braghetto, Matias Nicolini y Anahi Mou
-            based_in: Basado en Berlín, Alemania
+            based_in: Irlanda
             publisher: Katapult Games
             cost: TBA
             steam: https://store.steampowered.com/app/4591520/Squad_Dunk/
@@ -461,11 +456,11 @@ localization:
         links:
           title: Enlaces
         team:
-          title: Equipo
+          title: Estudio
           about_title: Acerca de Katapult Games
           boilerplate_title: Acerca de
           boilerplate: >-
-            Un pequeño estudio indie de videojuegos basado en Berlín.
+            Un pequeño estudio indie de videojuegos basado en Irlanda.
 
             Somos Katapult Games y hacemos juegos con nuestra comunidad, no solo
             para ella. Impulsados por la transparencia, la flexibilidad y el
@@ -591,15 +586,14 @@ localization:
             media: Скриншоты
             branding: Арт и логотипы
             links: Ссылки
-            team: Команда
+            team: Студия
             contact: Контакты
         factsheet:
           title: Факты
           labels:
             about: "Об игре:"
-            developer: "Разработчик:"
+            location: "Расположение:"
             development: "Разработка:"
-            developers: "Разработчики:"
             publisher: "Издатель:"
             release_date: "Дата выхода:"
             genres: "Жанры:"
@@ -614,8 +608,7 @@ localization:
           values:
             about: DUNK
             development: В активной разработке Katapult Games.
-            developers: Bruno Braghetto, Matias Nicolini and Anahi Mou
-            based_in: Базируется в Берлине, Германия
+            based_in: Ирландия
             publisher: Katapult Games
             cost: TBA
             steam: https://store.steampowered.com/app/4591520/Squad_Dunk/
@@ -683,11 +676,11 @@ localization:
         links:
           title: Ссылки
         team:
-          title: Команда
+          title: Студия
           about_title: О Katapult Games
           boilerplate_title: О студии
           boilerplate: >-
-            Небольшая инди-студия видеоигр из Берлина.
+            Небольшая инди-студия видеоигр из Ирландии.
 
             Мы Katapult Games, и мы создаем игры вместе с нашим сообществом, а
             не только для него. Наша работа строится на прозрачности,
@@ -783,15 +776,14 @@ localization:
             media: スクリーンショット
             branding: キーアートとロゴ
             links: リンク
-            team: チーム
+            team: スタジオ
             contact: 連絡先
         factsheet:
           title: ファクトシート
           labels:
             about: "概要:"
-            developer: "開発:"
+            location: "所在地:"
             development: "開発状況:"
-            developers: "開発者:"
             publisher: "パブリッシャー:"
             release_date: "発売日:"
             genres: "ジャンル:"
@@ -806,8 +798,7 @@ localization:
           values:
             about: DUNK
             development: Katapult Gamesが現在開発中。
-            developers: Bruno Braghetto、Matias Nicolini、Anahi Mou
-            based_in: ドイツ・ベルリン拠点
+            based_in: アイルランド
             publisher: Katapult Games
             cost: TBA
             steam: https://store.steampowered.com/app/4591520/Squad_Dunk/
@@ -875,11 +866,11 @@ localization:
         links:
           title: リンク
         team:
-          title: チーム
+          title: スタジオ
           about_title: Katapult Gamesについて
           boilerplate_title: 概要
           boilerplate: >-
-            ベルリンを拠点とする小さなインディーゲームスタジオです。
+            アイルランドを拠点とする小さなインディーゲームスタジオです。
 
             私たちはKatapult Gamesです。私たちはコミュニティのためだけでなく、コミュニティと一緒にゲームを作ります。透明性、柔軟性、現代のゲームトレンドへの愛を大切にし、プレイヤーと本当に繋がる高エネルギーなマルチプレイヤー体験を目指しています。私たちはただ遊んでもらうだけでなく、一緒に形作ってほしいと考えています。Welcome to the squad!
           credits_title: チーム
@@ -964,15 +955,14 @@ localization:
             media: 截图
             branding: 主视觉与标志
             links: 链接
-            team: 团队
+            team: 工作室
             contact: 联系方式
         factsheet:
           title: 信息概览
           labels:
             about: "关于:"
-            developer: "开发商:"
+            location: "所在地："
             development: "开发状态:"
-            developers: "开发者:"
             publisher: "发行商:"
             release_date: "发行日期:"
             genres: "类型:"
@@ -987,8 +977,7 @@ localization:
           values:
             about: DUNK
             development: 由 Katapult Games 积极开发中。
-            developers: Bruno Braghetto, Matias Nicolini and Anahi Mou
-            based_in: 位于德国柏林
+            based_in: 爱尔兰
             publisher: Katapult Games
             cost: TBA
             steam: https://store.steampowered.com/app/4591520/Squad_Dunk/
@@ -1056,11 +1045,11 @@ localization:
         links:
           title: 链接
         team:
-          title: 团队
+          title: 工作室
           about_title: 关于 Katapult Games
           boilerplate_title: 关于
           boilerplate: >-
-            一个位于柏林的小型独立游戏工作室。
+            一个位于爱尔兰的小型独立游戏工作室。
 
             我们是 Katapult Games，我们不是只为社区制作游戏，而是与社区一起制作游戏。我们重视透明、灵活和现代游戏趋势，目标是打造真正连接玩家的高能多人体验。我们不只希望你玩我们的游戏，也希望你帮助我们一起塑造它们。Welcome to the squad!
           credits_title: 团队
@@ -1176,15 +1165,14 @@ localization:
             media: Screenshots
             branding: Key Art & Logos
             links: Links
-            team: Team
+            team: Studio
             contact: Kontakt
         factsheet:
           title: Factsheet
           labels:
             about: "Über:"
-            developer: "Entwickler:"
+            location: "Standort:"
             development: "Entwicklung:"
-            developers: "Entwickler:"
             publisher: "Publisher:"
             release_date: "Veröffentlichung:"
             genres: "Genres:"
@@ -1199,8 +1187,7 @@ localization:
           values:
             about: DUNK
             development: In aktiver Entwicklung bei Katapult Games.
-            developers: Bruno Braghetto, Matias Nicolini und Anahi Mou
-            based_in: Sitz in Berlin, Deutschland
+            based_in: Irland
             publisher: Katapult Games
             cost: TBA
             steam: https://store.steampowered.com/app/4591520/Squad_Dunk/
@@ -1268,11 +1255,11 @@ localization:
         links:
           title: Links
         team:
-          title: Team
+          title: Studio
           about_title: Über Katapult Games
           boilerplate_title: Über uns
           boilerplate: >-
-            Ein kleines Indie-Videospielstudio mit Sitz in Berlin.
+            Ein kleines Indie-Videospielstudio mit Sitz in Irland.
 
             Wir sind Katapult Games und wir entwickeln Spiele mit unserer
             Community, nicht nur für sie. Angetrieben von Transparenz,
@@ -1400,15 +1387,14 @@ localization:
             media: Captures d'écran
             branding: Visuels et logos
             links: Liens
-            team: Équipe
+            team: Studio
             contact: Contact
         factsheet:
           title: Factsheet
           labels:
             about: "À propos :"
-            developer: "Développeur :"
+            location: "Pays :"
             development: "Développement :"
-            developers: "Développeurs :"
             publisher: "Éditeur :"
             release_date: "Date de sortie :"
             genres: "Genres :"
@@ -1423,8 +1409,7 @@ localization:
           values:
             about: DUNK
             development: En développement actif chez Katapult Games.
-            developers: Bruno Braghetto, Matias Nicolini et Anahi Mou
-            based_in: Basé à Berlin, Allemagne
+            based_in: Irlande
             publisher: Katapult Games
             cost: TBA
             steam: https://store.steampowered.com/app/4591520/Squad_Dunk/
@@ -1492,11 +1477,11 @@ localization:
         links:
           title: Liens
         team:
-          title: Équipe
+          title: Studio
           about_title: À propos de Katapult Games
           boilerplate_title: À propos
           boilerplate: >-
-            Un petit studio indépendant de jeux vidéo basé à Berlin.
+            Un petit studio indépendant de jeux vidéo basé en Irlande.
 
             Nous sommes Katapult Games et nous créons des jeux avec notre
             communauté, pas seulement pour elle. Portés par la transparence, la
@@ -1624,15 +1609,14 @@ localization:
             media: Capturas de tela
             branding: Arte e logos
             links: Links
-            team: Equipe
+            team: Estúdio
             contact: Contato
         factsheet:
           title: Ficha técnica
           labels:
             about: "Sobre:"
-            developer: "Desenvolvedor:"
+            location: "Localização:"
             development: "Desenvolvimento:"
-            developers: "Desenvolvedores:"
             publisher: "Publisher:"
             release_date: "Data de lançamento:"
             genres: "Gêneros:"
@@ -1647,8 +1631,7 @@ localization:
           values:
             about: DUNK
             development: Em desenvolvimento ativo pela Katapult Games.
-            developers: Bruno Braghetto, Matias Nicolini e Anahi Mou
-            based_in: Baseado em Berlim, Alemanha
+            based_in: Irlanda
             publisher: Katapult Games
             cost: TBA
             steam: https://store.steampowered.com/app/4591520/Squad_Dunk/
@@ -1716,11 +1699,11 @@ localization:
         links:
           title: Links
         team:
-          title: Equipe
+          title: Estúdio
           about_title: Sobre a Katapult Games
           boilerplate_title: Sobre
           boilerplate: >-
-            Um pequeno estúdio indie de videogames baseado em Berlim.
+            Um pequeno estúdio indie de videogames baseado na Irlanda.
 
             Somos a Katapult Games e criamos jogos com a nossa comunidade, não
             apenas para ela. Movidos por transparência, flexibilidade e amor
@@ -1979,7 +1962,7 @@ team:
   about_title: About Katapult Games
   boilerplate_title: About
   boilerplate: >-
-    A small indie video game studio based in Berlin.
+    A small indie video game studio based in Ireland.
 
     We are Katapult Games and we build games with our community, not just for
     them. Driven by transparency, flexibility and a love for modern gaming
@@ -1998,40 +1981,31 @@ contacts:
     enabled: true
 
 links:
-  - id: squad-dunk-tiktok
-    title: DUNK TikTok
+  - id: dunk-tiktok
+    title: TikTok
     url: https://www.tiktok.com/@squaddunkgame
     enabled: true
-  - id: squad-dunk-instagram
-    title: DUNK Instagram
-    url: https://www.instagram.com/squaddunkgame/
-    enabled: true
-  - id: squad-dunk-discord
-    title: DUNK Discord
-    url: https://discord.gg/tDUuwSfxrS
-    enabled: true
-  - id: squad-dunk-website
-    title: DUNK Website
-    url: https://www.squaddunk.com
-    enabled: true
-  - id: katapult-bluesky
-    title: Katapult Games Bluesky
-    url: https://bsky.app/profile/katapultgames.bsky.social
-    enabled: true
-  - id: katapult-instagram
-    title: Katapult Games Instagram
-    url: https://www.instagram.com/katapultgames/
-    enabled: true
   - id: katapult-youtube
-    title: Katapult Games YouTube
+    title: YouTube
     url: https://www.youtube.com/@KatapultGames
     enabled: true
-  - id: katapult-newsletter
-    title: Katapult Games Newsletter
-    url: https://substack.com/@katapultgames
+  - id: dunk-facebook
+    title: Facebook
+    url: https://www.facebook.com/people/DUNK-Videogame/61594059097697/
     enabled: true
-  - id: katapult-website
-    title: Katapult Games Website
-    url: https://katapultgames.de/
+  - id: dunk-instagram
+    title: Instagram
+    url: https://www.instagram.com/dunk.videogame/
     enabled: true
-
+  - id: dunk-x
+    title: X
+    url: https://x.com/Katapult_Dunk
+    enabled: true
+  - id: dunk-website
+    title: Web
+    url: https://squaddunk.com/
+    enabled: true
+  - id: dunk-presskit
+    title: Presskit
+    url: https://squaddunk.com/presskit/
+    enabled: true

@@ -399,7 +399,7 @@ function createNavSections (sections) {
     media: 'Media',
     branding: 'Branding',
     links: 'Links',
-    team: 'Team',
+    team: 'Studio',
     contact: 'Contact'
   }
 

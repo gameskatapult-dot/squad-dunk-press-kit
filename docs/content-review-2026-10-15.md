@@ -70,6 +70,13 @@ compatibility are not presented as new gameplay features.
 
 ## Next content update
 
+The owner subsequently corrected the studio location to Ireland, without a
+city, and requested removal of developer fields and personal credits. The
+factsheet and studio text reflect this in all eight website languages. The
+official social list supplied in the owner's screenshot replaces the earlier
+links: TikTok, YouTube, Facebook, Instagram (@dunk.videogame), X
+(@Katapult_Dunk), the website and the press kit.
+
 Add a public trailer URL and any approved GIFs as they become
 available. The media section is now enabled for the October screenshots; the
 previous video remains hidden. No release date, pricing or new feature claims

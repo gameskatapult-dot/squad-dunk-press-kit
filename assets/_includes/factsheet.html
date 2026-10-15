@@ -69,22 +69,14 @@
     <dd data-l10n="ui.factsheet.values.about">{{presskit.about}}</dd>
     {{/if}}
 
-    {{#if company.title}}
-    <dt data-l10n="ui.factsheet.labels.developer">Developer:</dt>
-    <dd>
-      <a href="..">{{company.title}}</a>
-    </dd>
-    {{#if company.basedIn}}<dd data-l10n="ui.factsheet.values.based_in">Based in {{company.basedIn}}</dd>{{/if}}
+    {{#if company.basedIn}}
+    <dt data-l10n="ui.factsheet.labels.location">Based in:</dt>
+    <dd data-l10n="ui.factsheet.values.based_in">{{company.basedIn}}</dd>
     {{/if}}
 
     {{#if presskit.development}}
     <dt data-l10n="ui.factsheet.labels.development">Development:</dt>
     <dd data-l10n="ui.factsheet.values.development">{{presskit.development}}</dd>
-    {{/if}}
-
-    {{#if presskit.developers}}
-    <dt data-l10n="ui.factsheet.labels.developers">Developers:</dt>
-    <dd data-l10n="ui.factsheet.values.developers">{{presskit.developers}}</dd>
     {{/if}}
 
     {{#if presskit.publisher}}

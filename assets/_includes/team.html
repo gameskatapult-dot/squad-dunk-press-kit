@@ -2,7 +2,7 @@
   {{#if presskit.showTeamSection}}
   {{#if presskit.team}}
   <article class="grid__item grid__item--flexible team-card">
-    <h2 id="credits" data-l10n="ui.team.title">Team</h2>
+    <h2 id="credits" data-l10n="ui.team.title">Studio</h2>
 
     {{#if presskit.team.aboutTitle}}
     <h3 data-l10n="ui.team.about_title">{{presskit.team.aboutTitle}}</h3>
@@ -12,23 +12,6 @@
     </dl>
     {{/if}}
 
-    <h3 data-l10n="ui.team.credits_title">{{presskit.team.creditsTitle}}</h3>
-    {{#if presskit.credits}}
-    <dl>
-      {{#each presskit.credits}}
-      <dt>{{person}}</dt>
-      <dd>
-        {{#if website}}
-          <a href="{{website}}">{{role}}</a>
-        {{else}}
-          {{role}}
-        {{/if}}
-      </dd>
-      {{/each}}
-    </dl>
-    {{else}}
-    <p data-l10n="ui.team.credits">{{presskit.team.credits}}</p>
-    {{/if}}
   </article>
   {{else}}
   <article class="grid__item grid__item--flexible team-card">
