@@ -35,9 +35,25 @@ is inaccurate; the older media is withheld pending a current selection.
 The visible ZIP contains only the new key art and DUNK logo. Old source files
 remain in the repository and may remain reachable at their direct asset URLs.
 
+## Current screenshot set
+
+The owner subsequently supplied the current screenshot folder:
+https://drive.google.com/drive/folders/1mwF8CeVGFKZDoPURnUw5fMWETQTHd6ml
+
+Its nine JPG/PNG screenshots were uploaded on 8 October 2026. All nine are
+exhibited in the screenshot carousel, with separate optimized previews and
+thumbnail files. Individual downloads and the screenshots ZIP retain the
+original bytes, filenames and resolutions. No older screenshots, thumbnails
+or preview files are included in that ZIP.
+
+The gallery supports native horizontal scrolling, thumbnail and arrow
+navigation, keyboard navigation and a full-screen viewer. Download actions
+are plain text links. The earlier pill buttons and colored download panels
+have been removed from the home page and press kit.
+
 ## Next content update
 
-Add final Steam copy, a current screenshot selection, a public trailer URL and
-any approved GIFs as they become available. Re-enable the media section only
-when current items are ready. No release date, pricing or new feature claims
-have been inferred from the illustration.
+Add final Steam copy, a public trailer URL and any approved GIFs as they become
+available. The media section is now enabled for the October screenshots; the
+previous video remains hidden. No release date, pricing or new feature claims
+have been inferred from the illustration or screenshots.

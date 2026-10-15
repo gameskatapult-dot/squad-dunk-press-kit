@@ -153,6 +153,7 @@ function normalizeScreenshots (content) {
     id: requireString(item.id, 'media.screenshots.items[].id'),
     file: normalizePathForWeb(item.file, `media.screenshots.items.${item.id || '[missing-id]'}.file`),
     thumb: optionalString(item.thumb).replace(/\\/g, '/'),
+    preview: optionalString(item.preview).replace(/\\/g, '/'),
     title: requireString(item.title, `media.screenshots.items.${item.id || '[missing-id]'}.title`),
     caption: optionalString(item.caption),
     alt: requireString(item.alt, `media.screenshots.items.${item.id || '[missing-id]'}.alt`),
@@ -164,6 +165,7 @@ function normalizeScreenshots (content) {
 
   for (const screenshot of screenshots.filter(enabled)) {
     assertFileExists(screenshot.file, `media.screenshots.items.${screenshot.id}.file`)
+    if (screenshot.preview) assertFileExists(screenshot.preview, `media.screenshots.items.${screenshot.id}.preview`)
     if (screenshot.thumb && !screenshot.thumb.endsWith('.thumb.jpg')) {
       assertFileExists(screenshot.thumb, `media.screenshots.items.${screenshot.id}.thumb`)
     }
@@ -508,6 +510,7 @@ function buildProductData (content) {
           id: screenshot.id,
           file: screenshot.file,
           thumb: screenshot.thumb || `${screenshot.file}.thumb.jpg`,
+          preview: screenshot.preview || screenshot.file,
           title: screenshot.title,
           caption: screenshot.caption,
           alt: screenshot.alt,

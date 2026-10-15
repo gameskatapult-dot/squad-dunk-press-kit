@@ -1,118 +1,47 @@
-{{#if presskit.mediaVideos}}
-<section class="block">
-  <h2 id="media" data-l10n="ui.media.title">Media</h2>
-
-  <h3 id="videos" data-l10n="ui.media.videos">Videos</h3>
-  <div class="media-placeholders">
-    {{#each presskit.mediaVideos}}
-    <article class="media-placeholder-card">
-      <strong data-l10n="ui.media.video_cards.{{@index}}.title">{{title}}</strong>
-      {{#if description}}
-      <span data-l10n="ui.media.video_cards.{{@index}}.description">{{description}}</span>
-      {{else}}
-      <span data-l10n="ui.media.video_cards.{{@index}}.label">{{label}}</span>
-      {{/if}}
-      {{#if url}}
-      <a class="button media-placeholder-link" href="{{url}}" data-analytics-event="Trailer Click" data-l10n="ui.media.video_cards.{{@index}}.label">{{label}}</a>
-      {{/if}}
-    </article>
-    {{/each}}
-  </div>
-
-  {{#if presskit.manifestScreenshots}}
-  <h3 id="screenshots" data-l10n="ui.media.screenshots">Screenshots</h3>
-  {{#if presskit.mediaDownloadFile}}
-  <aside class="block__notice">
-    <a href="{{presskit.mediaDownloadFile}}" data-analytics-event="Press Kit Download" data-l10n="ui.media.download">
-      {{presskit.mediaDownloadTitle}}
-    </a>
-  </aside>
-  {{/if}}
-
-  <div class="gallery clearfix" id="gallery">
-    {{#each presskit.manifestScreenshots}}
-    <div class="gallery__item">
-      <a href="{{file}}" title="{{title}}" data-gallery="screenshots" data-gallery-title="{{title}}">
-        {{#if thumb}}
-        <img src="{{thumb}}" alt="{{alt}}">
-        {{else}}
-        <img src="{{file}}" alt="{{alt}}">
-        {{/if}}
-      </a>
-      {{#if caption}}
-      <p class="gallery__caption">{{caption}}</p>
-      {{/if}}
-    </div>
-    {{/each}}
-  </div>
-  {{/if}}
-</section>
-{{else}}
-  {{#if presskit.manifestScreenshots}}
-  <section class="block">
-    <h2 id="media" data-l10n="ui.media.title">Media</h2>
-    <h3 id="screenshots" data-l10n="ui.media.screenshots">Screenshots</h3>
+{{#if presskit.manifestScreenshots}}
+<section class="block screenshot-section" aria-labelledby="media">
+  <header class="section-heading">
+    <h2 id="media" data-l10n="ui.media.screenshots">Screenshots</h2>
     {{#if presskit.mediaDownloadFile}}
-    <aside class="block__notice">
-      <a href="{{presskit.mediaDownloadFile}}" data-analytics-event="Press Kit Download" data-l10n="ui.media.download">
-        {{presskit.mediaDownloadTitle}}
-      </a>
-    </aside>
+    <a class="press-link" href="{{presskit.mediaDownloadFile}}" download data-analytics-event="Press Kit Download" data-l10n="ui.media.download">{{presskit.mediaDownloadTitle}}</a>
     {{/if}}
-
-    <div class="gallery clearfix" id="gallery">
+  </header>
+  <div class="screenshot-carousel" id="screenshots" data-carousel role="region" aria-roledescription="carousel" aria-label="DUNK screenshots">
+    <div class="screenshot-carousel__track" data-carousel-track tabindex="0" aria-label="Screenshots; use left and right arrow keys">
       {{#each presskit.manifestScreenshots}}
-      <div class="gallery__item">
-        <a href="{{file}}" title="{{title}}" data-gallery="screenshots" data-gallery-title="{{title}}">
-          {{#if thumb}}
-          <img src="{{thumb}}" alt="{{alt}}">
-          {{else}}
-          <img src="{{file}}" alt="{{alt}}">
-          {{/if}}
+      <figure class="screenshot-slide" data-carousel-slide role="group" aria-roledescription="slide" aria-label="{{title}}">
+        <a class="screenshot-slide__image" href="{{file}}" data-gallery="screenshots" data-gallery-title="{{title}}">
+          <img src="{{preview}}" alt="{{alt}}" loading="lazy" width="1600" height="900">
         </a>
-        {{#if caption}}
-        <p class="gallery__caption">{{caption}}</p>
-        {{/if}}
-      </div>
+        <figcaption>
+          <span>{{title}} <small>{{caption}}</small></span>
+          <a class="press-link" href="{{file}}" download data-analytics-event="Assets Download" data-l10n="ui.media.original">Original ↗</a>
+        </figcaption>
+      </figure>
       {{/each}}
     </div>
-  </section>
-  {{else}}
-    {{#if hasScreenshots}}
-    <section class="block">
-      <h2 id="media" data-l10n="ui.media.title">Media</h2>
-      <h3 id="screenshots" data-l10n="ui.media.screenshots">Screenshots</h3>
-      <aside class="block__notice">
-        <a href="images/images.zip" data-analytics-event="Press Kit Download" data-l10n="ui.media.download">
-          download all screenshots as .zip
-        </a>
-      </aside>
-
-      <div class="gallery clearfix" id="gallery">
-        {{#each images.screenshots}}
-        <div class="gallery__item">
-          <a href="images/{{.}}" data-gallery="screenshots" data-gallery-title="{{basename .}}">
-            <img src="{{thumbOrImage .}}" alt="{{basename .}}">
-          </a>
-        </div>
+    <div class="screenshot-carousel__navigation" data-carousel-navigation hidden>
+      <div class="screenshot-carousel__thumbnails" aria-label="Choose a screenshot">
+        {{#each presskit.manifestScreenshots}}
+        <button type="button" data-carousel-thumb="{{@index}}" aria-label="{{title}}" aria-pressed="false">
+          <img src="{{thumb}}" alt="" loading="lazy" width="160" height="90">
+        </button>
         {{/each}}
       </div>
-
-      {{#each images.screenshotsWithCategory}}
-      <section>
-        <h4 class="capitalize screenshots-gallery-title" id="gallery-{{title}}">{{title}}</h4>
-        <div class="gallery clearfix">
-          {{#each elements}}
-          <div class="gallery__item">
-            <a href="images/{{.}}" data-gallery="screenshots" data-gallery-title="{{basename .}}">
-              <img src="{{thumbOrImage .}}" alt="{{basename .}}">
-            </a>
-          </div>
-          {{/each}}
-        </div>
-      </section>
-      {{/each}}
-    </section>
-    {{/if}}
-  {{/if}}
+      <div class="screenshot-carousel__arrows">
+        <button type="button" data-carousel-prev aria-label="Previous screenshot">←</button>
+        <span data-carousel-count aria-live="polite" aria-atomic="true"></span>
+        <button type="button" data-carousel-next aria-label="Next screenshot">→</button>
+      </div>
+    </div>
+  </div>
+</section>
+{{/if}}
+{{#if presskit.mediaVideos}}
+<section class="block">
+  <h2 id="videos" data-l10n="ui.media.videos">Videos</h2>
+  {{#each presskit.mediaVideos}}
+  <p><a class="press-link" href="{{url}}" data-analytics-event="Trailer Click">{{title}}</a></p>
+  {{/each}}
+</section>
 {{/if}}

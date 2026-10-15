@@ -270,6 +270,63 @@
     })
   }
 
+  function setupScreenshotCarousels () {
+    document.querySelectorAll('[data-carousel]').forEach(function (carousel) {
+      const track = carousel.querySelector('[data-carousel-track]')
+      const slides = Array.from(carousel.querySelectorAll('[data-carousel-slide]'))
+      const thumbs = Array.from(carousel.querySelectorAll('[data-carousel-thumb]'))
+      const navigation = carousel.querySelector('[data-carousel-navigation]')
+      const count = carousel.querySelector('[data-carousel-count]')
+      if (!track || !slides.length) return
+
+      let current = 0
+      let scheduled = false
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
+
+      function update (index) {
+        current = index
+        count.textContent = String(index + 1).padStart(2, '0') + ' / ' + String(slides.length).padStart(2, '0')
+        thumbs.forEach(function (thumb, i) {
+          thumb.setAttribute('aria-pressed', String(i === index))
+        })
+        const active = thumbs[index]
+        if (active) {
+          const rail = active.parentElement
+          if (active.offsetLeft < rail.scrollLeft || active.offsetLeft + active.offsetWidth > rail.scrollLeft + rail.clientWidth) {
+            rail.scrollTo({ left: active.offsetLeft - rail.clientWidth / 2 + active.offsetWidth / 2, behavior: reducedMotion.matches ? 'auto' : 'smooth' })
+          }
+        }
+      }
+
+      function go (index) {
+        const target = (index + slides.length) % slides.length
+        track.scrollTo({ left: target * track.clientWidth, behavior: reducedMotion.matches ? 'auto' : 'smooth' })
+      }
+
+      carousel.querySelector('[data-carousel-prev]').addEventListener('click', function () { go(current - 1) })
+      carousel.querySelector('[data-carousel-next]').addEventListener('click', function () { go(current + 1) })
+      thumbs.forEach(function (thumb, index) { thumb.addEventListener('click', function () { go(index) }) })
+      track.addEventListener('keydown', function (event) {
+        if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return
+        event.preventDefault()
+        go(current + (event.key === 'ArrowRight' ? 1 : -1))
+      })
+      track.addEventListener('scroll', function () {
+        if (scheduled) return
+        scheduled = true
+        window.requestAnimationFrame(function () {
+          update(Math.max(0, Math.min(slides.length - 1, Math.round(track.scrollLeft / track.clientWidth))))
+          scheduled = false
+        })
+      }, { passive: true })
+      new ResizeObserver(function () {
+        track.scrollTo({ left: current * track.clientWidth, behavior: 'auto' })
+      }).observe(track)
+      navigation.hidden = false
+      update(0)
+    })
+  }
+
   function setupGalleryLightbox () {
     const links = Array.prototype.slice.call(document.querySelectorAll('[data-gallery="screenshots"]'))
     if (!links.length) return
@@ -288,6 +345,7 @@
     if (!items.length) return
 
     let currentIndex = 0
+    let returnFocus = null
     const lightbox = document.createElement('div')
     lightbox.className = 'gallery-lightbox'
     lightbox.setAttribute('role', 'dialog')
@@ -301,6 +359,7 @@
       '  <div class="gallery-lightbox__caption">',
       '    <span class="gallery-lightbox__title"></span>',
       '    <span class="gallery-lightbox__count"></span>',
+      '    <a class="gallery-lightbox__download" download data-l10n="ui.media.original">Original ↗</a>',
       '  </div>',
       '  <button class="gallery-lightbox__button gallery-lightbox__close" type="button" aria-label="Close screenshot viewer">×</button>',
       '  <button class="gallery-lightbox__button gallery-lightbox__prev" type="button" aria-label="Previous screenshot">‹</button>',
@@ -313,6 +372,7 @@
     const image = lightbox.querySelector('.gallery-lightbox__image')
     const title = lightbox.querySelector('.gallery-lightbox__title')
     const count = lightbox.querySelector('.gallery-lightbox__count')
+    const download = lightbox.querySelector('.gallery-lightbox__download')
     const closeButton = lightbox.querySelector('.gallery-lightbox__close')
     const prevButton = lightbox.querySelector('.gallery-lightbox__prev')
     const nextButton = lightbox.querySelector('.gallery-lightbox__next')
@@ -323,10 +383,12 @@
       image.setAttribute('alt', item.alt || item.title)
       title.textContent = item.title
       count.textContent = (currentIndex + 1) + ' / ' + items.length
+      download.setAttribute('href', item.href)
     }
 
     function open (index) {
       currentIndex = index
+      returnFocus = document.activeElement
       render()
       lightbox.classList.add('is-open')
       document.body.classList.add('gallery-lightbox-open')
@@ -336,6 +398,7 @@
     function close () {
       lightbox.classList.remove('is-open')
       document.body.classList.remove('gallery-lightbox-open')
+      if (returnFocus) returnFocus.focus({ preventScroll: true })
     }
 
     function move (direction) {
@@ -361,6 +424,13 @@
     document.addEventListener('keydown', function (event) {
       if (!lightbox.classList.contains('is-open')) return
 
+      if (event.key === 'Tab') {
+        const focusable = [download, closeButton, prevButton, nextButton]
+        const index = focusable.indexOf(document.activeElement)
+        event.preventDefault()
+        focusable[(index + (event.shiftKey ? -1 : 1) + focusable.length) % focusable.length].focus()
+      }
+
       if (event.key === 'Escape') close()
       if (event.key === 'ArrowLeft') move(-1)
       if (event.key === 'ArrowRight') move(1)
@@ -373,6 +443,7 @@
     setupNavigation()
     setupLandingHero()
     setupYoutubeEmbeds()
+    setupScreenshotCarousels()
     setupGalleryLightbox()
   })
 }())

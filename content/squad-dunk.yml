@@ -7,6 +7,8 @@ analytics:
   goatcounter_endpoint: https://katapultgames.goatcounter.com/count
 
 sections:
+  - id: media
+    enabled: true
   - id: branding
     enabled: true
   - id: factsheet
@@ -15,8 +17,6 @@ sections:
     enabled: true
   - id: features
     enabled: true
-  - id: media
-    enabled: false
   - id: links
     enabled: true
   - id: team
@@ -137,7 +137,7 @@ localization:
             factsheet: Factsheet
             description: Description
             features: Features
-            media: Media
+            media: Screenshots
             branding: Key art & logos
             links: Links
             team: Team
@@ -200,7 +200,8 @@ localization:
           title: Media
           videos: Videos
           screenshots: Screenshots
-          download: download press kit as .rar
+          download: All screenshots · ZIP
+          original: Original ↗
           video_cards:
             - title: Pre-view
               description: Physics-based first-person basketball gameplay preview.
@@ -309,7 +310,7 @@ localization:
             factsheet: Ficha técnica
             description: Descripción
             features: Características
-            media: Medios
+            media: Capturas
             branding: Arte y logos
             links: Enlaces
             team: Equipo
@@ -372,7 +373,8 @@ localization:
           title: Medios
           videos: Videos
           screenshots: Capturas
-          download: descargar press kit como .rar
+          download: Todas las capturas · ZIP
+          original: Original ↗
           video_cards:
             - title: Pre-view
               description: Preview de gameplay de básquetbol en primera persona basado en físicas.
@@ -483,7 +485,7 @@ localization:
             factsheet: Факты
             description: Описание
             features: Особенности
-            media: Медиа
+            media: Скриншоты
             branding: Арт и логотипы
             links: Ссылки
             team: Команда
@@ -546,7 +548,8 @@ localization:
           title: Медиа
           videos: Видео
           screenshots: Скриншоты
-          download: скачать press kit в формате .rar
+          download: Все скриншоты · ZIP
+          original: Оригинал ↗
           video_cards:
             - title: Pre-view
               description: Геймплейный превью-ролик баскетбола от первого лица на основе физики.
@@ -643,7 +646,7 @@ localization:
             factsheet: ファクトシート
             description: 説明
             features: 特徴
-            media: メディア
+            media: スクリーンショット
             branding: キーアートとロゴ
             links: リンク
             team: チーム
@@ -706,7 +709,8 @@ localization:
           title: メディア
           videos: 動画
           screenshots: スクリーンショット
-          download: プレスキットを.rarでダウンロード
+          download: すべてのスクリーンショット · ZIP
+          original: オリジナル ↗
           video_cards:
             - title: プレビュー
               description: 物理ベースの一人称視点バスケットボールのゲームプレイプレビュー。
@@ -792,7 +796,7 @@ localization:
             factsheet: 信息概览
             description: 游戏介绍
             features: 特色
-            media: 媒体
+            media: 截图
             branding: 主视觉与标志
             links: 链接
             team: 团队
@@ -855,7 +859,8 @@ localization:
           title: 媒体
           videos: 视频
           screenshots: 截图
-          download: 下载 .rar 格式 press kit
+          download: 全部截图 · ZIP
+          original: 原图 ↗
           video_cards:
             - title: Pre-view
               description: 基于物理的第一人称篮球游戏玩法预览。
@@ -956,7 +961,7 @@ localization:
             factsheet: Factsheet
             description: Beschreibung
             features: Features
-            media: Medien
+            media: Screenshots
             branding: Key Art & Logos
             links: Links
             team: Team
@@ -1019,7 +1024,8 @@ localization:
           title: Medien
           videos: Videos
           screenshots: Screenshots
-          download: Press Kit als .rar herunterladen
+          download: Alle Screenshots · ZIP
+          original: Original ↗
           video_cards:
             - title: Pre-view
               description: Physikbasierte First-Person-Basketball-Gameplay-Preview.
@@ -1132,7 +1138,7 @@ localization:
             factsheet: Factsheet
             description: Description
             features: Fonctionnalités
-            media: Médias
+            media: Captures d'écran
             branding: Visuels et logos
             links: Liens
             team: Équipe
@@ -1195,7 +1201,8 @@ localization:
           title: Médias
           videos: Vidéos
           screenshots: Captures d'écran
-          download: télécharger le press kit en .rar
+          download: Toutes les captures · ZIP
+          original: Original ↗
           video_cards:
             - title: Pre-view
               description: Aperçu gameplay de basket en première personne basé sur la physique.
@@ -1308,7 +1315,7 @@ localization:
             factsheet: Ficha técnica
             description: Descrição
             features: Recursos
-            media: Mídia
+            media: Capturas de tela
             branding: Arte e logos
             links: Links
             team: Equipe
@@ -1371,7 +1378,8 @@ localization:
           title: Mídia
           videos: Vídeos
           screenshots: Capturas de tela
-          download: baixar press kit em .rar
+          download: Todas as capturas · ZIP
+          original: Original ↗
           video_cards:
             - title: Pre-view
               description: Prévia de gameplay de basquete em primeira pessoa baseado em física.
@@ -1460,8 +1468,8 @@ media:
       status: coming soon
       enabled: false
   screenshots:
-    download_zip: images/press-kit.rar
-    download_label: download press kit as .rar
+    download_zip: images/images.zip
+    download_label: All screenshots · ZIP
     items:
       - id: ball-at-rim
         file: images/screenshots/06-ball-at-rim.png
@@ -1513,6 +1521,79 @@ media:
         alt: DUNK school cafeteria environment screenshot.
         enabled: false
 
+      - id: october-01
+        file: images/screenshots-2026/01_Match.jpg
+        preview: images/screenshots-2026/previews/01_Match.jpg
+        thumb: images/screenshots-2026/thumbs/01_Match.jpg
+        title: Schoolyard match
+        caption: 2560 × 1440 · JPG
+        alt: DUNK first-person basketball match on an outdoor schoolyard court at sunset.
+        enabled: true
+      - id: october-02
+        file: images/screenshots-2026/02_Layup.png
+        preview: images/screenshots-2026/previews/02_Layup.jpg
+        thumb: images/screenshots-2026/thumbs/02_Layup.jpg
+        title: Layup
+        caption: 1920 × 1080 · PNG
+        alt: DUNK first-person layup with the ball above the hoop at sunset.
+        enabled: true
+      - id: october-03
+        file: images/screenshots-2026/03_Jungle_Option1.png
+        preview: images/screenshots-2026/previews/03_Jungle_Option1.jpg
+        thumb: images/screenshots-2026/thumbs/03_Jungle_Option1.jpg
+        title: Jungle court · 01
+        caption: 1917 × 1078 · PNG
+        alt: DUNK first-person basketball on the jungle court, facing another player.
+        enabled: true
+      - id: october-04
+        file: images/screenshots-2026/03_Jungle_Option2.png
+        preview: images/screenshots-2026/previews/03_Jungle_Option2.jpg
+        thumb: images/screenshots-2026/thumbs/03_Jungle_Option2.jpg
+        title: Jungle court · 02
+        caption: 1920 × 1080 · PNG
+        alt: DUNK jungle court with a player, basketball and giant tree.
+        enabled: true
+      - id: october-05
+        file: images/screenshots-2026/04_Group pic1.png
+        preview: images/screenshots-2026/previews/04_Group pic1.jpg
+        thumb: images/screenshots-2026/thumbs/04_Group pic1.jpg
+        title: The squad · 01
+        caption: 2559 × 1438 · PNG
+        alt: DUNK players gathered on the outdoor schoolyard court.
+        enabled: true
+      - id: october-06
+        file: images/screenshots-2026/05_Group pic2.png
+        preview: images/screenshots-2026/previews/05_Group pic2.jpg
+        thumb: images/screenshots-2026/thumbs/05_Group pic2.jpg
+        title: The squad · 02
+        caption: 2559 × 1438 · PNG
+        alt: DUNK squad on the schoolyard court, viewed in first person.
+        enabled: true
+      - id: october-07
+        file: images/screenshots-2026/06_Moon.jpg
+        preview: images/screenshots-2026/previews/06_Moon.jpg
+        thumb: images/screenshots-2026/thumbs/06_Moon.jpg
+        title: Moon court
+        caption: 2560 × 1440 · JPG
+        alt: DUNK basketball court on the moon, with Earth in the night sky.
+        enabled: true
+      - id: october-08
+        file: images/screenshots-2026/07_Shop_Option1.png
+        preview: images/screenshots-2026/previews/07_Shop_Option1.jpg
+        thumb: images/screenshots-2026/thumbs/07_Shop_Option1.jpg
+        title: Shop · 01
+        caption: 2050 × 1140 · PNG
+        alt: DUNK clothing shop with a counter, apparel and basketball hoop.
+        enabled: true
+      - id: october-09
+        file: images/screenshots-2026/07_Shop_Option2.png
+        preview: images/screenshots-2026/previews/07_Shop_Option2.jpg
+        thumb: images/screenshots-2026/thumbs/07_Shop_Option2.jpg
+        title: Shop · 02
+        caption: 1920 × 1080 · PNG
+        alt: DUNK shop counter with a character and apparel in the background.
+        enabled: true
+
 branding:
   download_zip: images/logo.zip
   download_label: Download key art & logo (.zip)
@@ -1544,11 +1625,11 @@ branding:
 
 downloads:
   - id: screenshots-zip
-    title: download press kit as .rar
-    file: images/press-kit.rar
+    title: All screenshots · ZIP
+    file: images/images.zip
     section: media
-    generated: false
-    enabled: false
+    generated: true
+    enabled: true
   - id: branding-zip
     title: Download key art & logo (.zip)
     file: images/logo.zip
