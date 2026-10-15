@@ -3,8 +3,8 @@
     {{#if isCompany}}
     <a href=".">{{presskit.title}}</a>
     {{else}}
-    <a class="nav__brand" href=".">
-      <img class="nav__brand-icon" src="images/dunk-logo-2026.png" alt="DUNK logo">
+    <a class="nav__brand" href="." data-language-link>
+      <img class="nav__brand-icon" src="images/dunk-logo-2026.png" data-l10n-alt="ui.branding.assets.1.alt" alt="DUNK logo">
       <span>{{presskit.title}}</span>
     </a>
     {{/if}}
@@ -20,7 +20,7 @@
     {{#if presskit.languages}}
     <div class="language-switcher">
       <label class="language-switcher__label" for="language-select" data-l10n="ui.nav.language">Language</label>
-      <select class="language-switcher__select" id="language-select" data-language-select aria-label="Select language">
+      <select class="language-switcher__select" id="language-select" data-language-select data-l10n-aria-label="ui.accessibility.language" aria-label="Select language">
         {{#each presskit.languages}}
         <option value="{{code}}">{{label}}</option>
         {{/each}}

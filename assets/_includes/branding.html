@@ -12,9 +12,9 @@
 
   <div class="branding-assets">
     {{#each presskit.brandingAssets}}
-    <a href="{{file}}" class="branding-asset branding-asset--{{type}}" title="{{title}}" download data-analytics-event="Assets Download">
-      <img src="{{file}}" alt="{{alt}}" class="logo">
-      <span>{{title}} <span aria-hidden="true">↗</span></span>
+    <a href="{{file}}" class="branding-asset branding-asset--{{type}}" data-l10n-title="ui.branding.assets.{{@index}}.title" title="{{title}}" download data-analytics-event="Assets Download">
+      <img src="{{file}}" data-l10n-alt="ui.branding.assets.{{@index}}.alt" alt="{{alt}}" class="logo">
+      <span><span data-l10n="ui.branding.assets.{{@index}}.title">{{title}}</span> <span aria-hidden="true">↗</span></span>
     </a>
     {{/each}}
   </div>

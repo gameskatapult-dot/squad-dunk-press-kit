@@ -6,32 +6,32 @@
     <a class="press-link" href="{{presskit.mediaDownloadFile}}" download data-analytics-event="Press Kit Download" data-l10n="ui.media.download">{{presskit.mediaDownloadTitle}}</a>
     {{/if}}
   </header>
-  <div class="screenshot-carousel" id="screenshots" data-carousel role="region" aria-roledescription="carousel" aria-label="DUNK screenshots">
-    <div class="screenshot-carousel__track" data-carousel-track tabindex="0" aria-label="Screenshots; use left and right arrow keys">
+  <div class="screenshot-carousel" id="screenshots" data-carousel role="region" data-l10n-aria-roledescription="ui.carousel.role" data-l10n-aria-label="ui.carousel.label">
+    <div class="screenshot-carousel__track" data-carousel-track tabindex="0" data-l10n-aria-label="ui.carousel.track">
       {{#each presskit.manifestScreenshots}}
-      <figure class="screenshot-slide" data-carousel-slide role="group" aria-roledescription="slide" aria-label="{{title}}">
-        <a class="screenshot-slide__image" href="{{file}}" data-gallery="screenshots" data-gallery-title="{{title}}">
-          <img src="{{preview}}" alt="{{alt}}" loading="lazy" width="1600" height="900">
+      <figure class="screenshot-slide" data-carousel-slide role="group" data-l10n-aria-roledescription="ui.carousel.slide" data-l10n-aria-label="ui.media.items.{{@index}}.title" aria-label="{{title}}">
+        <a class="screenshot-slide__image" href="{{file}}" data-gallery="screenshots" data-l10n-data-gallery-title="ui.media.items.{{@index}}.title" data-gallery-title="{{title}}">
+          <img src="{{preview}}" data-l10n-alt="ui.media.items.{{@index}}.alt" alt="{{alt}}" loading="lazy" width="1600" height="900">
         </a>
         <figcaption>
-          <span>{{title}} <small>{{caption}}</small></span>
+          <span><span data-l10n="ui.media.items.{{@index}}.title">{{title}}</span> <small>{{caption}}</small></span>
           <a class="press-link" href="{{file}}" download data-analytics-event="Assets Download" data-l10n="ui.media.original">Original ↗</a>
         </figcaption>
       </figure>
       {{/each}}
     </div>
     <div class="screenshot-carousel__navigation" data-carousel-navigation hidden>
-      <div class="screenshot-carousel__thumbnails" aria-label="Choose a screenshot">
+      <div class="screenshot-carousel__thumbnails" data-l10n-aria-label="ui.carousel.thumbnails">
         {{#each presskit.manifestScreenshots}}
-        <button type="button" data-carousel-thumb="{{@index}}" aria-label="{{title}}" aria-pressed="false">
+        <button type="button" data-carousel-thumb="{{@index}}" data-l10n-aria-label="ui.media.items.{{@index}}.title" aria-label="{{title}}" aria-pressed="false">
           <img src="{{thumb}}" alt="" loading="lazy" width="160" height="90">
         </button>
         {{/each}}
       </div>
       <div class="screenshot-carousel__arrows">
-        <button type="button" data-carousel-prev aria-label="Previous screenshot">←</button>
+        <button type="button" data-carousel-prev data-l10n-aria-label="ui.carousel.previous">←</button>
         <span data-carousel-count aria-live="polite" aria-atomic="true"></span>
-        <button type="button" data-carousel-next aria-label="Next screenshot">→</button>
+        <button type="button" data-carousel-next data-l10n-aria-label="ui.carousel.next">→</button>
       </div>
     </div>
   </div>

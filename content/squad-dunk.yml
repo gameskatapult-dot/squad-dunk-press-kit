@@ -30,7 +30,7 @@ factsheet:
   publisher: Katapult Games
   cost: ""
   steam:
-    label: https://store.steampowered.com/app/4591520/Squad_Dunk/
+    label: View on Steam
     url: https://store.steampowered.com/app/4591520/Squad_Dunk/
   trailer:
     label: ""
@@ -46,28 +46,28 @@ localization:
   default: en
   languages:
     - code: en
-      label: EN
+      label: English
       name: English
     - code: es
-      label: ES
+      label: Español
       name: Spanish
     - code: ru
-      label: RU
+      label: Русский
       name: Russian
     - code: ja
-      label: JA
+      label: 日本語
       name: Japanese
     - code: zh
-      label: ZH
+      label: 简体中文
       name: Chinese
     - code: de
-      label: DE
+      label: Deutsch
       name: German
     - code: fr
-      label: FR
+      label: Français
       name: French
     - code: pt
-      label: PT
+      label: Português
       name: Portuguese
   translations:
     en:
@@ -75,17 +75,17 @@ localization:
         heading: WHAT IS DUNK?
         short:
           title: SHORT DESCRIPTION
-          text: A first-person 1-6 player basketball game where every physics-based pass,
-            block, and DUNK comes down to skill. Hit unique courts across the universe,
-            hang out over proximity chat, or finesse your 1st-person skills in solo
-            play. Unlock new looks, emotes, and more, to flex on your mates!
+          text: A first-person 1-6 player basketball game where every physics-based pass, block, and
+            DUNK comes down to skill. Hit unique courts across the universe, hang out over
+            proximity chat, or finesse your 1st-person skills in solo play. Unlock new
+            looks, emotes, and more, to flex on your mates!
         long:
           title: LONG DESCRIPTION
           paragraphs:
             - A first-person basketball game for 1-6 players in matches of 1v1 to 3v3.
-              Hang out with friends over proximity chat or let your skills do the
-              talking as you intercept, tackle, pass, and DUNK.
-        key_features_title: Key Features
+              Hang out with friends over proximity chat or let your skills do the talking
+              as you intercept, tackle, pass, and DUNK.
+        key_features_title: Features
         key_features:
           - icon: ""
             title: Balling Out
@@ -103,10 +103,10 @@ localization:
           - icon: ""
             title: The Courts Are Waiting
             body: >-
-              Pull up to courts, from the classic schoolyard to the moon, each with
-              their own unique characteristics to master. Use the hanging vines in the
-              jungle and make the most of low gravity on the moon to get an edge over
-              your opponents.
+              Pull up to courts, from the classic schoolyard to the moon, each with their
+              own unique characteristics to master. Use the hanging vines in the jungle
+              and make the most of low gravity on the moon to get an edge over your
+              opponents.
 
 
               Some courts may even hide further secrets worth investigating - like what
@@ -114,30 +114,28 @@ localization:
           - icon: ""
             title: Friendly Competition
             body: >-
-              What would a game of pick-up basketball look like without a bit of
-              friendly banter? Proximity chat, unlockable cosmetics, and a range of
-              emotes give you a way to flex on opponents, so long as you’re prepared to
-              back it up on the courts and make a name for yourself.
+              What would a game of pick-up basketball look like without a bit of friendly
+              banter? Proximity chat, unlockable cosmetics, and a range of emotes give you
+              a way to flex on opponents, so long as you’re prepared to back it up on the
+              courts and make a name for yourself.
 
 
               Play however you choose online, with matches up to 3v3 available for solo
               players and teams. Set up a private 5v1 lobby and see just how long your
-              friend Alex can hold on! Join our Discord to find players and a community
-              to play with.
-
+              friend Alex can hold on! Join our Discord to find players and a community to
+              play with.
       ui:
         landing:
           nav:
             home: Home
             about: About
             press: Press
-          eyebrow: Gameplay Reel
+          eyebrow: Gameplay video
           tagline: First-person basketball for 1–6 players. From 1v1 to 3v3.
-
-          play: Watch Gameplay Reel
+          play: Watch gameplay video
           close: Close video
           fallback: Open on YouTube
-          press_kit_cta: Press Kit
+          press_kit_cta: Press kit
         nav:
           language: Language
           menu: Menu
@@ -162,9 +160,9 @@ localization:
             platforms: "Platforms:"
             cost: "Cost:"
             steam: "Steam:"
-            trailer: "Trailer:"
-            preview: "Pre-view:"
-            press_kit: "Press Kit:"
+            trailer: "Reveal trailer:"
+            preview: "Gameplay preview:"
+            press_kit: "Press kit:"
             website: "Website:"
             tags: "Tags:"
           values:
@@ -172,23 +170,23 @@ localization:
             development: In active development by Katapult Games.
             based_in: Ireland
             publisher: Katapult Games
-            cost: TBA
-            steam: https://store.steampowered.com/app/4591520/Squad_Dunk/
-            trailer: TBA
+            cost: To be announced
+            steam: View on Steam
+            trailer: To be announced
             preview: https://youtu.be/3_ZVMG2Rg3g
-            press_kit: Open Press Kit
+            press_kit: Open press kit
           release_dates:
-            - TBA
+            - To be announced
           genres_items:
             - Indie
             - Simulation
             - Sports
           platforms_items:
-            - PC - Steam
+            - PC — Steam
           tags_items:
             - Sports
             - Basketball
-            - Online Co-Op
+            - Online Co-op
             - Physics
             - PvP
             - Arcade
@@ -206,7 +204,6 @@ localization:
             - Multiplayer
             - FPS
             - Singleplayer
-
         features:
           title: Features
           items:
@@ -218,7 +215,6 @@ localization:
             - Schoolyard, jungle and moon courts with their own mechanics
             - Unlockable looks, cosmetics and emotes
             - Private lobbies, including 5v1 matches
-
         media:
           title: Media
           videos: Videos
@@ -226,17 +222,49 @@ localization:
           download: All screenshots · ZIP
           original: Original ↗
           video_cards:
-            - title: Pre-view
+            - title: Gameplay preview
               description: Physics-based first-person basketball gameplay preview.
               label: Watch on YouTube
-            - title: Reveal Trailer
-              description: Coming soon.
+            - title: Reveal trailer
+              description: Coming soon
               label: Coming soon
+          items:
+            - title: Schoolyard match
+              alt: First-person basketball match on a schoolyard court at sunset.
+            - title: Layup
+              alt: A first-person layup with the ball above the hoop at sunset.
+            - title: Jungle court · 01
+              alt: Another player on the jungle basketball court.
+            - title: Jungle court · 02
+              alt: A player, basketball and giant tree on the jungle court.
+            - title: The squad · 01
+              alt: Players gathered on the outdoor schoolyard court.
+            - title: The squad · 02
+              alt: The squad on the schoolyard court, seen in first person.
+            - title: Moon court
+              alt: A basketball court on the moon, with Earth in the night sky.
+            - title: Shop · 01
+              alt: A clothing shop with a counter, apparel and basketball hoop.
+            - title: Shop · 02
+              alt: A character behind the shop counter, with apparel in the background.
         branding:
           title: Key art & logos
-          download: Download key art & logo (.zip)
+          download: Key art & logo · ZIP
+          assets:
+            - title: Key art · JPG
+              alt: "DUNK key art: a player leaps toward a hoop against a blue sky."
+            - title: DUNK logo · PNG
+              alt: White DUNK logo on a transparent background.
         links:
           title: Links
+          items:
+            - TikTok
+            - YouTube
+            - Facebook
+            - Instagram
+            - X
+            - Website
+            - Press kit
         team:
           title: Studio
           about_title: About Katapult Games
@@ -244,38 +272,56 @@ localization:
           boilerplate: >-
             A small indie video game studio based in Ireland.
 
-            We are Katapult Games and we build games with our community, not
-            just for them. Driven by transparency, flexibility and a love for
-            modern gaming trends, our mission is to create high energy
-            multiplayer experiences that truly connect with players. We don't
-            just want you to play our games, we want you to help us shape them.
-            Welcome to the squad!
+            We are Katapult Games and we build games with our community, not just for
+            them. Driven by transparency, flexibility and a love for modern gaming trends,
+            our mission is to create high energy multiplayer experiences that truly
+            connect with players. We don't just want you to play our games, we want you to
+            help us shape them. Welcome to the squad!
           credits_title: Team
           credits: Katapult Games
         contact:
           title: Contact
           email: Email
-          bug_reports: Bug Reports
+          bug_reports: Bug reports
         privacy:
           label: Privacy
           title: Privacy-friendly analytics
-          body: >-
-            We use privacy-friendly analytics to understand aggregate traffic
-            and improve this press kit. We do
-            not use analytics cookies, track visitors across websites, create
-            personal profiles, or sell visitor data. We collect aggregate
-            information such as page views, referral source, approximate
-            country, device type, browser, and interactions with press links.
+          body: We use privacy-friendly analytics to understand aggregate traffic and improve this
+            press kit. We do not use analytics cookies, track visitors across websites,
+            create personal profiles, or sell visitor data. We collect aggregate
+            information such as page views, referral source, approximate country, device
+            type, browser, and interactions with press links.
+        page:
+          title: DUNK — Press kit · Katapult Games
+          home_title: DUNK — Katapult Games
+        carousel:
+          label: DUNK screenshots
+          role: carousel
+          track: Screenshot gallery; use the left and right arrow keys
+          thumbnails: Choose a screenshot
+          previous: Previous screenshot
+          next: Next screenshot
+          slide: slide
+          position: Screenshot {current} of {total}
+        viewer:
+          label: Screenshot viewer
+          close: Close screenshot viewer
+        accessibility:
+          primary: Main content
+          navigation: Main navigation
+          home: Katapult Games home
+          language: Choose language
+          browse_assets: Browse key art and logos
     es:
       description:
         heading: ¿QUÉ ES DUNK?
         short:
           title: DESCRIPCIÓN CORTA
-          text: Un juego de básquetbol en primera persona para 1–6 jugadores donde cada
-            pase, bloqueo y DUNK basado en físicas depende de tu habilidad. Recorre
-            canchas únicas por el universo, conversa por chat de proximidad o
-            perfecciona tu juego en solitario. ¡Desbloquea nuevos looks, emotes y mucho
-            más para presumir ante tus amigos!
+          text: Un juego de básquetbol en primera persona para 1–6 jugadores donde cada pase,
+            bloqueo y DUNK basado en físicas depende de tu habilidad. Recorre canchas
+            únicas por el universo, conversa por chat de proximidad o perfecciona tu juego
+            en solitario. ¡Desbloquea nuevas apariencias, gestos y mucho más para presumir
+            ante tus amigos!
         long:
           title: DESCRIPCIÓN LARGA
           paragraphs:
@@ -286,12 +332,12 @@ localization:
         keyFeatures:
           - icon: ""
             title: JUEGA DESDE LA CANCHA
-            body: Controla a un jugador en primera persona y vive el partido desde dentro de
-              la acción, no desde una cámara distante.
+            body: Controla a un jugador en primera persona y vive el partido desde dentro de la
+              acción, no desde una cámara distante.
           - icon: ""
             title: SIENTE LA FÍSICA
-            body: DUNK usa mecánicas basadas en físicas para que el básquetbol se sienta más
-              vivo, físico e impredecible. Bloqueos, tiros, robos, rebotes, movimiento y
+            body: DUNK usa mecánicas basadas en físicas para que el básquetbol se sienta más vivo,
+              físico e impredecible. Bloqueos, tiros, robos, rebotes, movimiento y
               contacto forman parte de cada momento.
           - icon: ""
             title: JUEGA EN EQUIPO
@@ -299,32 +345,32 @@ localization:
               conviertan ideas cuestionables en jugadas reales.
           - icon: ""
             title: CADA CANCHA CAMBIA EL JUEGO
-            body: Cada cancha suma su propio giro, con mecánicas y entornos que obligan a los
-              equipos a adaptarse de distintas maneras.
+            body: Cada cancha suma su propio giro, con mecánicas y entornos que obligan a los equipos
+              a adaptarse de distintas maneras.
           - icon: ""
             title: PERSONALIZA TU PERSONAJE
-            body: Crea tu apariencia, construye la identidad de tu squad y dale un estilo
-              propio a tu equipo.
+            body: Crea tu apariencia, construye la identidad de tu squad y dale un estilo propio a tu
+              equipo.
         key_features:
           - icon: ""
             title: A jugar
             body: >-
-              Disfruta una experiencia de básquetbol en primera persona fácil de
-              aprender y difícil de dominar, para jugadores de todos los niveles.
-              Aprende a calcular tus tiros, elegir el pase correcto y robar la pelota, o
-              súmate al caos y disfruta pasando el rato con amigos. Pasa de preguntar
-              «¿cómo entró eso?» a «lo hice totalmente a propósito».
+              Disfruta una experiencia de básquetbol en primera persona fácil de aprender
+              y difícil de dominar, para jugadores de todos los niveles. Aprende a
+              calcular tus tiros, elegir el pase correcto y robar la pelota, o súmate al
+              caos y disfruta pasando el rato con amigos. Pasa de preguntar «¿cómo entró
+              eso?» a «lo hice totalmente a propósito».
 
 
-              Los equipos y jugadores más fuertes sacarán a relucir sus Bulls interiores
-              y aprenderán a defender y atacar como una unidad. (No te preocupes:
-              esperamos que la mayoría termine entre insultos amistosos y caos general).
+              Los equipos y jugadores más fuertes sacarán a relucir sus Bulls interiores y
+              aprenderán a defender y atacar como una unidad. (No te preocupes: esperamos
+              que la mayoría termine entre insultos amistosos y caos general).
           - icon: ""
             title: Las canchas te esperan
             body: >-
               Desde el clásico patio de colegio hasta la luna, cada cancha tiene
-              características únicas que dominar. Usa las lianas de la jungla y
-              aprovecha la baja gravedad en la luna para sacar ventaja a tus rivales.
+              características únicas que dominar. Usa las lianas de la jungla y aprovecha
+              la baja gravedad en la luna para sacar ventaja a tus rivales.
 
 
               Algunas canchas incluso podrían esconder secretos que vale la pena
@@ -332,30 +378,29 @@ localization:
           - icon: ""
             title: Competencia entre amigos
             body: >-
-              ¿Qué sería de una partida de básquetbol sin un poco de bromas entre
-              amigos? El chat de proximidad, los cosméticos desbloqueables y los emotes
-              te permiten presumir ante tus rivales, siempre que puedas respaldarlo en
-              la cancha y hacerte un nombre.
+              ¿Qué sería de una partida de básquetbol sin un poco de bromas entre amigos?
+              El chat de proximidad, los cosméticos desbloqueables y los gestos te
+              permiten presumir ante tus rivales, siempre que puedas respaldarlo en la
+              cancha y hacerte un nombre.
 
 
-              Juega online a tu manera, con partidas de hasta 3v3 para quienes se
-              conectan solos o en equipo. ¡Arma una sala privada 5v1 y descubre cuánto
-              aguanta tu amigo Alex! Únete a nuestro Discord para encontrar jugadores y
-              una comunidad con la que jugar.
-
+              Juega online a tu manera, con partidas de hasta 3v3 para quienes se conectan
+              solos o en equipo. ¡Arma una sala privada 5v1 y descubre cuánto aguanta tu
+              amigo Alex! Únete a nuestro Discord para encontrar jugadores y una comunidad
+              con la que jugar.
+        key_features_title: Características
       ui:
         landing:
           nav:
             home: Inicio
             about: Acerca de
             press: Prensa
-          eyebrow: Reel de gameplay
+          eyebrow: Vídeo del juego
           tagline: Básquetbol en primera persona para 1–6 jugadores. De 1v1 a 3v3.
-
-          play: Ver reel de gameplay
+          play: Ver vídeo del juego
           close: Cerrar video
           fallback: Abrir en YouTube
-          press_kit_cta: Press Kit
+          press_kit_cta: Kit de prensa
         nav:
           language: Idioma
           menu: Menú
@@ -364,7 +409,7 @@ localization:
             description: Descripción
             features: Características
             media: Capturas
-            branding: Arte y logos
+            branding: Ilustración y logotipos
             links: Enlaces
             team: Estudio
             contact: Contacto
@@ -374,15 +419,15 @@ localization:
             about: "Acerca de:"
             location: "Ubicación:"
             development: "Desarrollo:"
-            publisher: "Publisher:"
+            publisher: "Distribuidor:"
             release_date: "Fecha de lanzamiento:"
             genres: "Géneros:"
             platforms: "Plataformas:"
             cost: "Precio:"
             steam: "Steam:"
-            trailer: "Tráiler:"
-            preview: "Pre-view:"
-            press_kit: "Press Kit:"
+            trailer: "Tráiler de presentación:"
+            preview: "Avance del juego:"
+            press_kit: "Kit de prensa:"
             website: "Sitio web:"
             tags: "Etiquetas:"
           values:
@@ -390,41 +435,40 @@ localization:
             development: En desarrollo activo por Katapult Games.
             based_in: Irlanda
             publisher: Katapult Games
-            cost: TBA
-            steam: https://store.steampowered.com/app/4591520/Squad_Dunk/
-            trailer: TBA
+            cost: Por anunciar
+            steam: Ver en Steam
+            trailer: Por anunciar
             preview: https://youtu.be/3_ZVMG2Rg3g
-            press_kit: Abrir Press Kit
+            press_kit: Abrir el kit de prensa
           release_dates:
-            - TBA
+            - Por anunciar
           genres_items:
             - Indie
             - Simulación
             - Deportes
           platforms_items:
-            - PC - Steam
+            - PC — Steam
           tags_items:
-            - Sports
-            - Basketball
-            - Online Co-Op
-            - Physics
-            - PvP
+            - Deportes
+            - Básquetbol
+            - Cooperativo en línea
+            - Físicas
+            - JcJ
             - Arcade
-            - Party Game
-            - Character Customization
+            - Juego de fiesta
+            - Personalización de personajes
             - 3D
-            - First-Person
-            - Funny
-            - Team-Based
-            - Simulation
-            - Colorful
+            - Primera persona
+            - Humor
+            - Basado en equipos
+            - Simulación
+            - Colorido
             - Casual
-            - Stylized
-            - Co-op
-            - Multiplayer
-            - FPS
-            - Singleplayer
-
+            - Estilizado
+            - Cooperativo
+            - Multijugador
+            - Disparos en primera persona
+            - Un jugador
         features:
           title: Características
           items:
@@ -434,9 +478,8 @@ localization:
             - Juego en solitario para perfeccionar tu habilidad
             - Chat de proximidad
             - Canchas de colegio, jungla y luna con mecánicas propias
-            - Looks, cosméticos y emotes desbloqueables
+            - Apariencias, cosméticos y gestos desbloqueables
             - Salas privadas, incluidas partidas 5v1
-
         media:
           title: Medios
           videos: Videos
@@ -444,17 +487,49 @@ localization:
           download: Todas las capturas · ZIP
           original: Original ↗
           video_cards:
-            - title: Pre-view
+            - title: Avance del juego
               description: Preview de gameplay de básquetbol en primera persona basado en físicas.
               label: Ver en YouTube
-            - title: Reveal Trailer
-              description: Próximamente.
+            - title: Tráiler de presentación
+              description: Próximamente
               label: Próximamente
+          items:
+            - title: Partido en el colegio
+              alt: Partido de básquetbol en primera persona en una cancha de colegio al atardecer.
+            - title: Bandeja
+              alt: Una bandeja en primera persona, con la pelota sobre el aro al atardecer.
+            - title: Cancha de la jungla · 01
+              alt: Otro jugador en la cancha de básquetbol de la jungla.
+            - title: Cancha de la jungla · 02
+              alt: Un jugador, una pelota y un árbol gigante en la cancha de la jungla.
+            - title: El equipo · 01
+              alt: Jugadores reunidos en la cancha exterior del colegio.
+            - title: El equipo · 02
+              alt: El equipo en la cancha del colegio, visto en primera persona.
+            - title: Cancha lunar
+              alt: Una cancha de básquetbol en la luna, con la Tierra en el cielo nocturno.
+            - title: Tienda · 01
+              alt: Una tienda de ropa con mostrador, prendas y un aro de básquetbol.
+            - title: Tienda · 02
+              alt: Un personaje detrás del mostrador de la tienda, con ropa al fondo.
         branding:
-          title: Arte y logos
-          download: Descargar arte y logo (.zip)
+          title: Ilustración y logotipos
+          download: Ilustración y logotipo · ZIP
+          assets:
+            - title: Ilustración principal · JPG
+              alt: "Ilustración de DUNK: un jugador salta hacia un aro bajo un cielo azul."
+            - title: Logotipo de DUNK · PNG
+              alt: Logotipo blanco de DUNK sobre fondo transparente.
         links:
           title: Enlaces
+          items:
+            - TikTok
+            - YouTube
+            - Facebook
+            - Instagram
+            - X
+            - Sitio web
+            - Kit de prensa
         team:
           title: Estudio
           about_title: Acerca de Katapult Games
@@ -462,40 +537,58 @@ localization:
           boilerplate: >-
             Un pequeño estudio indie de videojuegos basado en Irlanda.
 
-            Somos Katapult Games y hacemos juegos con nuestra comunidad, no solo
-            para ella. Impulsados por la transparencia, la flexibilidad y el
-            amor por las tendencias actuales del gaming, nuestra misión es crear
-            experiencias multijugador de alta energía que conecten de verdad con
-            los jugadores. No queremos que solo juegues nuestros juegos:
-            queremos que nos ayudes a darles forma. Welcome to the squad!
+            Somos Katapult Games y hacemos juegos con nuestra comunidad, no solo para
+            ella. Impulsados por la transparencia, la flexibilidad y el amor por las
+            tendencias actuales del gaming, nuestra misión es crear experiencias
+            multijugador de alta energía que conecten de verdad con los jugadores. No
+            queremos que solo juegues nuestros juegos: queremos que nos ayudes a darles
+            forma. ¡Bienvenido al equipo!
           credits_title: Equipo
           credits: Katapult Games
         contact:
           title: Contacto
-          email: Email
-          bug_reports: Reportar bugs
+          email: Correo electrónico
+          bug_reports: Informar de un error
         privacy:
           label: Privacidad
           title: Analítica respetuosa con la privacidad
-          body: >-
-            Usamos analítica respetuosa con la privacidad para comprender el
-            tráfico agregado y mejorar este
-            press kit. No usamos cookies de analítica, no rastreamos a los
-            visitantes entre sitios web, no creamos perfiles personales ni
-            vendemos datos de visitantes. Recopilamos información agregada,
-            como visualizaciones de páginas, fuente de referencia, país
-            aproximado, tipo de dispositivo, navegador e interacciones con los
-            enlaces de prensa.
+          body: Usamos analítica respetuosa con la privacidad para comprender el tráfico agregado y
+            mejorar este press kit. No usamos cookies de analítica, no rastreamos a los
+            visitantes entre sitios web, no creamos perfiles personales ni vendemos datos
+            de visitantes. Recopilamos información agregada, como visualizaciones de
+            páginas, fuente de referencia, país aproximado, tipo de dispositivo, navegador
+            e interacciones con los enlaces de prensa.
+        page:
+          title: DUNK — Kit de prensa · Katapult Games
+          home_title: DUNK — Katapult Games
+        carousel:
+          label: Capturas de DUNK
+          role: carrusel
+          track: Galería de capturas; usa las flechas izquierda y derecha del teclado
+          thumbnails: Elegir una captura
+          previous: Captura anterior
+          next: Captura siguiente
+          slide: imagen
+          position: Captura {current} de {total}
+        viewer:
+          label: Visor de capturas
+          close: Cerrar el visor de capturas
+        accessibility:
+          primary: Contenido principal
+          navigation: Navegación principal
+          home: Inicio de Katapult Games
+          language: Elegir idioma
+          browse_assets: Ver la ilustración y los logotipos
     ru:
       description:
         heading: ЧТО ТАКОЕ DUNK?
         short:
           title: КРАТКОЕ ОПИСАНИЕ
-          text: Баскетбол от первого лица для 1–6 игроков, где каждый физически просчитанный
-            пас, блок и DUNK зависит от мастерства. Играйте на необычных площадках по
-            всей вселенной, общайтесь в голосовом чате по близости или оттачивайте
-            навыки в одиночку. Открывайте новые образы, эмоции и многое другое, чтобы
-            покрасоваться перед друзьями!
+          text: Баскетбол от первого лица для 1–6 игроков, где каждый физически просчитанный пас,
+            блок и DUNK зависит от мастерства. Играйте на необычных площадках по всей
+            вселенной, общайтесь в голосовом чате по близости или оттачивайте навыки в
+            одиночку. Открывайте новые образы, эмоции и многое другое, чтобы покрасоваться
+            перед друзьями!
         long:
           title: ПОДРОБНОЕ ОПИСАНИЕ
           paragraphs:
@@ -506,18 +599,17 @@ localization:
         keyFeatures:
           - icon: ""
             title: ИГРАЙТЕ С ПЛОЩАДКИ
-            body: Управляйте одним игроком от первого лица и переживайте матч изнутри
-              действия, а не с далекой камеры.
+            body: Управляйте одним игроком от первого лица и переживайте матч изнутри действия, а не с
+              далекой камеры.
           - icon: ""
             title: ЧУВСТВУЙТЕ ФИЗИКУ
-            body: Физические механики делают баскетбол более живым, контактным и
-              непредсказуемым. Блоки, броски, перехваты, подборы, движение и
-              столкновения становятся частью каждого момента.
+            body: Физические механики делают баскетбол более живым, контактным и непредсказуемым.
+              Блоки, броски, перехваты, подборы, движение и столкновения становятся частью
+              каждого момента.
           - icon: ""
             title: ИГРАЙТЕ КОМАНДОЙ
-            body: Играйте в одиночку или с друзьями в казуальных и соревновательных матчах.
-              Действуйте вместе и превращайте сомнительные идеи в реальные игровые
-              моменты.
+            body: Играйте в одиночку или с друзьями в казуальных и соревновательных матчах. Действуйте
+              вместе и превращайте сомнительные идеи в реальные игровые моменты.
           - icon: ""
             title: КАЖДАЯ ПЛОЩАДКА МЕНЯЕТ ИГРУ
             body: "Каждая площадка добавляет собственный поворот: новые механики и окружение
@@ -533,19 +625,19 @@ localization:
               Баскетбол от первого лица, который легко освоить, но трудно довести до
               совершенства, подойдёт игрокам любого уровня. Выбирайте момент для броска,
               находите верный пас и перехватывайте мяч — или просто устраивайте хаос с
-              друзьями. Пройдите путь от «Как это вообще залетело?» до «Именно так я всё
-              и задумал».
+              друзьями. Пройдите путь от «Как это вообще залетело?» до «Именно так я всё и
+              задумал».
 
 
-              Сильные команды раскроют в себе дух Bulls и научатся атаковать и
-              защищаться сообща. (Но от большинства мы ожидаем дружеских обзывательств и
-              всеобщего хаоса).
+              Сильные команды раскроют в себе дух Bulls и научатся атаковать и защищаться
+              сообща. (Но от большинства мы ожидаем дружеских обзывательств и всеобщего
+              хаоса).
           - icon: ""
             title: Площадки ждут
             body: >-
-              От школьного двора до Луны — у каждой площадки свои особенности.
-              Используйте лианы в джунглях и низкую лунную гравитацию, чтобы получить
-              преимущество над соперниками.
+              От школьного двора до Луны — у каждой площадки свои особенности. Используйте
+              лианы в джунглях и низкую лунную гравитацию, чтобы получить преимущество над
+              соперниками.
 
 
               На некоторых площадках могут скрываться и другие секреты. Чего, например,
@@ -558,38 +650,37 @@ localization:
               если вы готовы подтвердить свои слова игрой.
 
 
-              Играйте онлайн по-своему: приходите в одиночку или командой на матчи до 3
-              на 3. Создайте приватную комнату 5 на 1 и проверьте, сколько продержится
-              ваш друг Алекс! Присоединяйтесь к нашему Discord, чтобы найти игроков и
+              Играйте онлайн по-своему: приходите в одиночку или командой на матчи до 3 на
+              3. Создайте приватную комнату 5 на 1 и проверьте, сколько продержится ваш
+              друг Алекс! Присоединяйтесь к нашему Discord, чтобы найти игроков и
               сообщество.
-
+        key_features_title: Особенности
       ui:
         landing:
           nav:
             home: Главная
             about: Об игре
             press: Пресса
-          eyebrow: Геймплейный ролик
+          eyebrow: Видео игрового процесса
           tagline: Баскетбол от первого лица для 1–6 игроков. От 1 на 1 до 3 на 3.
-
-          play: Смотреть геймплейный ролик
+          play: Смотреть игровой процесс
           close: Закрыть видео
           fallback: Открыть на YouTube
-          press_kit_cta: Press Kit
+          press_kit_cta: Пресс-кит
         nav:
           language: Язык
           menu: Меню
           sections:
-            factsheet: Факты
+            factsheet: Информация об игре
             description: Описание
             features: Особенности
             media: Скриншоты
-            branding: Арт и логотипы
+            branding: Иллюстрация и логотипы
             links: Ссылки
             team: Студия
             contact: Контакты
         factsheet:
-          title: Факты
+          title: Информация об игре
           labels:
             about: "Об игре:"
             location: "Расположение:"
@@ -600,9 +691,9 @@ localization:
             platforms: "Платформы:"
             cost: "Цена:"
             steam: "Steam:"
-            trailer: "Трейлер:"
-            preview: "Pre-view:"
-            press_kit: "Press Kit:"
+            trailer: "Анонсирующий трейлер:"
+            preview: "Обзор игрового процесса:"
+            press_kit: "Пресс-кит:"
             website: "Сайт:"
             tags: "Метки:"
           values:
@@ -610,41 +701,40 @@ localization:
             development: В активной разработке Katapult Games.
             based_in: Ирландия
             publisher: Katapult Games
-            cost: TBA
-            steam: https://store.steampowered.com/app/4591520/Squad_Dunk/
-            trailer: TBA
+            cost: Будет объявлено
+            steam: Страница в Steam
+            trailer: Будет объявлено
             preview: https://youtu.be/3_ZVMG2Rg3g
-            press_kit: Открыть Press Kit
+            press_kit: Открыть пресс-кит
           release_dates:
-            - TBA
+            - Будет объявлено
           genres_items:
             - Инди
             - Симулятор
             - Спорт
           platforms_items:
-            - PC - Steam
+            - ПК — Steam
           tags_items:
-            - Sports
-            - Basketball
-            - Online Co-Op
-            - Physics
+            - Спорт
+            - Баскетбол
+            - Сетевой кооператив
+            - Физика
             - PvP
-            - Arcade
-            - Party Game
-            - Character Customization
+            - Аркада
+            - Для компании
+            - Настройка персонажа
             - 3D
-            - First-Person
-            - Funny
-            - Team-Based
-            - Simulation
-            - Colorful
-            - Casual
-            - Stylized
-            - Co-op
-            - Multiplayer
-            - FPS
-            - Singleplayer
-
+            - От первого лица
+            - Юмор
+            - Командная игра
+            - Симулятор
+            - Красочная
+            - Казуальная
+            - Стилизация
+            - Кооператив
+            - Мультиплеер
+            - Шутер от первого лица
+            - Для одного игрока
         features:
           title: Особенности
           items:
@@ -656,7 +746,6 @@ localization:
             - Школьный двор, джунгли и Луна со своими механиками
             - Открываемые образы, косметика и эмоции
             - Приватные комнаты, включая матчи 5 на 1
-
         media:
           title: Медиа
           videos: Видео
@@ -664,17 +753,49 @@ localization:
           download: Все скриншоты · ZIP
           original: Оригинал ↗
           video_cards:
-            - title: Pre-view
+            - title: Обзор игрового процесса
               description: Геймплейный превью-ролик баскетбола от первого лица на основе физики.
               label: Смотреть на YouTube
-            - title: Reveal Trailer
-              description: Скоро.
+            - title: Анонсирующий трейлер
+              description: Скоро
               label: Скоро
+          items:
+            - title: Матч на школьном дворе
+              alt: Баскетбольный матч от первого лица на школьной площадке на закате.
+            - title: Бросок из-под кольца
+              alt: "Бросок из-под кольца от первого лица: мяч над кольцом на закате."
+            - title: Площадка в джунглях · 01
+              alt: Другой игрок на баскетбольной площадке в джунглях.
+            - title: Площадка в джунглях · 02
+              alt: Игрок, баскетбольный мяч и гигантское дерево на площадке в джунглях.
+            - title: Команда · 01
+              alt: Игроки собрались на открытой школьной площадке.
+            - title: Команда · 02
+              alt: Команда на школьной площадке, вид от первого лица.
+            - title: Лунная площадка
+              alt: Баскетбольная площадка на Луне, Земля в ночном небе.
+            - title: Магазин · 01
+              alt: Магазин одежды с прилавком, одеждой и баскетбольным кольцом.
+            - title: Магазин · 02
+              alt: Персонаж за прилавком магазина, на заднем плане одежда.
         branding:
-          title: Арт и логотипы
-          download: Скачать арт и логотип (.zip)
+          title: Иллюстрация и логотипы
+          download: Иллюстрация и логотип · ZIP
+          assets:
+            - title: Ключевая иллюстрация · JPG
+              alt: "Иллюстрация DUNK: игрок прыгает к кольцу на фоне голубого неба."
+            - title: Логотип DUNK · PNG
+              alt: Белый логотип DUNK на прозрачном фоне.
         links:
           title: Ссылки
+          items:
+            - TikTok
+            - YouTube
+            - Facebook
+            - Instagram
+            - X
+            - Сайт
+            - Пресс-кит
         team:
           title: Студия
           about_title: О Katapult Games
@@ -682,30 +803,47 @@ localization:
           boilerplate: >-
             Небольшая инди-студия видеоигр из Ирландии.
 
-            Мы Katapult Games, и мы создаем игры вместе с нашим сообществом, а
-            не только для него. Наша работа строится на прозрачности,
-            гибкости и любви к современным игровым трендам. Наша цель —
-            создавать энергичные мультиплеерные проекты, которые действительно
-            объединяют игроков. Мы хотим, чтобы вы не просто играли в наши
-            игры, а помогали нам их формировать. Welcome to the squad!
+            Мы Katapult Games, и мы создаем игры вместе с нашим сообществом, а не только
+            для него. Наша работа строится на прозрачности, гибкости и любви к современным
+            игровым трендам. Наша цель — создавать энергичные мультиплеерные проекты,
+            которые действительно объединяют игроков. Мы хотим, чтобы вы не просто играли
+            в наши игры, а помогали нам их формировать. Добро пожаловать в команду!
           credits_title: Команда
           credits: Katapult Games
         contact:
           title: Контакты
-          email: Email
-          bug_reports: Сообщить о баге
+          email: Электронная почта
+          bug_reports: Сообщить об ошибке
         privacy:
           label: Конфиденциальность
           title: Аналитика с уважением к конфиденциальности
-          body: >-
-            Мы используем аналитику, сохраняющую конфиденциальность, чтобы
-            понимать общую посещаемость и улучшать
-            этот пресс-кит. Мы не используем аналитические cookie, не
-            отслеживаем посетителей на разных сайтах, не создаём персональные
-            профили и не продаём данные посетителей. Мы собираем только
-            агрегированную информацию: просмотры страниц, источник перехода,
-            примерную страну, тип устройства, браузер и взаимодействия со
-            ссылками для прессы.
+          body: "Мы используем аналитику, сохраняющую конфиденциальность, чтобы понимать общую
+            посещаемость и улучшать этот пресс-кит. Мы не используем аналитические cookie,
+            не отслеживаем посетителей на разных сайтах, не создаём персональные профили и
+            не продаём данные посетителей. Мы собираем только агрегированную информацию:
+            просмотры страниц, источник перехода, примерную страну, тип устройства,
+            браузер и взаимодействия со ссылками для прессы."
+        page:
+          title: DUNK — Пресс-кит · Katapult Games
+          home_title: DUNK — Katapult Games
+        carousel:
+          label: Скриншоты DUNK
+          role: карусель
+          track: Галерея скриншотов; используйте стрелки влево и вправо
+          thumbnails: Выбрать скриншот
+          previous: Предыдущий скриншот
+          next: Следующий скриншот
+          slide: слайд
+          position: Скриншот {current} из {total}
+        viewer:
+          label: Просмотр скриншотов
+          close: Закрыть просмотр скриншотов
+        accessibility:
+          primary: Основное содержимое
+          navigation: Основная навигация
+          home: Главная Katapult Games
+          language: Выбрать язык
+          browse_assets: Посмотреть иллюстрацию и логотипы
     ja:
       description:
         heading: DUNKとは？
@@ -752,25 +890,24 @@ localization:
               気軽なバスケに、ちょっとした軽口はつきもの。近接チャット、アンロックできるコスメ、多彩なエモートで相手にアピールしよう。ただし、コートでも実力を証明することを忘れずに。
 
               オンラインでは、ソロ参加でもチームでも最大3対3で遊べます。5対1のプライベートロビーを作って、友達のアレックスがどこまで耐えられるか試そう！プレイヤーや仲間を探すなら、Discordに参加してください。
-
+        key_features_title: 特徴
       ui:
         landing:
           nav:
             home: ホーム
             about: 概要
             press: プレス
-          eyebrow: ゲームプレイリール
+          eyebrow: ゲームプレイ動画
           tagline: 1～6人で遊ぶ一人称視点バスケットボール。1対1から3対3まで。
-
-          play: ゲームプレイリールを見る
+          play: ゲームプレイ動画を見る
           close: 動画を閉じる
           fallback: YouTubeで開く
-          press_kit_cta: Press Kit
+          press_kit_cta: プレスキット
         nav:
           language: 言語
           menu: メニュー
           sections:
-            factsheet: ファクトシート
+            factsheet: 基本情報
             description: 説明
             features: 特徴
             media: スクリーンショット
@@ -779,19 +916,19 @@ localization:
             team: スタジオ
             contact: 連絡先
         factsheet:
-          title: ファクトシート
+          title: 基本情報
           labels:
             about: "概要:"
             location: "所在地:"
             development: "開発状況:"
-            publisher: "パブリッシャー:"
+            publisher: パブリッシャー：
             release_date: "発売日:"
             genres: "ジャンル:"
             platforms: "プラットフォーム:"
             cost: "価格:"
             steam: "Steam:"
-            trailer: "トレーラー:"
-            preview: "プレビュー:"
+            trailer: "発表トレーラー:"
+            preview: "ゲームプレイ紹介:"
             press_kit: "プレスキット:"
             website: "ウェブサイト:"
             tags: "タグ:"
@@ -800,41 +937,40 @@ localization:
             development: Katapult Gamesが現在開発中。
             based_in: アイルランド
             publisher: Katapult Games
-            cost: TBA
-            steam: https://store.steampowered.com/app/4591520/Squad_Dunk/
-            trailer: TBA
+            cost: 未定
+            steam: Steamで見る
+            trailer: 未定
             preview: https://youtu.be/3_ZVMG2Rg3g
-            press_kit: プレスキットリンクはこちら
+            press_kit: プレスキットを開く
           release_dates:
-            - TBA
+            - 未定
           genres_items:
             - インディー
             - シミュレーション
             - スポーツ
           platforms_items:
-            - PC - Steam
+            - PC — Steam
           tags_items:
-            - Sports
-            - Basketball
-            - Online Co-Op
-            - Physics
-            - PvP
-            - Arcade
-            - Party Game
-            - Character Customization
+            - スポーツ
+            - バスケットボール
+            - オンライン協力プレイ
+            - 物理演算
+            - 対人戦
+            - アーケード
+            - パーティーゲーム
+            - キャラクターカスタマイズ
             - 3D
-            - First-Person
-            - Funny
-            - Team-Based
-            - Simulation
-            - Colorful
-            - Casual
-            - Stylized
-            - Co-op
-            - Multiplayer
-            - FPS
-            - Singleplayer
-
+            - 一人称視点
+            - コメディ
+            - チーム制
+            - シミュレーション
+            - カラフル
+            - カジュアル
+            - スタイライズ
+            - 協力プレイ
+            - マルチプレイヤー
+            - 一人称シューティング
+            - シングルプレイヤー
         features:
           title: 特徴
           items:
@@ -846,45 +982,95 @@ localization:
             - 独自の仕掛けを持つ校庭、ジャングル、月のコート
             - アンロック可能な見た目、コスメ、エモート
             - 5対1を含むプライベートロビー
-
         media:
           title: メディア
           videos: 動画
           screenshots: スクリーンショット
           download: すべてのスクリーンショット · ZIP
-          original: オリジナル ↗
+          original: 元の画像 ↗
           video_cards:
-            - title: プレビュー
+            - title: ゲームプレイ紹介
               description: 物理ベースの一人称視点バスケットボールのゲームプレイプレビュー。
               label: YouTubeで見る
-            - title: リビールトレーラー
-              description: 近日公開。
+            - title: 発表トレーラー
+              description: 近日公開
               label: 近日公開
+          items:
+            - title: 校庭での試合
+              alt: 夕暮れの校庭で行われる一人称視点のバスケットボールの試合。
+            - title: レイアップ
+              alt: 夕暮れのリング上にボールが浮かぶ、一人称視点のレイアップ。
+            - title: ジャングルのコート · 01
+              alt: ジャングルのバスケットボールコートに立つ別のプレイヤー。
+            - title: ジャングルのコート · 02
+              alt: ジャングルのコートにいるプレイヤー、ボール、巨大な木。
+            - title: 仲間たち · 01
+              alt: 校庭の屋外コートに集まったプレイヤーたち。
+            - title: 仲間たち · 02
+              alt: 一人称視点で見た校庭のコートの仲間たち。
+            - title: 月のコート
+              alt: 夜空に地球が見える月面のバスケットボールコート。
+            - title: ショップ · 01
+              alt: カウンター、衣服、バスケットゴールがある服飾ショップ。
+            - title: ショップ · 02
+              alt: 衣服が並ぶショップでカウンターの奥に立つキャラクター。
         branding:
           title: キーアートとロゴ
-          download: キーアートとロゴをダウンロード (.zip)
+          download: キーアートとロゴ · ZIP
+          assets:
+            - title: キーアート · JPG
+              alt: DUNKのキーアート：青空を背景にゴールへ跳ぶプレイヤー。
+            - title: DUNKのロゴ · PNG
+              alt: 背景が透明な白いDUNKのロゴ。
         links:
           title: リンク
+          items:
+            - TikTok
+            - YouTube
+            - Facebook
+            - Instagram
+            - X
+            - 公式サイト
+            - プレスキット
         team:
           title: スタジオ
           about_title: Katapult Gamesについて
           boilerplate_title: 概要
-          boilerplate: >-
+          boilerplate: |-
             アイルランドを拠点とする小さなインディーゲームスタジオです。
-
-            私たちはKatapult Gamesです。私たちはコミュニティのためだけでなく、コミュニティと一緒にゲームを作ります。透明性、柔軟性、現代のゲームトレンドへの愛を大切にし、プレイヤーと本当に繋がる高エネルギーなマルチプレイヤー体験を目指しています。私たちはただ遊んでもらうだけでなく、一緒に形作ってほしいと考えています。Welcome to the squad!
+            私たちはKatapult Gamesです。私たちはコミュニティのためだけでなく、コミュニティと一緒にゲームを作ります。透明性、柔軟性、現代のゲームトレンドへの愛を大切にし、プレイヤーと本当に繋がる高エネルギーなマルチプレイヤー体験を目指しています。私たちはただ遊んでもらうだけでなく、一緒に形作ってほしいと考えています。チームへようこそ！
           credits_title: チーム
           credits: Katapult Games
         contact:
           title: 連絡先
           email: メール
-          bug_reports: バグ報告
+          bug_reports: 不具合を報告
         privacy:
           label: プライバシー
           title: プライバシーに配慮したアクセス解析
-          body: >-
-            このプレスキットでは、アクセス状況を集計して改善に役立てるため、プライバシーに配慮したアクセス解析を使用しています。解析用 Cookie
+          body: このプレスキットでは、アクセス状況を集計して改善に役立てるため、プライバシーに配慮したアクセス解析を使用しています。解析用 Cookie
             は使用せず、複数のウェブサイトにまたがる追跡、個人プロファイルの作成、訪問者データの販売も行いません。ページビュー、参照元、おおよその国、端末の種類、ブラウザ、プレス向けリンクのクリックなど、集計された情報のみを収集します。
+        page:
+          title: DUNK — プレスキット · Katapult Games
+          home_title: DUNK — Katapult Games
+        carousel:
+          label: DUNKのスクリーンショット
+          role: カルーセル
+          track: スクリーンショット一覧。左右の矢印キーで移動できます
+          thumbnails: スクリーンショットを選ぶ
+          previous: 前のスクリーンショット
+          next: 次のスクリーンショット
+          slide: スライド
+          position: スクリーンショット {current} / {total}
+        viewer:
+          label: スクリーンショットビューアー
+          close: ビューアーを閉じる
+        accessibility:
+          primary: メインコンテンツ
+          navigation: メインナビゲーション
+          home: Katapult Gamesのホーム
+          language: 言語を選ぶ
+          browse_assets: キーアートとロゴを見る
     zh:
       description:
         heading: DUNK 是什么？
@@ -931,47 +1117,46 @@ localization:
               没有几句朋友间的玩笑，还算什么街头篮球？近距离聊天、可解锁的外观和各种表情，让你能向对手炫耀，只要你准备好在球场上用实力证明自己。
 
               在线游玩随你选择，单独加入或组队都能参加最高3v3的比赛。创建5v1私人大厅，看看朋友Alex能撑多久！加入我们的Discord，寻找玩家和一起游玩的伙伴。
-
+        key_features_title: 游戏特色
       ui:
         landing:
           nav:
             home: 首页
             about: 关于
             press: 媒体
-          eyebrow: 游戏玩法视频
+          eyebrow: 游戏实机视频
           tagline: 支持1–6人的第一人称篮球。从1v1到3v3。
-
-          play: 观看游戏玩法视频
+          play: 观看实机视频
           close: 关闭视频
           fallback: 在 YouTube 打开
-          press_kit_cta: Press Kit
+          press_kit_cta: 媒体资料包
         nav:
           language: 语言
           menu: 菜单
           sections:
-            factsheet: 信息概览
+            factsheet: 游戏信息
             description: 游戏介绍
-            features: 特色
+            features: 游戏特色
             media: 截图
             branding: 主视觉与标志
-            links: 链接
+            links: 相关链接
             team: 工作室
             contact: 联系方式
         factsheet:
-          title: 信息概览
+          title: 游戏信息
           labels:
             about: "关于:"
-            location: "所在地："
+            location: 所在地：
             development: "开发状态:"
-            publisher: "发行商:"
+            publisher: 发行商：
             release_date: "发行日期:"
             genres: "类型:"
             platforms: "平台:"
             cost: "价格:"
             steam: "Steam:"
-            trailer: "预告片:"
-            preview: "Pre-view:"
-            press_kit: "Press Kit:"
+            trailer: "公布预告片:"
+            preview: "玩法预览:"
+            press_kit: "媒体资料包:"
             website: "网站:"
             tags: "标签:"
           values:
@@ -979,43 +1164,42 @@ localization:
             development: 由 Katapult Games 积极开发中。
             based_in: 爱尔兰
             publisher: Katapult Games
-            cost: TBA
-            steam: https://store.steampowered.com/app/4591520/Squad_Dunk/
-            trailer: TBA
+            cost: 待公布
+            steam: 在 Steam 查看
+            trailer: 待公布
             preview: https://youtu.be/3_ZVMG2Rg3g
-            press_kit: 打开 Press Kit
+            press_kit: 打开媒体资料包
           release_dates:
-            - TBA
+            - 待公布
           genres_items:
             - 独立
             - 模拟
             - 体育
           platforms_items:
-            - PC - Steam
+            - 电脑 — Steam
           tags_items:
-            - Sports
-            - Basketball
-            - Online Co-Op
-            - Physics
-            - PvP
-            - Arcade
-            - Party Game
-            - Character Customization
+            - 体育
+            - 篮球
+            - 在线合作
+            - 物理
+            - 玩家对战
+            - 街机
+            - 派对游戏
+            - 角色自定义
             - 3D
-            - First-Person
-            - Funny
-            - Team-Based
-            - Simulation
-            - Colorful
-            - Casual
-            - Stylized
-            - Co-op
-            - Multiplayer
-            - FPS
-            - Singleplayer
-
+            - 第一人称
+            - 欢乐
+            - 团队制
+            - 模拟
+            - 色彩丰富
+            - 休闲
+            - 风格化
+            - 合作
+            - 多人
+            - 第一人称射击
+            - 单人
         features:
-          title: 特色
+          title: 游戏特色
           items:
             - 支持1–6人的第一人称篮球
             - 1v1至3v3在线比赛
@@ -1025,67 +1209,117 @@ localization:
             - 具有独特机制的校园、丛林和月球球场
             - 可解锁的造型、外观和表情
             - 私人大厅，支持5v1比赛
-
         media:
           title: 媒体
           videos: 视频
           screenshots: 截图
           download: 全部截图 · ZIP
-          original: 原图 ↗
+          original: 原始图片 ↗
           video_cards:
-            - title: Pre-view
+            - title: 玩法预览
               description: 基于物理的第一人称篮球游戏玩法预览。
               label: 在 YouTube 观看
-            - title: Reveal Trailer
-              description: 即将公开。
+            - title: 公布预告片
+              description: 即将公开
               label: 即将公开
+          items:
+            - title: 校园比赛
+              alt: 夕阳下校园球场上的第一人称篮球比赛。
+            - title: 上篮
+              alt: 夕阳下的一次第一人称上篮，篮球位于篮筐上方。
+            - title: 丛林球场 · 01
+              alt: 丛林篮球场上的另一名玩家。
+            - title: 丛林球场 · 02
+              alt: 丛林球场上的玩家、篮球和巨树。
+            - title: 队友们 · 01
+              alt: 聚集在校园室外球场上的玩家。
+            - title: 队友们 · 02
+              alt: 第一人称视角下校园球场上的队友们。
+            - title: 月球球场
+              alt: 夜空中能看到地球的月球篮球场。
+            - title: 商店 · 01
+              alt: 设有柜台、服装和篮球架的服装商店。
+            - title: 商店 · 02
+              alt: 角色站在商店柜台后方，背景中陈列着服装。
         branding:
           title: 主视觉与标志
-          download: 下载主视觉与标志 (.zip)
+          download: 主视觉与标志 · ZIP
+          assets:
+            - title: 主视觉 · JPG
+              alt: DUNK主视觉：一名球员在蓝天下跃向篮筐。
+            - title: DUNK标志 · PNG
+              alt: 透明背景上的白色DUNK标志。
         links:
-          title: 链接
+          title: 相关链接
+          items:
+            - TikTok
+            - YouTube
+            - Facebook
+            - Instagram
+            - X
+            - 官方网站
+            - 媒体资料包
         team:
           title: 工作室
           about_title: 关于 Katapult Games
           boilerplate_title: 关于
-          boilerplate: >-
+          boilerplate: |-
             一个位于爱尔兰的小型独立游戏工作室。
-
-            我们是 Katapult Games，我们不是只为社区制作游戏，而是与社区一起制作游戏。我们重视透明、灵活和现代游戏趋势，目标是打造真正连接玩家的高能多人体验。我们不只希望你玩我们的游戏，也希望你帮助我们一起塑造它们。Welcome to the squad!
+            我们是 Katapult Games，我们不是只为社区制作游戏，而是与社区一起制作游戏。我们重视透明、灵活和现代游戏趋势，目标是打造真正连接玩家的高能多人体验。我们不只希望你玩我们的游戏，也希望你帮助我们一起塑造它们。欢迎加入队伍！
           credits_title: 团队
           credits: Katapult Games
         contact:
           title: 联系方式
-          email: Email
-          bug_reports: 提交 Bug
+          email: 电子邮件
+          bug_reports: 报告问题
         privacy:
           label: 隐私
           title: 尊重隐私的访问分析
-          body: >-
-            我们使用注重隐私的访问分析来了解汇总访问情况并改进本新闻资料包。我们不使用分析
+          body: 我们使用注重隐私的访问分析来了解汇总访问情况并改进本新闻资料包。我们不使用分析
             Cookie，不跨网站跟踪访客，不建立个人档案，也不出售访客数据。我们只收集页面浏览量、来源网站、大致国家或地区、设备类型、浏览器以及新闻链接点击情况等汇总信息。
+        page:
+          title: DUNK — 媒体资料包 · Katapult Games
+          home_title: DUNK — Katapult Games
+        carousel:
+          label: DUNK游戏截图
+          role: 轮播
+          track: 截图图库；使用左右方向键浏览
+          thumbnails: 选择截图
+          previous: 上一张截图
+          next: 下一张截图
+          slide: 幻灯片
+          position: 第 {current} 张截图，共 {total} 张
+        viewer:
+          label: 截图查看器
+          close: 关闭截图查看器
+        accessibility:
+          primary: 主要内容
+          navigation: 主导航
+          home: Katapult Games首页
+          language: 选择语言
+          browse_assets: 查看主视觉和标志
     de:
       description:
         heading: WAS IST DUNK?
         short:
           title: KURZBESCHREIBUNG
-          text: Ein First-Person-Basketballspiel für 1–6 Spieler, bei dem jeder
-            physikbasierte Pass, Block und DUNK auf Können ankommt. Entdecke
-            einzigartige Courts im ganzen Universum, quatsche im Proximity-Chat oder
-            feile im Solospiel an deinen Fähigkeiten. Schalte neue Looks, Emotes und
-            mehr frei, um vor deinen Freunden anzugeben!
+          text: Ein First-Person-Basketballspiel für 1–6 Spieler, bei dem jeder physikbasierte Pass,
+            Block und DUNK auf Können ankommt. Entdecke einzigartige Courts im ganzen
+            Universum, quatsche im Proximity-Chat oder feile im Solospiel an deinen
+            Fähigkeiten. Schalte neue Looks, Emotes und mehr frei, um vor deinen Freunden
+            anzugeben!
         long:
           title: LANGE BESCHREIBUNG
           paragraphs:
             - "First-Person-Basketball für 1–6 Spieler in Matches von 1v1 bis 3v3.
-              Verbring Zeit mit Freunden im Proximity-Chat oder lass dein Können
-              sprechen: abfangen, tackeln, passen und DUNK."
+              Verbring Zeit mit Freunden im Proximity-Chat oder lass dein Können sprechen:
+              abfangen, tackeln, passen und DUNK."
         keyFeaturesTitle: Hauptfeatures
         keyFeatures:
           - icon: ""
             title: SPIEL DIREKT VOM COURT
-            body: Steuere einen Spieler in der First-Person-Perspektive und erlebe das Match
-              mitten aus der Action heraus, nicht aus einer entfernten Kamera.
+            body: Steuere einen Spieler in der First-Person-Perspektive und erlebe das Match mitten
+              aus der Action heraus, nicht aus einer entfernten Kamera.
           - icon: ""
             title: SPÜRE DIE PHYSIK
             body: Physikbasierte Mechaniken machen Basketball lebendiger, körperlicher und
@@ -1093,26 +1327,24 @@ localization:
               werden Teil jedes Moments.
           - icon: ""
             title: SPIEL ALS TEAM
-            body: Spiele solo oder mit Freundinnen und Freunden in lockeren oder kompetitiven
-              Matches. Arbeitet zusammen und verwandelt fragwürdige Ideen in echte
-              Spielzüge.
+            body: Spiele solo oder mit Freundinnen und Freunden in lockeren oder kompetitiven Matches.
+              Arbeitet zusammen und verwandelt fragwürdige Ideen in echte Spielzüge.
           - icon: ""
             title: JEDER COURT VERÄNDERT DAS SPIEL
-            body: Jeder Court bringt eigene Twists, Mechaniken und Umgebungen mit, an die sich
-              Teams auf unterschiedliche Weise anpassen müssen.
+            body: Jeder Court bringt eigene Twists, Mechaniken und Umgebungen mit, an die sich Teams
+              auf unterschiedliche Weise anpassen müssen.
           - icon: ""
             title: PASSE DEINEN CHARAKTER AN
-            body: Erstelle deinen Look, baue eine Squad-Identität auf und gib deinem Team
-              einen eigenen Stil.
+            body: Erstelle deinen Look, baue eine Squad-Identität auf und gib deinem Team einen
+              eigenen Stil.
         key_features:
           - icon: ""
             title: Ab auf den Court
             body: >-
-              Erlebe First-Person-Basketball, das leicht zugänglich und schwer zu
-              meistern ist – für jedes Spielniveau. Lerne, deine Würfe zu timen, den
-              richtigen Pass zu wählen und den Ball zu stehlen. Oder stürz dich mit
-              deinen Freunden ins Chaos. Aus „Wie ist der denn reingegangen?“ wird „Das
-              war absolut geplant“.
+              Erlebe First-Person-Basketball, das leicht zugänglich und schwer zu meistern
+              ist – für jedes Spielniveau. Lerne, deine Würfe zu timen, den richtigen Pass
+              zu wählen und den Ball zu stehlen. Oder stürz dich mit deinen Freunden ins
+              Chaos. Aus „Wie ist der denn reingegangen?“ wird „Das war absolut geplant“.
 
 
               Starke Teams lassen ihre inneren Bulls raus und lernen, gemeinsam
@@ -1132,43 +1364,40 @@ localization:
             title: Freundschaftlicher Wettkampf
             body: >-
               Was wäre eine Runde Basketball ohne freundschaftliche Sticheleien?
-              Proximity-Chat, freischaltbare Kosmetik und verschiedene Emotes lassen
-              dich vor Gegnern angeben – solange du es auf dem Court auch beweisen
-              kannst.
+              Proximity-Chat, freischaltbare Kosmetik und verschiedene Emotes lassen dich
+              vor Gegnern angeben – solange du es auf dem Court auch beweisen kannst.
 
 
-              Spiele online nach deinen Wünschen: allein oder als Team in Matches bis
-              3v3. Erstelle eine private 5v1-Lobby und finde heraus, wie lange dein
-              Freund Alex durchhält! In unserem Discord findest du Mitspieler und eine
-              Community.
-
+              Spiele online nach deinen Wünschen: allein oder als Team in Matches bis 3v3.
+              Erstelle eine private 5v1-Lobby und finde heraus, wie lange dein Freund Alex
+              durchhält! In unserem Discord findest du Mitspieler und eine Community.
+        key_features_title: Spielmerkmale
       ui:
         landing:
           nav:
-            home: Home
+            home: Startseite
             about: Über das Spiel
             press: Presse
-          eyebrow: Gameplay-Reel
+          eyebrow: Spielvideo
           tagline: First-Person-Basketball für 1–6 Spieler. Von 1v1 bis 3v3.
-
-          play: Gameplay-Reel ansehen
+          play: Spielvideo ansehen
           close: Video schließen
           fallback: Auf YouTube öffnen
-          press_kit_cta: Press Kit
+          press_kit_cta: Pressemappe
         nav:
           language: Sprache
           menu: Menü
           sections:
-            factsheet: Factsheet
+            factsheet: Datenblatt
             description: Beschreibung
-            features: Features
+            features: Spielmerkmale
             media: Screenshots
-            branding: Key Art & Logos
+            branding: Illustration und Logos
             links: Links
             team: Studio
             contact: Kontakt
         factsheet:
-          title: Factsheet
+          title: Datenblatt
           labels:
             about: "Über:"
             location: "Standort:"
@@ -1179,9 +1408,9 @@ localization:
             platforms: "Plattformen:"
             cost: "Preis:"
             steam: "Steam:"
-            trailer: "Trailer:"
-            preview: "Pre-view:"
-            press_kit: "Press Kit:"
+            trailer: "Ankündigungstrailer:"
+            preview: "Spielvorschau:"
+            press_kit: "Pressemappe:"
             website: "Website:"
             tags: "Tags:"
           values:
@@ -1189,43 +1418,42 @@ localization:
             development: In aktiver Entwicklung bei Katapult Games.
             based_in: Irland
             publisher: Katapult Games
-            cost: TBA
-            steam: https://store.steampowered.com/app/4591520/Squad_Dunk/
-            trailer: TBA
+            cost: Wird noch bekannt gegeben
+            steam: Auf Steam ansehen
+            trailer: Wird noch bekannt gegeben
             preview: https://youtu.be/3_ZVMG2Rg3g
-            press_kit: Hier zum Press-Kit-Link
+            press_kit: Pressemappe öffnen
           release_dates:
-            - TBA
+            - Wird noch bekannt gegeben
           genres_items:
             - Indie
             - Simulation
             - Sport
           platforms_items:
-            - PC - Steam
+            - PC — Steam
           tags_items:
-            - Sports
+            - Sport
             - Basketball
-            - Online Co-Op
-            - Physics
+            - Online-Koop
+            - Physik
             - PvP
             - Arcade
-            - Party Game
-            - Character Customization
+            - Partyspiel
+            - Charakteranpassung
             - 3D
-            - First-Person
-            - Funny
-            - Team-Based
+            - Egoperspektive
+            - Lustig
+            - Teambasiert
             - Simulation
-            - Colorful
-            - Casual
-            - Stylized
-            - Co-op
-            - Multiplayer
-            - FPS
-            - Singleplayer
-
+            - Farbenfroh
+            - Gelegenheitsspiel
+            - Stilisiert
+            - Koop
+            - Mehrspieler
+            - Ego-Shooter
+            - Einzelspieler
         features:
-          title: Features
+          title: Spielmerkmale
           items:
             - First-Person-Basketball für 1–6 Spieler
             - Online-Matches von 1v1 bis 3v3
@@ -1235,7 +1463,6 @@ localization:
             - Schulhof-, Dschungel- und Mond-Courts mit eigenen Mechaniken
             - Freischaltbare Looks, Kosmetik und Emotes
             - Private Lobbys, einschließlich 5v1-Matches
-
         media:
           title: Medien
           videos: Videos
@@ -1243,17 +1470,49 @@ localization:
           download: Alle Screenshots · ZIP
           original: Original ↗
           video_cards:
-            - title: Pre-view
+            - title: Spielvorschau
               description: Physikbasierte First-Person-Basketball-Gameplay-Preview.
               label: Auf YouTube ansehen
-            - title: Reveal-Trailer
-              description: Bald verfügbar.
-              label: Bald verfügbar
+            - title: Ankündigungstrailer
+              description: Demnächst
+              label: Demnächst
+          items:
+            - title: Match auf dem Schulhof
+              alt: Basketball aus der Ich-Perspektive auf einem Schulhof bei Sonnenuntergang.
+            - title: Korbleger
+              alt: Ein Korbleger aus der Ich-Perspektive, der Ball schwebt über dem Korb.
+            - title: Dschungel-Court · 01
+              alt: Ein anderer Spieler auf dem Basketball-Court im Dschungel.
+            - title: Dschungel-Court · 02
+              alt: Ein Spieler, ein Basketball und ein riesiger Baum auf dem Dschungel-Court.
+            - title: Das Team · 01
+              alt: Spieler versammeln sich auf dem Basketball-Court auf dem Schulhof.
+            - title: Das Team · 02
+              alt: Das Team auf dem Schulhof-Court aus der Ich-Perspektive.
+            - title: Mond-Court
+              alt: Ein Basketball-Court auf dem Mond mit der Erde am Nachthimmel.
+            - title: Laden · 01
+              alt: Ein Bekleidungsladen mit Theke, Kleidung und Basketballkorb.
+            - title: Laden · 02
+              alt: Eine Figur hinter der Ladentheke, mit Kleidung im Hintergrund.
         branding:
-          title: Key Art & Logos
-          download: Key Art und Logo herunterladen (.zip)
+          title: Illustration und Logos
+          download: Illustration und Logo · ZIP
+          assets:
+            - title: Hauptillustration · JPG
+              alt: "DUNK-Illustration: Ein Spieler springt vor blauem Himmel zum Korb."
+            - title: DUNK-Logo · PNG
+              alt: Weißes DUNK-Logo auf transparentem Hintergrund.
         links:
           title: Links
+          items:
+            - TikTok
+            - YouTube
+            - Facebook
+            - Instagram
+            - X
+            - Website
+            - Pressemappe
         team:
           title: Studio
           about_title: Über Katapult Games
@@ -1261,80 +1520,96 @@ localization:
           boilerplate: >-
             Ein kleines Indie-Videospielstudio mit Sitz in Irland.
 
-            Wir sind Katapult Games und wir entwickeln Spiele mit unserer
-            Community, nicht nur für sie. Angetrieben von Transparenz,
-            Flexibilität und einer Liebe für moderne Gaming-Trends wollen wir
-            energiegeladene Multiplayer-Erlebnisse schaffen, die Spielerinnen
-            und Spieler wirklich verbinden. Wir möchten nicht nur, dass ihr
-            unsere Spiele spielt, sondern dass ihr helft, sie mitzugestalten.
-            Welcome to the squad!
+            Wir sind Katapult Games und wir entwickeln Spiele mit unserer Community, nicht
+            nur für sie. Angetrieben von Transparenz, Flexibilität und einer Liebe für
+            moderne Gaming-Trends wollen wir energiegeladene Multiplayer-Erlebnisse
+            schaffen, die Spielerinnen und Spieler wirklich verbinden. Wir möchten nicht
+            nur, dass ihr unsere Spiele spielt, sondern dass ihr helft, sie
+            mitzugestalten. Willkommen im Team!
           credits_title: Team
           credits: Katapult Games
         contact:
           title: Kontakt
           email: E-Mail
-          bug_reports: Bug Reports
+          bug_reports: Fehler melden
         privacy:
           label: Datenschutz
           title: Datenschutzfreundliche Analyse
-          body: >-
-            Wir verwenden datenschutzfreundliche Analysen, um aggregierte
-            Zugriffe zu verstehen und dieses
-            Pressekit zu verbessern. Wir verwenden keine Analyse-Cookies,
-            verfolgen Besucher nicht über verschiedene Websites hinweg,
-            erstellen keine persönlichen Profile und verkaufen keine
-            Besucherdaten. Wir erfassen aggregierte Informationen wie
-            Seitenaufrufe, Verweisquelle, ungefähres Land, Gerätetyp, Browser
-            und Interaktionen mit Presselinks.
+          body: Wir verwenden datenschutzfreundliche Analysen, um aggregierte Zugriffe zu verstehen
+            und dieses Pressekit zu verbessern. Wir verwenden keine Analyse-Cookies,
+            verfolgen Besucher nicht über verschiedene Websites hinweg, erstellen keine
+            persönlichen Profile und verkaufen keine Besucherdaten. Wir erfassen
+            aggregierte Informationen wie Seitenaufrufe, Verweisquelle, ungefähres Land,
+            Gerätetyp, Browser und Interaktionen mit Presselinks.
+        page:
+          title: DUNK — Pressemappe · Katapult Games
+          home_title: DUNK — Katapult Games
+        carousel:
+          label: DUNK-Screenshots
+          role: Karussell
+          track: Bildergalerie; mit den Pfeiltasten nach links und rechts navigieren
+          thumbnails: Screenshot auswählen
+          previous: Vorheriger Screenshot
+          next: Nächster Screenshot
+          slide: Bild
+          position: Screenshot {current} von {total}
+        viewer:
+          label: Screenshot-Ansicht
+          close: Screenshot-Ansicht schließen
+        accessibility:
+          primary: Hauptinhalt
+          navigation: Hauptnavigation
+          home: Katapult Games Startseite
+          language: Sprache auswählen
+          browse_assets: Illustration und Logos ansehen
     fr:
       description:
         heading: QU'EST-CE QUE DUNK ?
         short:
           title: DESCRIPTION COURTE
-          text: Un jeu de basket à la première personne pour 1 à 6 joueurs où chaque passe,
-            contre et DUNK basé sur la physique dépend de votre talent. Explorez des
-            terrains uniques à travers l’univers, discutez via le chat de proximité ou
-            perfectionnez votre jeu en solo. Débloquez des looks, des emotes et bien
+          text: Un jeu de basket à la première personne pour 1 à 6 joueurs où chaque passe, contre
+            et DUNK basé sur la physique dépend de votre talent. Explorez des terrains
+            uniques à travers l’univers, discutez via le chat de proximité ou
+            perfectionnez votre jeu en solo. Débloquez des apparences, des gestes et bien
             plus pour frimer devant vos amis !
         long:
           title: DESCRIPTION LONGUE
           paragraphs:
-            - "Un jeu de basket à la première personne pour 1 à 6 joueurs, dans des
-              matchs de 1v1 à 3v3. Retrouvez vos amis via le chat de proximité ou
-              laissez votre talent parler : interceptez, bousculez, passez et DUNK."
+            - "Un jeu de basket à la première personne pour 1 à 6 joueurs, dans des matchs
+              de 1v1 à 3v3. Retrouvez vos amis via le chat de proximité ou laissez votre
+              talent parler : interceptez, bousculez, passez et DUNK."
         keyFeaturesTitle: Points clés
         keyFeatures:
           - icon: ""
             title: JOUEZ DEPUIS LE TERRAIN
-            body: Contrôlez un joueur en première personne et vivez le match depuis
-              l'intérieur de l'action, pas depuis une caméra éloignée.
+            body: Contrôlez un joueur en première personne et vivez le match depuis l'intérieur de
+              l'action, pas depuis une caméra éloignée.
           - icon: ""
             title: RESSENTEZ LA PHYSIQUE
-            body: DUNK utilise des mécaniques basées sur la physique pour rendre le basket
-              plus vivant, plus physique et plus imprévisible. Contres, tirs,
-              interceptions, rebonds, mouvements et contacts font partie de chaque
-              moment.
+            body: DUNK utilise des mécaniques basées sur la physique pour rendre le basket plus
+              vivant, plus physique et plus imprévisible. Contres, tirs, interceptions,
+              rebonds, mouvements et contacts font partie de chaque moment.
           - icon: ""
             title: JOUEZ EN ÉQUIPE
-            body: Jouez en solo ou avec des amis dans des matchs casual ou compétitifs.
-              Coopérez et transformez des idées discutables en vraies actions de jeu.
+            body: Jouez en solo ou avec des amis dans des matchs casual ou compétitifs. Coopérez et
+              transformez des idées discutables en vraies actions de jeu.
           - icon: ""
             title: CHAQUE TERRAIN CHANGE LE JEU
-            body: Chaque terrain ajoute son propre twist, avec des mécaniques et des
-              environnements qui obligent les équipes à s'adapter.
+            body: Chaque terrain ajoute son propre twist, avec des mécaniques et des environnements
+              qui obligent les équipes à s'adapter.
           - icon: ""
             title: PERSONNALISEZ VOTRE PERSONNAGE
-            body: Créez votre look, construisez l'identité de votre squad et donnez un style
-              propre à votre équipe.
+            body: Créez votre look, construisez l'identité de votre squad et donnez un style propre à
+              votre équipe.
         key_features:
           - icon: ""
             title: À vous de jouer
             body: >-
               Profitez d’un basket à la première personne facile à prendre en main et
-              difficile à maîtriser, quel que soit votre niveau. Apprenez à choisir le
-              bon moment pour tirer, la bonne passe et à voler le ballon, ou semez le
-              chaos avec vos amis. Passez de « Comment c’est rentré ? » à « C’était
-              totalement calculé ».
+              difficile à maîtriser, quel que soit votre niveau. Apprenez à choisir le bon
+              moment pour tirer, la bonne passe et à voler le ballon, ou semez le chaos
+              avec vos amis. Passez de « Comment c’est rentré ? » à « C’était totalement
+              calculé ».
 
 
               Les meilleures équipes feront ressortir les Bulls qui sommeillent en elles
@@ -1348,40 +1623,39 @@ localization:
               gravité lunaire pour prendre l’avantage.
 
 
-              Certains terrains cachent peut-être d’autres secrets à découvrir.
-              Qu’attend donc ce singe dans la jungle ?
+              Certains terrains cachent peut-être d’autres secrets à découvrir. Qu’attend
+              donc ce singe dans la jungle ?
           - icon: ""
             title: Une compétition amicale
             body: >-
               Que serait une partie de basket entre amis sans quelques taquineries ? Le
-              chat de proximité, les cosmétiques à débloquer et les emotes vous
-              permettent de frimer face à vos adversaires, à condition d’assumer sur le
-              terrain et de vous faire un nom.
+              chat de proximité, les cosmétiques à débloquer et les gestes vous permettent
+              de frimer face à vos adversaires, à condition d’assumer sur le terrain et de
+              vous faire un nom.
 
 
-              Jouez en ligne comme vous voulez, seul ou en équipe, dans des matchs
-              jusqu’à 3v3. Créez un salon privé 5v1 et voyez combien de temps votre ami
-              Alex tient le coup ! Rejoignez notre Discord pour trouver des joueurs et
-              une communauté.
-
+              Jouez en ligne comme vous voulez, seul ou en équipe, dans des matchs jusqu’à
+              3v3. Créez un salon privé 5v1 et voyez combien de temps votre ami Alex tient
+              le coup ! Rejoignez notre Discord pour trouver des joueurs et une
+              communauté.
+        key_features_title: Fonctionnalités
       ui:
         landing:
           nav:
             home: Accueil
             about: À propos
             press: Presse
-          eyebrow: Vidéo de gameplay
+          eyebrow: Vidéo de jeu
           tagline: Du basket à la première personne pour 1 à 6 joueurs. Du 1v1 au 3v3.
-
-          play: Regarder le gameplay reel
+          play: Regarder la vidéo de jeu
           close: Fermer la vidéo
           fallback: Ouvrir sur YouTube
-          press_kit_cta: Press Kit
+          press_kit_cta: Dossier de presse
         nav:
           language: Langue
           menu: Menu
           sections:
-            factsheet: Factsheet
+            factsheet: Fiche technique
             description: Description
             features: Fonctionnalités
             media: Captures d'écran
@@ -1390,7 +1664,7 @@ localization:
             team: Studio
             contact: Contact
         factsheet:
-          title: Factsheet
+          title: Fiche technique
           labels:
             about: "À propos :"
             location: "Pays :"
@@ -1401,9 +1675,9 @@ localization:
             platforms: "Plateformes :"
             cost: "Prix :"
             steam: "Steam :"
-            trailer: "Trailer :"
-            preview: "Pre-view :"
-            press_kit: "Press Kit :"
+            trailer: "Bande-annonce de présentation:"
+            preview: "Aperçu du jeu:"
+            press_kit: "Dossier de presse:"
             website: "Site web :"
             tags: "Tags:"
           values:
@@ -1411,41 +1685,40 @@ localization:
             development: En développement actif chez Katapult Games.
             based_in: Irlande
             publisher: Katapult Games
-            cost: TBA
-            steam: https://store.steampowered.com/app/4591520/Squad_Dunk/
-            trailer: TBA
+            cost: À annoncer
+            steam: Voir sur Steam
+            trailer: À annoncer
             preview: https://youtu.be/3_ZVMG2Rg3g
-            press_kit: Ouvrir le Press Kit
+            press_kit: Ouvrir le dossier de presse
           release_dates:
-            - TBA
+            - À annoncer
           genres_items:
             - Indépendant
             - Simulation
             - Sport
           platforms_items:
-            - PC - Steam
+            - PC — Steam
           tags_items:
-            - Sports
-            - Basketball
-            - Online Co-Op
-            - Physics
-            - PvP
+            - Sport
+            - Basket-ball
+            - Coopération en ligne
+            - Physique
+            - JcJ
             - Arcade
-            - Party Game
-            - Character Customization
+            - Jeu de groupe
+            - Personnalisation de personnage
             - 3D
-            - First-Person
-            - Funny
-            - Team-Based
+            - Première personne
+            - Humour
+            - En équipe
             - Simulation
-            - Colorful
-            - Casual
-            - Stylized
-            - Co-op
-            - Multiplayer
-            - FPS
-            - Singleplayer
-
+            - Coloré
+            - Occasionnel
+            - Stylisé
+            - Coopération
+            - Multijoueur
+            - Jeu de tir à la première personne
+            - Solo
         features:
           title: Fonctionnalités
           items:
@@ -1455,27 +1728,59 @@ localization:
             - Jeu en solo pour perfectionner votre technique
             - Chat de proximité
             - Terrains d’école, de jungle et lunaires aux mécaniques propres
-            - Looks, cosmétiques et emotes à débloquer
+            - Apparences, cosmétiques et gestes à débloquer
             - Salons privés, dont des matchs 5v1
-
         media:
           title: Médias
           videos: Vidéos
           screenshots: Captures d'écran
           download: Toutes les captures · ZIP
-          original: Original ↗
+          original: Fichier original ↗
           video_cards:
-            - title: Pre-view
+            - title: Aperçu du jeu
               description: Aperçu gameplay de basket en première personne basé sur la physique.
               label: Regarder sur YouTube
-            - title: Reveal Trailer
-              description: Bientôt disponible.
-              label: Bientôt disponible
+            - title: Bande-annonce de présentation
+              description: Prochainement
+              label: Prochainement
+          items:
+            - title: Match dans la cour d’école
+              alt: Match de basket à la première personne dans une cour d’école au coucher du soleil.
+            - title: Tir en course
+              alt: Un tir en course à la première personne, avec le ballon au-dessus du panier.
+            - title: Terrain de jungle · 01
+              alt: Un autre joueur sur le terrain de basket de la jungle.
+            - title: Terrain de jungle · 02
+              alt: Un joueur, un ballon et un arbre géant sur le terrain de la jungle.
+            - title: L’équipe · 01
+              alt: Des joueurs réunis sur le terrain extérieur de l’école.
+            - title: L’équipe · 02
+              alt: L’équipe sur le terrain de l’école, vue à la première personne.
+            - title: Terrain lunaire
+              alt: Un terrain de basket sur la Lune, avec la Terre dans le ciel nocturne.
+            - title: Boutique · 01
+              alt: Une boutique de vêtements avec un comptoir, des habits et un panier de basket.
+            - title: Boutique · 02
+              alt: Un personnage derrière le comptoir de la boutique, avec des vêtements en
+                arrière-plan.
         branding:
           title: Visuels et logos
-          download: Télécharger le visuel et le logo (.zip)
+          download: Visuel et logo · ZIP
+          assets:
+            - title: Visuel principal · JPG
+              alt: "Visuel de DUNK : un joueur saute vers le panier sous un ciel bleu."
+            - title: Logo DUNK · PNG
+              alt: Logo blanc de DUNK sur fond transparent.
         links:
           title: Liens
+          items:
+            - TikTok
+            - YouTube
+            - Facebook
+            - Instagram
+            - X
+            - Site officiel
+            - Dossier de presse
         team:
           title: Studio
           about_title: À propos de Katapult Games
@@ -1483,32 +1788,49 @@ localization:
           boilerplate: >-
             Un petit studio indépendant de jeux vidéo basé en Irlande.
 
-            Nous sommes Katapult Games et nous créons des jeux avec notre
-            communauté, pas seulement pour elle. Portés par la transparence, la
-            flexibilité et l'amour des tendances actuelles du jeu vidéo, notre
-            mission est de créer des expériences multijoueur énergiques qui
-            connectent vraiment les joueurs. Nous ne voulons pas seulement que
-            vous jouiez à nos jeux : nous voulons que vous nous aidiez à les
-            façonner. Welcome to the squad!
+            Nous sommes Katapult Games et nous créons des jeux avec notre communauté, pas
+            seulement pour elle. Portés par la transparence, la flexibilité et l'amour des
+            tendances actuelles du jeu vidéo, notre mission est de créer des expériences
+            multijoueur énergiques qui connectent vraiment les joueurs. Nous ne voulons
+            pas seulement que vous jouiez à nos jeux : nous voulons que vous nous aidiez à
+            les façonner. Bienvenue dans l’équipe !
           credits_title: Équipe
           credits: Katapult Games
         contact:
           title: Contact
-          email: Email
-          bug_reports: Signaler un bug
+          email: Adresse e-mail
+          bug_reports: Signaler un problème
         privacy:
           label: Confidentialité
           title: Analyse respectueuse de la vie privée
-          body: >-
-            Nous utilisons une analyse respectueuse de la vie privée afin de
-            comprendre le trafic agrégé
-            et d'améliorer ce press kit. Nous n'utilisons pas de cookies
-            d'analyse, ne suivons pas les visiteurs d'un site à l'autre, ne
-            créons pas de profils personnels et ne vendons pas les données des
-            visiteurs. Nous recueillons des informations agrégées telles que
-            les pages vues, la source de référence, le pays approximatif, le
-            type d'appareil, le navigateur et les interactions avec les liens
-            presse.
+          body: Nous utilisons une analyse respectueuse de la vie privée afin de comprendre le
+            trafic agrégé et d'améliorer ce dossier de presse. Nous n'utilisons pas de
+            cookies d'analyse, ne suivons pas les visiteurs d'un site à l'autre, ne créons
+            pas de profils personnels et ne vendons pas les données des visiteurs. Nous
+            recueillons des informations agrégées telles que les pages vues, la source de
+            référence, le pays approximatif, le type d'appareil, le navigateur et les
+            interactions avec les liens presse.
+        page:
+          title: DUNK — Dossier de presse · Katapult Games
+          home_title: DUNK — Katapult Games
+        carousel:
+          label: Captures de DUNK
+          role: carrousel
+          track: Galerie de captures ; utilisez les flèches gauche et droite du clavier
+          thumbnails: Choisir une capture
+          previous: Capture précédente
+          next: Capture suivante
+          slide: diapositive
+          position: Capture {current} sur {total}
+        viewer:
+          label: Visionneuse de captures
+          close: Fermer la visionneuse
+        accessibility:
+          primary: Contenu principal
+          navigation: Navigation principale
+          home: Accueil de Katapult Games
+          language: Choisir la langue
+          browse_assets: Voir les visuels et logos
     pt:
       description:
         heading: O QUE É DUNK?
@@ -1517,7 +1839,7 @@ localization:
           text: Um jogo de basquete em primeira pessoa para 1–6 jogadores em que cada passe,
             bloqueio e DUNK baseado em física depende da sua habilidade. Explore quadras
             únicas pelo universo, converse pelo chat de proximidade ou aperfeiçoe suas
-            jogadas no modo solo. Desbloqueie novos visuais, emotes e muito mais para se
+            jogadas no modo solo. Desbloqueie novos visuais, gestos e muito mais para se
             exibir para os amigos!
         long:
           title: DESCRIÇÃO LONGA
@@ -1529,25 +1851,25 @@ localization:
         keyFeatures:
           - icon: ""
             title: JOGUE DE DENTRO DA QUADRA
-            body: Controle um jogador em primeira pessoa e viva a partida de dentro da ação,
-              não a partir de uma câmera distante.
+            body: Controle um jogador em primeira pessoa e viva a partida de dentro da ação, não a
+              partir de uma câmera distante.
           - icon: ""
             title: SINTA A FÍSICA
-            body: DUNK usa mecânicas baseadas em física para tornar o basquete mais vivo,
-              físico e imprevisível. Bloqueios, arremessos, roubadas, rebotes, movimento
-              e contato fazem parte de cada momento.
+            body: DUNK usa mecânicas baseadas em física para tornar o basquete mais vivo, físico e
+              imprevisível. Bloqueios, arremessos, roubadas, rebotes, movimento e contato
+              fazem parte de cada momento.
           - icon: ""
             title: JOGUE EM EQUIPE
-            body: Jogue sozinho ou com amigos em partidas casuais ou competitivas. Trabalhem
-              juntos e transformem ideias questionáveis em jogadas reais.
+            body: Jogue sozinho ou com amigos em partidas casuais ou competitivas. Trabalhem juntos e
+              transformem ideias questionáveis em jogadas reais.
           - icon: ""
             title: CADA QUADRA MUDA O JOGO
-            body: Cada quadra traz seu próprio twist, com mecânicas e ambientes que fazem as
-              equipes se adaptarem de formas diferentes.
+            body: Cada quadra traz seu próprio twist, com mecânicas e ambientes que fazem as equipes
+              se adaptarem de formas diferentes.
           - icon: ""
             title: PERSONALIZE SEU PERSONAGEM
-            body: Crie seu visual, construa a identidade do seu squad e dê um estilo próprio
-              ao seu time.
+            body: Crie seu visual, construa a identidade do seu squad e dê um estilo próprio ao seu
+              time.
         key_features:
           - icon: ""
             title: Hora de jogar
@@ -1555,8 +1877,8 @@ localization:
               Curta uma experiência de basquete em primeira pessoa fácil de aprender e
               difícil de dominar, para jogadores de todos os níveis. Aprenda a acertar o
               tempo dos arremessos, escolher o passe certo e roubar a bola, ou entre no
-              caos e divirta-se com os amigos. Vá de “como isso entrou?” a “era
-              exatamente isso que eu queria fazer”.
+              caos e divirta-se com os amigos. Vá de “como isso entrou?” a “era exatamente
+              isso que eu queria fazer”.
 
 
               Times e jogadores fortes vão despertar seus Bulls interiores e aprender a
@@ -1565,40 +1887,38 @@ localization:
           - icon: ""
             title: As quadras estão esperando
             body: >-
-              Do pátio clássico da escola à Lua, cada quadra tem características
-              próprias para dominar. Use os cipós da selva e aproveite a baixa gravidade
-              lunar para ganhar vantagem sobre seus adversários.
+              Do pátio clássico da escola à Lua, cada quadra tem características próprias
+              para dominar. Use os cipós da selva e aproveite a baixa gravidade lunar para
+              ganhar vantagem sobre seus adversários.
 
 
-              Algumas quadras podem esconder outros segredos que merecem ser
-              investigados. Afinal, o que aquele macaco está esperando na selva?
+              Algumas quadras podem esconder outros segredos que merecem ser investigados.
+              Afinal, o que aquele macaco está esperando na selva?
           - icon: ""
             title: Competição entre amigos
             body: >-
               Como seria uma partida de basquete sem um pouco de provocação amigável? O
-              chat de proximidade, os cosméticos desbloqueáveis e os emotes permitem se
+              chat de proximidade, os cosméticos desbloqueáveis e os gestos permitem se
               exibir diante dos adversários, desde que você consiga provar seu valor na
               quadra e fazer seu nome.
 
 
               Jogue online do seu jeito, sozinho ou em equipe, com partidas de até 3v3.
-              Monte um lobby privado 5v1 e veja quanto tempo seu amigo Alex aguenta!
-              Entre no nosso Discord para encontrar jogadores e uma comunidade para
-              jogar junto.
-
+              Monte uma sala privada 5v1 e veja quanto tempo seu amigo Alex aguenta! Entre
+              no nosso Discord para encontrar jogadores e uma comunidade para jogar junto.
+        key_features_title: Recursos
       ui:
         landing:
           nav:
             home: Início
             about: Sobre
             press: Imprensa
-          eyebrow: Vídeo de gameplay
+          eyebrow: Vídeo do jogo
           tagline: Basquete em primeira pessoa para 1–6 jogadores. De 1v1 a 3v3.
-
-          play: Assistir ao gameplay reel
+          play: Assistir ao vídeo do jogo
           close: Fechar vídeo
           fallback: Abrir no YouTube
-          press_kit_cta: Press Kit
+          press_kit_cta: Kit de imprensa
         nav:
           language: Idioma
           menu: Menu
@@ -1607,7 +1927,7 @@ localization:
             description: Descrição
             features: Recursos
             media: Capturas de tela
-            branding: Arte e logos
+            branding: Arte e logotipos
             links: Links
             team: Estúdio
             contact: Contato
@@ -1617,15 +1937,15 @@ localization:
             about: "Sobre:"
             location: "Localização:"
             development: "Desenvolvimento:"
-            publisher: "Publisher:"
+            publisher: "Distribuidora:"
             release_date: "Data de lançamento:"
             genres: "Gêneros:"
             platforms: "Plataformas:"
             cost: "Preço:"
             steam: "Steam:"
-            trailer: "Trailer:"
-            preview: "Pre-view:"
-            press_kit: "Press Kit:"
+            trailer: "Trailer de apresentação:"
+            preview: "Prévia do jogo:"
+            press_kit: "Kit de imprensa:"
             website: "Site:"
             tags: "Marcadores:"
           values:
@@ -1633,41 +1953,40 @@ localization:
             development: Em desenvolvimento ativo pela Katapult Games.
             based_in: Irlanda
             publisher: Katapult Games
-            cost: TBA
-            steam: https://store.steampowered.com/app/4591520/Squad_Dunk/
-            trailer: TBA
+            cost: A anunciar
+            steam: Ver no Steam
+            trailer: A anunciar
             preview: https://youtu.be/3_ZVMG2Rg3g
-            press_kit: Abrir Press Kit
+            press_kit: Abrir o kit de imprensa
           release_dates:
-            - TBA
+            - A anunciar
           genres_items:
             - Indie
             - Simulação
             - Esportes
           platforms_items:
-            - PC - Steam
+            - PC — Steam
           tags_items:
-            - Sports
-            - Basketball
-            - Online Co-Op
-            - Physics
-            - PvP
+            - Esportes
+            - Basquete
+            - Cooperativo online
+            - Física
+            - JxJ
             - Arcade
-            - Party Game
-            - Character Customization
+            - Jogo de festa
+            - Personalização de personagens
             - 3D
-            - First-Person
-            - Funny
-            - Team-Based
-            - Simulation
-            - Colorful
+            - Primeira pessoa
+            - Humor
+            - Baseado em equipes
+            - Simulação
+            - Colorido
             - Casual
-            - Stylized
-            - Co-op
-            - Multiplayer
-            - FPS
-            - Singleplayer
-
+            - Estilizado
+            - Cooperativo
+            - Multijogador
+            - Tiro em primeira pessoa
+            - Um jogador
         features:
           title: Recursos
           items:
@@ -1677,27 +1996,58 @@ localization:
             - Jogo solo para aperfeiçoar suas habilidades
             - Chat de proximidade
             - Quadras de escola, selva e Lua com mecânicas próprias
-            - Visuais, cosméticos e emotes desbloqueáveis
-            - Lobbies privados, incluindo partidas 5v1
-
+            - Visuais, cosméticos e gestos desbloqueáveis
+            - Salas privadas, incluindo partidas 5v1
         media:
           title: Mídia
           videos: Vídeos
           screenshots: Capturas de tela
           download: Todas as capturas · ZIP
-          original: Original ↗
+          original: Arquivo original ↗
           video_cards:
-            - title: Pre-view
+            - title: Prévia do jogo
               description: Prévia de gameplay de basquete em primeira pessoa baseado em física.
               label: Assistir no YouTube
-            - title: Reveal Trailer
-              description: Em breve.
+            - title: Trailer de apresentação
+              description: Em breve
               label: Em breve
+          items:
+            - title: Partida na escola
+              alt: Partida de basquete em primeira pessoa numa quadra escolar ao pôr do sol.
+            - title: Bandeja
+              alt: Uma bandeja em primeira pessoa, com a bola acima do aro ao pôr do sol.
+            - title: Quadra da selva · 01
+              alt: Outro jogador na quadra de basquete da selva.
+            - title: Quadra da selva · 02
+              alt: Um jogador, uma bola e uma árvore gigante na quadra da selva.
+            - title: A equipe · 01
+              alt: Jogadores reunidos na quadra externa da escola.
+            - title: A equipe · 02
+              alt: A equipe na quadra da escola, vista em primeira pessoa.
+            - title: Quadra lunar
+              alt: Uma quadra de basquete na Lua, com a Terra no céu noturno.
+            - title: Loja · 01
+              alt: Uma loja de roupas com balcão, peças de vestuário e aro de basquete.
+            - title: Loja · 02
+              alt: Um personagem atrás do balcão da loja, com roupas ao fundo.
         branding:
-          title: Arte e logos
-          download: Baixar arte e logo (.zip)
+          title: Arte e logotipos
+          download: Arte e logotipo · ZIP
+          assets:
+            - title: Arte principal · JPG
+              alt: "Arte de DUNK: um jogador salta em direção ao aro sob um céu azul."
+            - title: Logotipo de DUNK · PNG
+              alt: Logotipo branco de DUNK em fundo transparente.
         links:
           title: Links
+          items:
+            - TikTok
+            - YouTube
+            - Facebook
+            - Instagram
+            - X
+            - Site oficial
+            - Kit de imprensa
         team:
           title: Estúdio
           about_title: Sobre a Katapult Games
@@ -1705,32 +2055,50 @@ localization:
           boilerplate: >-
             Um pequeno estúdio indie de videogames baseado na Irlanda.
 
-            Somos a Katapult Games e criamos jogos com a nossa comunidade, não
-            apenas para ela. Movidos por transparência, flexibilidade e amor
-            pelas tendências modernas de games, nossa missão é criar experiências
-            multiplayer de alta energia que realmente conectem jogadores. Não
-            queremos apenas que você jogue nossos jogos: queremos que ajude a
-            moldá-los. Welcome to the squad!
+            Somos a Katapult Games e criamos jogos com a nossa comunidade, não apenas para
+            ela. Movidos por transparência, flexibilidade e amor pelas tendências modernas
+            de games, nossa missão é criar experiências multiplayer de alta energia que
+            realmente conectem jogadores. Não queremos apenas que você jogue nossos jogos:
+            queremos que ajude a moldá-los. Boas-vindas à equipe!
           credits_title: Equipe
           credits: Katapult Games
         contact:
           title: Contato
-          email: Email
-          bug_reports: Reportar bugs
+          email: E-mail
+          bug_reports: Relatar um problema
         privacy:
           label: Privacidade
           title: Análise que respeita a privacidade
-          body: >-
-            Usamos uma análise que respeita a privacidade para entender o
-            tráfego agregado e melhorar este press
-            kit. Não usamos cookies de análise, não rastreamos visitantes entre
-            sites, não criamos perfis pessoais e não vendemos dados de
-            visitantes. Coletamos informações agregadas, como visualizações de
-            páginas, fonte de referência, país aproximado, tipo de dispositivo,
-            navegador e interações com links de imprensa.
+          body: Usamos uma análise que respeita a privacidade para entender o tráfego agregado e
+            melhorar este kit de imprensa. Não usamos cookies de análise, não rastreamos
+            visitantes entre sites, não criamos perfis pessoais e não vendemos dados de
+            visitantes. Coletamos informações agregadas, como visualizações de páginas,
+            fonte de referência, país aproximado, tipo de dispositivo, navegador e
+            interações com links de imprensa.
+        page:
+          title: DUNK — Kit de imprensa · Katapult Games
+          home_title: DUNK — Katapult Games
+        carousel:
+          label: Capturas de DUNK
+          role: carrossel
+          track: Galeria de capturas; use as setas para a esquerda e para a direita
+          thumbnails: Escolher uma captura
+          previous: Captura anterior
+          next: Próxima captura
+          slide: imagem
+          position: Captura {current} de {total}
+        viewer:
+          label: Visualizador de capturas
+          close: Fechar o visualizador
+        accessibility:
+          primary: Conteúdo principal
+          navigation: Navegação principal
+          home: Página inicial da Katapult Games
+          language: Escolher idioma
+          browse_assets: Ver a arte e os logotipos
 
 release_dates:
-  - TBA
+  - To be announced
 
 genres:
   - Indie
@@ -1964,11 +2332,11 @@ team:
   boilerplate: >-
     A small indie video game studio based in Ireland.
 
-    We are Katapult Games and we build games with our community, not just for
-    them. Driven by transparency, flexibility and a love for modern gaming
-    trends, our mission is to create high energy multiplayer experiences that
-    truly connect with players. We don't just want you to play our games, we
-    want you to help us shape them. Welcome to the squad!
+    We are Katapult Games and we build games with our community, not just for them. Driven
+    by transparency, flexibility and a love for modern gaming trends, our mission is to
+    create high energy multiplayer experiences that truly connect with players. We don't
+    just want you to play our games, we want you to help us shape them. Welcome to the
+    squad!
   credits_title: Team
   credits: Katapult Games
 

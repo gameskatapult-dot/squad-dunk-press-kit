@@ -68,7 +68,25 @@ translations, not a claim about supported in-game languages. Steam platform
 details such as Family Sharing, profile restrictions, EULA and Steam Deck
 compatibility are not presented as new gameplay features.
 
-## Next content update
+## Complete website localization
+
+All eight languages now cover both the home page and press kit: descriptions,
+navigation, factsheet values, release-date placeholders, twenty tags, nine
+screenshot captions and alt texts, asset titles, download links, contact,
+studio and privacy copy, page metadata, carousel controls and the viewer.
+Brand names, URLs, format codes and downloadable original filenames are retained.
+
+Internal navigation preserves the language; an explicit `lang` parameter takes
+precedence over a saved preference. The viewer also updates when the selected
+language changes. Language options use their native names.
+
+Validation rejects missing or empty translations and mismatched translated
+arrays. Browser QA checked 191 text/attribute bindings in each press kit language
+and 16 on each homepage, plus mobile layout, live viewer translations and URL
+language selection. Deliberately missing labels and captions were rejected by
+the content generator.
+
+## Studio location and social links
 
 The owner subsequently corrected the studio location to Ireland, without a
 city, and requested removal of developer fields and personal credits. The
@@ -76,6 +94,8 @@ factsheet and studio text reflect this in all eight website languages. The
 official social list supplied in the owner's screenshot replaces the earlier
 links: TikTok, YouTube, Facebook, Instagram (@dunk.videogame), X
 (@Katapult_Dunk), the website and the press kit.
+
+## Next content update
 
 Add a public trailer URL and any approved GIFs as they become
 available. The media section is now enabled for the October screenshots; the

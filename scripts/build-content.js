@@ -278,6 +278,19 @@ function normalizeLocalization (content) {
   if (!languageCodes.has(defaultLanguage)) fail(`localization.default must be one of the configured languages: ${defaultLanguage}`)
 
   const translations = localization.translations || {}
+  function validateTranslation (reference, value, path) {
+    if (typeof reference === 'string') {
+      if (typeof value !== 'string' || (reference.trim() && !value.trim())) fail(`Missing translation: ${path}`)
+    } else if (Array.isArray(reference)) {
+      if (!Array.isArray(value) || value.length !== reference.length) fail(`Translation array length mismatch: ${path}`)
+      reference.forEach((item, index) => validateTranslation(item, value[index], `${path}.${index}`))
+    } else if (reference && typeof reference === 'object') {
+      for (const [key, item] of Object.entries(reference)) validateTranslation(item, value && value[key], `${path}.${key}`)
+    }
+  }
+  for (const language of languages) {
+    validateTranslation(translations.en, translations[language.code], `localization.translations.${language.code}`)
+  }
   const english = translations.en && translations.en.description
   if (!english) fail('localization.translations.en.description is required')
 
@@ -449,6 +462,21 @@ function buildProductData (content) {
   const enabledContacts = contacts.filter(enabled)
   const enabledLinks = links.filter(enabled)
   const featureList = optionalArray(content.features).map((feature) => requireString(feature, 'features[]'))
+
+  for (const language of localization.languages) {
+    const ui = localization.translations[language.code].ui
+    const groups = [
+      ['ui.media.items', ui.media.items, enabledScreenshots.length],
+      ['ui.branding.assets', ui.branding.assets, enabledBrandingAssets.length],
+      ['ui.features.items', ui.features.items, featureList.length],
+      ['ui.factsheet.genres_items', ui.factsheet.genres_items, content.genres.length],
+      ['ui.factsheet.tags_items', ui.factsheet.tags_items, optionalArray(content.tags).length],
+      ['ui.links.items', ui.links.items, enabledLinks.length]
+    ]
+    for (const [name, values, count] of groups) {
+      if (values.length !== count) fail(`Translation count does not match visible content: ${language.code}.${name}`)
+    }
+  }
 
   const showMedia = sections.some((section) => section.id === 'media' && enabled(section))
   if (showMedia && enabledScreenshots.length === 0 && enabledVideos.length === 0) fail('Enabled media section needs at least one screenshot or video')

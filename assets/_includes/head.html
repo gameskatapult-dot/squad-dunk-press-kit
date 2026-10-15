@@ -2,15 +2,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 {{#if company.title}}
-<title>{{presskit.title}} - {{company.title}}</title>
+<title {{#if isProduct}}data-l10n="ui.page.title"{{/if}}>{{presskit.title}} - {{company.title}}</title>
 {{else}}
 <title>{{presskit.title}}</title>
 {{/if}}
 
 {{#if isProduct}}
-<meta name="description" content="{{presskit.shortDescription}}">
-<meta property="og:title" content="{{presskit.title}} — Katapult Games">
-<meta property="og:description" content="{{presskit.shortDescription}}">
+<meta name="description" data-l10n-content="description.short.text" content="{{presskit.shortDescription}}">
+<meta property="og:title" data-l10n-content="ui.page.title" content="{{presskit.title}} — Katapult Games">
+<meta property="og:description" data-l10n-content="description.short.text" content="{{presskit.shortDescription}}">
 <meta property="og:image" content="https://squaddunk.com/presskit/images/key-art-2026-web.jpg">
 <link rel="canonical" href="https://squaddunk.com/presskit/">
 <link rel="shortcut icon" href="images/favicon-2026.png">

@@ -2,6 +2,33 @@
   'use strict'
 
   const storageKey = 'squad-dunk-presskit-language'
+  let activeTranslation = null
+  let activeLanguage = 'en'
+
+  function localizePage (root) {
+    if (!activeTranslation) return
+    const scope = root || document
+    const attributes = ['alt', 'title', 'aria-label', 'aria-roledescription', 'content', 'data-gallery-title']
+    const nodes = Array.from(scope.querySelectorAll('[data-l10n]'))
+    nodes.forEach(function (node) {
+      const value = getPathValue(activeTranslation, node.getAttribute('data-l10n'))
+      if (typeof value === 'string') node.textContent = value
+    })
+    attributes.forEach(function (attribute) {
+      const marker = 'data-l10n-' + attribute
+      const targets = Array.from(scope.querySelectorAll('[' + marker + ']'))
+      if (scope.matches && scope.matches('[' + marker + ']')) targets.push(scope)
+      targets.forEach(function (node) {
+        const value = getPathValue(activeTranslation, node.getAttribute(marker))
+        if (typeof value === 'string') node.setAttribute(attribute, value)
+      })
+    })
+  }
+
+  function screenshotPosition (index, total) {
+    const template = getPathValue(activeTranslation, 'ui.carousel.position') || '{current} / {total}'
+    return template.replace('{current}', String(index + 1)).replace('{total}', String(total))
+  }
 
   function trackAnalyticsEvent (name, details) {
     if (!name || !window.goatcounter || typeof window.goatcounter.count !== 'function') return
@@ -38,19 +65,24 @@
     }, source)
   }
 
-  function readLocalization () {
+  async function readLocalization () {
     const script = document.getElementById('presskit-localization')
     if (!script) return null
 
     try {
+      if (script.dataset.src) {
+        const response = await fetch(script.dataset.src, { cache: 'no-cache' })
+        if (!response.ok) return null
+        return await response.json()
+      }
       return JSON.parse(script.textContent)
     } catch (error) {
       return null
     }
   }
 
-  function setupLanguageSelector () {
-    const data = readLocalization()
+  async function setupLanguageSelector () {
+    const data = await readLocalization()
     const select = document.querySelector('[data-language-select]')
     if (!data || !select || !Array.isArray(data.languages)) return
 
@@ -58,7 +90,8 @@
     const defaultLanguage = data.defaultLanguage || 'en'
     const params = new URLSearchParams(window.location.search)
     const urlLanguage = params.get('lang')
-    const storedLanguage = window.localStorage ? window.localStorage.getItem(storageKey) : null
+    let storedLanguage = null
+    try { storedLanguage = window.localStorage.getItem(storageKey) } catch {}
 
     function isSupported (language) {
       return supported.indexOf(language) !== -1
@@ -104,11 +137,11 @@
     }
 
     function initialLanguage () {
-      const storedMatch = matchSupportedLanguage(storedLanguage)
-      if (storedMatch) return storedMatch
-
       const urlMatch = matchSupportedLanguage(urlLanguage)
       if (urlMatch) return urlMatch
+
+      const storedMatch = matchSupportedLanguage(storedLanguage)
+      if (storedMatch) return storedMatch
 
       return detectBrowserLanguage()
     }
@@ -116,23 +149,26 @@
     function applyLanguage (language, options) {
       const settings = options || {}
       const selectedLanguage = matchSupportedLanguage(language) || fallbackLanguage()
-      const activeLanguage = data.translations && data.translations[selectedLanguage] && Object.keys(data.translations[selectedLanguage]).length
+      activeLanguage = data.translations && data.translations[selectedLanguage] && Object.keys(data.translations[selectedLanguage]).length
         ? selectedLanguage
         : fallbackLanguage()
-      const activeTranslation = data.translations ? data.translations[activeLanguage] : null
+      activeTranslation = data.translations ? data.translations[activeLanguage] : null
 
       select.value = selectedLanguage
       document.documentElement.setAttribute('lang', activeLanguage)
 
-      if (settings.persist && window.localStorage) window.localStorage.setItem(storageKey, selectedLanguage)
+      if (settings.persist) {
+        try { window.localStorage.setItem(storageKey, selectedLanguage) } catch {}
+      }
 
       if (activeTranslation) {
-        const nodes = document.querySelectorAll('[data-l10n]')
-        for (let i = 0; i < nodes.length; i++) {
-          const node = nodes[i]
-          const value = getPathValue(activeTranslation, node.getAttribute('data-l10n'))
-          if (typeof value === 'string') node.textContent = value
-        }
+        localizePage()
+        document.querySelectorAll('[data-language-link]').forEach(function (link) {
+          const target = new URL(link.getAttribute('href'), window.location.href)
+          target.searchParams.set('lang', activeLanguage)
+          link.setAttribute('href', target.pathname + target.search + target.hash)
+        })
+        window.dispatchEvent(new CustomEvent('presskit:languagechange'))
       }
 
       if (settings.updateUrl && window.history && window.history.replaceState) {
@@ -151,7 +187,7 @@
       trackAnalyticsEvent('Language Changed', { language: activeLanguage })
     })
 
-    applyLanguage(initialLanguage(), { updateUrl: Boolean(urlLanguage && !matchSupportedLanguage(storedLanguage)), persist: false })
+    applyLanguage(initialLanguage(), { updateUrl: Boolean(urlLanguage), persist: false })
   }
 
   function setupNavigation () {
@@ -286,6 +322,7 @@
       function update (index) {
         current = index
         count.textContent = String(index + 1).padStart(2, '0') + ' / ' + String(slides.length).padStart(2, '0')
+        count.setAttribute('aria-label', screenshotPosition(index, slides.length))
         thumbs.forEach(function (thumb, i) {
           thumb.setAttribute('aria-pressed', String(i === index))
         })
@@ -323,6 +360,7 @@
         track.scrollTo({ left: current * track.clientWidth, behavior: 'auto' })
       }).observe(track)
       navigation.hidden = false
+      window.addEventListener('presskit:languagechange', function () { update(current) })
       update(0)
     })
   }
@@ -334,6 +372,7 @@
     const items = links.map(function (link) {
       const image = link.querySelector('img')
       return {
+        element: link,
         href: link.getAttribute('href'),
         title: link.getAttribute('data-gallery-title') || link.getAttribute('title') || '',
         alt: image ? image.getAttribute('alt') || '' : ''
@@ -350,7 +389,7 @@
     lightbox.className = 'gallery-lightbox'
     lightbox.setAttribute('role', 'dialog')
     lightbox.setAttribute('aria-modal', 'true')
-    lightbox.setAttribute('aria-label', 'Screenshot viewer')
+    lightbox.setAttribute('data-l10n-aria-label', 'ui.viewer.label')
     lightbox.innerHTML = [
       '<div class="gallery-lightbox__dialog">',
       '  <figure class="gallery-lightbox__figure">',
@@ -361,13 +400,14 @@
       '    <span class="gallery-lightbox__count"></span>',
       '    <a class="gallery-lightbox__download" download data-l10n="ui.media.original">Original ↗</a>',
       '  </div>',
-      '  <button class="gallery-lightbox__button gallery-lightbox__close" type="button" aria-label="Close screenshot viewer">×</button>',
-      '  <button class="gallery-lightbox__button gallery-lightbox__prev" type="button" aria-label="Previous screenshot">‹</button>',
-      '  <button class="gallery-lightbox__button gallery-lightbox__next" type="button" aria-label="Next screenshot">›</button>',
+      '  <button class="gallery-lightbox__button gallery-lightbox__close" type="button" data-l10n-aria-label="ui.viewer.close">×</button>',
+      '  <button class="gallery-lightbox__button gallery-lightbox__prev" type="button" data-l10n-aria-label="ui.carousel.previous">‹</button>',
+      '  <button class="gallery-lightbox__button gallery-lightbox__next" type="button" data-l10n-aria-label="ui.carousel.next">›</button>',
       '</div>'
     ].join('')
 
     document.body.appendChild(lightbox)
+    localizePage(lightbox)
 
     const image = lightbox.querySelector('.gallery-lightbox__image')
     const title = lightbox.querySelector('.gallery-lightbox__title')
@@ -380,9 +420,10 @@
     function render () {
       const item = items[currentIndex]
       image.setAttribute('src', item.href)
-      image.setAttribute('alt', item.alt || item.title)
-      title.textContent = item.title
+      image.setAttribute('alt', item.element.querySelector('img').getAttribute('alt'))
+      title.textContent = item.element.getAttribute('data-gallery-title')
       count.textContent = (currentIndex + 1) + ' / ' + items.length
+      count.setAttribute('aria-label', screenshotPosition(currentIndex, items.length))
       download.setAttribute('href', item.href)
     }
 
@@ -416,6 +457,9 @@
     closeButton.addEventListener('click', close)
     prevButton.addEventListener('click', function () { move(-1) })
     nextButton.addEventListener('click', function () { move(1) })
+    window.addEventListener('presskit:languagechange', function () {
+      if (lightbox.classList.contains('is-open')) render()
+    })
 
     lightbox.addEventListener('click', function (event) {
       if (event.target === lightbox) close()
@@ -437,9 +481,9 @@
     })
   }
 
-  document.addEventListener('DOMContentLoaded', function () {
+  document.addEventListener('DOMContentLoaded', async function () {
     setupAnalyticsEvents()
-    setupLanguageSelector()
+    await setupLanguageSelector()
     setupNavigation()
     setupLandingHero()
     setupYoutubeEmbeds()

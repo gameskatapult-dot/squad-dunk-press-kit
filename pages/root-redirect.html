@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>DUNK — Katapult Games</title>
-    <meta name="description" content="A first-person 1-6 player basketball game where every physics-based pass, block, and DUNK comes down to skill. Hit unique courts across the universe, hang out over proximity chat, or finesse your 1st-person skills in solo play. Unlock new looks, emotes, and more, to flex on your mates!">
+    <title data-l10n="ui.page.home_title">DUNK — Katapult Games</title>
+    <meta name="description" data-l10n-content="description.short.text" content="A first-person basketball game for 1–6 players.">
     <link rel="canonical" href="https://squaddunk.com/">
-    <meta property="og:title" content="DUNK — Katapult Games">
-    <meta property="og:description" content="A first-person 1-6 player basketball game where every physics-based pass, block, and DUNK comes down to skill. Hit unique courts across the universe, hang out over proximity chat, or finesse your 1st-person skills in solo play. Unlock new looks, emotes, and more, to flex on your mates!">
+    <meta property="og:title" data-l10n-content="ui.page.home_title" content="DUNK — Katapult Games">
+    <meta property="og:description" data-l10n-content="description.short.text" content="A first-person basketball game for 1–6 players.">
     <meta property="og:image" content="https://squaddunk.com/presskit/images/key-art-2026-web.jpg">
     <link rel="icon" href="./presskit/images/favicon-2026.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,30 +15,47 @@
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/theme.css">
-    <link rel="stylesheet" href="./css/refresh.css?v=20261015-gallery">
+    <link rel="stylesheet" href="./css/refresh.css?v=20261015-locales">
   </head>
   <body class="product-page home-page">
-    <header class="landing-nav" aria-label="Primary">
-      <a class="landing-nav__brand" href="./" aria-label="Katapult Games home">
+    <header class="landing-nav" data-l10n-aria-label="ui.accessibility.primary">
+      <a class="landing-nav__brand" href="./" data-language-link data-l10n-aria-label="ui.accessibility.home">
         <img src="./presskit/images/katapult-logo.png" alt="Katapult Games">
       </a>
-      <nav class="landing-nav__links" aria-label="Main navigation">
-        <a href="./" aria-current="page">Home</a>
-        <a href="./presskit/#description">About</a>
-        <a href="./presskit/">Press</a>
+      <nav class="landing-nav__links" data-l10n-aria-label="ui.accessibility.navigation">
+        <a href="./" data-language-link data-l10n="ui.landing.nav.home" aria-current="page">Home</a>
+        <a href="./presskit/#description" data-language-link data-l10n="ui.landing.nav.about">About</a>
+        <a href="./presskit/" data-language-link data-l10n="ui.landing.nav.press">Press</a>
       </nav>
     </header>
     <main>
-      <section class="home-art" aria-label="DUNK key art">
-        <img src="./presskit/images/key-art-2026-web.jpg" width="1800" height="1031" alt="DUNK key art: a basketball player leaps toward a hoop against a bright blue sky." fetchpriority="high">
+      <section class="home-art" data-l10n-aria-label="ui.branding.title">
+        <img src="./presskit/images/key-art-2026-web.jpg" width="1800" height="1031" data-l10n-alt="ui.branding.assets.0.alt" alt="DUNK key art" fetchpriority="high">
       </section>
       <section class="home-intro" aria-labelledby="home-title">
         <div>
           <h1 id="home-title">DUNK</h1>
-          <p>First-person basketball for 1–6 players. From 1v1 to 3v3.</p>
+          <p data-l10n="ui.landing.tagline">First-person basketball for 1–6 players. From 1v1 to 3v3.</p>
         </div>
-        <a class="press-link" href="./presskit/">Press kit ↗</a>
+        <div class="home-actions">
+          <a class="press-link" href="./presskit/" data-language-link data-l10n="ui.landing.press_kit_cta">Press kit</a>
+          <div class="language-switcher">
+            <label class="language-switcher__label" for="home-language" data-l10n="ui.nav.language">Language</label>
+            <select class="language-switcher__select" id="home-language" data-language-select data-l10n-aria-label="ui.accessibility.language">
+              <option value="en">English</option>
+              <option value="es">Español</option>
+              <option value="ru">Русский</option>
+              <option value="ja">日本語</option>
+              <option value="zh">简体中文</option>
+              <option value="de">Deutsch</option>
+              <option value="fr">Français</option>
+              <option value="pt">Português</option>
+            </select>
+          </div>
+        </div>
       </section>
     </main>
+    <script id="presskit-localization" type="application/json" data-src="./localization.json"></script>
+    <script src="./js/presskit-page.js?v=20261015-locales"></script>
   </body>
 </html>
