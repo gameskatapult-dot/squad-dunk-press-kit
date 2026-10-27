@@ -52,6 +52,7 @@ body.dunk {
   font: 800 17px/1 var(--body); text-decoration: none; white-space: nowrap; cursor: pointer;
 }
 .button__icon { width: 20px; height: 20px; flex-shrink: 0; }
+.button__note { padding: 2px 6px; border: 1px solid currentColor; border-radius: 4px; font-size: 12px; line-height: 1; opacity: .75; }
 .button--small { min-height: 42px; padding: 0 16px; font-size: 15px; }
 .button--small .button__icon { width: 18px; height: 18px; }
 .dunk .button--ball { color: var(--bg-deep); background: var(--cream); }
@@ -62,9 +63,11 @@ body.dunk {
 /* Top bar */
 .topbar { position: sticky; top: 0; z-index: 30; background: var(--bg); border-bottom: 1px solid var(--line); }
 .topbar__inner { display: flex; align-items: center; gap: 24px; width: 100%; max-width: calc(var(--container) + var(--gutter) * 2); height: var(--topbar); margin: 0 auto; padding: 0 var(--gutter); }
-.topbar__brand { display: flex; flex-shrink: 0; align-items: baseline; gap: 12px; text-decoration: none; }
-.topbar__brand img { align-self: center; width: auto; height: 28px; }
-.topbar__label { color: var(--soft); font-size: 15px; font-weight: 700; }
+.topbar__brand { display: flex; flex-shrink: 0; align-items: center; gap: 12px; }
+.topbar__brand a { display: flex; }
+.topbar__brand img { width: auto; height: 28px; }
+/* Where you are, not a link: the logo is the way home. */
+.topbar__label { padding-left: 12px; color: var(--soft); border-left: 1px solid var(--line); font-size: 13px; font-weight: 700; letter-spacing: .06em; line-height: 22px; text-transform: uppercase; }
 .topbar__nav { display: flex; flex: 1; justify-content: center; gap: 4px; min-width: 0; }
 .topbar__nav a { padding: 8px 10px; color: var(--soft); font-size: 15px; font-weight: 700; text-decoration: none; white-space: nowrap; }
 .topbar__nav a:hover, .topbar__nav a.is-active { color: var(--cream); text-decoration: underline; }
@@ -94,9 +97,6 @@ body.dunk {
 .intro { padding: clamp(48px, 7vw, 80px) 0; text-align: center; border-bottom: 1px solid var(--line); }
 .intro__inner { display: flex; flex-direction: column; align-items: center; }
 .intro__tagline { max-width: 22ch; margin: 0 0 32px; font-family: var(--display); font-size: clamp(32px, 4.2vw, 54px); font-weight: 800; line-height: 1.02; text-wrap: balance; }
-.quicklinks { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: -20px 0 40px; }
-.quicklinks a { padding: 6px 14px; color: var(--soft); border: 1px solid var(--line); border-radius: 999px; font-size: 15px; font-weight: 700; text-decoration: none; }
-.quicklinks a:hover { color: var(--cream); border-color: var(--cream); }
 .intro__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-bottom: 44px; }
 .facts { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 0; }
 .facts > div { padding: 0 18px; }
@@ -199,7 +199,14 @@ body.gallery-lightbox-open { overflow: hidden; }
 
 /* Responsive */
 @media (max-width: 1000px) {
-  .topbar__nav { display: none; }
+  /* Narrow screens: the section menu becomes a scrolling second row of the top bar. */
+  html { scroll-padding-top: calc(var(--topbar) + 56px); }
+  .topbar__inner { flex-wrap: wrap; height: auto; min-height: var(--topbar); row-gap: 0; }
+  .topbar__brand, .topbar__actions { height: var(--topbar); }
+  .topbar__nav { order: 3; flex: 0 0 calc(100% + var(--gutter) * 2); justify-content: flex-start; margin: 0 calc(var(--gutter) * -1); padding: 0 calc(var(--gutter) - 10px) 8px; overflow-x: auto; scrollbar-width: none; }
+  .topbar__nav::-webkit-scrollbar { display: none; }
+  /* The home page has a single link, which fits in the bar itself. */
+  .home .topbar__nav { order: 0; flex: 1 1 auto; justify-content: center; margin: 0; padding: 0; }
   .shots { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .downloads .download, .downloads .download:nth-child(-n + 3) { grid-column: span 6; }
 }
@@ -207,7 +214,9 @@ body.gallery-lightbox-open { overflow: hidden; }
   :root { --topbar: 58px; }
   body.dunk { font-size: 17px; }
   .topbar__inner { gap: 10px; }
-  .topbar__label { display: none; }
+  .topbar__label { padding-left: 10px; font-size: 11px; }
+  .topbar__actions .button--small { padding: 0 12px; }
+  .topbar__actions .button--small span { display: none; }
   .topbar__brand img { height: 24px; }
   .topbar__language { width: 104px; }
   .scene { height: 85vw; min-height: 0; }
