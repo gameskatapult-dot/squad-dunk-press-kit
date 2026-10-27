@@ -558,6 +558,14 @@
     update()
   }
 
+  // Arriving with a #section (e.g. from the home page's press links): the browser's own jump
+  // happens before the language is applied and is lost, so land on the section once set up.
+  function scrollToInitialHash () {
+    const id = decodeURIComponent(window.location.hash.slice(1))
+    const target = id && document.getElementById(id)
+    if (target) target.scrollIntoView({ behavior: 'instant', block: 'start' })
+  }
+
   document.addEventListener('DOMContentLoaded', async function () {
     setupAnalyticsEvents()
     await setupLanguageSelector()
@@ -568,5 +576,6 @@
     setupYoutubeEmbeds()
     setupScreenshotCarousels()
     setupGalleryLightbox()
+    scrollToInitialHash()
   })
 }())

@@ -463,7 +463,7 @@ function createNavSections (sections) {
   }
 
   // The top bar stays short: description, features and links live inside other bands.
-  const hiddenInNav = new Set(['description', 'features', 'links'])
+  const hiddenInNav = new Set(['description', 'features', 'links', 'team'])
 
   return sections
     .filter(enabled)

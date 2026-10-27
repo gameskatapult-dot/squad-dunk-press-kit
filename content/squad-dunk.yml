@@ -2724,23 +2724,23 @@ contacts:
 links:
   - id: dunk-tiktok
     title: TikTok
-    url: https://www.tiktok.com/@squaddunkgame
+    url: https://www.tiktok.com/@dunkthegame
     enabled: true
   - id: katapult-youtube
     title: YouTube
-    url: https://www.youtube.com/@KatapultGames
+    url: https://www.youtube.com/@DUNKthegame
     enabled: true
   - id: dunk-facebook
     title: Facebook
-    url: https://www.facebook.com/people/DUNK-Videogame/61594059097697/
+    url: https://www.facebook.com/DUNKthegame/
     enabled: true
   - id: dunk-instagram
     title: Instagram
-    url: https://www.instagram.com/dunk.videogame/
+    url: https://www.instagram.com/DUNK.thegame
     enabled: true
   - id: dunk-x
     title: X
-    url: https://x.com/Katapult_Dunk
+    url: https://x.com/DUNKthegame
     enabled: true
   - id: dunk-website
     title: Web

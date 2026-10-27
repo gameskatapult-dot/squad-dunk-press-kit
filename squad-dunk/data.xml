@@ -179,11 +179,6 @@ Play however you choose online, with matches up to 3v3 available for solo player
       <href>#logo</href>
     </nav-section>
     <nav-section>
-      <id>team</id>
-      <title>Studio</title>
-      <href>#credits</href>
-    </nav-section>
-    <nav-section>
       <id>contact</id>
       <title>Contact</title>
       <href>#contact</href>
@@ -420,35 +415,35 @@ We are Katapult Games and we build games with our community, not just for them. 
     <link>
       <id>dunk-tiktok</id>
       <title>TikTok</title>
-      <url>https://www.tiktok.com/@squaddunkgame</url>
+      <url>https://www.tiktok.com/@dunkthegame</url>
       <label/>
       <enabled>true</enabled>
     </link>
     <link>
       <id>katapult-youtube</id>
       <title>YouTube</title>
-      <url>https://www.youtube.com/@KatapultGames</url>
+      <url>https://www.youtube.com/@DUNKthegame</url>
       <label/>
       <enabled>true</enabled>
     </link>
     <link>
       <id>dunk-facebook</id>
       <title>Facebook</title>
-      <url>https://www.facebook.com/people/DUNK-Videogame/61594059097697/</url>
+      <url>https://www.facebook.com/DUNKthegame/</url>
       <label/>
       <enabled>true</enabled>
     </link>
     <link>
       <id>dunk-instagram</id>
       <title>Instagram</title>
-      <url>https://www.instagram.com/dunk.videogame/</url>
+      <url>https://www.instagram.com/DUNK.thegame</url>
       <label/>
       <enabled>true</enabled>
     </link>
     <link>
       <id>dunk-x</id>
       <title>X</title>
-      <url>https://x.com/Katapult_Dunk</url>
+      <url>https://x.com/DUNKthegame</url>
       <label/>
       <enabled>true</enabled>
     </link>
