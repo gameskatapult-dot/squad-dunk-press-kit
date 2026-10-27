@@ -71,6 +71,8 @@ body.dunk {
 .topbar__nav { display: flex; flex: 1; justify-content: center; gap: 4px; min-width: 0; }
 .topbar__nav a { padding: 8px 10px; color: var(--soft); font-size: 15px; font-weight: 700; text-decoration: none; white-space: nowrap; }
 .topbar__nav a:hover, .topbar__nav a.is-active { color: var(--cream); text-decoration: underline; }
+/* On the home page the one link reads like the PRESS KIT label it leads to. */
+.home .topbar__nav a { font-size: 14px; letter-spacing: .06em; text-transform: uppercase; }
 .topbar__actions { display: flex; flex-shrink: 0; align-items: center; gap: 10px; margin-left: auto; }
 .topbar__language {
   height: 42px; padding: 0 32px 0 12px; color: var(--cream);
@@ -95,6 +97,8 @@ body.dunk {
 
 /* Intro */
 .intro { padding: clamp(48px, 7vw, 80px) 0; text-align: center; border-bottom: 1px solid var(--line); }
+/* Links from the home page land with the intro flush under the top bar, no sliver of the hero. */
+#start { scroll-margin-top: -16px; }
 .intro__inner { display: flex; flex-direction: column; align-items: center; }
 .intro__tagline { max-width: 22ch; margin: 0 0 32px; font-family: var(--display); font-size: clamp(32px, 4.2vw, 54px); font-weight: 800; line-height: 1.02; text-wrap: balance; }
 .intro__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-bottom: 44px; }
