@@ -1,0 +1,33 @@
+<header class="topbar" data-topbar data-l10n-aria-label="ui.accessibility.primary">
+  <div class="topbar__inner">
+    <a class="topbar__brand" href="../" data-language-link data-l10n-aria-label="ui.accessibility.home" aria-label="Katapult Games home">
+      <img src="images/dunk-logo-v8.png" alt="DUNK" width="95" height="28">
+      <span class="topbar__label" data-l10n="ui.hero.eyebrow">Press kit</span>
+    </a>
+
+    {{#if presskit.navSections}}
+    <nav class="topbar__nav" data-l10n-aria-label="ui.accessibility.navigation" aria-label="Main navigation">
+      {{#each presskit.navSections}}
+      <a class="nav__item" href="{{href}}" data-l10n="ui.nav.sections.{{id}}">{{title}}</a>
+      {{/each}}
+    </nav>
+    {{/if}}
+
+    <div class="topbar__actions">
+      {{#if presskit.languages}}
+      <label class="visually-hidden" for="language-select" data-l10n="ui.nav.language">Language</label>
+      <select class="topbar__language" id="language-select" data-language-select data-l10n-aria-label="ui.accessibility.language" aria-label="Choose language">
+        {{#each presskit.languages}}
+        <option value="{{code}}">{{label}}</option>
+        {{/each}}
+      </select>
+      {{/if}}
+      {{#if presskit.steamLink.url}}
+      <a class="button button--ball button--small" href="{{presskit.steamLink.url}}" target="_blank" rel="noopener" data-analytics-event="Steam Click">
+        {{>steam-icon}}
+        <span>Steam</span>
+      </a>
+      {{/if}}
+    </div>
+  </div>
+</header>

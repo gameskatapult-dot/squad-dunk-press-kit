@@ -9,6 +9,7 @@ const sourcePath = path.join(rootDir, 'content', 'squad-dunk.yml')
 const outputPath = path.join(productDir, 'data.xml')
 
 const allowedSectionIds = new Set([
+  'announcement',
   'factsheet',
   'description',
   'features',
@@ -172,6 +173,38 @@ function normalizeScreenshots (content) {
   }
 
   return screenshots
+}
+
+function normalizeAnnouncement (content) {
+  const announcement = content.announcement || {}
+  const hero = announcement.hero || {}
+  const heroFields = ['video', 'poster', 'video_zh', 'poster_zh']
+  const normalizedHero = {}
+  for (const field of heroFields) {
+    if (!hero[field]) continue
+    normalizedHero[field] = normalizePathForWeb(hero[field], `announcement.hero.${field}`)
+    assertFileExists(normalizedHero[field], `announcement.hero.${field}`)
+  }
+
+  const items = optionalArray(announcement.items).map((item) => ({
+    id: requireString(item.id, 'announcement.items[].id'),
+    type: requireString(item.type, `announcement.items.${item.id || '[missing-id]'}.type`),
+    file: normalizePathForWeb(item.file, `announcement.items.${item.id || '[missing-id]'}.file`),
+    preview: normalizePathForWeb(item.preview, `announcement.items.${item.id || '[missing-id]'}.preview`),
+    title: requireString(item.title, `announcement.items.${item.id || '[missing-id]'}.title`),
+    caption: optionalString(item.caption),
+    alt: requireString(item.alt, `announcement.items.${item.id || '[missing-id]'}.alt`),
+    enabled: item.enabled !== false
+  }))
+
+  assertUniqueIds(items, 'announcement.items')
+
+  for (const item of items.filter(enabled)) {
+    assertFileExists(item.file, `announcement.items.${item.id}.file`)
+    assertFileExists(item.preview, `announcement.items.${item.id}.preview`)
+  }
+
+  return { hero: normalizedHero, items }
 }
 
 function normalizeVideos (content) {
@@ -406,6 +439,7 @@ function createRenderSections (sections) {
 
 function createNavSections (sections) {
   const titles = {
+    announcement: 'Announcement',
     factsheet: 'Factsheet',
     description: 'Description',
     features: 'Features',
@@ -417,6 +451,7 @@ function createNavSections (sections) {
   }
 
   const hrefs = {
+    announcement: '#announcement',
     factsheet: '#factsheet',
     description: '#description',
     features: '#features',
@@ -427,8 +462,12 @@ function createNavSections (sections) {
     contact: '#contact'
   }
 
+  // The top bar stays short: description, features and links live inside other bands.
+  const hiddenInNav = new Set(['description', 'features', 'links'])
+
   return sections
     .filter(enabled)
+    .filter((section) => !hiddenInNav.has(section.id))
     .filter((section) => titles[section.id] && hrefs[section.id])
     .map((section) => ({
       id: section.id,
@@ -443,6 +482,7 @@ function buildProductData (content) {
   const downloads = normalizeDownloads(content)
   const screenshots = normalizeScreenshots(content)
   const videos = normalizeVideos(content)
+  const announcement = normalizeAnnouncement(content)
   const factsheet = normalizeFactsheet(content)
   const brandingAssets = normalizeBrandingAssets(content)
   const contacts = normalizeContacts(content)
@@ -459,6 +499,7 @@ function buildProductData (content) {
   const enabledScreenshots = screenshots.filter(enabled)
   const enabledBrandingAssets = brandingAssets.filter(enabled)
   const enabledVideos = videos.filter(enabled)
+  const enabledAnnouncementItems = announcement.items.filter(enabled)
   const enabledContacts = contacts.filter(enabled)
   const enabledLinks = links.filter(enabled)
   const featureList = optionalArray(content.features).map((feature) => requireString(feature, 'features[]'))
@@ -471,7 +512,8 @@ function buildProductData (content) {
       ['ui.features.items', ui.features.items, featureList.length],
       ['ui.factsheet.genres_items', ui.factsheet.genres_items, content.genres.length],
       ['ui.factsheet.tags_items', ui.factsheet.tags_items, optionalArray(content.tags).length],
-      ['ui.links.items', ui.links.items, enabledLinks.length]
+      ['ui.links.items', ui.links.items, enabledLinks.length],
+      ['ui.announcement.items', ui.announcement.items, enabledAnnouncementItems.length]
     ]
     for (const [name, values, count] of groups) {
       if (values.length !== count) fail(`Translation count does not match visible content: ${language.code}.${name}`)
@@ -544,6 +586,41 @@ function buildProductData (content) {
       'nav-sections': {
         'nav-section': createNavSections(sections)
       },
+      'hero-video': {
+        ...(announcement.hero.video ? { src: announcement.hero.video } : {}),
+        ...(announcement.hero.poster ? { poster: announcement.hero.poster } : {}),
+        ...(announcement.hero.video_zh ? { 'src-zh': announcement.hero.video_zh } : {}),
+        ...(announcement.hero.poster_zh ? { 'poster-zh': announcement.hero.poster_zh } : {})
+      },
+      'announcement-items': {
+        'announcement-item': enabledAnnouncementItems.map((item) => ({
+          id: item.id,
+          type: item.type,
+          file: item.file,
+          preview: item.preview,
+          title: item.title,
+          caption: item.caption,
+          alt: item.alt,
+          ...(item.type === 'video' ? { 'is-video': 'true' } : {})
+        }))
+      },
+      'feature-images': {
+        'feature-image': optionalArray(content.feature_images).map((image, index) => {
+          const file = normalizePathForWeb(image, `feature_images[${index}]`)
+          assertFileExists(file, `feature_images[${index}]`)
+          return file
+        })
+      },
+      'feature-videos': {
+        'feature-video': optionalArray(content.feature_videos).map((video, index) => {
+          const file = normalizePathForWeb(video.file, `feature_videos[${index}].file`)
+          const poster = normalizePathForWeb(video.poster, `feature_videos[${index}].poster`)
+          assertFileExists(file, `feature_videos[${index}].file`)
+          assertFileExists(poster, `feature_videos[${index}].poster`)
+          return { file, poster }
+        })
+      },
+      'press-email': (enabledContacts.find((contact) => contact.email) || {}).email || '',
       'media-videos': {
         'media-video': enabledVideos
       },

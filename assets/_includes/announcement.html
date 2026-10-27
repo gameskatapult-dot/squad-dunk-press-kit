@@ -1,0 +1,23 @@
+{{#if presskit.announcementItems}}
+<section class="band cream" aria-labelledby="announcement">
+  <div class="container">
+    <header class="band__header">
+      <h2 id="announcement" class="title" data-l10n="ui.announcement.title">Announcement assets</h2>
+    </header>
+    <ul class="downloads">
+      {{#each presskit.announcementItems}}
+      <li class="download">
+        <a class="download__image" href="{{file}}" download data-analytics-event="Assets Download">
+          <img src="{{preview}}" data-l10n-alt="ui.announcement.items.{{@index}}.alt" alt="{{alt}}" loading="lazy" width="960" height="540">
+          {{#if isVideo}}<span class="download__badge" aria-hidden="true">MP4</span>{{/if}}
+        </a>
+        <p class="download__meta">
+          <span data-l10n="ui.announcement.items.{{@index}}.title">{{title}}</span>
+          <a href="{{file}}" download data-analytics-event="Assets Download">{{caption}}</a>
+        </p>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</section>
+{{/if}}

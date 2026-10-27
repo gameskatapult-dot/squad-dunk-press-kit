@@ -7,15 +7,17 @@ analytics:
   goatcounter_endpoint: https://katapultgames.goatcounter.com/count
 
 sections:
-  - id: media
-    enabled: true
-  - id: branding
-    enabled: true
   - id: factsheet
     enabled: true
   - id: description
     enabled: true
   - id: features
+    enabled: true
+  - id: media
+    enabled: true
+  - id: announcement
+    enabled: true
+  - id: branding
     enabled: true
   - id: links
     enabled: true
@@ -39,8 +41,9 @@ factsheet:
     label: ""
     url: ""
   press_kit:
-    label: Open Press Kit
-    url: https://drive.google.com/drive/folders/1G_cmvMlNz9NgyuEXS32lV81ek7wmlIOt?usp=sharing
+    # The Drive folder is out of date; leave the link empty until a current press kit exists.
+    label: ""
+    url: ""
 
 localization:
   default: en
@@ -125,13 +128,51 @@ localization:
               friend Alex can hold on! Join our Discord to find players and a community to
               play with.
       ui:
+        hero:
+          eyebrow: "Press kit"
+          steam_cta: "Sign up for the playtest"
+          download_cta: "Download press kit"
+          contact_cta: "Press contact"
+          video_label: "DUNK playtest announcement video"
+          pause: "Pause video"
+          play: "Play video"
+        quick_facts:
+          developer: "Developer"
+          developer_value: "Katapult Games · Ireland"
+          platform: "Platform"
+          platform_value: "PC · Steam"
+          players: "Players"
+          players_value: "1⁠–⁠6 · online 1v1 to 3v3"
+          release: "Release"
+          release_value: "To be announced"
+          price: "Price"
+          price_value: "To be announced"
+          press: "Press"
+        announcement:
+          title: "Announcement assets"
+          download: "Download"
+          items:
+            - title: "Main capsule · English"
+              alt: "DUNK main capsule art with the English logo."
+            - title: "Main capsule · Chinese"
+              alt: "DUNK main capsule art with the Chinese logo."
+            - title: "Parallax video · no text"
+              alt: "DUNK key art parallax video without text."
+            - title: "Playtest video · English"
+              alt: "Announcement art · English"
+            - title: "Playtest video · Chinese"
+              alt: "Announcement art · Chinese"
+            - title: "Announcement art · English"
+              alt: "DUNK playtest announcement art in English."
+            - title: "Announcement art · Chinese"
+              alt: "DUNK playtest announcement art in Chinese."
         landing:
           nav:
             home: Home
             about: About
             press: Press
           eyebrow: Gameplay video
-          tagline: First-person basketball for 1–6 players. From 1v1 to 3v3.
+          tagline: First-person basketball for 1⁠–⁠6 players. From 1v1 to 3v3.
           play: Watch gameplay video
           close: Close video
           fallback: Open on YouTube
@@ -140,6 +181,7 @@ localization:
           language: Language
           menu: Menu
           sections:
+            announcement: "Announcement"
             factsheet: Factsheet
             description: Description
             features: Features
@@ -207,7 +249,7 @@ localization:
         features:
           title: Features
           items:
-            - First-person basketball for 1–6 players
+            - First-person basketball for 1⁠–⁠6 players
             - Online matches from 1v1 to 3v3
             - Physics-based passing, blocking, tackling and dunking
             - Solo play to hone your skills
@@ -229,24 +271,20 @@ localization:
               description: Coming soon
               label: Coming soon
           items:
+            - title: Arena
+              alt: A packed basketball arena with the city skyline and hot-air balloons.
             - title: Schoolyard match
               alt: First-person basketball match on a schoolyard court at sunset.
             - title: Layup
               alt: A first-person layup with the ball above the hoop at sunset.
-            - title: Jungle court · 01
+            - title: Jungle court
               alt: Another player on the jungle basketball court.
-            - title: Jungle court · 02
-              alt: A player, basketball and giant tree on the jungle court.
-            - title: The squad · 01
+            - title: The squad
               alt: Players gathered on the outdoor schoolyard court.
-            - title: The squad · 02
-              alt: The squad on the schoolyard court, seen in first person.
             - title: Moon court
               alt: A basketball court on the moon, with Earth in the night sky.
-            - title: Shop · 01
-              alt: A clothing shop with a counter, apparel and basketball hoop.
-            - title: Shop · 02
-              alt: A character behind the shop counter, with apparel in the background.
+            - title: Shop
+              alt: The shop, with apparel racks, basketballs and the counter.
         branding:
           title: Key art & logos
           download: Key art & logo · ZIP
@@ -264,7 +302,6 @@ localization:
             - Instagram
             - X
             - Website
-            - Press kit
         team:
           title: Studio
           about_title: About Katapult Games
@@ -317,7 +354,7 @@ localization:
         heading: ¿QUÉ ES DUNK?
         short:
           title: DESCRIPCIÓN CORTA
-          text: Un juego de básquetbol en primera persona para 1–6 jugadores donde cada pase,
+          text: Un juego de básquetbol en primera persona para 1⁠–⁠6 jugadores donde cada pase,
             bloqueo y DUNK basado en físicas depende de tu habilidad. Recorre canchas
             únicas por el universo, conversa por chat de proximidad o perfecciona tu juego
             en solitario. ¡Desbloquea nuevas apariencias, gestos y mucho más para presumir
@@ -325,7 +362,7 @@ localization:
         long:
           title: DESCRIPCIÓN LARGA
           paragraphs:
-            - Un juego de básquetbol en primera persona para 1–6 jugadores, con partidas
+            - Un juego de básquetbol en primera persona para 1⁠–⁠6 jugadores, con partidas
               de 1v1 a 3v3. Pasa el rato con amigos por chat de proximidad o deja que tu
               habilidad hable mientras interceptas, derribas, pasas y haces DUNK.
         keyFeaturesTitle: Características principales
@@ -390,13 +427,51 @@ localization:
               con la que jugar.
         key_features_title: Características
       ui:
+        hero:
+          eyebrow: "Press kit"
+          steam_cta: "Inscríbete en la playtest"
+          download_cta: "Descargar press kit"
+          contact_cta: "Contacto de prensa"
+          video_label: "Video del anuncio de la playtest de DUNK"
+          pause: "Pausar video"
+          play: "Reproducir video"
+        quick_facts:
+          developer: "Desarrollo"
+          developer_value: "Katapult Games · Irlanda"
+          platform: "Plataforma"
+          platform_value: "PC · Steam"
+          players: "Jugadores"
+          players_value: "1⁠–⁠6 · en línea de 1v1 a 3v3"
+          release: "Lanzamiento"
+          release_value: "Por anunciar"
+          price: "Precio"
+          price_value: "Por anunciar"
+          press: "Prensa"
+        announcement:
+          title: "Material del anuncio"
+          download: "Descargar"
+          items:
+            - title: "Cápsula principal · Inglés"
+              alt: "Arte de la cápsula principal de DUNK con el logo en inglés."
+            - title: "Cápsula principal · Chino"
+              alt: "Arte de la cápsula principal de DUNK con el logo en chino."
+            - title: "Video parallax · sin texto"
+              alt: "Video parallax del key art de DUNK sin texto."
+            - title: "Video de la playtest · Inglés"
+              alt: "Arte del anuncio · Inglés"
+            - title: "Video de la playtest · Chino"
+              alt: "Arte del anuncio · Chino"
+            - title: "Arte del anuncio · Inglés"
+              alt: "Arte del anuncio de la playtest de DUNK en inglés."
+            - title: "Arte del anuncio · Chino"
+              alt: "Arte del anuncio de la playtest de DUNK en chino."
         landing:
           nav:
             home: Inicio
             about: Acerca de
             press: Prensa
           eyebrow: Vídeo del juego
-          tagline: Básquetbol en primera persona para 1–6 jugadores. De 1v1 a 3v3.
+          tagline: Básquetbol en primera persona para 1⁠–⁠6 jugadores. De 1v1 a 3v3.
           play: Ver vídeo del juego
           close: Cerrar video
           fallback: Abrir en YouTube
@@ -405,6 +480,7 @@ localization:
           language: Idioma
           menu: Menú
           sections:
+            announcement: "Anuncio"
             factsheet: Ficha técnica
             description: Descripción
             features: Características
@@ -472,7 +548,7 @@ localization:
         features:
           title: Características
           items:
-            - Básquetbol en primera persona para 1–6 jugadores
+            - Básquetbol en primera persona para 1⁠–⁠6 jugadores
             - Partidas online de 1v1 a 3v3
             - Pases, bloqueos, derribos y dunks basados en físicas
             - Juego en solitario para perfeccionar tu habilidad
@@ -494,24 +570,20 @@ localization:
               description: Próximamente
               label: Próximamente
           items:
+            - title: Arena
+              alt: Un estadio de básquetbol repleto, con la ciudad y globos aerostáticos de fondo.
             - title: Partido en el colegio
               alt: Partido de básquetbol en primera persona en una cancha de colegio al atardecer.
             - title: Bandeja
               alt: Una bandeja en primera persona, con la pelota sobre el aro al atardecer.
-            - title: Cancha de la jungla · 01
+            - title: Cancha de la jungla
               alt: Otro jugador en la cancha de básquetbol de la jungla.
-            - title: Cancha de la jungla · 02
-              alt: Un jugador, una pelota y un árbol gigante en la cancha de la jungla.
-            - title: El equipo · 01
+            - title: El equipo
               alt: Jugadores reunidos en la cancha exterior del colegio.
-            - title: El equipo · 02
-              alt: El equipo en la cancha del colegio, visto en primera persona.
             - title: Cancha lunar
               alt: Una cancha de básquetbol en la luna, con la Tierra en el cielo nocturno.
-            - title: Tienda · 01
-              alt: Una tienda de ropa con mostrador, prendas y un aro de básquetbol.
-            - title: Tienda · 02
-              alt: Un personaje detrás del mostrador de la tienda, con ropa al fondo.
+            - title: Tienda
+              alt: La tienda, con percheros de ropa, balones y el mostrador.
         branding:
           title: Ilustración y logotipos
           download: Ilustración y logotipo · ZIP
@@ -529,7 +601,6 @@ localization:
             - Instagram
             - X
             - Sitio web
-            - Kit de prensa
         team:
           title: Estudio
           about_title: Acerca de Katapult Games
@@ -584,7 +655,7 @@ localization:
         heading: ЧТО ТАКОЕ DUNK?
         short:
           title: КРАТКОЕ ОПИСАНИЕ
-          text: Баскетбол от первого лица для 1–6 игроков, где каждый физически просчитанный пас,
+          text: Баскетбол от первого лица для 1⁠–⁠6 игроков, где каждый физически просчитанный пас,
             блок и DUNK зависит от мастерства. Играйте на необычных площадках по всей
             вселенной, общайтесь в голосовом чате по близости или оттачивайте навыки в
             одиночку. Открывайте новые образы, эмоции и многое другое, чтобы покрасоваться
@@ -592,7 +663,7 @@ localization:
         long:
           title: ПОДРОБНОЕ ОПИСАНИЕ
           paragraphs:
-            - "Баскетбол от первого лица для 1–6 игроков с матчами от 1 на 1 до 3 на 3.
+            - "Баскетбол от первого лица для 1⁠–⁠6 игроков с матчами от 1 на 1 до 3 на 3.
               Общайтесь с друзьями в чате по близости или доказывайте своё мастерство:
               перехватывайте, сбивайте соперников, пасуйте и делайте DUNK."
         keyFeaturesTitle: Ключевые особенности
@@ -656,13 +727,51 @@ localization:
               сообщество.
         key_features_title: Особенности
       ui:
+        hero:
+          eyebrow: "Пресс-кит"
+          steam_cta: "Записаться на плейтест"
+          download_cta: "Скачать пресс-кит"
+          contact_cta: "Контакт для прессы"
+          video_label: "Видео-анонс плейтеста DUNK"
+          pause: "Пауза"
+          play: "Воспроизвести"
+        quick_facts:
+          developer: "Разработчик"
+          developer_value: "Katapult Games · Ирландия"
+          platform: "Платформа"
+          platform_value: "PC · Steam"
+          players: "Игроки"
+          players_value: "1⁠–⁠6 · онлайн от 1v1 до 3v3"
+          release: "Релиз"
+          release_value: "Будет объявлено"
+          price: "Цена"
+          price_value: "Будет объявлено"
+          press: "Пресса"
+        announcement:
+          title: "Материалы анонса"
+          download: "Скачать"
+          items:
+            - title: "Главная капсула · английский"
+              alt: "Главная капсула DUNK с английским логотипом."
+            - title: "Главная капсула · китайский"
+              alt: "Главная капсула DUNK с китайским логотипом."
+            - title: "Параллакс-видео · без текста"
+              alt: "Параллакс-видео ключевого арта DUNK без текста."
+            - title: "Видео плейтеста · английский"
+              alt: "Арт анонса · английский"
+            - title: "Видео плейтеста · китайский"
+              alt: "Арт анонса · китайский"
+            - title: "Арт анонса · английский"
+              alt: "Арт анонса плейтеста DUNK на английском."
+            - title: "Арт анонса · китайский"
+              alt: "Арт анонса плейтеста DUNK на китайском."
         landing:
           nav:
             home: Главная
             about: Об игре
             press: Пресса
           eyebrow: Видео игрового процесса
-          tagline: Баскетбол от первого лица для 1–6 игроков. От 1 на 1 до 3 на 3.
+          tagline: Баскетбол от первого лица для 1⁠–⁠6 игроков. От 1 на 1 до 3 на 3.
           play: Смотреть игровой процесс
           close: Закрыть видео
           fallback: Открыть на YouTube
@@ -671,6 +780,7 @@ localization:
           language: Язык
           menu: Меню
           sections:
+            announcement: "Анонс"
             factsheet: Информация об игре
             description: Описание
             features: Особенности
@@ -738,7 +848,7 @@ localization:
         features:
           title: Особенности
           items:
-            - Баскетбол от первого лица для 1–6 игроков
+            - Баскетбол от первого лица для 1⁠–⁠6 игроков
             - Онлайн-матчи от 1 на 1 до 3 на 3
             - Пасы, блоки, силовые приёмы и данки на основе физики
             - Одиночная игра для оттачивания навыков
@@ -760,24 +870,20 @@ localization:
               description: Скоро
               label: Скоро
           items:
+            - title: Арена
+              alt: Заполненная баскетбольная арена на фоне города и воздушных шаров.
             - title: Матч на школьном дворе
               alt: Баскетбольный матч от первого лица на школьной площадке на закате.
             - title: Бросок из-под кольца
               alt: "Бросок из-под кольца от первого лица: мяч над кольцом на закате."
-            - title: Площадка в джунглях · 01
+            - title: Площадка в джунглях
               alt: Другой игрок на баскетбольной площадке в джунглях.
-            - title: Площадка в джунглях · 02
-              alt: Игрок, баскетбольный мяч и гигантское дерево на площадке в джунглях.
-            - title: Команда · 01
+            - title: Команда
               alt: Игроки собрались на открытой школьной площадке.
-            - title: Команда · 02
-              alt: Команда на школьной площадке, вид от первого лица.
             - title: Лунная площадка
               alt: Баскетбольная площадка на Луне, Земля в ночном небе.
-            - title: Магазин · 01
-              alt: Магазин одежды с прилавком, одеждой и баскетбольным кольцом.
-            - title: Магазин · 02
-              alt: Персонаж за прилавком магазина, на заднем плане одежда.
+            - title: Магазин
+              alt: Магазин с вешалками одежды, мячами и прилавком.
         branding:
           title: Иллюстрация и логотипы
           download: Иллюстрация и логотип · ZIP
@@ -795,7 +901,6 @@ localization:
             - Instagram
             - X
             - Сайт
-            - Пресс-кит
         team:
           title: Студия
           about_title: О Katapult Games
@@ -892,6 +997,44 @@ localization:
               オンラインでは、ソロ参加でもチームでも最大3対3で遊べます。5対1のプライベートロビーを作って、友達のアレックスがどこまで耐えられるか試そう！プレイヤーや仲間を探すなら、Discordに参加してください。
         key_features_title: 特徴
       ui:
+        hero:
+          eyebrow: "プレスキット"
+          steam_cta: "プレイテストに参加登録"
+          download_cta: "プレスキットをダウンロード"
+          contact_cta: "プレス窓口"
+          video_label: "DUNK プレイテスト告知映像"
+          pause: "動画を一時停止"
+          play: "動画を再生"
+        quick_facts:
+          developer: "開発"
+          developer_value: "Katapult Games · アイルランド"
+          platform: "プラットフォーム"
+          platform_value: "PC · Steam"
+          players: "プレイ人数"
+          players_value: "1〜6人 · オンライン 1v1〜3v3"
+          release: "発売日"
+          release_value: "未定"
+          price: "価格"
+          price_value: "未定"
+          press: "プレス"
+        announcement:
+          title: "告知用素材"
+          download: "ダウンロード"
+          items:
+            - title: "メインカプセル · 英語"
+              alt: "英語ロゴ入りの DUNK メインカプセルアート。"
+            - title: "メインカプセル · 中国語"
+              alt: "中国語ロゴ入りの DUNK メインカプセルアート。"
+            - title: "パララックス映像 · テキストなし"
+              alt: "テキストなしの DUNK キーアート パララックス映像。"
+            - title: "プレイテスト映像 · 英語"
+              alt: "告知アート · 英語"
+            - title: "プレイテスト映像 · 中国語"
+              alt: "告知アート · 中国語"
+            - title: "告知アート · 英語"
+              alt: "DUNK プレイテスト告知アート（英語）。"
+            - title: "告知アート · 中国語"
+              alt: "DUNK プレイテスト告知アート（中国語）。"
         landing:
           nav:
             home: ホーム
@@ -907,6 +1050,7 @@ localization:
           language: 言語
           menu: メニュー
           sections:
+            announcement: "アナウンス"
             factsheet: 基本情報
             description: 説明
             features: 特徴
@@ -996,24 +1140,20 @@ localization:
               description: 近日公開
               label: 近日公開
           items:
+            - title: アリーナ
+              alt: 街並みと気球を背景にした満員のバスケットボールアリーナ。
             - title: 校庭での試合
               alt: 夕暮れの校庭で行われる一人称視点のバスケットボールの試合。
             - title: レイアップ
               alt: 夕暮れのリング上にボールが浮かぶ、一人称視点のレイアップ。
-            - title: ジャングルのコート · 01
+            - title: ジャングルのコート
               alt: ジャングルのバスケットボールコートに立つ別のプレイヤー。
-            - title: ジャングルのコート · 02
-              alt: ジャングルのコートにいるプレイヤー、ボール、巨大な木。
-            - title: 仲間たち · 01
+            - title: 仲間たち
               alt: 校庭の屋外コートに集まったプレイヤーたち。
-            - title: 仲間たち · 02
-              alt: 一人称視点で見た校庭のコートの仲間たち。
             - title: 月のコート
               alt: 夜空に地球が見える月面のバスケットボールコート。
-            - title: ショップ · 01
-              alt: カウンター、衣服、バスケットゴールがある服飾ショップ。
-            - title: ショップ · 02
-              alt: 衣服が並ぶショップでカウンターの奥に立つキャラクター。
+            - title: ショップ
+              alt: 服のラック、ボール、カウンターが並ぶショップ。
         branding:
           title: キーアートとロゴ
           download: キーアートとロゴ · ZIP
@@ -1031,7 +1171,6 @@ localization:
             - Instagram
             - X
             - 公式サイト
-            - プレスキット
         team:
           title: スタジオ
           about_title: Katapult Gamesについて
@@ -1076,11 +1215,11 @@ localization:
         heading: DUNK 是什么？
         short:
           title: 简短介绍
-          text: 一款支持1–6人的第一人称篮球游戏，每一次基于物理的传球、盖帽和DUNK都取决于你的技巧。踏上遍布宇宙的独特球场，用近距离聊天和朋友闲聊，或通过单人游玩磨练第一人称球技。解锁新造型、表情等内容，在朋友面前秀一把！
+          text: 一款支持1⁠–⁠6人的第一人称篮球游戏，每一次基于物理的传球、盖帽和DUNK都取决于你的技巧。踏上遍布宇宙的独特球场，用近距离聊天和朋友闲聊，或通过单人游玩磨练第一人称球技。解锁新造型、表情等内容，在朋友面前秀一把！
         long:
           title: 详细介绍
           paragraphs:
-            - 支持1–6人的第一人称篮球游戏，比赛规模从1v1到3v3。通过近距离聊天和朋友相聚，或者用拦截、冲撞、传球和DUNK展现实力。
+            - 支持1⁠–⁠6人的第一人称篮球游戏，比赛规模从1v1到3v3。通过近距离聊天和朋友相聚，或者用拦截、冲撞、传球和DUNK展现实力。
         keyFeaturesTitle: 核心特色
         keyFeatures:
           - icon: ""
@@ -1119,13 +1258,51 @@ localization:
               在线游玩随你选择，单独加入或组队都能参加最高3v3的比赛。创建5v1私人大厅，看看朋友Alex能撑多久！加入我们的Discord，寻找玩家和一起游玩的伙伴。
         key_features_title: 游戏特色
       ui:
+        hero:
+          eyebrow: "媒体资料包"
+          steam_cta: "报名参加试玩测试"
+          download_cta: "下载媒体资料包"
+          contact_cta: "媒体联系"
+          video_label: "DUNK 试玩测试公告视频"
+          pause: "暂停视频"
+          play: "播放视频"
+        quick_facts:
+          developer: "开发商"
+          developer_value: "Katapult Games · 爱尔兰"
+          platform: "平台"
+          platform_value: "PC · Steam"
+          players: "玩家人数"
+          players_value: "1⁠–⁠6 人 · 在线 1v1 至 3v3"
+          release: "发售日期"
+          release_value: "待公布"
+          price: "价格"
+          price_value: "待公布"
+          press: "媒体"
+        announcement:
+          title: "公告素材"
+          download: "下载"
+          items:
+            - title: "主宣传图 · 英文"
+              alt: "带英文标志的 DUNK 主宣传图。"
+            - title: "主宣传图 · 中文"
+              alt: "带中文标志的 DUNK 主宣传图。"
+            - title: "视差视频 · 无文字"
+              alt: "无文字的 DUNK 主视觉视差视频。"
+            - title: "试玩测试视频 · 英文"
+              alt: "公告图 · 英文"
+            - title: "试玩测试视频 · 中文"
+              alt: "公告图 · 中文"
+            - title: "公告图 · 英文"
+              alt: "DUNK 试玩测试英文公告图。"
+            - title: "公告图 · 中文"
+              alt: "DUNK 试玩测试中文公告图。"
         landing:
           nav:
             home: 首页
             about: 关于
             press: 媒体
           eyebrow: 游戏实机视频
-          tagline: 支持1–6人的第一人称篮球。从1v1到3v3。
+          tagline: 支持1⁠–⁠6人的第一人称篮球。从1v1到3v3。
           play: 观看实机视频
           close: 关闭视频
           fallback: 在 YouTube 打开
@@ -1134,6 +1311,7 @@ localization:
           language: 语言
           menu: 菜单
           sections:
+            announcement: "公告"
             factsheet: 游戏信息
             description: 游戏介绍
             features: 游戏特色
@@ -1201,7 +1379,7 @@ localization:
         features:
           title: 游戏特色
           items:
-            - 支持1–6人的第一人称篮球
+            - 支持1⁠–⁠6人的第一人称篮球
             - 1v1至3v3在线比赛
             - 基于物理的传球、盖帽、冲撞和扣篮
             - 通过单人游玩磨练技巧
@@ -1223,24 +1401,20 @@ localization:
               description: 即将公开
               label: 即将公开
           items:
+            - title: 竞技场
+              alt: 座无虚席的篮球竞技场，背景是城市天际线和热气球。
             - title: 校园比赛
               alt: 夕阳下校园球场上的第一人称篮球比赛。
             - title: 上篮
               alt: 夕阳下的一次第一人称上篮，篮球位于篮筐上方。
-            - title: 丛林球场 · 01
+            - title: 丛林球场
               alt: 丛林篮球场上的另一名玩家。
-            - title: 丛林球场 · 02
-              alt: 丛林球场上的玩家、篮球和巨树。
-            - title: 队友们 · 01
+            - title: 队友们
               alt: 聚集在校园室外球场上的玩家。
-            - title: 队友们 · 02
-              alt: 第一人称视角下校园球场上的队友们。
             - title: 月球球场
               alt: 夜空中能看到地球的月球篮球场。
-            - title: 商店 · 01
-              alt: 设有柜台、服装和篮球架的服装商店。
-            - title: 商店 · 02
-              alt: 角色站在商店柜台后方，背景中陈列着服装。
+            - title: 商店
+              alt: 商店里有衣架、篮球和柜台。
         branding:
           title: 主视觉与标志
           download: 主视觉与标志 · ZIP
@@ -1258,7 +1432,6 @@ localization:
             - Instagram
             - X
             - 官方网站
-            - 媒体资料包
         team:
           title: 工作室
           about_title: 关于 Katapult Games
@@ -1303,7 +1476,7 @@ localization:
         heading: WAS IST DUNK?
         short:
           title: KURZBESCHREIBUNG
-          text: Ein First-Person-Basketballspiel für 1–6 Spieler, bei dem jeder physikbasierte Pass,
+          text: Ein First-Person-Basketballspiel für 1⁠–⁠6 Spieler, bei dem jeder physikbasierte Pass,
             Block und DUNK auf Können ankommt. Entdecke einzigartige Courts im ganzen
             Universum, quatsche im Proximity-Chat oder feile im Solospiel an deinen
             Fähigkeiten. Schalte neue Looks, Emotes und mehr frei, um vor deinen Freunden
@@ -1311,7 +1484,7 @@ localization:
         long:
           title: LANGE BESCHREIBUNG
           paragraphs:
-            - "First-Person-Basketball für 1–6 Spieler in Matches von 1v1 bis 3v3.
+            - "First-Person-Basketball für 1⁠–⁠6 Spieler in Matches von 1v1 bis 3v3.
               Verbring Zeit mit Freunden im Proximity-Chat oder lass dein Können sprechen:
               abfangen, tackeln, passen und DUNK."
         keyFeaturesTitle: Hauptfeatures
@@ -1373,13 +1546,51 @@ localization:
               durchhält! In unserem Discord findest du Mitspieler und eine Community.
         key_features_title: Spielmerkmale
       ui:
+        hero:
+          eyebrow: "Pressekit"
+          steam_cta: "Für den Playtest anmelden"
+          download_cta: "Pressekit herunterladen"
+          contact_cta: "Pressekontakt"
+          video_label: "DUNK Playtest-Ankündigungsvideo"
+          pause: "Video pausieren"
+          play: "Video abspielen"
+        quick_facts:
+          developer: "Entwickler"
+          developer_value: "Katapult Games · Irland"
+          platform: "Plattform"
+          platform_value: "PC · Steam"
+          players: "Spieler"
+          players_value: "1⁠–⁠6 · online 1v1 bis 3v3"
+          release: "Release"
+          release_value: "Wird noch bekannt gegeben"
+          price: "Preis"
+          price_value: "Wird noch bekannt gegeben"
+          press: "Presse"
+        announcement:
+          title: "Ankündigungsmaterial"
+          download: "Herunterladen"
+          items:
+            - title: "Haupt-Capsule · Englisch"
+              alt: "DUNK Haupt-Capsule-Artwork mit englischem Logo."
+            - title: "Haupt-Capsule · Chinesisch"
+              alt: "DUNK Haupt-Capsule-Artwork mit chinesischem Logo."
+            - title: "Parallax-Video · ohne Text"
+              alt: "DUNK Key-Art-Parallax-Video ohne Text."
+            - title: "Playtest-Video · Englisch"
+              alt: "Ankündigungsbild · Englisch"
+            - title: "Playtest-Video · Chinesisch"
+              alt: "Ankündigungsbild · Chinesisch"
+            - title: "Ankündigungsbild · Englisch"
+              alt: "DUNK Playtest-Ankündigungsbild auf Englisch."
+            - title: "Ankündigungsbild · Chinesisch"
+              alt: "DUNK Playtest-Ankündigungsbild auf Chinesisch."
         landing:
           nav:
             home: Startseite
             about: Über das Spiel
             press: Presse
           eyebrow: Spielvideo
-          tagline: First-Person-Basketball für 1–6 Spieler. Von 1v1 bis 3v3.
+          tagline: First-Person-Basketball für 1⁠–⁠6 Spieler. Von 1v1 bis 3v3.
           play: Spielvideo ansehen
           close: Video schließen
           fallback: Auf YouTube öffnen
@@ -1388,6 +1599,7 @@ localization:
           language: Sprache
           menu: Menü
           sections:
+            announcement: "Ankündigung"
             factsheet: Datenblatt
             description: Beschreibung
             features: Spielmerkmale
@@ -1455,7 +1667,7 @@ localization:
         features:
           title: Spielmerkmale
           items:
-            - First-Person-Basketball für 1–6 Spieler
+            - First-Person-Basketball für 1⁠–⁠6 Spieler
             - Online-Matches von 1v1 bis 3v3
             - Physikbasierte Pässe, Blocks, Tackles und Dunks
             - Solospiel zum Verbessern deiner Fähigkeiten
@@ -1477,24 +1689,20 @@ localization:
               description: Demnächst
               label: Demnächst
           items:
+            - title: Arena
+              alt: Eine volle Basketballarena vor der Skyline der Stadt und Heißluftballons.
             - title: Match auf dem Schulhof
               alt: Basketball aus der Ich-Perspektive auf einem Schulhof bei Sonnenuntergang.
             - title: Korbleger
               alt: Ein Korbleger aus der Ich-Perspektive, der Ball schwebt über dem Korb.
-            - title: Dschungel-Court · 01
+            - title: Dschungel-Court
               alt: Ein anderer Spieler auf dem Basketball-Court im Dschungel.
-            - title: Dschungel-Court · 02
-              alt: Ein Spieler, ein Basketball und ein riesiger Baum auf dem Dschungel-Court.
-            - title: Das Team · 01
+            - title: Das Team
               alt: Spieler versammeln sich auf dem Basketball-Court auf dem Schulhof.
-            - title: Das Team · 02
-              alt: Das Team auf dem Schulhof-Court aus der Ich-Perspektive.
             - title: Mond-Court
               alt: Ein Basketball-Court auf dem Mond mit der Erde am Nachthimmel.
-            - title: Laden · 01
-              alt: Ein Bekleidungsladen mit Theke, Kleidung und Basketballkorb.
-            - title: Laden · 02
-              alt: Eine Figur hinter der Ladentheke, mit Kleidung im Hintergrund.
+            - title: Laden
+              alt: Der Shop mit Kleiderständern, Basketbällen und der Theke.
         branding:
           title: Illustration und Logos
           download: Illustration und Logo · ZIP
@@ -1512,7 +1720,6 @@ localization:
             - Instagram
             - X
             - Website
-            - Pressemappe
         team:
           title: Studio
           about_title: Über Katapult Games
@@ -1640,6 +1847,44 @@ localization:
               communauté.
         key_features_title: Fonctionnalités
       ui:
+        hero:
+          eyebrow: "Kit presse"
+          steam_cta: "S’inscrire au playtest"
+          download_cta: "Télécharger le kit presse"
+          contact_cta: "Contact presse"
+          video_label: "Vidéo d’annonce du playtest de DUNK"
+          pause: "Mettre la vidéo en pause"
+          play: "Lire la vidéo"
+        quick_facts:
+          developer: "Développeur"
+          developer_value: "Katapult Games · Irlande"
+          platform: "Plateforme"
+          platform_value: "PC · Steam"
+          players: "Joueurs"
+          players_value: "1⁠–⁠6 · en ligne du 1v1 au 3v3"
+          release: "Sortie"
+          release_value: "À annoncer"
+          price: "Prix"
+          price_value: "À annoncer"
+          press: "Presse"
+        announcement:
+          title: "Éléments de l’annonce"
+          download: "Télécharger"
+          items:
+            - title: "Capsule principale · anglais"
+              alt: "Visuel de la capsule principale de DUNK avec le logo anglais."
+            - title: "Capsule principale · chinois"
+              alt: "Visuel de la capsule principale de DUNK avec le logo chinois."
+            - title: "Vidéo parallaxe · sans texte"
+              alt: "Vidéo parallaxe du key art de DUNK sans texte."
+            - title: "Vidéo du playtest · anglais"
+              alt: "Visuel d’annonce · anglais"
+            - title: "Vidéo du playtest · chinois"
+              alt: "Visuel d’annonce · chinois"
+            - title: "Visuel d’annonce · anglais"
+              alt: "Visuel d’annonce du playtest de DUNK en anglais."
+            - title: "Visuel d’annonce · chinois"
+              alt: "Visuel d’annonce du playtest de DUNK en chinois."
         landing:
           nav:
             home: Accueil
@@ -1655,6 +1900,7 @@ localization:
           language: Langue
           menu: Menu
           sections:
+            announcement: "Annonce"
             factsheet: Fiche technique
             description: Description
             features: Fonctionnalités
@@ -1744,24 +1990,20 @@ localization:
               description: Prochainement
               label: Prochainement
           items:
+            - title: Arène
+              alt: Une arène de basket pleine, avec la ville et des montgolfières en arrière-plan.
             - title: Match dans la cour d’école
               alt: Match de basket à la première personne dans une cour d’école au coucher du soleil.
             - title: Tir en course
               alt: Un tir en course à la première personne, avec le ballon au-dessus du panier.
-            - title: Terrain de jungle · 01
+            - title: Terrain de jungle
               alt: Un autre joueur sur le terrain de basket de la jungle.
-            - title: Terrain de jungle · 02
-              alt: Un joueur, un ballon et un arbre géant sur le terrain de la jungle.
-            - title: L’équipe · 01
+            - title: L’équipe
               alt: Des joueurs réunis sur le terrain extérieur de l’école.
-            - title: L’équipe · 02
-              alt: L’équipe sur le terrain de l’école, vue à la première personne.
             - title: Terrain lunaire
               alt: Un terrain de basket sur la Lune, avec la Terre dans le ciel nocturne.
-            - title: Boutique · 01
-              alt: Une boutique de vêtements avec un comptoir, des habits et un panier de basket.
-            - title: Boutique · 02
-              alt: Un personnage derrière le comptoir de la boutique, avec des vêtements en
+            - title: Boutique
+              alt: La boutique, avec ses portants de vêtements, ses ballons et son comptoir.
                 arrière-plan.
         branding:
           title: Visuels et logos
@@ -1780,7 +2022,6 @@ localization:
             - Instagram
             - X
             - Site officiel
-            - Dossier de presse
         team:
           title: Studio
           about_title: À propos de Katapult Games
@@ -1836,7 +2077,7 @@ localization:
         heading: O QUE É DUNK?
         short:
           title: DESCRIÇÃO CURTA
-          text: Um jogo de basquete em primeira pessoa para 1–6 jogadores em que cada passe,
+          text: Um jogo de basquete em primeira pessoa para 1⁠–⁠6 jogadores em que cada passe,
             bloqueio e DUNK baseado em física depende da sua habilidade. Explore quadras
             únicas pelo universo, converse pelo chat de proximidade ou aperfeiçoe suas
             jogadas no modo solo. Desbloqueie novos visuais, gestos e muito mais para se
@@ -1844,7 +2085,7 @@ localization:
         long:
           title: DESCRIÇÃO LONGA
           paragraphs:
-            - Um jogo de basquete em primeira pessoa para 1–6 jogadores, com partidas de
+            - Um jogo de basquete em primeira pessoa para 1⁠–⁠6 jogadores, com partidas de
               1v1 a 3v3. Passe um tempo com os amigos pelo chat de proximidade ou deixe
               suas habilidades falarem enquanto intercepta, derruba, passa e faz DUNK.
         keyFeaturesTitle: Principais recursos
@@ -1908,13 +2149,51 @@ localization:
               no nosso Discord para encontrar jogadores e uma comunidade para jogar junto.
         key_features_title: Recursos
       ui:
+        hero:
+          eyebrow: "Press kit"
+          steam_cta: "Inscreva-se no playtest"
+          download_cta: "Baixar press kit"
+          contact_cta: "Contato de imprensa"
+          video_label: "Vídeo de anúncio do playtest de DUNK"
+          pause: "Pausar vídeo"
+          play: "Reproduzir vídeo"
+        quick_facts:
+          developer: "Desenvolvedora"
+          developer_value: "Katapult Games · Irlanda"
+          platform: "Plataforma"
+          platform_value: "PC · Steam"
+          players: "Jogadores"
+          players_value: "1⁠–⁠6 · online de 1v1 a 3v3"
+          release: "Lançamento"
+          release_value: "A anunciar"
+          price: "Preço"
+          price_value: "A anunciar"
+          press: "Imprensa"
+        announcement:
+          title: "Material do anúncio"
+          download: "Baixar"
+          items:
+            - title: "Cápsula principal · inglês"
+              alt: "Arte da cápsula principal de DUNK com o logo em inglês."
+            - title: "Cápsula principal · chinês"
+              alt: "Arte da cápsula principal de DUNK com o logo em chinês."
+            - title: "Vídeo parallax · sem texto"
+              alt: "Vídeo parallax da key art de DUNK sem texto."
+            - title: "Vídeo do playtest · inglês"
+              alt: "Arte do anúncio · inglês"
+            - title: "Vídeo do playtest · chinês"
+              alt: "Arte do anúncio · chinês"
+            - title: "Arte do anúncio · inglês"
+              alt: "Arte do anúncio do playtest de DUNK em inglês."
+            - title: "Arte do anúncio · chinês"
+              alt: "Arte do anúncio do playtest de DUNK em chinês."
         landing:
           nav:
             home: Início
             about: Sobre
             press: Imprensa
           eyebrow: Vídeo do jogo
-          tagline: Basquete em primeira pessoa para 1–6 jogadores. De 1v1 a 3v3.
+          tagline: Basquete em primeira pessoa para 1⁠–⁠6 jogadores. De 1v1 a 3v3.
           play: Assistir ao vídeo do jogo
           close: Fechar vídeo
           fallback: Abrir no YouTube
@@ -1923,6 +2202,7 @@ localization:
           language: Idioma
           menu: Menu
           sections:
+            announcement: "Anúncio"
             factsheet: Ficha técnica
             description: Descrição
             features: Recursos
@@ -1990,7 +2270,7 @@ localization:
         features:
           title: Recursos
           items:
-            - Basquete em primeira pessoa para 1–6 jogadores
+            - Basquete em primeira pessoa para 1⁠–⁠6 jogadores
             - Partidas online de 1v1 a 3v3
             - Passes, bloqueios, contatos e dunks baseados em física
             - Jogo solo para aperfeiçoar suas habilidades
@@ -2012,24 +2292,20 @@ localization:
               description: Em breve
               label: Em breve
           items:
+            - title: Arena
+              alt: Uma arena de basquete lotada, com a cidade e balões de ar quente ao fundo.
             - title: Partida na escola
               alt: Partida de basquete em primeira pessoa numa quadra escolar ao pôr do sol.
             - title: Bandeja
               alt: Uma bandeja em primeira pessoa, com a bola acima do aro ao pôr do sol.
-            - title: Quadra da selva · 01
+            - title: Quadra da selva
               alt: Outro jogador na quadra de basquete da selva.
-            - title: Quadra da selva · 02
-              alt: Um jogador, uma bola e uma árvore gigante na quadra da selva.
-            - title: A equipe · 01
+            - title: A equipe
               alt: Jogadores reunidos na quadra externa da escola.
-            - title: A equipe · 02
-              alt: A equipe na quadra da escola, vista em primeira pessoa.
             - title: Quadra lunar
               alt: Uma quadra de basquete na Lua, com a Terra no céu noturno.
-            - title: Loja · 01
-              alt: Uma loja de roupas com balcão, peças de vestuário e aro de basquete.
-            - title: Loja · 02
-              alt: Um personagem atrás do balcão da loja, com roupas ao fundo.
+            - title: Loja
+              alt: A loja, com araras de roupas, bolas de basquete e o balcão.
         branding:
           title: Arte e logotipos
           download: Arte e logotipo · ZIP
@@ -2047,7 +2323,6 @@ localization:
             - Instagram
             - X
             - Site oficial
-            - Kit de imprensa
         team:
           title: Estúdio
           about_title: Sobre a Katapult Games
@@ -2131,7 +2406,7 @@ platforms:
   - name: PC - Steam
 
 features:
-  - First-person basketball for 1–6 players
+  - First-person basketball for 1⁠–⁠6 players
   - Online matches from 1v1 to 3v3
   - Physics-based passing, blocking, tackling and dunking
   - Solo play to hone your skills
@@ -2139,6 +2414,87 @@ features:
   - Schoolyard, jungle and moon courts with their own mechanics
   - Unlockable looks, cosmetics and emotes
   - Private lobbies, including 5v1 matches
+
+# One image per description pillar (Balling Out, The Courts Are Waiting, Friendly Competition).
+feature_images:
+  - images/screenshots-2026/previews/02_Layup.jpg
+  - images/screenshots-2026/previews/06_Moon.jpg
+  - images/screenshots-2026/previews/04_Group pic1.jpg
+
+# The Steam page banner loops, one per description pillar, shown above each title like on Steam.
+feature_videos:
+  - file: images/features/balling-out.mp4
+    poster: images/features/balling-out.jpg
+  - file: images/features/courts.mp4
+    poster: images/features/courts.jpg
+  - file: images/features/friendly.mp4
+    poster: images/features/friendly.jpg
+
+# Hero loop and press downloads for the playtest announcement (October 2026).
+# The Chinese video and poster are used automatically when the page language is zh.
+announcement:
+  hero:
+    video: images/announcement/hero-loop-pingpong.mp4
+    poster: images/announcement/hero-poster.jpg
+    video_zh: images/announcement/playtest-loop-zh.mp4
+    poster_zh: images/announcement/playtest-poster-zh.jpg
+  items:
+    - id: main-capsule-en
+      type: image
+      file: images/announcement/DUNK-main-capsule-en.png
+      preview: images/announcement/main-capsule-en-preview.jpg
+      title: Main capsule · English
+      caption: 4000 × 2292 · PNG
+      alt: DUNK main capsule art with the English logo.
+      enabled: true
+    - id: main-capsule-zh
+      type: image
+      file: images/announcement/DUNK-main-capsule-zh.png
+      preview: images/announcement/main-capsule-zh-preview.jpg
+      title: Main capsule · Chinese
+      caption: 4000 × 2292 · PNG
+      alt: DUNK main capsule art with the Chinese logo.
+      enabled: true
+    - id: parallax-no-text
+      type: video
+      file: images/announcement/DUNK-parallax-no-text-1080p.mp4
+      preview: images/announcement/hero-poster.jpg
+      title: Parallax video · no text
+      caption: 1920 × 1080 · MP4
+      alt: DUNK key art parallax video without text.
+      enabled: true
+    - id: playtest-video-en
+      type: video
+      file: images/announcement/DUNK-playtest-parallax-en-1080p.mp4
+      preview: images/announcement/playtest-poster-en.jpg
+      title: Playtest video · English
+      caption: 1920 × 1080 · MP4
+      alt: DUNK playtest announcement art in English.
+      enabled: true
+    - id: playtest-video-zh
+      type: video
+      file: images/announcement/DUNK-playtest-parallax-zh-1080p.mp4
+      preview: images/announcement/playtest-poster-zh.jpg
+      title: Playtest video · Chinese
+      caption: 1920 × 1080 · MP4
+      alt: DUNK playtest announcement art in Chinese.
+      enabled: true
+    - id: announcement-art-en
+      type: image
+      file: images/announcement/DUNK-announcement-en.png
+      preview: images/announcement/announcement-en-preview.jpg
+      title: Announcement art · English
+      caption: 1920 × 1080 · PNG
+      alt: DUNK playtest announcement art in English.
+      enabled: true
+    - id: announcement-art-zh
+      type: image
+      file: images/announcement/DUNK-announcement-zh.png
+      preview: images/announcement/announcement-zh-preview.jpg
+      title: Announcement art · Chinese
+      caption: 1920 × 1080 · PNG
+      alt: DUNK playtest announcement art in Chinese.
+      enabled: true
 
 media:
   videos:
@@ -2210,6 +2566,15 @@ media:
         alt: DUNK school cafeteria environment screenshot.
         enabled: false
 
+      - id: october-arena
+        file: images/screenshots-2026/08_Arena.png
+        preview: images/screenshots-2026/previews/08_Arena.jpg
+        thumb: images/screenshots-2026/thumbs/08_Arena.jpg
+        title: Arena
+        caption: 3840 × 2160 · PNG
+        alt: DUNK basketball arena packed with fans, with the city skyline and hot-air balloons.
+        featured: true
+        enabled: true
       - id: october-01
         file: images/screenshots-2026/01_Match.jpg
         preview: images/screenshots-2026/previews/01_Match.jpg
@@ -2230,7 +2595,7 @@ media:
         file: images/screenshots-2026/03_Jungle_Option1.png
         preview: images/screenshots-2026/previews/03_Jungle_Option1.jpg
         thumb: images/screenshots-2026/thumbs/03_Jungle_Option1.jpg
-        title: Jungle court · 01
+        title: Jungle court
         caption: 1917 × 1078 · PNG
         alt: DUNK first-person basketball on the jungle court, facing another player.
         enabled: true
@@ -2241,12 +2606,12 @@ media:
         title: Jungle court · 02
         caption: 1920 × 1080 · PNG
         alt: DUNK jungle court with a player, basketball and giant tree.
-        enabled: true
+        enabled: false
       - id: october-05
         file: images/screenshots-2026/04_Group pic1.png
         preview: images/screenshots-2026/previews/04_Group pic1.jpg
         thumb: images/screenshots-2026/thumbs/04_Group pic1.jpg
-        title: The squad · 01
+        title: The squad
         caption: 2559 × 1438 · PNG
         alt: DUNK players gathered on the outdoor schoolyard court.
         enabled: true
@@ -2257,7 +2622,7 @@ media:
         title: The squad · 02
         caption: 2559 × 1438 · PNG
         alt: DUNK squad on the schoolyard court, viewed in first person.
-        enabled: true
+        enabled: false
       - id: october-07
         file: images/screenshots-2026/06_Moon.jpg
         preview: images/screenshots-2026/previews/06_Moon.jpg
@@ -2273,7 +2638,7 @@ media:
         title: Shop · 01
         caption: 2050 × 1140 · PNG
         alt: DUNK clothing shop with a counter, apparel and basketball hoop.
-        enabled: true
+        enabled: false
       - id: october-09
         file: images/screenshots-2026/07_Shop_Option2.png
         preview: images/screenshots-2026/previews/07_Shop_Option2.jpg
@@ -2281,6 +2646,14 @@ media:
         title: Shop · 02
         caption: 1920 × 1080 · PNG
         alt: DUNK shop counter with a character and apparel in the background.
+        enabled: false
+      - id: october-shop
+        file: images/screenshots-2026/09_Shop.png
+        preview: images/screenshots-2026/previews/09_Shop.jpg
+        thumb: images/screenshots-2026/thumbs/09_Shop.jpg
+        title: Shop
+        caption: 3840 × 2160 · PNG
+        alt: DUNK shop with apparel racks, basketballs and the counter.
         enabled: true
 
 branding:
@@ -2307,7 +2680,7 @@ branding:
       enabled: true
     - id: october-logo
       type: logo
-      file: images/dunk-logo-2026.png
+      file: images/dunk-logo-v8.png
       title: DUNK logo · PNG
       alt: DUNK white logo on a transparent background.
       enabled: true
@@ -2376,4 +2749,4 @@ links:
   - id: dunk-presskit
     title: Presskit
     url: https://squaddunk.com/presskit/
-    enabled: true
+    enabled: false

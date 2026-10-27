@@ -1,0 +1,63 @@
+<section class="hero" id="home" aria-labelledby="press-title">
+  <div class="hero__media">
+    {{#if presskit.heroVideo.src}}
+    <video class="hero__video" data-hero-video autoplay muted loop playsinline preload="auto"
+      src="{{presskit.heroVideo.src}}" poster="{{presskit.heroVideo.poster}}"
+      data-src-default="{{presskit.heroVideo.src}}" data-poster-default="{{presskit.heroVideo.poster}}"
+      {{#if presskit.heroVideo.srcZh}}data-src-zh="{{presskit.heroVideo.srcZh}}" data-poster-zh="{{presskit.heroVideo.posterZh}}"{{/if}}
+      data-l10n-aria-label="ui.hero.video_label" aria-label="DUNK playtest announcement video"></video>
+    <button class="hero__toggle" type="button" data-hero-toggle data-l10n-aria-label="ui.hero.pause" aria-label="Pause video" aria-pressed="false">
+      <svg class="hero__icon-pause" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2h3v12H4zM9 2h3v12H9z" fill="currentColor"/></svg>
+      <svg class="hero__icon-play" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2l10 6-10 6z" fill="currentColor"/></svg>
+    </button>
+    {{else}}
+    <img src="images/key-art-2026-web.jpg" width="1800" height="1031" data-l10n-alt="ui.branding.assets.0.alt" alt="DUNK key art" fetchpriority="high">
+    {{/if}}
+  </div>
+</section>
+
+<section class="intro sky" aria-labelledby="press-title">
+  <div class="container intro__inner">
+    <h1 id="press-title" class="visually-hidden">{{presskit.title}}</h1>
+    <p class="intro__tagline" data-l10n="ui.landing.tagline">First-person basketball for 1–6 players. From 1v1 to 3v3.</p>
+    <div class="intro__actions">
+      {{#if presskit.steamLink.url}}
+      <a class="button button--ball" href="{{presskit.steamLink.url}}" target="_blank" rel="noopener" data-analytics-event="Steam Click">
+        {{>steam-icon}}
+        <span data-l10n="ui.hero.steam_cta">Sign up for the playtest</span>
+      </a>
+      {{/if}}
+      {{#if presskit.pressKitLink.url}}
+      <a class="button button--cloud" href="{{presskit.pressKitLink.url}}" target="_blank" rel="noopener" data-analytics-event="Press Kit Download">
+        <svg class="button__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M11 3h2v10.17l3.59-3.58L18 11l-6 6-6-6 1.41-1.41L11 13.17zM4 19h16v2H4z"/></svg>
+        <span data-l10n="ui.hero.download_cta">Download press kit</span>
+      </a>
+      {{/if}}
+      {{#if presskit.pressEmail}}
+      <a class="button button--cloud" href="mailto:{{presskit.pressEmail}}" data-analytics-event="Contact Email Click">
+        <svg class="button__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 5h18v14H3zm2 2v.5l7 4.5 7-4.5V7zm14 2.9-7 4.5-7-4.5V17h14z"/></svg>
+        <span data-l10n="ui.hero.contact_cta">Press contact</span>
+      </a>
+      {{/if}}
+    </div>
+    {{#if presskit.navSections}}
+    <nav class="quicklinks" data-l10n-aria-label="ui.accessibility.navigation" aria-label="Main navigation">
+      {{#each presskit.navSections}}
+      <a href="{{href}}" data-l10n="ui.nav.sections.{{id}}">{{title}}</a>
+      {{/each}}
+    </nav>
+    {{/if}}
+    <dl class="facts">
+      <div><dt data-l10n="ui.quick_facts.developer">Developer</dt><dd data-l10n="ui.quick_facts.developer_value">Katapult Games · Ireland</dd></div>
+      <div><dt data-l10n="ui.quick_facts.platform">Platform</dt><dd data-l10n="ui.quick_facts.platform_value">PC · Steam</dd></div>
+      <div><dt data-l10n="ui.quick_facts.players">Players</dt><dd data-l10n="ui.quick_facts.players_value">1–6 · online 1v1 to 3v3</dd></div>
+      <div><dt data-l10n="ui.quick_facts.release">Release</dt><dd data-l10n="ui.quick_facts.release_value">To be announced</dd></div>
+      <div><dt data-l10n="ui.quick_facts.price">Price</dt><dd data-l10n="ui.quick_facts.price_value">To be announced</dd></div>
+      {{#if presskit.pressEmail}}
+      <div><dt data-l10n="ui.quick_facts.press">Press</dt><dd><a href="mailto:{{presskit.pressEmail}}" data-analytics-event="Contact Email Click">{{presskit.pressEmail}}</a></dd></div>
+      {{/if}}
+    </dl>
+  </div>
+</section>
+
+{{>scene variant="world"}}

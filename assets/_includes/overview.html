@@ -1,0 +1,73 @@
+<section class="band cream band--about" aria-labelledby="factsheet">
+  <div class="container">
+    <h2 id="factsheet" class="title" data-l10n="description.heading">{{presskit.descriptionHeading}}</h2>
+
+    <div class="overview">
+      <div class="overview__copy" id="description">
+        {{#each presskit.longDescriptions}}
+        <p class="lead" data-l10n="description.long.paragraphs.{{@index}}">{{.}}</p>
+        {{/each}}
+      </div>
+
+      <aside class="factsheet" aria-labelledby="factsheet-title">
+        <h3 id="factsheet-title" data-l10n="ui.factsheet.title">Factsheet</h3>
+        <dl>
+          {{#if presskit.publisher}}
+          <div><dt data-l10n="ui.factsheet.labels.publisher">Publisher:</dt><dd data-l10n="ui.factsheet.values.publisher">{{presskit.publisher}}</dd></div>
+          {{/if}}
+          {{#if company.basedIn}}
+          <div><dt data-l10n="ui.factsheet.labels.location">Based in:</dt><dd data-l10n="ui.factsheet.values.based_in">{{company.basedIn}}</dd></div>
+          {{/if}}
+          {{#if presskit.development}}
+          <div><dt data-l10n="ui.factsheet.labels.development">Development:</dt><dd data-l10n="ui.factsheet.values.development">{{presskit.development}}</dd></div>
+          {{/if}}
+          {{#if presskit.releaseDates}}
+          <div><dt data-l10n="ui.factsheet.labels.release_date">Release date:</dt>
+            {{#each presskit.releaseDates}}<dd data-l10n="ui.factsheet.release_dates.{{@index}}">{{.}}</dd>{{/each}}</div>
+          {{/if}}
+          {{#if presskit.platforms}}
+          <div><dt data-l10n="ui.factsheet.labels.platforms">Platforms:</dt>
+            {{#each presskit.platforms}}<dd data-l10n="ui.factsheet.platforms_items.{{@index}}">{{name}}</dd>{{/each}}</div>
+          {{/if}}
+          {{#if presskit.genres}}
+          <div><dt data-l10n="ui.factsheet.labels.genres">Genres:</dt>
+            <dd>{{#each presskit.genres}}<span data-l10n="ui.factsheet.genres_items.{{@index}}">{{.}}</span>{{/each}}</dd></div>
+          {{/if}}
+          {{#if presskit.steamLink.url}}
+          <div><dt data-l10n="ui.factsheet.labels.steam">Steam:</dt><dd><a href="{{presskit.steamLink.url}}" target="_blank" rel="noopener" data-analytics-event="Steam Click" data-l10n="ui.factsheet.values.steam">{{presskit.steamLink.label}}</a></dd></div>
+          {{/if}}
+          {{#if presskit.website}}
+          <div><dt data-l10n="ui.factsheet.labels.website">Website:</dt><dd><a href="{{presskit.website}}">{{prettyURL presskit.website}}</a></dd></div>
+          {{/if}}
+        </dl>
+      </aside>
+    </div>
+
+    {{#if presskit.keyFeatures}}
+    <div class="about-game">
+      {{#each presskit.keyFeatures}}
+      <article class="feature">
+        {{#with (lookup ../presskit.featureVideos @index)}}
+        <figure class="feature__media"><video src="{{file}}" poster="{{poster}}" autoplay muted loop playsinline preload="metadata" width="1400" height="400" aria-hidden="true"></video></figure>
+        {{/with}}
+        <div class="feature__text">
+          <h3 class="feature__title" data-l10n="description.keyFeatures.{{@index}}.title">{{title}}</h3>
+          <p class="feature__body" data-l10n="description.keyFeatures.{{@index}}.body">{{body}}</p>
+        </div>
+      </article>
+      {{/each}}
+    </div>
+    {{/if}}
+
+    {{#if presskit.features}}
+    <div class="feature-list">
+      <h3 id="features" data-l10n="ui.features.title">Features</h3>
+      <ul>
+        {{#each presskit.features}}
+        <li data-l10n="ui.features.items.{{@index}}">{{.}}</li>
+        {{/each}}
+      </ul>
+    </div>
+    {{/if}}
+  </div>
+</section>

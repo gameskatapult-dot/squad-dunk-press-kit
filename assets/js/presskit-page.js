@@ -481,11 +481,90 @@
     })
   }
 
+  function setupHeroVideo () {
+    const video = document.querySelector('[data-hero-video]')
+    if (!video) return
+    const toggle = document.querySelector('[data-hero-toggle]')
+    const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+    function setPaused (paused) {
+      if (paused) video.pause()
+      else video.play().catch(function () {})
+      if (!toggle) return
+      toggle.setAttribute('aria-pressed', paused ? 'true' : 'false')
+      toggle.setAttribute('data-l10n-aria-label', paused ? 'ui.hero.play' : 'ui.hero.pause')
+      localizePage(toggle)
+    }
+
+    // The Chinese build of the announcement video has the Chinese logo and call to action.
+    function syncSource () {
+      const suffix = activeLanguage === 'zh' && video.getAttribute('data-src-zh') ? 'zh' : 'default'
+      const src = video.getAttribute('data-src-' + suffix)
+      if (video.getAttribute('src') === src) return
+      const wasPaused = video.paused
+      video.setAttribute('poster', video.getAttribute('data-poster-' + suffix))
+      const ambient = document.querySelector('[data-hero-ambient]')
+      if (ambient) ambient.style.backgroundImage = "url('" + video.getAttribute('data-poster-' + suffix) + "')"
+      video.setAttribute('src', src)
+      if (!wasPaused || !reduceMotion) video.play().catch(function () {})
+    }
+
+    if (toggle) toggle.addEventListener('click', function () { setPaused(!video.paused) })
+    window.addEventListener('presskit:languagechange', syncSource)
+    syncSource()
+    if (reduceMotion) setPaused(true)
+  }
+
+  // Key art windows: each PSD layer moves at its own speed while the window crosses the screen.
+  function setupScenes () {
+    const scenes = Array.prototype.slice.call(document.querySelectorAll('[data-scene]'))
+    if (!scenes.length) return
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
+    const items = scenes.map(function (scene) {
+      return {
+        scene: scene,
+        layers: Array.prototype.slice.call(scene.querySelectorAll('[data-depth]')).map(function (layer) {
+          return { element: layer, depth: parseFloat(layer.getAttribute('data-depth')) || 0 }
+        })
+      }
+    })
+
+    function update () {
+      const viewport = window.innerHeight
+      items.forEach(function (item) {
+        const rect = item.scene.getBoundingClientRect()
+        if (rect.bottom < -100 || rect.top > viewport + 100) return
+        // -1 when the window enters at the bottom, 1 when it leaves at the top.
+        const progress = Math.max(-1, Math.min(1, (viewport / 2 - (rect.top + rect.height / 2)) / ((viewport + rect.height) / 2)))
+        item.layers.forEach(function (layer) {
+          layer.element.style.transform = 'translate3d(0,' + (-progress * layer.depth * rect.height).toFixed(1) + 'px,0)'
+        })
+      })
+    }
+
+    let ticking = false
+    function requestUpdate () {
+      if (ticking) return
+      ticking = true
+      window.requestAnimationFrame(function () {
+        update()
+        ticking = false
+      })
+    }
+
+    window.addEventListener('scroll', requestUpdate, { passive: true })
+    window.addEventListener('resize', requestUpdate)
+    update()
+  }
+
   document.addEventListener('DOMContentLoaded', async function () {
     setupAnalyticsEvents()
     await setupLanguageSelector()
     setupNavigation()
     setupLandingHero()
+    setupHeroVideo()
+    setupScenes()
     setupYoutubeEmbeds()
     setupScreenshotCarousels()
     setupGalleryLightbox()

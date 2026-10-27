@@ -1,0 +1,10 @@
+<div class="scene scene--{{variant}}" data-scene aria-hidden="true">
+  <img class="scene__layer" data-depth="-0.06" src="images/scene/sky.webp" alt="" loading="lazy" width="2400" height="1375">
+  <img class="scene__layer" data-depth="0.01" src="images/scene/far.webp" alt="" loading="lazy" width="2400" height="1375">
+  <img class="scene__layer" data-depth="0.07" src="images/scene/trees.webp" alt="" loading="lazy" width="2400" height="1375">
+  {{#ifEq variant "keyart"}}
+  <img class="scene__layer" data-depth="0.10" src="images/scene/hoop.webp" alt="" loading="lazy" width="2400" height="1375">
+  <img class="scene__layer" data-depth="0.15" src="images/scene/player.webp" alt="" loading="lazy" width="2400" height="1375">
+  {{/ifEq}}
+  <img class="scene__layer" data-depth="0.20" src="images/scene/front.webp" alt="" loading="lazy" width="2400" height="1375">
+</div>

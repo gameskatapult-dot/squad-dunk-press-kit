@@ -3,114 +3,36 @@
   <head>
     {{>head}}
   </head>
-  <body class="product-page">
-    <header class="landing-nav" data-l10n-aria-label="ui.accessibility.primary">
-      <a class="landing-nav__brand" href="../" data-language-link data-l10n-aria-label="ui.accessibility.home">
-        <img src="./images/katapult-logo.png" alt="Katapult Games">
-      </a>
+  <body class="dunk product-page">
+    {{>topbar}}
 
-      <nav class="landing-nav__links" data-l10n-aria-label="ui.accessibility.navigation">
-        <a href="../" data-language-link data-l10n="ui.landing.nav.home">Home</a>
-        <a href="./#description" data-language-link data-l10n="ui.landing.nav.about">About</a>
-        <a href="./" data-language-link data-l10n="ui.landing.nav.press">Press</a>
-      </nav>
-    </header>
+    <main id="press-kit">
+      {{>hero}}
 
-    <section class="press-intro" id="home" aria-labelledby="press-title">
-      <a class="press-intro__art" href="#logo" data-l10n-aria-label="ui.accessibility.browse_assets">
-        <img src="./images/key-art-2026-web.jpg" width="1800" height="1031" data-l10n-alt="ui.branding.assets.0.alt" alt="DUNK key art" fetchpriority="high">
-      </a>
-      <div class="press-intro__copy">
-        <p class="press-intro__eyebrow" data-l10n="ui.landing.press_kit_cta">Press Kit</p>
-        <h1 id="press-title">DUNK</h1>
-        <p data-l10n="ui.landing.tagline">First-person basketball for 1–6 players. From 1v1 to 3v3.</p>
-      </div>
-    </section>
+      {{#each presskit.sections}}
+        {{#ifEq id "overview"}}
+        {{>overview ..}}
+        {{/ifEq}}
 
-    <div class="page grid" id="press-kit">
-      {{>nav}}
+        {{#ifEq id "media"}}
+        {{>media ..}}
+        {{/ifEq}}
 
-      <div class="page-wrapper grid__item">
-        <header class="page-header">
-          {{#if images.header}}
-          <img src="./images/{{images.header}}" alt="{{presskit.title}}" title="{{presskit.title}}">
-          {{/if}}
-        </header>
+        {{#ifEq id "announcement"}}
+        {{>announcement ..}}
+        {{/ifEq}}
 
-        <main class="page-content" role="main">
-          {{#if presskit.sections}}
-            {{#each presskit.sections}}
-              {{#ifEq id "overview"}}
-              <section class="block grid">
-                {{#if showFactsheet}}
-                {{>factsheet ..}}
-                {{/if}}
+        {{#ifEq id "branding"}}
+        {{>branding ..}}
+        {{/ifEq}}
 
-                {{#if showDescription}}
-                <article class="description grid__item">
-                  {{>description ..}}
+        {{#ifEq id "team-contact"}}
+        {{>team ..}}
+        {{/ifEq}}
+      {{/each}}
+    </main>
 
-                  {{#if showFeatures}}
-                  <h2 id="features" data-l10n="ui.features.title">Features</h2>
-                  <ul>
-                    {{#each ../presskit.features}}
-                    <li data-l10n="ui.features.items.{{@index}}">{{.}}</li>
-                    {{/each}}
-                  </ul>
-                  {{/if}}
-                </article>
-                {{/if}}
-              </section>
-              {{/ifEq}}
-
-              {{#ifEq id "media"}}
-              {{>media ..}}
-              {{/ifEq}}
-
-              {{#ifEq id "branding"}}
-              {{>branding ..}}
-              {{/ifEq}}
-
-              {{#ifEq id "links"}}
-              {{>links ..}}
-              {{/ifEq}}
-
-              {{#ifEq id "team-contact"}}
-              {{>team ..}}
-              {{/ifEq}}
-            {{/each}}
-          {{else}}
-            <section class="block grid">
-              {{>factsheet}}
-
-              <article class="description grid__item">
-                {{>description}}
-
-                <h2 id="features" data-l10n="ui.features.title">Features</h2>
-                <ul>
-                  {{#each presskit.features}}
-                  <li data-l10n="ui.features.items.{{@index}}">{{.}}</li>
-                  {{/each}}
-                </ul>
-              </article>
-            </section>
-
-            {{>mailchimp}}
-            {{>assets}}
-            {{>widgets}}
-            {{>recognition}}
-            {{>team}}
-          {{/if}}
-
-          {{>mailchimp}}
-          {{>widgets}}
-          {{>recognition}}
-        </main>
-
-        {{>footer}}
-      </div>
-    </div>
-
+    {{>footer}}
     {{>scripts}}
   </body>
 </html>

@@ -13,18 +13,23 @@
 <meta property="og:description" data-l10n-content="description.short.text" content="{{presskit.shortDescription}}">
 <meta property="og:image" content="https://squaddunk.com/presskit/images/key-art-2026-web.jpg">
 <link rel="canonical" href="https://squaddunk.com/presskit/">
-<link rel="shortcut icon" href="images/favicon-2026.png">
+<link rel="shortcut icon" href="images/favicon-hand.png">
+<link rel="apple-touch-icon" href="images/logo-site-icon.png">
 {{else}}
 <link rel="shortcut icon" href="images/favicon.ico?t={{buildTime}}">
 {{/if}}
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Fredoka:wght@500;600;700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="{{assets}}/css/normalize.css">
+{{#if isProduct}}
+<link rel="stylesheet" href="{{assets}}/css/dunk.css?v={{buildTime}}">
+{{else}}
 <link rel="stylesheet" href="{{assets}}/css/theme.css">
 <link rel="stylesheet" href="{{assets}}/css/refresh.css?v={{buildTime}}">
+{{/if}}
 <link rel="stylesheet" href="{{assets}}/css/print.css" media="print">
 
 <!-- GoatCounter is emitted only for a validated, non-placeholder endpoint. -->

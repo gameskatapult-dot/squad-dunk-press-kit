@@ -1,57 +1,36 @@
-<section class="block grid team-block">
-  {{#if presskit.showTeamSection}}
-  {{#if presskit.team}}
-  <article class="grid__item grid__item--flexible team-card">
-    <h2 id="credits" data-l10n="ui.team.title">Studio</h2>
+{{>scene variant="keyart"}}
 
-    {{#if presskit.team.aboutTitle}}
-    <h3 data-l10n="ui.team.about_title">{{presskit.team.aboutTitle}}</h3>
-    <dl>
-      <dt data-l10n="ui.team.boilerplate_title">{{presskit.team.boilerplateTitle}}</dt>
-      <dd data-l10n="ui.team.boilerplate">{{presskit.team.boilerplate}}</dd>
-    </dl>
+<section class="band jungle band--studio" aria-labelledby="credits">
+  <div class="container studio">
+    {{#if presskit.showTeamSection}}
+    <article class="studio__about">
+      <h2 id="credits" class="title title--small" data-l10n="ui.team.about_title">{{presskit.team.aboutTitle}}</h2>
+      <p data-l10n="ui.team.boilerplate">{{presskit.team.boilerplate}}</p>
+      {{#if presskit.links}}
+      <ul class="social">
+        <li class="visually-hidden" id="links" data-l10n="ui.links.title">Links</li>
+        {{#each presskit.links}}
+        <li><a class="social__icon" href="{{url}}" target="_blank" rel="noopener" data-analytics-event="Social Link Click" data-l10n-aria-label="ui.links.items.{{@index}}" aria-label="{{title}}">{{>social-icon}}</a></li>
+        {{/each}}
+      </ul>
+      {{/if}}
+    </article>
     {{/if}}
 
-  </article>
-  {{else}}
-  <article class="grid__item grid__item--flexible team-card">
-    <h2 id="credits">Team</h2>
-
-    {{#if company.title}}
-    <h3>About {{company.title}}</h3>
-    <dl>
-      <dt>Boilerplate</dt>
-      <dd>{{company.description}}</dd>
-    </dl>
-    {{/if}}
-
-    <h3>Credits</h3>
-    <p>Team credits are currently [TBD].</p>
-  </article>
-  {{/if}}
-  {{/if}}
-
-  {{#if presskit.showContactSection}}
-  {{#if presskit.contacts}}
-  <article class="grid__item grid__item--flexible team-card team-card--contact">
-    <h2 id="contact" data-l10n="ui.contact.title">Contact</h2>
-
-    <dl>
+    {{#if presskit.showContactSection}}
+    <article class="studio__contact">
+      <h2 id="contact" class="title title--small" data-l10n="ui.contact.title">Contact</h2>
       {{#each presskit.contacts}}
-      <dt {{#ifEq name "Email"}}data-l10n="ui.contact.email"{{/ifEq}}{{#ifEq name "Bug Reports"}}data-l10n="ui.contact.bug_reports"{{/ifEq}}>{{name}}</dt>
-      <dd>
-        {{#if mail}}
-        <a href="mailto:{{mail}}" data-analytics-event="Contact Email Click">{{mail}}</a>
-        {{/if}}
-
-        {{#if link}}
-        <a href="{{link}}">{{prettyURL link}}</a>
-        {{/if}}
-      </dd>
+      {{#if mail}}
+      <a class="studio__email" href="mailto:{{mail}}" data-analytics-event="Contact Email Click">{{mail}}</a>
+      {{/if}}
       {{/each}}
-    </dl>
-  </article>
-  {{/if}}
-  {{/if}}
+      {{#each presskit.contacts}}
+      {{#if link}}
+      <p class="studio__line"><span {{#ifEq name "Bug Reports"}}data-l10n="ui.contact.bug_reports"{{/ifEq}}>{{name}}</span> <a href="{{link}}" target="_blank" rel="noopener">Discord</a></p>
+      {{/if}}
+      {{/each}}
+    </article>
+    {{/if}}
+  </div>
 </section>
-

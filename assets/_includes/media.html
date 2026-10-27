@@ -1,47 +1,28 @@
 {{#if presskit.manifestScreenshots}}
-<section class="block screenshot-section" aria-labelledby="media">
-  <header class="section-heading">
-    <h2 id="media" data-l10n="ui.media.screenshots">Screenshots</h2>
-    {{#if presskit.mediaDownloadFile}}
-    <a class="press-link" href="{{presskit.mediaDownloadFile}}" download data-analytics-event="Press Kit Download" data-l10n="ui.media.download">{{presskit.mediaDownloadTitle}}</a>
-    {{/if}}
-  </header>
-  <div class="screenshot-carousel" id="screenshots" data-carousel role="region" data-l10n-aria-roledescription="ui.carousel.role" data-l10n-aria-label="ui.carousel.label">
-    <div class="screenshot-carousel__track" data-carousel-track tabindex="0" data-l10n-aria-label="ui.carousel.track">
+<section class="band jungle band--media" aria-labelledby="media">
+  <div class="container">
+    <header class="band__header">
+      <h2 id="media" class="title" data-l10n="ui.media.screenshots">Screenshots</h2>
+      {{#if presskit.mediaDownloadFile}}
+      <a class="button button--cloud button--small" href="{{presskit.mediaDownloadFile}}" download data-analytics-event="Press Kit Download">
+        <svg class="button__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M11 3h2v10.17l3.59-3.58L18 11l-6 6-6-6 1.41-1.41L11 13.17zM4 19h16v2H4z"/></svg>
+        <span data-l10n="ui.media.download">{{presskit.mediaDownloadTitle}}</span>
+      </a>
+      {{/if}}
+    </header>
+    <ul class="shots" id="screenshots">
       {{#each presskit.manifestScreenshots}}
-      <figure class="screenshot-slide" data-carousel-slide role="group" data-l10n-aria-roledescription="ui.carousel.slide" data-l10n-aria-label="ui.media.items.{{@index}}.title" aria-label="{{title}}">
-        <a class="screenshot-slide__image" href="{{file}}" data-gallery="screenshots" data-l10n-data-gallery-title="ui.media.items.{{@index}}.title" data-gallery-title="{{title}}">
+      <li class="shot{{#if featured}} shot--featured{{/if}}">
+        <a class="frame" href="{{file}}" data-gallery="screenshots" data-l10n-data-gallery-title="ui.media.items.{{@index}}.title" data-gallery-title="{{title}}">
           <img src="{{preview}}" data-l10n-alt="ui.media.items.{{@index}}.alt" alt="{{alt}}" loading="lazy" width="1600" height="900">
         </a>
-        <figcaption>
-          <span><span data-l10n="ui.media.items.{{@index}}.title">{{title}}</span> <small>{{caption}}</small></span>
-          <a class="press-link" href="{{file}}" download data-analytics-event="Assets Download" data-l10n="ui.media.original">Original ↗</a>
-        </figcaption>
-      </figure>
+        <p class="shot__meta">
+          <span data-l10n="ui.media.items.{{@index}}.title">{{title}}</span>
+          <a href="{{file}}" download data-analytics-event="Assets Download">{{caption}}</a>
+        </p>
+      </li>
       {{/each}}
-    </div>
-    <div class="screenshot-carousel__navigation" data-carousel-navigation hidden>
-      <div class="screenshot-carousel__thumbnails" data-l10n-aria-label="ui.carousel.thumbnails">
-        {{#each presskit.manifestScreenshots}}
-        <button type="button" data-carousel-thumb="{{@index}}" data-l10n-aria-label="ui.media.items.{{@index}}.title" aria-label="{{title}}" aria-pressed="false">
-          <img src="{{thumb}}" alt="" loading="lazy" width="160" height="90">
-        </button>
-        {{/each}}
-      </div>
-      <div class="screenshot-carousel__arrows">
-        <button type="button" data-carousel-prev data-l10n-aria-label="ui.carousel.previous">←</button>
-        <span data-carousel-count aria-live="polite" aria-atomic="true"></span>
-        <button type="button" data-carousel-next data-l10n-aria-label="ui.carousel.next">→</button>
-      </div>
-    </div>
+    </ul>
   </div>
-</section>
-{{/if}}
-{{#if presskit.mediaVideos}}
-<section class="block">
-  <h2 id="videos" data-l10n="ui.media.videos">Videos</h2>
-  {{#each presskit.mediaVideos}}
-  <p><a class="press-link" href="{{url}}" data-analytics-event="Trailer Click">{{title}}</a></p>
-  {{/each}}
 </section>
 {{/if}}
