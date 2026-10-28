@@ -52,7 +52,6 @@ body.dunk {
   font: 800 17px/1 var(--body); text-decoration: none; white-space: nowrap; cursor: pointer;
 }
 .button__icon { width: 20px; height: 20px; flex-shrink: 0; }
-.button__note { padding: 2px 6px; border: 1px solid currentColor; border-radius: 4px; font-size: 12px; line-height: 1; opacity: .75; }
 .button--small { min-height: 42px; padding: 0 16px; font-size: 15px; }
 .button--small .button__icon { width: 18px; height: 18px; }
 .dunk .button--ball { color: var(--bg-deep); background: var(--cream); }
@@ -94,6 +93,23 @@ body.dunk {
 .scene__layer { position: absolute; left: 0; top: -20%; width: 100%; height: 140%; max-width: none; object-fit: cover; object-position: center; will-change: transform; }
 .dunk .scene__layer { height: 140%; }
 /* Layers overscan the window by 20% top and bottom, so no data-depth may exceed 0.2 or an edge shows. */
+
+/* Trailer: a still with a play badge until clicked, then YouTube's own player. */
+.trailer { padding: clamp(56px, 7vw, 88px) 0; text-align: center; border-bottom: 1px solid var(--line); }
+.trailer .title { margin-bottom: 28px; }
+.trailer__player { position: relative; overflow: hidden; aspect-ratio: 16 / 9; background: #000; border-radius: 10px; box-shadow: 0 24px 60px rgba(0, 0, 0, .45); }
+.trailer__player iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.trailer__start { position: absolute; inset: 0; display: block; width: 100%; padding: 0; background: none; border: 0; cursor: pointer; }
+.trailer__start img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease, filter .4s ease; }
+.trailer__start:hover img { filter: brightness(1.08); transform: scale(1.02); }
+/* Bottom right, clear of the logo and the OFFICIAL TRAILER tag on the still. */
+.trailer__badge { position: absolute; right: clamp(12px, 2.5vw, 28px); bottom: clamp(12px, 2.5vw, 28px); display: inline-flex; align-items: center; gap: 10px; padding: 14px 24px 14px 18px; color: var(--bg); background: var(--cream); border-radius: 999px; box-shadow: 0 10px 30px rgba(0, 0, 0, .35); font: 800 clamp(15px, 1.6vw, 18px)/1 var(--body); }
+.trailer__badge svg { width: 26px; height: 26px; }
+.trailer__start:hover .trailer__badge { background: #fff; }
+.trailer__after { display: flex; flex-direction: column; align-items: center; gap: 16px; margin-top: 32px; }
+.trailer__after p { margin: 0; font-size: clamp(18px, 1.8vw, 22px); font-weight: 700; }
+.trailer__actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px 24px; }
+.dunk .trailer__youtube { color: var(--soft); font-weight: 700; }
 
 /* Intro */
 .intro { padding: clamp(48px, 7vw, 80px) 0; text-align: center; border-bottom: 1px solid var(--line); }
@@ -221,6 +237,8 @@ body.gallery-lightbox-open { overflow: hidden; }
   .topbar__label { padding-left: 10px; font-size: 11px; }
   .topbar__actions .button--small { padding: 0 12px; }
   .topbar__actions .button--small span { display: none; }
+  .trailer__badge { padding: 12px; }
+  .trailer__badge span { display: none; }
   .topbar__brand img { height: 24px; }
   .topbar__language { width: 104px; }
   .scene { height: 85vw; min-height: 0; }

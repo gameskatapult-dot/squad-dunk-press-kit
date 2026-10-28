@@ -306,6 +306,36 @@
     })
   }
 
+  // The trailer shows a still until it is asked for, then loads YouTube's player and plays.
+  // Links marked data-trailer-open ("Watch the trailer") scroll to it and start it too.
+  function setupTrailer () {
+    const player = document.querySelector('[data-trailer]')
+    if (!player) return
+
+    function play () {
+      if (player.querySelector('iframe')) return
+      const frame = document.createElement('iframe')
+      frame.src = 'https://www.youtube.com/embed/' + player.getAttribute('data-youtube-id') + '?autoplay=1&rel=0&playsinline=1'
+      frame.title = document.getElementById('trailer-title') ? document.getElementById('trailer-title').textContent : 'Trailer'
+      frame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+      frame.allowFullscreen = true
+      frame.referrerPolicy = 'strict-origin-when-cross-origin'
+      player.innerHTML = ''
+      player.appendChild(frame)
+    }
+
+    const start = player.querySelector('[data-trailer-play]')
+    if (start) start.addEventListener('click', play)
+
+    document.querySelectorAll('[data-trailer-open]').forEach(function (link) {
+      link.addEventListener('click', function (event) {
+        event.preventDefault()
+        player.scrollIntoView({ behavior: 'smooth', block: 'center' })
+        play()
+      })
+    })
+  }
+
   function setupScreenshotCarousels () {
     document.querySelectorAll('[data-carousel]').forEach(function (carousel) {
       const track = carousel.querySelector('[data-carousel-track]')
@@ -574,6 +604,7 @@
     setupHeroVideo()
     setupScenes()
     setupYoutubeEmbeds()
+    setupTrailer()
     setupScreenshotCarousels()
     setupGalleryLightbox()
     scrollToInitialHash()

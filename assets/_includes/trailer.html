@@ -1,0 +1,27 @@
+<section class="trailer" id="trailer" aria-labelledby="trailer-title">
+  <div class="container">
+    <h2 id="trailer-title" class="title" data-l10n="ui.trailer.title">Official announcement trailer</h2>
+    {{!-- The YouTube player loads only on click; plays happen in YouTube's player, so they count as views. --}}
+    <div class="trailer__player" data-trailer data-youtube-id="c2TyYF3-3dQ">
+      <button class="trailer__start" type="button" data-trailer-play data-analytics-event="Trailer Play">
+        <img src="https://i.ytimg.com/vi/c2TyYF3-3dQ/maxresdefault.jpg" alt="" loading="lazy" width="1280" height="720">
+        <span class="trailer__badge">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>
+          <span data-l10n="ui.trailer.play">Watch the trailer</span>
+        </span>
+      </button>
+    </div>
+    <div class="trailer__after">
+      <p data-l10n="ui.trailer.wishlist_prompt">Liked it? Add DUNK to your Steam wishlist.</p>
+      <div class="trailer__actions">
+        {{#if presskit.steamLink.url}}
+        <a class="button button--ball" href="{{presskit.steamLink.url}}" target="_blank" rel="noopener" data-analytics-event="Steam Click">
+          {{>steam-icon}}
+          <span data-l10n="ui.hero.steam_cta">Wishlist on Steam</span>
+        </a>
+        {{/if}}
+        <a class="trailer__youtube" href="https://www.youtube.com/watch?v=c2TyYF3-3dQ" target="_blank" rel="noopener" data-analytics-event="Trailer YouTube Click" data-l10n="ui.trailer.youtube">Watch on YouTube</a>
+      </div>
+    </div>
+  </div>
+</section>

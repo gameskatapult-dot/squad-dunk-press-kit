@@ -33,7 +33,7 @@ factsheet:
   cost: ""
   steam:
     label: View on Steam
-    url: https://store.steampowered.com/app/4591520/DUNK/
+    url: https://store.steampowered.com/app/4591520/DUNK/?utm_source=squaddunk&utm_medium=website&utm_campaign=announcement&utm_content=presskit
   trailer:
     label: ""
     url: ""
@@ -41,9 +41,9 @@ factsheet:
     label: ""
     url: ""
   press_kit:
-    # The Drive folder is out of date; leave the link empty until a current press kit exists.
-    label: ""
-    url: ""
+    # The official media kit from marketing (B-roll, key art, logos, screenshots, trailer).
+    label: Open press kit
+    url: https://drive.google.com/drive/folders/1QDZFZjoO1JFHXfPf7b2lOfq8mXehnrdn
 
 localization:
   default: en
@@ -130,12 +130,17 @@ localization:
       ui:
         hero:
           eyebrow: "Press kit"
-          steam_cta: "Sign up for the playtest"
+          steam_cta: "Wishlist on Steam"
           download_cta: "Download press kit"
           contact_cta: "Press contact"
           video_label: "DUNK playtest announcement video"
           pause: "Pause video"
           play: "Play video"
+        trailer:
+          title: "Official announcement trailer"
+          play: "Watch the trailer"
+          youtube: "Watch on YouTube"
+          wishlist_prompt: "Liked it? Add DUNK to your Steam wishlist."
         quick_facts:
           developer: "Developer"
           developer_value: "Katapult Games · Ireland"
@@ -429,12 +434,17 @@ localization:
       ui:
         hero:
           eyebrow: "Press kit"
-          steam_cta: "Inscríbete en la playtest"
+          steam_cta: "Añadir a deseados en Steam"
           download_cta: "Descargar press kit"
           contact_cta: "Contacto de prensa"
           video_label: "Video del anuncio de la playtest de DUNK"
           pause: "Pausar video"
           play: "Reproducir video"
+        trailer:
+          title: "Tráiler oficial de anuncio"
+          play: "Ver el tráiler"
+          youtube: "Ver en YouTube"
+          wishlist_prompt: "¿Te gustó? Añade DUNK a tu lista de deseados en Steam."
         quick_facts:
           developer: "Desarrollo"
           developer_value: "Katapult Games · Irlanda"
@@ -729,12 +739,17 @@ localization:
       ui:
         hero:
           eyebrow: "Пресс-кит"
-          steam_cta: "Записаться на плейтест"
+          steam_cta: "В список желаемого Steam"
           download_cta: "Скачать пресс-кит"
           contact_cta: "Контакт для прессы"
           video_label: "Видео-анонс плейтеста DUNK"
           pause: "Пауза"
           play: "Воспроизвести"
+        trailer:
+          title: "Официальный трейлер-анонс"
+          play: "Смотреть трейлер"
+          youtube: "Смотреть на YouTube"
+          wishlist_prompt: "Понравилось? Добавьте DUNK в список желаемого в Steam."
         quick_facts:
           developer: "Разработчик"
           developer_value: "Katapult Games · Ирландия"
@@ -999,12 +1014,17 @@ localization:
       ui:
         hero:
           eyebrow: "プレスキット"
-          steam_cta: "プレイテストに参加登録"
+          steam_cta: "Steamでウィッシュリストに追加"
           download_cta: "プレスキットをダウンロード"
           contact_cta: "プレス窓口"
           video_label: "DUNK プレイテスト告知映像"
           pause: "動画を一時停止"
           play: "動画を再生"
+        trailer:
+          title: "公式アナウンストレーラー"
+          play: "トレーラーを見る"
+          youtube: "YouTubeで見る"
+          wishlist_prompt: "気に入ったら、SteamでDUNKをウィッシュリストに追加しよう。"
         quick_facts:
           developer: "開発"
           developer_value: "Katapult Games · アイルランド"
@@ -1260,12 +1280,17 @@ localization:
       ui:
         hero:
           eyebrow: "媒体资料包"
-          steam_cta: "报名参加试玩测试"
+          steam_cta: "在 Steam 上加入愿望单"
           download_cta: "下载媒体资料包"
           contact_cta: "媒体联系"
           video_label: "DUNK 试玩测试公告视频"
           pause: "暂停视频"
           play: "播放视频"
+        trailer:
+          title: "官方公布预告片"
+          play: "观看预告片"
+          youtube: "在 YouTube 上观看"
+          wishlist_prompt: "喜欢吗？在 Steam 上将 DUNK 加入愿望单。"
         quick_facts:
           developer: "开发商"
           developer_value: "Katapult Games · 爱尔兰"
@@ -1548,12 +1573,17 @@ localization:
       ui:
         hero:
           eyebrow: "Pressekit"
-          steam_cta: "Für den Playtest anmelden"
+          steam_cta: "Auf die Steam-Wunschliste"
           download_cta: "Pressekit herunterladen"
           contact_cta: "Pressekontakt"
           video_label: "DUNK Playtest-Ankündigungsvideo"
           pause: "Video pausieren"
           play: "Video abspielen"
+        trailer:
+          title: "Offizieller Ankündigungstrailer"
+          play: "Trailer ansehen"
+          youtube: "Auf YouTube ansehen"
+          wishlist_prompt: "Gefällt dir? Setz DUNK auf deine Steam-Wunschliste."
         quick_facts:
           developer: "Entwickler"
           developer_value: "Katapult Games · Irland"
@@ -1849,12 +1879,17 @@ localization:
       ui:
         hero:
           eyebrow: "Kit presse"
-          steam_cta: "S’inscrire au playtest"
+          steam_cta: "Liste de souhaits Steam"
           download_cta: "Télécharger le kit presse"
           contact_cta: "Contact presse"
           video_label: "Vidéo d’annonce du playtest de DUNK"
           pause: "Mettre la vidéo en pause"
           play: "Lire la vidéo"
+        trailer:
+          title: "Bande-annonce officielle"
+          play: "Voir la bande-annonce"
+          youtube: "Voir sur YouTube"
+          wishlist_prompt: "Ça vous plaît ? Ajoutez DUNK à votre liste de souhaits Steam."
         quick_facts:
           developer: "Développeur"
           developer_value: "Katapult Games · Irlande"
@@ -2151,12 +2186,17 @@ localization:
       ui:
         hero:
           eyebrow: "Press kit"
-          steam_cta: "Inscreva-se no playtest"
+          steam_cta: "Lista de desejos na Steam"
           download_cta: "Baixar press kit"
           contact_cta: "Contato de imprensa"
           video_label: "Vídeo de anúncio do playtest de DUNK"
           pause: "Pausar vídeo"
           play: "Reproduzir vídeo"
+        trailer:
+          title: "Trailer oficial de anúncio"
+          play: "Ver o trailer"
+          youtube: "Ver no YouTube"
+          wishlist_prompt: "Gostou? Adicione DUNK à sua lista de desejos na Steam."
         quick_facts:
           developer: "Desenvolvedora"
           developer_value: "Katapult Games · Irlanda"

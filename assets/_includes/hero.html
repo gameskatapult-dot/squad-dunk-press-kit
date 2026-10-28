@@ -24,13 +24,15 @@
       {{#if presskit.steamLink.url}}
       <a class="button button--ball" href="{{presskit.steamLink.url}}" target="_blank" rel="noopener" data-analytics-event="Steam Click">
         {{>steam-icon}}
-        <span data-l10n="ui.hero.steam_cta">Sign up for the playtest</span>
+        <span data-l10n="ui.hero.steam_cta">Wishlist on Steam</span>
       </a>
       {{/if}}
-      <a class="button button--cloud" href="images/DUNK-press-kit.zip" download data-analytics-event="Press Kit Download">
+      {{#if presskit.pressKitLink.url}}
+      <a class="button button--cloud" href="{{presskit.pressKitLink.url}}" target="_blank" rel="noopener" data-analytics-event="Press Kit Download">
         <svg class="button__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M11 3h2v10.17l3.59-3.58L18 11l-6 6-6-6 1.41-1.41L11 13.17zM4 19h16v2H4z"/></svg>
-        <span data-l10n="ui.hero.download_cta">Download press kit</span><span class="button__note">ZIP</span>
+        <span data-l10n="ui.hero.download_cta">Download press kit</span>
       </a>
+      {{/if}}
       {{#if presskit.pressEmail}}
       <a class="button button--cloud" href="mailto:{{presskit.pressEmail}}" data-analytics-event="Contact Email Click">
         <svg class="button__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 5h18v14H3zm2 2v.5l7 4.5 7-4.5V7zm14 2.9-7 4.5-7-4.5V17h14z"/></svg>
@@ -50,5 +52,7 @@
     </dl>
   </div>
 </section>
+
+{{>trailer}}
 
 {{>scene variant="world"}}
