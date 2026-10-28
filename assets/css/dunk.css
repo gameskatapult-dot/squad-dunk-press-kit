@@ -115,7 +115,10 @@ body.dunk {
 .community { --clip-h: clamp(320px, 26vw, 380px); padding: clamp(56px, 7vw, 88px) 0; text-align: center; border-bottom: 1px solid var(--line); }
 .community .title { margin-bottom: 10px; }
 .community__prompt { margin: 0 0 28px; color: var(--soft); font-size: clamp(16px, 1.6vw, 19px); font-weight: 600; }
-.community__rail { display: flex; align-items: center; gap: 16px; margin: 0; padding: 0 0 12px; overflow-x: auto; list-style: none; scroll-snap-type: x mandatory; scrollbar-width: thin; }
+.community__rail { display: flex; align-items: center; gap: 16px; margin: 0; padding: 0; overflow-x: auto; list-style: none; scrollbar-width: none; overscroll-behavior-x: contain; }
+.community__rail::-webkit-scrollbar { display: none; }
+/* Once it loops, the row drifts on its own and fades out at both edges. */
+.community__rail.is-looping { -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
 /* Auto margins center a short row and fall back to 0 once it overflows. */
 .community__item:first-child { margin-left: auto; }
 .community__item:last-child { margin-right: auto; }

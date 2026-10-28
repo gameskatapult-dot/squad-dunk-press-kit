@@ -442,7 +442,73 @@
     })
     section.hidden = false
     formatCommunityCounts()
+    setupCommunityCarousel(list)
     new MutationObserver(formatCommunityCounts).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] })
+  }
+
+  // Endless drift: the cards are cloned once and the row scrolls slowly, wrapping at the halfway
+  // point. It still swipes and drags by hand, pauses on hover/touch, and stops for good once a
+  // clip is playing or when the visitor prefers reduced motion.
+  function setupCommunityCarousel (list) {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    if (list.scrollWidth <= list.clientWidth + 1) return
+
+    const originals = Array.from(list.children)
+    originals.forEach(function (item) {
+      const clone = item.cloneNode(true)
+      clone.setAttribute('aria-hidden', 'true')
+      clone.querySelectorAll('a, button').forEach(function (el) { el.tabIndex = -1 })
+      list.appendChild(clone)
+    })
+    // Clones lose their listeners, so playing goes through the original card's button.
+    list.addEventListener('click', function (event) {
+      const start = event.target.closest('.community__start')
+      if (!start || !start.closest('[aria-hidden="true"]')) return
+      const index = Array.from(list.children).indexOf(start.closest('li')) - originals.length
+      const original = originals[index] && originals[index].querySelector('.community__start')
+      if (!original) return
+      const clone = start.closest('li')
+      const offset = clone.offsetLeft - originals[index].offsetLeft
+      position -= offset
+      list.scrollLeft = position
+      original.click()
+    })
+    list.classList.add('is-looping')
+
+    const speed = 32 // px per second
+    let position = list.scrollLeft
+    let paused = 0
+    let stopped = false
+    let last = null
+
+    function hold () { paused++ }
+    function release () { paused = Math.max(0, paused - 1); position = list.scrollLeft }
+    list.addEventListener('mouseenter', hold)
+    list.addEventListener('mouseleave', release)
+    list.addEventListener('touchstart', hold, { passive: true })
+    list.addEventListener('touchend', function () { setTimeout(release, 1200) })
+    list.addEventListener('focusin', hold)
+    list.addEventListener('focusout', release)
+    list.addEventListener('click', function (event) {
+      if (event.target.closest('.community__start')) stopped = true
+    })
+
+    function step (time) {
+      // Distance from a card to its clone, so the wrap is seamless (gap included).
+      const half = list.children[originals.length].offsetLeft - originals[0].offsetLeft
+      if (last !== null && !paused && !stopped && !document.hidden) {
+        position += speed * Math.min(time - last, 100) / 1000
+        if (position >= half) position -= half
+        list.scrollLeft = position
+      } else if (list.scrollLeft >= half) {
+        // Swiped past the clones by hand: jump back to the matching original.
+        list.scrollLeft -= half
+        position = list.scrollLeft
+      }
+      last = time
+      window.requestAnimationFrame(step)
+    }
+    window.requestAnimationFrame(step)
   }
 
   // "2.7K" / "2,7 mil" / "2670" depending on the active language.
