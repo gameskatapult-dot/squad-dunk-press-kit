@@ -336,6 +336,128 @@
     })
   }
 
+  // Hand-picked community posts from community.json. The section stays hidden until it has one.
+  // Each card shows a thumbnail and only loads the platform's player when clicked.
+  const communityPlatforms = {
+    youtube: {
+      name: 'YouTube',
+      url: function (item) { return 'https://www.youtube.com/watch?v=' + item.id },
+      embed: function (item) { return 'https://www.youtube.com/embed/' + item.id + '?autoplay=1&rel=0&playsinline=1' },
+      // Shorts have a portrait oardefault; hq720 is a true 16:9 frame. Older uploads only have
+      // the letterboxed hqdefault, which still crops well to either shape.
+      thumb: function (item) { return 'https://i.ytimg.com/vi/' + item.id + (item.vertical ? '/oardefault.jpg' : '/hq720.jpg') },
+      fallback: function (item) { return 'https://i.ytimg.com/vi/' + item.id + '/hqdefault.jpg' }
+    },
+    tiktok: {
+      name: 'TikTok',
+      url: function (item) { return 'https://www.tiktok.com/' + item.author + '/video/' + item.id },
+      embed: function (item) { return 'https://www.tiktok.com/player/v1/' + item.id + '?autoplay=1&rel=0' }
+    },
+    instagram: {
+      name: 'Instagram',
+      url: function (item) { return 'https://www.instagram.com/reel/' + item.id + '/' },
+      embed: function (item) { return 'https://www.instagram.com/reel/' + item.id + '/embed' }
+    }
+  }
+
+  async function setupCommunity () {
+    const section = document.querySelector('[data-community]')
+    const list = section && section.querySelector('[data-community-list]')
+    if (!list) return
+
+    let items = []
+    try {
+      const response = await fetch(section.dataset.src, { cache: 'no-cache' })
+      if (response.ok) items = await response.json()
+    } catch (error) {}
+    items = Array.isArray(items) ? items.filter(function (item) { return communityPlatforms[item.platform] && item.id }) : []
+    if (!items.length) return
+
+    items.forEach(function (item) {
+      const platform = communityPlatforms[item.platform]
+      const li = document.createElement('li')
+      li.className = 'community__item' + (item.vertical || item.platform !== 'youtube' ? ' community__item--vertical' : '')
+
+      const media = document.createElement('div')
+      media.className = 'community__media'
+      const start = document.createElement('button')
+      start.type = 'button'
+      start.className = 'community__start'
+      start.setAttribute('aria-label', (item.title || platform.name) + ' — ' + item.author)
+      start.setAttribute('data-analytics-event', 'Community Play')
+      const thumb = item.thumb || (platform.thumb && platform.thumb(item))
+      if (thumb) {
+        const img = document.createElement('img')
+        img.src = thumb
+        img.alt = ''
+        img.loading = 'lazy'
+        if (!item.thumb && platform.fallback) {
+          img.addEventListener('error', function () { img.src = platform.fallback(item) }, { once: true })
+        }
+        start.appendChild(img)
+      } else if (item.title) {
+        const text = document.createElement('span')
+        text.className = 'community__text'
+        text.textContent = item.title
+        start.appendChild(text)
+      }
+      start.insertAdjacentHTML('beforeend', '<span class="community__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>')
+
+      // View count (or likes where the platform hides views), as of when the post was added.
+      const count = item.views || item.likes
+      if (count) {
+        const stat = document.createElement('span')
+        stat.className = 'community__stat'
+        stat.setAttribute('data-community-count', count)
+        stat.innerHTML = item.views
+          ? '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 5C6.5 5 2.7 9.3 1.5 12c1.2 2.7 5 7 10.5 7s9.3-4.3 10.5-7C21.3 9.3 17.5 5 12 5m0 11.5a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9m0-2.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/></svg>'
+          : '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.8 4.5c2.1 0 3.6 1.2 5.2 3 1.6-1.8 3.1-3 5.2-3 3.8 0 5.9 3.9 4.4 7.3C19.5 16.4 12 21 12 21"/></svg>'
+        stat.appendChild(document.createElement('span'))
+        start.appendChild(stat)
+      }
+      start.addEventListener('click', function () {
+        const frame = document.createElement('iframe')
+        frame.src = platform.embed(item)
+        frame.title = item.title || platform.name
+        frame.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen'
+        frame.allowFullscreen = true
+        frame.referrerPolicy = 'strict-origin-when-cross-origin'
+        media.innerHTML = ''
+        media.appendChild(frame)
+      })
+      media.appendChild(start)
+
+      // Credit the creator and link to the original post.
+      const credit = document.createElement('a')
+      credit.className = 'community__credit'
+      credit.href = item.url || platform.url(item)
+      credit.target = '_blank'
+      credit.rel = 'noopener'
+      credit.setAttribute('data-analytics-event', 'Community Credit Click')
+      credit.textContent = item.author + ' · ' + platform.name
+
+      li.appendChild(media)
+      li.appendChild(credit)
+      list.appendChild(li)
+    })
+    section.hidden = false
+    formatCommunityCounts()
+    new MutationObserver(formatCommunityCounts).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] })
+  }
+
+  // "2.7K" / "2,7 mil" / "2670" depending on the active language.
+  function formatCommunityCounts () {
+    let format
+    try {
+      format = new Intl.NumberFormat(document.documentElement.lang || 'en', { notation: 'compact', maximumFractionDigits: 1 })
+    } catch (error) {
+      format = { format: String }
+    }
+    document.querySelectorAll('[data-community-count]').forEach(function (stat) {
+      stat.lastChild.textContent = format.format(Number(stat.getAttribute('data-community-count')))
+    })
+  }
+
   function setupScreenshotCarousels () {
     document.querySelectorAll('[data-carousel]').forEach(function (carousel) {
       const track = carousel.querySelector('[data-carousel-track]')
@@ -605,6 +727,7 @@
     setupScenes()
     setupYoutubeEmbeds()
     setupTrailer()
+    setupCommunity()
     setupScreenshotCarousels()
     setupGalleryLightbox()
     scrollToInitialHash()

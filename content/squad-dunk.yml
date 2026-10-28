@@ -141,6 +141,9 @@ localization:
           play: "Watch the trailer"
           youtube: "Watch on YouTube"
           wishlist_prompt: "Liked it? Add DUNK to your Steam wishlist."
+        community:
+          title: "From the community"
+          prompt: "Post your DUNK clips with #DUNKthegame and we might feature them here."
         quick_facts:
           developer: "Developer"
           developer_value: "Katapult Games · Ireland"
@@ -445,6 +448,9 @@ localization:
           play: "Ver el tráiler"
           youtube: "Ver en YouTube"
           wishlist_prompt: "¿Te gustó? Añade DUNK a tu lista de deseados en Steam."
+        community:
+          title: "De la comunidad"
+          prompt: "Sube tus clips de DUNK con #DUNKthegame y puede que salgan aquí."
         quick_facts:
           developer: "Desarrollo"
           developer_value: "Katapult Games · Irlanda"
@@ -750,6 +756,9 @@ localization:
           play: "Смотреть трейлер"
           youtube: "Смотреть на YouTube"
           wishlist_prompt: "Понравилось? Добавьте DUNK в список желаемого в Steam."
+        community:
+          title: "От сообщества"
+          prompt: "Публикуйте клипы DUNK с тегом #DUNKthegame — возможно, мы покажем их здесь."
         quick_facts:
           developer: "Разработчик"
           developer_value: "Katapult Games · Ирландия"
@@ -1025,6 +1034,9 @@ localization:
           play: "トレーラーを見る"
           youtube: "YouTubeで見る"
           wishlist_prompt: "気に入ったら、SteamでDUNKをウィッシュリストに追加しよう。"
+        community:
+          title: "コミュニティから"
+          prompt: "#DUNKthegame を付けてDUNKのクリップを投稿すると、ここで紹介されるかも。"
         quick_facts:
           developer: "開発"
           developer_value: "Katapult Games · アイルランド"
@@ -1291,6 +1303,9 @@ localization:
           play: "观看预告片"
           youtube: "在 YouTube 上观看"
           wishlist_prompt: "喜欢吗？在 Steam 上将 DUNK 加入愿望单。"
+        community:
+          title: "来自社区"
+          prompt: "带上 #DUNKthegame 发布你的 DUNK 片段，说不定会出现在这里。"
         quick_facts:
           developer: "开发商"
           developer_value: "Katapult Games · 爱尔兰"
@@ -1584,6 +1599,9 @@ localization:
           play: "Trailer ansehen"
           youtube: "Auf YouTube ansehen"
           wishlist_prompt: "Gefällt dir? Setz DUNK auf deine Steam-Wunschliste."
+        community:
+          title: "Aus der Community"
+          prompt: "Poste deine DUNK-Clips mit #DUNKthegame – vielleicht zeigen wir sie hier."
         quick_facts:
           developer: "Entwickler"
           developer_value: "Katapult Games · Irland"
@@ -1890,6 +1908,9 @@ localization:
           play: "Voir la bande-annonce"
           youtube: "Voir sur YouTube"
           wishlist_prompt: "Ça vous plaît ? Ajoutez DUNK à votre liste de souhaits Steam."
+        community:
+          title: "La communauté"
+          prompt: "Publiez vos clips de DUNK avec #DUNKthegame : ils pourraient apparaître ici."
         quick_facts:
           developer: "Développeur"
           developer_value: "Katapult Games · Irlande"
@@ -2197,6 +2218,9 @@ localization:
           play: "Ver o trailer"
           youtube: "Ver no YouTube"
           wishlist_prompt: "Gostou? Adicione DUNK à sua lista de desejos na Steam."
+        community:
+          title: "Da comunidade"
+          prompt: "Publique seus clipes de DUNK com #DUNKthegame e eles podem aparecer aqui."
         quick_facts:
           developer: "Desenvolvedora"
           developer_value: "Katapult Games · Irlanda"

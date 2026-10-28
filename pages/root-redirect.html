@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/dunk.css?v=20261028-trailer">
+    <link rel="stylesheet" href="./css/dunk.css?v=20261028-community">
   </head>
   <body class="dunk home">
     <header class="topbar" data-l10n-aria-label="ui.accessibility.primary">
@@ -99,6 +99,13 @@
           </div>
         </div>
       </section>
+      <section class="community" id="community" aria-labelledby="community-title" data-community data-src="./community/community.json" hidden>
+        <div class="container">
+          <h2 id="community-title" class="title" data-l10n="ui.community.title">From the community</h2>
+          <p class="community__prompt" data-l10n="ui.community.prompt">Post your DUNK clips with #DUNKthegame and we might feature them here.</p>
+          <ul class="community__rail" data-community-list></ul>
+        </div>
+      </section>
       <div class="scene scene--world" data-scene aria-hidden="true">
         <img class="scene__layer" data-depth="-0.06" src="./presskit/images/scene/sky.webp" alt="" loading="lazy" width="2400" height="1375">
         <img class="scene__layer" data-depth="0.01" src="./presskit/images/scene/far.webp" alt="" loading="lazy" width="2400" height="1375">
@@ -115,6 +122,6 @@
       </div>
     </footer>
     <script id="presskit-localization" type="application/json" data-src="./localization.json"></script>
-    <script src="./js/presskit-page.js?v=20261028-trailer"></script>
+    <script src="./js/presskit-page.js?v=20261028-community"></script>
   </body>
 </html>
