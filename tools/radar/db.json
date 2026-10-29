@@ -528,7 +528,7 @@
    "date": "2026-10-28",
    "views": 293,
    "likes": 28,
-   "status": "en-sitio",
+   "status": "descartado",
    "reason": "ya estaba en el sitio",
    "source": "sitio",
    "firstSeen": "2026-10-29",
@@ -552,7 +552,7 @@
    "date": "2026-10-28",
    "views": 3557,
    "short": true,
-   "status": "en-sitio",
+   "status": "descartado",
    "reason": "DUNK + palabra de juego",
    "source": "búsqueda: DUNK basketball game",
    "firstSeen": "2026-10-29",
@@ -576,7 +576,7 @@
    "date": "2026-10-28",
    "views": 0,
    "short": true,
-   "status": "nuevo",
+   "status": "descartado",
    "reason": "Katapult",
    "source": "búsqueda: DUNK katapult",
    "firstSeen": "2026-10-29",
@@ -2735,6 +2735,27 @@
   },
   {
    "date": "2026-10-29T02:42:52.325Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-10-29T02:49:57.153Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-10-29T02:49:57.389Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-10-29T02:50:31.534Z",
    "command": "set",
    "found": 0,
    "requests": 0,

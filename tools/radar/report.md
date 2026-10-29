@@ -1,12 +1,12 @@
 # Radar DUNK — 2026-10-29
 
-45 posts · 421 mil visitas en total · 40 creadores
+42 posts · 417 mil visitas en total · 37 creadores
 
 | Origen | Posts | Visitas |
 |---|---:|---:|
 | Jestr | 0 | 0 |
 | orgánico | 0 | 0 |
-| sin marcar | 45 | 421 mil |
+| sin marcar | 42 | 417 mil |
 
 ## Para revisar
 
@@ -18,7 +18,6 @@
 
 | Red | Creador | Título | Visitas | +24h | Fecha | Origen | Estado |
 |---|---|---|---:|---:|---|---|---|
-| youtube | [@traileralertchannel](https://www.youtube.com/watch?v=Z_BArSLKauQ) | DUNK ▸ Announcement Trailer / 4K | 0 |  | 2026-10-28 | ? | nuevo |
 | youtube | [@mrgamingclipzdaily](https://www.youtube.com/watch?v=qa-cPWqkYtM) | You can play basketball on the moon—and low gravity changes the game � | 0 |  | 2026-10-28 | ? · pagado | nuevo |
 | youtube | [@mrgamingclipzdaily](https://www.youtube.com/watch?v=17RvIqd3ZBw) | Why jump for a dunk when you can swing toward the hoop on a vine? 🌿 | 0 |  | 2026-10-28 | ? · pagado | nuevo |
 
@@ -34,7 +33,6 @@
 | youtube | [@WatermelonGamesTV](https://www.youtube.com/watch?v=is17ilyYfes) | 3 free co-op demos or playtests to play | 15 mil |  | 2026-10-28 | ? · pagado | en-sitio |
 | youtube | [@DuckInvaders](https://www.youtube.com/watch?v=gvUDdr5eJr0) | We Finally Got a GOOD Sports Game | 3.950 |  | 2026-10-28 | ? | en-sitio |
 | youtube | [@lofichay](https://www.youtube.com/watch?v=O3d_yTuLplM) | En este juego puedes jugar al baloncesto en la Luna | 3.656 |  | 2026-10-28 | ? | en-sitio |
-| youtube | [@GameTrailers](https://www.youtube.com/watch?v=c2TyYF3-3dQ) | Dunk - Official Announcement Trailer | 3.557 |  | 2026-10-28 | ? | en-sitio |
 | youtube | [@YunaLuvGames](https://www.youtube.com/watch?v=iVZ5F0PcVvo) | New multiplayer basketball game | 3.039 |  | 2026-10-28 | ? | en-sitio |
 | tiktok | [@tayan_cruz](https://www.tiktok.com/@tayan_cruz/video/7701723612084047105) | Basquete em primeira pessoa onde dá pra derrubar seu amigo no ar: DUNK | 2.585 |  | 2026-10-28 | ? · pagado | en-sitio |
 | youtube | [@GamesWorthTrying](https://www.youtube.com/watch?v=B-K27625PTU) | Basketball But You Can TACKLE People | 2.510 |  | 2026-10-28 | ? | en-sitio |
@@ -63,12 +61,10 @@
 | instagram | [@bullet.hammer](https://www.instagram.com/bullet.hammer/reel/DfC0NU6xuXV/) | Game: DUNK. PEAK but just the basketball part | 645 |  | — | ? · pagado | en-sitio |
 | tiktok | [@arcisironman](https://www.tiktok.com/@arcisironman/video/7701718495150558495) | better than 2k?? 🏀 you can tackle people mid dunk lmao. dunk! playtes | 388 |  | 2026-10-28 | ? | en-sitio |
 | tiktok | [@welmeygames](https://www.tiktok.com/@welmeygames/video/7701740220491812110) | FIRST-PERSON BASKETBALL GETS WAY MORE CHAOTIC THAN IT SHOULD DUNK is a | 335 |  | 2026-10-28 | ? | en-sitio |
-| tiktok | [@dunkthegame](https://www.tiktok.com/@dunkthegame/video/7701719801110039840) | Get ready to DUNK, our new physics based basketball game! | 293 |  | 2026-10-28 | ? | en-sitio |
 | tiktok | [@kroniques](https://www.tiktok.com/@kroniques/video/7701746332352089366) | DUNK : le jeu de basket multijoueur en vue FPS où tu peux dunker sur l | 287 |  | 2026-10-28 | ? | en-sitio |
 | tiktok | [@stormygames8](https://www.tiktok.com/@stormygames8/video/7701763578692390176) | 🏀 BASKETBALL MIT FREUNDEN – SOGAR AUF DEM MOND?! 😂🔥 In DUNK liefert | 241 |  | 2026-10-28 | ? | en-sitio |
 | tiktok | [@gamesfound](https://www.tiktok.com/@gamesfound/video/7701720529362898179) | This Basketball Game Is So Unfair DUNK turns first-person basketball l | 235 |  | 2026-10-28 | ? | en-sitio |
 | instagram | [@johanwavex](https://www.instagram.com/johanwavex/reel/DfD3Y3JhhyL/) | A first-person 1-6 player basketball game | 168 |  | — | ? | en-sitio |
-| youtube | [@traileralertchannel](https://www.youtube.com/watch?v=Z_BArSLKauQ) | DUNK ▸ Announcement Trailer / 4K | 0 |  | 2026-10-28 | ? | nuevo |
 | youtube | [@mrgamingclipzdaily](https://www.youtube.com/watch?v=qa-cPWqkYtM) | You can play basketball on the moon—and low gravity changes the game � | 0 |  | 2026-10-28 | ? · pagado | nuevo |
 | youtube | [@mrgamingclipzdaily](https://www.youtube.com/watch?v=17RvIqd3ZBw) | Why jump for a dunk when you can swing toward the hoop on a vine? 🌿 | 0 |  | 2026-10-28 | ? · pagado | nuevo |
 

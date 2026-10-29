@@ -7,7 +7,7 @@ import { fileURLToPath } from 'node:url'
 import { spawnSync } from 'node:child_process'
 
 const DIR = path.dirname(fileURLToPath(import.meta.url))
-const SITE_JSON = path.join(DIR, '../../pages/community/community.json')
+const SITE_JSON = process.env.RADAR_SITE_JSON || path.join(DIR, '../../pages/community/community.json')
 const FILES = { config: 'config.json', db: 'db.json', creators: 'creators.json' }
 const load = (f, fallback) => fs.existsSync(path.join(DIR, f)) ? JSON.parse(fs.readFileSync(path.join(DIR, f), 'utf8')) : fallback
 const save = (f, data) => fs.writeFileSync(path.join(DIR, f), JSON.stringify(data, null, 1) + '\n')
@@ -52,8 +52,14 @@ const handleOf = a => (a || '').toLowerCase()
 const creatorFor = (platform, author) => creators.find(c => c.platform === platform && handleOf(c.handle) === handleOf(author))
 
 // ok: clearly DUNK. review: mentions DUNK as a game but not the studio/store. reject: everything else.
+// Handles compared loosely, so @tayan_cruz, @tayancruz and @GarimpandoJogos / @garimpandojogosoficial match.
+const creatorKey = h => handleOf(h).replace(/[^a-z0-9]/g, '').replace(/(oficial|official|tv|yt)$/, '')
+const sameCreator = (a, b) => { const [x, y] = [creatorKey(a), creatorKey(b)]; return x === y || (Math.min(x.length, y.length) >= 6 && (x.startsWith(y) || y.startsWith(x))) }
+
 function classify (text, author) {
-  if (official.has(handleOf(author))) return { verdict: 'reject', reason: 'cuenta oficial' }
+  // Our own videos (official accounts, re-uploads of the trailer) never count as creator posts.
+  if ([...official].some(o => sameCreator(o, author)) || /katapult/i.test(author || '')) return { verdict: 'reject', reason: 'cuenta oficial' }
+  if (/\b(official|announcement|oficial)\b[^\n]{0,30}\btrailer\b/i.test(text)) return { verdict: 'reject', reason: 'trailer oficial' }
   if (strongRe.test(text)) return { verdict: 'ok', reason: (text.match(strongRe) || [])[0] }
   if (excludeRe.test(text)) return { verdict: 'reject', reason: 'excluido: ' + (text.match(excludeRe) || [])[0] }
   const named = capsRe.test(text) || /(?:called|chamado|se llama|se chama|named) dunk\b|\bdunk!/i.test(text)
@@ -176,9 +182,17 @@ async function tiktokVideo (url) {
   }
 }
 
+// A post's shortcode is its media id in base64; the id's high bits are milliseconds since 2011-08-24.
+function instagramDate (shortcode) {
+  const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_'
+  let id = 0n
+  for (const c of shortcode.slice(0, 11)) id = id * 64n + BigInt(alphabet.indexOf(c))
+  return new Date(Number(id >> 23n) + 1314220021721).toISOString().slice(0, 10)
+}
+
 function instagramPost (url, views, likes) {
   const m = url.match(/instagram\.com\/(?:([\w.]+)\/)?(?:reel|p)\/([\w-]+)/)
-  return { platform: 'instagram', id: m[2], url: url.replace(/\?.*/, ''), author: m[1] ? '@' + m[1] : '', title: '', desc: '', date: '', views: views || 0, likes: likes || 0, manual: true }
+  return { platform: 'instagram', id: m[2], url: url.replace(/\?.*/, ''), author: m[1] ? '@' + m[1] : '', title: '', desc: '', date: instagramDate(m[2]), views: views || 0, likes: likes || 0, manual: true }
 }
 
 // ---------- Database ----------
@@ -404,6 +418,20 @@ async function saveThumb (p) {
   return name
 }
 
+// The same creator posting on another network within 3 days is treated as the same video:
+// the site shows only the copy with most views (the others get duplicateOf, and still add to the total).
+function markCrossPost (list, item, post) {
+  const dateOf = i => db.posts[key(i.platform, i.id)]?.date || (i.platform === 'instagram' ? instagramDate(i.id) : '')
+  const copies = list.filter(i => i.platform !== item.platform && sameCreator(i.author, item.author) &&
+    dateOf(i) && post.date && Math.abs(Date.parse(dateOf(i)) - Date.parse(post.date)) <= 3 * 864e5)
+  if (!copies.length) return
+  const primaryId = copies.find(i => !i.duplicateOf)?.id || copies[0].duplicateOf
+  const primary = list.find(i => i.id === primaryId) || copies[0]
+  if ((item.views || 0) <= (primary.views || 0)) { item.duplicateOf = primary.id; return }
+  // The new copy is the most watched: it becomes the one shown.
+  for (const i of list) if (i === primary || i.duplicateOf === primary.id) i.duplicateOf = item.id
+}
+
 // Adds approved posts to the site's carousel, copies fresh numbers over and sorts by views.
 async function site () {
   const list = JSON.parse(fs.readFileSync(SITE_JSON, 'utf8'))
@@ -421,8 +449,16 @@ async function site () {
   for (const [k, p] of Object.entries(db.posts)) {
     if (p.status !== 'aprobado' || onSite.has(k)) continue
     const item = { platform: p.platform, id: p.id }
-    // Only real Shorts open at /shorts/; other videos redirect, and their cards stay 16:9.
-    if (p.platform === 'youtube' && (await fetch('https://www.youtube.com/shorts/' + p.id, { headers: H, redirect: 'manual' })).status === 200) item.vertical = true
+    // The carousel only shows vertical clips. Real Shorts open at /shorts/; other videos redirect.
+    if (p.platform === 'youtube') {
+      if ((await fetch('https://www.youtube.com/shorts/' + p.id, { headers: H, redirect: 'manual' })).status !== 200) {
+        p.status = 'descartado'
+        p.reason = 'video horizontal'
+        console.log(`  - ${p.author}: video horizontal, no va al carrusel`)
+        continue
+      }
+      item.vertical = true
+    }
     item.author = p.author
     if (p.platform === 'instagram') item.url = p.url
     item.title = shortTitle(p.title || p.desc)
@@ -431,10 +467,11 @@ async function site () {
     } catch (e) { console.error(`  ${p.author}: ${e.message}, no lo agrego`); continue }
     item.views = p.views
     if (p.likes) item.likes = p.likes
+    markCrossPost(list, item, p)
     list.push(item)
     p.status = 'en-sitio'
     added++
-    console.log(`  + ${p.platform} ${p.author} ${fmt(p.views)} — ${item.title}`)
+    console.log(`  + ${p.platform} ${p.author} ${fmt(p.views)} — ${item.title}${item.duplicateOf ? ` (misma pieza que ${item.duplicateOf})` : ''}`)
   }
   list.sort((a, b) => (b.views || 0) - (a.views || 0))
   fs.writeFileSync(SITE_JSON, '[\n' + list.map(i => '  ' + JSON.stringify(i).replace(/,"/g, ', "').replace(/":/g, '": ').replace(/^\{/, '{ ').replace(/\}$/, ' }')).join(',\n') + '\n]\n')

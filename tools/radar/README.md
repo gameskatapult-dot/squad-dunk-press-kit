@@ -69,4 +69,9 @@ Los creadores nuevos que aparecen en las búsquedas quedan sin marcar.
 
 ## Pasar al sitio
 
+Reglas del carrusel (Matías, 29/10):
+- **Nada propio:** se descartan las cuentas oficiales (`official` en `config.json`) y las re-subidas del trailer oficial.
+- **Solo vertical:** un video de YouTube entra solo si abre como Short. Los horizontales quedan descartados.
+- **Un video, una tarjeta:** si el mismo creador lo subió a otra red en un plazo de 3 días, la copia con menos visitas recibe `"duplicateOf": "<id de la más vista>"`. El sitio la oculta, pero suma sus visitas al total. `site` conserva ese campo al reescribir la lista.
+
 `site` copia las visitas actualizadas a `pages/community/community.json`, ordena por visitas y lista los posts **aprobados** que todavía no están en el carrusel. Agregar un post al carrusel sigue siendo a mano, porque necesita miniatura y título corto.
