@@ -151,6 +151,21 @@
    "reason": "DUNK + basket + juego",
    "source": "bing: Katapult Games DUNK",
    "firstSeen": "2026-10-29"
+  },
+  "agssports.com/2026/10/copa-dunk-2026-programacion-sedes": {
+   "id": "9c78bd46eb",
+   "url": "https://www.agssports.com/2026/10/copa-dunk-2026-programacion-sedes/",
+   "outlet": "Agssports",
+   "host": "agssports.com",
+   "title": "Copa Dunk 2026: 104 equipos juegan desde hoy en Aguascalientes",
+   "desc": "Basquetbol infantil y juvenil toma tres sedes de la ciudad del jueves 29 de octubre al domingo 1 de noviembre, bajo el lema #ElevemosLaCompetencia.",
+   "image": "https://www.agssports.com/wp-content/uploads/2026/10/copa-dunk-2026-2-1000x600.jpg",
+   "lang": "es",
+   "date": "2026-10-29",
+   "status": "descartado",
+   "reason": "DUNK + basket + juego",
+   "source": "google: DUNK juego baloncesto",
+   "firstSeen": "2026-10-29"
   }
  },
  "rejected": {
@@ -174,7 +189,11 @@
   "sortiraparis.com/palieseo-hal-il/seupocheu-welbing/articles/127263-2027-pali-beleusi-nong-gu-olseutajeon-mich-gagjong-gyeong-yeon-vevent": "2026-10-29",
   "playground.ru/post-1885652": "2026-10-29",
   "247videogame.com/dunk-official-announcement-trailer": "2026-10-29",
-  "msn.cn/sports/basketball/%E7%AC%AC%E4%B8%80%E4%BA%BA%E7%A7%B0%E5%A4%9A%E4%BA%BA%E8%A1%97%E6%9C%BA%E7%AF%AE%E7%90%83%E6%96%B0%E4%BD%9C-%E5%8F%8B%E5%B0%BD%E5%A4%A7%E6%89%A3%E7%AF%AE-%E5%AE%98%E5%AE%A3-%E8%AE%A1%E5%88%92%E4%BA%8E2027%E5%B9%B4%E7%99%BB%E9%99%86-steam/ar-AA2gjUYn": "2026-10-29"
+  "msn.cn/sports/basketball/%E7%AC%AC%E4%B8%80%E4%BA%BA%E7%A7%B0%E5%A4%9A%E4%BA%BA%E8%A1%97%E6%9C%BA%E7%AF%AE%E7%90%83%E6%96%B0%E4%BD%9C-%E5%8F%8B%E5%B0%BD%E5%A4%A7%E6%89%A3%E7%AF%AE-%E5%AE%98%E5%AE%A3-%E8%AE%A1%E5%88%92%E4%BA%8E2027%E5%B9%B4%E7%99%BB%E9%99%86-steam/ar-AA2gjUYn": "2026-10-29",
+  "gn:CBMidEFVX3lxTFBKenV1cVpHMDk1WjRkRHd5RkV6TlBPOE8zejdlN2ZMSmkxY09BczM2SWFaTGRUQ18tc3BUWFBpXzlwOFg1TngzNFZEWXhzMnRvX3hqMERYZms3cmxiSGVqdW5BMEkyZFlaTzZaQXR5N2lZeC1q": "2026-10-29",
+  "in.ign.com/video/275552/dunk-official-announcement-trailer": "2026-10-29",
+  "gn:CBMid0FVX3lxTFA2SzZVdjZuaGh2LW9VaHBWbE0yaXNIaFJtYldpMjAtbDl5dnNHRTFkVGI4NW9QRmgzWElzRXFTZ3BuRm1rRmNpQm0zTzJiZVhYTnBTb3hCMF9oZmNocVRFeFVhSkw5RlpjTC1qTzEwM2JSanBUd0hZ": "2026-10-29",
+  "gn:CBMi0wFBVV95cUxQT3dTblhrYTgzX0c4eVFFRW1QMTI1Y2luYVprcFZWWXdwYkdWNXg5bk5SelVTN3JUNldkVzlJM0o0Qmk0UW1JdnpWMzBPbWtkQTdVMWk5R1RRVXlaYVBUbnhTV2tYWUxxZHp3a2FyUkp2WG1nekhwcE1peHRqWHd6OXNFc05FV3VrcnNSZ0FwcW9NemJtUVEyZlpXeVhNUllGaVp0bGtiNTZBcVNBMGotLWxrSUtMVW9RMDg4RDd0c3Q3aHJ6RG83WkQtTlRFSlNUdVE4": "2026-10-29"
  },
  "runs": [
   {
@@ -281,6 +300,20 @@
    "found": 0,
    "requests": 24,
    "kb": 693
+  },
+  {
+   "date": "2026-10-29T22:42:08.721Z",
+   "command": "scan",
+   "found": 1,
+   "requests": 31,
+   "kb": 2686
+  },
+  {
+   "date": "2026-10-29T22:42:20.015Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
   }
  ]
 }
