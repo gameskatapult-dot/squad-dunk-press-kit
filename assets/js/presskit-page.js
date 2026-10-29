@@ -360,6 +360,21 @@
     }
   }
 
+  const communityLikesShown = 1000
+  const communityIcons = {
+    views: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 5C6.5 5 2.7 9.3 1.5 12c1.2 2.7 5 7 10.5 7s9.3-4.3 10.5-7C21.3 9.3 17.5 5 12 5m0 11.5a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9m0-2.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/></svg>',
+    likes: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.8 4.5c2.1 0 3.6 1.2 5.2 3 1.6-1.8 3.1-3 5.2-3 3.8 0 5.9 3.9 4.4 7.3C19.5 16.4 12 21 12 21"/></svg>'
+  }
+
+  function communityStat (icon, count) {
+    const stat = document.createElement('span')
+    stat.className = 'community__stat'
+    stat.setAttribute('data-community-count', count)
+    stat.innerHTML = icon
+    stat.appendChild(document.createElement('span'))
+    return stat
+  }
+
   async function setupCommunity () {
     const section = document.querySelector('[data-community]')
     const list = section && section.querySelector('[data-community-list]')
@@ -403,18 +418,12 @@
       }
       start.insertAdjacentHTML('beforeend', '<span class="community__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>')
 
-      // View count (or likes where the platform hides views), as of when the post was added.
-      const count = item.views || item.likes
-      if (count) {
-        const stat = document.createElement('span')
-        stat.className = 'community__stat'
-        stat.setAttribute('data-community-count', count)
-        stat.innerHTML = item.views
-          ? '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 5C6.5 5 2.7 9.3 1.5 12c1.2 2.7 5 7 10.5 7s9.3-4.3 10.5-7C21.3 9.3 17.5 5 12 5m0 11.5a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9m0-2.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/></svg>'
-          : '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.8 4.5c2.1 0 3.6 1.2 5.2 3 1.6-1.8 3.1-3 5.2-3 3.8 0 5.9 3.9 4.4 7.3C19.5 16.4 12 21 12 21"/></svg>'
-        stat.appendChild(document.createElement('span'))
-        start.appendChild(stat)
-      }
+      // Views first; likes join them once there are a lot (counts as of when the post was added).
+      const stats = document.createElement('span')
+      stats.className = 'community__stats'
+      if (item.views) stats.appendChild(communityStat(communityIcons.views, item.views))
+      if (item.likes && (item.likes >= communityLikesShown || !item.views)) stats.appendChild(communityStat(communityIcons.likes, item.likes))
+      if (stats.children.length) start.appendChild(stats)
       start.addEventListener('click', function () {
         const frame = document.createElement('iframe')
         frame.src = platform.embed(item)
@@ -442,16 +451,33 @@
     })
     section.hidden = false
     formatCommunityCounts()
-    setupCommunityCarousel(list)
+    setupCommunityCarousel(list, section.querySelector('[data-community-viewport]') || list)
     new MutationObserver(formatCommunityCounts).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] })
   }
 
   // Endless drift: the cards are cloned once and the row scrolls slowly, wrapping at the halfway
-  // point. It still swipes and drags by hand, pauses on hover/touch, and stops for good once a
-  // clip is playing or when the visitor prefers reduced motion.
-  function setupCommunityCarousel (list) {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
-    if (list.scrollWidth <= list.clientWidth + 1) return
+  // point. Arrows step one card at a time, the row swipes (touch) or drags (mouse) by hand, it
+  // pauses on hover/touch, and stops drifting once a clip is playing or for reduced motion.
+  function setupCommunityCarousel (list, viewport) {
+    const prev = viewport.querySelector('[data-community-prev]')
+    const next = viewport.querySelector('[data-community-next]')
+    if (list.scrollWidth <= list.clientWidth + 1) {
+      if (prev) prev.hidden = true
+      if (next) next.hidden = true
+      return
+    }
+
+    function cardStep () {
+      return list.children[0].offsetWidth + parseFloat(getComputedStyle(list).columnGap || 16)
+    }
+    let loop = function () { return 0 }
+    setupCommunityDrag(list, function () { return loop() })
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      if (prev) prev.addEventListener('click', function () { list.scrollBy({ left: -cardStep(), behavior: 'smooth' }) })
+      if (next) next.addEventListener('click', function () { list.scrollBy({ left: cardStep(), behavior: 'smooth' }) })
+      return
+    }
 
     const originals = Array.from(list.children)
     originals.forEach(function (item) {
@@ -477,38 +503,106 @@
 
     const speed = 32 // px per second
     let position = list.scrollLeft
+    let target = null // where an arrow click is gliding to
+    let resumeAt = 0 // drifting waits a moment after the visitor moves the row
     let paused = 0
     let stopped = false
     let last = null
 
+    // Distance from a card to its clone, so the wrap is seamless (gap included).
+    function loopWidth () {
+      return list.children[originals.length].offsetLeft - originals[0].offsetLeft
+    }
+    function wrap (half) {
+      if (position >= half) { position -= half; if (target !== null) target -= half }
+      if (position < 0) { position += half; if (target !== null) target += half }
+    }
+    function go (direction) {
+      if (target === null) position = list.scrollLeft
+      target = (target === null ? position : target) + direction * cardStep()
+      wrap(loopWidth())
+      resumeAt = window.performance.now() + 3000
+    }
+    loop = loopWidth
+    if (prev) prev.addEventListener('click', function () { go(-1) })
+    if (next) next.addEventListener('click', function () { go(1) })
+
     function hold () { paused++ }
-    function release () { paused = Math.max(0, paused - 1); position = list.scrollLeft }
-    list.addEventListener('mouseenter', hold)
-    list.addEventListener('mouseleave', release)
+    function release () { paused = Math.max(0, paused - 1); resumeAt = window.performance.now() + 1200 }
+    viewport.addEventListener('mouseenter', hold)
+    viewport.addEventListener('mouseleave', release)
     list.addEventListener('touchstart', hold, { passive: true })
-    list.addEventListener('touchend', function () { setTimeout(release, 1200) })
-    list.addEventListener('focusin', hold)
-    list.addEventListener('focusout', release)
+    list.addEventListener('touchend', release)
+    viewport.addEventListener('focusin', hold)
+    viewport.addEventListener('focusout', release)
+    list.addEventListener('pointerdown', function () { target = null })
     list.addEventListener('click', function (event) {
       if (event.target.closest('.community__start')) stopped = true
     })
 
     function step (time) {
-      // Distance from a card to its clone, so the wrap is seamless (gap included).
-      const half = list.children[originals.length].offsetLeft - originals[0].offsetLeft
-      if (last !== null && !paused && !stopped && !document.hidden) {
-        position += speed * Math.min(time - last, 100) / 1000
-        if (position >= half) position -= half
+      const half = loopWidth()
+      const dt = last === null ? 0 : Math.min(time - last, 100)
+      if (target !== null) {
+        position += (target - position) * Math.min(1, dt / 110)
+        if (Math.abs(target - position) < 0.5) { position = target; target = null }
+        wrap(half)
         list.scrollLeft = position
-      } else if (list.scrollLeft >= half) {
-        // Swiped past the clones by hand: jump back to the matching original.
-        list.scrollLeft -= half
+      } else if (!paused && !stopped && !document.hidden && time >= resumeAt) {
+        position += speed * dt / 1000
+        wrap(half)
+        list.scrollLeft = position
+      } else {
+        // Moved by hand: follow it, and jump back to the matching original past the clones.
         position = list.scrollLeft
+        if (position >= half) { position -= half; list.scrollLeft = position }
       }
       last = time
       window.requestAnimationFrame(step)
     }
     window.requestAnimationFrame(step)
+  }
+
+  // Mouse users can grab the row and drag it; a drag never counts as a click on a card.
+  function setupCommunityDrag (list, loopWidth) {
+    let startX = 0
+    let startScroll = 0
+    let dragging = false
+    let moved = false
+
+    list.addEventListener('dragstart', function (event) { event.preventDefault() })
+    list.addEventListener('pointerdown', function (event) {
+      if (event.pointerType !== 'mouse' || event.button !== 0) return
+      dragging = true
+      moved = false
+      startX = event.clientX
+      startScroll = list.scrollLeft
+    })
+    window.addEventListener('pointermove', function (event) {
+      if (!dragging) return
+      const dx = event.clientX - startX
+      if (Math.abs(dx) > 5) {
+        moved = true
+        list.classList.add('is-dragging')
+      }
+      if (!moved) return
+      // On a looping row, keep dragging past either end by jumping a whole loop.
+      let x = startScroll - dx
+      const half = loopWidth()
+      if (half && x < 0) { startScroll += half; x += half }
+      if (half && x >= half) { startScroll -= half; x -= half }
+      list.scrollLeft = x
+    })
+    window.addEventListener('pointerup', function () {
+      dragging = false
+      list.classList.remove('is-dragging')
+    })
+    list.addEventListener('click', function (event) {
+      if (!moved) return
+      moved = false
+      event.preventDefault()
+      event.stopPropagation()
+    }, true)
   }
 
   // "2.7K" / "2,7 mil" / "2670" depending on the active language.
