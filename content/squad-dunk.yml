@@ -18,9 +18,9 @@ sections:
   - id: media
     enabled: true
   - id: announcement
-    enabled: true
+    enabled: false
   - id: branding
-    enabled: true
+    enabled: false
   - id: links
     enabled: true
   - id: team
@@ -162,7 +162,7 @@ localization:
           price_value: "To be announced"
           press: "Press"
         announcement:
-          title: "Announcement assets"
+          title: "Capsule art & video"
           download: "Download"
           items:
             - title: "Main capsule · English"
@@ -171,14 +171,6 @@ localization:
               alt: "DUNK main capsule art with the Chinese logo."
             - title: "Parallax video · no text"
               alt: "DUNK key art parallax video without text."
-            - title: "Playtest video · English"
-              alt: "Announcement art · English"
-            - title: "Playtest video · Chinese"
-              alt: "Announcement art · Chinese"
-            - title: "Announcement art · English"
-              alt: "DUNK playtest announcement art in English."
-            - title: "Announcement art · Chinese"
-              alt: "DUNK playtest announcement art in Chinese."
         landing:
           nav:
             home: Home
@@ -196,10 +188,10 @@ localization:
           sections:
             creators: "Creators"
             announcement: "Announcement"
-            factsheet: Factsheet
+            factsheet: "The game"
             description: Description
             features: Features
-            media: Screenshots
+            media: "Media"
             branding: Key art & logos
             links: Links
             team: Studio
@@ -272,8 +264,9 @@ localization:
             - Unlockable looks, cosmetics and emotes
             - Private lobbies, including 5v1 matches
         media:
-          title: Media
+          title: "Media"
           videos: Videos
+          full_kit: "Download full press kit"
           screenshots: Screenshots
           download: All screenshots · ZIP
           original: Original ↗
@@ -473,7 +466,7 @@ localization:
           price_value: "Por anunciar"
           press: "Prensa"
         announcement:
-          title: "Material del anuncio"
+          title: "Cápsulas y video"
           download: "Descargar"
           items:
             - title: "Cápsula principal · Inglés"
@@ -482,14 +475,6 @@ localization:
               alt: "Arte de la cápsula principal de DUNK con el logo en chino."
             - title: "Video parallax · sin texto"
               alt: "Video parallax del key art de DUNK sin texto."
-            - title: "Video de la playtest · Inglés"
-              alt: "Arte del anuncio · Inglés"
-            - title: "Video de la playtest · Chino"
-              alt: "Arte del anuncio · Chino"
-            - title: "Arte del anuncio · Inglés"
-              alt: "Arte del anuncio de la playtest de DUNK en inglés."
-            - title: "Arte del anuncio · Chino"
-              alt: "Arte del anuncio de la playtest de DUNK en chino."
         landing:
           nav:
             home: Inicio
@@ -507,10 +492,10 @@ localization:
           sections:
             creators: "Creadores"
             announcement: "Anuncio"
-            factsheet: Ficha técnica
+            factsheet: "El juego"
             description: Descripción
             features: Características
-            media: Capturas
+            media: "Material"
             branding: Ilustración y logotipos
             links: Enlaces
             team: Estudio
@@ -583,8 +568,9 @@ localization:
             - Apariencias, cosméticos y gestos desbloqueables
             - Salas privadas, incluidas partidas 5v1
         media:
-          title: Medios
+          title: "Material"
           videos: Videos
+          full_kit: "Descargar press kit completo"
           screenshots: Capturas
           download: Todas las capturas · ZIP
           original: Original ↗
@@ -785,7 +771,7 @@ localization:
           price_value: "Будет объявлено"
           press: "Пресса"
         announcement:
-          title: "Материалы анонса"
+          title: "Капсулы и видео"
           download: "Скачать"
           items:
             - title: "Главная капсула · английский"
@@ -794,14 +780,6 @@ localization:
               alt: "Главная капсула DUNK с китайским логотипом."
             - title: "Параллакс-видео · без текста"
               alt: "Параллакс-видео ключевого арта DUNK без текста."
-            - title: "Видео плейтеста · английский"
-              alt: "Арт анонса · английский"
-            - title: "Видео плейтеста · китайский"
-              alt: "Арт анонса · китайский"
-            - title: "Арт анонса · английский"
-              alt: "Арт анонса плейтеста DUNK на английском."
-            - title: "Арт анонса · китайский"
-              alt: "Арт анонса плейтеста DUNK на китайском."
         landing:
           nav:
             home: Главная
@@ -819,10 +797,10 @@ localization:
           sections:
             creators: "Авторы"
             announcement: "Анонс"
-            factsheet: Информация об игре
+            factsheet: "Об игре"
             description: Описание
             features: Особенности
-            media: Скриншоты
+            media: "Материалы"
             branding: Иллюстрация и логотипы
             links: Ссылки
             team: Студия
@@ -895,8 +873,9 @@ localization:
             - Открываемые образы, косметика и эмоции
             - Приватные комнаты, включая матчи 5 на 1
         media:
-          title: Медиа
+          title: "Материалы"
           videos: Видео
+          full_kit: "Скачать полный пресс-кит"
           screenshots: Скриншоты
           download: Все скриншоты · ZIP
           original: Оригинал ↗
@@ -1067,7 +1046,7 @@ localization:
           price_value: "未定"
           press: "プレス"
         announcement:
-          title: "告知用素材"
+          title: "カプセルアートと動画"
           download: "ダウンロード"
           items:
             - title: "メインカプセル · 英語"
@@ -1076,14 +1055,6 @@ localization:
               alt: "中国語ロゴ入りの DUNK メインカプセルアート。"
             - title: "パララックス映像 · テキストなし"
               alt: "テキストなしの DUNK キーアート パララックス映像。"
-            - title: "プレイテスト映像 · 英語"
-              alt: "告知アート · 英語"
-            - title: "プレイテスト映像 · 中国語"
-              alt: "告知アート · 中国語"
-            - title: "告知アート · 英語"
-              alt: "DUNK プレイテスト告知アート（英語）。"
-            - title: "告知アート · 中国語"
-              alt: "DUNK プレイテスト告知アート（中国語）。"
         landing:
           nav:
             home: ホーム
@@ -1101,10 +1072,10 @@ localization:
           sections:
             creators: "クリエイター"
             announcement: "アナウンス"
-            factsheet: 基本情報
+            factsheet: "ゲーム概要"
             description: 説明
             features: 特徴
-            media: スクリーンショット
+            media: "メディア"
             branding: キーアートとロゴ
             links: リンク
             team: スタジオ
@@ -1177,8 +1148,9 @@ localization:
             - アンロック可能な見た目、コスメ、エモート
             - 5対1を含むプライベートロビー
         media:
-          title: メディア
+          title: "メディア"
           videos: 動画
+          full_kit: "プレスキット一式をダウンロード"
           screenshots: スクリーンショット
           download: すべてのスクリーンショット · ZIP
           original: 元の画像 ↗
@@ -1340,7 +1312,7 @@ localization:
           price_value: "待公布"
           press: "媒体"
         announcement:
-          title: "公告素材"
+          title: "宣传图与视频"
           download: "下载"
           items:
             - title: "主宣传图 · 英文"
@@ -1349,14 +1321,6 @@ localization:
               alt: "带中文标志的友尽大扣篮主宣传图。"
             - title: "视差视频 · 无文字"
               alt: "无文字的友尽大扣篮主视觉视差视频。"
-            - title: "试玩测试视频 · 英文"
-              alt: "公告图 · 英文"
-            - title: "试玩测试视频 · 中文"
-              alt: "公告图 · 中文"
-            - title: "公告图 · 英文"
-              alt: "友尽大扣篮试玩测试英文公告图。"
-            - title: "公告图 · 中文"
-              alt: "友尽大扣篮试玩测试中文公告图。"
         landing:
           nav:
             home: 首页
@@ -1374,10 +1338,10 @@ localization:
           sections:
             creators: "创作者"
             announcement: "公告"
-            factsheet: 游戏信息
+            factsheet: "游戏介绍"
             description: 游戏介绍
             features: 游戏特色
-            media: 截图
+            media: "媒体素材"
             branding: 主视觉与标志
             links: 相关链接
             team: 工作室
@@ -1450,8 +1414,9 @@ localization:
             - 可解锁的造型、外观和表情
             - 私人大厅，支持5v1比赛
         media:
-          title: 媒体
+          title: "媒体素材"
           videos: 视频
+          full_kit: "下载完整媒体资料包"
           screenshots: 截图
           download: 全部截图 · ZIP
           original: 原始图片 ↗
@@ -1640,7 +1605,7 @@ localization:
           price_value: "Wird noch bekannt gegeben"
           press: "Presse"
         announcement:
-          title: "Ankündigungsmaterial"
+          title: "Capsules & Video"
           download: "Herunterladen"
           items:
             - title: "Haupt-Capsule · Englisch"
@@ -1649,14 +1614,6 @@ localization:
               alt: "DUNK Haupt-Capsule-Artwork mit chinesischem Logo."
             - title: "Parallax-Video · ohne Text"
               alt: "DUNK Key-Art-Parallax-Video ohne Text."
-            - title: "Playtest-Video · Englisch"
-              alt: "Ankündigungsbild · Englisch"
-            - title: "Playtest-Video · Chinesisch"
-              alt: "Ankündigungsbild · Chinesisch"
-            - title: "Ankündigungsbild · Englisch"
-              alt: "DUNK Playtest-Ankündigungsbild auf Englisch."
-            - title: "Ankündigungsbild · Chinesisch"
-              alt: "DUNK Playtest-Ankündigungsbild auf Chinesisch."
         landing:
           nav:
             home: Startseite
@@ -1674,10 +1631,10 @@ localization:
           sections:
             creators: "Creator"
             announcement: "Ankündigung"
-            factsheet: Datenblatt
+            factsheet: "Das Spiel"
             description: Beschreibung
             features: Spielmerkmale
-            media: Screenshots
+            media: "Medien"
             branding: Illustration und Logos
             links: Links
             team: Studio
@@ -1750,8 +1707,9 @@ localization:
             - Freischaltbare Looks, Kosmetik und Emotes
             - Private Lobbys, einschließlich 5v1-Matches
         media:
-          title: Medien
+          title: "Medien"
           videos: Videos
+          full_kit: "Komplettes Pressekit herunterladen"
           screenshots: Screenshots
           download: Alle Screenshots · ZIP
           original: Original ↗
@@ -1953,7 +1911,7 @@ localization:
           price_value: "À annoncer"
           press: "Presse"
         announcement:
-          title: "Éléments de l’annonce"
+          title: "Capsules et vidéo"
           download: "Télécharger"
           items:
             - title: "Capsule principale · anglais"
@@ -1962,14 +1920,6 @@ localization:
               alt: "Visuel de la capsule principale de DUNK avec le logo chinois."
             - title: "Vidéo parallaxe · sans texte"
               alt: "Vidéo parallaxe du key art de DUNK sans texte."
-            - title: "Vidéo du playtest · anglais"
-              alt: "Visuel d’annonce · anglais"
-            - title: "Vidéo du playtest · chinois"
-              alt: "Visuel d’annonce · chinois"
-            - title: "Visuel d’annonce · anglais"
-              alt: "Visuel d’annonce du playtest de DUNK en anglais."
-            - title: "Visuel d’annonce · chinois"
-              alt: "Visuel d’annonce du playtest de DUNK en chinois."
         landing:
           nav:
             home: Accueil
@@ -1987,10 +1937,10 @@ localization:
           sections:
             creators: "Créateurs"
             announcement: "Annonce"
-            factsheet: Fiche technique
+            factsheet: "Le jeu"
             description: Description
             features: Fonctionnalités
-            media: Captures d'écran
+            media: "Médias"
             branding: Visuels et logos
             links: Liens
             team: Studio
@@ -2063,8 +2013,9 @@ localization:
             - Apparences, cosmétiques et gestes à débloquer
             - Salons privés, dont des matchs 5v1
         media:
-          title: Médias
+          title: "Médias"
           videos: Vidéos
+          full_kit: "Télécharger le kit presse complet"
           screenshots: Captures d'écran
           download: Toutes les captures · ZIP
           original: Fichier original ↗
@@ -2267,7 +2218,7 @@ localization:
           price_value: "A anunciar"
           press: "Imprensa"
         announcement:
-          title: "Material do anúncio"
+          title: "Cápsulas e vídeo"
           download: "Baixar"
           items:
             - title: "Cápsula principal · inglês"
@@ -2276,14 +2227,6 @@ localization:
               alt: "Arte da cápsula principal de DUNK com o logo em chinês."
             - title: "Vídeo parallax · sem texto"
               alt: "Vídeo parallax da key art de DUNK sem texto."
-            - title: "Vídeo do playtest · inglês"
-              alt: "Arte do anúncio · inglês"
-            - title: "Vídeo do playtest · chinês"
-              alt: "Arte do anúncio · chinês"
-            - title: "Arte do anúncio · inglês"
-              alt: "Arte do anúncio do playtest de DUNK em inglês."
-            - title: "Arte do anúncio · chinês"
-              alt: "Arte do anúncio do playtest de DUNK em chinês."
         landing:
           nav:
             home: Início
@@ -2301,10 +2244,10 @@ localization:
           sections:
             creators: "Criadores"
             announcement: "Anúncio"
-            factsheet: Ficha técnica
+            factsheet: "O jogo"
             description: Descrição
             features: Recursos
-            media: Capturas de tela
+            media: "Mídia"
             branding: Arte e logotipos
             links: Links
             team: Estúdio
@@ -2377,8 +2320,9 @@ localization:
             - Visuais, cosméticos e gestos desbloqueáveis
             - Salas privadas, incluindo partidas 5v1
         media:
-          title: Mídia
+          title: "Mídia"
           videos: Vídeos
+          full_kit: "Baixar press kit completo"
           screenshots: Capturas de tela
           download: Todas as capturas · ZIP
           original: Arquivo original ↗
@@ -2568,7 +2512,7 @@ announcement:
       title: Playtest video · English
       caption: 1920 × 1080 · MP4
       alt: DUNK playtest announcement art in English.
-      enabled: true
+      enabled: false
     - id: playtest-video-zh
       type: video
       file: images/announcement/DUNK-playtest-parallax-zh-1080p.mp4
@@ -2576,7 +2520,7 @@ announcement:
       title: Playtest video · Chinese
       caption: 1920 × 1080 · MP4
       alt: DUNK playtest announcement art in Chinese.
-      enabled: true
+      enabled: false
     - id: announcement-art-en
       type: image
       file: images/announcement/DUNK-announcement-en.png
@@ -2584,7 +2528,7 @@ announcement:
       title: Announcement art · English
       caption: 1920 × 1080 · PNG
       alt: DUNK playtest announcement art in English.
-      enabled: true
+      enabled: false
     - id: announcement-art-zh
       type: image
       file: images/announcement/DUNK-announcement-zh.png
@@ -2592,7 +2536,7 @@ announcement:
       title: Announcement art · Chinese
       caption: 1920 × 1080 · PNG
       alt: DUNK playtest announcement art in Chinese.
-      enabled: true
+      enabled: false
 
 media:
   videos:

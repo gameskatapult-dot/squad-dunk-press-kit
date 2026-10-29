@@ -1,28 +1,82 @@
-{{#if presskit.manifestScreenshots}}
 <section class="band jungle band--media" aria-labelledby="media">
   <div class="container">
     <header class="band__header">
-      <h2 id="media" class="title" data-l10n="ui.media.screenshots">Screenshots</h2>
-      {{#if presskit.mediaDownloadFile}}
-      <a class="button button--cloud button--small" href="{{presskit.mediaDownloadFile}}" download data-analytics-event="Press Kit Download">
+      <h2 id="media" class="title" data-l10n="ui.media.title">Media</h2>
+      {{#if presskit.pressKitLink.url}}
+      <a class="button button--ball" href="{{presskit.pressKitLink.url}}" target="_blank" rel="noopener" data-analytics-event="Press Kit Download">
         <svg class="button__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M11 3h2v10.17l3.59-3.58L18 11l-6 6-6-6 1.41-1.41L11 13.17zM4 19h16v2H4z"/></svg>
-        <span data-l10n="ui.media.download">{{presskit.mediaDownloadTitle}}</span>
+        <span data-l10n="ui.media.full_kit">Download full press kit</span>
       </a>
       {{/if}}
     </header>
-    <ul class="shots" id="screenshots">
-      {{#each presskit.manifestScreenshots}}
-      <li class="shot{{#if featured}} shot--featured{{/if}}">
-        <a class="frame" href="{{file}}" data-gallery="screenshots" data-l10n-data-gallery-title="ui.media.items.{{@index}}.title" data-gallery-title="{{title}}">
-          <img src="{{preview}}" data-l10n-alt="ui.media.items.{{@index}}.alt" alt="{{alt}}" loading="lazy" width="1600" height="900">
-        </a>
-        <p class="shot__meta">
-          <span data-l10n="ui.media.items.{{@index}}.title">{{title}}</span>
-          <a href="{{file}}" download data-analytics-event="Assets Download">{{caption}}</a>
-        </p>
-      </li>
-      {{/each}}
-    </ul>
+
+    {{#if presskit.manifestScreenshots}}
+    <div class="media-group">
+      <header class="media-group__header">
+        <h3 class="media-group__title" data-l10n="ui.media.screenshots">Screenshots</h3>
+        {{#if presskit.mediaDownloadFile}}
+        <a class="media-group__zip" href="{{presskit.mediaDownloadFile}}" download data-analytics-event="Assets Download" data-l10n="ui.media.download">{{presskit.mediaDownloadTitle}}</a>
+        {{/if}}
+      </header>
+      <ul class="shots" id="screenshots">
+        {{#each presskit.manifestScreenshots}}
+        <li class="shot{{#if featured}} shot--featured{{/if}}">
+          <a class="frame" href="{{file}}" data-gallery="screenshots" data-l10n-data-gallery-title="ui.media.items.{{@index}}.title" data-gallery-title="{{title}}">
+            <img src="{{preview}}" data-l10n-alt="ui.media.items.{{@index}}.alt" alt="{{alt}}" loading="lazy" width="1600" height="900">
+          </a>
+          <p class="shot__meta">
+            <span data-l10n="ui.media.items.{{@index}}.title">{{title}}</span>
+            <a href="{{file}}" download data-analytics-event="Assets Download">{{caption}}</a>
+          </p>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+    {{/if}}
+
+    {{#if presskit.brandingAssets}}
+    <div class="media-group" id="logo">
+      <header class="media-group__header">
+        <h3 class="media-group__title" data-l10n="ui.branding.title">Key art & logos</h3>
+        {{#if presskit.brandingDownloadFile}}
+        <a class="media-group__zip" href="{{presskit.brandingDownloadFile}}" download data-analytics-event="Assets Download" data-l10n="ui.branding.download">{{presskit.brandingDownloadTitle}}</a>
+        {{/if}}
+      </header>
+      <ul class="brand-assets">
+        {{#each presskit.brandingAssets}}
+        <li class="download download--{{type}}">
+          <a class="download__image" href="{{file}}" download data-analytics-event="Assets Download">
+            <img src="{{file}}" data-l10n-alt="ui.branding.assets.{{@index}}.alt" alt="{{alt}}" loading="lazy">
+          </a>
+          <p class="download__meta">
+            <span data-l10n="ui.branding.assets.{{@index}}.title">{{title}}</span>
+          </p>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+    {{/if}}
+
+    {{#if presskit.announcementItems}}
+    <div class="media-group" id="announcement">
+      <header class="media-group__header">
+        <h3 class="media-group__title" data-l10n="ui.announcement.title">Capsule art & video</h3>
+      </header>
+      <ul class="downloads">
+        {{#each presskit.announcementItems}}
+        <li class="download">
+          <a class="download__image" href="{{file}}" download data-analytics-event="Assets Download">
+            <img src="{{preview}}" data-l10n-alt="ui.announcement.items.{{@index}}.alt" alt="{{alt}}" loading="lazy" width="960" height="540">
+            {{#if isVideo}}<span class="download__badge" aria-hidden="true">MP4</span>{{/if}}
+          </a>
+          <p class="download__meta">
+            <span data-l10n="ui.announcement.items.{{@index}}.title">{{title}}</span>
+            <a href="{{file}}" download data-analytics-event="Assets Download">{{caption}}</a>
+          </p>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+    {{/if}}
   </div>
 </section>
-{{/if}}

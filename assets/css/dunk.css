@@ -116,9 +116,11 @@ html[lang="zh"] .topbar__brand img { height: 40px; }
 /* Community: hand-picked fan posts in a swipeable row. */
 .community { --clip-h: clamp(320px, 26vw, 380px); padding: clamp(56px, 7vw, 88px) 0; text-align: center; border-bottom: 1px solid var(--line); }
 .community .title { margin-bottom: 10px; }
-/* Press kit headline: the total reach of creator videos, big enough to read at a glance. */
-.community__total { display: flex; flex-direction: column; align-items: center; gap: 2px; margin: 0 0 32px; color: var(--soft); font-size: clamp(16px, 1.6vw, 19px); font-weight: 700; }
-.community__total strong { color: var(--ball); font: 800 clamp(52px, 7vw, 88px)/1 var(--display); letter-spacing: -.01em; }
+/* Press kit: a small label, the title and one quiet line with the total reach; smaller cards. */
+.community--press { --clip-h: 300px; }
+.community__eyebrow { display: block; margin-bottom: 10px; color: var(--ball); font: 800 13px/1 var(--body); letter-spacing: .14em; text-transform: uppercase; }
+.community__total { display: flex; flex-wrap: wrap; justify-content: center; gap: 0 8px; margin: 0 0 28px; color: var(--soft); font-size: 16px; font-weight: 700; }
+.community__total strong { color: var(--cream); font-weight: 800; }
 .community__prompt { margin: 0 0 28px; color: var(--soft); font-size: clamp(16px, 1.6vw, 19px); font-weight: 600; }
 .community__rail { display: flex; align-items: center; gap: 16px; margin: 0; padding: 0; overflow-x: auto; list-style: none; scrollbar-width: none; overscroll-behavior-x: contain; }
 .community__rail::-webkit-scrollbar { display: none; }
@@ -181,7 +183,7 @@ html[lang="zh"] .topbar__brand img { height: 40px; }
 a.frame:hover { border-color: #fff; }
 
 /* About the game */
-.overview { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(260px, 1fr); gap: clamp(32px, 6vw, 72px); align-items: start; }
+.overview { max-width: 880px; }
 .overview__copy p { color: var(--soft); }
 .overview__copy .lead { color: var(--cream); font-size: clamp(20px, 1.9vw, 23px); font-weight: 700; line-height: 1.5; }
 .factsheet h3 { margin-bottom: 8px; font-size: 24px; }
@@ -189,22 +191,33 @@ a.frame:hover { border-color: #fff; }
 .factsheet dt { color: var(--soft); font-size: 15px; }
 .factsheet dd { grid-column: 2; font-size: 16px; font-weight: 700; }
 .factsheet dd span:not(:last-child)::after { content: ", "; }
-/* About this game: the Steam page layout, a banner loop above each pillar. */
-.about-game { display: grid; gap: clamp(24px, 3vw, 36px); margin-top: clamp(56px, 7vw, 88px); }
-.feature { overflow: hidden; background: #24211d; border: 1px solid var(--line); border-radius: 10px; }
-.feature__media video { display: block; width: 100%; height: auto; aspect-ratio: 1400 / 400; object-fit: cover; }
-.feature__text { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.9fr); gap: 12px clamp(28px, 4vw, 56px); padding: clamp(24px, 3.5vw, 40px); }
-.dunk .feature__title { margin: 0; font-size: clamp(28px, 2.8vw, 36px); line-height: 1; }
-.feature__body { margin: 0; color: var(--soft); font-size: 17px; line-height: 1.6; white-space: pre-line; }
+/* About this game: one compact card per pillar, the Steam banner loop beside its text. */
+.about-game { display: grid; gap: 20px; margin-top: clamp(40px, 5vw, 56px); }
+.feature { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: stretch; overflow: hidden; background: #24211d; border: 1px solid var(--line); border-radius: 10px; }
+.feature__media { position: relative; min-height: 240px; margin: 0; }
+/* Beside the text the banner fills the card's height, cropped to its centre. */
+.feature__media video { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; }
+.feature__text { display: grid; gap: 10px; padding: clamp(20px, 2.5vw, 32px); }
+.dunk .feature__title { margin: 0; font-size: clamp(24px, 2.2vw, 30px); line-height: 1; }
+.feature__body { margin: 0; color: var(--soft); font-size: 16px; line-height: 1.55; white-space: pre-line; }
 .feature-list { margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--line); }
 .feature-list h3 { margin-bottom: 16px; font-size: 24px; }
 .feature-list ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 40px; }
 .feature-list li { padding-left: 18px; text-indent: -18px; font-weight: 700; }
 .feature-list li::before { content: "•"; display: inline-block; width: 18px; text-indent: 0; color: var(--ball); }
 
+/* Media: one download button for everything, then the groups to browse. */
+.media-group + .media-group { margin-top: clamp(48px, 6vw, 72px); }
+.media-group__header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; margin-bottom: 20px; }
+.dunk .media-group__title { margin: 0; font-size: clamp(22px, 2vw, 28px); }
+.dunk .media-group__zip { color: var(--soft); font-size: 15px; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.dunk .media-group__zip:hover { color: var(--cream); }
+
 /* Screenshots and downloads */
 .shots { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px 20px; }
 .shot--featured { grid-column: 1 / -1; }
+/* Wide crop keeps the lead screenshot from taking over the Media section. */
+.shot--featured .frame img { aspect-ratio: 21 / 9; }
 .shot__meta, .download__meta { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin: 10px 2px 0; font-size: 16px; font-weight: 800; }
 .shot__meta a, .download__meta a { flex-shrink: 0; color: var(--soft); font-size: 14px; font-weight: 700; }
 .downloads { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 32px 20px; }
@@ -295,7 +308,9 @@ body.gallery-lightbox-open { overflow: hidden; }
   .facts > div, .facts > div + div { padding: 0 8px 0 12px; border-left: 1px solid var(--line); }
   .facts > div:last-child:nth-child(even) { grid-column: 1 / -1; }
   .facts a { overflow-wrap: anywhere; }
-  .overview, .studio, .feature__text { grid-template-columns: 1fr; }
+  .overview, .studio, .feature, .feature__text { grid-template-columns: 1fr; }
+  .feature__media { min-height: 0; }
+  .feature__media video { position: static; height: auto; aspect-ratio: 1400 / 400; }
   .factsheet dl > div { grid-template-columns: 104px minmax(0, 1fr); }
   .feature-list ul { grid-template-columns: 1fr; }
   .shots, .brand-assets { grid-template-columns: 1fr; gap: 28px; }
