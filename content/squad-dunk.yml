@@ -7,6 +7,8 @@ analytics:
   goatcounter_endpoint: https://katapultgames.goatcounter.com/count
 
 sections:
+  - id: creators
+    enabled: true
   - id: factsheet
     enabled: true
   - id: description
@@ -142,7 +144,8 @@ localization:
           youtube: "Watch on YouTube"
           wishlist_prompt: "Liked it? Add DUNK to your Steam wishlist."
         community:
-          title: "From the community"
+          title: "Creators are playing DUNK"
+          views_label: "views on creator videos"
           prompt: "Post your DUNK clips with #DUNKthegame and we might feature them here."
           prev: "Previous clips"
           next: "Next clips"
@@ -191,6 +194,7 @@ localization:
           language: Language
           menu: Menu
           sections:
+            creators: "Creators"
             announcement: "Announcement"
             factsheet: Factsheet
             description: Description
@@ -451,7 +455,8 @@ localization:
           youtube: "Ver en YouTube"
           wishlist_prompt: "¿Te gustó? Añade DUNK a tu lista de deseados en Steam."
         community:
-          title: "De la comunidad"
+          title: "Los creadores ya juegan DUNK"
+          views_label: "visualizaciones en videos de creadores"
           prompt: "Sube tus clips de DUNK con #DUNKthegame y puede que salgan aquí."
           prev: "Clips anteriores"
           next: "Clips siguientes"
@@ -500,6 +505,7 @@ localization:
           language: Idioma
           menu: Menú
           sections:
+            creators: "Creadores"
             announcement: "Anuncio"
             factsheet: Ficha técnica
             description: Descripción
@@ -761,7 +767,8 @@ localization:
           youtube: "Смотреть на YouTube"
           wishlist_prompt: "Понравилось? Добавьте DUNK в список желаемого в Steam."
         community:
-          title: "От сообщества"
+          title: "Авторы уже играют в DUNK"
+          views_label: "просмотров роликов авторов"
           prompt: "Публикуйте клипы DUNK с тегом #DUNKthegame — возможно, мы покажем их здесь."
           prev: "Предыдущие клипы"
           next: "Следующие клипы"
@@ -810,6 +817,7 @@ localization:
           language: Язык
           menu: Меню
           sections:
+            creators: "Авторы"
             announcement: "Анонс"
             factsheet: Информация об игре
             description: Описание
@@ -1041,7 +1049,8 @@ localization:
           youtube: "YouTubeで見る"
           wishlist_prompt: "気に入ったら、SteamでDUNKをウィッシュリストに追加しよう。"
         community:
-          title: "コミュニティから"
+          title: "クリエイターがDUNKをプレイ中"
+          views_label: "クリエイター動画の総再生数"
           prompt: "#DUNKthegame を付けてDUNKのクリップを投稿すると、ここで紹介されるかも。"
           prev: "前のクリップ"
           next: "次のクリップ"
@@ -1090,6 +1099,7 @@ localization:
           language: 言語
           menu: メニュー
           sections:
+            creators: "クリエイター"
             announcement: "アナウンス"
             factsheet: 基本情報
             description: 説明
@@ -1312,7 +1322,8 @@ localization:
           youtube: "在 YouTube 上观看"
           wishlist_prompt: "喜欢吗？在 Steam 上将友尽大扣篮加入愿望单。"
         community:
-          title: "来自社区"
+          title: "创作者们正在玩友尽大扣篮"
+          views_label: "创作者视频总播放量"
           prompt: "带上 #DUNKthegame 发布你的友尽大扣篮片段，说不定会出现在这里。"
           prev: "上一组片段"
           next: "下一组片段"
@@ -1361,6 +1372,7 @@ localization:
           language: 语言
           menu: 菜单
           sections:
+            creators: "创作者"
             announcement: "公告"
             factsheet: 游戏信息
             description: 游戏介绍
@@ -1610,7 +1622,8 @@ localization:
           youtube: "Auf YouTube ansehen"
           wishlist_prompt: "Gefällt dir? Setz DUNK auf deine Steam-Wunschliste."
         community:
-          title: "Aus der Community"
+          title: "Creator spielen DUNK"
+          views_label: "Aufrufe auf Creator-Videos"
           prompt: "Poste deine DUNK-Clips mit #DUNKthegame – vielleicht zeigen wir sie hier."
           prev: "Vorherige Clips"
           next: "Nächste Clips"
@@ -1659,6 +1672,7 @@ localization:
           language: Sprache
           menu: Menü
           sections:
+            creators: "Creator"
             announcement: "Ankündigung"
             factsheet: Datenblatt
             description: Beschreibung
@@ -1921,7 +1935,8 @@ localization:
           youtube: "Voir sur YouTube"
           wishlist_prompt: "Ça vous plaît ? Ajoutez DUNK à votre liste de souhaits Steam."
         community:
-          title: "La communauté"
+          title: "Les créateurs jouent à DUNK"
+          views_label: "vues sur les vidéos de créateurs"
           prompt: "Publiez vos clips de DUNK avec #DUNKthegame : ils pourraient apparaître ici."
           prev: "Clips précédents"
           next: "Clips suivants"
@@ -1970,6 +1985,7 @@ localization:
           language: Langue
           menu: Menu
           sections:
+            creators: "Créateurs"
             announcement: "Annonce"
             factsheet: Fiche technique
             description: Description
@@ -2233,7 +2249,8 @@ localization:
           youtube: "Ver no YouTube"
           wishlist_prompt: "Gostou? Adicione DUNK à sua lista de desejos na Steam."
         community:
-          title: "Da comunidade"
+          title: "Criadores já estão jogando DUNK"
+          views_label: "visualizações em vídeos de criadores"
           prompt: "Publique seus clipes de DUNK com #DUNKthegame e eles podem aparecer aqui."
           prev: "Clipes anteriores"
           next: "Próximos clipes"
@@ -2282,6 +2299,7 @@ localization:
           language: Idioma
           menu: Menu
           sections:
+            creators: "Criadores"
             announcement: "Anúncio"
             factsheet: Ficha técnica
             description: Descrição

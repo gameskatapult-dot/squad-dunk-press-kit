@@ -10,6 +10,7 @@ const outputPath = path.join(productDir, 'data.xml')
 
 const allowedSectionIds = new Set([
   'announcement',
+  'creators',
   'factsheet',
   'description',
   'features',
@@ -431,6 +432,9 @@ function createRenderSections (sections) {
       continue
     }
 
+    // Creators sits right after the trailer, so the hero partial renders it.
+    if (section.id === 'creators') continue
+
     output.push({ id: section.id })
   }
 
@@ -440,6 +444,7 @@ function createRenderSections (sections) {
 function createNavSections (sections) {
   const titles = {
     announcement: 'Announcement',
+    creators: 'Creators',
     factsheet: 'Factsheet',
     description: 'Description',
     features: 'Features',
@@ -452,6 +457,7 @@ function createNavSections (sections) {
 
   const hrefs = {
     announcement: '#announcement',
+    creators: '#creators',
     factsheet: '#factsheet',
     description: '#description',
     features: '#features',

@@ -116,6 +116,9 @@ html[lang="zh"] .topbar__brand img { height: 40px; }
 /* Community: hand-picked fan posts in a swipeable row. */
 .community { --clip-h: clamp(320px, 26vw, 380px); padding: clamp(56px, 7vw, 88px) 0; text-align: center; border-bottom: 1px solid var(--line); }
 .community .title { margin-bottom: 10px; }
+/* Press kit headline: the total reach of creator videos, big enough to read at a glance. */
+.community__total { display: flex; flex-direction: column; align-items: center; gap: 2px; margin: 0 0 32px; color: var(--soft); font-size: clamp(16px, 1.6vw, 19px); font-weight: 700; }
+.community__total strong { color: var(--ball); font: 800 clamp(52px, 7vw, 88px)/1 var(--display); letter-spacing: -.01em; }
 .community__prompt { margin: 0 0 28px; color: var(--soft); font-size: clamp(16px, 1.6vw, 19px); font-weight: 600; }
 .community__rail { display: flex; align-items: center; gap: 16px; margin: 0; padding: 0; overflow-x: auto; list-style: none; scrollbar-width: none; overscroll-behavior-x: contain; }
 .community__rail::-webkit-scrollbar { display: none; }

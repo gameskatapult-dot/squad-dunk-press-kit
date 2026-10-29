@@ -381,9 +381,13 @@
     if (!list) return
 
     let items = []
+    let listUrl = window.location.href
     try {
       const response = await fetch(section.dataset.src, { cache: 'no-cache' })
-      if (response.ok) items = await response.json()
+      if (response.ok) {
+        items = await response.json()
+        listUrl = response.url
+      }
     } catch (error) {}
     items = Array.isArray(items) ? items.filter(function (item) { return communityPlatforms[item.platform] && item.id }) : []
     if (!items.length) return
@@ -400,7 +404,7 @@
       start.className = 'community__start'
       start.setAttribute('aria-label', (item.title || platform.name) + ' — ' + item.author)
       start.setAttribute('data-analytics-event', 'Community Play')
-      const thumb = item.thumb || (platform.thumb && platform.thumb(item))
+      const thumb = item.thumb ? new URL(item.thumb, listUrl).href : (platform.thumb && platform.thumb(item))
       if (thumb) {
         const img = document.createElement('img')
         img.src = thumb
@@ -449,6 +453,15 @@
       li.appendChild(credit)
       list.appendChild(li)
     })
+    // Headline figure: every view added up, rounded down so it never overstates ("240K+").
+    const total = section.querySelector('[data-community-total]')
+    if (total) {
+      const sum = items.reduce(function (acc, item) { return acc + (item.views || 0) }, 0)
+      const unit = Math.pow(10, Math.max(0, String(Math.round(sum)).length - 2))
+      total.setAttribute('data-community-count', Math.floor(sum / unit) * unit)
+      total.setAttribute('data-community-suffix', '+')
+      total.appendChild(document.createElement('span'))
+    }
     section.hidden = false
     formatCommunityCounts()
     setupCommunityCarousel(list, section.querySelector('[data-community-viewport]') || list)
@@ -614,7 +627,7 @@
       format = { format: String }
     }
     document.querySelectorAll('[data-community-count]').forEach(function (stat) {
-      stat.lastChild.textContent = format.format(Number(stat.getAttribute('data-community-count')))
+      stat.lastChild.textContent = format.format(Number(stat.getAttribute('data-community-count'))) + (stat.getAttribute('data-community-suffix') || '')
     })
   }
 
