@@ -356,7 +356,7 @@
     instagram: {
       name: 'Instagram',
       url: function (item) { return 'https://www.instagram.com/reel/' + item.id + '/' },
-      embed: function (item) { return 'https://www.instagram.com/reel/' + item.id + '/embed' }
+      embed: function (item) { return 'https://www.instagram.com/reel/' + item.id + '/embed/' }
     }
   }
 
@@ -429,16 +429,7 @@
         stats.appendChild(communityStat(communityIcons.views, item.views))
         start.appendChild(stats)
       }
-      start.addEventListener('click', function () {
-        const frame = document.createElement('iframe')
-        frame.src = platform.embed(item)
-        frame.title = item.title || platform.name
-        frame.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen'
-        frame.allowFullscreen = true
-        frame.referrerPolicy = 'strict-origin-when-cross-origin'
-        media.innerHTML = ''
-        media.appendChild(frame)
-      })
+      start.addEventListener('click', function () { openCommunityPlayer(platform.embed(item), item.title || platform.name, start, item.platform) })
       media.appendChild(start)
 
       // Credit the creator and link to the original post.
@@ -469,84 +460,52 @@
     new MutationObserver(formatCommunityCounts).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] })
   }
 
-  // Endless drift: the cards are cloned once and the row scrolls slowly, wrapping at the halfway
-  // point. Arrows step one card at a time, the row swipes (touch) or drags (mouse) by hand, it
-  // pauses on hover/touch, and stops drifting once a clip is playing or for reduced motion.
+  // The most-viewed clip sits in the middle with the next ones on either side (2nd to its right,
+  // 3rd to its left, and so on), so the best clips are always in view. The row only sways a little
+  // around that spot; arrows step one card, and the row swipes (touch) or drags (mouse) by hand.
   function setupCommunityCarousel (list, viewport) {
     const prev = viewport.querySelector('[data-community-prev]')
     const next = viewport.querySelector('[data-community-next]')
+    const ranked = Array.from(list.children)
+    const left = ranked.filter(function (card, index) { return index > 0 && index % 2 === 0 }).reverse()
+    const right = ranked.filter(function (card, index) { return index % 2 === 1 })
+    left.concat([ranked[0]], right).forEach(function (card) { list.appendChild(card) })
+
     if (list.scrollWidth <= list.clientWidth + 1) {
       if (prev) prev.hidden = true
       if (next) next.hidden = true
       return
     }
+    setupCommunityDrag(list)
+    list.classList.add('is-swaying')
 
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const period = 9 // seconds for one sway back and forth
     function cardStep () {
-      return list.children[0].offsetWidth + parseFloat(getComputedStyle(list).columnGap || 16)
+      return ranked[0].offsetWidth + parseFloat(getComputedStyle(list).columnGap || 16)
     }
-    let loop = function () { return 0 }
-    setupCommunityDrag(list, function () { return loop() })
-
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      if (prev) prev.addEventListener('click', function () { list.scrollBy({ left: -cardStep(), behavior: 'smooth' }) })
-      if (next) next.addEventListener('click', function () { list.scrollBy({ left: cardStep(), behavior: 'smooth' }) })
-      return
+    function clamp (x) {
+      return Math.max(0, Math.min(list.scrollWidth - list.clientWidth, x))
     }
-
-    const originals = Array.from(list.children)
-    originals.forEach(function (item) {
-      const clone = item.cloneNode(true)
-      clone.setAttribute('aria-hidden', 'true')
-      clone.querySelectorAll('a, button').forEach(function (el) { el.tabIndex = -1 })
-      list.appendChild(clone)
-    })
-    // Clones lose their listeners, so playing goes through the original card's button.
-    list.addEventListener('click', function (event) {
-      const start = event.target.closest('.community__start')
-      if (!start || !start.closest('[aria-hidden="true"]')) return
-      const index = Array.from(list.children).indexOf(start.closest('li')) - originals.length
-      const original = originals[index] && originals[index].querySelector('.community__start')
-      if (!original) return
-      const clone = start.closest('li')
-      const offset = clone.offsetLeft - originals[index].offsetLeft
-      position -= offset
-      list.scrollLeft = position
-      original.click()
-    })
-    list.classList.add('is-looping')
-
-    const speed = 32 // px per second
-    let position = list.scrollLeft
+    let base = clamp(ranked[0].offsetLeft + ranked[0].offsetWidth / 2 - list.clientWidth / 2)
+    let position = base
     let target = null // where an arrow click is gliding to
-    let resumeAt = window.performance.now() + 4000 // the top clips hold still first; drifting also waits after the visitor moves the row
+    let phase = 0
     let paused = 0
-    let stopped = false
     let last = null
+    list.scrollLeft = base
 
-    // Distance from a card to its clone, so the wrap is seamless (gap included).
-    function loopWidth () {
-      return list.children[originals.length].offsetLeft - originals[0].offsetLeft
-    }
-    function wrap (half) {
-      if (position >= half) { position -= half; if (target !== null) target -= half }
-      if (position < 0) { position += half; if (target !== null) target += half }
-    }
     function go (direction) {
       if (target === null) position = list.scrollLeft
-      target = (target === null ? position : target) + direction * cardStep()
-      wrap(loopWidth())
-      resumeAt = window.performance.now() + 3000
+      base = clamp((target === null ? position : target) + direction * cardStep())
+      target = base
+      phase = 0
     }
-    loop = loopWidth
-    // Start one loop in, so the most-viewed clip sits clear of the faded left edge
-    // with the tail of the last clip peeking behind it.
-    position = loopWidth() - list.clientWidth * 0.06 - 8
-    list.scrollLeft = position
     if (prev) prev.addEventListener('click', function () { go(-1) })
     if (next) next.addEventListener('click', function () { go(1) })
 
     function hold () { paused++ }
-    function release () { paused = Math.max(0, paused - 1); resumeAt = window.performance.now() + 1200 }
+    function release () { paused = Math.max(0, paused - 1) }
     viewport.addEventListener('mouseenter', hold)
     viewport.addEventListener('mouseleave', release)
     list.addEventListener('touchstart', hold, { passive: true })
@@ -554,26 +513,21 @@
     viewport.addEventListener('focusin', hold)
     viewport.addEventListener('focusout', release)
     list.addEventListener('pointerdown', function () { target = null })
-    list.addEventListener('click', function (event) {
-      if (event.target.closest('.community__start')) stopped = true
-    })
 
     function step (time) {
-      const half = loopWidth()
       const dt = last === null ? 0 : Math.min(time - last, 100)
       if (target !== null) {
         position += (target - position) * Math.min(1, dt / 110)
-        if (Math.abs(target - position) < 0.5) { position = target; target = null }
-        wrap(half)
+        if (Math.abs(target - position) < 0.5) { position = target; target = null; phase = 0 }
         list.scrollLeft = position
-      } else if (!paused && !stopped && !document.hidden && time >= resumeAt) {
-        position += speed * dt / 1000
-        wrap(half)
-        list.scrollLeft = position
+      } else if (!paused && !reduced && !document.hidden && !document.body.classList.contains('has-community-player')) {
+        phase += dt / 1000
+        const amplitude = Math.min(36, cardStep() * 0.2)
+        list.scrollLeft = clamp(base + amplitude * Math.sin(phase / period * 2 * Math.PI))
       } else {
-        // Moved by hand: follow it, and jump back to the matching original past the clones.
-        position = list.scrollLeft
-        if (position >= half) { position -= half; list.scrollLeft = position }
+        // Held or moved by hand: sway again from wherever the row is now.
+        base = list.scrollLeft
+        phase = 0
       }
       last = time
       window.requestAnimationFrame(step)
@@ -581,8 +535,49 @@
     window.requestAnimationFrame(step)
   }
 
+  // On-page player: a dimmed overlay with the clip at phone shape, so visitors never leave the page.
+  let communityPlayer = null
+  function openCommunityPlayer (src, title, opener, platform) {
+    if (!communityPlayer) {
+      const overlay = document.createElement('div')
+      overlay.className = 'community-player'
+      overlay.hidden = true
+      overlay.setAttribute('role', 'dialog')
+      overlay.setAttribute('aria-modal', 'true')
+      overlay.innerHTML = '<div class="community-player__frame"></div>' +
+        '<button class="community-player__close" type="button" data-l10n-aria-label="ui.landing.close" aria-label="Close video">' +
+        '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.3 5.7 12 12l6.3 6.3-1.4 1.4L10.6 13.4 4.3 19.7l-1.4-1.4L9.2 12 2.9 5.7l1.4-1.4 6.3 6.3 6.3-6.3z"/></svg></button>'
+      document.body.appendChild(overlay)
+      const close = function () {
+        overlay.hidden = true
+        overlay.querySelector('.community-player__frame').innerHTML = ''
+        document.body.classList.remove('has-community-player')
+        if (communityPlayer.opener) communityPlayer.opener.focus()
+      }
+      overlay.addEventListener('click', function (event) { if (event.target === overlay) close() })
+      overlay.querySelector('.community-player__close').addEventListener('click', close)
+      document.addEventListener('keydown', function (event) { if (event.key === 'Escape' && !overlay.hidden) close() })
+      communityPlayer = { overlay: overlay, opener: null }
+      localizePage(overlay)
+    }
+    const frame = document.createElement('iframe')
+    frame.src = src
+    frame.title = title
+    frame.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen'
+    frame.allowFullscreen = true
+    frame.referrerPolicy = 'strict-origin-when-cross-origin'
+    communityPlayer.opener = opener
+    const box = communityPlayer.overlay.querySelector('.community-player__frame')
+    box.setAttribute('data-platform', platform)
+    box.appendChild(frame)
+    communityPlayer.overlay.setAttribute('aria-label', title)
+    communityPlayer.overlay.hidden = false
+    document.body.classList.add('has-community-player')
+    communityPlayer.overlay.querySelector('.community-player__close').focus()
+  }
+
   // Mouse users can grab the row and drag it; a drag never counts as a click on a card.
-  function setupCommunityDrag (list, loopWidth) {
+  function setupCommunityDrag (list) {
     let startX = 0
     let startScroll = 0
     let dragging = false
@@ -603,13 +598,7 @@
         moved = true
         list.classList.add('is-dragging')
       }
-      if (!moved) return
-      // On a looping row, keep dragging past either end by jumping a whole loop.
-      let x = startScroll - dx
-      const half = loopWidth()
-      if (half && x < 0) { startScroll += half; x += half }
-      if (half && x >= half) { startScroll -= half; x -= half }
-      list.scrollLeft = x
+      if (moved) list.scrollLeft = startScroll - dx
     })
     window.addEventListener('pointerup', function () {
       dragging = false

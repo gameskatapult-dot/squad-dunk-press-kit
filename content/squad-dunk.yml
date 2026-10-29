@@ -7,13 +7,13 @@ analytics:
   goatcounter_endpoint: https://katapultgames.goatcounter.com/count
 
 sections:
-  - id: creators
-    enabled: true
   - id: factsheet
     enabled: true
   - id: description
     enabled: true
   - id: features
+    enabled: true
+  - id: creators
     enabled: true
   - id: media
     enabled: true

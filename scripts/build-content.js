@@ -432,9 +432,6 @@ function createRenderSections (sections) {
       continue
     }
 
-    // Creators sits right after the trailer, so the hero partial renders it.
-    if (section.id === 'creators') continue
-
     output.push({ id: section.id })
   }
 
