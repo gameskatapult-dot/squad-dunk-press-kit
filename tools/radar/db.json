@@ -1274,7 +1274,7 @@
    "date": "2026-10-28",
    "views": 0,
    "short": true,
-   "status": "en-sitio",
+   "status": "descartado",
    "reason": "DUNK + palabra de juego",
    "source": "búsqueda: basketball on the moon game",
    "paid": true,
@@ -1346,7 +1346,7 @@
    "date": "2026-10-28",
    "views": 0,
    "short": true,
-   "status": "en-sitio",
+   "status": "descartado",
    "reason": "DUNK + palabra de juego",
    "source": "canal: @mrgamingclipzdaily",
    "paid": true,
@@ -4261,27 +4261,6 @@
  },
  "runs": [
   {
-   "date": "2026-10-29T12:22:47.435Z",
-   "command": "check",
-   "found": 4,
-   "requests": 6,
-   "kb": 2345
-  },
-  {
-   "date": "2026-10-29T12:22:52.788Z",
-   "command": "set",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-10-29T12:22:53.031Z",
-   "command": "set",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
    "date": "2026-10-29T12:22:53.232Z",
    "command": "set",
    "found": 0,
@@ -4606,6 +4585,27 @@
   {
    "date": "2026-10-29T14:16:43.894Z",
    "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-10-29T14:19:39.549Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-10-29T14:19:39.740Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-10-29T14:19:40.067Z",
+   "command": "site",
    "found": 0,
    "requests": 0,
    "kb": 0
