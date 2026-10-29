@@ -1,12 +1,12 @@
 # Radar DUNK — 2026-10-29
 
-84 posts · 1.0 M visitas en total · 57 creadores
+85 posts · 1.0 M visitas en total · 57 creadores
 
 | Origen | Posts | Visitas |
 |---|---:|---:|
 | Jestr | 0 | 0 |
 | orgánico | 0 | 0 |
-| sin marcar | 84 | 1.0 M |
+| sin marcar | 85 | 1.0 M |
 
 ## Para revisar
 
@@ -30,6 +30,7 @@
 | instagram | [@tayancruz](https://www.instagram.com/tayancruz/reel/DfCncNhD-QN/) | Nesse basquete dá pra derrubar seu amigo no ar | 52 mil |  | 2026-10-28 | ? · pagado | en-sitio |
 | youtube | [@WatermelonGamesTV](https://www.youtube.com/watch?v=is17ilyYfes) | 3 free co-op demos or playtests to play | 20 mil |  | 2026-10-28 | ? · pagado | en-sitio |
 | instagram | [@yeta.exe](https://www.instagram.com/yeta.exe/reel/DfCm0m1Bs_j/) | 1v1s boutta go CRAZY | 8.702 |  | 2026-10-28 | ? · pagado | en-sitio |
+| instagram | [@prestonxdc](https://www.instagram.com/prestonxdc/reel/DfDb7nvFJT9/) | Most Fun I've had Playing a Basketball Game #gaming #dunk | 8.442 |  | 2026-10-28 | ? · pagado | en-sitio |
 | instagram | [@watermelongamestv](https://www.instagram.com/watermelongamestv/reel/DfCmKP-R9XJ/) | 3 FREE co-op demos or playtests to play | 7.511 |  | 2026-10-28 | ? · pagado | en-sitio |
 | instagram | [@kroniques](https://www.instagram.com/kroniques/reel/DfC3Z6AhFcs/) | DUNK : le jeu de basket multijoueur en vue FPS où tu peux dunker sur l | 7.455 |  | 2026-10-28 | ? · pagado | en-sitio |
 | tiktok | [@misly.official](https://www.tiktok.com/@misly.official/video/7701800123009092886) | 3 CO-OP games to play with your friends 🎮 Pull off ridiculous physics | 5.632 |  | 2026-10-28 | ? · pagado | en-sitio |
@@ -138,3 +139,4 @@
 - [@tumbaranchoyt](https://www.instagram.com/p/DfDkTBPxX14/) — 3.129 (último dato 2026-10-29)
 - [@gemgamingnetwork](https://www.instagram.com/p/DfCmbuwg29f/) — 1.274 (último dato 2026-10-29)
 - [@chewyradar](https://www.instagram.com/p/DfCmVDaS4z3/) — 501 (último dato 2026-10-29)
+- [@prestonxdc](https://www.instagram.com/prestonxdc/reel/DfDb7nvFJT9/) — 8.442 (último dato 2026-10-29)
