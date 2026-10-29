@@ -45,6 +45,7 @@ One delegated listener sends one event per activation: a left click, Enter, or a
 | `Trailer Play` | Plays the embedded trailer |
 | `Trailer YouTube Click` | "Watch on YouTube" under the trailer |
 | `Trailer Click` | Trailer / pre-view links in the factsheet |
+| `Press Article Click` | A card in the Press section (opens the outlet's article) |
 | `Language Changed` | Visitor picks a language (the language is in the title, but GoatCounter only shows the latest title per path) |
 
 Until 2026-10-29 every Steam button sent a single `Steam Click` event. Adding up the `Steam Click: …` rows gives the same total.
