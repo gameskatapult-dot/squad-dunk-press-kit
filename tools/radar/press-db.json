@@ -266,6 +266,13 @@
    "found": 0,
    "requests": 0,
    "kb": 0
+  },
+  {
+   "date": "2026-10-29T14:11:53.201Z",
+   "command": "report",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
   }
  ]
 }

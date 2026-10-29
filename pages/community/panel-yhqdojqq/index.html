@@ -110,6 +110,34 @@
 
 <p class="dim">"views" adds up the post and its copies on other networks; "this post" is that link alone. Δ last = change between the radar's last two readings. Paid = #ad/sponsor in the caption or the platform label (Paid partnership / Includes paid promotion); "no signal" doesn't guarantee it's organic. Click a row for details.</p>
 
+<h1 id="press" style="margin-top:28px">DUNK / press radar <span class="dim" id="pUpdated"></span></h1>
+<div class="bar">
+  <input type="search" id="pq" placeholder="search outlet or headline">
+  <label>status
+    <select id="pStatus"><option value="">all</option><option value="en-sitio">on the site</option><option value="pending">pending (new/review/approved)</option><option value="descartado">rejected</option></select>
+  </label>
+  <label>language <select id="pLang"><option value="">all</option></select></label>
+</div>
+<div class="bar stats" id="pStats"></div>
+<div class="wrap">
+<table id="pt">
+  <thead><tr>
+    <th data-k="i" class="num">#</th>
+    <th data-k="date">published</th>
+    <th data-k="outlet">outlet</th>
+    <th data-k="lang">lang</th>
+    <th data-k="title">headline</th>
+    <th data-k="status">status</th>
+    <th data-k="reason">why</th>
+    <th data-k="source">found by</th>
+    <th data-k="firstSeen">found</th>
+    <th data-k="id">id</th>
+  </tr></thead>
+  <tbody></tbody>
+</table>
+</div>
+<p class="dim">Articles from Google News, Bing News and the outlets on DUNK's Steam news page. "new" = the page names Katapult, the Steam app or the site, and the daily run publishes it; "review" = says DUNK and talks about a basketball game, waiting for a person. To decide: node tools/radar/press.mjs set &lt;id&gt; aprobado|descartado, then press.mjs site. Click a row for details.</p>
+
 <script>
 (function () {
   var state = { posts: [], sortKey: 'total', dir: 'desc', open: {} }
@@ -488,6 +516,85 @@
     $('updated').textContent = '· radar ' + when(res[0].updated, true)
     render()
   })
+})()
+
+// ---------- press articles (press.json, written by tools/radar/press.mjs) ----------
+;(function () {
+  var state = { articles: [], sortKey: 'date', dir: 'desc', open: {} }
+  var $ = function (id) { return document.getElementById(id) }
+  var STATUS = { nuevo: 'new', revisar: 'review', aprobado: 'approved', descartado: 'rejected', 'en-sitio': 'on site' }
+  var REASON = { 'noticias de Steam': 'on the Steam news page', 'agregado a mano': 'added by hand', 'DUNK + basket + juego': 'DUNK + basketball + game words', 'solo el trailer': 'only the trailer' }
+  var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c] }) }
+  var why = function (r) { return REASON[r] || (r ? 'names "' + r + '"' : '—') }
+  var source = function (s) { return (s || '').replace(/^búsqueda: /, '').replace(/^link$/, 'link checked by hand').replace(/^manual$/, 'by hand') }
+
+  function visible () {
+    var q = $('pq').value.trim().toLowerCase(), st = $('pStatus').value, lang = $('pLang').value
+    return state.articles.filter(function (a) {
+      if (st === 'pending' && ['nuevo', 'revisar', 'aprobado'].indexOf(a.status) < 0) return false
+      if (st && st !== 'pending' && a.status !== st) return false
+      if (lang && a.lang !== lang) return false
+      if (q && (a.outlet + ' ' + a.title + ' ' + a.desc).toLowerCase().indexOf(q) < 0) return false
+      return true
+    })
+  }
+
+  function render () {
+    var k = state.sortKey, m = state.dir === 'asc' ? 1 : -1
+    var list = visible().sort(function (a, b) { return String(a[k] || '').localeCompare(String(b[k] || '')) * m })
+    var html = ''
+    list.forEach(function (a, i) {
+      html += '<tr class="main" data-id="' + esc(a.id) + '">' +
+        '<td class="num">' + (i + 1) + '</td>' +
+        '<td>' + esc(a.date) + '</td>' +
+        '<td>' + esc(a.outlet) + '</td>' +
+        '<td>' + esc((a.lang || '—').toUpperCase()) + '</td>' +
+        '<td class="t"><a href="' + esc(a.url) + '" target="_blank" rel="noopener noreferrer" lang="' + esc(a.lang || '') + '">' + esc(a.title) + '</a></td>' +
+        '<td>' + esc(STATUS[a.status] || a.status) + '</td>' +
+        '<td>' + esc(why(a.reason)) + '</td>' +
+        '<td>' + esc(source(a.source)) + '</td>' +
+        '<td>' + esc(a.firstSeen) + '</td>' +
+        '<td>' + esc(a.id) + '</td></tr>'
+      if (state.open[a.id]) {
+        html += '<tr class="detail"><td colspan="10"><div class="detail-grid">' + (a.thumb ? '<img src="../' + esc(a.thumb) + '" alt="">' : '<span></span>') +
+          '<div><b>' + esc(a.outlet) + '</b> · ' + esc(a.url) + '<br><br>' + esc(a.desc || '(no summary)') + '</div></div></td></tr>'
+      }
+    })
+    document.querySelector('#pt tbody').innerHTML = html || '<tr><td colspan="10" class="dim">nothing</td></tr>'
+    document.querySelectorAll('#pt th').forEach(function (th) {
+      th.removeAttribute('data-dir')
+      if (th.dataset.k === k) th.setAttribute('data-dir', state.dir)
+    })
+    var count = function (s) { return state.articles.filter(function (a) { return a.status === s }).length }
+    $('pStats').innerHTML = '<span><b>' + list.length + '</b> shown</span><span><b>' + count('en-sitio') + '</b> on the site</span>' +
+      '<span><b>' + count('revisar') + '</b> to review</span><span><b>' + new Set(state.articles.map(function (a) { return a.lang })).size + '</b> languages</span>'
+  }
+
+  document.querySelectorAll('#pt th').forEach(function (th) {
+    th.addEventListener('click', function () {
+      if (th.dataset.k === 'i') return
+      state.dir = state.sortKey === th.dataset.k && state.dir === 'desc' ? 'asc' : 'desc'
+      state.sortKey = th.dataset.k
+      render()
+    })
+  })
+  document.querySelector('#pt tbody').addEventListener('click', function (e) {
+    if (e.target.closest('a')) return
+    var tr = e.target.closest('tr.main')
+    if (!tr) return
+    state.open[tr.dataset.id] = !state.open[tr.dataset.id]
+    render()
+  })
+  ;['pq', 'pStatus', 'pLang'].forEach(function (id) { $(id).addEventListener('input', render) })
+
+  fetch('press.json?t=' + Date.now()).then(function (r) { return r.json() }).then(function (data) {
+    state.articles = data.articles
+    Array.from(new Set(data.articles.map(function (a) { return a.lang }).filter(Boolean))).sort().forEach(function (l) {
+      $('pLang').insertAdjacentHTML('beforeend', '<option value="' + esc(l) + '">' + esc(l.toUpperCase()) + '</option>')
+    })
+    $('pUpdated').textContent = '· ' + data.searches + ' searches · updated ' + new Date(data.updated).toLocaleString('en-GB', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' })
+    render()
+  }).catch(function () { document.querySelector('#pt tbody').innerHTML = '<tr><td colspan="10" class="dim">no press data yet</td></tr>' })
 })()
 </script>
 </body>

@@ -11,6 +11,8 @@ const DIR = path.dirname(fileURLToPath(import.meta.url))
 const SITE_DIR = path.join(DIR, '../../pages/community')
 const SITE_JSON = path.join(SITE_DIR, 'press.json')
 const THUMBS = path.join(SITE_DIR, 'press')
+// Unlisted team panel (not linked anywhere on the site).
+const PANEL_JSON = path.join(SITE_DIR, 'panel-yhqdojqq/press.json')
 const DB = path.join(DIR, 'press-db.json')
 
 const config = JSON.parse(fs.readFileSync(path.join(DIR, 'config.json'), 'utf8'))
@@ -362,6 +364,14 @@ function writeReport () {
     '## En el sitio', '', head, ...all.filter(a => a.status === 'en-sitio').map(row), ''
   ].join('\n')
   fs.writeFileSync(path.join(DIR, 'press-report.md'), md)
+  writePanel(all)
+}
+
+// Every article the radar kept, for the team panel, including those waiting for review.
+function writePanel (all) {
+  if (!fs.existsSync(path.dirname(PANEL_JSON))) return
+  const articles = all.map(a => ({ id: a.id, date: a.date, outlet: a.outlet, lang: a.lang || null, title: a.title, url: a.url, desc: a.desc || '', status: a.status, reason: a.reason, source: a.source, firstSeen: a.firstSeen, thumb: a.thumb || null }))
+  fs.writeFileSync(PANEL_JSON, JSON.stringify({ updated: new Date().toISOString(), searches: config.press.google.length + config.press.bing.length + 1, articles }) + '\n')
 }
 
 function finish (command, found) {
