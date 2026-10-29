@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -41,22 +41,22 @@
 </style>
 </head>
 <body>
-<h1>DUNK / radar de posts <span class="dim" id="updated"></span></h1>
+<h1>DUNK / post radar <span class="dim" id="updated"></span></h1>
 
 <div class="bar">
-  <input type="search" id="q" placeholder="buscar creador o texto">
-  <label>red
-    <select id="platform"><option value="">todas</option><option>youtube</option><option>tiktok</option><option>instagram</option><option>bilibili</option></select>
+  <input type="search" id="q" placeholder="search creator or text">
+  <label>network
+    <select id="platform"><option value="">all</option><option>youtube</option><option>tiktok</option><option>instagram</option><option>bilibili</option></select>
   </label>
-  <label>pago
-    <select id="paid"><option value="">todos</option><option value="1">pagados</option><option value="0">sin señal de pago</option></select>
+  <label>paid
+    <select id="paid"><option value="">all</option><option value="1">paid</option><option value="0">no paid signal</option></select>
   </label>
-  <label>estado
-    <select id="status"><option value="site">en el carrusel</option><option value="">todos</option><option value="pending">pendientes (nuevo/revisar/aprobado)</option><option value="descartado">descartados</option></select>
+  <label>status
+    <select id="status"><option value="site">in carousel</option><option value="">all</option><option value="pending">pending (new/review/approved)</option><option value="descartado">rejected</option></select>
   </label>
-  <label><input type="checkbox" id="copies"> mostrar copias</label>
-  <label>hora
-    <select id="tz"><option value="Europe/Dublin">Irlanda</option><option value="America/Santiago">Chile</option><option value="UTC">UTC</option></select>
+  <label><input type="checkbox" id="copies"> show copies</label>
+  <label>time
+    <select id="tz"><option value="Europe/Dublin">Ireland</option><option value="America/Santiago">Chile</option><option value="UTC">UTC</option></select>
   </label>
   <button id="csv">CSV</button>
 </div>
@@ -66,37 +66,40 @@
 <table id="t">
   <thead><tr>
     <th data-k="i" class="num">#</th>
-    <th data-k="uploaded">subida</th>
-    <th data-k="age" class="num">hace</th>
-    <th data-k="platform">red</th>
-    <th data-k="author">creador</th>
-    <th data-k="title">título</th>
-    <th data-k="total" class="num">visitas</th>
-    <th data-k="views" class="num">este post</th>
+    <th data-k="uploaded">uploaded</th>
+    <th data-k="age" class="num">age</th>
+    <th data-k="platform">network</th>
+    <th data-k="author">creator</th>
+    <th data-k="title">title</th>
+    <th data-k="total" class="num">views</th>
+    <th data-k="views" class="num">this post</th>
     <th data-k="likes" class="num">likes</th>
     <th data-k="likeRate" class="num">like%</th>
-    <th data-k="perHour" class="num">vis/h</th>
-    <th data-k="delta" class="num">Δ último</th>
-    <th data-k="paid">pago</th>
-    <th data-k="status">estado</th>
+    <th data-k="perHour" class="num">views/h</th>
+    <th data-k="delta" class="num">Δ last</th>
+    <th data-k="paid">paid</th>
+    <th data-k="status">status</th>
   </tr></thead>
   <tbody></tbody>
 </table>
 </div>
 
-<div class="sub">Por red (según filtros)</div>
-<div class="wrap"><table class="small" id="byPlatform"><thead><tr><th>red</th><th class="num">posts</th><th class="num">visitas</th><th class="num">pagados</th><th class="num">visitas pagadas</th><th class="num">sin señal</th><th class="num">visitas sin señal</th></tr></thead><tbody></tbody></table></div>
+<div class="sub">By network (filtered)</div>
+<div class="wrap"><table class="small" id="byPlatform"><thead><tr><th>network</th><th class="num">posts</th><th class="num">views</th><th class="num">paid</th><th class="num">paid views</th><th class="num">no signal</th><th class="num">no-signal views</th></tr></thead><tbody></tbody></table></div>
 
-<div class="sub">Por día de subida (según filtros, hora elegida)</div>
-<div class="wrap"><table class="small" id="byDay"><thead><tr><th>día</th><th class="num">posts</th><th class="num">visitas</th></tr></thead><tbody></tbody></table></div>
+<div class="sub">By upload day (filtered, selected time zone)</div>
+<div class="wrap"><table class="small" id="byDay"><thead><tr><th>day</th><th class="num">posts</th><th class="num">views</th></tr></thead><tbody></tbody></table></div>
 
-<p class="dim">"visitas" suma el post y sus copias en otras redes; "este post" es solo ese link. Δ último = cambio entre las dos últimas mediciones del radar. Pago = #ad/sponsor en el texto o etiqueta oficial (Paid partnership / Includes paid promotion); "sin señal" no garantiza que sea orgánico. Clic en una fila para ver detalles.</p>
+<p class="dim">"views" adds up the post and its copies on other networks; "this post" is that link alone. Δ last = change between the radar's last two readings. Paid = #ad/sponsor in the caption or the platform label (Paid partnership / Includes paid promotion); "no signal" doesn't guarantee it's organic. Click a row for details.</p>
 
 <script>
 (function () {
   var state = { posts: [], sortKey: 'total', dir: 'desc', open: {} }
   var $ = function (id) { return document.getElementById(id) }
-  var fmt = function (n) { return n == null ? '—' : Number(n).toLocaleString('es-CL') }
+  var STATUS = { nuevo: 'new', revisar: 'review', aprobado: 'approved', descartado: 'rejected', 'en-sitio': 'carousel' }
+  var REASON = { 'ya estaba en el sitio': 'already on the site', 'DUNK + palabra de juego': 'DUNK + game word', 'dunk + palabra de juego': 'dunk + game word', 'revisado a mano': 'checked by hand', 'creador que ya habló de DUNK': 'creator who covered DUNK before', 'agregado a mano': 'added by hand', 'trailer oficial re-subido (China)': 'official trailer re-upload (China)', 'video horizontal': 'horizontal video' }
+  var ORIGIN = { 'orgánico': 'organic', '?': 'unmarked' }
+  var fmt = function (n) { return n == null ? '—' : Number(n).toLocaleString('en-US') }
   var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c] }) }
 
   function when (iso, withTime) {
@@ -104,7 +107,7 @@
     var d = new Date(iso.length === 10 ? iso + 'T12:00:00Z' : iso)
     var opts = { timeZone: $('tz').value, day: '2-digit', month: '2-digit' }
     if (withTime && iso.length > 10) { opts.hour = '2-digit'; opts.minute = '2-digit'; opts.hour12 = false }
-    return d.toLocaleString('es-CL', opts).replace(',', '')
+    return d.toLocaleString('en-GB', opts).replace(',', '')
   }
   function dayKey (iso) {
     if (!iso) return '—'
@@ -187,15 +190,15 @@
       '<td class="num">' + ago(p.uploaded) + '</td>' +
       '<td>' + esc(nets) + '</td>' +
       '<td>' + esc(p.author) + '</td>' +
-      '<td class="t"><a href="' + esc(p.url) + '" target="_blank" rel="noopener noreferrer">' + esc(p.title || '(sin título)') + '</a></td>' +
+      '<td class="t"><a href="' + esc(p.url) + '" target="_blank" rel="noopener noreferrer">' + esc(p.title || '(no title)') + '</a></td>' +
       '<td class="num">' + (isCopy ? '' : fmt(p.total)) + '</td>' +
       '<td class="num">' + fmt(p.views) + '</td>' +
       '<td class="num">' + fmt(p.likes) + '</td>' +
       '<td class="num">' + (p.likeRate == null ? '—' : p.likeRate + '%') + '</td>' +
       '<td class="num">' + fmt(p.perHour) + '</td>' +
       '<td class="num">' + (p.delta ? '+' + fmt(p.delta) : '—') + '</td>' +
-      '<td>' + (paid ? '<span class="paid">pagado</span>' : '<span class="org">sin señal</span>') + '</td>' +
-      '<td>' + esc(p.onSite ? (p.duplicateOf ? 'copia' : 'carrusel') : p.status) + '</td>' +
+      '<td>' + (paid ? '<span class="paid">paid</span>' : '<span class="org">no signal</span>') + '</td>' +
+      '<td>' + esc(p.onSite ? (p.duplicateOf ? 'copy' : 'carousel') : (STATUS[p.status] || p.status)) + '</td>' +
       '</tr>'
   }
 
@@ -207,9 +210,9 @@
     var img = p.thumb ? '<img src="../' + esc(p.thumb) + '" alt="">' : (p.platform === 'youtube' ? '<img src="https://i.ytimg.com/vi/' + esc(p.id) + '/hqdefault.jpg" alt="">' : '<span></span>')
     return '<tr class="detail"><td colspan="14"><div class="detail-grid">' + img + '<div>' +
       '<b>' + esc(p.author) + '</b> · ' + esc(p.platform) + ' · id ' + esc(p.id) + '<br>' +
-      'subido: ' + esc(p.uploaded || '—') + ' · detectado: ' + esc(p.firstSeen || '—') + ' · origen: ' + esc(p.origin) + '<br>' +
-      'pago: ' + (p.paid ? 'sí' + (p.paidLabel ? ' (' + esc(p.paidLabel) + ')' : ' (texto)') : 'sin señal') +
-      (p.reason ? ' · motivo: ' + esc(p.reason) : '') + '<br><br>' +
+      'uploaded: ' + esc(p.uploaded || '—') + ' · first seen: ' + esc(p.firstSeen || '—') + ' · origin: ' + esc(ORIGIN[p.origin] || p.origin) + '<br>' +
+      'paid: ' + (p.paid ? 'yes' + (p.paidLabel ? ' (' + esc(p.paidLabel) + ')' : ' (caption)') : 'no signal') +
+      (p.reason ? ' · reason: ' + esc(REASON[p.reason] || p.reason) : '') + '<br><br>' +
       esc(p.desc || p.title) + '<br><br><span class="hist">' + hist + '</span>' +
       '</div></div></td></tr>'
   }
@@ -222,7 +225,7 @@
       html += row(p, i, showCopies && !!p.duplicateOf)
       if (state.open[p.id]) html += detail(p)
     })
-    document.querySelector('#t tbody').innerHTML = html || '<tr><td colspan="14" class="dim">nada</td></tr>'
+    document.querySelector('#t tbody').innerHTML = html || '<tr><td colspan="14" class="dim">nothing</td></tr>'
     document.querySelectorAll('#t th').forEach(function (th) {
       th.removeAttribute('data-dir')
       if (th.dataset.k === state.sortKey) th.setAttribute('data-dir', state.dir)
@@ -233,9 +236,9 @@
     list.forEach(function (p) { flat.push(p); if (!showCopies) flat = flat.concat(p.copies) })
     var sum = function (l) { return l.reduce(function (s, p) { return s + (p.views || 0) }, 0) }
     var paid = flat.filter(function (p) { return p.paid })
-    $('stats').innerHTML = '<span><b>' + list.length + '</b> filas</span><span><b>' + flat.length + '</b> posts</span><span><b>' + fmt(sum(flat)) + '</b> visitas</span>' +
-      '<span class="paid">' + fmt(sum(paid)) + ' pagadas</span><span class="org">' + fmt(sum(flat) - sum(paid)) + ' sin señal</span>' +
-      '<span><b>' + new Set(flat.map(function (p) { return p.author.toLowerCase().replace(/[^a-z0-9]/g, '') })).size + '</b> cuentas</span>'
+    $('stats').innerHTML = '<span><b>' + list.length + '</b> rows</span><span><b>' + flat.length + '</b> posts</span><span><b>' + fmt(sum(flat)) + '</b> views</span>' +
+      '<span class="paid">' + fmt(sum(paid)) + ' paid</span><span class="org">' + fmt(sum(flat) - sum(paid)) + ' no signal</span>' +
+      '<span><b>' + new Set(flat.map(function (p) { return p.author.toLowerCase().replace(/[^a-z0-9]/g, '') })).size + '</b> accounts</span>'
 
     var by = {}
     flat.forEach(function (p) {

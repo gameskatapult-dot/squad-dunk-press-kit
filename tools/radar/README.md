@@ -78,6 +78,6 @@ Reglas del carrusel (Matías, 29/10):
 
 ## Panel del equipo
 
-`squaddunk.com/community/panel-yhqdojqq/` es una tabla técnica con todos los posts: hora de subida (Irlanda, Chile o UTC), visitas sumando copias, likes, visitas por hora, pago, estado y la historia de visitas. Se ordena por cualquier columna y exporta CSV.
+`squaddunk.com/community/panel-yhqdojqq/` (en inglés) es una tabla técnica con todos los posts: hora de subida (Irlanda, Chile o UTC), visitas sumando copias, likes, visitas por hora, pago, estado y la historia de visitas. Se ordena por cualquier columna y exporta CSV.
 
 No está enlazada en el sitio y tiene `noindex`, pero **no tiene contraseña**: la ve cualquiera que tenga el link (GitHub Pages no permite más, y el repo es público). Cada comando del radar regenera `data.json`; las visitas más frescas las toma de `community.json`.
