@@ -464,12 +464,15 @@ async function site () {
     // The carousel only shows vertical clips. Real Shorts open at /shorts/; other videos redirect.
     if (p.platform === 'youtube') {
       // SOCS=CAI answers the cookie-consent prompt (rejecting cookies), which otherwise redirects every request.
-      if ((await fetch('https://www.youtube.com/shorts/' + p.id, { headers: { 'user-agent': UA, cookie: 'SOCS=CAI' }, redirect: 'manual' })).status !== 200) {
+      const res = await fetch('https://www.youtube.com/shorts/' + p.id, { headers: { 'user-agent': UA, cookie: 'SOCS=CAI' }, redirect: 'manual' })
+      if (res.status !== 200) {
         p.status = 'descartado'
         p.reason = 'video horizontal'
         console.log(`  - ${p.author}: video horizontal, no va al carrusel`)
         continue
       }
+      // The page (unlike the player API) carries the "Includes paid promotion" overlay.
+      if (/paidContentOverlay/.test(await res.text())) { p.paid = true; p.paidLabel = 'Includes paid promotion' }
       item.vertical = true
     }
     item.author = p.author
