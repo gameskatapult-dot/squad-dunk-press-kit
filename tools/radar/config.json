@@ -2,7 +2,7 @@
   "since": "2026-10-20",
   "strong": ["katapult games", "katapultgames", "katapult_games", "4591520", "dunkthegame", "dunk the game", "squaddunk", "友尽大扣篮", "友尽 大扣篮"],
   "gameWords": "\\bgame\\b|\\bgames\\b|gaming|steam|wishlist|\\bdemo\\b|playtest|co-?op|multiplayer|proximity|first[- ]person|trailer|\\bjogo\\b|\\bjuego\\b|videojuego|primera persona|primeira pessoa|\\bspiel\\b|\\bjeu\\b|\\bgioco\\b|игра|游戏|ゲーム|indie|\\bpc\\b",
-  "exclude": "\\bnba\\b|lebron|giannis|wemby|curry|dude perfect|high ?school|\\bncaa\\b|\\bwnba\\b|2k2\\d|roblox|nike|jordan|sneaker|slam tank|fortnite|dunk contest|\\bdunks? on\\b|gym ?class|dunk ?verse|dunk ?max|mixtape|game[- ]winning|playstore|android|dunk ?c.ty|mokami|project dunk|swish ?(&|and) ?dunk|swishanddunk|flappy dunk|usa basketball|\bovr\b",
+  "exclude": "\\bnba\\b|lebron|giannis|wemby|curry|dude perfect|high ?school|\\bncaa\\b|\\bwnba\\b|2k2\\d|roblox|nike|jordan|sneaker|slam tank|fortnite|dunk contest|\\bdunks? on\\b|gym ?class|dunk ?verse|dunk ?max|mixtape|game[- ]winning|playstore|android|dunk ?c.ty|mokami|project dunk|swish ?(&|and) ?dunk|swishanddunk|flappy dunk|hoop ?world|usa basketball|\bovr\b",
   "paid": "#ad\\b|\\[ ?a ?d ?\\]|\\bad\\)|\\(ad|sponsor|patrocin|publi\\b|#publi|paid partnership|uwu biz|jestr",
   "official": ["@dunkthegame", "@DUNKthegame", "@dunk.thegame", "@katapultgames", "@katapult_games"],
   "youtube": {
