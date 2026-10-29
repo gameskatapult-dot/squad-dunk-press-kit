@@ -448,8 +448,9 @@ function markCrossPost (list, item, post) {
   const overlap = (a, b) => { const [x, y] = [words(a), words(b)]; return [...x].filter(w => y.has(w)).length / Math.max(1, Math.min(x.size, y.size)) }
   const near = i => dateOf(i) && post.date && Math.abs(Date.parse(dateOf(i)) - Date.parse(post.date)) <= 3 * 864e5
   // Same creator on another network, or the very same title under a different handle.
-  const copies = list.filter(i => i.platform !== item.platform && near(i) &&
-    (sameCreator(i.author, item.author) || overlap(i.title, item.title) >= 0.9))
+  // A title match needs a few words on both sides: "Game: DUNK." would match every post.
+  const sameTitle = i => Math.min(words(i.title).size, words(item.title).size) >= 4 && overlap(i.title, item.title) >= 0.9
+  const copies = list.filter(i => i.platform !== item.platform && near(i) && (sameCreator(i.author, item.author) || sameTitle(i)))
   // A creator with several different videos: pair with the one whose title matches best, or none.
   const groups = new Map()
   for (const i of copies) groups.set(i.duplicateOf || i.id, Math.max(groups.get(i.duplicateOf || i.id) || 0, overlap(i.title, item.title)))
