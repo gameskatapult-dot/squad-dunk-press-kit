@@ -1,0 +1,41 @@
+{
+  "since": "2026-10-20",
+  "strong": ["katapult games", "katapultgames", "katapult_games", "4591520", "dunkthegame", "dunk the game", "squaddunk", "友尽大扣篮", "友尽 大扣篮"],
+  "gameWords": "\\bgame\\b|\\bgames\\b|gaming|steam|wishlist|\\bdemo\\b|playtest|co-?op|multiplayer|proximity|first[- ]person|trailer|\\bjogo\\b|\\bjuego\\b|videojuego|primera persona|primeira pessoa|\\bspiel\\b|\\bjeu\\b|\\bgioco\\b|игра|游戏|ゲーム|indie|\\bpc\\b",
+  "exclude": "\\bnba\\b|lebron|giannis|wemby|curry|dude perfect|high ?school|\\bncaa\\b|\\bwnba\\b|2k2\\d|roblox|nike|jordan|sneaker|slam tank|fortnite|dunk contest|\\bdunks? on\\b|gym ?class|dunk ?verse|dunk ?max|mixtape|game[- ]winning|playstore|android|dunk ?c.ty",
+  "paid": "#ad\\b|\\bad\\)|\\(ad|sponsor|patrocin|publi\\b|#publi|paid partnership|uwu biz|jestr",
+  "official": ["@dunkthegame", "@katapultgames", "@katapult_games"],
+  "youtube": {
+    "queries": [
+      "DUNK basketball game",
+      "DUNK katapult",
+      "DUNK steam basketball",
+      "first person basketball game",
+      "basketball game with friends proximity chat",
+      "new multiplayer basketball game",
+      "DUNK juego baloncesto",
+      "juego de baloncesto en primera persona",
+      "DUNK jogo basquete",
+      "jogo de basquete em primeira pessoa",
+      "DUNK basketball spiel",
+      "DUNK jeu basket",
+      "DUNK баскетбол игра",
+      "友尽大扣篮",
+      "DUNK gameplay",
+      "DUNK playtest",
+      "basketball game where you can tackle",
+      "basketball on the moon game",
+      "6 player basketball game",
+      "co-op basketball game steam",
+      "juego de basket con amigos",
+      "jogo de basquete com amigos",
+      "jeu de basket entre amis",
+      "Basketball Spiel mit Freunden",
+      "DUNK バスケ ゲーム",
+      "DUNK 농구 게임"
+    ]
+  },
+  "bilibili": {
+    "queries": ["友尽大扣篮", "友尽 大扣篮", "DUNK 篮球 游戏", "Katapult Games", "第一人称篮球 联机"]
+  }
+}
