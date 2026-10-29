@@ -1,0 +1,50 @@
+name: Refresh community view counts
+
+# Every 6 hours, re-read YouTube and TikTok view/like counts for the community posts.
+# When anything changed it commits the list to main and starts the Pages deploy
+# (pushes made with GITHUB_TOKEN don't trigger other workflows on their own).
+
+on:
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: refresh-community
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Refresh counts
+        run: node scripts/refresh-community.js
+
+      - name: Commit and deploy when counts changed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet -- pages/community/community.json; then
+            echo "No changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add pages/community/community.json
+          git commit -m "Refresh community view counts"
+          git push origin HEAD:main
+          gh workflow run pages.yml --ref main
