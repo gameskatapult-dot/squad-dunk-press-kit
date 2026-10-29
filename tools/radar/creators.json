@@ -452,5 +452,25 @@
   "handle": "@misly.official",
   "jestr": null,
   "added": "2026-10-29"
+ },
+ {
+  "platform": "youtube",
+  "handle": "@thetweekk",
+  "channelId": "UC9_JFv1csjDzFTEhx2nw8TQ",
+  "jestr": null,
+  "added": "2026-10-29",
+  "checked": "2026-10-29"
+ },
+ {
+  "platform": "tiktok",
+  "handle": "@chewyradar",
+  "jestr": null,
+  "added": "2026-10-29"
+ },
+ {
+  "platform": "tiktok",
+  "handle": "@tumbaranchoyt",
+  "jestr": null,
+  "added": "2026-10-29"
  }
 ]

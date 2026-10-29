@@ -394,6 +394,8 @@ function creatorCmd (args) {
 // Card label: the caption's first sentence, without hashtags or emoji clutter.
 function shortTitle (text) {
   const clean = (text || '').replace(/#\S+/g, '').replace(/\*\*/g, '').replace(/\s+/g, ' ').trim()
+    // Leading disclosure tags like "(ad)" or "[Anzeige]" would otherwise leave a stray bracket.
+    .replace(/^[([]\s*(ad|anzeige|werbung|publi|sponsored)\s*[)\]]\s*/i, '')
   const first = clean.split(/(?<=[.!?])\s|\s[—|]\s/)[0].replace(/^[^\p{L}\p{N}¡¿]+/u, '').trim()
   return first.length > 80 ? first.slice(0, 77).replace(/\s\S*$/, '') + '…' : first
 }
