@@ -2659,6 +2659,79 @@
    ],
    "paid": true,
    "paidLabel": "Paid partnership"
+  },
+  "instagram:DfDkTBPxX14": {
+   "platform": "instagram",
+   "id": "DfDkTBPxX14",
+   "url": "https://www.instagram.com/p/DfDkTBPxX14/",
+   "author": "@tumbaranchoyt",
+   "title": "Avísale a tus amigos de este juegazo! Nuevo juego basket coop (DUNK)",
+   "desc": "",
+   "date": "2026-10-28",
+   "views": 3129,
+   "likes": 3,
+   "manual": true,
+   "status": "en-sitio",
+   "reason": "agregado a mano",
+   "source": "manual",
+   "firstSeen": "2026-10-29",
+   "checked": "2026-10-29",
+   "history": [
+    [
+     "2026-10-29",
+     3129
+    ]
+   ]
+  },
+  "instagram:DfCmbuwg29f": {
+   "platform": "instagram",
+   "id": "DfCmbuwg29f",
+   "url": "https://www.instagram.com/p/DfCmbuwg29f/",
+   "author": "@gemgamingnetwork",
+   "title": "(ad) Free to Play Co-op Games for a Limited Time 1. Sponsored by: Dunk 2. Long Way Gnome 3. Death Row",
+   "desc": "",
+   "date": "2026-10-28",
+   "views": 1274,
+   "likes": 24,
+   "manual": true,
+   "status": "en-sitio",
+   "reason": "agregado a mano",
+   "source": "manual",
+   "firstSeen": "2026-10-29",
+   "checked": "2026-10-29",
+   "history": [
+    [
+     "2026-10-29",
+     1274
+    ]
+   ],
+   "paid": true,
+   "paidLabel": "Paid partnership"
+  },
+  "instagram:DfCmVDaS4z3": {
+   "platform": "instagram",
+   "id": "DfCmVDaS4z3",
+   "url": "https://www.instagram.com/p/DfCmVDaS4z3/",
+   "author": "@chewyradar",
+   "title": "[ad] 3 co-op steam playtests you need to play! 1. DUNK 2. Buried Whispers 3. Kingmakers",
+   "desc": "",
+   "date": "2026-10-28",
+   "views": 501,
+   "likes": 13,
+   "manual": true,
+   "status": "en-sitio",
+   "reason": "agregado a mano",
+   "source": "manual",
+   "firstSeen": "2026-10-29",
+   "checked": "2026-10-29",
+   "history": [
+    [
+     "2026-10-29",
+     501
+    ]
+   ],
+   "paid": true,
+   "paidLabel": "Paid partnership"
   }
  },
  "rejected": {
@@ -4585,34 +4658,6 @@
  },
  "runs": [
   {
-   "date": "2026-10-29T12:54:59.822Z",
-   "command": "add",
-   "found": 1,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-10-29T12:55:00.011Z",
-   "command": "add",
-   "found": 1,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-10-29T12:55:00.215Z",
-   "command": "add",
-   "found": 1,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-10-29T12:55:00.417Z",
-   "command": "add",
-   "found": 1,
-   "requests": 0,
-   "kb": 0
-  },
-  {
    "date": "2026-10-29T12:55:00.604Z",
    "command": "add",
    "found": 1,
@@ -4933,6 +4978,34 @@
    "found": 0,
    "requests": 12,
    "kb": 4727
+  },
+  {
+   "date": "2026-10-29T14:34:34.802Z",
+   "command": "add",
+   "found": 1,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-10-29T14:34:35.049Z",
+   "command": "add",
+   "found": 1,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-10-29T14:34:35.252Z",
+   "command": "add",
+   "found": 1,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-10-29T14:34:37.034Z",
+   "command": "site",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
   }
  ]
 }
