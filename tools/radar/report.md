@@ -1,12 +1,12 @@
 # Radar DUNK — 2026-10-29
 
-43 posts · 421 mil visitas en total · 39 creadores
+45 posts · 421 mil visitas en total · 40 creadores
 
 | Origen | Posts | Visitas |
 |---|---:|---:|
 | Jestr | 0 | 0 |
 | orgánico | 0 | 0 |
-| sin marcar | 43 | 421 mil |
+| sin marcar | 45 | 421 mil |
 
 ## Para revisar
 
@@ -19,6 +19,8 @@
 | Red | Creador | Título | Visitas | +24h | Fecha | Origen | Estado |
 |---|---|---|---:|---:|---|---|---|
 | youtube | [@traileralertchannel](https://www.youtube.com/watch?v=Z_BArSLKauQ) | DUNK ▸ Announcement Trailer / 4K | 0 |  | 2026-10-28 | ? | nuevo |
+| youtube | [@mrgamingclipzdaily](https://www.youtube.com/watch?v=qa-cPWqkYtM) | You can play basketball on the moon—and low gravity changes the game � | 0 |  | 2026-10-28 | ? · pagado | nuevo |
+| youtube | [@mrgamingclipzdaily](https://www.youtube.com/watch?v=17RvIqd3ZBw) | Why jump for a dunk when you can swing toward the hoop on a vine? 🌿 | 0 |  | 2026-10-28 | ? · pagado | nuevo |
 
 ## Todos por visitas
 
@@ -67,6 +69,8 @@
 | tiktok | [@gamesfound](https://www.tiktok.com/@gamesfound/video/7701720529362898179) | This Basketball Game Is So Unfair DUNK turns first-person basketball l | 235 |  | 2026-10-28 | ? | en-sitio |
 | instagram | [@johanwavex](https://www.instagram.com/johanwavex/reel/DfD3Y3JhhyL/) | A first-person 1-6 player basketball game | 168 |  | — | ? | en-sitio |
 | youtube | [@traileralertchannel](https://www.youtube.com/watch?v=Z_BArSLKauQ) | DUNK ▸ Announcement Trailer / 4K | 0 |  | 2026-10-28 | ? | nuevo |
+| youtube | [@mrgamingclipzdaily](https://www.youtube.com/watch?v=qa-cPWqkYtM) | You can play basketball on the moon—and low gravity changes the game � | 0 |  | 2026-10-28 | ? · pagado | nuevo |
+| youtube | [@mrgamingclipzdaily](https://www.youtube.com/watch?v=17RvIqd3ZBw) | Why jump for a dunk when you can swing toward the hoop on a vine? 🌿 | 0 |  | 2026-10-28 | ? · pagado | nuevo |
 
 ## Revisar a mano (Instagram y otros sin visitas automáticas)
 
