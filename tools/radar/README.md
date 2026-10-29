@@ -75,3 +75,9 @@ Reglas del carrusel (Matías, 29/10):
 - **Un video, una tarjeta:** si el mismo creador lo subió a otra red en un plazo de 3 días, la copia con menos visitas recibe `"duplicateOf": "<id de la más vista>"`. El sitio la oculta, pero suma sus visitas al total. `site` conserva ese campo al reescribir la lista.
 
 `site` copia las visitas actualizadas a `pages/community/community.json`, ordena por visitas y lista los posts **aprobados** que todavía no están en el carrusel. Agregar un post al carrusel sigue siendo a mano, porque necesita miniatura y título corto.
+
+## Panel del equipo
+
+`squaddunk.com/community/panel-yhqdojqq/` es una tabla técnica con todos los posts: hora de subida (Irlanda, Chile o UTC), visitas sumando copias, likes, visitas por hora, pago, estado y la historia de visitas. Se ordena por cualquier columna y exporta CSV.
+
+No está enlazada en el sitio y tiene `noindex`, pero **no tiene contraseña**: la ve cualquiera que tenga el link (GitHub Pages no permite más, y el repo es público). Cada comando del radar regenera `data.json`; las visitas más frescas las toma de `community.json`.

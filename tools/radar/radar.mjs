@@ -8,6 +8,8 @@ import { spawnSync } from 'node:child_process'
 
 const DIR = path.dirname(fileURLToPath(import.meta.url))
 const SITE_JSON = process.env.RADAR_SITE_JSON || path.join(DIR, '../../pages/community/community.json')
+// Unlisted team panel (not linked anywhere on the site).
+const PANEL_JSON = path.join(path.dirname(SITE_JSON), 'panel-yhqdojqq/data.json')
 const FILES = { config: 'config.json', db: 'db.json', creators: 'creators.json' }
 const load = (f, fallback) => fs.existsSync(path.join(DIR, f)) ? JSON.parse(fs.readFileSync(path.join(DIR, f), 'utf8')) : fallback
 const save = (f, data) => fs.writeFileSync(path.join(DIR, f), JSON.stringify(data, null, 1) + '\n')
@@ -130,6 +132,7 @@ async function ytVideo (id) {
     desc: (d.shortDescription || '').replace(/\s+/g, ' ').slice(0, 300),
     tags: (d.keywords || []).join(' '),
     date: (mf.publishDate || mf.uploadDate || '').slice(0, 10),
+    published: mf.publishDate || mf.uploadDate || undefined,
     views: Number(d.viewCount) || 0,
     short: Number(d.lengthSeconds) <= 180
   }
@@ -183,11 +186,19 @@ async function tiktokVideo (url) {
 }
 
 // A post's shortcode is its media id in base64; the id's high bits are milliseconds since 2011-08-24.
-function instagramDate (shortcode) {
+function instagramDate (shortcode, full) {
   const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_'
   let id = 0n
   for (const c of shortcode.slice(0, 11)) id = id * 64n + BigInt(alphabet.indexOf(c))
-  return new Date(Number(id >> 23n) + 1314220021721).toISOString().slice(0, 10)
+  const iso = new Date(Number(id >> 23n) + 1314220021721).toISOString()
+  return full ? iso : iso.slice(0, 10)
+}
+
+// Exact upload time where the platform gives it: TikTok and Instagram ids encode it, YouTube reports it.
+function uploadedAt (p) {
+  if (p.platform === 'tiktok' && /^\d+$/.test(p.id)) return new Date(Number(BigInt(p.id) >> 32n) * 1000).toISOString()
+  if (p.platform === 'instagram') return instagramDate(p.id, true)
+  return p.published || p.date || ''
 }
 
 function instagramPost (url, views, likes) {
@@ -222,6 +233,7 @@ function updateStats (entry, fresh) {
   entry.views = Math.max(entry.views || 0, fresh.views || 0)
   if (fresh.likes) entry.likes = fresh.likes
   entry.date ||= fresh.date
+  entry.published ||= fresh.published
   entry.desc ||= fresh.desc
   entry.paid ||= paidRe.test([fresh.title, fresh.desc, fresh.tags].join(' ')) || undefined
   entry.checked = today()
@@ -556,7 +568,40 @@ function writeReport () {
   fs.writeFileSync(path.join(DIR, 'report.md'), md)
   const csv = ['platform,author,origin,paid,status,views,likes,date,first_seen,url,title',
     ...byViews.map(p => [p.platform, p.author, jestrLabel(p), p.paid ? 'yes' : '', p.status, p.views, p.likes ?? '', p.date, p.firstSeen, p.url, '"' + (p.title || '').replace(/"/g, '""') + '"'].join(','))].join('\n')
+  writePanel()
   fs.writeFileSync(path.join(DIR, 'posts.csv'), '﻿' + csv + '\n')
+}
+
+// Data for the team panel: every post the radar kept, with the carousel's copy grouping.
+function writePanel () {
+  if (!fs.existsSync(path.dirname(PANEL_JSON))) return
+  const site = fs.existsSync(SITE_JSON) ? JSON.parse(fs.readFileSync(SITE_JSON, 'utf8')) : []
+  const onSite = new Map(site.map(i => [key(i.platform, i.id), i]))
+  const posts = Object.values(db.posts).map(p => {
+    const item = onSite.get(key(p.platform, p.id))
+    return {
+      platform: p.platform,
+      id: p.id,
+      url: p.url,
+      author: p.author,
+      title: p.title || '',
+      desc: p.desc || '',
+      uploaded: uploadedAt(p),
+      firstSeen: p.firstSeen,
+      views: Math.max(p.views || 0, item?.views || 0),
+      likes: p.likes || item?.likes || null,
+      paid: !!p.paid,
+      paidLabel: p.paidLabel || null,
+      origin: jestrLabel(p),
+      status: p.status,
+      reason: p.reason || null,
+      onSite: !!item,
+      duplicateOf: item?.duplicateOf || null,
+      thumb: item?.thumb || null,
+      history: p.history || []
+    }
+  })
+  fs.writeFileSync(PANEL_JSON, JSON.stringify({ updated: new Date().toISOString(), posts }) + '\n')
 }
 
 function growth (p) {

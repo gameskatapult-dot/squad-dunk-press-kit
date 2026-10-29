@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="referrer" content="no-referrer">
+<title>radar</title>
+<style>
+  :root { --bg: #f4f4f2; --fg: #111; --dim: #777; --line: #ccc; --row: #fff; --hi: #fff3b0; --paid: #b3261e; --org: #1b7f3b; --link: #0645ad; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #0e0e0e; --fg: #ddd; --dim: #888; --line: #333; --row: #161616; --hi: #3a3410; --paid: #ff7a70; --org: #6fd08c; --link: #8ab4f8; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 12px 16px 40px; background: var(--bg); color: var(--fg); font: 12px/1.4 ui-monospace, SFMono-Regular, Consolas, monospace; }
+  h1 { font-size: 13px; margin: 0 0 8px; font-weight: 700; }
+  a { color: var(--link); }
+  .bar { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; margin: 6px 0; }
+  .bar label { white-space: nowrap; }
+  input[type=search] { font: inherit; padding: 2px 4px; width: 200px; background: var(--row); color: var(--fg); border: 1px solid var(--line); }
+  select, button { font: inherit; background: var(--row); color: var(--fg); border: 1px solid var(--line); padding: 1px 4px; }
+  .stats { color: var(--dim); }
+  .stats b { color: var(--fg); }
+  .wrap { overflow-x: auto; border: 1px solid var(--line); }
+  table { border-collapse: collapse; width: 100%; background: var(--row); }
+  th, td { padding: 3px 6px; border-bottom: 1px solid var(--line); text-align: left; white-space: nowrap; vertical-align: top; }
+  th { position: sticky; top: 0; background: var(--bg); cursor: pointer; user-select: none; font-weight: 700; }
+  th.num, td.num { text-align: right; }
+  th[data-dir=asc]::after { content: ' ▲'; }
+  th[data-dir=desc]::after { content: ' ▼'; }
+  td.t { white-space: normal; min-width: 260px; max-width: 420px; }
+  tr.copy td { color: var(--dim); }
+  tr.main:hover td { background: var(--hi); cursor: pointer; }
+  .paid { color: var(--paid); font-weight: 700; }
+  .org { color: var(--org); font-weight: 700; }
+  .dim { color: var(--dim); }
+  tr.detail td { white-space: normal; background: var(--bg); }
+  .detail-grid { display: grid; grid-template-columns: 160px 1fr; gap: 10px; }
+  .detail-grid img { width: 160px; border: 1px solid var(--line); }
+  .hist { font-size: 11px; }
+  .sub { margin: 18px 0 6px; font-weight: 700; }
+  .small td, .small th { position: static; }
+</style>
+</head>
+<body>
+<h1>DUNK / radar de posts <span class="dim" id="updated"></span></h1>
+
+<div class="bar">
+  <input type="search" id="q" placeholder="buscar creador o texto">
+  <label>red
+    <select id="platform"><option value="">todas</option><option>youtube</option><option>tiktok</option><option>instagram</option><option>bilibili</option></select>
+  </label>
+  <label>pago
+    <select id="paid"><option value="">todos</option><option value="1">pagados</option><option value="0">sin señal de pago</option></select>
+  </label>
+  <label>estado
+    <select id="status"><option value="site">en el carrusel</option><option value="">todos</option><option value="pending">pendientes (nuevo/revisar/aprobado)</option><option value="descartado">descartados</option></select>
+  </label>
+  <label><input type="checkbox" id="copies"> mostrar copias</label>
+  <label>hora
+    <select id="tz"><option value="Europe/Dublin">Irlanda</option><option value="America/Santiago">Chile</option><option value="UTC">UTC</option></select>
+  </label>
+  <button id="csv">CSV</button>
+</div>
+<div class="bar stats" id="stats"></div>
+
+<div class="wrap">
+<table id="t">
+  <thead><tr>
+    <th data-k="i" class="num">#</th>
+    <th data-k="uploaded">subida</th>
+    <th data-k="age" class="num">hace</th>
+    <th data-k="platform">red</th>
+    <th data-k="author">creador</th>
+    <th data-k="title">título</th>
+    <th data-k="total" class="num">visitas</th>
+    <th data-k="views" class="num">este post</th>
+    <th data-k="likes" class="num">likes</th>
+    <th data-k="likeRate" class="num">like%</th>
+    <th data-k="perHour" class="num">vis/h</th>
+    <th data-k="delta" class="num">Δ último</th>
+    <th data-k="paid">pago</th>
+    <th data-k="status">estado</th>
+  </tr></thead>
+  <tbody></tbody>
+</table>
+</div>
+
+<div class="sub">Por red (según filtros)</div>
+<div class="wrap"><table class="small" id="byPlatform"><thead><tr><th>red</th><th class="num">posts</th><th class="num">visitas</th><th class="num">pagados</th><th class="num">visitas pagadas</th><th class="num">sin señal</th><th class="num">visitas sin señal</th></tr></thead><tbody></tbody></table></div>
+
+<div class="sub">Por día de subida (según filtros, hora elegida)</div>
+<div class="wrap"><table class="small" id="byDay"><thead><tr><th>día</th><th class="num">posts</th><th class="num">visitas</th></tr></thead><tbody></tbody></table></div>
+
+<p class="dim">"visitas" suma el post y sus copias en otras redes; "este post" es solo ese link. Δ último = cambio entre las dos últimas mediciones del radar. Pago = #ad/sponsor en el texto o etiqueta oficial (Paid partnership / Includes paid promotion); "sin señal" no garantiza que sea orgánico. Clic en una fila para ver detalles.</p>
+
+<script>
+(function () {
+  var state = { posts: [], sortKey: 'total', dir: 'desc', open: {} }
+  var $ = function (id) { return document.getElementById(id) }
+  var fmt = function (n) { return n == null ? '—' : Number(n).toLocaleString('es-CL') }
+  var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c] }) }
+
+  function when (iso, withTime) {
+    if (!iso) return '—'
+    var d = new Date(iso.length === 10 ? iso + 'T12:00:00Z' : iso)
+    var opts = { timeZone: $('tz').value, day: '2-digit', month: '2-digit' }
+    if (withTime && iso.length > 10) { opts.hour = '2-digit'; opts.minute = '2-digit'; opts.hour12 = false }
+    return d.toLocaleString('es-CL', opts).replace(',', '')
+  }
+  function dayKey (iso) {
+    if (!iso) return '—'
+    var d = new Date(iso.length === 10 ? iso + 'T12:00:00Z' : iso)
+    return d.toLocaleDateString('sv-SE', { timeZone: $('tz').value })
+  }
+  function ago (iso) {
+    if (!iso) return '—'
+    var h = (Date.now() - Date.parse(iso)) / 36e5
+    return h < 48 ? Math.round(h) + 'h' : Math.round(h / 24) + 'd'
+  }
+
+  function prepare (data, site) {
+    var fresh = {}
+    site.forEach(function (i) { fresh[i.platform + ':' + i.id] = i })
+    var posts = data.posts.map(function (p) {
+      var s = fresh[p.platform + ':' + p.id]
+      if (s) {
+        p.views = Math.max(p.views || 0, s.views || 0)
+        p.likes = Math.max(p.likes || 0, s.likes || 0) || p.likes
+        p.duplicateOf = s.duplicateOf || null
+        p.onSite = true
+        p.thumb = p.thumb || s.thumb
+      }
+      var hours = p.uploaded ? Math.max(1, (Date.now() - Date.parse(p.uploaded)) / 36e5) : null
+      p.age = hours
+      p.perHour = hours ? Math.round(p.views / hours) : null
+      p.likeRate = p.likes && p.views ? Math.round(p.likes / p.views * 1000) / 10 : null
+      var h = p.history || []
+      p.delta = h.length > 1 ? h[h.length - 1][1] - h[h.length - 2][1] : null
+      return p
+    })
+    // A post and its copies on other networks count together.
+    var byId = {}
+    posts.forEach(function (p) { byId[p.id] = p; p.copies = [] })
+    posts.forEach(function (p) { if (p.duplicateOf && byId[p.duplicateOf]) byId[p.duplicateOf].copies.push(p) })
+    posts.forEach(function (p) {
+      p.total = p.views + p.copies.reduce(function (s, c) { return s + (c.views || 0) }, 0)
+      p.groupPaid = p.paid || p.copies.some(function (c) { return c.paid })
+    })
+    return posts
+  }
+
+  function visible () {
+    var q = $('q').value.trim().toLowerCase()
+    var pf = $('platform').value, pd = $('paid').value, st = $('status').value, copies = $('copies').checked
+    return state.posts.filter(function (p) {
+      if (st === 'site' && !p.onSite) return false
+      if (st === 'pending' && ['nuevo', 'revisar', 'aprobado'].indexOf(p.status) < 0) return false
+      if (st === 'descartado' && p.status !== 'descartado') return false
+      if (!copies && p.duplicateOf) return false
+      if (pf && p.platform !== pf && !(p.copies || []).some(function (c) { return c.platform === pf })) return false
+      var paid = copies ? p.paid : p.groupPaid
+      if (pd === '1' && !paid) return false
+      if (pd === '0' && paid) return false
+      if (q && (p.author + ' ' + p.title + ' ' + p.desc + ' ' + (p.copies || []).map(function (c) { return c.author }).join(' ')).toLowerCase().indexOf(q) < 0) return false
+      return true
+    })
+  }
+
+  function sorted (list) {
+    var k = state.sortKey, m = state.dir === 'asc' ? 1 : -1
+    return list.slice().sort(function (a, b) {
+      var x = a[k], y = b[k]
+      if (k === 'uploaded') { x = Date.parse(x) || 0; y = Date.parse(y) || 0 }
+      if (k === 'paid') { x = a.groupPaid ? 1 : 0; y = b.groupPaid ? 1 : 0 }
+      if (x == null) return 1
+      if (y == null) return -1
+      if (typeof x === 'string') return x.localeCompare(y) * m
+      return (x - y) * m
+    })
+  }
+
+  function row (p, i, isCopy) {
+    var paid = isCopy ? p.paid : p.groupPaid
+    var nets = isCopy ? p.platform : [p.platform].concat(p.copies.map(function (c) { return c.platform })).join('+')
+    return '<tr class="' + (isCopy ? 'copy' : 'main') + '" data-id="' + esc(p.id) + '">' +
+      '<td class="num">' + (isCopy ? '↳' : i + 1) + '</td>' +
+      '<td>' + when(p.uploaded, true) + '</td>' +
+      '<td class="num">' + ago(p.uploaded) + '</td>' +
+      '<td>' + esc(nets) + '</td>' +
+      '<td>' + esc(p.author) + '</td>' +
+      '<td class="t"><a href="' + esc(p.url) + '" target="_blank" rel="noopener noreferrer">' + esc(p.title || '(sin título)') + '</a></td>' +
+      '<td class="num">' + (isCopy ? '' : fmt(p.total)) + '</td>' +
+      '<td class="num">' + fmt(p.views) + '</td>' +
+      '<td class="num">' + fmt(p.likes) + '</td>' +
+      '<td class="num">' + (p.likeRate == null ? '—' : p.likeRate + '%') + '</td>' +
+      '<td class="num">' + fmt(p.perHour) + '</td>' +
+      '<td class="num">' + (p.delta ? '+' + fmt(p.delta) : '—') + '</td>' +
+      '<td>' + (paid ? '<span class="paid">pagado</span>' : '<span class="org">sin señal</span>') + '</td>' +
+      '<td>' + esc(p.onSite ? (p.duplicateOf ? 'copia' : 'carrusel') : p.status) + '</td>' +
+      '</tr>'
+  }
+
+  function detail (p) {
+    var all = [p].concat(p.copies || [])
+    var hist = all.map(function (x) {
+      return esc(x.platform + ' ' + x.author) + ': ' + (x.history || []).map(function (h) { return h[0].slice(5) + ' ' + fmt(h[1]) }).join(' → ')
+    }).join('<br>')
+    var img = p.thumb ? '<img src="../' + esc(p.thumb) + '" alt="">' : (p.platform === 'youtube' ? '<img src="https://i.ytimg.com/vi/' + esc(p.id) + '/hqdefault.jpg" alt="">' : '<span></span>')
+    return '<tr class="detail"><td colspan="14"><div class="detail-grid">' + img + '<div>' +
+      '<b>' + esc(p.author) + '</b> · ' + esc(p.platform) + ' · id ' + esc(p.id) + '<br>' +
+      'subido: ' + esc(p.uploaded || '—') + ' · detectado: ' + esc(p.firstSeen || '—') + ' · origen: ' + esc(p.origin) + '<br>' +
+      'pago: ' + (p.paid ? 'sí' + (p.paidLabel ? ' (' + esc(p.paidLabel) + ')' : ' (texto)') : 'sin señal') +
+      (p.reason ? ' · motivo: ' + esc(p.reason) : '') + '<br><br>' +
+      esc(p.desc || p.title) + '<br><br><span class="hist">' + hist + '</span>' +
+      '</div></div></td></tr>'
+  }
+
+  function render () {
+    var list = sorted(visible())
+    var showCopies = $('copies').checked
+    var html = ''
+    list.forEach(function (p, i) {
+      html += row(p, i, showCopies && !!p.duplicateOf)
+      if (state.open[p.id]) html += detail(p)
+    })
+    document.querySelector('#t tbody').innerHTML = html || '<tr><td colspan="14" class="dim">nada</td></tr>'
+    document.querySelectorAll('#t th').forEach(function (th) {
+      th.removeAttribute('data-dir')
+      if (th.dataset.k === state.sortKey) th.setAttribute('data-dir', state.dir)
+    })
+
+    // Totals count every post behind the visible rows, copies included.
+    var flat = []
+    list.forEach(function (p) { flat.push(p); if (!showCopies) flat = flat.concat(p.copies) })
+    var sum = function (l) { return l.reduce(function (s, p) { return s + (p.views || 0) }, 0) }
+    var paid = flat.filter(function (p) { return p.paid })
+    $('stats').innerHTML = '<span><b>' + list.length + '</b> filas</span><span><b>' + flat.length + '</b> posts</span><span><b>' + fmt(sum(flat)) + '</b> visitas</span>' +
+      '<span class="paid">' + fmt(sum(paid)) + ' pagadas</span><span class="org">' + fmt(sum(flat) - sum(paid)) + ' sin señal</span>' +
+      '<span><b>' + new Set(flat.map(function (p) { return p.author.toLowerCase().replace(/[^a-z0-9]/g, '') })).size + '</b> cuentas</span>'
+
+    var by = {}
+    flat.forEach(function (p) {
+      var r = by[p.platform] = by[p.platform] || [0, 0, 0, 0, 0, 0]
+      r[0]++; r[1] += p.views
+      if (p.paid) { r[2]++; r[3] += p.views } else { r[4]++; r[5] += p.views }
+    })
+    document.querySelector('#byPlatform tbody').innerHTML = Object.keys(by).sort(function (a, b) { return by[b][1] - by[a][1] }).map(function (k) {
+      return '<tr><td>' + k + '</td>' + by[k].map(function (n) { return '<td class="num">' + fmt(n) + '</td>' }).join('') + '</tr>'
+    }).join('')
+
+    var days = {}
+    flat.forEach(function (p) { var d = dayKey(p.uploaded); days[d] = days[d] || [0, 0]; days[d][0]++; days[d][1] += p.views })
+    document.querySelector('#byDay tbody').innerHTML = Object.keys(days).sort().reverse().map(function (d) {
+      return '<tr><td>' + d + '</td><td class="num">' + days[d][0] + '</td><td class="num">' + fmt(days[d][1]) + '</td></tr>'
+    }).join('')
+  }
+
+  function csv () {
+    var cols = ['uploaded', 'platform', 'author', 'title', 'views', 'likes', 'likeRate', 'perHour', 'paid', 'paidLabel', 'origin', 'status', 'duplicateOf', 'url']
+    var flat = []
+    visible().forEach(function (p) { flat.push(p); if (!$('copies').checked) flat = flat.concat(p.copies) })
+    var text = cols.join(',') + '\n' + flat.map(function (p) {
+      return cols.map(function (c) { var v = p[c] == null ? '' : String(p[c]); return /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v }).join(',')
+    }).join('\n')
+    var a = document.createElement('a')
+    a.href = URL.createObjectURL(new Blob(['﻿' + text], { type: 'text/csv' }))
+    a.download = 'dunk-posts-' + new Date().toISOString().slice(0, 10) + '.csv'
+    a.click()
+  }
+
+  document.querySelectorAll('#t th').forEach(function (th) {
+    th.addEventListener('click', function () {
+      var k = th.dataset.k
+      if (k === 'i') return
+      state.dir = state.sortKey === k && state.dir === 'desc' ? 'asc' : 'desc'
+      state.sortKey = k
+      render()
+    })
+  })
+  document.querySelector('#t tbody').addEventListener('click', function (e) {
+    if (e.target.closest('a')) return
+    var tr = e.target.closest('tr.main, tr.copy')
+    if (!tr) return
+    state.open[tr.dataset.id] = !state.open[tr.dataset.id]
+    render()
+  })
+  ;['q', 'platform', 'paid', 'status', 'copies', 'tz'].forEach(function (id) { $(id).addEventListener('input', render) })
+  $('csv').addEventListener('click', csv)
+
+  var bust = '?t=' + Date.now()
+  Promise.all([
+    fetch('data.json' + bust).then(function (r) { return r.json() }),
+    fetch('../community.json' + bust).then(function (r) { return r.json() }).catch(function () { return [] })
+  ]).then(function (res) {
+    state.posts = prepare(res[0], res[1])
+    $('updated').textContent = '· radar ' + when(res[0].updated, true)
+    render()
+  })
+})()
+</script>
+</body>
+</html>
