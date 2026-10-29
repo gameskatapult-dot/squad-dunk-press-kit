@@ -76,6 +76,30 @@ Reglas del carrusel (Matías, 29/10):
 
 `site` copia las visitas actualizadas a `pages/community/community.json`, ordena por visitas y lista los posts **aprobados** que todavía no están en el carrusel. Agregar un post al carrusel sigue siendo a mano, porque necesita miniatura y título corto.
 
+## Prensa (artículos)
+
+`press.mjs` rastrea los artículos que escriben los medios sobre DUNK y llena la sección **Prensa** del press kit (`pages/community/press.json`, imágenes en `pages/community/press/`). Tiene su propia base: `press-db.json`.
+
+```
+node tools/radar/press.mjs scan      # buscar
+node tools/radar/press.mjs approve   # aprobar los "nuevo"
+node tools/radar/press.mjs site      # escribir press.json
+```
+
+| Fuente | Cómo |
+|---|---|
+| Steam | Notas de medios que Steam muestra en las noticias del juego (app 4591520). Cuentan como confirmadas |
+| Google News | RSS con 14 búsquedas en 10 idiomas (`press.google` en `config.json`). Los links vienen codificados y el script pide el link real |
+| Bing News | RSS con 6 búsquedas; trae el link directo |
+
+Cada artículo se abre una sola vez: así se confirma que habla del juego, y de ahí salen el título, el medio, la fecha, el idioma y la imagen. Para no gastar de más, solo se abren los titulares que nombran a DUNK con mayúscula (o en coreano, japonés, ruso o chino) y no coinciden con `exclude`. El primer escaneo hizo 60 pedidos (10 MB); los siguientes, ~22 (menos de 1 MB).
+
+- **nuevo**: la página nombra a Katapult, el app de Steam o el sitio (lo mismo que `strong`).
+- **revisar**: titular con "DUNK" y la página habla de básquetbol y videojuegos.
+- **descartado**: lo demás, los portales de juegos de navegador (FRVR, Poki) y las notas que solo publican el trailer oficial.
+
+Las versiones AMP, móvil o con otro idioma en la ruta del mismo artículo cuentan como uno solo. Un nombre de medio raro se arregla en `press.outlets` de `config.json`. Un artículo encontrado a mano entra con `add <link>` (queda aprobado) y se saca con `set <id> descartado` + `site`.
+
 ## Panel del equipo
 
 `dunkthegame.com/community/panel-yhqdojqq/` (en inglés) es una tabla técnica con todos los posts: hora de subida (Irlanda, Chile o UTC), visitas sumando copias, likes, visitas por hora, pago, estado y la historia de visitas. Se ordena por cualquier columna y exporta CSV.

@@ -167,6 +167,27 @@ body.has-community-player { overflow: hidden; }
 .dunk .community__credit { display: block; margin-top: 10px; overflow: hidden; color: var(--soft); font-weight: 700; white-space: nowrap; text-overflow: ellipsis; }
 .dunk .community__credit:hover { color: var(--cream); }
 
+/* Press: articles about DUNK in a row of link cards, newest first. */
+.press { padding: clamp(56px, 7vw, 88px) 0; text-align: center; border-bottom: 1px solid var(--line); }
+.press .title { margin-bottom: 10px; }
+.press__rail { display: flex; gap: 16px; margin: 0; padding: 0 0 4px; overflow-x: auto; list-style: none; scroll-snap-type: x mandatory; scrollbar-width: none; overscroll-behavior-x: contain; }
+.press__rail::-webkit-scrollbar { display: none; }
+.press__item { flex: none; width: min(300px, 78vw); scroll-snap-align: start; text-align: left; }
+.press__item:first-child { margin-left: auto; }
+.press__item:last-child { margin-right: auto; }
+.dunk .press__card { display: flex; flex-direction: column; height: 100%; color: var(--cream); text-decoration: none; }
+.press__media { position: relative; display: grid; place-items: center; aspect-ratio: 16 / 9; overflow: hidden; color: var(--soft); background: #24211d; border-radius: 10px; font: 800 20px/1.2 var(--display); }
+.press__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease, filter .4s ease; }
+.press__card:hover .press__media img { filter: brightness(1.08); transform: scale(1.03); }
+.press__media--plain img, .press__card:hover .press__media--plain img { filter: brightness(.38) saturate(.8); }
+.press__media-name { position: relative; padding: 0 16px; color: var(--cream); font: 800 26px/1.1 var(--display); text-align: center; }
+.press__meta { display: flex; align-items: center; gap: 8px; min-width: 0; margin-top: 12px; color: var(--soft); font-size: 14px; font-weight: 700; }
+.press__outlet { overflow: hidden; color: var(--ball); white-space: nowrap; text-overflow: ellipsis; }
+.press__lang { flex: none; padding: 1px 6px; border: 1px solid var(--line); border-radius: 4px; font-size: 11px; letter-spacing: .06em; }
+.press__date { flex: none; margin-left: auto; }
+.press__title { display: -webkit-box; margin-top: 6px; overflow: hidden; font: 700 17px/1.3 var(--body); -webkit-line-clamp: 3; -webkit-box-orient: vertical; }
+.dunk .press__card:hover .press__title { text-decoration: underline; text-underline-offset: 3px; }
+
 /* Intro */
 .intro { padding: clamp(48px, 7vw, 80px) 0; text-align: center; border-bottom: 1px solid var(--line); }
 /* Links from the home page land with the intro flush under the top bar, no sliver of the hero. */

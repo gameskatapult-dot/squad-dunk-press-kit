@@ -11,6 +11,7 @@ const outputPath = path.join(productDir, 'data.xml')
 const allowedSectionIds = new Set([
   'announcement',
   'creators',
+  'press',
   'factsheet',
   'description',
   'features',
@@ -442,6 +443,7 @@ function createNavSections (sections) {
   const titles = {
     announcement: 'Announcement',
     creators: 'Creators',
+    press: 'Press',
     factsheet: 'Factsheet',
     description: 'Description',
     features: 'Features',
@@ -455,6 +457,7 @@ function createNavSections (sections) {
   const hrefs = {
     announcement: '#announcement',
     creators: '#creators',
+    press: '#press',
     factsheet: '#factsheet',
     description: '#description',
     features: '#features',

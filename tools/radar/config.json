@@ -37,5 +37,35 @@
   },
   "bilibili": {
     "queries": ["友尽大扣篮", "友尽 大扣篮", "DUNK 篮球 游戏", "Katapult Games", "第一人称篮球 联机"]
+  },
+  "press": {
+    "steamApp": 4591520,
+    "outlets": { "anmtvla.com": "ANMTV", "gamemeca.com": "Gamemeca 게임메카", "bluesnews.com": "Blue's News", "gamespress.com": "Games Press" },
+    "google": [
+      ["\"Katapult Games\"", "en"],
+      ["DUNK Katapult", "en"],
+      ["DUNK basketball game", "en"],
+      ["DUNK first-person basketball", "en"],
+      ["\"DUNK\" announced basketball PC 2027", "en"],
+      ["DUNK basquete primeira pessoa 2027", "pt"],
+      ["DUNK juego baloncesto", "es"],
+      ["DUNK baloncesto primera persona", "es"],
+      ["DUNK jogo basquete", "pt"],
+      ["Dunk баскетбол игра", "ru"],
+      ["DUNK Basketball Spiel", "de"],
+      ["DUNK jeu basket", "fr"],
+      ["DUNK gioco basket", "it"],
+      ["DUNK バスケ ゲーム", "ja"],
+      ["덩크 농구 게임", "ko"],
+      ["友尽大扣篮", "zh"]
+    ],
+    "bing": [
+      ["Katapult Games DUNK", "en-US"],
+      ["DUNK first-person basketball game", "en-US"],
+      ["DUNK juego baloncesto primera persona", "es-ES"],
+      ["DUNK jogo basquete", "pt-BR"],
+      ["DUNK Basketball Spiel", "de-DE"],
+      ["DUNK jeu basket", "fr-FR"]
+    ]
   }
 }

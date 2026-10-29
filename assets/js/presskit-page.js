@@ -460,6 +460,123 @@
     new MutationObserver(formatCommunityCounts).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] })
   }
 
+  // Articles about DUNK from press.json (written by tools/radar/press.mjs), newest first.
+  // Each card links out to the article; headlines stay in the outlet's own language.
+  async function setupPress () {
+    const section = document.querySelector('[data-press]')
+    const list = section && section.querySelector('[data-press-list]')
+    if (!list) return
+
+    let items = []
+    let listUrl = window.location.href
+    try {
+      const response = await fetch(section.dataset.src, { cache: 'no-cache' })
+      if (response.ok) {
+        items = await response.json()
+        listUrl = response.url
+      }
+    } catch (error) {}
+    items = Array.isArray(items) ? items.filter(function (item) { return item.url && item.title }) : []
+    if (!items.length) return
+
+    items.forEach(function (item) {
+      const li = document.createElement('li')
+      li.className = 'press__item'
+      const link = document.createElement('a')
+      link.className = 'press__card'
+      link.href = item.url
+      link.target = '_blank'
+      link.rel = 'noopener'
+      link.setAttribute('data-analytics-event', 'Press Article Click')
+
+      const media = document.createElement('span')
+      media.className = 'press__media'
+      const img = document.createElement('img')
+      img.alt = ''
+      img.loading = 'lazy'
+      if (item.thumb) {
+        img.src = new URL(item.thumb, listUrl).href
+        media.appendChild(img)
+      } else {
+        // No image from the outlet: the key art, dimmed, with the outlet's name on top.
+        img.src = 'images/key-art-2026-web.jpg'
+        media.classList.add('press__media--plain')
+        media.appendChild(img)
+        const name = document.createElement('span')
+        name.className = 'press__media-name'
+        name.textContent = item.outlet
+        media.appendChild(name)
+      }
+
+      const meta = document.createElement('span')
+      meta.className = 'press__meta'
+      const outlet = document.createElement('span')
+      outlet.className = 'press__outlet'
+      outlet.textContent = item.outlet
+      meta.appendChild(outlet)
+      if (item.lang) {
+        const lang = document.createElement('span')
+        lang.className = 'press__lang'
+        lang.textContent = item.lang.toUpperCase()
+        meta.appendChild(lang)
+      }
+      if (item.date) {
+        const date = document.createElement('time')
+        date.className = 'press__date'
+        date.dateTime = item.date
+        meta.appendChild(date)
+      }
+
+      const title = document.createElement('span')
+      title.className = 'press__title'
+      title.textContent = item.title
+      if (item.lang) title.lang = item.lang
+
+      link.appendChild(media)
+      link.appendChild(meta)
+      link.appendChild(title)
+      li.appendChild(link)
+      list.appendChild(li)
+    })
+
+    const languages = new Set(items.map(function (item) { return item.lang }).filter(Boolean))
+    section.querySelector('[data-press-articles]').textContent = items.length
+    section.querySelector('[data-press-languages]').textContent = languages.size
+    section.hidden = false
+    formatPressDates()
+    new MutationObserver(formatPressDates).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] })
+
+    // Arrows step one card; touch and trackpads scroll the row natively.
+    const prev = section.querySelector('[data-press-prev]')
+    const next = section.querySelector('[data-press-next]')
+    function update () {
+      const overflow = list.scrollWidth > list.clientWidth + 1
+      prev.hidden = !overflow || list.scrollLeft <= 1
+      next.hidden = !overflow || list.scrollLeft >= list.scrollWidth - list.clientWidth - 1
+    }
+    function step (direction) {
+      const card = list.firstElementChild
+      list.scrollBy({ left: direction * (card.offsetWidth + 16), behavior: 'smooth' })
+    }
+    prev.addEventListener('click', function () { step(-1) })
+    next.addEventListener('click', function () { step(1) })
+    list.addEventListener('scroll', update, { passive: true })
+    window.addEventListener('resize', update)
+    update()
+  }
+
+  function formatPressDates () {
+    let format
+    try {
+      format = new Intl.DateTimeFormat(document.documentElement.lang || 'en', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' })
+    } catch (error) {
+      format = { format: function (date) { return date.toISOString().slice(0, 10) } }
+    }
+    document.querySelectorAll('.press__date').forEach(function (node) {
+      node.textContent = format.format(new Date(node.dateTime + 'T12:00:00Z'))
+    })
+  }
+
   // The most-viewed clip sits in the middle with the next ones on either side (2nd to its right,
   // 3rd to its left, and so on), so the best clips are always in view. The row only sways a little
   // around that spot; arrows step one card, and the row swipes (touch) or drags (mouse) by hand.
@@ -920,6 +1037,7 @@
     setupYoutubeEmbeds()
     setupTrailer()
     setupCommunity()
+    setupPress()
     setupScreenshotCarousels()
     setupGalleryLightbox()
     scrollToInitialHash()

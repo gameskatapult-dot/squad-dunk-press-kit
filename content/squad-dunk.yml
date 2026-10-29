@@ -15,6 +15,8 @@ sections:
     enabled: true
   - id: creators
     enabled: true
+  - id: press
+    enabled: true
   - id: media
     enabled: true
   - id: announcement
@@ -149,6 +151,12 @@ localization:
           prompt: "Post your DUNK clips with #DUNKthegame and we might feature them here."
           prev: "Previous clips"
           next: "Next clips"
+        press:
+          title: "What the press is saying"
+          articles_label: "articles"
+          languages_label: "languages"
+          prev: "Previous articles"
+          next: "Next articles"
         quick_facts:
           developer: "Developer"
           developer_value: "Katapult Games · Ireland"
@@ -188,6 +196,7 @@ localization:
           menu: Menu
           sections:
             creators: "Creators"
+            press: "Press"
             announcement: "Announcement"
             factsheet: "The game"
             description: Description
@@ -454,6 +463,12 @@ localization:
           prompt: "Sube tus clips de DUNK con #DUNKthegame y puede que salgan aquí."
           prev: "Clips anteriores"
           next: "Clips siguientes"
+        press:
+          title: "Lo que dice la prensa"
+          articles_label: "artículos"
+          languages_label: "idiomas"
+          prev: "Artículos anteriores"
+          next: "Artículos siguientes"
         quick_facts:
           developer: "Desarrollo"
           developer_value: "Katapult Games · Irlanda"
@@ -493,6 +508,7 @@ localization:
           menu: Menú
           sections:
             creators: "Creadores"
+            press: "Prensa"
             announcement: "Anuncio"
             factsheet: "El juego"
             description: Descripción
@@ -760,6 +776,12 @@ localization:
           prompt: "Публикуйте клипы DUNK с тегом #DUNKthegame — возможно, мы покажем их здесь."
           prev: "Предыдущие клипы"
           next: "Следующие клипы"
+        press:
+          title: "Что пишет пресса"
+          articles_label: "статей"
+          languages_label: "языков"
+          prev: "Предыдущие статьи"
+          next: "Следующие статьи"
         quick_facts:
           developer: "Разработчик"
           developer_value: "Katapult Games · Ирландия"
@@ -799,6 +821,7 @@ localization:
           menu: Меню
           sections:
             creators: "Авторы"
+            press: "Пресса"
             announcement: "Анонс"
             factsheet: "Об игре"
             description: Описание
@@ -1036,6 +1059,12 @@ localization:
           prompt: "#DUNKthegame を付けてDUNKのクリップを投稿すると、ここで紹介されるかも。"
           prev: "前のクリップ"
           next: "次のクリップ"
+        press:
+          title: "メディア掲載"
+          articles_label: "件の記事"
+          languages_label: "言語"
+          prev: "前の記事"
+          next: "次の記事"
         quick_facts:
           developer: "開発"
           developer_value: "Katapult Games · アイルランド"
@@ -1075,6 +1104,7 @@ localization:
           menu: メニュー
           sections:
             creators: "クリエイター"
+            press: "プレス"
             announcement: "アナウンス"
             factsheet: "ゲーム概要"
             description: 説明
@@ -1303,6 +1333,12 @@ localization:
           prompt: "带上 #DUNKthegame 发布你的友尽大扣篮片段，说不定会出现在这里。"
           prev: "上一组片段"
           next: "下一组片段"
+        press:
+          title: "媒体怎么说"
+          articles_label: "篇文章"
+          languages_label: "种语言"
+          prev: "上一篇"
+          next: "下一篇"
         quick_facts:
           developer: "开发商"
           developer_value: "Katapult Games · 爱尔兰"
@@ -1342,6 +1378,7 @@ localization:
           menu: 菜单
           sections:
             creators: "创作者"
+            press: "媒体报道"
             announcement: "公告"
             factsheet: "游戏介绍"
             description: 游戏介绍
@@ -1597,6 +1634,12 @@ localization:
           prompt: "Poste deine DUNK-Clips mit #DUNKthegame – vielleicht zeigen wir sie hier."
           prev: "Vorherige Clips"
           next: "Nächste Clips"
+        press:
+          title: "Was die Presse sagt"
+          articles_label: "Artikel"
+          languages_label: "Sprachen"
+          prev: "Vorherige Artikel"
+          next: "Nächste Artikel"
         quick_facts:
           developer: "Entwickler"
           developer_value: "Katapult Games · Irland"
@@ -1636,6 +1679,7 @@ localization:
           menu: Menü
           sections:
             creators: "Creator"
+            press: "Presse"
             announcement: "Ankündigung"
             factsheet: "Das Spiel"
             description: Beschreibung
@@ -1904,6 +1948,12 @@ localization:
           prompt: "Publiez vos clips de DUNK avec #DUNKthegame : ils pourraient apparaître ici."
           prev: "Clips précédents"
           next: "Clips suivants"
+        press:
+          title: "Ce qu'en dit la presse"
+          articles_label: "articles"
+          languages_label: "langues"
+          prev: "Articles précédents"
+          next: "Articles suivants"
         quick_facts:
           developer: "Développeur"
           developer_value: "Katapult Games · Irlande"
@@ -1943,6 +1993,7 @@ localization:
           menu: Menu
           sections:
             creators: "Créateurs"
+            press: "Presse"
             announcement: "Annonce"
             factsheet: "Le jeu"
             description: Description
@@ -2212,6 +2263,12 @@ localization:
           prompt: "Publique seus clipes de DUNK com #DUNKthegame e eles podem aparecer aqui."
           prev: "Clipes anteriores"
           next: "Próximos clipes"
+        press:
+          title: "O que a imprensa está dizendo"
+          articles_label: "artigos"
+          languages_label: "idiomas"
+          prev: "Artigos anteriores"
+          next: "Próximos artigos"
         quick_facts:
           developer: "Desenvolvedora"
           developer_value: "Katapult Games · Irlanda"
@@ -2251,6 +2308,7 @@ localization:
           menu: Menu
           sections:
             creators: "Criadores"
+            press: "Imprensa"
             announcement: "Anúncio"
             factsheet: "O jogo"
             description: Descrição
