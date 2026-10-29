@@ -733,6 +733,30 @@
     if (reduceMotion) setPaused(true)
   }
 
+  // Images with a Chinese version (the 友尽大扣篮 logo) swap in when the page is in Chinese.
+  function setupLocalizedImages () {
+    const images = Array.prototype.slice.call(document.querySelectorAll('img[data-src-zh]'))
+    if (!images.length) return
+    images.forEach(function (img) {
+      img.setAttribute('data-src-default', img.getAttribute('src'))
+      img.setAttribute('data-alt-default', img.getAttribute('alt') || '')
+    })
+
+    function sync () {
+      const suffix = activeLanguage === 'zh' ? 'zh' : 'default'
+      images.forEach(function (img) {
+        const src = img.getAttribute('data-src-' + suffix)
+        if (img.getAttribute('src') === src) return
+        img.setAttribute('src', src)
+        img.setAttribute('alt', img.getAttribute('data-alt-' + suffix) || img.getAttribute('data-alt-default'))
+        img.removeAttribute('width')
+        img.removeAttribute('height')
+      })
+    }
+    window.addEventListener('presskit:languagechange', sync)
+    sync()
+  }
+
   // Key art windows: each PSD layer moves at its own speed while the window crosses the screen.
   function setupScenes () {
     const scenes = Array.prototype.slice.call(document.querySelectorAll('[data-scene]'))
@@ -790,6 +814,7 @@
     setupNavigation()
     setupLandingHero()
     setupHeroVideo()
+    setupLocalizedImages()
     setupScenes()
     setupYoutubeEmbeds()
     setupTrailer()

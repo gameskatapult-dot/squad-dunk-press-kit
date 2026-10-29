@@ -1244,7 +1244,7 @@ localization:
           browse_assets: キーアートとロゴを見る
     zh:
       description:
-        heading: DUNK 是什么？
+        heading: 友尽大扣篮（DUNK）是什么？
         short:
           title: 简短介绍
           text: 一款支持1⁠–⁠6人的第一人称篮球游戏，每一次基于物理的传球、盖帽和DUNK都取决于你的技巧。踏上遍布宇宙的独特球场，用近距离聊天和朋友闲聊，或通过单人游玩磨练第一人称球技。解锁新造型、表情等内容，在朋友面前秀一把！
@@ -1259,7 +1259,7 @@ localization:
             body: 以第一人称控制一名球员，从球场内部体验传球、抢断、投篮和防守，而不是从远处俯视比赛。
           - icon: ""
             title: 感受物理互动
-            body: DUNK 使用基于物理的机制，让篮球更鲜活、更有身体感，也更不可预测。盖帽、投篮、抢断、篮板、移动和碰撞都会成为比赛的一部分。
+            body: 友尽大扣篮使用基于物理的机制，让篮球更鲜活、更有身体感，也更不可预测。盖帽、投篮、抢断、篮板、移动和碰撞都会成为比赛的一部分。
           - icon: ""
             title: 团队配合
             body: 你可以单人游玩，也可以和朋友一起进行休闲或竞技比赛。协作配合，把看似离谱的想法变成真实可行的战术。
@@ -1295,17 +1295,17 @@ localization:
           steam_cta: "在 Steam 上加入愿望单"
           download_cta: "下载媒体资料包"
           contact_cta: "媒体联系"
-          video_label: "DUNK 试玩测试公告视频"
+          video_label: "友尽大扣篮公告视频"
           pause: "暂停视频"
           play: "播放视频"
         trailer:
           title: "官方公布预告片"
           play: "观看预告片"
           youtube: "在 YouTube 上观看"
-          wishlist_prompt: "喜欢吗？在 Steam 上将 DUNK 加入愿望单。"
+          wishlist_prompt: "喜欢吗？在 Steam 上将友尽大扣篮加入愿望单。"
         community:
           title: "来自社区"
-          prompt: "带上 #DUNKthegame 发布你的 DUNK 片段，说不定会出现在这里。"
+          prompt: "带上 #DUNKthegame 发布你的友尽大扣篮片段，说不定会出现在这里。"
         quick_facts:
           developer: "开发商"
           developer_value: "Katapult Games · 爱尔兰"
@@ -1323,19 +1323,19 @@ localization:
           download: "下载"
           items:
             - title: "主宣传图 · 英文"
-              alt: "带英文标志的 DUNK 主宣传图。"
+              alt: "带英文标志的友尽大扣篮主宣传图。"
             - title: "主宣传图 · 中文"
-              alt: "带中文标志的 DUNK 主宣传图。"
+              alt: "带中文标志的友尽大扣篮主宣传图。"
             - title: "视差视频 · 无文字"
-              alt: "无文字的 DUNK 主视觉视差视频。"
+              alt: "无文字的友尽大扣篮主视觉视差视频。"
             - title: "试玩测试视频 · 英文"
               alt: "公告图 · 英文"
             - title: "试玩测试视频 · 中文"
               alt: "公告图 · 中文"
             - title: "公告图 · 英文"
-              alt: "DUNK 试玩测试英文公告图。"
+              alt: "友尽大扣篮试玩测试英文公告图。"
             - title: "公告图 · 中文"
-              alt: "DUNK 试玩测试中文公告图。"
+              alt: "友尽大扣篮试玩测试中文公告图。"
         landing:
           nav:
             home: 首页
@@ -1378,7 +1378,7 @@ localization:
             website: "网站:"
             tags: "标签:"
           values:
-            about: DUNK
+            about: 友尽大扣篮（DUNK）
             development: 由 Katapult Games 积极开发中。
             based_in: 爱尔兰
             publisher: Katapult Games
@@ -1460,7 +1460,7 @@ localization:
           download: 主视觉与标志 · ZIP
           assets:
             - title: 主视觉 · JPG
-              alt: DUNK主视觉：一名球员在蓝天下跃向篮筐。
+              alt: 友尽大扣篮主视觉：一名球员在蓝天下跃向篮筐。
             - title: DUNK标志 · PNG
               alt: 透明背景上的白色DUNK标志。
         links:
@@ -1491,10 +1491,10 @@ localization:
           body: 我们使用注重隐私的访问分析来了解汇总访问情况并改进本新闻资料包。我们不使用分析
             Cookie，不跨网站跟踪访客，不建立个人档案，也不出售访客数据。我们只收集页面浏览量、来源网站、大致国家或地区、设备类型、浏览器以及新闻链接点击情况等汇总信息。
         page:
-          title: DUNK — 媒体资料包 · Katapult Games
-          home_title: DUNK — Katapult Games
+          title: 友尽大扣篮 DUNK — 媒体资料包 · Katapult Games
+          home_title: 友尽大扣篮 DUNK — Katapult Games
         carousel:
-          label: DUNK游戏截图
+          label: 友尽大扣篮游戏截图
           role: 轮播
           track: 截图图库；使用左右方向键浏览
           thumbnails: 选择截图

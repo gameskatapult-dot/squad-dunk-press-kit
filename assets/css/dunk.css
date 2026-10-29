@@ -65,6 +65,8 @@ body.dunk {
 .topbar__brand { display: flex; flex-shrink: 0; align-items: center; gap: 12px; }
 .topbar__brand a { display: flex; }
 .topbar__brand img { width: auto; height: 28px; }
+/* The Chinese logo needs more height for its characters to read. */
+html[lang="zh"] .topbar__brand img { height: 40px; }
 /* Where you are, not a link: the logo is the way home. */
 .topbar__label { padding-left: 12px; color: var(--soft); border-left: 1px solid var(--line); font-size: 13px; font-weight: 700; letter-spacing: .06em; line-height: 22px; text-transform: uppercase; }
 .topbar__nav { display: flex; flex: 1; justify-content: center; gap: 4px; min-width: 0; }
@@ -267,6 +269,7 @@ body.gallery-lightbox-open { overflow: hidden; }
   .trailer__badge { padding: 12px; }
   .trailer__badge span { display: none; }
   .topbar__brand img { height: 24px; }
+  html[lang="zh"] .topbar__brand img { height: 34px; }
   .topbar__language { width: 104px; }
   .scene { height: 85vw; min-height: 0; }
   .intro__actions { flex-direction: column; align-self: stretch; }
