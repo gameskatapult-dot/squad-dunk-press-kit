@@ -1,7 +1,7 @@
 # October 2026: old media retained but hidden; current art uploaded 2026-10-15.
 # Name confirmed as DUNK by the owner. Existing domain and URLs retained.
 title: DUNK
-website: https://squaddunk.com/
+website: https://dunkthegame.com/
 
 analytics:
   goatcounter_endpoint: https://katapultgames.goatcounter.com/count
@@ -2794,9 +2794,9 @@ links:
     enabled: true
   - id: dunk-website
     title: Web
-    url: https://squaddunk.com/
+    url: https://dunkthegame.com/
     enabled: true
   - id: dunk-presskit
     title: Presskit
-    url: https://squaddunk.com/presskit/
+    url: https://dunkthegame.com/presskit/
     enabled: false

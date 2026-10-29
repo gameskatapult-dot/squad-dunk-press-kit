@@ -43,6 +43,8 @@ jobs:
           cp -R build/squad-dunk build/presskit
           cp pages/root-redirect.html build/index.html
           cp -R pages/community build/community
+          cp pages/sitemap.xml build/sitemap.xml
+          cp pages/robots.txt build/robots.txt
           cp CNAME build/CNAME
           touch build/.nojekyll
 

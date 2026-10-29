@@ -30,86 +30,49 @@ This repository deploys through GitHub Actions on pushes to `main`.
 The deployment uses the custom domain:
 
 ```text
-squaddunk.com
+dunkthegame.com
 ```
 
-Expected public URLs after DNS and GitHub Pages certificate provisioning:
+Public URLs (GitHub Pages redirects `www.dunkthegame.com` to the apex with a 301):
 
 ```text
-https://squaddunk.com/presskit/
-https://squaddunk.com/
+https://dunkthegame.com/
+https://dunkthegame.com/presskit/
+https://dunkthegame.com/sitemap.xml
 ```
 
-The root of the Pages site shows the current DUNK key art and links to `./presskit/`. The press kit uses the same visual style and offers the current key art and logo for download.
+The workflow publishes `build/CNAME` (copied from the root `CNAME`, exactly `dunkthegame.com`), plus `pages/sitemap.xml` and `pages/robots.txt` at the site root.
 
-The workflow publishes:
+## DNS for `dunkthegame.com` (Namecheap BasicDNS)
+
+In Namecheap -> Domain List -> dunkthegame.com -> Advanced DNS, under Host Records:
 
 ```text
-build/CNAME
+Type: A      Host: @    Value: 185.199.108.153
+Type: A      Host: @    Value: 185.199.109.153
+Type: A      Host: @    Value: 185.199.110.153
+Type: A      Host: @    Value: 185.199.111.153
+Type: AAAA   Host: @    Value: 2606:50c0:8000::153
+Type: AAAA   Host: @    Value: 2606:50c0:8001::153
+Type: AAAA   Host: @    Value: 2606:50c0:8002::153
+Type: AAAA   Host: @    Value: 2606:50c0:8003::153
+Type: CNAME  Host: www  Value: gameskatapult-dot.github.io.
 ```
 
-with exactly:
+Remove the parking / URL Redirect records for `@` and `www`. Leave Mail Settings (Email Forwarding) and the SPF `TXT` record as they are.
 
-```text
-squaddunk.com
-```
+In GitHub: Settings -> Pages -> Custom domain `dunkthegame.com`, wait for the DNS check, then enable Enforce HTTPS.
 
-## DNS for `squaddunk.com`
+## `squaddunk.com` -> `dunkthegame.com` (Cloudflare)
 
-At the DNS provider for `squaddunk.com`, configure the apex/root domain to point to GitHub Pages.
+`squaddunk.com` uses Cloudflare nameservers, so its redirect lives there, not on GitHub Pages (a Pages site serves only one custom domain).
 
-Add these `A` records:
+1. DNS: switch the `@` `A` records and the `www` `CNAME` to Proxied (orange cloud). Do not touch `MX` or `TXT` records (Google Workspace mail and site verification).
+2. Rules -> Redirect Rules -> Create rule:
+   - When: Hostname is in `squaddunk.com`, `www.squaddunk.com`
+   - Then: Dynamic, expression `concat("https://dunkthegame.com", http.request.uri.path)`, status 301, Preserve query string on.
 
-```text
-Type: A
-Name: @
-Value: 185.199.108.153
-
-Type: A
-Name: @
-Value: 185.199.109.153
-
-Type: A
-Name: @
-Value: 185.199.110.153
-
-Type: A
-Name: @
-Value: 185.199.111.153
-```
-
-Optional IPv6 records:
-
-```text
-Type: AAAA
-Name: @
-Value: 2606:50c0:8000::153
-
-Type: AAAA
-Name: @
-Value: 2606:50c0:8001::153
-
-Type: AAAA
-Name: @
-Value: 2606:50c0:8002::153
-
-Type: AAAA
-Name: @
-Value: 2606:50c0:8003::153
-```
-
-Remove or replace any conflicting `A`, `AAAA`, `ALIAS`, `ANAME`, or `CNAME` records for the root `@` domain before expecting GitHub Pages to validate cleanly.
-
-In GitHub:
-
-1. Go to `Settings` -> `Pages`.
-2. Set `Custom domain` to `squaddunk.com`.
-3. Wait for the DNS check to pass.
-4. Enable `Enforce HTTPS` once the certificate is available.
-
-Do not use `press.squaddunk.com` for this setup.
-
-Note: this means the press kit repository controls the root `squaddunk.com` domain. The main game website can later replace this by moving the press kit into that site's `/presskit/` path or by adding a hosting-level rewrite.
+Result: `http(s)://(www.)squaddunk.com/any/path?x=1` -> `301 https://dunkthegame.com/any/path?x=1`.
 
 ## Notes
 

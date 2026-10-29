@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <product>
   <title>DUNK</title>
-  <website>https://squaddunk.com/</website>
+  <website>https://dunkthegame.com/</website>
   <goatcounter-endpoint>https://katapultgames.goatcounter.com/count</goatcounter-endpoint>
   <release-dates>
     <release-date>To be announced</release-date>
@@ -408,7 +408,7 @@ We are Katapult Games and we build games with our community, not just for them. 
     <link>
       <id>dunk-website</id>
       <title>Web</title>
-      <url>https://squaddunk.com/</url>
+      <url>https://dunkthegame.com/</url>
       <label/>
       <enabled>true</enabled>
     </link>
