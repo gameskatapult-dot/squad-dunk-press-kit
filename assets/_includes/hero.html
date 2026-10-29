@@ -1,20 +1,5 @@
-<section class="hero" id="home" aria-labelledby="press-title">
-  <div class="hero__media">
-    {{#if presskit.heroVideo.src}}
-    <video class="hero__video" data-hero-video autoplay muted loop playsinline preload="auto"
-      src="{{presskit.heroVideo.src}}" poster="{{presskit.heroVideo.poster}}"
-      data-src-default="{{presskit.heroVideo.src}}" data-poster-default="{{presskit.heroVideo.poster}}"
-      {{#if presskit.heroVideo.srcZh}}data-src-zh="{{presskit.heroVideo.srcZh}}" data-poster-zh="{{presskit.heroVideo.posterZh}}"{{/if}}
-      data-l10n-aria-label="ui.hero.video_label" aria-label="DUNK playtest announcement video"></video>
-    <button class="hero__toggle" type="button" data-hero-toggle data-l10n-aria-label="ui.hero.pause" aria-label="Pause video" aria-pressed="false">
-      <svg class="hero__icon-pause" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2h3v12H4zM9 2h3v12H9z" fill="currentColor"/></svg>
-      <svg class="hero__icon-play" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2l10 6-10 6z" fill="currentColor"/></svg>
-    </button>
-    {{else}}
-    <img src="images/key-art-2026-web.jpg" width="1800" height="1031" data-l10n-alt="ui.branding.assets.0.alt" alt="DUNK key art" fetchpriority="high">
-    {{/if}}
-  </div>
-</section>
+{{!-- The press kit opens on the trailer; the info block with the press buttons follows. --}}
+{{>trailer}}
 
 <section class="intro sky" id="start" aria-labelledby="press-title">
   <div class="container intro__inner">
@@ -27,6 +12,10 @@
         <span data-l10n="ui.hero.steam_cta">Wishlist on Steam</span>
       </a>
       {{/if}}
+      <a class="button button--cloud" href="#creators" data-analytics-event="Press Kit View">
+        <svg class="button__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 3h10l4 4v14H5zm2 2v14h10V8h-3V5zm2 6h6v2H9zm0 4h6v2H9z"/></svg>
+        <span data-l10n="ui.landing.view_press_kit">View press kit</span>
+      </a>
       {{#if presskit.pressKitLink.url}}
       <a class="button button--cloud" href="{{presskit.pressKitLink.url}}" target="_blank" rel="noopener" data-analytics-event="Press Kit Download">
         <svg class="button__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M11 3h2v10.17l3.59-3.58L18 11l-6 6-6-6 1.41-1.41L11 13.17zM4 19h16v2H4z"/></svg>
@@ -53,8 +42,4 @@
   </div>
 </section>
 
-{{>trailer}}
-
 {{>creators}}
-
-{{>scene variant="world"}}

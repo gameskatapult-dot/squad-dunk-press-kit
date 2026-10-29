@@ -390,9 +390,11 @@
       }
     } catch (error) {}
     items = Array.isArray(items) ? items.filter(function (item) { return communityPlatforms[item.platform] && item.id }) : []
-    if (!items.length) return
+    // A clip cross-posted on several platforms shows once; its other copies still count in the total.
+    const cards = items.filter(function (item) { return !item.duplicateOf })
+    if (!cards.length) return
 
-    items.forEach(function (item) {
+    cards.forEach(function (item) {
       const platform = communityPlatforms[item.platform]
       const li = document.createElement('li')
       li.className = 'community__item' + (item.vertical || item.platform !== 'youtube' ? ' community__item--vertical' : '')
@@ -422,11 +424,11 @@
       }
       start.insertAdjacentHTML('beforeend', '<span class="community__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>')
 
-      // Views first; likes join them once there are a lot (counts as of when the post was added).
+      // Views always sit at the bottom of the card; likes stack above them once there are a lot.
       const stats = document.createElement('span')
       stats.className = 'community__stats'
-      if (item.views) stats.appendChild(communityStat(communityIcons.views, item.views))
       if (item.likes && (item.likes >= communityLikesShown || !item.views)) stats.appendChild(communityStat(communityIcons.likes, item.likes))
+      if (item.views) stats.appendChild(communityStat(communityIcons.views, item.views))
       if (stats.children.length) start.appendChild(stats)
       start.addEventListener('click', function () {
         const frame = document.createElement('iframe')
@@ -464,8 +466,39 @@
     }
     section.hidden = false
     formatCommunityCounts()
-    setupCommunityCarousel(list, section.querySelector('[data-community-viewport]') || list)
+    const viewport = section.querySelector('[data-community-viewport]') || list
+    const more = section.querySelector('[data-community-more]')
+    if (more) showTopCommunityClips(section, list, viewport, more, cards.length)
+    else setupCommunityCarousel(list, viewport)
     new MutationObserver(formatCommunityCounts).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] })
+  }
+
+  // First impression: only the most-viewed clips that fit (one row, two on phones), standing still.
+  // "See all clips" reveals the rest as the moving carousel.
+  function showTopCommunityClips (section, list, viewport, more, count) {
+    const items = Array.from(list.children)
+    const counter = more.querySelector('[data-community-count-all]')
+    if (counter) counter.textContent = '(' + count + ')'
+    section.classList.add('is-collapsed')
+
+    function fit () {
+      items.forEach(function (item) { item.hidden = false })
+      const step = items[0].offsetWidth + parseFloat(getComputedStyle(list).columnGap || 16)
+      const perRow = Math.max(1, Math.floor((list.clientWidth + step - items[0].offsetWidth) / step))
+      const shown = perRow * (window.innerWidth <= 720 ? 2 : 1)
+      items.forEach(function (item, index) { item.hidden = index >= shown })
+      more.hidden = shown >= items.length
+    }
+    fit()
+    window.addEventListener('resize', fit)
+
+    more.addEventListener('click', function () {
+      window.removeEventListener('resize', fit)
+      items.forEach(function (item) { item.hidden = false })
+      section.classList.remove('is-collapsed')
+      more.hidden = true
+      setupCommunityCarousel(list, viewport)
+    })
   }
 
   // Endless drift: the cards are cloned once and the row scrolls slowly, wrapping at the halfway
