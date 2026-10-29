@@ -128,13 +128,6 @@ html[lang="zh"] .topbar__brand img { height: 40px; }
 .community__rail.is-dragging { cursor: grabbing; }
 .community__rail.is-dragging .community__start { pointer-events: none; }
 .community__viewport { position: relative; }
-/* Collapsed: the top clips stand still in one row (two on phones), centred, no arrows. */
-.community.is-collapsed .community__rail { flex-wrap: wrap; justify-content: center; overflow: visible; }
-.community.is-collapsed .community__item { margin: 0; }
-.community.is-collapsed .community__item[hidden] { display: none; }
-.community.is-collapsed .community__arrow { display: none; }
-.community__more { margin-top: 28px; }
-.community__more[hidden] { display: none; }
 .community__arrow { position: absolute; z-index: 1; top: calc(50% - 18px); display: grid; place-items: center; width: 52px; height: 52px; padding: 0; color: var(--bg); background: var(--cream); border: 0; border-radius: 50%; box-shadow: 0 10px 28px rgba(0, 0, 0, .45); cursor: pointer; transform: translateY(-50%); transition: transform .2s ease, background .2s ease; }
 .community__arrow:hover { background: #fff; transform: translateY(-50%) scale(1.06); }
 .community__arrow:focus-visible { outline: 3px solid var(--ball); outline-offset: 3px; }

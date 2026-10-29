@@ -360,10 +360,8 @@
     }
   }
 
-  const communityLikesShown = 1000
   const communityIcons = {
-    views: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 5C6.5 5 2.7 9.3 1.5 12c1.2 2.7 5 7 10.5 7s9.3-4.3 10.5-7C21.3 9.3 17.5 5 12 5m0 11.5a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9m0-2.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/></svg>',
-    likes: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.8 4.5c2.1 0 3.6 1.2 5.2 3 1.6-1.8 3.1-3 5.2-3 3.8 0 5.9 3.9 4.4 7.3C19.5 16.4 12 21 12 21"/></svg>'
+    views: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 5C6.5 5 2.7 9.3 1.5 12c1.2 2.7 5 7 10.5 7s9.3-4.3 10.5-7C21.3 9.3 17.5 5 12 5m0 11.5a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9m0-2.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/></svg>'
   }
 
   function communityStat (icon, count) {
@@ -424,12 +422,13 @@
       }
       start.insertAdjacentHTML('beforeend', '<span class="community__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>')
 
-      // Views always sit at the bottom of the card; likes stack above them once there are a lot.
-      const stats = document.createElement('span')
-      stats.className = 'community__stats'
-      if (item.likes && (item.likes >= communityLikesShown || !item.views)) stats.appendChild(communityStat(communityIcons.likes, item.likes))
-      if (item.views) stats.appendChild(communityStat(communityIcons.views, item.views))
-      if (stats.children.length) start.appendChild(stats)
+      // View count, as of the last refresh.
+      if (item.views) {
+        const stats = document.createElement('span')
+        stats.className = 'community__stats'
+        stats.appendChild(communityStat(communityIcons.views, item.views))
+        start.appendChild(stats)
+      }
       start.addEventListener('click', function () {
         const frame = document.createElement('iframe')
         frame.src = platform.embed(item)
@@ -466,39 +465,8 @@
     }
     section.hidden = false
     formatCommunityCounts()
-    const viewport = section.querySelector('[data-community-viewport]') || list
-    const more = section.querySelector('[data-community-more]')
-    if (more) showTopCommunityClips(section, list, viewport, more, cards.length)
-    else setupCommunityCarousel(list, viewport)
+    setupCommunityCarousel(list, section.querySelector('[data-community-viewport]') || list)
     new MutationObserver(formatCommunityCounts).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] })
-  }
-
-  // First impression: only the most-viewed clips that fit (one row, two on phones), standing still.
-  // "See all clips" reveals the rest as the moving carousel.
-  function showTopCommunityClips (section, list, viewport, more, count) {
-    const items = Array.from(list.children)
-    const counter = more.querySelector('[data-community-count-all]')
-    if (counter) counter.textContent = '(' + count + ')'
-    section.classList.add('is-collapsed')
-
-    function fit () {
-      items.forEach(function (item) { item.hidden = false })
-      const step = items[0].offsetWidth + parseFloat(getComputedStyle(list).columnGap || 16)
-      const perRow = Math.max(1, Math.floor((list.clientWidth + step - items[0].offsetWidth) / step))
-      const shown = perRow * (window.innerWidth <= 720 ? 2 : 1)
-      items.forEach(function (item, index) { item.hidden = index >= shown })
-      more.hidden = shown >= items.length
-    }
-    fit()
-    window.addEventListener('resize', fit)
-
-    more.addEventListener('click', function () {
-      window.removeEventListener('resize', fit)
-      items.forEach(function (item) { item.hidden = false })
-      section.classList.remove('is-collapsed')
-      more.hidden = true
-      setupCommunityCarousel(list, viewport)
-    })
   }
 
   // Endless drift: the cards are cloned once and the row scrolls slowly, wrapping at the halfway
@@ -550,7 +518,7 @@
     const speed = 32 // px per second
     let position = list.scrollLeft
     let target = null // where an arrow click is gliding to
-    let resumeAt = 0 // drifting waits a moment after the visitor moves the row
+    let resumeAt = window.performance.now() + 4000 // the top clips hold still first; drifting also waits after the visitor moves the row
     let paused = 0
     let stopped = false
     let last = null
@@ -570,6 +538,10 @@
       resumeAt = window.performance.now() + 3000
     }
     loop = loopWidth
+    // Start one loop in, so the most-viewed clip sits clear of the faded left edge
+    // with the tail of the last clip peeking behind it.
+    position = loopWidth() - list.clientWidth * 0.06 - 8
+    list.scrollLeft = position
     if (prev) prev.addEventListener('click', function () { go(-1) })
     if (next) next.addEventListener('click', function () { go(1) })
 
