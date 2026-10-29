@@ -401,6 +401,8 @@ function shortTitle (text) {
 // TikTok and Instagram image links expire, so their thumbnails are saved next to community.json.
 async function saveThumb (p) {
   let url = p.thumbUrl
+  // Public posts serve their cover here without a login.
+  if (p.platform === 'instagram' && !url) url = `https://www.instagram.com/p/${p.id}/media/?size=l`
   if (p.platform === 'tiktok') {
     const html = await get(p.url)
     const own = html.slice(Math.max(0, html.indexOf(`"id":"${p.id}"`)))
@@ -422,11 +424,20 @@ async function saveThumb (p) {
 // the site shows only the copy with most views (the others get duplicateOf, and still add to the total).
 function markCrossPost (list, item, post) {
   const dateOf = i => db.posts[key(i.platform, i.id)]?.date || (i.platform === 'instagram' ? instagramDate(i.id) : '')
-  const copies = list.filter(i => i.platform !== item.platform && sameCreator(i.author, item.author) &&
-    dateOf(i) && post.date && Math.abs(Date.parse(dateOf(i)) - Date.parse(post.date)) <= 3 * 864e5)
-  if (!copies.length) return
-  const primaryId = copies.find(i => !i.duplicateOf)?.id || copies[0].duplicateOf
-  const primary = list.find(i => i.id === primaryId) || copies[0]
+  const words = t => new Set((t || '').toLowerCase().match(/[\p{L}\p{N}]{3,}/gu) || [])
+  const overlap = (a, b) => { const [x, y] = [words(a), words(b)]; return [...x].filter(w => y.has(w)).length / Math.max(1, Math.min(x.size, y.size)) }
+  const near = i => dateOf(i) && post.date && Math.abs(Date.parse(dateOf(i)) - Date.parse(post.date)) <= 3 * 864e5
+  // Same creator on another network, or the very same title under a different handle.
+  const copies = list.filter(i => i.platform !== item.platform && near(i) &&
+    (sameCreator(i.author, item.author) || overlap(i.title, item.title) >= 0.9))
+  // A creator with several different videos: pair with the one whose title matches best, or none.
+  const groups = new Map()
+  for (const i of copies) groups.set(i.duplicateOf || i.id, Math.max(groups.get(i.duplicateOf || i.id) || 0, overlap(i.title, item.title)))
+  if (!groups.size) return
+  const [primaryId, score] = [...groups].sort((a, b) => b[1] - a[1])[0]
+  if (groups.size > 1 && score < 0.3) return
+  const primary = list.find(i => i.id === primaryId)
+  if (!primary) return
   if ((item.views || 0) <= (primary.views || 0)) { item.duplicateOf = primary.id; return }
   // The new copy is the most watched: it becomes the one shown.
   for (const i of list) if (i === primary || i.duplicateOf === primary.id) i.duplicateOf = item.id
@@ -447,11 +458,13 @@ async function site () {
   const onSite = new Set(list.map(i => key(i.platform, i.id)))
   let added = 0
   for (const [k, p] of Object.entries(db.posts)) {
-    if (p.status !== 'aprobado' || onSite.has(k)) continue
+    // The carousel only plays these three networks.
+    if (p.status !== 'aprobado' || onSite.has(k) || !['youtube', 'tiktok', 'instagram'].includes(p.platform)) continue
     const item = { platform: p.platform, id: p.id }
     // The carousel only shows vertical clips. Real Shorts open at /shorts/; other videos redirect.
     if (p.platform === 'youtube') {
-      if ((await fetch('https://www.youtube.com/shorts/' + p.id, { headers: H, redirect: 'manual' })).status !== 200) {
+      // SOCS=CAI answers the cookie-consent prompt (rejecting cookies), which otherwise redirects every request.
+      if ((await fetch('https://www.youtube.com/shorts/' + p.id, { headers: { 'user-agent': UA, cookie: 'SOCS=CAI' }, redirect: 'manual' })).status !== 200) {
         p.status = 'descartado'
         p.reason = 'video horizontal'
         console.log(`  - ${p.author}: video horizontal, no va al carrusel`)
