@@ -143,7 +143,7 @@
     <dt data-l10n="ui.factsheet.labels.steam">Steam:</dt>
     <dd>
       {{#if presskit.steamLink.url}}
-        <a href="{{presskit.steamLink.url}}" data-analytics-event="Steam Click" data-l10n="ui.factsheet.values.steam">{{presskit.steamLink.label}}</a>
+        <a href="{{presskit.steamLink.url}}" data-analytics-event="Steam Click" data-analytics-placement="factsheet" data-l10n="ui.factsheet.values.steam">{{presskit.steamLink.label}}</a>
       {{else}}
         <span data-l10n="ui.factsheet.values.steam">{{presskit.steamLink.label}}</span>
       {{/if}}

@@ -30,6 +30,88 @@
     return template.replace('{current}', String(index + 1)).replace('{total}', String(total))
   }
 
+  // GoatCounter only counts the production host, so local builds, previews and staging stay out of
+  // the stats. count.js itself honours the per-browser opt-out (#toggle-goatcounter).
+  const analyticsHosts = ['dunkthegame.com']
+  const campaignKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'ref']
+  const campaignStorageKey = 'dunk-campaign'
+  // The Steam UTMs the site has always sent; each one is the fallback when the visit has no campaign.
+  const steamDefaults = { utm_source: 'squaddunk', utm_medium: 'website', utm_campaign: 'announcement' }
+
+  function loadAnalytics () {
+    const meta = document.querySelector('meta[name="goatcounter"][content]')
+    if (!meta || analyticsHosts.indexOf(window.location.hostname) === -1 || window.navigator.webdriver) return
+
+    const script = document.createElement('script')
+    script.async = true
+    script.src = 'https://gc.zgo.at/count.js'
+    script.setAttribute('data-goatcounter', meta.getAttribute('content'))
+    script.setAttribute('data-goatcounter-settings', '{"no_events": true}')
+    document.head.appendChild(script)
+  }
+
+  // "home" or "presskit", from the canonical URL (the /squad-dunk/ copy reports as presskit).
+  function analyticsPage () {
+    const canonical = document.querySelector('link[rel="canonical"][href]')
+    const path = canonical ? new URL(canonical.href).pathname : window.location.pathname
+    return path.replace(/^\/+|\/+$/g, '') || 'home'
+  }
+
+  // A campaign in the URL wins and is kept for the rest of the tab's visit; otherwise reuse the saved one.
+  function readCampaign () {
+    const params = new URLSearchParams(window.location.search)
+    const fromUrl = {}
+    campaignKeys.forEach(function (key) {
+      const value = params.get(key)
+      if (value) fromUrl[key] = value
+    })
+    if (Object.keys(fromUrl).length) {
+      try { window.sessionStorage.setItem(campaignStorageKey, JSON.stringify(fromUrl)) } catch {}
+      return fromUrl
+    }
+
+    try {
+      const stored = JSON.parse(window.sessionStorage.getItem(campaignStorageKey))
+      return stored && typeof stored === 'object' ? stored : {}
+    } catch {
+      return {}
+    }
+  }
+
+  // Links between home and the press kit carry the campaign, so the next pageview keeps it.
+  function carryCampaign (campaign) {
+    if (!Object.keys(campaign).length) return
+    document.querySelectorAll('[data-language-link]').forEach(function (link) {
+      const target = new URL(link.getAttribute('href'), window.location.href)
+      Object.keys(campaign).forEach(function (key) {
+        if (!target.searchParams.has(key)) target.searchParams.set(key, campaign[key])
+      })
+      link.setAttribute('href', target.pathname + target.search + target.hash)
+    })
+  }
+
+  // Steam gets the visit's source/medium/campaign/term (falling back field by field to the historical
+  // values) and utm_content "<page>-<placement>", so Steam's UTM report shows which button sent the visit.
+  function tagSteamLinks (campaign) {
+    const page = analyticsPage()
+    document.querySelectorAll('a[data-analytics-placement][href*="store.steampowered.com"]').forEach(function (link) {
+      const target = new URL(link.href)
+      campaignKeys.forEach(function (key) { target.searchParams.delete(key) })
+      target.searchParams.set('utm_source', campaign.utm_source || campaign.ref || steamDefaults.utm_source)
+      target.searchParams.set('utm_medium', campaign.utm_medium || steamDefaults.utm_medium)
+      target.searchParams.set('utm_campaign', campaign.utm_campaign || steamDefaults.utm_campaign)
+      if (campaign.utm_term) target.searchParams.set('utm_term', campaign.utm_term)
+      target.searchParams.set('utm_content', page + '-' + link.getAttribute('data-analytics-placement'))
+      link.href = target.toString()
+    })
+  }
+
+  function setupCampaign () {
+    const campaign = readCampaign()
+    carryCampaign(campaign)
+    tagSteamLinks(campaign)
+  }
+
   function trackAnalyticsEvent (name, details) {
     if (!name || !window.goatcounter || typeof window.goatcounter.count !== 'function') return
 
@@ -46,16 +128,23 @@
     }
   }
 
+  // One listener for the whole page: one event per activation. Middle-click opens a tab without
+  // firing "click", so it is counted through "auxclick" instead.
   function setupAnalyticsEvents () {
-    document.addEventListener('click', function (event) {
+    function handle (event) {
+      if (event.type === 'auxclick' && event.button !== 1) return
       const origin = event.target
       if (!origin || typeof origin.closest !== 'function') return
 
       const target = origin.closest('[data-analytics-event]')
       if (!target) return
 
-      trackAnalyticsEvent(target.getAttribute('data-analytics-event'))
-    })
+      const name = target.getAttribute('data-analytics-event')
+      const placement = target.getAttribute('data-analytics-placement')
+      trackAnalyticsEvent(placement ? name + ': ' + analyticsPage() + ' / ' + placement : name)
+    }
+    document.addEventListener('click', handle)
+    document.addEventListener('auxclick', handle)
   }
 
   function getPathValue (source, path) {
@@ -1027,6 +1116,8 @@
   }
 
   document.addEventListener('DOMContentLoaded', async function () {
+    loadAnalytics()
+    setupCampaign()
     setupAnalyticsEvents()
     await setupLanguageSelector()
     setupNavigation()
