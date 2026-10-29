@@ -1274,7 +1274,7 @@
    "date": "2026-10-28",
    "views": 0,
    "short": true,
-   "status": "nuevo",
+   "status": "en-sitio",
    "reason": "DUNK + palabra de juego",
    "source": "búsqueda: basketball on the moon game",
    "paid": true,
@@ -1346,7 +1346,7 @@
    "date": "2026-10-28",
    "views": 0,
    "short": true,
-   "status": "nuevo",
+   "status": "en-sitio",
    "reason": "DUNK + palabra de juego",
    "source": "canal: @mrgamingclipzdaily",
    "paid": true,
@@ -2288,6 +2288,102 @@
     ]
    ],
    "related": "2026-10-29"
+  },
+  "youtube:1wSKP1sAyS4": {
+   "platform": "youtube",
+   "id": "1wSKP1sAyS4",
+   "url": "https://www.youtube.com/watch?v=1wSKP1sAyS4",
+   "author": "@helioh",
+   "channelId": "UCnqA5EiO3zC37Nxj1t-38oQ",
+   "title": "The Dunk 🏀 #thefinalsgame #thefinalsgameplay #gaming",
+   "desc": "",
+   "date": "2026-10-23",
+   "published": "2026-10-23T20:43:30-07:00",
+   "views": 5823,
+   "short": true,
+   "status": "descartado",
+   "reason": "dunk + palabra de juego",
+   "source": "búsqueda: DUNK gameplay",
+   "firstSeen": "2026-10-29",
+   "checked": "2026-10-29",
+   "history": [
+    [
+     "2026-10-29",
+     5823
+    ]
+   ]
+  },
+  "youtube:vtLynRdNbHU": {
+   "platform": "youtube",
+   "id": "vtLynRdNbHU",
+   "url": "https://www.youtube.com/watch?v=vtLynRdNbHU",
+   "author": "@CineWelt_AI",
+   "channelId": "UCNtV-UslF90VcFvPzQwabEA",
+   "title": "FUNKY DUNK MANIA 🏀 Go Big. Go Funky! #shortsvideo  #gaming #browsergame #games #y8",
+   "desc": "Four funky teams. Three courts. Big basketball energy! 🏀 Play 1v1 to 4v4, challenge the AI or bring a friend for local 2-player matches. Play FUNKY DUNK MANIA on Y8: https://de.y8.com/games/funky_dunk_mania #FunkyDunkMania #Basketball #Y8 #BrowserGame #Gaming #Shorts",
+   "date": "2026-10-27",
+   "published": "2026-10-27T09:40:34-07:00",
+   "views": 50,
+   "short": true,
+   "status": "descartado",
+   "reason": "DUNK + palabra de juego",
+   "source": "búsqueda: DUNK gameplay",
+   "firstSeen": "2026-10-29",
+   "checked": "2026-10-29",
+   "history": [
+    [
+     "2026-10-29",
+     50
+    ]
+   ]
+  },
+  "youtube:-cJemRtbmZ4": {
+   "platform": "youtube",
+   "id": "-cJemRtbmZ4",
+   "url": "https://www.youtube.com/watch?v=-cJemRtbmZ4",
+   "author": "@ExecutionerAxe",
+   "channelId": "UCUK0agbpHgAWC0taoUFtU6g",
+   "title": "DRAGON CRASH vs WILD DUNK | INAZUMA ELEVEN: VICTORY ROAD",
+   "desc": "This footage is captured from INAZUMA ELEVEN: Victory Road Game! #inazumaeleven #victoryroad",
+   "date": "2026-10-27",
+   "published": "2026-10-27T07:30:23-07:00",
+   "views": 3405,
+   "short": true,
+   "status": "descartado",
+   "reason": "DUNK + palabra de juego",
+   "source": "búsqueda: DUNK gameplay",
+   "firstSeen": "2026-10-29",
+   "checked": "2026-10-29",
+   "history": [
+    [
+     "2026-10-29",
+     3405
+    ]
+   ]
+  },
+  "youtube:FSwDmV406Yw": {
+   "platform": "youtube",
+   "id": "FSwDmV406Yw",
+   "url": "https://www.youtube.com/watch?v=FSwDmV406Yw",
+   "author": "@truffgaming",
+   "channelId": "UCPTqoaVkaOjKQQIw1hiVWLg",
+   "title": "Nasty 😷 #dunk #poster #dunker #basketball #gaming",
+   "desc": "",
+   "date": "2026-10-27",
+   "published": "2026-10-27T10:42:39-07:00",
+   "views": 917,
+   "short": true,
+   "status": "descartado",
+   "reason": "dunk + palabra de juego",
+   "source": "búsqueda: DUNK gameplay",
+   "firstSeen": "2026-10-29",
+   "checked": "2026-10-29",
+   "history": [
+    [
+     "2026-10-29",
+     917
+    ]
+   ]
   }
  },
  "rejected": {
@@ -4100,65 +4196,70 @@
   "youtube:fs46bv5N8rs": "2026-10-29",
   "youtube:4IkMC6dcFEA": "2026-10-29",
   "youtube:cGkutLx7xLM": "2026-10-29",
-  "youtube:iM2z5OrFeuo": "2026-10-29"
+  "youtube:iM2z5OrFeuo": "2026-10-29",
+  "youtube:U91S5Vg5Wac": "2026-10-29",
+  "youtube:P8w_XLMXqhg": "2026-10-29",
+  "youtube:K7QUgJscWI0": "2026-10-29",
+  "youtube:hA5wA_YEDOo": "2026-10-29",
+  "youtube:u5ol5lGzx0c": "2026-10-29",
+  "youtube:vRFA0X6V1v4": "2026-10-29",
+  "youtube:MwXCrJmtCsM": "2026-10-29",
+  "youtube:PD037CTNE3M": "2026-10-29",
+  "youtube:9XJGN989c-g": "2026-10-29",
+  "youtube:lN8RGC4fpxA": "2026-10-29",
+  "youtube:cutd30P10vM": "2026-10-29",
+  "youtube:hWKLYXR1gHQ": "2026-10-29",
+  "youtube:IOrOx4Y1q9g": "2026-10-29",
+  "youtube:fmqMgWwgGuw": "2026-10-29",
+  "youtube:tJ9tSE0A5kw": "2026-10-29",
+  "youtube:vb5gpLfrmRA": "2026-10-29",
+  "youtube:aQMIZmqnibw": "2026-10-29",
+  "youtube:314KnXWDEgs": "2026-10-29",
+  "youtube:W3OxmO3zwQY": "2026-10-29",
+  "youtube:vgeOCqaMRtk": "2026-10-29",
+  "youtube:IFTtCTGW0kc": "2026-10-29",
+  "youtube:jjOH2n0T5ks": "2026-10-29",
+  "youtube:HkFnw5yQHnM": "2026-10-29",
+  "youtube:5YdAxpt9B0s": "2026-10-29",
+  "youtube:teIP7EYxPxI": "2026-10-29",
+  "youtube:apRnGGflyAw": "2026-10-29",
+  "youtube:kOR6tZXWBuA": "2026-10-29",
+  "youtube:Al_K8c9FVgQ": "2026-10-29",
+  "youtube:hfAGuWYrvBY": "2026-10-29",
+  "youtube:tcNg7GmcOT0": "2026-10-29",
+  "youtube:doY4idZZLT8": "2026-10-29",
+  "youtube:qWBN_rn5HJg": "2026-10-29",
+  "youtube:HB10rfnKpfs": "2026-10-29",
+  "youtube:CoAXkFSEiUo": "2026-10-29",
+  "youtube:T0UmTN6l46A": "2026-10-29",
+  "youtube:xo79QYC5T6o": "2026-10-29",
+  "youtube:ouEMLtFJwe8": "2026-10-29",
+  "youtube:096-5WvL_j4": "2026-10-29",
+  "youtube:sNk7iejk7dA": "2026-10-29",
+  "youtube:PwRQCnh9ANo": "2026-10-29",
+  "youtube:nUBrgH4EmH8": "2026-10-29",
+  "youtube:Eo9-TJENhig": "2026-10-29",
+  "youtube:r36PewwTZxs": "2026-10-29",
+  "youtube:fGhOIAGfsTc": "2026-10-29",
+  "youtube:hW3kMDlikSA": "2026-10-29",
+  "youtube:EHggta-1Xts": "2026-10-29",
+  "youtube:e1_E1BQBtco": "2026-10-29",
+  "youtube:wrtQz2umiDw": "2026-10-29",
+  "youtube:B7dh0Y4i03c": "2026-10-29",
+  "youtube:ekU9D1hZ3r0": "2026-10-29",
+  "youtube:j0WFW8iZ28Q": "2026-10-29",
+  "youtube:2TEXaly4LJ0": "2026-10-29",
+  "youtube:j6Jsb7YlPvg": "2026-10-29",
+  "youtube:DC6DNMr1NFY": "2026-10-29",
+  "youtube:cacvPve9dSw": "2026-10-29",
+  "youtube:_CbGv3BdRyg": "2026-10-29",
+  "youtube:36LdreUNpwk": "2026-10-29",
+  "youtube:C1_jkJ6T9pA": "2026-10-29",
+  "youtube:z8LOhBushwQ": "2026-10-29",
+  "youtube:PNlDhb2r_50": "2026-10-29",
+  "youtube:aYSp9jmV968": "2026-10-29"
  },
  "runs": [
-  {
-   "date": "2026-10-29T11:53:55.290Z",
-   "command": "add",
-   "found": 1,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-10-29T11:53:55.479Z",
-   "command": "add",
-   "found": 1,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-10-29T11:54:01.708Z",
-   "command": "site",
-   "found": 0,
-   "requests": 2,
-   "kb": 789
-  },
-  {
-   "date": "2026-10-29T12:03:42.060Z",
-   "command": "refresh",
-   "found": 0,
-   "requests": 42,
-   "kb": 6838
-  },
-  {
-   "date": "2026-10-29T12:04:55.114Z",
-   "command": "site",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-10-29T12:05:25.565Z",
-   "command": "report",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-10-29T12:05:57.404Z",
-   "command": "report",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-10-29T12:20:01.489Z",
-   "command": "scan",
-   "found": 0,
-   "requests": 118,
-   "kb": 10885
-  },
   {
    "date": "2026-10-29T12:22:47.435Z",
    "command": "check",
@@ -4449,6 +4550,62 @@
   {
    "date": "2026-10-29T13:50:57.920Z",
    "command": "site",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-10-29T14:15:28.952Z",
+   "command": "scan",
+   "found": 4,
+   "requests": 100,
+   "kb": 14093
+  },
+  {
+   "date": "2026-10-29T14:16:26.193Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-10-29T14:16:26.385Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-10-29T14:16:30.800Z",
+   "command": "site",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-10-29T14:16:35.661Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-10-29T14:16:35.892Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-10-29T14:16:36.122Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-10-29T14:16:43.894Z",
+   "command": "set",
    "found": 0,
    "requests": 0,
    "kb": 0

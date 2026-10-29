@@ -17,8 +17,6 @@
 
 | Red | Creador | Título | Visitas | +24h | Fecha | Origen | Estado |
 |---|---|---|---:|---:|---|---|---|
-| youtube | [@mrgamingclipzdaily](https://www.youtube.com/watch?v=qa-cPWqkYtM) | You can play basketball on the moon—and low gravity changes the game � | 0 |  | 2026-10-28 | ? · pagado | nuevo |
-| youtube | [@mrgamingclipzdaily](https://www.youtube.com/watch?v=17RvIqd3ZBw) | Why jump for a dunk when you can swing toward the hoop on a vine? 🌿 | 0 |  | 2026-10-28 | ? · pagado | nuevo |
 
 ## Todos por visitas
 
@@ -93,8 +91,8 @@
 | instagram | [@leonardogamingue](https://www.instagram.com/p/DfDiV5tCCfH/) | je rentre le panier ou j'arrête tout DUNK - dispo sur Steam #indiegame | 175 |  | 2026-10-28 | ? · pagado | en-sitio |
 | youtube | [@tvgameover](https://www.youtube.com/watch?v=UnRiERIT9Wc) | DUNK - Basquete em primeira pessoa onde cada enterrada é pessoal | 24 |  | 2026-10-28 | ? | en-sitio |
 | youtube | [@ceroszin](https://www.youtube.com/watch?v=R_64EKQjeLk) | Conheça DUNK, o jogo de basquete baseado em física!!! | 2 |  | 2026-10-29 | ? | en-sitio |
-| youtube | [@mrgamingclipzdaily](https://www.youtube.com/watch?v=qa-cPWqkYtM) | You can play basketball on the moon—and low gravity changes the game � | 0 |  | 2026-10-28 | ? · pagado | nuevo |
-| youtube | [@mrgamingclipzdaily](https://www.youtube.com/watch?v=17RvIqd3ZBw) | Why jump for a dunk when you can swing toward the hoop on a vine? 🌿 | 0 |  | 2026-10-28 | ? · pagado | nuevo |
+| youtube | [@mrgamingclipzdaily](https://www.youtube.com/watch?v=qa-cPWqkYtM) | You can play basketball on the moon—and low gravity changes the game � | 0 |  | 2026-10-28 | ? · pagado | en-sitio |
+| youtube | [@mrgamingclipzdaily](https://www.youtube.com/watch?v=17RvIqd3ZBw) | Why jump for a dunk when you can swing toward the hoop on a vine? 🌿 | 0 |  | 2026-10-28 | ? · pagado | en-sitio |
 
 ## Revisar a mano (Instagram y otros sin visitas automáticas)
 
