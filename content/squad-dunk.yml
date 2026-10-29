@@ -146,7 +146,7 @@ localization:
           youtube: "Watch on YouTube"
           wishlist_prompt: "Liked it? Add DUNK to your Steam wishlist."
         community:
-          title: "Creators are playing DUNK"
+          title: "Creators playing DUNK"
           views_label: "views on creator videos"
           prompt: "Post your DUNK clips with #DUNKthegame and we might feature them here."
           prev: "Previous clips"
