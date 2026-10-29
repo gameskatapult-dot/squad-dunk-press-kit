@@ -7,8 +7,8 @@
 <meta name="referrer" content="no-referrer">
 <title>radar</title>
 <style>
-  :root { --bg: #f4f4f2; --fg: #111; --dim: #777; --line: #ccc; --row: #fff; --hi: #fff3b0; --paid: #b3261e; --org: #1b7f3b; --link: #0645ad; }
-  @media (prefers-color-scheme: dark) { :root { --bg: #0e0e0e; --fg: #ddd; --dim: #888; --line: #333; --row: #161616; --hi: #3a3410; --paid: #ff7a70; --org: #6fd08c; --link: #8ab4f8; } }
+  :root { --bg: #f4f4f2; --fg: #111; --dim: #777; --line: #ccc; --row: #fff; --hi: #fff3b0; --paid: #eb6834; --org: #2a78d6; --link: #0645ad; --grid: #e4e4e0; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #0e0e0e; --fg: #ddd; --dim: #888; --line: #333; --row: #161616; --hi: #3a3410; --paid: #d95926; --org: #3987e5; --link: #8ab4f8; --grid: #262626; } }
   * { box-sizing: border-box; }
   body { margin: 0; padding: 12px 16px 40px; background: var(--bg); color: var(--fg); font: 12px/1.4 ui-monospace, SFMono-Regular, Consolas, monospace; }
   h1 { font-size: 13px; margin: 0 0 8px; font-weight: 700; }
@@ -29,8 +29,19 @@
   td.t { white-space: normal; min-width: 260px; max-width: 420px; }
   tr.copy td { color: var(--dim); }
   tr.main:hover td { background: var(--hi); cursor: pointer; }
-  .paid { color: var(--paid); font-weight: 700; }
-  .org { color: var(--org); font-weight: 700; }
+  /* Paid / no-signal identity is the swatch; the text stays in ink. */
+  .paid::before, .org::before { content: ''; display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 5px; vertical-align: 0; }
+  .paid::before { background: var(--paid); }
+  .org::before { background: var(--org); }
+  .charts { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 10px; margin: 8px 0 12px; }
+  .card { border: 1px solid var(--line); background: var(--row); padding: 8px 10px; min-width: 0; }
+  .card h2 { font-size: 12px; margin: 0 0 2px; }
+  .card .note { color: var(--dim); font-size: 11px; margin-bottom: 6px; }
+  .card svg { display: block; width: 100%; overflow: visible; }
+  .card svg text { fill: var(--dim); font: 10px ui-monospace, Consolas, monospace; }
+  .card svg text.ink { fill: var(--fg); }
+  .legend { display: flex; gap: 12px; color: var(--dim); font-size: 11px; margin-bottom: 4px; }
+  #tip { position: fixed; pointer-events: none; background: var(--fg); color: var(--bg); padding: 4px 7px; font-size: 11px; border-radius: 3px; display: none; z-index: 10; white-space: nowrap; }
   .dim { color: var(--dim); }
   tr.detail td { white-space: normal; background: var(--bg); }
   .detail-grid { display: grid; grid-template-columns: 160px 1fr; gap: 10px; }
@@ -61,6 +72,13 @@
   <button id="csv">CSV</button>
 </div>
 <div class="bar stats" id="stats"></div>
+
+<div class="charts">
+  <div class="card"><h2>Who brings the views</h2><div class="note">top 12 creators, all copies added up</div><div class="legend"><span class="org">no paid signal</span><span class="paid">paid</span></div><div id="cCreators"></div></div>
+  <div class="card"><h2>When videos go up</h2><div class="note" id="cUploadsNote"></div><div class="legend"><span class="org">no paid signal</span><span class="paid">paid</span></div><div id="cUploads"></div></div>
+  <div class="card"><h2>Total views over time</h2><div class="note">sum of every reading the radar has taken (posts count from when they were found)</div><div class="legend"><span class="org">no paid signal</span><span class="paid">paid</span></div><div id="cGrowth"></div></div>
+</div>
+<div id="tip"></div>
 
 <div class="wrap">
 <table id="t">
@@ -205,7 +223,7 @@
   function detail (p) {
     var all = [p].concat(p.copies || [])
     var hist = all.map(function (x) {
-      return esc(x.platform + ' ' + x.author) + ': ' + (x.history || []).map(function (h) { return h[0].slice(5) + ' ' + fmt(h[1]) }).join(' → ')
+      return esc(x.platform + ' ' + x.author) + ': ' + (x.history || []).map(function (h) { return when(h[0], true) + ' ' + fmt(h[1]) }).join(' → ')
     }).join('<br>')
     var img = p.thumb ? '<img src="../' + esc(p.thumb) + '" alt="">' : (p.platform === 'youtube' ? '<img src="https://i.ytimg.com/vi/' + esc(p.id) + '/hqdefault.jpg" alt="">' : '<span></span>')
     return '<tr class="detail"><td colspan="14"><div class="detail-grid">' + img + '<div>' +
@@ -255,7 +273,179 @@
     document.querySelector('#byDay tbody').innerHTML = Object.keys(days).sort().reverse().map(function (d) {
       return '<tr><td>' + d + '</td><td class="num">' + days[d][0] + '</td><td class="num">' + fmt(days[d][1]) + '</td></tr>'
     }).join('')
+
+    charts(list, flat, showCopies)
   }
+
+  // ---------- charts (plain SVG) ----------
+
+  var short = function (n) { return n >= 1e6 ? (n / 1e6).toFixed(1).replace(/\.0$/, '') + 'M' : n >= 1e3 ? Math.round(n / 1e3) + 'k' : String(Math.round(n)) }
+  function niceStep (max, ticks) {
+    var raw = Math.max(max, 1) / ticks, mag = Math.pow(10, Math.floor(Math.log10(raw)))
+    var steps = [1, 2, 2.5, 5, 10]
+    for (var i = 0; i < steps.length; i++) if (steps[i] * mag >= raw) return Math.max(1, steps[i] * mag)
+    return 10 * mag
+  }
+  function svg (el, w, h, body) { el.innerHTML = '<svg viewBox="0 0 ' + w + ' ' + h + '" height="' + h + '">' + body + '</svg>' }
+  // Bars are square at the baseline and rounded (4px) at the data end.
+  function hbar (x, y, w, h) {
+    var r = Math.min(4, w / 2, h / 2)
+    return 'M' + x + ' ' + y + 'h' + (w - r) + 'a' + r + ' ' + r + ' 0 0 1 ' + r + ' ' + r + 'v' + (h - 2 * r) + 'a' + r + ' ' + r + ' 0 0 1 ' + -r + ' ' + r + 'h' + -(w - r) + 'z'
+  }
+  function vbar (x, y, w, h, roundTop) {
+    var r = roundTop ? Math.min(4, w / 2, h) : 0
+    return 'M' + x + ' ' + (y + h) + 'v' + -(h - r) + (r ? 'a' + r + ' ' + r + ' 0 0 1 ' + r + ' ' + -r + 'h' + (w - 2 * r) + 'a' + r + ' ' + r + ' 0 0 1 ' + r + ' ' + r : 'h' + w) + 'v' + (h - r) + 'z'
+  }
+  // Older readings carry only a day; newer ones the hour (UTC).
+  var readingTime = function (k) { return Date.parse(k.length === 10 ? k + 'T09:00:00Z' : k) }
+  var widthOf = function (el) { return Math.max(260, el.clientWidth || 400) }
+
+  function charts (list, flat, showCopies) {
+    chartCreators(list, showCopies)
+    chartUploads(flat)
+    chartGrowth(flat)
+  }
+
+  function chartCreators (list, showCopies) {
+    var el = $('cCreators'), W = widthOf(el)
+    var val = function (p) { return showCopies ? p.views : p.total }
+    var rows = list.slice().sort(function (a, b) { return val(b) - val(a) }).slice(0, 12)
+    if (!rows.length) { el.innerHTML = '<div class="dim">nothing</div>'; return }
+    var labelW = 128, valW = 40, rowH = 18, barH = 12, max = val(rows[0]) || 1
+    var body = ''
+    rows.forEach(function (p, i) {
+      var y = i * rowH, w = Math.max(2, (W - labelW - valW) * val(p) / max)
+      var paid = showCopies ? p.paid : p.groupPaid
+      var name = p.author.length > 18 ? p.author.slice(0, 17) + '…' : p.author
+      var nets = !showCopies && p.copies.length ? ' · ' + (p.copies.length + 1) + ' posts' : ''
+      var tip = p.author + ' · ' + fmt(val(p)) + ' views · ' + (paid ? 'paid' : 'no paid signal') + nets
+      body += '<g data-tip="' + esc(tip) + '"><rect x="0" y="' + y + '" width="' + W + '" height="' + rowH + '" fill="transparent"/>' +
+        '<text class="ink" x="0" y="' + (y + 11) + '">' + esc(name) + '</text>' +
+        '<path d="' + hbar(labelW, y + 2, w, barH) + '" fill="var(' + (paid ? '--paid' : '--org') + ')"/>' +
+        '<text x="' + (labelW + w + 5) + '" y="' + (y + 11) + '">' + short(val(p)) + '</text></g>'
+    })
+    svg(el, W, rows.length * rowH, body)
+  }
+
+  function chartUploads (flat) {
+    var el = $('cUploads'), W = widthOf(el), H = 150, left = 24, bottom = 18
+    var times = flat.map(function (p) { return Date.parse(p.uploaded) }).filter(Boolean)
+    if (!times.length) { el.innerHTML = '<div class="dim">nothing</div>'; $('cUploadsNote').textContent = ''; return }
+    var first = Math.min.apply(null, times), last = Math.max.apply(null, times), now = Date.now()
+    // 3-hour bins while it's one burst; whole days once the range grows.
+    var bin = now - first <= 6 * 864e5 ? 3 * 36e5 : 864e5
+    var t0 = Math.floor(first / bin) * bin, n = Math.ceil((now - t0) / bin)
+    var bins = []
+    for (var i = 0; i < n; i++) bins.push({ t: t0 + i * bin, paid: 0, org: 0 })
+    flat.forEach(function (p) {
+      var t = Date.parse(p.uploaded)
+      if (!t) return
+      var b = bins[Math.min(n - 1, Math.floor((t - t0) / bin))]
+      if (p.paid) b.paid++; else b.org++
+    })
+    var max = Math.max.apply(null, bins.map(function (b) { return b.paid + b.org })), step = niceStep(max, 3)
+    var top = Math.ceil(max / step) * step, plotW = W - left, plotH = H - bottom, bw = plotW / n, body = ''
+    for (var v = 0; v <= top; v += step) {
+      var gy = plotH - plotH * v / top
+      body += '<line x1="' + left + '" x2="' + W + '" y1="' + gy + '" y2="' + gy + '" stroke="var(--grid)"/><text x="' + (left - 4) + '" y="' + (gy + 3) + '" text-anchor="end">' + v + '</text>'
+    }
+    var tz = $('tz').value
+    var clock = function (t) { return new Date(t).toLocaleString('en-GB', { timeZone: tz, hour: '2-digit', minute: '2-digit', hour12: false }) }
+    var lastLabel = -1e9
+    bins.forEach(function (b, i) {
+      var x = left + i * bw, w = Math.max(1, bw - 2), total = b.paid + b.org
+      var hOrg = plotH * b.org / top, hPaid = plotH * b.paid / top
+      var range = when(new Date(b.t).toISOString(), bin < 864e5) + (bin < 864e5 ? '–' + clock(b.t + bin) : '')
+      var tip = range + ' · ' + total + ' upload' + (total === 1 ? '' : 's') + (total ? ' (' + b.paid + ' paid, ' + b.org + ' no signal)' : '')
+      body += '<g data-tip="' + esc(tip) + '"><rect x="' + x + '" y="0" width="' + bw + '" height="' + plotH + '" fill="transparent"/>'
+      if (b.org) body += '<path d="' + vbar(x + 1, plotH - hOrg, w, hOrg, !b.paid) + '" fill="var(--org)"/>'
+      // 2px surface gap between the stacked segments.
+      if (b.paid) {
+        var gap = b.org ? 2 : 0
+        body += '<path d="' + vbar(x + 1, plotH - hOrg - hPaid, w, Math.max(1, hPaid - gap), true) + '" fill="var(--paid)"/>'
+      }
+      body += '</g>'
+      var dayStart = i === 0 || bin >= 864e5 || Number(clock(b.t).slice(0, 2)) < 3
+      if (dayStart && x - lastLabel > 36) {
+        body += '<text x="' + x + '" y="' + (H - 4) + '">' + when(new Date(b.t).toISOString()) + '</text>'
+        lastLabel = x
+      }
+    })
+    body += '<line x1="' + left + '" x2="' + W + '" y1="' + plotH + '" y2="' + plotH + '" stroke="var(--dim)"/>'
+    svg(el, W, H, body)
+    $('cUploadsNote').textContent = 'uploads per ' + (bin < 864e5 ? '3 hours' : 'day') + ', up to now · last one ' + ago(new Date(last).toISOString()) + ' ago'
+  }
+
+  function chartGrowth (flat) {
+    var el = $('cGrowth'), W = widthOf(el), H = 150, left = 34, right = 40, bottom = 18
+    var seen = {}
+    flat.forEach(function (p) { (p.history || []).forEach(function (h) { seen[readingTime(h[0])] = 1 }) })
+    var times = Object.keys(seen).map(Number).sort(function (a, b) { return a - b })
+    if (times.length < 2) { el.innerHTML = '<div class="dim">needs at least two readings — fills in as the radar runs</div>'; return }
+    // Each post counts with its latest reading at or before that moment.
+    var series = { org: [], paid: [] }
+    times.forEach(function (t) {
+      var s = { org: 0, paid: 0 }
+      flat.forEach(function (p) {
+        var v = 0
+        ;(p.history || []).forEach(function (h) { if (readingTime(h[0]) <= t) v = h[1] })
+        s[p.paid ? 'paid' : 'org'] += v
+      })
+      series.org.push(s.org)
+      series.paid.push(s.paid)
+    })
+    var t0 = times[0], tN = times[times.length - 1], hourly = tN - t0 < 4 * 864e5
+    var max = Math.max.apply(null, series.org.concat(series.paid)), step = niceStep(max, 3), top = Math.ceil(max / step) * step
+    var plotW = W - left - right, plotH = H - bottom
+    var X = function (i) { return left + plotW * (times[i] - t0) / (tN - t0) }
+    var Y = function (v) { return plotH - plotH * v / top }
+    var body = ''
+    for (var v = 0; v <= top; v += step) body += '<line x1="' + left + '" x2="' + (W - right) + '" y1="' + Y(v) + '" y2="' + Y(v) + '" stroke="var(--grid)"/><text x="' + (left - 4) + '" y="' + (Y(v) + 3) + '" text-anchor="end">' + short(v) + '</text>'
+    var lastLabel = -1e9, labelW = hourly ? 70 : 40
+    times.forEach(function (t, i) {
+      if (X(i) - lastLabel < labelW || X(i) + labelW / 2 > W) return
+      body += '<text x="' + X(i) + '" y="' + (H - 4) + '" text-anchor="' + (i === 0 ? 'start' : 'middle') + '">' + when(new Date(t).toISOString(), hourly) + '</text>'
+      lastLabel = X(i)
+    })
+    ;['org', 'paid'].forEach(function (k) {
+      body += '<polyline fill="none" stroke="var(--' + k + ')" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" points="' + series[k].map(function (v, i) { return X(i) + ',' + Y(v) }).join(' ') + '"/>'
+      var lv = series[k][times.length - 1]
+      body += '<text class="ink" x="' + (W - right + 6) + '" y="' + (Y(lv) + 3) + '">' + short(lv) + '</text>'
+    })
+    body += '<g class="gHover" style="display:none"><line class="gLine" y1="0" y2="' + plotH + '" stroke="var(--dim)"/>' +
+      '<circle class="gDot" data-k="org" r="4" fill="var(--org)" stroke="var(--row)" stroke-width="2"/><circle class="gDot" data-k="paid" r="4" fill="var(--paid)" stroke="var(--row)" stroke-width="2"/></g>' +
+      '<rect class="gHit" x="' + left + '" y="0" width="' + plotW + '" height="' + plotH + '" fill="transparent"/>'
+    svg(el, W, H, body)
+    var s = el.querySelector('svg'), hover = el.querySelector('.gHover'), line = el.querySelector('.gLine')
+    el.querySelector('.gHit').addEventListener('mousemove', function (e) {
+      var r = s.getBoundingClientRect(), x = (e.clientX - r.left) * W / r.width
+      var target = t0 + (x - left) / plotW * (tN - t0), i = 0
+      times.forEach(function (t, j) { if (Math.abs(t - target) < Math.abs(times[i] - target)) i = j })
+      hover.style.display = ''
+      line.setAttribute('x1', X(i))
+      line.setAttribute('x2', X(i))
+      el.querySelectorAll('.gDot').forEach(function (c) { c.setAttribute('cx', X(i)); c.setAttribute('cy', Y(series[c.dataset.k][i])) })
+      showTip(e, when(new Date(times[i]).toISOString(), true) + ' · ' + fmt(series.org[i] + series.paid[i]) + ' total · ' + fmt(series.paid[i]) + ' paid · ' + fmt(series.org[i]) + ' no signal')
+    })
+    el.querySelector('.gHit').addEventListener('mouseleave', function () { hover.style.display = 'none'; hideTip() })
+  }
+
+  function showTip (e, text) {
+    var t = $('tip')
+    t.textContent = text
+    t.style.display = 'block'
+    t.style.left = Math.max(8, Math.min(e.clientX + 12, innerWidth - t.offsetWidth - 8)) + 'px'
+    t.style.top = (e.clientY + 14) + 'px'
+  }
+  function hideTip () { $('tip').style.display = 'none' }
+  document.querySelector('.charts').addEventListener('mousemove', function (e) {
+    var g = e.target.closest('[data-tip]')
+    if (g) showTip(e, g.getAttribute('data-tip'))
+    else if (!e.target.closest('.gHit')) hideTip()
+  })
+  document.querySelector('.charts').addEventListener('mouseleave', hideTip)
+  var resizeTimer
+  addEventListener('resize', function () { clearTimeout(resizeTimer); resizeTimer = setTimeout(function () { if (state.posts.length) render() }, 150) })
 
   function csv () {
     var cols = ['uploaded', 'platform', 'author', 'title', 'views', 'likes', 'likeRate', 'perHour', 'paid', 'paidLabel', 'origin', 'status', 'duplicateOf', 'url']

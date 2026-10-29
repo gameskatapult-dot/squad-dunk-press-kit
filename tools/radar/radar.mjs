@@ -237,9 +237,15 @@ function updateStats (entry, fresh) {
   entry.desc ||= fresh.desc
   entry.paid ||= paidRe.test([fresh.title, fresh.desc, fresh.tags].join(' ')) || undefined
   entry.checked = today()
+  track(entry)
+}
+
+// One reading per hour, so the panel can draw how views grow between runs.
+function track (entry) {
+  const hour = new Date().toISOString().slice(0, 13) + ':00Z'
   const last = entry.history.at(-1)
-  if (last[0] === today()) last[1] = entry.views
-  else if (last[1] !== entry.views) entry.history.push([today(), entry.views])
+  if (last[0] === hour) last[1] = entry.views
+  else if (last[1] !== entry.views) entry.history.push([hour, entry.views])
 }
 
 // Young posts move fast, old ones barely: check less often as they age.
@@ -467,7 +473,7 @@ async function site () {
     // The site also refreshes itself every 6 hours, so keep whichever count is higher.
     if (p.views > (item.views || 0)) { item.views = p.views; changed++ }
     if (p.likes > (item.likes || 0)) item.likes = p.likes
-    if (item.views > p.views) p.views = item.views
+    if (item.views > p.views) { p.views = item.views; track(p) }
   }
   const onSite = new Set(list.map(i => key(i.platform, i.id)))
   let added = 0
