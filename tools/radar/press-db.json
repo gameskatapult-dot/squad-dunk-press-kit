@@ -243,6 +243,22 @@
    "source": "manual",
    "firstSeen": "2026-10-30",
    "thumb": "press/85b74a3705.jpg"
+  },
+  "gomultiplayer.com/katapult-games-anuncio-su-proximo-juego-de-baloncesto-en-primera-persona-basado-en-fisicas-dunk-746": {
+   "id": "4b5d1687b1",
+   "url": "https://gomultiplayer.com/katapult-games-anuncio-su-proximo-juego-de-baloncesto-en-primera-persona-basado-en-fisicas-dunk-746/",
+   "outlet": "Gomultiplayer",
+   "host": "gomultiplayer.com",
+   "title": "Katapult Games anunció su próximo juego de baloncesto en primera persona basado en físicas: Dunk",
+   "desc": "Katapult Games anunció su nuevo juego deportivo de baloncesto en primera persona basado en físicas, Dunk.",
+   "image": "https://gomultiplayer.com/wp-content/uploads/2026/10/Dunk.jpg",
+   "lang": "es",
+   "date": "2026-10-30",
+   "status": "en-sitio",
+   "reason": "Katapult Games",
+   "source": "google: DUNK juego baloncesto",
+   "firstSeen": "2026-10-30",
+   "thumb": "press/4b5d1687b1.jpg"
   }
  },
  "rejected": {
@@ -278,7 +294,8 @@
   "gn:CBMiT0FVX3lxTFBQLVBlaUFUNExaRlQtTU5Wb25qanFOVktzeko2NmEzc0tCU2JwNlZrMVh6YlBkZHFMZGx1VHVxMDdrREJzOGFCOGVDRkRZelU": "2026-10-30",
   "gn:CBMiXEFVX3lxTE5Ha2pyR2Fra2UxV1BjRnZJVXd5WEtvM05PV2RNMGdPc29nWjJBQ0dnY3cwQWo4WVhmTHM3QXpSdURZUmNKRDlqcllzM3BzdVM5YXFraFlGazFHSUZK": "2026-10-30",
   "gn:CBMic0FVX3lxTE9Gb3B2Yy1qeHJHcGNrWk94REc2NGRUM3RqSll2c1U3NGhCOGhEX2RXek1reHhYcjIyM0Y2UDJrOFlabkhtSEk0b0JNLUc4UnBmNWtzdk1lRmVKNm9RZlVVekRHUWlzTkk5cTZ2UEZiMzBOV1U": "2026-10-30",
-  "gn:CBMiSkFVX3lxTE5VZ3NIWW5kSklaY3p4bF95eVlqUE4yOTU1WE40aHFaRzRPaVVudU9wR2ZjZnRyRFpJQjlBWEdvcThvc2Z1VWdyTFd3": "2026-10-30"
+  "gn:CBMiSkFVX3lxTE5VZ3NIWW5kSklaY3p4bF95eVlqUE4yOTU1WE40aHFaRzRPaVVudU9wR2ZjZnRyRFpJQjlBWEdvcThvc2Z1VWdyTFd3": "2026-10-30",
+  "gn:CBMixAFBVV95cUxNYTdVQjBrWFFhdEhOOEJYQ3lENFJ6T1pBOGxHSTR2M3FvbFBpajl2VmgyeGU4YjZNT2tELU1MdUtONTRpZjBBaVQxZTduM1Bud01KVEJXcEZJVXhVNkxZcVFxSV93dTQ2bE9wWFl6NlhmakhmakRVeXc5V3JDa19zRV8yWVlYQ3NYSEhJZDU3WFNLd3djZFRhV0c2UmJJWHplRFE0S3A4NEpGS3VMQzBfN0VNTXl3STBSZ3BZZEZmX1J5ZEpK": "2026-10-30"
  },
  "runs": [
   {
@@ -493,6 +510,27 @@
   },
   {
    "date": "2026-10-30T19:20:02.972Z",
+   "command": "site",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-10-30T21:33:37.187Z",
+   "command": "scan",
+   "found": 1,
+   "requests": 26,
+   "kb": 1761
+  },
+  {
+   "date": "2026-10-30T21:33:48.897Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-10-30T21:33:49.714Z",
    "command": "site",
    "found": 0,
    "requests": 0,
