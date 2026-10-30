@@ -227,6 +227,22 @@
    "reason": "DUNK + basket + juego",
    "source": "google: Dunk баскетбол игра",
    "firstSeen": "2026-10-30"
+  },
+  "ultimaficha.com.br/2026/10/30/dunk-simulador-basquete-pc": {
+   "id": "85b74a3705",
+   "url": "https://ultimaficha.com.br/2026/10/30/dunk-simulador-basquete-pc/",
+   "outlet": "Última Ficha",
+   "host": "ultimaficha.com.br",
+   "title": "DUNK: Simulador de basquete em primeira pessoa é anunciado para PC",
+   "desc": "DUNK é o simulador de basquete em primeira pessoa da Katapult Games para PC. O jogo chega em 2027 com foco total em física e partidas multiplayer online.",
+   "image": "https://ultimaficha.com.br/wp-content/uploads/2026/10/155571.webp",
+   "lang": "pt",
+   "date": "2026-10-30",
+   "status": "en-sitio",
+   "reason": "agregado a mano (Katapult)",
+   "source": "manual",
+   "firstSeen": "2026-10-30",
+   "thumb": "press/85b74a3705.jpg"
   }
  },
  "rejected": {
@@ -456,6 +472,13 @@
   },
   {
    "date": "2026-10-30T14:27:00.725Z",
+   "command": "site",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-10-30T14:34:01.019Z",
    "command": "site",
    "found": 0,
    "requests": 0,

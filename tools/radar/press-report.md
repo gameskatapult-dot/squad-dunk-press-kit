@@ -1,6 +1,6 @@
 # Prensa DUNK — 2026-10-30
 
-11 artículos · 11 en el sitio · 7 idiomas
+12 artículos · 12 en el sitio · 7 idiomas
 
 ## Para revisar
 
@@ -16,6 +16,7 @@
 
 | Fecha | Medio | Título | Idioma | Por qué | Estado | id |
 |---|---|---|---|---|---|---|
+| 2026-10-30 | Última Ficha | [DUNK: Simulador de basquete em primeira pessoa é anunciado para PC](https://ultimaficha.com.br/2026/10/30/dunk-simulador-basquete-pc/) | pt | agregado a mano (Katapult) | en-sitio | `85b74a3705` |
 | 2026-10-29 | Gamemeca 게임메카 | [1인칭 속도감 있는 농구게임 '덩크' 발표, 2027년 출시](https://www.gamemeca.com/view.php?gid=1782556) | ko | Katapult Games | en-sitio | `5f9cd4bf97` |
 | 2026-10-29 | Games Press | [DUNK brings first-person basketball slamming and skill-based multiplayer jamming to PC in ](https://www.gamespress.com/DUNK-brings-first-person-basketball-slamming-and-skill-based-multiplay) | en | agregado a mano | en-sitio | `c0f59be4af` |
 | 2026-10-29 | Blue's News | [DUNK Announced](https://www.bluesnews.com/s/304856/dunk-announced) | en | Katapult Games | en-sitio | `efc407f0a9` |
