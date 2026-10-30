@@ -1,6 +1,6 @@
-# Prensa DUNK — 2026-10-29
+# Prensa DUNK — 2026-10-30
 
-10 artículos · 10 en el sitio · 7 idiomas
+11 artículos · 11 en el sitio · 7 idiomas
 
 ## Para revisar
 
@@ -20,6 +20,7 @@
 | 2026-10-29 | Games Press | [DUNK brings first-person basketball slamming and skill-based multiplayer jamming to PC in ](https://www.gamespress.com/DUNK-brings-first-person-basketball-slamming-and-skill-based-multiplay) | en | agregado a mano | en-sitio | `c0f59be4af` |
 | 2026-10-29 | Blue's News | [DUNK Announced](https://www.bluesnews.com/s/304856/dunk-announced) | en | Katapult Games | en-sitio | `efc407f0a9` |
 | 2026-10-29 | 一点资讯 · MSN | [第一人称多人街机篮球新作《友尽大扣篮》官宣，计划于2027年登陆Steam](https://www.msn.com/zh-cn/sports/basketball/%E7%AC%AC%E4%B8%80%E4%BA%BA%E7%A7%B0%E5%A4%9A%E4%BA%BA%E8%A1%97%E6%9C%BA%E7%AF%AE%E7%90%83%E6%96%B0%E4%BD%9C-%E5%8F%8B%E5%B0%BD%E5%A4%A7%E6%89%A3%E7%AF%AE-%E5%AE%98%E5%AE%A3-%E8%AE%A1%E5%88%92%E4%BA%8E2027%E5%B9%B4%E7%99%BB%E9%99%86-steam/ar-AA2gjUYn) | zh | DUNK + basket + juego | en-sitio | `1e9da5031c` |
+| 2026-10-29 | gcores | [第一人称多人街机篮球新作《友尽大扣篮》官宣，计划于2027年登陆Steam](https://www.gcores.com/articles/221654) | zh | 友尽大扣篮 | en-sitio | `f80bc5f6ab` |
 | 2026-10-28 | PlayGround.ru | [Dunk предлагает баскетбол от первого лица с физикой бросков и матчами до шести игроков](https://www.playground.ru/dunk/news/dunk_predlagaet_basketbol_ot_pervogo_litsa_s_fizikoj_broskov_i_matchami_do_shesti_igrokov-1885652) | ru | noticias de Steam | en-sitio | `c13161199b` |
 | 2026-10-28 | Pizza Fria | [DUNK é anunciado para PC com lançamento previsto para 2027](https://pizzafria.ig.com.br/news/dunk-anunciado-pc-2027/) | pt | Katapult Games | en-sitio | `a04a0ce45c` |
 | 2026-10-28 | Gamers & Games | [Katapult Games anuncia DUNK, jogo de basquete em primeira pessoa para PC](https://www.gamersegames.com.br/2026/10/28/katapult-games-anuncia-dunk-jogo-de-basquete-em-primeira-pessoa-para-pc/) | pt | Katapult Games | en-sitio | `cd021901a7` |

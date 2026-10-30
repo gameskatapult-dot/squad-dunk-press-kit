@@ -166,6 +166,67 @@
    "reason": "DUNK + basket + juego",
    "source": "google: DUNK juego baloncesto",
    "firstSeen": "2026-10-29"
+  },
+  "gcores.com/articles/221654": {
+   "id": "f80bc5f6ab",
+   "url": "https://www.gcores.com/articles/221654",
+   "outlet": "gcores",
+   "host": "gcores.com",
+   "title": "第一人称多人街机篮球新作《友尽大扣篮》官宣，计划于2027年登陆Steam",
+   "desc": "KatapultGames公布第一人称多人街机篮球游戏《友尽大扣篮》，2027年登陆Steam。游戏以物理驱动的操作、团队配合和1v1至3v3快节奏对决为核心，含多种球场与单人挑战模式，试玩即将开启。",
+   "image": "https://image.gcores.com/ba04c25ed9b7e67170891f2108c51cbd-1270-727.jpg?x-oss-process=image/resize,limit_1,m_fill,w_200,h_200/quality,q_90/format,webp",
+   "lang": "zh",
+   "date": "2026-10-29",
+   "status": "en-sitio",
+   "reason": "友尽大扣篮",
+   "source": "bing: Katapult Games DUNK",
+   "firstSeen": "2026-10-30",
+   "thumb": "press/f80bc5f6ab.jpg"
+  },
+  "note.com/byakuya0412/n/nfe61ec9a1e16?hl=en": {
+   "id": "682b73f10b",
+   "url": "https://note.com/byakuya0412/n/nfe61ec9a1e16?hl=en",
+   "outlet": "note",
+   "host": "note.com",
+   "title": "I just want to passionately talk about my favorite lines from [Slam Dunk]. lol (Shohoku Arc)｜リルミィ",
+   "desc": "Today, Lilmy is going to just introduce some famous lines from anime I love. There aren't many places to talk about the anime I like. lol It's a little... lonely 🥹I want to talk about it as passionately as I do on note!!So, with that said. The anime this time is...!! [𝐒𝐋𝐀𝐌 𝐃𝐔𝐍𝐊]🏀✨The m",
+   "image": "https://assets.st-note.com/production/uploads/images/326581577/rectangle_large_type_2_a43095b22f6e7330a6a499c0a537a01d.jpg?fit=bounds&quality=85&width=1280",
+   "lang": "ja",
+   "date": "2026-10-20",
+   "status": "descartado",
+   "reason": "DUNK + basket + juego",
+   "source": "bing: DUNK first-person basketball game",
+   "firstSeen": "2026-10-30"
+  },
+  "charlotte49ers.com/news/2026/10/29/mens-basketball-mens-basketball-announces-promotional-schedule-budget-dunk-menu-and-fan-engagement-starting-five": {
+   "id": "8221f32507",
+   "url": "https://charlotte49ers.com/news/2026/10/29/mens-basketball-mens-basketball-announces-promotional-schedule-budget-dunk-menu-and-fan-engagement-starting-five",
+   "outlet": "Charlotte Athletics",
+   "host": "charlotte49ers.com",
+   "title": "Men’s Basketball Announces Promotional Schedule, Budget Dunk Menu, and Fan Engagement Starting Five",
+   "desc": "CHARLOTTE, N.C. -- Charlotte 49ers Men",
+   "image": "https://images.sidearmdev.com/resize?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Funcc.sidearmsports.com%2Fimages%2F2026%2F10%2F29%2FMBB_PROMO_16X9.jpg&width=1600&type=jpeg",
+   "lang": "en",
+   "date": "2026-10-29",
+   "status": "descartado",
+   "reason": "DUNK + basket + juego",
+   "source": "google: DUNK basketball game",
+   "firstSeen": "2026-10-30"
+  },
+  "slamdunk.ru/news/nba/vembanyama-prevzoshyol-rekord-dankana-v-debyutnom-matche-pley-off-nba-r135919": {
+   "id": "a7039d5b6d",
+   "url": "https://www.slamdunk.ru/news/nba/vembanyama-prevzoshyol-rekord-dankana-v-debyutnom-matche-pley-off-nba-r135919/",
+   "outlet": "Slamdunk.ru",
+   "host": "slamdunk.ru",
+   "title": "Вембаньяма превзошёл рекорд Данкана в дебютном матче плей-офф НБА",
+   "desc": "Центровой «Сан-Антонио» Виктор Вембаньяма набрал 35 очков в своём первом матче плей-офф с «Портленд Трэйл Блэйзерс» и превзошёл рекорд Тима Данкана по результативности в дебютной игре постсезона за клуб. Предыдущее достижение принадлежало Данкану, который в 1998 году набрал 32 очка в своём первом...",
+   "image": "https://www.slamdunk.ru/uploads/monthly_2026_04/16889655937436.jpg.f6e181b48a7ec27fc70d05e0b2e5a14a.jpg",
+   "lang": "ru",
+   "date": "2026-04-20",
+   "status": "descartado",
+   "reason": "DUNK + basket + juego",
+   "source": "google: Dunk баскетбол игра",
+   "firstSeen": "2026-10-30"
   }
  },
  "rejected": {
@@ -193,7 +254,12 @@
   "gn:CBMidEFVX3lxTFBKenV1cVpHMDk1WjRkRHd5RkV6TlBPOE8zejdlN2ZMSmkxY09BczM2SWFaTGRUQ18tc3BUWFBpXzlwOFg1TngzNFZEWXhzMnRvX3hqMERYZms3cmxiSGVqdW5BMEkyZFlaTzZaQXR5N2lZeC1q": "2026-10-29",
   "in.ign.com/video/275552/dunk-official-announcement-trailer": "2026-10-29",
   "gn:CBMid0FVX3lxTFA2SzZVdjZuaGh2LW9VaHBWbE0yaXNIaFJtYldpMjAtbDl5dnNHRTFkVGI4NW9QRmgzWElzRXFTZ3BuRm1rRmNpQm0zTzJiZVhYTnBTb3hCMF9oZmNocVRFeFVhSkw5RlpjTC1qTzEwM2JSanBUd0hZ": "2026-10-29",
-  "gn:CBMi0wFBVV95cUxQT3dTblhrYTgzX0c4eVFFRW1QMTI1Y2luYVprcFZWWXdwYkdWNXg5bk5SelVTN3JUNldkVzlJM0o0Qmk0UW1JdnpWMzBPbWtkQTdVMWk5R1RRVXlaYVBUbnhTV2tYWUxxZHp3a2FyUkp2WG1nekhwcE1peHRqWHd6OXNFc05FV3VrcnNSZ0FwcW9NemJtUVEyZlpXeVhNUllGaVp0bGtiNTZBcVNBMGotLWxrSUtMVW9RMDg4RDd0c3Q3aHJ6RG83WkQtTlRFSlNUdVE4": "2026-10-29"
+  "gn:CBMi0wFBVV95cUxQT3dTblhrYTgzX0c4eVFFRW1QMTI1Y2luYVprcFZWWXdwYkdWNXg5bk5SelVTN3JUNldkVzlJM0o0Qmk0UW1JdnpWMzBPbWtkQTdVMWk5R1RRVXlaYVBUbnhTV2tYWUxxZHp3a2FyUkp2WG1nekhwcE1peHRqWHd6OXNFc05FV3VrcnNSZ0FwcW9NemJtUVEyZlpXeVhNUllGaVp0bGtiNTZBcVNBMGotLWxrSUtMVW9RMDg4RDd0c3Q3aHJ6RG83WkQtTlRFSlNUdVE4": "2026-10-29",
+  "gn:CBMibkFVX3lxTE5vTHFLTUo3dG00c2pJX054YUNqLXpOOUlHRGdtOUhJYzN2WGpVelJRdHBwOTVhbXpPZzA0MmllMnJGeFotMGp1WUlGN3ZHMDRlakFnVDlDSXV1c05IMWhJeG1kdTJYNHdDVVlaMVZB": "2026-10-30",
+  "ign.com/videos/dunk-official-announcement-trailer": "2026-10-30",
+  "gn:CBMi6wFBVV95cUxNQ2x1MVRUQWZjbUJvNUFVeDczQ3BuaVRqeC1hWFRTVXBOU0NqVS1mdG5CUHBQZVVENTRIaU5zbU5SYkgxU3p2bmR1alZlT1ZEVmZtNWVMUzVfc2d4S1VCai1nSjNQeGNKRUhkV2d0SkJMTEd6NVRoa19yRDFQeVN4VElib1BjTzJMUHBKeWJEeXl5bkVtd0tZYmJYY1RsUWpUY0lNM0dsdEEzX3UwQl9Nb1ZhNzZxUS1GRTlmaDR0SC14Z1ZpWWM5YkJuYmstb0ZqdDY2U1dBN25sSUNTMzQ0elp1M296cWwzY0dj": "2026-10-30",
+  "gn:CBMisAFBVV95cUxOUk14QmdFY0pRQWx5SkhTbmRWV3V6bnFQMTdvSDZvWDN1V2RCS1NidWQ1THFxdTZyRjZNcFlSTkNoR2lRV3FnRnJFVVhfWTZPWHhZaERDTWNLVTBteGwwaDYyUFpCZ1FXd2FpcXp6UXgwUUVRQkJIOE05MlgtaGRpeTBZUlY2bW1DdUtlc3hvbEVMbndiRng5SU9UWi1WY0ZSaUNYdjBWN2I3bkowTUlnWQ": "2026-10-30",
+  "gn:CBMiT0FVX3lxTFBQLVBlaUFUNExaRlQtTU5Wb25qanFOVktzeko2NmEzc0tCU2JwNlZrMVh6YlBkZHFMZGx1VHVxMDdrREJzOGFCOGVDRkRZelU": "2026-10-30"
  },
  "runs": [
   {
@@ -311,6 +377,48 @@
   {
    "date": "2026-10-29T22:42:20.015Z",
    "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-10-30T06:26:21.072Z",
+   "command": "scan",
+   "found": 4,
+   "requests": 36,
+   "kb": 4780
+  },
+  {
+   "date": "2026-10-30T06:29:12.098Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-10-30T06:29:12.263Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-10-30T06:29:12.447Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-10-30T06:29:12.624Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-10-30T06:29:13.713Z",
+   "command": "site",
    "found": 0,
    "requests": 0,
    "kb": 0
