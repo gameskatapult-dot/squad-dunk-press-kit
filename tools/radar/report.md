@@ -1,17 +1,18 @@
 # Radar DUNK — 2026-10-30
 
-85 posts · 1.5 M visitas en total · 57 creadores
+86 posts · 1.5 M visitas en total · 58 creadores
 
 | Origen | Posts | Visitas |
 |---|---:|---:|
 | Jestr | 0 | 0 |
 | orgánico | 0 | 0 |
-| sin marcar | 85 | 1.5 M |
+| sin marcar | 86 | 1.5 M |
 
 ## Para revisar
 
 | Red | Creador | Título | Visitas | +24h | Fecha | Origen | Estado |
 |---|---|---|---:|---:|---|---|---|
+| youtube | [@USBNtv](https://www.youtube.com/watch?v=XnjUGs5C9eU) | Dakota Oropeza's Chasedown Block / Georgia Kangaroos Archive | 1.112 |  | 2026-10-29 | ? | revisar |
 
 ## Nuevos
 
@@ -75,6 +76,7 @@
 | youtube | [@WelmeyGames](https://www.youtube.com/watch?v=1a5DGnHgSqM) | Basketball gets way more chaotic | 1.329 | +68 | 2026-10-28 | ? · pagado | en-sitio |
 | tiktok | [@brookg_indiegames](https://www.tiktok.com/@brookg_indiegames/video/7701718408227753248) | Un coaitco co-op dove giochi a basket controllando un solo giocatore.  | 1.238 | +49 | 2026-10-28 | ? · pagado | en-sitio |
 | tiktok | [@lupusgg](https://www.tiktok.com/@lupusgg/video/7701713704454327574) | 🏀Ein Basketball Game aus der Ego Perspektive, das man richtig nice ge | 1.148 | +37 | 2026-10-28 | ? | en-sitio |
+| youtube | [@USBNtv](https://www.youtube.com/watch?v=XnjUGs5C9eU) | Dakota Oropeza's Chasedown Block / Georgia Kangaroos Archive | 1.112 |  | 2026-10-29 | ? | revisar |
 | youtube | [@PrestonxDC](https://www.youtube.com/watch?v=SuvjmWfHZYY) | New Basketball Game has Joined the Court | 1.097 | +80 | 2026-10-28 | ? | en-sitio |
 | instagram | [@johanwavex](https://www.instagram.com/johanwavex/reel/DfD3Y3JhhyL/) | A first-person 1-6 player basketball game | 1.096 | +212 | 2026-10-29 | ? · pagado | en-sitio |
 | youtube | [@JohanWaveX](https://www.youtube.com/watch?v=emil2UByGsA) | Breaking Ankles in ZERO GRAVITY Is Crazy Work | 1.088 | +55 | 2026-10-28 | ? · pagado | en-sitio |
