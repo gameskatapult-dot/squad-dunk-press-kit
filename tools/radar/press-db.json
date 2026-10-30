@@ -483,6 +483,20 @@
    "found": 0,
    "requests": 0,
    "kb": 0
+  },
+  {
+   "date": "2026-10-30T19:07:57.843Z",
+   "command": "scan",
+   "found": 0,
+   "requests": 23,
+   "kb": 646
+  },
+  {
+   "date": "2026-10-30T19:20:02.972Z",
+   "command": "site",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
   }
  ]
 }
