@@ -1,21 +1,17 @@
 # Radar DUNK — 2026-10-31
 
-90 posts · 1.5 M visitas en total · 61 creadores
+86 posts · 1.5 M visitas en total · 58 creadores
 
 | Origen | Posts | Visitas |
 |---|---:|---:|
 | Jestr | 0 | 0 |
 | orgánico | 0 | 0 |
-| sin marcar | 90 | 1.5 M |
+| sin marcar | 86 | 1.5 M |
 
 ## Para revisar
 
 | Red | Creador | Título | Visitas | +24h | Fecha | Origen | Estado |
 |---|---|---|---:|---:|---|---|---|
-| youtube | [@USBNtv](https://www.youtube.com/watch?v=XnjUGs5C9eU) | Dakota Oropeza's Chasedown Block / Georgia Kangaroos Archive | 1.284 | +163 | 2026-10-29 | ? | revisar |
-| youtube | [@OneSportsPHL](https://www.youtube.com/watch?v=hVr_Y8H5zrY) | Agunanne THROWS DOWN THE GAME-TYING DUNK 💚💥  in Q4 / UAAP Season 89  | 1.137 |  | 2026-10-31 | ? | revisar |
-| youtube | [@uxproducciones](https://www.youtube.com/watch?v=Qn2A7LzncdU) | 🏀🚀 / ¡CON UN PIE EN EL FEDERAL! #basketball #highlights #irs #balonc | 217 |  | 2026-10-31 | ? | revisar |
-| youtube | [@OneSportsPHL](https://www.youtube.com/watch?v=SPd6--_BpGk) | Agunanne THROWS DOWN THE GAME-TYING DUNK 💚💥  in Q4 / UAAP Season 89  | 421 |  | 2026-10-31 | ? | revisar |
 
 ## Nuevos
 
@@ -77,10 +73,8 @@
 | instagram | [@brookg_indiegames](https://www.instagram.com/brookg_indiegames/reel/DfCmQ8Fj9Kh/) | Un caotico co-op dove giochi a basket controllando un solo giocatore. | 1.435 | +1 | 2026-10-28 | ? · pagado | en-sitio |
 | instagram | [@bullet.hammer](https://www.instagram.com/bullet.hammer/reel/DfC0NU6xuXV/) | Game: DUNK. PEAK but just the basketball part | 1.423 | +3 | 2026-10-28 | ? · pagado | en-sitio |
 | instagram | [@stor_mygames](https://www.instagram.com/p/DfC6hBYshiN/) | (Anzeige) BASKETBALL MIT FREUNDEN – SOGAR AUF DEM MOND?! In DUNK liefe | 1.369 | +3 | 2026-10-28 | ? · pagado | en-sitio |
-| youtube | [@USBNtv](https://www.youtube.com/watch?v=XnjUGs5C9eU) | Dakota Oropeza's Chasedown Block / Georgia Kangaroos Archive | 1.284 | +163 | 2026-10-29 | ? | revisar |
 | tiktok | [@brookg_indiegames](https://www.tiktok.com/@brookg_indiegames/video/7701718408227753248) | Un coaitco co-op dove giochi a basket controllando un solo giocatore.  | 1.277 | +22 | 2026-10-28 | ? · pagado | en-sitio |
 | tiktok | [@lupusgg](https://www.tiktok.com/@lupusgg/video/7701713704454327574) | 🏀Ein Basketball Game aus der Ego Perspektive, das man richtig nice ge | 1.215 | +32 | 2026-10-28 | ? | en-sitio |
-| youtube | [@OneSportsPHL](https://www.youtube.com/watch?v=hVr_Y8H5zrY) | Agunanne THROWS DOWN THE GAME-TYING DUNK 💚💥  in Q4 / UAAP Season 89  | 1.137 |  | 2026-10-31 | ? | revisar |
 | youtube | [@PrestonxDC](https://www.youtube.com/watch?v=SuvjmWfHZYY) | New Basketball Game has Joined the Court | 1.127 | +14 | 2026-10-28 | ? | en-sitio |
 | instagram | [@johanwavex](https://www.instagram.com/johanwavex/reel/DfD3Y3JhhyL/) | A first-person 1-6 player basketball game | 1.115 | +0 | 2026-10-29 | ? · pagado | en-sitio |
 | youtube | [@JohanWaveX](https://www.youtube.com/watch?v=emil2UByGsA) | Breaking Ankles in ZERO GRAVITY Is Crazy Work | 1.098 | +4 | 2026-10-28 | ? · pagado | en-sitio |
@@ -95,7 +89,6 @@
 | instagram | [@chewyradar](https://www.instagram.com/p/DfCmVDaS4z3/) | [ad] 3 co-op steam playtests you need to play! 1. DUNK 2. Buried Whisp | 572 | +3 | 2026-10-28 | ? · pagado | en-sitio |
 | tiktok | [@arcisironman](https://www.tiktok.com/@arcisironman/video/7701718495150558495) | better than 2k?? 🏀 you can tackle people mid dunk lmao. dunk! playtes | 503 | +35 | 2026-10-28 | ? · pagado | en-sitio |
 | tiktok | [@prestonxdc](https://www.tiktok.com/@prestonxdc/video/7701732592504114446) | The BEST Basketball Game I've Ever Played #gaming #dunk | 439 | +135 | 2026-10-28 | ? · pagado | en-sitio |
-| youtube | [@OneSportsPHL](https://www.youtube.com/watch?v=SPd6--_BpGk) | Agunanne THROWS DOWN THE GAME-TYING DUNK 💚💥  in Q4 / UAAP Season 89  | 421 |  | 2026-10-31 | ? | revisar |
 | instagram | [@gamestried](https://www.instagram.com/gamestried/reel/DfCnsrWgA2q/) | Basketball But You Can TACKLE People | 411 | +0 | 2026-10-28 | ? · pagado | en-sitio |
 | tiktok | [@lofichay_](https://www.tiktok.com/@lofichay_/video/7701720409233771798) | 🏀🌙 ¡En este juego puedes jugar al baloncesto en la Luna! DUNK mezcla | 403 | +19 | 2026-10-28 | ? | en-sitio |
 | tiktok | [@welmeygames](https://www.tiktok.com/@welmeygames/video/7701740220491812110) | FIRST-PERSON BASKETBALL GETS WAY MORE CHAOTIC THAN IT SHOULD DUNK is a | 387 | +35 | 2026-10-28 | ? | en-sitio |
@@ -109,7 +102,6 @@
 | instagram | [@mrgamingclipz](https://www.instagram.com/mrgamingclipz/reel/DfDdeARkdEZ/) | Take your shots in first person across courts with unusual twists. | 271 | +3 | 2026-10-28 | ? · pagado | en-sitio |
 | tiktok | [@stormygames8](https://www.tiktok.com/@stormygames8/video/7701763578692390176) | 🏀 BASKETBALL MIT FREUNDEN – SOGAR AUF DEM MOND?! 😂🔥 In DUNK liefert | 256 | +1 | 2026-10-28 | ? · pagado | en-sitio |
 | tiktok | [@gamestried](https://www.tiktok.com/@gamestried/video/7701721855559830807) | Basketball But You Can TACKLE People DUNK is first-person physics bask | 235 | +0 | 2026-10-28 | ? | en-sitio |
-| youtube | [@uxproducciones](https://www.youtube.com/watch?v=Qn2A7LzncdU) | 🏀🚀 / ¡CON UN PIE EN EL FEDERAL! #basketball #highlights #irs #balonc | 217 |  | 2026-10-31 | ? | revisar |
 | instagram | [@arcisironman](https://www.instagram.com/p/DfCmEbnRS3I/) | Better than 2K? No rules, tackling is legal. DUNK! Playtest sign-ups o | 214 | +0 | 2026-10-28 | ? · pagado | en-sitio |
 | instagram | [@leonardogamingue](https://www.instagram.com/p/DfDiV5tCCfH/) | je rentre le panier ou j'arrête tout DUNK - dispo sur Steam #indiegame | 193 | +2 | 2026-10-28 | ? · pagado | en-sitio |
 | tiktok | [@tvgameover](https://www.tiktok.com/@tvgameover/video/7701911521403604225) | Basquete em primeira pessoa, enterradas insanas e seis jogadores dispu | 173 | +2 | 2026-10-29 | ? | en-sitio |
