@@ -13,7 +13,6 @@
 | Red | Creador | Título | Visitas | +24h | Fecha | Origen | Estado |
 |---|---|---|---:|---:|---|---|---|
 | youtube | [@USBNtv](https://www.youtube.com/watch?v=XnjUGs5C9eU) | Dakota Oropeza's Chasedown Block / Georgia Kangaroos Archive | 1.284 | +163 | 2026-10-29 | ? | revisar |
-| youtube | [@sointhisgame](https://www.youtube.com/watch?v=TUXXIrIVVRM) | You can throw the ball right at their FACE 🏀💥 #dunk #indiegames | 909 |  | 2026-10-31 | ? | revisar |
 | youtube | [@OneSportsPHL](https://www.youtube.com/watch?v=hVr_Y8H5zrY) | Agunanne THROWS DOWN THE GAME-TYING DUNK 💚💥  in Q4 / UAAP Season 89  | 1.137 |  | 2026-10-31 | ? | revisar |
 | youtube | [@uxproducciones](https://www.youtube.com/watch?v=Qn2A7LzncdU) | 🏀🚀 / ¡CON UN PIE EN EL FEDERAL! #basketball #highlights #irs #balonc | 217 |  | 2026-10-31 | ? | revisar |
 | youtube | [@OneSportsPHL](https://www.youtube.com/watch?v=SPd6--_BpGk) | Agunanne THROWS DOWN THE GAME-TYING DUNK 💚💥  in Q4 / UAAP Season 89  | 421 |  | 2026-10-31 | ? | revisar |
@@ -89,7 +88,7 @@
 | youtube | [@Kroniques_Lab](https://www.youtube.com/watch?v=oVUXcYJF7Z0) | DUNK : le jeu de basket où tu dunkes sur la Lune 🏀 | 1.039 | +13 | 2026-10-28 | ? · pagado | en-sitio |
 | tiktok | [@leonardogamingue](https://www.tiktok.com/@leonardogamingue/video/7701853701513825569) | je rentre le panier ou j’arrête tout 🏀 DUNK - dispo sur Steam #indieg | 1.017 | +17 | 2026-10-28 | ? · pagado | en-sitio |
 | tiktok | [@donindies](https://www.tiktok.com/@donindies/video/7701766927919697170) | El faul no existe y nadie te va a cobrar nada. Básquetbol en primera p | 919 | +25 | 2026-10-28 | ? | en-sitio |
-| youtube | [@sointhisgame](https://www.youtube.com/watch?v=TUXXIrIVVRM) | You can throw the ball right at their FACE 🏀💥 #dunk #indiegames | 909 |  | 2026-10-31 | ? | revisar |
+| youtube | [@sointhisgame](https://www.youtube.com/watch?v=TUXXIrIVVRM) | You can throw the ball right at their FACE 🏀💥 #dunk #indiegames | 909 |  | 2026-10-31 | ? | en-sitio |
 | instagram | [@gamesfound](https://www.instagram.com/gamesfound/reel/DfCm92kifsl/) | This Basketball Game Is So Unfair | 764 | +1 | 2026-10-28 | ? · pagado | en-sitio |
 | tiktok | [@chewyradar](https://www.tiktok.com/@chewyradar/video/7701719265778371871) | [ad] 3 co-op steam playtests you need to play! 🥶 1. DUNK 2. Buried Wh | 659 | +59 | 2026-10-28 | ? · pagado | en-sitio |
 | tiktok | [@yunaluvgames](https://www.tiktok.com/@yunaluvgames/video/7701756958549806349) | I wish I was a little bit taller because in this game I'm a tiny baby  | 628 | +14 | 2026-10-28 | ? · pagado | en-sitio |

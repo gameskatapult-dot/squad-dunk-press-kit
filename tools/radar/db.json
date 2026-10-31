@@ -5316,7 +5316,7 @@
    "published": "2026-10-31T07:34:39-07:00",
    "views": 909,
    "short": true,
-   "status": "revisar",
+   "status": "en-sitio",
    "reason": "DUNK + palabra de juego",
    "source": "búsqueda: DUNK basketball game",
    "firstSeen": "2026-10-31",
@@ -8339,20 +8339,6 @@
  },
  "runs": [
   {
-   "date": "2026-10-29T19:46:31.002Z",
-   "command": "add",
-   "found": 1,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-10-29T19:46:31.329Z",
-   "command": "add",
-   "found": 1,
-   "requests": 0,
-   "kb": 0
-  },
-  {
    "date": "2026-10-29T19:46:31.676Z",
    "command": "add",
    "found": 1,
@@ -8683,6 +8669,20 @@
   },
   {
    "date": "2026-10-31T16:49:47.544Z",
+   "command": "site",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-10-31T16:51:35.140Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-10-31T16:51:37.902Z",
    "command": "site",
    "found": 0,
    "requests": 0,
