@@ -598,6 +598,20 @@
    "found": 0,
    "requests": 25,
    "kb": 1207
+  },
+  {
+   "date": "2026-10-31T22:27:11.915Z",
+   "command": "scan",
+   "found": 0,
+   "requests": 23,
+   "kb": 714
+  },
+  {
+   "date": "2026-10-31T22:38:00.988Z",
+   "command": "site",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
   }
  ]
 }
