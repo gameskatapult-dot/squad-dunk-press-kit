@@ -6108,6 +6108,51 @@
      785
     ]
    ]
+  },
+  "tiktok:7702833240205249814": {
+   "platform": "tiktok",
+   "id": "7702833240205249814",
+   "url": "https://www.tiktok.com/@sointhisgame8/video/7702833240205249814",
+   "author": "@sointhisgame8",
+   "title": "You can throw the ball right at your rival's FACE 🏀💥 DUNK: 3v3 physics basketball, playtest sign-up on Steam. Send this to your squad #dunk #indiega",
+   "desc": "You can throw the ball right at your rival's FACE 🏀💥 DUNK: 3v3 physics basketball, playtest sign-up on Steam. Send this to your squad #dunk #indiegames #basketball #steam #gaming @DUNK ",
+   "date": "2026-10-31",
+   "views": 668,
+   "likes": 19,
+   "status": "en-sitio",
+   "reason": "agregado a mano",
+   "source": "manual",
+   "firstSeen": "2026-10-31",
+   "checked": "2026-10-31",
+   "history": [
+    [
+     "2026-10-31",
+     668
+    ]
+   ]
+  },
+  "instagram:DfKVMb3uREd": {
+   "platform": "instagram",
+   "id": "DfKVMb3uREd",
+   "url": "https://www.instagram.com/sointhisgame/reel/DfKVMb3uREd/",
+   "author": "@sointhisgame",
+   "title": "You can throw the ball right at your rival’s FACE 🏀💥 DUNK: 3v3 physics basketball #dunk #indiegames",
+   "desc": "",
+   "date": "2026-10-31",
+   "views": 2961,
+   "likes": 47,
+   "manual": true,
+   "status": "en-sitio",
+   "reason": "agregado a mano",
+   "source": "manual",
+   "firstSeen": "2026-10-31",
+   "checked": "2026-10-31",
+   "history": [
+    [
+     "2026-10-31T23:00Z",
+     2961
+    ]
+   ]
   }
  },
  "rejected": {
@@ -9276,48 +9321,6 @@
  },
  "runs": [
   {
-   "date": "2026-10-29T22:45:08.946Z",
-   "command": "set",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-10-29T22:45:09.169Z",
-   "command": "set",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-10-29T22:45:09.399Z",
-   "command": "set",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-10-29T22:45:09.645Z",
-   "command": "set",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-10-29T22:45:09.872Z",
-   "command": "set",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-10-29T22:45:10.107Z",
-   "command": "set",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
    "date": "2026-10-29T22:45:10.312Z",
    "command": "set",
    "found": 0,
@@ -9620,6 +9623,48 @@
   },
   {
    "date": "2026-10-31T22:38:00.670Z",
+   "command": "site",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-10-31T23:19:51.940Z",
+   "command": "add",
+   "found": 1,
+   "requests": 1,
+   "kb": 398
+  },
+  {
+   "date": "2026-10-31T23:19:52.202Z",
+   "command": "add",
+   "found": 1,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-10-31T23:20:13.400Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-10-31T23:20:13.638Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-10-31T23:20:15.755Z",
+   "command": "site",
+   "found": 0,
+   "requests": 1,
+   "kb": 399
+  },
+  {
+   "date": "2026-10-31T23:21:13.081Z",
    "command": "site",
    "found": 0,
    "requests": 0,
