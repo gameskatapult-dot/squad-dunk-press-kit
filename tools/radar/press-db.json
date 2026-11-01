@@ -354,6 +354,22 @@
    "source": "manual",
    "firstSeen": "2026-11-01",
    "thumb": "press/e06f73cc19.jpg"
+  },
+  "gnn.gamer.com.tw/detail.php?sn=314165": {
+   "id": "7b91f27289",
+   "url": "https://gnn.gamer.com.tw/detail.php?sn=314165",
+   "outlet": "巴哈姆特 GNN",
+   "host": "gnn.gamer.com.tw",
+   "title": "第一人稱多人籃球運動新作《街頭大灌籃》預定 2027 年登上 Steam 平台",
+   "desc": "獨立遊戲工作室 Katapult Games 宣布，旗下第一人稱籃球遊戲《街頭大灌籃（暫譯，原名：DUNK）》將於 2027 年登陸 PC Steam 平台。本作以操作技巧、團隊協作和物理碰撞為核心，玩家將可體驗精彩進球與意想不到的爆笑失誤。 官方指出，在動作遊戲《街頭大灌籃》中，玩家將以第一人稱視角置身球場，體驗一場易於上手、精通則更有成就感的",
+   "image": "https://p2.bahamut.com.tw/B/2KU/91/b9f95722d14e32646964fa6ddd20x5b5.JPG",
+   "lang": "zh",
+   "date": "2026-10-29",
+   "status": "en-sitio",
+   "reason": "agregado a mano",
+   "source": "manual",
+   "firstSeen": "2026-11-01",
+   "thumb": "press/7b91f27289.jpg"
   }
  },
  "rejected": {
@@ -395,30 +411,11 @@
   "gn:CBMicEFVX3lxTFBkU2ZkcnNGY0pDa2ZvWjkwLW1UU2RkTGJnaV9RakwwNWthQ0hiSkpTOFZ5Z016WmFwWU1rdFJhNzc3dXRJRWR5M1k3UWxXR2owQXJCUXJTenc4dkJscWFEdnNPcDh5NXBSWlduMXFNSHE": "2026-11-01",
   "za.ign.com/pc/244296/dunk-official-announcement-trailer": "2026-11-01",
   "gn:CBMiWEFVX3lxTFB0QmJyWXZLcFZpMGtvbGpObkpKeUNILWhJVjFYZmZGX2JHdUZRMlh3S2Q3eGhuc3pHdWJYeFhCSm5WamV3RjAwMm82NnpjLXNfWHNtU3AyWU3SAVtBVV95cUxNcWlQandqaGdUcXdGZFAxZk1rbUgzVF9hUmphSGZRX3ZNcUl0elFDazktbUdzeEpGcFBubGRFSmFvcm9LMVBqaEVvNEc3cFNXeHZEdXVmN1JHYmZr": "2026-11-01",
-  "gn:CBMiTkFVX3lxTE45TUdJV25OZlFnMW00SGdCaFkzVHVtRVc3a0lyQ0EwX2h1QTB0NFFqby01UmYyNkFEa2ZHQjJrZnhyWTVxS3pWQzRZWDB0UQ": "2026-11-01"
+  "gn:CBMiTkFVX3lxTE45TUdJV25OZlFnMW00SGdCaFkzVHVtRVc3a0lyQ0EwX2h1QTB0NFFqby01UmYyNkFEa2ZHQjJrZnhyWTVxS3pWQzRZWDB0UQ": "2026-11-01",
+  "gn:CBMiXEFVX3lxTE5ldnNpRG01NjdXT2MycF9rRjVPbWR4Zl9pV0ZUckpBZ3YwWHZDSmgyYUpsdFAxOGxmc0dBbGhlWEhiSFNOdmRUNDRtaE5DZnVoRVZyNVVhRm5UZWhn": "2026-11-01",
+  "gn:CBMiWEFVX3lxTE5ZYWNGR0w2aHdoaEdETHlGWkZ0bVQwSnhnU0ZXR0ZwNlFOOXl4ODBSRjZWSEtsbENKZDBRM1FvaFFkTmQ0UEluUDFTNDZxQm5mQ1ZZQ3RGWWs": "2026-11-01"
  },
  "runs": [
-  {
-   "date": "2026-10-29T12:59:03.273Z",
-   "command": "site",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-10-29T13:01:15.111Z",
-   "command": "site",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-10-29T13:02:24.860Z",
-   "command": "scan",
-   "found": 0,
-   "requests": 22,
-   "kb": 728
-  },
   {
    "date": "2026-10-29T13:13:10.321Z",
    "command": "add",
@@ -743,6 +740,27 @@
   },
   {
    "date": "2026-11-01T20:26:20.584Z",
+   "command": "site",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-01T23:00:19.586Z",
+   "command": "add",
+   "found": 1,
+   "requests": 1,
+   "kb": 85
+  },
+  {
+   "date": "2026-11-01T23:00:49.796Z",
+   "command": "scan",
+   "found": 0,
+   "requests": 30,
+   "kb": 1878
+  },
+  {
+   "date": "2026-11-01T23:00:57.320Z",
    "command": "site",
    "found": 0,
    "requests": 0,

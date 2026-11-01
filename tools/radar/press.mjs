@@ -63,7 +63,7 @@ const known = url => { try { const k = keyOf(url); return db.articles[k] || db.r
 // ---------- Sources ----------
 
 // Google News region for each search language.
-const GN = { en: ['en-US', 'US', 'US:en'], es: ['es-419', 'MX', 'MX:es-419'], pt: ['pt-BR', 'BR', 'BR:pt-419'], ru: ['ru', 'RU', 'RU:ru'], de: ['de', 'DE', 'DE:de'], fr: ['fr', 'FR', 'FR:fr'], it: ['it', 'IT', 'IT:it'], ja: ['ja', 'JP', 'JP:ja'], ko: ['ko', 'KR', 'KR:ko'], zh: ['zh-CN', 'CN', 'CN:zh-Hans'] }
+const GN = { en: ['en-US', 'US', 'US:en'], es: ['es-419', 'MX', 'MX:es-419'], pt: ['pt-BR', 'BR', 'BR:pt-419'], ru: ['ru', 'RU', 'RU:ru'], de: ['de', 'DE', 'DE:de'], fr: ['fr', 'FR', 'FR:fr'], it: ['it', 'IT', 'IT:it'], ja: ['ja', 'JP', 'JP:ja'], ko: ['ko', 'KR', 'KR:ko'], zh: ['zh-CN', 'CN', 'CN:zh-Hans'], tw: ['zh-TW', 'TW', 'TW:zh-Hant'] }
 
 async function googleNews (q, lang) {
   const [hl, gl, ceid] = GN[lang]
