@@ -323,6 +323,37 @@
    "source": "manual",
    "firstSeen": "2026-10-31",
    "thumb": "press/c63b4a6e43.jpg"
+  },
+  "ign.com/games/dunk/videos": {
+   "id": "9eee8a621c",
+   "url": "https://www.ign.com/games/dunk/videos",
+   "outlet": "IGN",
+   "host": "ign.com",
+   "title": "Dunk [Videos]",
+   "desc": "Release Date, Trailers, News, Reviews, Guides, Gameplay and more for Dunk",
+   "image": "https://assets-prd.ignimgs.com/2026/10/29/dunk-1793286540510.png",
+   "lang": "en",
+   "date": "2026-10-29",
+   "status": "descartado",
+   "reason": "Katapult Games",
+   "source": "google: \"Katapult Games\"",
+   "firstSeen": "2026-11-01"
+  },
+  "ign.com/videos/dunk-official-announcement-trailer": {
+   "id": "e06f73cc19",
+   "url": "https://www.ign.com/videos/dunk-official-announcement-trailer",
+   "outlet": "IGN",
+   "host": "ign.com",
+   "title": "Dunk - Official Announcement Trailer",
+   "desc": "Here&#39;s your look at the announcement trailer for Dunk, an upcoming first-person 1-6 player basketball game where every physics-based pass, block, and DUNK comes down to skill. Hit unique courts across the universe, hang out over proximity chat, or finesse your 1st-person skills in solo play. Unl",
+   "image": "https://assets-prd.ignimgs.com/2026/10/30/dunkannouncetrailer-ign-blogroll-1793364786939.jpg?width=1280&format=jpg&auto=webp&quality=80",
+   "lang": "en",
+   "date": "2026-10-28",
+   "status": "en-sitio",
+   "reason": "agregado a mano",
+   "source": "manual",
+   "firstSeen": "2026-11-01",
+   "thumb": "press/e06f73cc19.jpg"
   }
  },
  "rejected": {
@@ -351,7 +382,6 @@
   "gn:CBMid0FVX3lxTFA2SzZVdjZuaGh2LW9VaHBWbE0yaXNIaFJtYldpMjAtbDl5dnNHRTFkVGI4NW9QRmgzWElzRXFTZ3BuRm1rRmNpQm0zTzJiZVhYTnBTb3hCMF9oZmNocVRFeFVhSkw5RlpjTC1qTzEwM2JSanBUd0hZ": "2026-10-29",
   "gn:CBMi0wFBVV95cUxQT3dTblhrYTgzX0c4eVFFRW1QMTI1Y2luYVprcFZWWXdwYkdWNXg5bk5SelVTN3JUNldkVzlJM0o0Qmk0UW1JdnpWMzBPbWtkQTdVMWk5R1RRVXlaYVBUbnhTV2tYWUxxZHp3a2FyUkp2WG1nekhwcE1peHRqWHd6OXNFc05FV3VrcnNSZ0FwcW9NemJtUVEyZlpXeVhNUllGaVp0bGtiNTZBcVNBMGotLWxrSUtMVW9RMDg4RDd0c3Q3aHJ6RG83WkQtTlRFSlNUdVE4": "2026-10-29",
   "gn:CBMibkFVX3lxTE5vTHFLTUo3dG00c2pJX054YUNqLXpOOUlHRGdtOUhJYzN2WGpVelJRdHBwOTVhbXpPZzA0MmllMnJGeFotMGp1WUlGN3ZHMDRlakFnVDlDSXV1c05IMWhJeG1kdTJYNHdDVVlaMVZB": "2026-10-30",
-  "ign.com/videos/dunk-official-announcement-trailer": "2026-10-30",
   "gn:CBMi6wFBVV95cUxNQ2x1MVRUQWZjbUJvNUFVeDczQ3BuaVRqeC1hWFRTVXBOU0NqVS1mdG5CUHBQZVVENTRIaU5zbU5SYkgxU3p2bmR1alZlT1ZEVmZtNWVMUzVfc2d4S1VCai1nSjNQeGNKRUhkV2d0SkJMTEd6NVRoa19yRDFQeVN4VElib1BjTzJMUHBKeWJEeXl5bkVtd0tZYmJYY1RsUWpUY0lNM0dsdEEzX3UwQl9Nb1ZhNzZxUS1GRTlmaDR0SC14Z1ZpWWM5YkJuYmstb0ZqdDY2U1dBN25sSUNTMzQ0elp1M296cWwzY0dj": "2026-10-30",
   "gn:CBMisAFBVV95cUxOUk14QmdFY0pRQWx5SkhTbmRWV3V6bnFQMTdvSDZvWDN1V2RCS1NidWQ1THFxdTZyRjZNcFlSTkNoR2lRV3FnRnJFVVhfWTZPWHhZaERDTWNLVTBteGwwaDYyUFpCZ1FXd2FpcXp6UXgwUUVRQkJIOE05MlgtaGRpeTBZUlY2bW1DdUtlc3hvbEVMbndiRng5SU9UWi1WY0ZSaUNYdjBWN2I3bkowTUlnWQ": "2026-10-30",
   "gn:CBMiT0FVX3lxTFBQLVBlaUFUNExaRlQtTU5Wb25qanFOVktzeko2NmEzc0tCU2JwNlZrMVh6YlBkZHFMZGx1VHVxMDdrREJzOGFCOGVDRkRZelU": "2026-10-30",
@@ -364,23 +394,10 @@
   "gn:CBMiWkFVX3lxTE5zbkJqblZMb2tBaXNBaG9TV2pDU3owVGdRNTFVZGFhQ1FSVUJBTGhyQW5qeWdVNjl2aUFjRnpUaldjWTlWMUg0em9VS0d6VTQ5LU5LWVJNbV9HZw": "2026-10-31",
   "gn:CBMicEFVX3lxTFBkU2ZkcnNGY0pDa2ZvWjkwLW1UU2RkTGJnaV9RakwwNWthQ0hiSkpTOFZ5Z016WmFwWU1rdFJhNzc3dXRJRWR5M1k3UWxXR2owQXJCUXJTenc4dkJscWFEdnNPcDh5NXBSWlduMXFNSHE": "2026-11-01",
   "za.ign.com/pc/244296/dunk-official-announcement-trailer": "2026-11-01",
-  "gn:CBMiWEFVX3lxTFB0QmJyWXZLcFZpMGtvbGpObkpKeUNILWhJVjFYZmZGX2JHdUZRMlh3S2Q3eGhuc3pHdWJYeFhCSm5WamV3RjAwMm82NnpjLXNfWHNtU3AyWU3SAVtBVV95cUxNcWlQandqaGdUcXdGZFAxZk1rbUgzVF9hUmphSGZRX3ZNcUl0elFDazktbUdzeEpGcFBubGRFSmFvcm9LMVBqaEVvNEc3cFNXeHZEdXVmN1JHYmZr": "2026-11-01"
+  "gn:CBMiWEFVX3lxTFB0QmJyWXZLcFZpMGtvbGpObkpKeUNILWhJVjFYZmZGX2JHdUZRMlh3S2Q3eGhuc3pHdWJYeFhCSm5WamV3RjAwMm82NnpjLXNfWHNtU3AyWU3SAVtBVV95cUxNcWlQandqaGdUcXdGZFAxZk1rbUgzVF9hUmphSGZRX3ZNcUl0elFDazktbUdzeEpGcFBubGRFSmFvcm9LMVBqaEVvNEc3cFNXeHZEdXVmN1JHYmZr": "2026-11-01",
+  "gn:CBMiTkFVX3lxTE45TUdJV25OZlFnMW00SGdCaFkzVHVtRVc3a0lyQ0EwX2h1QTB0NFFqby01UmYyNkFEa2ZHQjJrZnhyWTVxS3pWQzRZWDB0UQ": "2026-11-01"
  },
  "runs": [
-  {
-   "date": "2026-10-29T12:58:57.898Z",
-   "command": "scan",
-   "found": 6,
-   "requests": 60,
-   "kb": 10692
-  },
-  {
-   "date": "2026-10-29T12:58:58.096Z",
-   "command": "approve",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
   {
    "date": "2026-10-29T12:59:03.273Z",
    "command": "site",
@@ -698,6 +715,34 @@
   },
   {
    "date": "2026-11-01T10:46:38.832Z",
+   "command": "site",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-01T20:22:28.845Z",
+   "command": "scan",
+   "found": 1,
+   "requests": 26,
+   "kb": 1422
+  },
+  {
+   "date": "2026-11-01T20:24:34.756Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-01T20:24:36.443Z",
+   "command": "add",
+   "found": 1,
+   "requests": 1,
+   "kb": 167
+  },
+  {
+   "date": "2026-11-01T20:26:20.584Z",
    "command": "site",
    "found": 0,
    "requests": 0,

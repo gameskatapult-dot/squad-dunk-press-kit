@@ -1,6 +1,6 @@
 # Prensa DUNK — 2026-11-01
 
-17 artículos · 17 en el sitio · 8 idiomas
+18 artículos · 18 en el sitio · 8 idiomas
 
 ## Para revisar
 
@@ -32,4 +32,5 @@
 | 2026-10-28 | gamebiz | [Katapult Games、一人称視点のバスケットボールゲーム『DUNK』を2027年に発売決定](https://gamebiz.jp/news/434747) | ja | Katapult Games | en-sitio | `71a77e4854` |
 | 2026-10-28 | GGames | [DUNK, novo jogo de basquete em primeira pessoa, será lançado para PC em 2027 com física in](https://ggames.com.br/noticias/dunk-anunciado-pc-lancamento-2027-2/) | pt | Katapult Games | en-sitio | `ee008253e2` |
 | 2026-10-28 | 247 Video Game | [Dunk – Official Announcement Trailer](https://247videogame.com/dunk-official-announcement-trailer/) | en | agregado a mano | en-sitio | `c63b4a6e43` |
+| 2026-10-28 | IGN | [Dunk - Official Announcement Trailer](https://www.ign.com/videos/dunk-official-announcement-trailer) | en | agregado a mano | en-sitio | `e06f73cc19` |
 | 2026-10-27 | ANMTV | [DUNK: presentan juego de baloncesto en primera persona](https://www.anmtvla.com/2026/10/dunk-presentan-juego-de-baloncesto-en.html) | es | Katapult Games | en-sitio | `13508ade57` |
