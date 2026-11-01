@@ -654,6 +654,35 @@
     update()
   }
 
+  // Steam's store widget: a fixed 646×190 iframe. It reflows down to 480px wide; narrower
+  // boxes get the 480px layout scaled down. Its language follows the page's.
+  const steamLanguages = { en: 'english', es: 'latam', ru: 'russian', ja: 'japanese', zh: 'schinese', de: 'german', fr: 'french', pt: 'brazilian' }
+  function setupSteamWidgets () {
+    const widgets = Array.from(document.querySelectorAll('[data-steam-widget]'))
+    if (!widgets.length) return
+    function fit (box) {
+      const frame = box.querySelector('iframe')
+      const width = box.clientWidth
+      const inner = Math.max(480, Math.min(646, width))
+      const scale = Math.min(1, width / inner)
+      frame.style.width = inner + 'px'
+      frame.style.transform = scale < 1 ? 'scale(' + scale + ')' : ''
+      box.style.height = Math.ceil(190 * scale) + 'px'
+    }
+    function localize () {
+      const language = steamLanguages[(document.documentElement.lang || 'en').slice(0, 2)] || 'english'
+      widgets.forEach(function (box) {
+        const frame = box.querySelector('iframe')
+        const src = frame.src.replace(/\?.*$/, '') + '?l=' + language
+        if (frame.src !== src) frame.src = src
+      })
+    }
+    const observer = new ResizeObserver(function (entries) { entries.forEach(function (entry) { fit(entry.target) }) })
+    widgets.forEach(function (box) { fit(box); observer.observe(box) })
+    localize()
+    new MutationObserver(localize).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] })
+  }
+
   function formatPressDates () {
     let format
     try {
@@ -1129,6 +1158,7 @@
     setupTrailer()
     setupCommunity()
     setupPress()
+    setupSteamWidgets()
     setupScreenshotCarousels()
     setupGalleryLightbox()
     scrollToInitialHash()
