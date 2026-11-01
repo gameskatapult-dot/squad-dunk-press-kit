@@ -313,8 +313,6 @@ body.gallery-lightbox-open { overflow: hidden; }
   .topbar__brand, .topbar__actions { height: var(--topbar); }
   .topbar__nav { order: 3; flex: 0 0 calc(100% + var(--gutter) * 2); justify-content: flex-start; margin: 0 calc(var(--gutter) * -1); padding: 0 calc(var(--gutter) - 10px) 8px; overflow-x: auto; scrollbar-width: none; }
   .topbar__nav::-webkit-scrollbar { display: none; }
-  /* The home page has a single link, which fits in the bar itself. */
-  .home .topbar__nav { order: 0; flex: 1 1 auto; justify-content: center; margin: 0; padding: 0; }
   .shots { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .downloads .download, .downloads .download:nth-child(-n + 3) { grid-column: span 6; }
 }
