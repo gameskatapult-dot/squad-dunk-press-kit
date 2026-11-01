@@ -78,7 +78,7 @@ Reglas del carrusel (Matías, 29/10):
 
 ## Prensa (artículos)
 
-`press.mjs` rastrea los artículos que escriben los medios sobre DUNK y llena la sección **Prensa** del press kit (`pages/community/press.json`, imágenes en `pages/community/press/`). Tiene su propia base: `press-db.json`.
+`press.mjs` rastrea los artículos que escriben los medios sobre DUNK y llena la sección **Prensa** de la portada (dunkthegame.com, justo debajo del video; el press kit ya no la muestra) (`pages/community/press.json`, imágenes en `pages/community/press/`). Tiene su propia base: `press-db.json`.
 
 ```
 node tools/radar/press.mjs scan      # buscar

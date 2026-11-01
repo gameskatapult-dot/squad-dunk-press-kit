@@ -147,9 +147,6 @@ Play however you choose online, with matches up to 3v3 available for solo player
       <id>creators</id>
     </section>
     <section>
-      <id>press</id>
-    </section>
-    <section>
       <id>media</id>
     </section>
     <section>
@@ -171,11 +168,6 @@ Play however you choose online, with matches up to 3v3 available for solo player
       <id>creators</id>
       <title>Creators</title>
       <href>#creators</href>
-    </nav-section>
-    <nav-section>
-      <id>press</id>
-      <title>Press</title>
-      <href>#press</href>
     </nav-section>
     <nav-section>
       <id>media</id>

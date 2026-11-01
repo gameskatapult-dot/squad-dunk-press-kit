@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/dunk.css?v=20261029-flow">
+    <link rel="stylesheet" href="./css/dunk.css?v=20261101-press">
   </head>
   <body class="dunk home">
     <header class="topbar" data-l10n-aria-label="ui.accessibility.primary">
@@ -26,7 +26,7 @@
           <img src="./presskit/images/dunk-logo-v8.png" alt="DUNK" width="95" height="28" data-src-zh="./presskit/images/dunk-logo-zh.png" data-alt-zh="友尽大扣篮">
         </a>
         <nav class="topbar__nav" data-l10n-aria-label="ui.accessibility.navigation" aria-label="Main navigation">
-          <a href="./presskit/" data-language-link data-l10n="ui.landing.press_kit_cta">Press kit</a>
+          <a href="./presskit/#start" data-language-link data-l10n="ui.landing.press_kit_cta">Press kit</a>
         </nav>
         <div class="topbar__actions">
           <label class="visually-hidden" for="home-language" data-l10n="ui.nav.language">Language</label>
@@ -57,6 +57,30 @@
           </button>
         </div>
       </section>
+      <section class="press" id="press" aria-labelledby="press-title" data-press data-src="./community/press.json" data-fallback="./presskit/images/key-art-2026-web.jpg" hidden>
+        <div class="container">
+          <span class="community__eyebrow" data-l10n="ui.nav.sections.press">Press</span>
+          <h2 id="press-title" class="title" data-l10n="ui.press.title">What the press is saying</h2>
+          <p class="community__total"><strong data-press-articles></strong> <span data-l10n="ui.press.articles_label">articles</span> · <strong data-press-languages></strong> <span data-l10n="ui.press.languages_label">languages</span></p>
+          <div class="community__viewport">
+            <ul class="press__rail" data-press-list></ul>
+            <button class="community__arrow community__arrow--prev" type="button" data-press-prev data-l10n-aria-label="ui.press.prev" aria-label="Previous articles"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M15.4 5.4 14 4l-8 8 8 8 1.4-1.4L8.8 12z"/></svg></button>
+            <button class="community__arrow community__arrow--next" type="button" data-press-next data-l10n-aria-label="ui.press.next" aria-label="Next articles"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8.6 18.6 10 20l8-8-8-8-1.4 1.4 6.6 6.6z"/></svg></button>
+          </div>
+        </div>
+      </section>
+      <section class="community" id="creators" aria-labelledby="creators-title" data-community data-src="./community/community.json" hidden>
+        <div class="container">
+          <span class="community__eyebrow" data-l10n="ui.nav.sections.creators">Creators</span>
+          <h2 id="creators-title" class="title" data-l10n="ui.community.title">Creators are playing DUNK</h2>
+          <p class="community__total"><strong data-community-total></strong> <span data-l10n="ui.community.views_label">views on creator videos</span></p>
+          <div class="community__viewport" data-community-viewport>
+            <ul class="community__rail" data-community-list></ul>
+            <button class="community__arrow community__arrow--prev" type="button" data-community-prev data-l10n-aria-label="ui.community.prev" aria-label="Previous clips"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M15.4 5.4 14 4l-8 8 8 8 1.4-1.4L8.8 12z"/></svg></button>
+            <button class="community__arrow community__arrow--next" type="button" data-community-next data-l10n-aria-label="ui.community.next" aria-label="Next clips"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8.6 18.6 10 20l8-8-8-8-1.4 1.4 6.6 6.6z"/></svg></button>
+          </div>
+        </div>
+      </section>
       <section class="trailer" id="trailer" aria-labelledby="trailer-title">
         <div class="container">
           <h2 id="trailer-title" class="title" data-l10n="ui.trailer.title">Official announcement trailer</h2>
@@ -83,7 +107,7 @@
               <svg class="button__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-9.96 9.2l5.36 2.22a2.8 2.8 0 0 1 1.6-.5h.16l2.39-3.46v-.05a3.78 3.78 0 1 1 3.78 3.78h-.09l-3.4 2.43v.13a2.84 2.84 0 0 1-5.62.57L2.38 14.8A10 10 0 1 0 12 2Zm-4.72 15.2-1.23-.51a2.13 2.13 0 1 0 1.17-2.9l1.27.53a1.57 1.57 0 1 1-1.2 2.9Zm9.47-7.75a2.52 2.52 0 1 0-2.52 2.52 2.52 2.52 0 0 0 2.52-2.52Zm-4.4 0a1.89 1.89 0 1 1 1.89 1.89 1.89 1.89 0 0 1-1.9-1.89Z"/></svg>
               <span data-l10n="ui.hero.steam_cta">Wishlist on Steam</span>
             </a>
-            <a class="button button--cloud" href="./presskit/#factsheet" data-language-link data-analytics-event="Press Kit View">
+            <a class="button button--cloud" href="./presskit/#start" data-language-link data-analytics-event="Press Kit View">
               <svg class="button__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 3h10l4 4v14H5zm2 2v14h10V8h-3V5zm2 6h6v2H9zm0 4h6v2H9z"/></svg>
               <span data-l10n="ui.landing.view_press_kit">View press kit</span>
             </a>
@@ -122,6 +146,6 @@
       </div>
     </footer>
     <script id="presskit-localization" type="application/json" data-src="./localization.json"></script>
-    <script src="./js/presskit-page.js?v=20261029-analytics"></script>
+    <script src="./js/presskit-page.js?v=20261101-press"></script>
   </body>
 </html>

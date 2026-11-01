@@ -588,7 +588,7 @@
         media.appendChild(img)
       } else {
         // No image from the outlet: the key art, dimmed, with the outlet's name on top.
-        img.src = 'images/key-art-2026-web.jpg'
+        img.src = section.dataset.fallback
         media.classList.add('press__media--plain')
         media.appendChild(img)
         const name = document.createElement('span')
