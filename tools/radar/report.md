@@ -1,19 +1,18 @@
 # Radar DUNK — 2026-11-01
 
-91 posts · 1.6 M visitas en total · 62 creadores
+101 posts · 2.1 M visitas en total · 66 creadores
 
 | Origen | Posts | Visitas |
 |---|---:|---:|
 | Jestr | 0 | 0 |
 | orgánico | 0 | 0 |
-| sin marcar | 91 | 1.6 M |
+| sin marcar | 101 | 2.1 M |
 
 ## Para revisar
 
 | Red | Creador | Título | Visitas | +24h | Fecha | Origen | Estado |
 |---|---|---|---:|---:|---|---|---|
 | tiktok | [@gamagameha_com](https://www.tiktok.com/@gamagameha_com/video/7702542876344945942) | 🏀🔥 ¡Baloncesto desde tus propios ojos y sin nadie a quien echar la c | 252 |  | 2026-10-30 | ? | revisar |
-| tiktok | [@seruin.official](https://www.tiktok.com/@seruin.official/video/7702398012370291975) | Pernah membayangkan bermain basket langsung dari sudut pandang pemainn | 538 |  | 2026-10-30 | ? | revisar |
 
 ## Nuevos
 
@@ -26,12 +25,17 @@
 |---|---|---|---:|---:|---|---|---|
 | instagram | [@prestonxdc](https://www.instagram.com/prestonxdc/reel/DfCs5MUlNL_/) | The BEST Basketball Game I've Ever Played | 408 mil | +8.424 | 2026-10-28 | ? · pagado | en-sitio |
 | instagram | [@garimpandojogosoficial](https://www.instagram.com/garimpandojogosoficial/reel/DfDM1M1hHbp/) | Nesse jogo você pode dar um toco no seu amigo até na Lua | 383 mil | +16 mil | 2026-10-28 | ? | en-sitio |
+| instagram | [@sphinxdsaiyan](https://www.instagram.com/sphinxdsaiyan/reel/DfCmSz6FSUZ/) | HE CAN'T BE STOPPED!!! #gaming #indiegames #gamingmemes #dunk | 331 mil |  | 2026-10-28 | ? · pagado | en-sitio |
 | instagram | [@imjustjarrod](https://www.instagram.com/imjustjarrod/reel/DfDYuLYKXXe/) | Physics-based, first-person basketball, and it gets chaotic fast | 219 mil | +8.939 | 2026-10-28 | ? · pagado | en-sitio |
 | tiktok | [@garimpandojogos](https://www.tiktok.com/@garimpandojogos/video/7701805584739290374) | NESSE JOGO VOCÊ PODE DAR UM TOCO NO SEU AMIGO ATÉ NA LUA — DUNK! DUNK! | 143 mil | +6.700 | 2026-10-28 | ? | en-sitio |
 | instagram | [@don_indies](https://www.instagram.com/don_indies/reel/DfC7w0EOYpK/) | El faul no existe y nadie te va a cobrar nada | 89 mil | +3.062 | 2026-10-28 | ? | en-sitio |
 | instagram | [@tayancruz](https://www.instagram.com/tayancruz/reel/DfCncNhD-QN/) | Nesse basquete dá pra derrubar seu amigo no ar | 62 mil | +1.145 | 2026-10-28 | ? · pagado | en-sitio |
+| instagram | [@duckinvaders](https://www.instagram.com/duckinvaders/reel/DfCs-zKRLeW/) | An actually good basketball video game #gaming #pcgaming #indiegame | 57 mil |  | 2026-10-28 | ? | en-sitio |
+| instagram | [@sphinxdsaiyan](https://www.instagram.com/sphinxdsaiyan/reel/DfDdNQEkgZQ/) | HOW DID HE HIT THAT?! #gaming #indiegames #gamingmemes #dunk | 51 mil |  | 2026-10-28 | ? · pagado | en-sitio |
+| instagram | [@oyundem](https://www.instagram.com/oyundem/reel/DfKOBcCuauj/) | Arkadaşlarınızla beraber sokak basketbolu maçları yapabileceğiniz fizi | 35 mil |  | 2026-10-31 | ? | en-sitio |
 | instagram | [@prestonxdc](https://www.instagram.com/prestonxdc/reel/DfDb7nvFJT9/) | Most Fun I've had Playing a Basketball Game #gaming #dunk | 33 mil | +1.111 | 2026-10-28 | ? · pagado | en-sitio |
 | youtube | [@WatermelonGamesTV](https://www.youtube.com/watch?v=is17ilyYfes) | 3 free co-op demos or playtests to play | 29 mil | +354 | 2026-10-28 | ? · pagado | en-sitio |
+| instagram | [@sphinxdsaiyan](https://www.instagram.com/sphinxdsaiyan/reel/DfDsnQ0Pe_p/) | Welcome To Dunk City!!! #gaming #indiegame #dunk #memes | 26 mil |  | 2026-10-29 | ? · pagado | en-sitio |
 | youtube | [@DuckInvaders](https://www.youtube.com/watch?v=gvUDdr5eJr0) | We Finally Got a GOOD Sports Game | 13 mil | +701 | 2026-10-28 | ? | en-sitio |
 | youtube | [@thetweekk](https://www.youtube.com/watch?v=5sKzHdcVT70) | 3 Steam Games You Need to Try With Your Friends! #shorts | 13 mil | +802 | 2026-10-28 | ? · pagado | en-sitio |
 | instagram | [@kroniques](https://www.instagram.com/kroniques/reel/DfC3Z6AhFcs/) | DUNK : le jeu de basket multijoueur en vue FPS où tu peux dunker sur l | 12 mil | +875 | 2026-10-28 | ? · pagado | en-sitio |
@@ -44,6 +48,7 @@
 | youtube | [@lofichay](https://www.youtube.com/watch?v=O3d_yTuLplM) | En este juego puedes jugar al baloncesto en la Luna | 6.160 | +276 | 2026-10-28 | ? · pagado | en-sitio |
 | youtube | [@imjustjarrod7](https://www.youtube.com/watch?v=l5rREY-xU5c) | Basketball but actually fun | 6.032 | +493 | 2026-10-28 | ? · pagado | en-sitio |
 | youtube | [@yeta.exe11](https://www.youtube.com/watch?v=Xbz_u8vShPI) | 1v1s boutta go CRAZY [ A D ] | 5.397 |  | 2026-10-28 | ? · pagado | en-sitio |
+| instagram | [@proximo.save](https://www.instagram.com/proximo.save/reel/DfJ5Nq2DyPF/) | O basquete mais caótico que eu já vi: tudo é física, em primeira pesso | 5.361 |  | 2026-10-31 | ? | en-sitio |
 | instagram | [@leonzyr](https://www.instagram.com/leonzyr/reel/DfC3itgAPHu/) | En este juego de básquet guiado por físicas nos toca armar equipo de u | 5.302 | +72 | 2026-10-28 | ? | en-sitio |
 | instagram | [@yunaluvgames](https://www.instagram.com/yunaluvgames/reel/DfC3bWpCKBG/) | I wish I was a little bit taller because in this game I'm a tiny baby  | 5.197 | +194 | 2026-10-28 | ? · pagado | en-sitio |
 | youtube | [@GamesWorthTrying](https://www.youtube.com/watch?v=B-K27625PTU) | Basketball But You Can TACKLE People | 5.160 | +204 | 2026-10-28 | ? · pagado | en-sitio |
@@ -68,6 +73,7 @@
 | youtube | [@Wyrigo](https://www.youtube.com/watch?v=qLKkQuIDJWg) | Why This Game Teaches You To DUNK On Your Friends | 1.781 | +106 | 2026-10-28 | ? · pagado | en-sitio |
 | instagram | [@mrgamingclipz](https://www.instagram.com/p/DfDrOAnjNY5/) | Take basketball from the schoolyard to the jungle in physics-driven ma | 1.760 | +15 | 2026-10-29 | ? · pagado | en-sitio |
 | tiktok | [@tumbaranchoyt](https://www.tiktok.com/@tumbaranchoyt/video/7701857857280560392) | Avisale a tus amigos de este juegazo! (DUNK) | 1.707 | +116 | 2026-10-28 | ? | en-sitio |
+| instagram | [@seruin.official](https://www.instagram.com/seruin.official/reel/DfHUWSqv0iC/) | Pernah membayangkan bermain basket langsung dari sudut pandang pemainn | 1.693 |  | 2026-10-30 | ? | en-sitio |
 | tiktok | [@duckinvaders](https://www.tiktok.com/@duckinvaders/video/7701732938286779661) | An actually good basketball video game (DUNK) | 1.691 | +139 | 2026-10-28 | ? | en-sitio |
 | instagram | [@tvgameover](https://www.instagram.com/tvgameover/reel/DfD3U-0FCKE/) | Basquete em primeira pessoa, enterradas insanas e seis jogadores dispu | 1.662 | +21 | 2026-10-29 | ? | en-sitio |
 | youtube | [@PrestonxDC](https://www.youtube.com/watch?v=yvIZCWpGPxA) | NEW Basketball Game is INSANE | 1.651 | +36 | 2026-10-28 | ? · pagado | en-sitio |
@@ -87,12 +93,15 @@
 | youtube | [@Kroniques_Lab](https://www.youtube.com/watch?v=oVUXcYJF7Z0) | DUNK : le jeu de basket où tu dunkes sur la Lune 🏀 | 1.045 | +18 | 2026-10-28 | ? · pagado | en-sitio |
 | tiktok | [@leonardogamingue](https://www.tiktok.com/@leonardogamingue/video/7701853701513825569) | je rentre le panier ou j’arrête tout 🏀 DUNK - dispo sur Steam #indieg | 1.018 | +16 | 2026-10-28 | ? · pagado | en-sitio |
 | tiktok | [@donindies](https://www.tiktok.com/@donindies/video/7701766927919697170) | El faul no existe y nadie te va a cobrar nada. Básquetbol en primera p | 931 | +32 | 2026-10-28 | ? | en-sitio |
+| tiktok | [@sphinx.d.saiyan](https://www.tiktok.com/@sphinx.d.saiyan/video/7701674150762679583) | Frog From Way Downtown... BANG!!! #gaming #indiegames #gamingmemes #du | 927 |  | 2026-10-28 | ? · pagado | en-sitio |
+| tiktok | [@sphinx.d.saiyan](https://www.tiktok.com/@sphinx.d.saiyan/video/7701832351403330846) | HOW DID HE HIT THAT?! #gaming #indiegames #gamingmemes #dunk | 837 |  | 2026-10-28 | ? · pagado | en-sitio |
 | instagram | [@gamesfound](https://www.instagram.com/gamesfound/reel/DfCm92kifsl/) | This Basketball Game Is So Unfair | 818 | +54 | 2026-10-28 | ? · pagado | en-sitio |
+| tiktok | [@sphinx.d.saiyan](https://www.tiktok.com/@sphinx.d.saiyan/video/7702075260027374879) | Welcome To DUNK City!!! #gaming #indiegames #gamingmemes #dunk | 809 |  | 2026-10-29 | ? · pagado | en-sitio |
 | tiktok | [@chewyradar](https://www.tiktok.com/@chewyradar/video/7701719265778371871) | [ad] 3 co-op steam playtests you need to play! 🥶 1. DUNK 2. Buried Wh | 688 | +86 | 2026-10-28 | ? · pagado | en-sitio |
 | tiktok | [@sointhisgame8](https://www.tiktok.com/@sointhisgame8/video/7702833240205249814) | You can throw the ball right at your rival's FACE 🏀💥 DUNK: 3v3 physi | 669 | +1 | 2026-10-31 | ? | en-sitio |
 | tiktok | [@yunaluvgames](https://www.tiktok.com/@yunaluvgames/video/7701756958549806349) | I wish I was a little bit taller because in this game I'm a tiny baby  | 631 | +14 | 2026-10-28 | ? · pagado | en-sitio |
 | instagram | [@chewyradar](https://www.instagram.com/p/DfCmVDaS4z3/) | [ad] 3 co-op steam playtests you need to play! 1. DUNK 2. Buried Whisp | 626 | +54 | 2026-10-28 | ? · pagado | en-sitio |
-| tiktok | [@seruin.official](https://www.tiktok.com/@seruin.official/video/7702398012370291975) | Pernah membayangkan bermain basket langsung dari sudut pandang pemainn | 538 |  | 2026-10-30 | ? | revisar |
+| tiktok | [@seruin.official](https://www.tiktok.com/@seruin.official/video/7702398012370291975) | Pernah membayangkan bermain basket langsung dari sudut pandang pemainn | 538 |  | 2026-10-30 | ? | en-sitio |
 | tiktok | [@arcisironman](https://www.tiktok.com/@arcisironman/video/7701718495150558495) | better than 2k?? 🏀 you can tackle people mid dunk lmao. dunk! playtes | 506 | +33 | 2026-10-28 | ? · pagado | en-sitio |
 | tiktok | [@welmeygames](https://www.tiktok.com/@welmeygames/video/7701740220491812110) | FIRST-PERSON BASKETBALL GETS WAY MORE CHAOTIC THAN IT SHOULD DUNK is a | 446 | +90 | 2026-10-28 | ? | en-sitio |
 | tiktok | [@prestonxdc](https://www.tiktok.com/@prestonxdc/video/7701732592504114446) | The BEST Basketball Game I've Ever Played #gaming #dunk | 439 | +93 | 2026-10-28 | ? · pagado | en-sitio |
@@ -149,3 +158,10 @@
 - [@chewyradar](https://www.instagram.com/p/DfCmVDaS4z3/) — 626 (último dato 2026-10-31T22:00Z)
 - [@prestonxdc](https://www.instagram.com/prestonxdc/reel/DfDb7nvFJT9/) — 33 mil (último dato 2026-10-31T22:00Z)
 - [@sointhisgame](https://www.instagram.com/sointhisgame/reel/DfKVMb3uREd/) — 2.961 (último dato 2026-10-31T23:00Z)
+- [@sphinxdsaiyan](https://www.instagram.com/sphinxdsaiyan/reel/DfCmSz6FSUZ/) — 331 mil (último dato 2026-11-01)
+- [@sphinxdsaiyan](https://www.instagram.com/sphinxdsaiyan/reel/DfDdNQEkgZQ/) — 51 mil (último dato 2026-11-01)
+- [@sphinxdsaiyan](https://www.instagram.com/sphinxdsaiyan/reel/DfDsnQ0Pe_p/) — 26 mil (último dato 2026-11-01)
+- [@duckinvaders](https://www.instagram.com/duckinvaders/reel/DfCs-zKRLeW/) — 57 mil (último dato 2026-11-01)
+- [@oyundem](https://www.instagram.com/oyundem/reel/DfKOBcCuauj/) — 35 mil (último dato 2026-11-01)
+- [@proximo.save](https://www.instagram.com/proximo.save/reel/DfJ5Nq2DyPF/) — 5.361 (último dato 2026-11-01)
+- [@seruin.official](https://www.instagram.com/seruin.official/reel/DfHUWSqv0iC/) — 1.693 (último dato 2026-11-01)
