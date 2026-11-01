@@ -41,6 +41,27 @@
   },
   "press": {
     "steamApp": 4591520,
+    "relevance": {
+      "ign.com": 100,
+      "gamer.com.tw": 90,
+      "msn.com": 85,
+      "playground.ru": 80,
+      "gamemeca.com": 75,
+      "gcores.com": 70,
+      "gamebiz.jp": 60,
+      "bluesnews.com": 55,
+      "gamespress.com": 50,
+      "ig.com.br": 45,
+      "lapausegeek.com": 45,
+      "anmtvla.com": 40,
+      "ggames.com.br": 35,
+      "gamersegames.com.br": 30,
+      "gomultiplayer.com": 30,
+      "gameit.es": 25,
+      "tecnogus.com.co": 20,
+      "ultimaficha.com.br": 20,
+      "247videogame.com": 15
+    },
     "outlets": { "anmtvla.com": "ANMTV", "gamemeca.com": "Gamemeca 게임메카", "bluesnews.com": "Blue's News", "gamespress.com": "Games Press" },
     "google": [
       ["\"Katapult Games\"", "en"],

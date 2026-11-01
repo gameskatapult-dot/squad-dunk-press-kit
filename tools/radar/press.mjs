@@ -329,7 +329,15 @@ async function saveThumb (a) {
   return name
 }
 
-// Writes press.json with every approved article, newest first.
+// Outlet relevance (config.press.relevance, by domain, rough reach 0-100). Unlisted outlets count as 0.
+function relevance (a) {
+  const host = new URL(a.url).hostname.replace(/^www\./, '')
+  const rel = config.press.relevance || {}
+  const key = Object.keys(rel).find(d => host === d || host.endsWith('.' + d))
+  return key ? rel[key] : 0
+}
+
+// Writes press.json with every approved article, most relevant outlet first, then newest.
 async function site () {
   let added = 0
   for (const a of Object.values(db.articles)) {
@@ -341,7 +349,7 @@ async function site () {
   }
   const list = Object.values(db.articles)
     .filter(a => a.status === 'en-sitio')
-    .sort((a, b) => b.date.localeCompare(a.date) || a.outlet.localeCompare(b.outlet))
+    .sort((a, b) => relevance(b) - relevance(a) || b.date.localeCompare(a.date) || a.outlet.localeCompare(b.outlet))
     .map(a => ({ id: a.id, url: a.url, outlet: a.outlet, title: a.title, date: a.date, lang: a.lang, thumb: a.thumb }))
   fs.writeFileSync(SITE_JSON, '[\n' + list.map(i => '  ' + JSON.stringify(i)).join(',\n') + '\n]\n')
   console.log(`Sitio: ${added} artículos nuevos, ${list.length} en total.`)

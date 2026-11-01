@@ -417,13 +417,6 @@
  },
  "runs": [
   {
-   "date": "2026-10-29T13:13:10.321Z",
-   "command": "add",
-   "found": 1,
-   "requests": 1,
-   "kb": 48
-  },
-  {
    "date": "2026-10-29T13:13:41.675Z",
    "command": "check",
    "found": 0,
@@ -761,6 +754,13 @@
   },
   {
    "date": "2026-11-01T23:00:57.320Z",
+   "command": "site",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-01T23:05:13.551Z",
    "command": "site",
    "found": 0,
    "requests": 0,
