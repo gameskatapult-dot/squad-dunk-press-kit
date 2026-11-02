@@ -1,12 +1,12 @@
 # Radar DUNK — 2026-11-02
 
-106 posts · 2.2 M visitas en total · 71 creadores
+107 posts · 2.2 M visitas en total · 72 creadores
 
 | Origen | Posts | Visitas |
 |---|---:|---:|
 | Jestr | 0 | 0 |
 | orgánico | 0 | 0 |
-| sin marcar | 106 | 2.2 M |
+| sin marcar | 107 | 2.2 M |
 
 ## Para revisar
 
@@ -89,6 +89,7 @@
 | youtube | [@gamegamegame11](https://www.youtube.com/watch?v=PYVJwnkgbYE) | Basketball… on the MOON 🌕🏀 #dunk #indiegames | 1.391 | +872 | 2026-11-01 | ? | en-sitio |
 | tiktok | [@brookg_indiegames](https://www.tiktok.com/@brookg_indiegames/video/7701718408227753248) | Un coaitco co-op dove giochi a basket controllando un solo giocatore.  | 1.324 | +23 | 2026-10-28 | ? · pagado | en-sitio |
 | youtube | [@PrestonxDC](https://www.youtube.com/watch?v=SuvjmWfHZYY) | New Basketball Game has Joined the Court | 1.279 | +111 | 2026-10-28 | ? | en-sitio |
+| instagram | [@pekesaurioo](https://www.instagram.com/pekesaurioo/reel/DfQDjeMBUdb/) | El mejor juego de básquetbol | 1.277 |  | 2026-11-02 | ? | en-sitio |
 | tiktok | [@lupusgg](https://www.tiktok.com/@lupusgg/video/7701713704454327574) | 🏀Ein Basketball Game aus der Ego Perspektive, das man richtig nice ge | 1.259 | +20 | 2026-10-28 | ? | en-sitio |
 | instagram | [@johanwavex](https://www.instagram.com/johanwavex/reel/DfD3Y3JhhyL/) | A first-person 1-6 player basketball game | 1.125 | +9 | 2026-10-29 | ? · pagado | en-sitio |
 | youtube | [@JohanWaveX](https://www.youtube.com/watch?v=emil2UByGsA) | Breaking Ankles in ZERO GRAVITY Is Crazy Work | 1.104 | +0 | 2026-10-28 | ? · pagado | en-sitio |
@@ -171,3 +172,4 @@
 - [@oyundem](https://www.instagram.com/oyundem/reel/DfKOBcCuauj/) — 43 mil (último dato 2026-11-02T19:00Z)
 - [@proximo.save](https://www.instagram.com/proximo.save/reel/DfJ5Nq2DyPF/) — 6.550 (último dato 2026-11-02T19:00Z)
 - [@seruin.official](https://www.instagram.com/seruin.official/reel/DfHUWSqv0iC/) — 1.713 (último dato 2026-11-02T19:00Z)
+- [@pekesaurioo](https://www.instagram.com/pekesaurioo/reel/DfQDjeMBUdb/) — 1.277 (último dato 2026-11-02)

@@ -8167,6 +8167,29 @@
      913
     ]
    ]
+  },
+  "instagram:DfQDjeMBUdb": {
+   "platform": "instagram",
+   "id": "DfQDjeMBUdb",
+   "url": "https://www.instagram.com/pekesaurioo/reel/DfQDjeMBUdb/",
+   "author": "@pekesaurioo",
+   "title": "El mejor juego de básquetbol",
+   "desc": "",
+   "date": "2026-11-02",
+   "views": 1277,
+   "likes": 50,
+   "manual": true,
+   "status": "en-sitio",
+   "reason": "agregado a mano",
+   "source": "manual",
+   "firstSeen": "2026-11-02",
+   "checked": "2026-11-02",
+   "history": [
+    [
+     "2026-11-02",
+     1277
+    ]
+   ]
   }
  },
  "rejected": {
@@ -12478,27 +12501,6 @@
  },
  "runs": [
   {
-   "date": "2026-11-01T11:17:49.185Z",
-   "command": "add",
-   "found": 1,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-11-01T11:17:49.465Z",
-   "command": "add",
-   "found": 1,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-11-01T11:17:49.743Z",
-   "command": "add",
-   "found": 1,
-   "requests": 0,
-   "kb": 0
-  },
-  {
    "date": "2026-11-01T11:17:49.958Z",
    "command": "add",
    "found": 1,
@@ -12822,6 +12824,27 @@
   },
   {
    "date": "2026-11-02T19:56:51.488Z",
+   "command": "site",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-02T20:18:33.945Z",
+   "command": "add",
+   "found": 1,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-02T20:18:34.215Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-02T20:19:03.875Z",
    "command": "site",
    "found": 0,
    "requests": 0,
