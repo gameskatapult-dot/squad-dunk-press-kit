@@ -8190,6 +8190,121 @@
      1277
     ]
    ]
+  },
+  "instagram:DfDKv7xkQkU": {
+   "platform": "instagram",
+   "id": "DfDKv7xkQkU",
+   "url": "https://www.instagram.com/misly_official/reel/DfDKv7xkQkU/",
+   "author": "@misly_official",
+   "title": "3 CO-OP games to play with your friends",
+   "desc": "",
+   "date": "2026-10-28",
+   "views": 738357,
+   "likes": 27456,
+   "manual": true,
+   "status": "en-sitio",
+   "reason": "agregado a mano",
+   "source": "manual",
+   "firstSeen": "2026-11-02",
+   "checked": "2026-11-02",
+   "history": [
+    [
+     "2026-11-02",
+     738357
+    ]
+   ]
+  },
+  "instagram:DfCm3_plU4Q": {
+   "platform": "instagram",
+   "id": "DfCm3_plU4Q",
+   "url": "https://www.instagram.com/mrgamingclipz/reel/DfCm3_plU4Q/",
+   "author": "@mrgamingclipz",
+   "title": "Play first-person matches up to 3v3",
+   "desc": "",
+   "date": "2026-10-28",
+   "views": 1724,
+   "likes": 25,
+   "manual": true,
+   "status": "en-sitio",
+   "reason": "agregado a mano",
+   "source": "manual",
+   "firstSeen": "2026-11-02",
+   "checked": "2026-11-02",
+   "history": [
+    [
+     "2026-11-02",
+     1724
+    ]
+   ]
+  },
+  "instagram:DfDD8ipBWva": {
+   "platform": "instagram",
+   "id": "DfDD8ipBWva",
+   "url": "https://www.instagram.com/cryxbit/reel/DfDD8ipBWva/",
+   "author": "@cryxbit",
+   "title": "WHO LET THEM COOK?",
+   "desc": "",
+   "date": "2026-10-28",
+   "views": 1675,
+   "likes": 81,
+   "manual": true,
+   "status": "en-sitio",
+   "reason": "agregado a mano",
+   "source": "manual",
+   "firstSeen": "2026-11-02",
+   "checked": "2026-11-02",
+   "history": [
+    [
+     "2026-11-02",
+     1675
+    ]
+   ]
+  },
+  "instagram:DfDEr4eByqS": {
+   "platform": "instagram",
+   "id": "DfDEr4eByqS",
+   "url": "https://www.instagram.com/cryxbit/reel/DfDEr4eByqS/",
+   "author": "@cryxbit",
+   "title": "WHO LET THEM COOK?",
+   "desc": "",
+   "date": "2026-10-28",
+   "views": 1436,
+   "likes": 36,
+   "manual": true,
+   "status": "en-sitio",
+   "reason": "agregado a mano",
+   "source": "manual",
+   "firstSeen": "2026-11-02",
+   "checked": "2026-11-02",
+   "history": [
+    [
+     "2026-11-02",
+     1436
+    ]
+   ]
+  },
+  "instagram:DfDWLt9Spht": {
+   "platform": "instagram",
+   "id": "DfDWLt9Spht",
+   "url": "https://www.instagram.com/wyrigo.indiegames/reel/DfDWLt9Spht/",
+   "author": "@wyrigo.indiegames",
+   "title": "How To Dunk on Your Friends",
+   "desc": "",
+   "date": "2026-10-28",
+   "views": 1462,
+   "likes": 8,
+   "manual": true,
+   "status": "en-sitio",
+   "reason": "agregado a mano",
+   "source": "manual",
+   "firstSeen": "2026-11-02",
+   "checked": "2026-11-02",
+   "history": [
+    [
+     "2026-11-02",
+     1462
+    ]
+   ]
   }
  },
  "rejected": {
@@ -12501,83 +12616,6 @@
  },
  "runs": [
   {
-   "date": "2026-11-01T11:17:49.958Z",
-   "command": "add",
-   "found": 1,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-11-01T11:17:50.216Z",
-   "command": "add",
-   "found": 1,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-11-01T11:17:50.481Z",
-   "command": "add",
-   "found": 1,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-11-01T11:17:51.817Z",
-   "command": "add",
-   "found": 1,
-   "requests": 1,
-   "kb": 400
-  },
-  {
-   "date": "2026-11-01T11:17:53.100Z",
-   "command": "add",
-   "found": 1,
-   "requests": 1,
-   "kb": 400
-  },
-  {
-   "date": "2026-11-01T11:17:54.442Z",
-   "command": "add",
-   "found": 1,
-   "requests": 1,
-   "kb": 401
-  },
-  {
-   "date": "2026-11-01T11:17:54.677Z",
-   "command": "set",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-11-01T11:17:54.864Z",
-   "command": "set",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-11-01T11:18:12.893Z",
-   "command": "set",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-11-01T11:18:13.101Z",
-   "command": "set",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-11-01T11:18:13.308Z",
-   "command": "set",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
    "date": "2026-11-01T11:18:13.518Z",
    "command": "set",
    "found": 0,
@@ -12845,6 +12883,83 @@
   },
   {
    "date": "2026-11-02T20:19:03.875Z",
+   "command": "site",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-02T20:25:08.322Z",
+   "command": "add",
+   "found": 1,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-02T20:25:08.577Z",
+   "command": "add",
+   "found": 1,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-02T20:25:08.796Z",
+   "command": "add",
+   "found": 1,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-02T20:25:09.032Z",
+   "command": "add",
+   "found": 1,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-02T20:25:09.278Z",
+   "command": "add",
+   "found": 1,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-02T20:25:09.522Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-02T20:25:09.764Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-02T20:25:09.995Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-02T20:25:10.249Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-02T20:25:10.475Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-02T20:25:13.532Z",
    "command": "site",
    "found": 0,
    "requests": 0,
