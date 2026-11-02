@@ -417,27 +417,6 @@
  },
  "runs": [
   {
-   "date": "2026-10-29T13:13:41.675Z",
-   "command": "check",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-10-29T13:14:06.977Z",
-   "command": "check",
-   "found": 2,
-   "requests": 3,
-   "kb": 608
-  },
-  {
-   "date": "2026-10-29T13:14:33.499Z",
-   "command": "scan",
-   "found": 1,
-   "requests": 24,
-   "kb": 737
-  },
-  {
    "date": "2026-10-29T13:14:33.754Z",
    "command": "approve",
    "found": 0,
@@ -761,6 +740,27 @@
   },
   {
    "date": "2026-11-01T23:05:13.551Z",
+   "command": "site",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-02T12:21:12.132Z",
+   "command": "scan",
+   "found": 0,
+   "requests": 26,
+   "kb": 746
+  },
+  {
+   "date": "2026-11-02T12:21:15.727Z",
+   "command": "approve",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-02T12:21:15.941Z",
    "command": "site",
    "found": 0,
    "requests": 0,
