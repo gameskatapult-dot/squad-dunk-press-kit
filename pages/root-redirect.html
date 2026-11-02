@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/dunk.css?v=20261102-voices">
+    <link rel="stylesheet" href="./css/dunk.css?v=20261102-swap">
   </head>
   <body class="dunk home">
     <header class="topbar" data-l10n-aria-label="ui.accessibility.primary">
@@ -26,8 +26,8 @@
           <img src="./presskit/images/dunk-logo-v8.png" alt="DUNK" width="95" height="28" data-src-zh="./presskit/images/dunk-logo-zh.png" data-alt-zh="友尽大扣篮">
         </a>
         <nav class="topbar__nav" data-l10n-aria-label="ui.accessibility.navigation" aria-label="Main navigation">
-          <a href="#press" data-l10n="ui.nav.sections.press">Press</a>
           <a href="#creators" data-l10n="ui.nav.sections.creators">Creators</a>
+          <a href="#press" data-l10n="ui.nav.sections.press">Press</a>
           <a href="./presskit/#start" data-language-link data-l10n="ui.landing.press_kit_cta">Press kit</a>
         </nav>
         <div class="topbar__actions">
@@ -63,15 +63,15 @@
           </button>
         </div>
       </section>
-      <section class="press" id="press" aria-labelledby="press-title" data-press data-src="./community/press.json" data-fallback="./presskit/images/key-art-2026-web.jpg" hidden>
+      <section class="community" id="creators" aria-labelledby="creators-title" data-community data-src="./community/community.json" hidden>
         <div class="container">
-          <span class="community__eyebrow" data-l10n="ui.nav.sections.press">Press</span>
-          <h2 id="press-title" class="title" data-l10n="ui.press.title">What the press is saying</h2>
-          <p class="community__total"><strong data-press-articles></strong> <span data-l10n="ui.press.articles_label">articles</span> · <strong data-press-languages></strong> <span data-l10n="ui.press.languages_label">languages</span></p>
-          <div class="community__viewport">
-            <ul class="press__rail" data-press-list></ul>
-            <button class="community__arrow community__arrow--prev" type="button" data-press-prev data-l10n-aria-label="ui.press.prev" aria-label="Previous articles"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M15.4 5.4 14 4l-8 8 8 8 1.4-1.4L8.8 12z"/></svg></button>
-            <button class="community__arrow community__arrow--next" type="button" data-press-next data-l10n-aria-label="ui.press.next" aria-label="Next articles"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8.6 18.6 10 20l8-8-8-8-1.4 1.4 6.6 6.6z"/></svg></button>
+          <span class="community__eyebrow" data-l10n="ui.nav.sections.creators">Creators</span>
+          <h2 id="creators-title" class="title" data-l10n="ui.community.title">Creators are playing DUNK</h2>
+          <p class="community__total"><strong data-community-total></strong> <span data-l10n="ui.community.views_label">views on creator videos</span></p>
+          <div class="community__viewport" data-community-viewport>
+            <ul class="community__rail" data-community-list></ul>
+            <button class="community__arrow community__arrow--prev" type="button" data-community-prev data-l10n-aria-label="ui.community.prev" aria-label="Previous clips"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M15.4 5.4 14 4l-8 8 8 8 1.4-1.4L8.8 12z"/></svg></button>
+            <button class="community__arrow community__arrow--next" type="button" data-community-next data-l10n-aria-label="ui.community.next" aria-label="Next clips"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8.6 18.6 10 20l8-8-8-8-1.4 1.4 6.6 6.6z"/></svg></button>
           </div>
         </div>
       </section>
@@ -83,15 +83,15 @@
         </div>
         <div class="voices__belt" data-voices-belt></div>
       </section>
-      <section class="community" id="creators" aria-labelledby="creators-title" data-community data-src="./community/community.json" hidden>
+      <section class="press" id="press" aria-labelledby="press-title" data-press data-src="./community/press.json" data-fallback="./presskit/images/key-art-2026-web.jpg" hidden>
         <div class="container">
-          <span class="community__eyebrow" data-l10n="ui.nav.sections.creators">Creators</span>
-          <h2 id="creators-title" class="title" data-l10n="ui.community.title">Creators are playing DUNK</h2>
-          <p class="community__total"><strong data-community-total></strong> <span data-l10n="ui.community.views_label">views on creator videos</span></p>
-          <div class="community__viewport" data-community-viewport>
-            <ul class="community__rail" data-community-list></ul>
-            <button class="community__arrow community__arrow--prev" type="button" data-community-prev data-l10n-aria-label="ui.community.prev" aria-label="Previous clips"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M15.4 5.4 14 4l-8 8 8 8 1.4-1.4L8.8 12z"/></svg></button>
-            <button class="community__arrow community__arrow--next" type="button" data-community-next data-l10n-aria-label="ui.community.next" aria-label="Next clips"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8.6 18.6 10 20l8-8-8-8-1.4 1.4 6.6 6.6z"/></svg></button>
+          <span class="community__eyebrow" data-l10n="ui.nav.sections.press">Press</span>
+          <h2 id="press-title" class="title" data-l10n="ui.press.title">What the press is saying</h2>
+          <p class="community__total"><strong data-press-articles></strong> <span data-l10n="ui.press.articles_label">articles</span> · <strong data-press-languages></strong> <span data-l10n="ui.press.languages_label">languages</span></p>
+          <div class="community__viewport">
+            <ul class="press__rail" data-press-list></ul>
+            <button class="community__arrow community__arrow--prev" type="button" data-press-prev data-l10n-aria-label="ui.press.prev" aria-label="Previous articles"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M15.4 5.4 14 4l-8 8 8 8 1.4-1.4L8.8 12z"/></svg></button>
+            <button class="community__arrow community__arrow--next" type="button" data-press-next data-l10n-aria-label="ui.press.next" aria-label="Next articles"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8.6 18.6 10 20l8-8-8-8-1.4 1.4 6.6 6.6z"/></svg></button>
           </div>
         </div>
       </section>
@@ -165,6 +165,6 @@
       </div>
     </footer>
     <script id="presskit-localization" type="application/json" data-src="./localization.json"></script>
-    <script src="./js/presskit-page.js?v=20261102-voices"></script>
+    <script src="./js/presskit-page.js?v=20261102-swap"></script>
   </body>
 </html>
