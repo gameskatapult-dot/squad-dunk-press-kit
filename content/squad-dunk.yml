@@ -157,6 +157,10 @@ localization:
           languages_label: "languages"
           prev: "Previous articles"
           next: "Next articles"
+        voices:
+          eyebrow: "Community"
+          title: "What people are saying"
+          subtitle: "Reactions on X since the announcement"
         quick_facts:
           developer: "Developer"
           developer_value: "Katapult Games · Ireland"
@@ -469,6 +473,10 @@ localization:
           languages_label: "idiomas"
           prev: "Artículos anteriores"
           next: "Artículos siguientes"
+        voices:
+          eyebrow: "Comunidad"
+          title: "Lo que dice la gente"
+          subtitle: "Reacciones en X desde el anuncio"
         quick_facts:
           developer: "Desarrollo"
           developer_value: "Katapult Games · Irlanda"
@@ -782,6 +790,10 @@ localization:
           languages_label: "языков"
           prev: "Предыдущие статьи"
           next: "Следующие статьи"
+        voices:
+          eyebrow: "Сообщество"
+          title: "Что говорят игроки"
+          subtitle: "Реакции в X после анонса"
         quick_facts:
           developer: "Разработчик"
           developer_value: "Katapult Games · Ирландия"
@@ -1065,6 +1077,10 @@ localization:
           languages_label: "言語"
           prev: "前の記事"
           next: "次の記事"
+        voices:
+          eyebrow: "コミュニティ"
+          title: "みんなの声"
+          subtitle: "発表後の X での反応"
         quick_facts:
           developer: "開発"
           developer_value: "Katapult Games · アイルランド"
@@ -1339,6 +1355,10 @@ localization:
           languages_label: "种语言"
           prev: "上一篇"
           next: "下一篇"
+        voices:
+          eyebrow: "社区"
+          title: "玩家怎么说"
+          subtitle: "公布以来 X 上的反响"
         quick_facts:
           developer: "开发商"
           developer_value: "Katapult Games · 爱尔兰"
@@ -1640,6 +1660,10 @@ localization:
           languages_label: "Sprachen"
           prev: "Vorherige Artikel"
           next: "Nächste Artikel"
+        voices:
+          eyebrow: "Community"
+          title: "Was die Leute sagen"
+          subtitle: "Reaktionen auf X seit der Ankündigung"
         quick_facts:
           developer: "Entwickler"
           developer_value: "Katapult Games · Irland"
@@ -1954,6 +1978,10 @@ localization:
           languages_label: "langues"
           prev: "Articles précédents"
           next: "Articles suivants"
+        voices:
+          eyebrow: "Communauté"
+          title: "Ce que les gens en disent"
+          subtitle: "Réactions sur X depuis l’annonce"
         quick_facts:
           developer: "Développeur"
           developer_value: "Katapult Games · Irlande"
@@ -2269,6 +2297,10 @@ localization:
           languages_label: "idiomas"
           prev: "Artigos anteriores"
           next: "Próximos artigos"
+        voices:
+          eyebrow: "Comunidade"
+          title: "O que a galera está dizendo"
+          subtitle: "Reações no X desde o anúncio"
         quick_facts:
           developer: "Desenvolvedora"
           developer_value: "Katapult Games · Irlanda"

@@ -173,6 +173,21 @@ body.has-community-player { overflow: hidden; }
 .dunk .community__credit { display: block; margin-top: 10px; overflow: hidden; color: var(--soft); font-weight: 700; white-space: nowrap; text-overflow: ellipsis; }
 .dunk .community__credit:hover { color: var(--cream); }
 
+/* Voices: hand-picked fan tweets drifting past in two rows that run opposite ways; hovering pauses them. */
+.voices { padding: clamp(56px, 7vw, 88px) 0; overflow: hidden; text-align: center; border-bottom: 1px solid var(--line); }
+.voices .title { margin-bottom: 10px; }
+.voices__belt { display: flex; flex-direction: column; gap: 14px; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.voices__row { display: flex; align-items: center; gap: 14px; width: max-content; animation: voices-drift var(--voices-time, 60s) linear infinite; }
+.voices__row--reverse { animation-direction: reverse; }
+.voices__belt:hover .voices__row, .voices__belt:focus-within .voices__row { animation-play-state: paused; }
+@keyframes voices-drift { to { transform: translateX(-50%); } }
+.dunk .voices__quote { display: flex; flex: none; align-items: center; gap: 12px; max-width: min(460px, 84vw); padding: 10px 20px 10px 10px; color: var(--cream); text-align: left; text-decoration: none; border: 1px solid var(--line); border-radius: 32px; transition: border-color .2s ease, background .2s ease; }
+.dunk .voices__quote:hover, .dunk .voices__quote:focus-visible { background: rgba(239, 138, 60, .06); border-color: var(--ball); }
+.voices__avatar { flex: none; width: 40px; height: 40px; object-fit: cover; background: #24211d; border-radius: 50%; }
+.voices__body { display: flex; flex-direction: column; min-width: 0; }
+.voices__text { font: 600 16px/1.3 var(--body); }
+.voices__who { color: var(--soft); font-size: 13px; font-weight: 700; }
+
 /* Press: articles about DUNK in a row of link cards, newest first. */
 .press { padding: clamp(56px, 7vw, 88px) 0; text-align: center; border-bottom: 1px solid var(--line); }
 .press .title { margin-bottom: 10px; }
@@ -359,6 +374,10 @@ body.gallery-lightbox-open { overflow: hidden; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  /* No drift: the rows scroll by hand instead. */
+  .voices__belt { overflow-x: auto; -webkit-mask-image: none; mask-image: none; padding: 0 var(--gutter); }
+  .voices__row { animation: none; }
+  .voices__row [aria-hidden="true"] { display: none; }
 }
 @media print {
   .topbar, .hero__toggle, .site-footer { display: none; }

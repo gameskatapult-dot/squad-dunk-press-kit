@@ -654,6 +654,80 @@
     update()
   }
 
+  // Fan tweets from tweets.json (written by tools/radar/tweets.mjs) in two rows drifting opposite ways.
+  // Each row repeats its quotes until half of it is wider than the screen, then doubles itself, so the
+  // -50% loop never shows a gap. The repeats are hidden from screen readers and the keyboard.
+  async function setupVoices () {
+    const section = document.querySelector('[data-voices]')
+    const belt = section && section.querySelector('[data-voices-belt]')
+    if (!belt) return
+
+    let items = []
+    let listUrl = window.location.href
+    try {
+      const response = await fetch(section.dataset.src, { cache: 'no-cache' })
+      if (response.ok) {
+        items = await response.json()
+        listUrl = response.url
+      }
+    } catch (error) {}
+    items = Array.isArray(items) ? items.filter(function (item) { return item.url && item.text }) : []
+    if (!items.length) return
+
+    function quote (item, copy) {
+      const link = document.createElement('a')
+      link.className = 'voices__quote'
+      link.href = item.url
+      link.target = '_blank'
+      link.rel = 'noopener'
+      link.setAttribute('data-analytics-event', 'Fan Tweet Click')
+      if (copy) {
+        link.setAttribute('aria-hidden', 'true')
+        link.tabIndex = -1
+      }
+      const avatar = document.createElement('img')
+      avatar.className = 'voices__avatar'
+      avatar.alt = ''
+      avatar.loading = 'lazy'
+      if (item.avatar) avatar.src = new URL(item.avatar, listUrl).href
+      const body = document.createElement('span')
+      body.className = 'voices__body'
+      const text = document.createElement('span')
+      text.className = 'voices__text'
+      text.textContent = '“' + item.text + '”'
+      const who = document.createElement('span')
+      who.className = 'voices__who'
+      who.textContent = item.name + ' · @' + item.handle
+      body.appendChild(text)
+      body.appendChild(who)
+      link.appendChild(avatar)
+      link.appendChild(body)
+      return link
+    }
+
+    const half = Math.ceil(items.length / 2)
+    const groups = items.length > 3 ? [items.slice(0, half), items.slice(half)] : [items]
+    section.hidden = false
+    groups.forEach(function (group, index) {
+      const row = document.createElement('div')
+      row.className = 'voices__row' + (index % 2 ? ' voices__row--reverse' : '')
+      belt.appendChild(row)
+      group.forEach(function (item) { row.appendChild(quote(item, false)) })
+      // Fill to the widest likely screen, then double: the second half is the seamless twin.
+      for (let copies = 0; row.scrollWidth < Math.max(window.innerWidth, 1920) && copies < 12; copies++) {
+        group.forEach(function (item) { row.appendChild(quote(item, true)) })
+      }
+      Array.from(row.children).forEach(function (node) {
+        const twin = node.cloneNode(true)
+        twin.setAttribute('aria-hidden', 'true')
+        twin.tabIndex = -1
+        row.appendChild(twin)
+      })
+      // About 40px a second, whatever the row's length.
+      row.style.setProperty('--voices-time', Math.max(20, Math.round(row.scrollWidth / 2 / 40)) + 's')
+    })
+  }
+
   // Steam's store widget: a fixed 646×190 iframe. It reflows down to 480px wide; narrower
   // boxes get the 480px layout scaled down. Its language follows the page's.
   const steamLanguages = { en: 'english', es: 'latam', ru: 'russian', ja: 'japanese', zh: 'schinese', de: 'german', fr: 'french', pt: 'brazilian' }
@@ -1158,6 +1232,7 @@
     setupTrailer()
     setupCommunity()
     setupPress()
+    setupVoices()
     setupSteamWidgets()
     setupScreenshotCarousels()
     setupGalleryLightbox()

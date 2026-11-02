@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/dunk.css?v=20261102-steam">
+    <link rel="stylesheet" href="./css/dunk.css?v=20261102-voices">
   </head>
   <body class="dunk home">
     <header class="topbar" data-l10n-aria-label="ui.accessibility.primary">
@@ -74,6 +74,14 @@
             <button class="community__arrow community__arrow--next" type="button" data-press-next data-l10n-aria-label="ui.press.next" aria-label="Next articles"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8.6 18.6 10 20l8-8-8-8-1.4 1.4 6.6 6.6z"/></svg></button>
           </div>
         </div>
+      </section>
+      <section class="voices" id="voices" aria-labelledby="voices-title" data-voices data-src="./community/tweets.json" hidden>
+        <div class="container">
+          <span class="community__eyebrow" data-l10n="ui.voices.eyebrow">Community</span>
+          <h2 id="voices-title" class="title" data-l10n="ui.voices.title">What people are saying</h2>
+          <p class="community__prompt" data-l10n="ui.voices.subtitle">Reactions on X since the announcement</p>
+        </div>
+        <div class="voices__belt" data-voices-belt></div>
       </section>
       <section class="community" id="creators" aria-labelledby="creators-title" data-community data-src="./community/community.json" hidden>
         <div class="container">
@@ -157,6 +165,6 @@
       </div>
     </footer>
     <script id="presskit-localization" type="application/json" data-src="./localization.json"></script>
-    <script src="./js/presskit-page.js?v=20261102-steam"></script>
+    <script src="./js/presskit-page.js?v=20261102-voices"></script>
   </body>
 </html>
