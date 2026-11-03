@@ -17,8 +17,6 @@
 | youtube | [@powergames_dev](https://www.youtube.com/watch?v=bZXAREMbpkU) | He jumped with him. / Streetball dunk | 240 |  | 2026-11-02 | ? | revisar |
 | youtube | [@B1GMBB](https://www.youtube.com/watch?v=BGpnbXt67Nw) | Trent Sisley Kicks It Out and Gets It Back for the Dunk vs. EIU / Indi | 4.283 |  | 2026-11-02 | ? | revisar |
 | youtube | [@JXIY_au](https://www.youtube.com/watch?v=Eel7yjKMc3g) | HE KEPT BANKING THREES… THEN DID THIS?! 😭🏀 | 4.980 |  | 2026-11-02 | ? | revisar |
-| instagram | [@viewie25](https://www.instagram.com/viewie25/reel/DfDWSP0J_8Y/) | Dunkin' on these fools | 637 |  | 2026-10-28 | ? | revisar |
-| tiktok | [@viewie_](https://www.tiktok.com/@viewie_/video/7701819465897446670) | dunkin' on these fools #gaming #pcgaming #indiegame | 348 |  | 2026-10-28 | ? | revisar |
 
 ## Nuevos
 
@@ -123,13 +121,13 @@
 | tiktok | [@prestonxdc](https://www.tiktok.com/@prestonxdc/video/7701732592504114446) | The BEST Basketball Game I've Ever Played #gaming #dunk | 675 | +215 | 2026-10-28 | ? · pagado | en-sitio |
 | tiktok | [@yunaluvgames](https://www.tiktok.com/@yunaluvgames/video/7701756958549806349) | I wish I was a little bit taller because in this game I'm a tiny baby  | 650 | +6 | 2026-10-28 | ? · pagado | en-sitio |
 | tiktok | [@prestonxdc](https://www.tiktok.com/@prestonxdc/video/7701838895649934605) | Most Fun I've had Playing a Basketball Game #gaming #dunk | 638 | +162 | 2026-10-28 | ? | en-sitio |
-| instagram | [@viewie25](https://www.instagram.com/viewie25/reel/DfDWSP0J_8Y/) | Dunkin' on these fools | 637 |  | 2026-10-28 | ? | revisar |
+| instagram | [@viewie25](https://www.instagram.com/viewie25/reel/DfDWSP0J_8Y/) | Dunkin' on these fools | 637 |  | 2026-10-28 | ? | en-sitio |
 | tiktok | [@welmeygames](https://www.tiktok.com/@welmeygames/video/7701740220491812110) | FIRST-PERSON BASKETBALL GETS WAY MORE CHAOTIC THAN IT SHOULD DUNK is a | 558 | +96 | 2026-10-28 | ? | en-sitio |
 | tiktok | [@seruin.official](https://www.tiktok.com/@seruin.official/video/7702398012370291975) | Pernah membayangkan bermain basket langsung dari sudut pandang pemainn | 555 | +4 | 2026-10-30 | ? | en-sitio |
 | tiktok | [@arcisironman](https://www.tiktok.com/@arcisironman/video/7701718495150558495) | better than 2k?? 🏀 you can tackle people mid dunk lmao. dunk! playtes | 547 | +14 | 2026-10-28 | ? · pagado | en-sitio |
 | instagram | [@gamestried](https://www.instagram.com/gamestried/reel/DfCnsrWgA2q/) | Basketball But You Can TACKLE People | 417 | +0 | 2026-10-28 | ? · pagado | en-sitio |
 | tiktok | [@lofichay_](https://www.tiktok.com/@lofichay_/video/7701720409233771798) | 🏀🌙 ¡En este juego puedes jugar al baloncesto en la Luna! DUNK mezcla | 416 | +2 | 2026-10-28 | ? | en-sitio |
-| tiktok | [@viewie_](https://www.tiktok.com/@viewie_/video/7701819465897446670) | dunkin' on these fools #gaming #pcgaming #indiegame | 348 |  | 2026-10-28 | ? | revisar |
+| tiktok | [@viewie_](https://www.tiktok.com/@viewie_/video/7701819465897446670) | dunkin' on these fools #gaming #pcgaming #indiegame | 348 |  | 2026-10-28 | ? | en-sitio |
 | tiktok | [@johanwavex](https://www.tiktok.com/@johanwavex/video/7701867009092455694) | A first-person 1-6 player basketball game where every physics-based pa | 344 | +0 | 2026-10-28 | ? · pagado | en-sitio |
 | tiktok | [@wyrigo](https://www.tiktok.com/@wyrigo/video/7701825904934178061) | Learn How to DUNK on Your Homies 😂 #gaming #indiegames #gamereview  | 337 | +0 | 2026-10-28 | ? · pagado | en-sitio |
 | tiktok | [@stroobagg](https://www.tiktok.com/@stroobagg/video/7701829561423613198) | ad This Game Teaches How to Dunk on Your Best Friend 🔥🙏 #gaming #ind | 332 | +0 | 2026-10-28 | ? · pagado | en-sitio |

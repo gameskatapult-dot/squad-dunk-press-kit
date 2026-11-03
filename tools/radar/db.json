@@ -8911,7 +8911,7 @@
    "views": 637,
    "likes": 7,
    "manual": true,
-   "status": "revisar",
+   "status": "en-sitio",
    "reason": "agregado a mano",
    "source": "manual",
    "firstSeen": "2026-11-03",
@@ -8955,7 +8955,7 @@
    "date": "2026-10-28",
    "views": 348,
    "likes": 9,
-   "status": "revisar",
+   "status": "en-sitio",
    "reason": "agregado a mano",
    "source": "manual",
    "firstSeen": "2026-11-03",
@@ -13604,27 +13604,6 @@
  },
  "runs": [
   {
-   "date": "2026-11-01T20:24:34.560Z",
-   "command": "set",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-11-01T20:26:19.810Z",
-   "command": "site",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-11-02T12:20:41.740Z",
-   "command": "scan",
-   "found": 1,
-   "requests": 422,
-   "kb": 54185
-  },
-  {
    "date": "2026-11-02T12:20:53.401Z",
    "command": "site",
    "found": 0,
@@ -13948,6 +13927,27 @@
   },
   {
    "date": "2026-11-03T17:17:31.653Z",
+   "command": "site",
+   "found": 0,
+   "requests": 1,
+   "kb": 398
+  },
+  {
+   "date": "2026-11-03T17:28:57.009Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-03T17:28:57.244Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-03T17:28:59.296Z",
    "command": "site",
    "found": 0,
    "requests": 1,
