@@ -1,11 +1,13 @@
-# Prensa DUNK — 2026-11-03
+# Prensa DUNK — 2026-11-04
 
-19 artículos · 19 en el sitio · 8 idiomas
+22 artículos · 20 en el sitio · 9 idiomas
 
 ## Para revisar
 
 | Fecha | Medio | Título | Idioma | Por qué | Estado | id |
 |---|---|---|---|---|---|---|
+| 2026-11-03 | swikblog | [Taurian Fontenette ‘Air Up There’ Dies, Streetball Great](https://swikblog.com/taurian-fontenette-air-up-there-dies/) | en | DUNK + basket + juego | revisar | `3f42bd6737` |
+| 2026-11-03 | t-online.de | ["Mr. 720" ist tot: Basketball-Legende Taurian Fontenette mit 43 Jahren gestorben](https://www.t-online.de/sport/mehr-sport/basketball/id_101511432/720-dunk-basketballspieler-taurian-fontenette-mit-43-jahren-gestorben.html) | de | DUNK + basket + juego | revisar | `12c53dd0ff` |
 
 ## Nuevos (sin publicar)
 
@@ -27,6 +29,7 @@
 | 2026-10-29 | gcores | [第一人称多人街机篮球新作《友尽大扣篮》官宣，计划于2027年登陆Steam](https://www.gcores.com/articles/221654) | zh | 友尽大扣篮 | en-sitio | `f80bc5f6ab` |
 | 2026-10-29 | La Pause Geek | [DUNK : dunker sur la Lune, dans la jungle ou dans la cour d’école, c’est possible en 2027](https://lapausegeek.com/dunk-dunker-sur-la-lune-dans-la-jungle-ou-dans-la-cour-decole-cest-possible-en-2027/) | fr | agregado a mano | en-sitio | `f58a8114e6` |
 | 2026-10-29 | 巴哈姆特 GNN | [第一人稱多人籃球運動新作《街頭大灌籃》預定 2027 年登上 Steam 平台](https://gnn.gamer.com.tw/detail.php?sn=314165) | zh | agregado a mano | en-sitio | `7b91f27289` |
+| 2026-10-29 | PChome Online新聞 | [第一人稱多人籃球運動新作《街頭大灌籃》預定 2027 年登上 Steam 平台 - 遊戲新聞](https://news.pchome.com.tw/game/gamer/20261029/index-79326695040363203104.html) | zh | 街頭大灌籃 | en-sitio | `15a0f2aa57` |
 | 2026-10-28 | PlayGround.ru | [Dunk предлагает баскетбол от первого лица с физикой бросков и матчами до шести игроков](https://www.playground.ru/dunk/news/dunk_predlagaet_basketbol_ot_pervogo_litsa_s_fizikoj_broskov_i_matchami_do_shesti_igrokov-1885652) | ru | noticias de Steam | en-sitio | `c13161199b` |
 | 2026-10-28 | Pizza Fria | [DUNK é anunciado para PC com lançamento previsto para 2027](https://pizzafria.ig.com.br/news/dunk-anunciado-pc-2027/) | pt | Katapult Games | en-sitio | `a04a0ce45c` |
 | 2026-10-28 | Gamers & Games | [Katapult Games anuncia DUNK, jogo de basquete em primeira pessoa para PC](https://www.gamersegames.com.br/2026/10/28/katapult-games-anuncia-dunk-jogo-de-basquete-em-primeira-pessoa-para-pc/) | pt | Katapult Games | en-sitio | `cd021901a7` |

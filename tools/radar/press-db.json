@@ -370,6 +370,52 @@
    "source": "manual",
    "firstSeen": "2026-11-01",
    "thumb": "press/7b91f27289.jpg"
+  },
+  "news.pchome.com.tw/game/gamer/20261029/index-79326695040363203104.html": {
+   "id": "15a0f2aa57",
+   "url": "https://news.pchome.com.tw/game/gamer/20261029/index-79326695040363203104.html",
+   "outlet": "PChome Online新聞",
+   "host": "news.pchome.com.tw",
+   "title": "第一人稱多人籃球運動新作《街頭大灌籃》預定 2027 年登上 Steam 平台 - 遊戲新聞",
+   "desc": "獨立遊戲工作室 Katapult Games 宣布，旗下第一人稱籃球遊戲《街頭大灌籃（暫譯，原名：DUNK）》將於 2027 年登陸 PC Steam 平台。本作以操作技巧、團隊協作和物理碰撞為核心，玩家將可體驗精彩進球與",
+   "image": "https://news.pchome.com.tw/newsdata/game/gamer/20261029/79326695040363203104_original.jpg",
+   "lang": "zh",
+   "date": "2026-10-29",
+   "status": "en-sitio",
+   "reason": "街頭大灌籃",
+   "source": "bing: Katapult Games DUNK",
+   "firstSeen": "2026-11-04",
+   "thumb": "press/15a0f2aa57.jpg"
+  },
+  "swikblog.com/taurian-fontenette-air-up-there-dies": {
+   "id": "3f42bd6737",
+   "url": "https://swikblog.com/taurian-fontenette-air-up-there-dies/",
+   "outlet": "swikblog",
+   "host": "swikblog.com",
+   "title": "Taurian Fontenette ‘Air Up There’ Dies, Streetball Great",
+   "desc": "Taurian Fontenette, known as Air Up There and Mr. 720, has died, according to Ballislife. Remembering his famous dunks and AND1 career.",
+   "image": "https://swikblog.com/wp-content/uploads/2026/11/5bd17cc640c6b6b7f59f2d480a9eb506_400x400.jpeg",
+   "lang": "en",
+   "date": "2026-11-03",
+   "status": "revisar",
+   "reason": "DUNK + basket + juego",
+   "source": "bing: DUNK first-person basketball game",
+   "firstSeen": "2026-11-04"
+  },
+  "t-online.de/sport/mehr-sport/basketball/id_101511432/720-dunk-basketballspieler-taurian-fontenette-mit-43-jahren-gestorben.html": {
+   "id": "12c53dd0ff",
+   "url": "https://www.t-online.de/sport/mehr-sport/basketball/id_101511432/720-dunk-basketballspieler-taurian-fontenette-mit-43-jahren-gestorben.html",
+   "outlet": "t-online.de",
+   "host": "t-online.de",
+   "title": "\"Mr. 720\" ist tot: Basketball-Legende Taurian Fontenette mit 43 Jahren gestorben",
+   "desc": "Zwei volle Umdrehungen in der Luft, dann der Ball durch den Ring: Mit diesem Dunk wurde der Basketballer berühmt. Nun ist der Streetballspieler im Alter von 43 Jahren gestorben.",
+   "image": "https://images.t-online.de/2026/11/eIDO3Ya4btAW/0x68:2158x1214/fit-in/1200x0/antwerp-belgium-us-taurian-fontenette-in-action-during-the-gala-basket-match-between-the-belgian-legends-and-the-nba-basketball-herren-usa-legends-friday-13-november-2009-in-antwerp-julienxwarnand-publicationxinxgerxsuixautxonly-x16549805x.jpg",
+   "lang": "de",
+   "date": "2026-11-03",
+   "status": "revisar",
+   "reason": "DUNK + basket + juego",
+   "source": "bing: DUNK Basketball Spiel",
+   "firstSeen": "2026-11-04"
   }
  },
  "rejected": {
@@ -414,30 +460,12 @@
   "gn:CBMiTkFVX3lxTE45TUdJV25OZlFnMW00SGdCaFkzVHVtRVc3a0lyQ0EwX2h1QTB0NFFqby01UmYyNkFEa2ZHQjJrZnhyWTVxS3pWQzRZWDB0UQ": "2026-11-01",
   "gn:CBMiXEFVX3lxTE5ldnNpRG01NjdXT2MycF9rRjVPbWR4Zl9pV0ZUckpBZ3YwWHZDSmgyYUpsdFAxOGxmc0dBbGhlWEhiSFNOdmRUNDRtaE5DZnVoRVZyNVVhRm5UZWhn": "2026-11-01",
   "gn:CBMiWEFVX3lxTE5ZYWNGR0w2aHdoaEdETHlGWkZ0bVQwSnhnU0ZXR0ZwNlFOOXl4ODBSRjZWSEtsbENKZDBRM1FvaFFkTmQ0UEluUDFTNDZxQm5mQ1ZZQ3RGWWs": "2026-11-01",
-  "gn:CBMi2wFBVV95cUxPQU4tWVpYWjZjbGZEQjBTTktJanF0akF3Q1dIdjFnZGI5T01VMV9FVkFMMzhuN04yblk0SVlEaTljMUI3WTJRbEFQdTNBc3hxZWVna2xBVlo5clplSkFrVzN5TzAtcEdKcE5POEhPbDJ0R2gyUGRGMWVoOFNRc2RTWmRzZlA4Z3p1S2JKa05WZ2F5MmRIN1lKcnJITVNuSHlra1ZpMW9GMkVXcVRxY253YUZPRVd2ZGtTVHdtWjk5VW9XZmpBbldjSEM3aFYxSktHeXpOR1ZGM2xUYUE": "2026-11-03"
+  "gn:CBMi2wFBVV95cUxPQU4tWVpYWjZjbGZEQjBTTktJanF0akF3Q1dIdjFnZGI5T01VMV9FVkFMMzhuN04yblk0SVlEaTljMUI3WTJRbEFQdTNBc3hxZWVna2xBVlo5clplSkFrVzN5TzAtcEdKcE5POEhPbDJ0R2gyUGRGMWVoOFNRc2RTWmRzZlA4Z3p1S2JKa05WZ2F5MmRIN1lKcnJITVNuSHlra1ZpMW9GMkVXcVRxY253YUZPRVd2ZGtTVHdtWjk5VW9XZmpBbldjSEM3aFYxSktHeXpOR1ZGM2xUYUE": "2026-11-03",
+  "gn:CBMipgFBVV95cUxOdWJnV2xqSzhsQzVwZUI2UUJidldyME9sUVY3ek81TnJHRnM3V053NzlmdGh0T2lmQ0NsdG1ISGlFMGtlLW5wVHVnTWh1SkR6WWN6Q3pJaWlZTGlvN2wxVWx4eUFzZW1UTklnZmdvWDR3ZE1vWmxPYnlNNTQtYjZhZ0RpZFBXclF4TElTTk40UDM2MnlhN2hJR1lmT180bHByLWl4SlFB": "2026-11-04",
+  "gn:CBMie0FVX3lxTE9HdmtQMUE1a244c05DQ0ZGczhidlBuT1FGZFg2RWZwdjhPNkVWRkN6Wmp2NUVWZ192ZmJHWFZURTdBUF9jVlhKa0xTVkhWdDVpMW41SGNzbTIxeUdUMzVWWnlrSnRBemgzTDNDUXpPV3FGdlpZYWQxOXdSQQ": "2026-11-04",
+  "gn:CBMiXEFVX3lxTFA4UnBFRHZObDJKbXYxSHpNNk9xNnRHQWlnTkhzX25FUkFGNzhmWFJjeHZFSnA2c2JuZno4U2hIYUJBOTRJeHI2d3RlazUtcDlTYnZfN0lUQlhCZTF0": "2026-11-04"
  },
  "runs": [
-  {
-   "date": "2026-10-30T06:29:12.098Z",
-   "command": "set",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-10-30T06:29:12.263Z",
-   "command": "set",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-10-30T06:29:12.447Z",
-   "command": "set",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
   {
    "date": "2026-10-30T06:29:12.624Z",
    "command": "set",
@@ -766,6 +794,27 @@
    "found": 0,
    "requests": 29,
    "kb": 1333
+  },
+  {
+   "date": "2026-11-04T15:17:16.750Z",
+   "command": "scan",
+   "found": 3,
+   "requests": 38,
+   "kb": 3040
+  },
+  {
+   "date": "2026-11-04T15:17:16.958Z",
+   "command": "approve",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-04T15:17:19.942Z",
+   "command": "site",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
   }
  ]
 }
