@@ -416,6 +416,21 @@
    "reason": "DUNK + basket + juego",
    "source": "bing: DUNK Basketball Spiel",
    "firstSeen": "2026-11-04"
+  },
+  "people.com/taurian-fontenette-streetball-legend-dies-at-43-12236409": {
+   "id": "66cce95d1a",
+   "url": "https://people.com/taurian-fontenette-streetball-legend-dies-at-43-12236409",
+   "outlet": "Yahoo Sports",
+   "host": "people.com",
+   "title": "Taurian Fontenette, Streetball Legend Who Made History with 720 Dunk, Dies at 43",
+   "desc": "Fontenette became known as “Mr. 720” and “Air Up There” for his impressive dunks",
+   "image": "https://s.yimg.com/lo/mysterio/api/cfd104d8063986b136fd10c4c3bfef89a3bc97d5d52f220b9d229d6b79978fe4/lightyear_networkapi/resizefill_w1200_h675%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fpeople_218%2F9a3cdd89d709fa499ece0a54d9ed508e.jpg",
+   "lang": "en",
+   "date": "2026-11-04",
+   "status": "revisar",
+   "reason": "DUNK + basket + juego",
+   "source": "bing: DUNK first-person basketball game",
+   "firstSeen": "2026-11-04"
   }
  },
  "rejected": {
@@ -463,16 +478,10 @@
   "gn:CBMi2wFBVV95cUxPQU4tWVpYWjZjbGZEQjBTTktJanF0akF3Q1dIdjFnZGI5T01VMV9FVkFMMzhuN04yblk0SVlEaTljMUI3WTJRbEFQdTNBc3hxZWVna2xBVlo5clplSkFrVzN5TzAtcEdKcE5POEhPbDJ0R2gyUGRGMWVoOFNRc2RTWmRzZlA4Z3p1S2JKa05WZ2F5MmRIN1lKcnJITVNuSHlra1ZpMW9GMkVXcVRxY253YUZPRVd2ZGtTVHdtWjk5VW9XZmpBbldjSEM3aFYxSktHeXpOR1ZGM2xUYUE": "2026-11-03",
   "gn:CBMipgFBVV95cUxOdWJnV2xqSzhsQzVwZUI2UUJidldyME9sUVY3ek81TnJHRnM3V053NzlmdGh0T2lmQ0NsdG1ISGlFMGtlLW5wVHVnTWh1SkR6WWN6Q3pJaWlZTGlvN2wxVWx4eUFzZW1UTklnZmdvWDR3ZE1vWmxPYnlNNTQtYjZhZ0RpZFBXclF4TElTTk40UDM2MnlhN2hJR1lmT180bHByLWl4SlFB": "2026-11-04",
   "gn:CBMie0FVX3lxTE9HdmtQMUE1a244c05DQ0ZGczhidlBuT1FGZFg2RWZwdjhPNkVWRkN6Wmp2NUVWZ192ZmJHWFZURTdBUF9jVlhKa0xTVkhWdDVpMW41SGNzbTIxeUdUMzVWWnlrSnRBemgzTDNDUXpPV3FGdlpZYWQxOXdSQQ": "2026-11-04",
-  "gn:CBMiXEFVX3lxTFA4UnBFRHZObDJKbXYxSHpNNk9xNnRHQWlnTkhzX25FUkFGNzhmWFJjeHZFSnA2c2JuZno4U2hIYUJBOTRJeHI2d3RlazUtcDlTYnZfN0lUQlhCZTF0": "2026-11-04"
+  "gn:CBMiXEFVX3lxTFA4UnBFRHZObDJKbXYxSHpNNk9xNnRHQWlnTkhzX25FUkFGNzhmWFJjeHZFSnA2c2JuZno4U2hIYUJBOTRJeHI2d3RlazUtcDlTYnZfN0lUQlhCZTF0": "2026-11-04",
+  "gn:CBMigAFBVV95cUxNLUdVT3IxTjRvcm1ZNU5taGxYZlZtTEk0eEx3dVg1YkxvUHBWeC15MTNFckRBUHJPQmJIXzA1dUVkbnh6YTJ1aDRYdXRib0Etd051TWxMckdXWlJoQUUzeFRfQUR6S3c1eGZ0WHlpRWtFOXR0ci1IdUUzWU1IV1E5dA": "2026-11-04"
  },
  "runs": [
-  {
-   "date": "2026-10-30T06:29:12.624Z",
-   "command": "set",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
   {
    "date": "2026-10-30T06:29:13.713Z",
    "command": "site",
@@ -815,6 +824,13 @@
    "found": 0,
    "requests": 0,
    "kb": 0
+  },
+  {
+   "date": "2026-11-04T19:36:33.262Z",
+   "command": "scan",
+   "found": 1,
+   "requests": 30,
+   "kb": 1700
   }
  ]
 }
