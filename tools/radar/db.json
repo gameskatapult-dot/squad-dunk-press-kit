@@ -10063,7 +10063,7 @@
    "published": "2026-11-03T13:27:51-08:00",
    "views": 69,
    "short": false,
-   "status": "revisar",
+   "status": "descartado",
    "reason": "4591520",
    "source": "búsqueda: DUNK katapult",
    "firstSeen": "2026-11-03",
@@ -10420,7 +10420,7 @@
    "published": "2026-11-04T12:15:12-08:00",
    "views": 13420,
    "short": false,
-   "status": "revisar",
+   "status": "descartado",
    "reason": "dunk + palabra de juego",
    "source": "búsqueda: DUNK steam basketball",
    "firstSeen": "2026-11-05",
@@ -15977,20 +15977,6 @@
  },
  "runs": [
   {
-   "date": "2026-11-02T20:18:34.215Z",
-   "command": "set",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-11-02T20:19:03.875Z",
-   "command": "site",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
    "date": "2026-11-02T20:25:08.322Z",
    "command": "add",
    "found": 1,
@@ -16322,6 +16308,20 @@
   {
    "date": "2026-11-05T11:42:30.095Z",
    "command": "site",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-05T11:44:41.650Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-05T11:44:41.928Z",
+   "command": "set",
    "found": 0,
    "requests": 0,
    "kb": 0

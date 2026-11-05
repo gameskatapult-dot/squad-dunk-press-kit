@@ -1,12 +1,12 @@
 # Radar DUNK — 2026-11-05
 
-134 posts · 3.2 M visitas en total · 95 creadores
+132 posts · 3.2 M visitas en total · 93 creadores
 
 | Origen | Posts | Visitas |
 |---|---:|---:|
 | Jestr | 0 | 0 |
 | orgánico | 0 | 0 |
-| sin marcar | 134 | 3.2 M |
+| sin marcar | 132 | 3.2 M |
 
 ## Para revisar
 
@@ -17,7 +17,6 @@
 | youtube | [@powergames_dev](https://www.youtube.com/watch?v=bZXAREMbpkU) | He jumped with him. / Streetball dunk | 252 | +10 | 2026-11-02 | ? | revisar |
 | youtube | [@B1GMBB](https://www.youtube.com/watch?v=BGpnbXt67Nw) | Trent Sisley Kicks It Out and Gets It Back for the Dunk vs. EIU / Indi | 4.831 | +394 | 2026-11-02 | ? | revisar |
 | youtube | [@JXIY_au](https://www.youtube.com/watch?v=Eel7yjKMc3g) | HE KEPT BANKING THREES… THEN DID THIS?! 😭🏀 | 25 mil | +18 mil | 2026-11-02 | ? | revisar |
-| youtube | [@Babakalash](https://www.youtube.com/watch?v=QK1hmRFYKjE) | IS THIS THE FUTURE OF BASKETBALL GAMES??!! / DUNK Playtest | 69 | +51 | 2026-11-03 | ? | revisar |
 | youtube | [@B1GMBB](https://www.youtube.com/watch?v=oScGKSAgd9o) | Kaden House Dunk vs Bucknell / Maryland Men's  Basketball | 286 | +92 | 2026-11-03 | ? | revisar |
 | youtube | [@Blazeyy1](https://www.youtube.com/watch?v=q5KMuQeU_Bk) | This Crazy Basketball Game Let You Dunk From Outer Space! #videogames  | 1.055 | +948 | 2026-11-04 | ? | revisar |
 | youtube | [@B1GMBB](https://www.youtube.com/watch?v=_rz77Qomb9Y) | Roko Prkacin Dunk vs Canisius / Penn State Men's Basketball | 1.096 | +219 | 2026-11-03 | ? | revisar |
@@ -27,7 +26,6 @@
 | youtube | [@GameAndSportsZone](https://www.youtube.com/watch?v=WbgBkoVitbo) | Did you see that insane dunk in the game? 😱 | 19 |  | 2026-11-04 | ? | revisar |
 | youtube | [@TheDunkSaga](https://www.youtube.com/watch?v=vWnxSlKzufA) | Outricked | 1.457 |  | 2026-11-04 | ? | revisar |
 | youtube | [@tclinkgaming](https://www.youtube.com/watch?v=SFe6sngUt0I) | DUNKED on his head! #nba2k #dunk #gaming #clutch #ClipGPT #streamladde | 4 |  | 2026-11-04 | ? | revisar |
-| youtube | [@Shonyx](https://www.youtube.com/watch?v=hMWzemJVqZ4) | i'm NEVER playing basketball AGAIN | 13 mil |  | 2026-11-04 | ? | revisar |
 
 ## Nuevos
 
@@ -56,7 +54,6 @@
 | instagram | [@iam.calypto](https://www.instagram.com/iam.calypto/reel/DfCm6q3O4yk/) | 2 SPIELE die GERADE KOMPLETT durch die DECKE GEHEN | 19 mil |  | 2026-10-28 | ? | en-sitio |
 | instagram | [@kroniques](https://www.instagram.com/kroniques/reel/DfC3Z6AhFcs/) | DUNK : le jeu de basket multijoueur en vue FPS où tu peux dunker sur l | 17 mil | +1.532 | 2026-10-28 | ? · pagado | en-sitio |
 | youtube | [@DuckInvaders](https://www.youtube.com/watch?v=gvUDdr5eJr0) | We Finally Got a GOOD Sports Game | 14 mil | +0 | 2026-10-28 | ? | en-sitio |
-| youtube | [@Shonyx](https://www.youtube.com/watch?v=hMWzemJVqZ4) | i'm NEVER playing basketball AGAIN | 13 mil |  | 2026-11-04 | ? | revisar |
 | youtube | [@thetweekk](https://www.youtube.com/watch?v=5sKzHdcVT70) | 3 Steam Games You Need to Try With Your Friends! #shorts | 13 mil | +0 | 2026-10-28 | ? · pagado | en-sitio |
 | tiktok | [@imjustjarrod](https://www.tiktok.com/@imjustjarrod/video/7701830987814079775) | First-person basketball where the ball is also a weapon 💥 🏀 1–6 play | 13 mil | +200 | 2026-10-28 | ? | en-sitio |
 | instagram | [@yeta.exe](https://www.instagram.com/yeta.exe/reel/DfCm0m1Bs_j/) | 1v1s boutta go CRAZY | 9.929 | +106 | 2026-10-28 | ? · pagado | en-sitio |
@@ -168,7 +165,6 @@
 | tiktok | [@christiantg92](https://www.tiktok.com/@christiantg92/video/7701734053883546894) | Every shot, pass and tackle is first person. No camera doing it for yo | 171 | +0 | 2026-10-28 | ? · pagado | en-sitio |
 | youtube | [@ceroszin](https://www.youtube.com/watch?v=R_64EKQjeLk) | Conheça DUNK, o jogo de basquete baseado em física!!! | 97 | +1 | 2026-10-29 | ? | en-sitio |
 | youtube | [@wishlist_radar](https://www.youtube.com/watch?v=crwMbbPppYY) | DUNK: first-person basketball where the physics decide every shot | 86 | +7 | 2026-11-02 | ? | revisar |
-| youtube | [@Babakalash](https://www.youtube.com/watch?v=QK1hmRFYKjE) | IS THIS THE FUTURE OF BASKETBALL GAMES??!! / DUNK Playtest | 69 | +51 | 2026-11-03 | ? | revisar |
 | youtube | [@tvgameover](https://www.youtube.com/watch?v=UnRiERIT9Wc) | DUNK - Basquete em primeira pessoa onde cada enterrada é pessoal | 49 | +0 | 2026-10-28 | ? | en-sitio |
 | youtube | [@GameAndSportsZone](https://www.youtube.com/watch?v=WbgBkoVitbo) | Did you see that insane dunk in the game? 😱 | 19 |  | 2026-11-04 | ? | revisar |
 | youtube | [@tclinkgaming](https://www.youtube.com/watch?v=SFe6sngUt0I) | DUNKED on his head! #nba2k #dunk #gaming #clutch #ClipGPT #streamladde | 4 |  | 2026-11-04 | ? | revisar |
