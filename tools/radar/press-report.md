@@ -1,12 +1,15 @@
-# Prensa DUNK — 2026-11-04
+# Prensa DUNK — 2026-11-05
 
-23 artículos · 20 en el sitio · 9 idiomas
+26 artículos · 20 en el sitio · 9 idiomas
 
 ## Para revisar
 
 | Fecha | Medio | Título | Idioma | Por qué | Estado | id |
 |---|---|---|---|---|---|---|
 | 2026-11-04 | Yahoo Sports | [Taurian Fontenette, Streetball Legend Who Made History with 720 Dunk, Dies at 43](https://people.com/taurian-fontenette-streetball-legend-dies-at-43-12236409) | en | DUNK + basket + juego | revisar | `66cce95d1a` |
+| 2026-11-04 | Complex | [Taurian Fontenette, AND1 Legend Who Made History With 720 Dunk, Dead at 43](https://www.complex.com/sports/a/bernadette-giacomazzo/taurian-fontenette-dead-43) | en | DUNK + basket + juego | revisar | `e806b13ffe` |
+| 2026-11-04 | Wide Open Country | [Legendary Basketball Player Who Made History With First-Ever 720-Degree Dunk Dead at 43](https://www.wideopencountry.com/legendary-basketball-player-who-made-history-with-first-ever-720-degree-dunk-dead-at-43/) | en | DUNK + basket + juego | revisar | `5e5b1cebf6` |
+| 2026-11-04 | That Eric Alper | [Taurian Fontenette, AND1 Streetball Dunker Known as “Air Up There” Who Landed the First Do](https://www.thatericalper.com/2026/11/04/taurian-fontenette-and1-streetball-dunker-known-as-air-up-there-who-landed-the-first-documented-720-dunk-dies-at-43/) | en | DUNK + basket + juego | revisar | `0e481df19c` |
 | 2026-11-03 | swikblog | [Taurian Fontenette ‘Air Up There’ Dies, Streetball Great](https://swikblog.com/taurian-fontenette-air-up-there-dies/) | en | DUNK + basket + juego | revisar | `3f42bd6737` |
 | 2026-11-03 | t-online.de | ["Mr. 720" ist tot: Basketball-Legende Taurian Fontenette mit 43 Jahren gestorben](https://www.t-online.de/sport/mehr-sport/basketball/id_101511432/720-dunk-basketballspieler-taurian-fontenette-mit-43-jahren-gestorben.html) | de | DUNK + basket + juego | revisar | `12c53dd0ff` |
 
