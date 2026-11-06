@@ -491,6 +491,21 @@
    "reason": "DUNK + basket + juego",
    "source": "google: DUNK Basketball Spiel",
    "firstSeen": "2026-11-05"
+  },
+  "gamespark.jp/article/2026/11/05/174501.html": {
+   "id": "3663e08906",
+   "url": "https://www.gamespark.jp/article/2026/11/05/174501.html",
+   "outlet": "アニメ！アニメ！",
+   "host": "gamespark.jp",
+   "title": "乙女ゲームなのに恋愛禁止!? イケメン選手たちとの“激アツ青春”に胸キュン！『MIX DUNK』先行プレイ＆開発者インタビュー",
+   "desc": "女性向けゲームブランド「オトメイト」から、ニンテンドースイッチ用ソフト『MIX DUNK -KING OF BASKETBALL-』が2026年11月26日に発売。開発を手がけたオトメイトの担当者をはじめ、制作に携わった川崎ブレイブサンダース、AKB48にインタビュー！",
+   "image": "https://animeanime.jp/imgs/ogp_f/951509.jpg",
+   "lang": "ja",
+   "date": "2026-11-05",
+   "status": "revisar",
+   "reason": "DUNK + basket + juego",
+   "source": "google: DUNK バスケ ゲーム",
+   "firstSeen": "2026-11-06"
   }
  },
  "rejected": {
@@ -546,30 +561,10 @@
   "gn:CBMiqAFBVV95cUxQZlBiQkdOU090ZXE3LWd6Q2wybzZ6b2x4SlVEMkpURDVvS2JIYTlMR3R3SEVvNmtyTlhhVE9MSnJmaWJrTFFyeDZ3Vk51WDIwTHY4dDgyV3dndV9CZlJLLTl3aUROWFpiNjNaZWV4eTE2MXpvbjNOYzNqS1NXajF3NDR2YkdyTFNYdjU3UzAwQjI0dFRUaG5ITW5PbXpWZmowSmV5NmxwTG4": "2026-11-05",
   "gn:CBMif0FVX3lxTE1uU2hfN3V4MFJNZmwyMVd2dGRHeDhKdk5KbjhKYy1mNGRuZkwwcXhjOUctZFFoQXo1SXY4TkR1R0RfenZfalFWZ1FkdUdkak5oVjhVSWtPQ0s5al80ZDUzTjF3NVRDZmVxSlVpWkZsOTNxTkREd0Nya1RBWmRtRm8": "2026-11-05",
   "msn.com/nachrichten/other/sehr-sehr-viel-potenzial-schafft-diese-basketballerin-den-ersten-dunk-f%C3%BCr-n%C3%B6rdlingen/ar-AA2gNRdR": "2026-11-05",
-  "gn:CBMi1gFBVV95cUxOOWk5cERiTVBJbUdSM1Q0a2hvcl9taHdTdzlVdjkzcW9VR216UkJYRk9GMHY1TmpYdEpNai1qMWRPd2FwdGpMUHYxREF3V2ktNl9BOF9KVVZiVmcwYm5vbkJldGs2Vkc1eWhlR3hwbUlPZFluVjVVSVpBdVZIN2pfVnFpZWh6VW9CcS1YWmtJUU1GZnM2TmJuVUphbVgwcklwdHIxc1ZlUjN6TXpWUXlkcXhlWlZueF9yWG5qMWxsOEhKNkJsUElkVUQ0dzVORFVQc0djaktR": "2026-11-05"
+  "gn:CBMi1gFBVV95cUxOOWk5cERiTVBJbUdSM1Q0a2hvcl9taHdTdzlVdjkzcW9VR216UkJYRk9GMHY1TmpYdEpNai1qMWRPd2FwdGpMUHYxREF3V2ktNl9BOF9KVVZiVmcwYm5vbkJldGs2Vkc1eWhlR3hwbUlPZFluVjVVSVpBdVZIN2pfVnFpZWh6VW9CcS1YWmtJUU1GZnM2TmJuVUphbVgwcklwdHIxc1ZlUjN6TXpWUXlkcXhlWlZueF9yWG5qMWxsOEhKNkJsUElkVUQ0dzVORFVQc0djaktR": "2026-11-05",
+  "gn:CBMiYkFVX3lxTE1DeGp0ZlRaOG1PaXVhOU4tMFd6MDNZSXhBQkNmbkh2bkpSX1BzMVp3RGRxZ25GdVhudHlFc3htQzRBbmxoS3hVUHdzZENRSi1pcmg5OFEyUVBrTmtVaHZSZHZn": "2026-11-06"
  },
  "runs": [
-  {
-   "date": "2026-10-30T14:27:00.725Z",
-   "command": "site",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-10-30T14:34:01.019Z",
-   "command": "site",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-10-30T19:07:57.843Z",
-   "command": "scan",
-   "found": 0,
-   "requests": 23,
-   "kb": 646
-  },
   {
    "date": "2026-10-30T19:20:02.972Z",
    "command": "site",
@@ -898,6 +893,27 @@
    "found": 1,
    "requests": 31,
    "kb": 1332
+  },
+  {
+   "date": "2026-11-06T15:22:07.734Z",
+   "command": "scan",
+   "found": 1,
+   "requests": 30,
+   "kb": 1205
+  },
+  {
+   "date": "2026-11-06T15:22:07.920Z",
+   "command": "approve",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-06T15:22:08.193Z",
+   "command": "site",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
   }
  ]
 }

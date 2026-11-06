@@ -1,12 +1,13 @@
-# Prensa DUNK — 2026-11-05
+# Prensa DUNK — 2026-11-06
 
-27 artículos · 20 en el sitio · 9 idiomas
+28 artículos · 20 en el sitio · 9 idiomas
 
 ## Para revisar
 
 | Fecha | Medio | Título | Idioma | Por qué | Estado | id |
 |---|---|---|---|---|---|---|
 | 2026-11-05 | Augsburger Allgemeine | [„Sehr, sehr viel Potenzial“: Schafft diese Basketballerin den ersten Dunk für Nördlingen?](https://www.augsburger-allgemeine.de/sport/sehr-sehr-viel-potenzial-schafft-diese-basketballerin-den-ersten-dunk-fuer-noerdlingen-115627649) | de | DUNK + basket + juego | revisar | `5cf8b11ad5` |
+| 2026-11-05 | アニメ！アニメ！ | [乙女ゲームなのに恋愛禁止!? イケメン選手たちとの“激アツ青春”に胸キュン！『MIX DUNK』先行プレイ＆開発者インタビュー](https://www.gamespark.jp/article/2026/11/05/174501.html) | ja | DUNK + basket + juego | revisar | `3663e08906` |
 | 2026-11-04 | Yahoo Sports | [Taurian Fontenette, Streetball Legend Who Made History with 720 Dunk, Dies at 43](https://people.com/taurian-fontenette-streetball-legend-dies-at-43-12236409) | en | DUNK + basket + juego | revisar | `66cce95d1a` |
 | 2026-11-04 | Complex | [Taurian Fontenette, AND1 Legend Who Made History With 720 Dunk, Dead at 43](https://www.complex.com/sports/a/bernadette-giacomazzo/taurian-fontenette-dead-43) | en | DUNK + basket + juego | revisar | `e806b13ffe` |
 | 2026-11-04 | Wide Open Country | [Legendary Basketball Player Who Made History With First-Ever 720-Degree Dunk Dead at 43](https://www.wideopencountry.com/legendary-basketball-player-who-made-history-with-first-ever-720-degree-dunk-dead-at-43/) | en | DUNK + basket + juego | revisar | `5e5b1cebf6` |
