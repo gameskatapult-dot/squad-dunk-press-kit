@@ -10906,6 +10906,28 @@
      1040
     ]
    ]
+  },
+  "tiktok:7702851019696295175": {
+   "platform": "tiktok",
+   "id": "7702851019696295175",
+   "url": "https://www.tiktok.com/@proximo.save/video/7702851019696295175",
+   "author": "@proximo.save",
+   "title": "O basquete mais caótico que eu já vi: tudo é física, em primeira pessoa 🏀💥 👥 Até 6 amigos online 🎙️ Chat de voz por proximidade 🌴🌕 Quadra na sel",
+   "desc": "O basquete mais caótico que eu já vi: tudo é física, em primeira pessoa 🏀💥 👥 Até 6 amigos online 🎙️ Chat de voz por proximidade 🌴🌕 Quadra na selva com cipó e quadra na Lua com gravidade baixa 🧪 Inscrição pro teste aberta na Steam Manda pro amigo que ia te derrubar bem na hora da enterrada 👇 #proximosave #dunk #jogoscomamigos #jogodebasquete #indiegames ",
+   "date": "2026-10-31",
+   "views": 606,
+   "likes": 30,
+   "status": "en-sitio",
+   "reason": "agregado a mano",
+   "source": "manual",
+   "firstSeen": "2026-11-06",
+   "checked": "2026-11-06",
+   "history": [
+    [
+     "2026-11-06",
+     606
+    ]
+   ]
   }
  },
  "rejected": {
@@ -16614,27 +16636,6 @@
  },
  "runs": [
   {
-   "date": "2026-11-02T20:25:09.764Z",
-   "command": "set",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-11-02T20:25:09.995Z",
-   "command": "set",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-11-02T20:25:10.249Z",
-   "command": "set",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
    "date": "2026-11-02T20:25:10.475Z",
    "command": "set",
    "found": 0,
@@ -16962,6 +16963,27 @@
    "found": 0,
    "requests": 0,
    "kb": 0
+  },
+  {
+   "date": "2026-11-06T00:44:24.530Z",
+   "command": "add",
+   "found": 1,
+   "requests": 1,
+   "kb": 398
+  },
+  {
+   "date": "2026-11-06T00:44:24.852Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-06T00:44:27.369Z",
+   "command": "site",
+   "found": 0,
+   "requests": 1,
+   "kb": 398
   }
  ]
 }

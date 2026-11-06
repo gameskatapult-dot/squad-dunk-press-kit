@@ -1,12 +1,12 @@
-# Radar DUNK — 2026-11-05
+# Radar DUNK — 2026-11-06
 
-131 posts · 3.2 M visitas en total · 92 creadores
+132 posts · 3.2 M visitas en total · 92 creadores
 
 | Origen | Posts | Visitas |
 |---|---:|---:|
 | Jestr | 0 | 0 |
 | orgánico | 0 | 0 |
-| sin marcar | 131 | 3.2 M |
+| sin marcar | 132 | 3.2 M |
 
 ## Para revisar
 
@@ -23,8 +23,8 @@
 | youtube | [@JumpmanJimmy](https://www.youtube.com/watch?v=iLUSErgtpyM) | This AI Camera Automatically Records My Basketball Games! 🏀 🎥 #ai #c | 1.673 | +250 | 2026-11-03 | ? | revisar |
 | youtube | [@MoneyBallCoruna](https://www.youtube.com/watch?v=ifwQWf9vqSY) | KOBE SIN BRYANT 😂🏀 | 1.514 | +24 | 2026-11-03 | ? | revisar |
 | youtube | [@LewelVoro](https://www.youtube.com/watch?v=W9yQIQ4cMUU) | 3 On 3 Dunk Madness (Arcade Basketball) / 4K 60FPS HD Longplay | 232 | +19 | 2026-10-31 | ? | revisar |
-| youtube | [@GameAndSportsZone](https://www.youtube.com/watch?v=WbgBkoVitbo) | Did you see that insane dunk in the game? 😱 | 22 |  | 2026-11-04 | ? | revisar |
-| youtube | [@tclinkgaming](https://www.youtube.com/watch?v=SFe6sngUt0I) | DUNKED on his head! #nba2k #dunk #gaming #clutch #ClipGPT #streamladde | 9 |  | 2026-11-04 | ? | revisar |
+| youtube | [@GameAndSportsZone](https://www.youtube.com/watch?v=WbgBkoVitbo) | Did you see that insane dunk in the game? 😱 | 22 | +3 | 2026-11-04 | ? | revisar |
+| youtube | [@tclinkgaming](https://www.youtube.com/watch?v=SFe6sngUt0I) | DUNKED on his head! #nba2k #dunk #gaming #clutch #ClipGPT #streamladde | 9 | +5 | 2026-11-04 | ? | revisar |
 
 ## Nuevos
 
@@ -50,7 +50,7 @@
 | instagram | [@sphinxdsaiyan](https://www.instagram.com/sphinxdsaiyan/reel/DfDsnQ0Pe_p/) | Welcome To Dunk City!!! #gaming #indiegame #dunk #memes | 32 mil | +1.108 | 2026-10-29 | ? · pagado | en-sitio |
 | youtube | [@WatermelonGamesTV](https://www.youtube.com/watch?v=is17ilyYfes) | 3 free co-op demos or playtests to play | 30 mil | +0 | 2026-10-28 | ? · pagado | en-sitio |
 | youtube | [@JXIY_au](https://www.youtube.com/watch?v=Eel7yjKMc3g) | HE KEPT BANKING THREES… THEN DID THIS?! 😭🏀 | 26 mil | +11 mil | 2026-11-02 | ? | revisar |
-| instagram | [@iam.calypto](https://www.instagram.com/iam.calypto/reel/DfCm6q3O4yk/) | 2 SPIELE die GERADE KOMPLETT durch die DECKE GEHEN | 19 mil |  | 2026-10-28 | ? | en-sitio |
+| instagram | [@iam.calypto](https://www.instagram.com/iam.calypto/reel/DfCm6q3O4yk/) | 2 SPIELE die GERADE KOMPLETT durch die DECKE GEHEN | 19 mil | +125 | 2026-10-28 | ? | en-sitio |
 | instagram | [@kroniques](https://www.instagram.com/kroniques/reel/DfC3Z6AhFcs/) | DUNK : le jeu de basket multijoueur en vue FPS où tu peux dunker sur l | 17 mil | +495 | 2026-10-28 | ? · pagado | en-sitio |
 | youtube | [@DuckInvaders](https://www.youtube.com/watch?v=gvUDdr5eJr0) | We Finally Got a GOOD Sports Game | 14 mil | +0 | 2026-10-28 | ? | en-sitio |
 | youtube | [@thetweekk](https://www.youtube.com/watch?v=5sKzHdcVT70) | 3 Steam Games You Need to Try With Your Friends! #shorts | 13 mil | +0 | 2026-10-28 | ? · pagado | en-sitio |
@@ -136,6 +136,7 @@
 | tiktok | [@yunaluvgames](https://www.tiktok.com/@yunaluvgames/video/7701756958549806349) | I wish I was a little bit taller because in this game I'm a tiny baby  | 666 | +7 | 2026-10-28 | ? · pagado | en-sitio |
 | tiktok | [@prestonxdc](https://www.tiktok.com/@prestonxdc/video/7701838895649934605) | Most Fun I've had Playing a Basketball Game #gaming #dunk | 645 | +1 | 2026-10-28 | ? | en-sitio |
 | instagram | [@viewie25](https://www.instagram.com/viewie25/reel/DfDWSP0J_8Y/) | Dunkin' on these fools | 639 | +0 | 2026-10-28 | ? | en-sitio |
+| tiktok | [@proximo.save](https://www.tiktok.com/@proximo.save/video/7702851019696295175) | O basquete mais caótico que eu já vi: tudo é física, em primeira pesso | 606 |  | 2026-10-31 | ? | en-sitio |
 | tiktok | [@arcisironman](https://www.tiktok.com/@arcisironman/video/7701718495150558495) | better than 2k?? 🏀 you can tackle people mid dunk lmao. dunk! playtes | 571 | +12 | 2026-10-28 | ? · pagado | en-sitio |
 | tiktok | [@seruin.official](https://www.tiktok.com/@seruin.official/video/7702398012370291975) | Pernah membayangkan bermain basket langsung dari sudut pandang pemainn | 563 | +2 | 2026-10-30 | ? | en-sitio |
 | tiktok | [@welmeygames](https://www.tiktok.com/@welmeygames/video/7701740220491812110) | FIRST-PERSON BASKETBALL GETS WAY MORE CHAOTIC THAN IT SHOULD DUNK is a | 560 | +2 | 2026-10-28 | ? | en-sitio |
@@ -164,8 +165,8 @@
 | youtube | [@ceroszin](https://www.youtube.com/watch?v=R_64EKQjeLk) | Conheça DUNK, o jogo de basquete baseado em física!!! | 97 | +0 | 2026-10-29 | ? | en-sitio |
 | youtube | [@wishlist_radar](https://www.youtube.com/watch?v=crwMbbPppYY) | DUNK: first-person basketball where the physics decide every shot | 86 | +2 | 2026-11-02 | ? | revisar |
 | youtube | [@tvgameover](https://www.youtube.com/watch?v=UnRiERIT9Wc) | DUNK - Basquete em primeira pessoa onde cada enterrada é pessoal | 49 | +0 | 2026-10-28 | ? | en-sitio |
-| youtube | [@GameAndSportsZone](https://www.youtube.com/watch?v=WbgBkoVitbo) | Did you see that insane dunk in the game? 😱 | 22 |  | 2026-11-04 | ? | revisar |
-| youtube | [@tclinkgaming](https://www.youtube.com/watch?v=SFe6sngUt0I) | DUNKED on his head! #nba2k #dunk #gaming #clutch #ClipGPT #streamladde | 9 |  | 2026-11-04 | ? | revisar |
+| youtube | [@GameAndSportsZone](https://www.youtube.com/watch?v=WbgBkoVitbo) | Did you see that insane dunk in the game? 😱 | 22 | +3 | 2026-11-04 | ? | revisar |
+| youtube | [@tclinkgaming](https://www.youtube.com/watch?v=SFe6sngUt0I) | DUNKED on his head! #nba2k #dunk #gaming #clutch #ClipGPT #streamladde | 9 | +5 | 2026-11-04 | ? | revisar |
 
 ## Revisar a mano (Instagram y otros sin visitas automáticas)
 
