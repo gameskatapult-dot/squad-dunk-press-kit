@@ -671,23 +671,78 @@
     return items
   }
 
-  // Feedback highlights: shuffled on every visit, then a slow upward roll. The list is doubled so the
-  // -50% loop has no seam; the copies are hidden from screen readers.
+  // Feedback highlights: shuffled on every visit, then a slow upward drift of the box's own scroll.
+  // The list is doubled and the scroll wraps at the seam, so it never ends either way; visitors can
+  // scroll it themselves or step with the arrows, and the drift waits while they do.
   function setupHangoutFeed () {
     const feed = document.querySelector('[data-hangout-feed]')
     const list = feed && feed.querySelector('[data-hangout-msgs]')
     if (!list) return
     const items = shuffleChildren(list)
-    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
-    if (list.scrollHeight <= feed.clientHeight) return
-    items.forEach(function (item) {
-      const twin = item.cloneNode(true)
-      twin.setAttribute('aria-hidden', 'true')
-      list.appendChild(twin)
+    const up = document.querySelector('[data-hangout-up]')
+    const down = document.querySelector('[data-hangout-down]')
+    const still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    if (list.scrollHeight <= feed.clientHeight) {
+      if (up) up.hidden = true
+      if (down) down.hidden = true
+      return
+    }
+
+    let half = 0
+    if (!still) {
+      items.forEach(function (item) {
+        const twin = item.cloneNode(true)
+        twin.setAttribute('aria-hidden', 'true')
+        list.appendChild(twin)
+      })
+      half = list.children[items.length].offsetTop - list.children[0].offsetTop
+    }
+
+    let position = 0
+    let hovering = false
+    let quietUntil = 0
+    function hold (ms) { quietUntil = Math.max(quietUntil, Date.now() + ms) }
+    function wrap () {
+      if (!half) return
+      if (feed.scrollTop >= half) feed.scrollTop -= half
+      else if (feed.scrollTop <= 0) feed.scrollTop += half
+    }
+
+    function step (direction) {
+      hold(4000)
+      wrap()
+      const amount = Math.round(feed.clientHeight * 0.45) * direction
+      if (still) feed.scrollTop += amount
+      else feed.scrollBy({ top: amount, behavior: 'smooth' })
+    }
+    if (up) up.addEventListener('click', function () { step(-1) })
+    if (down) down.addEventListener('click', function () { step(1) })
+
+    feed.addEventListener('mouseenter', function () { hovering = true })
+    feed.addEventListener('mouseleave', function () { hovering = false; hold(1500) })
+    ;['wheel', 'touchstart', 'touchmove', 'keydown'].forEach(function (type) {
+      feed.addEventListener(type, function () { hold(4000) }, { passive: true })
     })
-    // About 18px a second.
-    list.style.setProperty('--hangout-time', Math.round(list.scrollHeight / 2 / 18) + 's')
-    feed.classList.add('is-rolling')
+    feed.addEventListener('scroll', function () {
+      wrap()
+      if (Date.now() < quietUntil || hovering) position = feed.scrollTop
+    }, { passive: true })
+
+    if (still) return
+    feed.scrollTop = position = 1
+    let last = 0
+    function tick (now) {
+      const dt = last ? Math.min(now - last, 100) : 0
+      last = now
+      if (!hovering && Date.now() >= quietUntil && !feed.matches(':focus-within')) {
+        // About 18px a second.
+        position += dt * 0.018
+        if (position >= half) position -= half
+        feed.scrollTop = position
+      }
+      window.requestAnimationFrame(tick)
+    }
+    window.requestAnimationFrame(tick)
   }
 
   // Community clips: muted loops that only load and play while on screen (and not at all with
