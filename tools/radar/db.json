@@ -19034,13 +19034,6 @@
  },
  "runs": [
   {
-   "date": "2026-11-04T19:59:27.225Z",
-   "command": "site",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
    "date": "2026-11-05T11:11:27.837Z",
    "command": "scan",
    "found": 3,
@@ -19378,6 +19371,13 @@
   },
   {
    "date": "2026-11-07T22:25:22.278Z",
+   "command": "site",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-07T22:25:46.226Z",
    "command": "site",
    "found": 0,
    "requests": 0,
