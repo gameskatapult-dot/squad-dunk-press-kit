@@ -14,6 +14,10 @@
       const value = getPathValue(activeTranslation, node.getAttribute('data-l10n'))
       if (typeof value === 'string') node.textContent = value
     })
+    Array.from(scope.querySelectorAll('[data-l10n-template]')).forEach(function (node) {
+      const value = getPathValue(activeTranslation, node.getAttribute('data-l10n-template'))
+      if (typeof value === 'string') node.textContent = value.replace('{name}', node.getAttribute('data-name') || '')
+    })
     attributes.forEach(function (attribute) {
       const marker = 'data-l10n-' + attribute
       const targets = Array.from(scope.querySelectorAll('[' + marker + ']'))
@@ -654,6 +658,32 @@
     update()
   }
 
+  // Feedback highlights: shuffled on every visit, then a slow upward roll. The list is doubled so the
+  // -50% loop has no seam; the copies are hidden from screen readers.
+  function setupHangoutFeed () {
+    const feed = document.querySelector('[data-hangout-feed]')
+    const list = feed && feed.querySelector('[data-hangout-msgs]')
+    if (!list) return
+    const items = Array.from(list.children)
+    for (let i = items.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1))
+      const swap = items[i]
+      items[i] = items[j]
+      items[j] = swap
+    }
+    items.forEach(function (item) { list.appendChild(item) })
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    if (list.scrollHeight <= feed.clientHeight) return
+    items.forEach(function (item) {
+      const twin = item.cloneNode(true)
+      twin.setAttribute('aria-hidden', 'true')
+      list.appendChild(twin)
+    })
+    // About 18px a second.
+    list.style.setProperty('--hangout-time', Math.round(list.scrollHeight / 2 / 18) + 's')
+    feed.classList.add('is-rolling')
+  }
+
   // Community clips: muted loops that only load and play while on screen (and not at all with
   // reduced motion, where the poster stays).
   function setupHangoutVideos () {
@@ -1254,6 +1284,7 @@
     setupPress()
     setupVoices()
     setupHangoutVideos()
+    setupHangoutFeed()
     setupSteamWidgets()
     setupScreenshotCarousels()
     setupGalleryLightbox()

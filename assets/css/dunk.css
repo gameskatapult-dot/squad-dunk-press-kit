@@ -194,12 +194,14 @@ body.has-community-player { overflow: hidden; }
 .hangout .title { margin-bottom: 10px; }
 .hangout .community__prompt { max-width: 620px; margin-left: auto; margin-right: auto; }
 .hangout__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 4vw, 56px); align-items: center; margin-top: 12px; text-align: left; }
+.hangout__board-title { margin: 0 0 14px !important; color: var(--soft); font-size: 15px; font-weight: 700; text-align: center; transform: rotate(-1.5deg); }
+.hangout__board-title::before { content: "📌 "; }
 .hangout__photos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 14px; padding: 8px; }
 .dunk .hangout__photo { position: relative; padding: 8px 8px 34px; background: var(--cream); border-radius: 3px; box-shadow: 0 10px 24px rgba(0, 0, 0, .45); transform: rotate(var(--tilt, 0deg)); transition: transform .25s ease; }
 .hangout__photo:hover { transform: rotate(0deg) scale(1.04); z-index: 1; }
 .hangout__photo::before { content: ""; position: absolute; top: -9px; left: 50%; width: 64px; height: 18px; background: rgba(239, 138, 60, .75); transform: translateX(-50%) rotate(-3deg); }
 .hangout__photo img, .hangout__photo video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; }
-.hangout__photo figcaption { position: absolute; left: 0; right: 0; bottom: 7px; color: var(--ink); font: 700 15px/1 var(--body); text-align: center; transform: rotate(-1deg); }
+.hangout__photo figcaption { position: absolute; left: 0; right: 0; bottom: 8px; color: var(--ink); font: 700 14px/1 var(--body); text-align: center; transform: rotate(-1deg); }
 .hangout__chat { padding: 18px 18px 20px; background: #24211d; border: 1px solid var(--line); border-radius: 12px; }
 .hangout__channel { display: flex; align-items: flex-start; gap: 12px; margin: 0 0 6px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
 .hangout__heading { margin: 0 !important; color: var(--cream); font-size: 18px; font-weight: 800; }
@@ -207,7 +209,11 @@ body.has-community-player { overflow: hidden; }
 .hangout__note { margin: 0 !important; color: var(--soft); font-size: 13px; font-weight: 600; }
 .hangout__members { flex: none; margin: 4px 0 0 auto; white-space: nowrap; color: var(--soft); font-size: 13px; font-weight: 700; }
 .hangout__members::before { content: ""; display: inline-block; width: 8px; height: 8px; margin-right: 6px; background: #3ba55d; border-radius: 50%; }
+.hangout__feed { height: 440px; overflow: hidden; -webkit-mask-image: linear-gradient(transparent, #000 10%, #000 88%, transparent); mask-image: linear-gradient(transparent, #000 10%, #000 88%, transparent); }
 .hangout__msgs { display: flex; flex-direction: column; }
+.hangout__feed.is-rolling .hangout__msgs { animation: hangout-roll var(--hangout-time, 90s) linear infinite; }
+.hangout__feed:hover .hangout__msgs, .hangout__feed:focus-within .hangout__msgs { animation-play-state: paused; }
+@keyframes hangout-roll { to { transform: translateY(-50%); } }
 .hangout__msg { padding: 10px 8px; border-radius: 6px; }
 .hangout__msg:hover { background: rgba(255, 248, 234, .04); }
 .hangout__meta { margin: 0 0 2px !important; color: var(--ball); font-size: 14px; font-weight: 800; }
@@ -404,6 +410,9 @@ body.gallery-lightbox-open { overflow: hidden; }
   .gallery-lightbox__caption { flex-wrap: wrap; }
 }
 @media (prefers-reduced-motion: reduce) {
+  .hangout__feed { overflow-y: auto; }
+  .hangout__feed .hangout__msgs { animation: none !important; }
+  .hangout__msgs [aria-hidden="true"] { display: none; }
   html { scroll-behavior: auto; }
   /* No drift: the rows scroll by hand instead. */
   .voices__belt { overflow-x: auto; -webkit-mask-image: none; mask-image: none; padding: 0 var(--gutter); }

@@ -169,11 +169,9 @@ localization:
           quote_by: "Playtester"
           highlights: "Feedback highlights"
           highlights_note: "A few favorites from the in-game survey"
-          photos:
-            - "jungle runs"
-            - "sunset dunks"
-            - "moon walk"
-            - "team play"
+          shared_title: "Shared by our players on Discord"
+          shared_by_player: "shared by a player"
+          shared_by: "shared by {name}"
         quick_facts:
           developer: "Developer"
           developer_value: "Katapult Games · Ireland"
@@ -499,11 +497,9 @@ localization:
           quote_by: "Jugador del playtest"
           highlights: "Feedback destacado"
           highlights_note: "Algunos favoritos de la encuesta del juego"
-          photos:
-            - "partidas en la jungla"
-            - "clavadas al atardecer"
-            - "paseo lunar"
-            - "jugada en equipo"
+          shared_title: "Lo que suben los jugadores al Discord"
+          shared_by_player: "lo subió un jugador"
+          shared_by: "lo subió {name}"
         quick_facts:
           developer: "Desarrollo"
           developer_value: "Katapult Games · Irlanda"
@@ -830,11 +826,9 @@ localization:
           quote_by: "Участник плейтеста"
           highlights: "Лучшие отзывы"
           highlights_note: "Несколько любимых ответов из опроса в игре"
-          photos:
-            - "забеги в джунглях"
-            - "данки на закате"
-            - "прогулка по Луне"
-            - "командная игра"
+          shared_title: "Это выложили игроки в нашем Discord"
+          shared_by_player: "выложил игрок"
+          shared_by: "выложил {name}"
         quick_facts:
           developer: "Разработчик"
           developer_value: "Katapult Games · Ирландия"
@@ -1131,11 +1125,9 @@ localization:
           quote_by: "プレイテスト参加者"
           highlights: "ピックアップした声"
           highlights_note: "ゲーム内アンケートからお気に入りをいくつか"
-          photos:
-            - "ジャングルで一戦"
-            - "夕焼けダンク"
-            - "月面さんぽ"
-            - "チームプレー"
+          shared_title: "プレイヤーがDiscordに投稿してくれたもの"
+          shared_by_player: "プレイヤーの投稿"
+          shared_by: "{name} の投稿"
         quick_facts:
           developer: "開発"
           developer_value: "Katapult Games · アイルランド"
@@ -1423,11 +1415,9 @@ localization:
           quote_by: "试玩玩家"
           highlights: "精选反馈"
           highlights_note: "来自游戏内问卷的几条最爱"
-          photos:
-            - "丛林对决"
-            - "日落扣篮"
-            - "月球漫步"
-            - "团队配合"
+          shared_title: "玩家们在 Discord 分享的内容"
+          shared_by_player: "玩家分享"
+          shared_by: "{name} 分享"
         quick_facts:
           developer: "开发商"
           developer_value: "Katapult Games · 爱尔兰"
@@ -1742,11 +1732,9 @@ localization:
           quote_by: "Playtester"
           highlights: "Ausgewähltes Feedback"
           highlights_note: "Ein paar Lieblinge aus der Umfrage im Spiel"
-          photos:
-            - "Dschungel-Runden"
-            - "Dunks im Sonnenuntergang"
-            - "Mondspaziergang"
-            - "Teamplay"
+          shared_title: "Von unseren Spielern auf Discord geteilt"
+          shared_by_player: "von einem Spieler geteilt"
+          shared_by: "geteilt von {name}"
         quick_facts:
           developer: "Entwickler"
           developer_value: "Katapult Games · Irland"
@@ -2074,11 +2062,9 @@ localization:
           quote_by: "Testeur du playtest"
           highlights: "Retours à la une"
           highlights_note: "Quelques favoris du sondage en jeu"
-          photos:
-            - "parties dans la jungle"
-            - "dunks au coucher du soleil"
-            - "balade lunaire"
-            - "jeu d’équipe"
+          shared_title: "Partagé par nos joueurs sur Discord"
+          shared_by_player: "partagé par un joueur"
+          shared_by: "partagé par {name}"
         quick_facts:
           developer: "Développeur"
           developer_value: "Katapult Games · Irlande"
@@ -2407,11 +2393,9 @@ localization:
           quote_by: "Jogador do playtest"
           highlights: "Feedback em destaque"
           highlights_note: "Alguns favoritos da pesquisa do jogo"
-          photos:
-            - "partidas na selva"
-            - "enterradas no pôr do sol"
-            - "passeio na lua"
-            - "jogada em equipe"
+          shared_title: "Postado pelos jogadores no nosso Discord"
+          shared_by_player: "postado por um jogador"
+          shared_by: "postado por {name}"
         quick_facts:
           developer: "Desenvolvedora"
           developer_value: "Katapult Games · Irlanda"
