@@ -6,7 +6,7 @@ import { CATEGORIES, SYSTEMS, guessSystems } from './parse.js';
 
 // Palabras que casi nunca se usan en otro sentido.
 const SURE = ['dunk', 'layup', 'steal', 'dribble', 'stamina', 'shooting', 'camera'];
-const DEFAULT_MODEL = '@cf/meta/llama-3.1-8b-instruct';
+const DEFAULT_MODEL = '@cf/meta/llama-3.1-8b-instruct-fp8'; // se puede cambiar con la variable AI_MODEL
 const TOPICS = [...Object.keys(CATEGORIES), 'praise', 'other', 'spam'];
 const SYSTEM_HELP = {
   shooting: 'shooting, throwing, shot meter, aiming',
