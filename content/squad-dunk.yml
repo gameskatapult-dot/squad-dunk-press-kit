@@ -162,7 +162,7 @@ localization:
           title: "What people are saying"
           subtitle: "Reactions on X since the announcement"
         discord:
-          title: "Join 1,200+ players on Discord"
+          title: "Join 1,000+ players on Discord"
           subtitle: "Share clips and screenshots, find teammates, make friends and set up tournaments. Come shape DUNK with us."
           cta: "Join our Discord"
           tags:
@@ -489,7 +489,7 @@ localization:
           title: "Lo que dice la gente"
           subtitle: "Reacciones en X desde el anuncio"
         discord:
-          title: "Únete a +1.200 jugadores en Discord"
+          title: "Únete a +1.000 jugadores en Discord"
           subtitle: "Comparte clips y capturas, encuentra compañeros, haz amigos y arma torneos. Ven a construir DUNK con nosotros."
           cta: "Únete a nuestro Discord"
           tags:
@@ -817,7 +817,7 @@ localization:
           title: "Что говорят игроки"
           subtitle: "Реакции в X после анонса"
         discord:
-          title: "Более 1200 игроков уже в Discord"
+          title: "Более 1000 игроков уже в Discord"
           subtitle: "Делитесь клипами и скриншотами, ищите напарников, заводите друзей и устраивайте турниры. Создавайте DUNK вместе с нами."
           cta: "Присоединиться к Discord"
           tags:
@@ -1115,7 +1115,7 @@ localization:
           title: "みんなの声"
           subtitle: "発表後の X での反応"
         discord:
-          title: "1,200人以上のプレイヤーが集まるDiscord"
+          title: "1,000人以上のプレイヤーが集まるDiscord"
           subtitle: "クリップやスクショを共有して、チームメイトや友達を見つけ、大会も開こう。一緒にDUNKを作りましょう。"
           cta: "Discordに参加"
           tags:
@@ -1404,7 +1404,7 @@ localization:
           title: "玩家怎么说"
           subtitle: "公布以来 X 上的反响"
         discord:
-          title: "加入 Discord，与 1200+ 名玩家同乐"
+          title: "加入 Discord，与 1000+ 名玩家同乐"
           subtitle: "分享精彩片段和截图，寻找队友，结交朋友，组织比赛。和我们一起打造 DUNK。"
           cta: "加入我们的 Discord"
           tags:
@@ -1720,7 +1720,7 @@ localization:
           title: "Was die Leute sagen"
           subtitle: "Reaktionen auf X seit der Ankündigung"
         discord:
-          title: "Über 1.200 Spieler auf Discord"
+          title: "Über 1.000 Spieler auf Discord"
           subtitle: "Teile Clips und Screenshots, finde Mitspieler, schließe Freundschaften und organisiere Turniere. Gestalte DUNK mit uns."
           cta: "Unserem Discord beitreten"
           tags:
@@ -2049,7 +2049,7 @@ localization:
           title: "Ce que les gens en disent"
           subtitle: "Réactions sur X depuis l’annonce"
         discord:
-          title: "Rejoignez plus de 1 200 joueurs sur Discord"
+          title: "Rejoignez plus de 1 000 joueurs sur Discord"
           subtitle: "Partagez vos clips et captures, trouvez des coéquipiers, faites-vous des amis et organisez des tournois. Construisez DUNK avec nous."
           cta: "Rejoindre notre Discord"
           tags:
@@ -2379,7 +2379,7 @@ localization:
           title: "O que a galera está dizendo"
           subtitle: "Reações no X desde o anúncio"
         discord:
-          title: "Junte-se a mais de 1.200 jogadores no Discord"
+          title: "Junte-se a mais de 1.000 jogadores no Discord"
           subtitle: "Compartilhe clipes e prints, encontre parceiros, faça amigos e organize torneios. Venha construir o DUNK com a gente."
           cta: "Entrar no nosso Discord"
           tags:
