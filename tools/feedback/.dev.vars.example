@@ -1,0 +1,5 @@
+# Solo para probar en local. No subir el archivo .dev.vars.
+DEV_NO_AUTH=1
+DISCORD_BOT_TOKEN=
+DISCORD_CLIENT_SECRET=
+SESSION_SECRET=cualquier-cosa-larga

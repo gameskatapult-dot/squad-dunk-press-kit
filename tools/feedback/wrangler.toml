@@ -1,0 +1,34 @@
+name = "dunk-feedback"
+main = "src/index.js"
+compatibility_date = "2025-09-01"
+
+# Lee Discord cada 5 minutos.
+[triggers]
+crons = ["*/5 * * * *"]
+
+[[rules]]
+type = "Text"
+globs = ["**/*.html"]
+fallthrough = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "dunk-feedback"
+database_id = "REEMPLAZAR_CON_EL_ID_QUE_DA_wrangler_d1_create"
+
+[vars]
+# ID del servidor de DUNK (clic derecho en el servidor > Copiar ID del servidor).
+GUILD_ID = "REEMPLAZAR"
+# ID de la app de Discord (Developer Portal > General Information > Application ID).
+DISCORD_CLIENT_ID = "REEMPLAZAR"
+# Canales a leer: id:origen:tipo, separados por coma. Tipo "forum" para bug-reports.
+CHANNELS = "ID_PLAYER_FEEDBACK:player-feedback:text,ID_BETA_FEEDBACK:beta-feedback:text,ID_BUG_REPORTS:bug-reports:forum"
+# Roles que pueden entrar (clic derecho en el rol > Copiar ID), separados por coma.
+ALLOWED_ROLE_IDS = "REEMPLAZAR"
+
+# Secretos (no van acá, se cargan con `npx wrangler secret put NOMBRE`):
+#   DISCORD_BOT_TOKEN, DISCORD_CLIENT_SECRET, SESSION_SECRET
+
+# IA de Cloudflare para clasificar el feedback (gratis dentro del límite diario).
+[ai]
+binding = "AI"

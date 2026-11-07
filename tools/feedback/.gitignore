@@ -1,0 +1,6 @@
+node_modules/
+.wrangler/
+.dev.vars
+# Datos de jugadores: no subir al repo (el sitio es público)
+import/
+*.csv
