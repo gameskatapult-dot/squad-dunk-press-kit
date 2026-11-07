@@ -160,7 +160,7 @@ localization:
         voices:
           eyebrow: "On X"
           title: "What people are saying"
-          subtitle: "Reactions on X since the announcement"
+          subtitle: "Reactions since the announcement"
         discord:
           title: "Pull up to our Discord"
           subtitle: "Where the squad hangs out: clips and screenshots, finding teammates, new friends and tournaments people set up themselves."
@@ -485,7 +485,7 @@ localization:
         voices:
           eyebrow: "En X"
           title: "Lo que dice la gente"
-          subtitle: "Reacciones en X desde el anuncio"
+          subtitle: "Reacciones desde el anuncio"
         discord:
           title: "Pásate por nuestro Discord"
           subtitle: "Donde se junta la squad: clips y capturas, gente buscando equipo, amigos nuevos y torneos que arman los mismos jugadores."
@@ -811,7 +811,7 @@ localization:
         voices:
           eyebrow: "В X"
           title: "Что говорят игроки"
-          subtitle: "Реакции в X после анонса"
+          subtitle: "Реакции после анонса"
         discord:
           title: "Заглядывайте в наш Discord"
           subtitle: "Здесь собирается вся команда: клипы и скриншоты, поиск напарников, новые друзья и турниры, которые придумывают сами игроки."
@@ -1107,7 +1107,7 @@ localization:
         voices:
           eyebrow: "Xより"
           title: "みんなの声"
-          subtitle: "発表後の X での反応"
+          subtitle: "発表後の反応"
         discord:
           title: "Discordに遊びにおいで"
           subtitle: "仲間が集まる場所。クリップやスクショの共有、チームメイト探し、新しい友達、プレイヤー主催の大会も。"
@@ -1394,7 +1394,7 @@ localization:
         voices:
           eyebrow: "来自 X"
           title: "玩家怎么说"
-          subtitle: "公布以来 X 上的反响"
+          subtitle: "公布以来的反响"
         discord:
           title: "来我们的 Discord 玩"
           subtitle: "玩家们的聚集地：分享片段和截图、找队友、交朋友，还有玩家自己组织的比赛。"
@@ -1708,7 +1708,7 @@ localization:
         voices:
           eyebrow: "Auf X"
           title: "Was die Leute sagen"
-          subtitle: "Reaktionen auf X seit der Ankündigung"
+          subtitle: "Reaktionen seit der Ankündigung"
         discord:
           title: "Schau auf unserem Discord vorbei"
           subtitle: "Hier hängt die Squad ab: Clips und Screenshots, Mitspielersuche, neue Freunde und Turniere, die die Spieler selbst organisieren."
@@ -2035,7 +2035,7 @@ localization:
         voices:
           eyebrow: "Sur X"
           title: "Ce que les gens en disent"
-          subtitle: "Réactions sur X depuis l’annonce"
+          subtitle: "Réactions depuis l’annonce"
         discord:
           title: "Passez sur notre Discord"
           subtitle: "Là où la squad se retrouve : clips et captures, recherche de coéquipiers, nouveaux amis et tournois organisés par les joueurs eux-mêmes."
@@ -2363,7 +2363,7 @@ localization:
         voices:
           eyebrow: "No X"
           title: "O que a galera está dizendo"
-          subtitle: "Reações no X desde o anúncio"
+          subtitle: "Reações desde o anúncio"
         discord:
           title: "Cola no nosso Discord"
           subtitle: "Onde a galera se encontra: clipes e prints, gente procurando parceiro, amizades novas e torneios que os próprios jogadores organizam."
