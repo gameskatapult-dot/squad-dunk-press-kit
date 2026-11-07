@@ -625,30 +625,10 @@
   "msn.com/nachrichten/other/sehr-sehr-viel-potenzial-schafft-diese-basketballerin-den-ersten-dunk-f%C3%BCr-n%C3%B6rdlingen/ar-AA2gNRdR": "2026-11-05",
   "gn:CBMi1gFBVV95cUxOOWk5cERiTVBJbUdSM1Q0a2hvcl9taHdTdzlVdjkzcW9VR216UkJYRk9GMHY1TmpYdEpNai1qMWRPd2FwdGpMUHYxREF3V2ktNl9BOF9KVVZiVmcwYm5vbkJldGs2Vkc1eWhlR3hwbUlPZFluVjVVSVpBdVZIN2pfVnFpZWh6VW9CcS1YWmtJUU1GZnM2TmJuVUphbVgwcklwdHIxc1ZlUjN6TXpWUXlkcXhlWlZueF9yWG5qMWxsOEhKNkJsUElkVUQ0dzVORFVQc0djaktR": "2026-11-05",
   "gn:CBMiYkFVX3lxTE1DeGp0ZlRaOG1PaXVhOU4tMFd6MDNZSXhBQkNmbkh2bkpSX1BzMVp3RGRxZ25GdVhudHlFc3htQzRBbmxoS3hVUHdzZENRSi1pcmg5OFEyUVBrTmtVaHZSZHZn": "2026-11-06",
-  "gn:CBMiXkFVX3lxTE9BdS1yVTBVVElnSjVhbTJFN0dkRm9wdVI5UHZYeXNLMEFoUHlISmNIMy10YWljLW5UUWZLNXluRTRDaC1zTkFiWV9mT0YzVDU2b0poSldZNVNRSFhVcXc": "2026-11-07"
+  "gn:CBMiXkFVX3lxTE9BdS1yVTBVVElnSjVhbTJFN0dkRm9wdVI5UHZYeXNLMEFoUHlISmNIMy10YWljLW5UUWZLNXluRTRDaC1zTkFiWV9mT0YzVDU2b0poSldZNVNRSFhVcXc": "2026-11-07",
+  "gn:CBMiSkFVX3lxTE1yWGNvYXM2RzQzaGg2THJaQVo3VDJDY3lydEViUWpYdFhfcldvUjBnMjEzbDczRDdqVmo0QkQ0bVdERjBoMElraDhn": "2026-11-07"
  },
  "runs": [
-  {
-   "date": "2026-11-01T20:22:28.845Z",
-   "command": "scan",
-   "found": 1,
-   "requests": 26,
-   "kb": 1422
-  },
-  {
-   "date": "2026-11-01T20:24:34.756Z",
-   "command": "set",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-11-01T20:24:36.443Z",
-   "command": "add",
-   "found": 1,
-   "requests": 1,
-   "kb": 167
-  },
   {
    "date": "2026-11-01T20:26:20.584Z",
    "command": "site",
@@ -973,6 +953,27 @@
   },
   {
    "date": "2026-11-07T00:48:33.132Z",
+   "command": "site",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-07T12:14:39.476Z",
+   "command": "scan",
+   "found": 0,
+   "requests": 29,
+   "kb": 1089
+  },
+  {
+   "date": "2026-11-07T12:14:39.698Z",
+   "command": "approve",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-07T12:14:39.916Z",
    "command": "site",
    "found": 0,
    "requests": 0,
