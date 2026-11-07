@@ -161,6 +161,16 @@ localization:
           eyebrow: "Community"
           title: "What people are saying"
           subtitle: "Reactions on X since the announcement"
+        discord:
+          title: "Join 1,200+ players on Discord"
+          subtitle: "Share clips and screenshots, find teammates, make friends and set up tournaments. Come shape DUNK with us."
+          cta: "Join our Discord"
+          tags:
+            clips: "Clips & screenshots"
+            teammates: "Find teammates"
+            tournaments: "Tournaments"
+          quotes_title: "From our playtesters"
+          quote_by: "Playtester"
         quick_facts:
           developer: "Developer"
           developer_value: "Katapult Games · Ireland"
@@ -200,6 +210,7 @@ localization:
           menu: Menu
           sections:
             creators: "Creators"
+            community: "Community"
             press: "Press"
             announcement: "Announcement"
             factsheet: "The game"
@@ -477,6 +488,16 @@ localization:
           eyebrow: "Comunidad"
           title: "Lo que dice la gente"
           subtitle: "Reacciones en X desde el anuncio"
+        discord:
+          title: "Únete a +1.200 jugadores en Discord"
+          subtitle: "Comparte clips y capturas, encuentra compañeros, haz amigos y arma torneos. Ven a construir DUNK con nosotros."
+          cta: "Únete a nuestro Discord"
+          tags:
+            clips: "Clips y capturas"
+            teammates: "Busca compañeros"
+            tournaments: "Torneos"
+          quotes_title: "Lo que dicen quienes lo probaron"
+          quote_by: "Jugador del playtest"
         quick_facts:
           developer: "Desarrollo"
           developer_value: "Katapult Games · Irlanda"
@@ -516,6 +537,7 @@ localization:
           menu: Menú
           sections:
             creators: "Creadores"
+            community: "Comunidad"
             press: "Prensa"
             announcement: "Anuncio"
             factsheet: "El juego"
@@ -794,6 +816,16 @@ localization:
           eyebrow: "Сообщество"
           title: "Что говорят игроки"
           subtitle: "Реакции в X после анонса"
+        discord:
+          title: "Более 1200 игроков уже в Discord"
+          subtitle: "Делитесь клипами и скриншотами, ищите напарников, заводите друзей и устраивайте турниры. Создавайте DUNK вместе с нами."
+          cta: "Присоединиться к Discord"
+          tags:
+            clips: "Клипы и скриншоты"
+            teammates: "Поиск напарников"
+            tournaments: "Турниры"
+          quotes_title: "Отзывы участников плейтеста"
+          quote_by: "Участник плейтеста"
         quick_facts:
           developer: "Разработчик"
           developer_value: "Katapult Games · Ирландия"
@@ -833,6 +865,7 @@ localization:
           menu: Меню
           sections:
             creators: "Авторы"
+            community: "Сообщество"
             press: "Пресса"
             announcement: "Анонс"
             factsheet: "Об игре"
@@ -1081,6 +1114,16 @@ localization:
           eyebrow: "コミュニティ"
           title: "みんなの声"
           subtitle: "発表後の X での反応"
+        discord:
+          title: "1,200人以上のプレイヤーが集まるDiscord"
+          subtitle: "クリップやスクショを共有して、チームメイトや友達を見つけ、大会も開こう。一緒にDUNKを作りましょう。"
+          cta: "Discordに参加"
+          tags:
+            clips: "クリップ＆スクショ"
+            teammates: "チームメイト探し"
+            tournaments: "大会"
+          quotes_title: "プレイテスト参加者の声"
+          quote_by: "プレイテスト参加者"
         quick_facts:
           developer: "開発"
           developer_value: "Katapult Games · アイルランド"
@@ -1120,6 +1163,7 @@ localization:
           menu: メニュー
           sections:
             creators: "クリエイター"
+            community: "コミュニティ"
             press: "プレス"
             announcement: "アナウンス"
             factsheet: "ゲーム概要"
@@ -1359,6 +1403,16 @@ localization:
           eyebrow: "社区"
           title: "玩家怎么说"
           subtitle: "公布以来 X 上的反响"
+        discord:
+          title: "加入 Discord，与 1200+ 名玩家同乐"
+          subtitle: "分享精彩片段和截图，寻找队友，结交朋友，组织比赛。和我们一起打造 DUNK。"
+          cta: "加入我们的 Discord"
+          tags:
+            clips: "片段与截图"
+            teammates: "寻找队友"
+            tournaments: "比赛"
+          quotes_title: "试玩玩家的评价"
+          quote_by: "试玩玩家"
         quick_facts:
           developer: "开发商"
           developer_value: "Katapult Games · 爱尔兰"
@@ -1398,6 +1452,7 @@ localization:
           menu: 菜单
           sections:
             creators: "创作者"
+            community: "社区"
             press: "媒体报道"
             announcement: "公告"
             factsheet: "游戏介绍"
@@ -1664,6 +1719,16 @@ localization:
           eyebrow: "Community"
           title: "Was die Leute sagen"
           subtitle: "Reaktionen auf X seit der Ankündigung"
+        discord:
+          title: "Über 1.200 Spieler auf Discord"
+          subtitle: "Teile Clips und Screenshots, finde Mitspieler, schließe Freundschaften und organisiere Turniere. Gestalte DUNK mit uns."
+          cta: "Unserem Discord beitreten"
+          tags:
+            clips: "Clips & Screenshots"
+            teammates: "Mitspieler finden"
+            tournaments: "Turniere"
+          quotes_title: "Stimmen aus dem Playtest"
+          quote_by: "Playtester"
         quick_facts:
           developer: "Entwickler"
           developer_value: "Katapult Games · Irland"
@@ -1703,6 +1768,7 @@ localization:
           menu: Menü
           sections:
             creators: "Creator"
+            community: "Community"
             press: "Presse"
             announcement: "Ankündigung"
             factsheet: "Das Spiel"
@@ -1982,6 +2048,16 @@ localization:
           eyebrow: "Communauté"
           title: "Ce que les gens en disent"
           subtitle: "Réactions sur X depuis l’annonce"
+        discord:
+          title: "Rejoignez plus de 1 200 joueurs sur Discord"
+          subtitle: "Partagez vos clips et captures, trouvez des coéquipiers, faites-vous des amis et organisez des tournois. Construisez DUNK avec nous."
+          cta: "Rejoindre notre Discord"
+          tags:
+            clips: "Clips et captures"
+            teammates: "Trouver des coéquipiers"
+            tournaments: "Tournois"
+          quotes_title: "Ce qu’en disent nos testeurs"
+          quote_by: "Testeur du playtest"
         quick_facts:
           developer: "Développeur"
           developer_value: "Katapult Games · Irlande"
@@ -2021,6 +2097,7 @@ localization:
           menu: Menu
           sections:
             creators: "Créateurs"
+            community: "Communauté"
             press: "Presse"
             announcement: "Annonce"
             factsheet: "Le jeu"
@@ -2301,6 +2378,16 @@ localization:
           eyebrow: "Comunidade"
           title: "O que a galera está dizendo"
           subtitle: "Reações no X desde o anúncio"
+        discord:
+          title: "Junte-se a mais de 1.200 jogadores no Discord"
+          subtitle: "Compartilhe clipes e prints, encontre parceiros, faça amigos e organize torneios. Venha construir o DUNK com a gente."
+          cta: "Entrar no nosso Discord"
+          tags:
+            clips: "Clipes e prints"
+            teammates: "Encontre parceiros"
+            tournaments: "Torneios"
+          quotes_title: "O que dizem nossos playtesters"
+          quote_by: "Jogador do playtest"
         quick_facts:
           developer: "Desenvolvedora"
           developer_value: "Katapult Games · Irlanda"
@@ -2340,6 +2427,7 @@ localization:
           menu: Menu
           sections:
             creators: "Criadores"
+            community: "Comunidade"
             press: "Imprensa"
             announcement: "Anúncio"
             factsheet: "O jogo"
