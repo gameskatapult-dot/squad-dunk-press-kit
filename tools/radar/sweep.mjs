@@ -149,6 +149,8 @@ async function radarSweep (cfg) {
 
 function script (platform) {
   const posts = Object.entries(db.posts)
+  // Candidates still waiting for accept/reject are skipped too, so the next run does not check them again.
+  const pending = fs.existsSync(path.join(DIR, CANDS)) ? load(CANDS).map(c => c.k) : []
   const prefix = platform === 'ig' ? 'instagram:' : 'tiktok:'
   const handles = [...new Set(posts.filter(([k, p]) => k.startsWith('tiktok:') && live(p)).map(([, p]) => p.author.replace(/^@/, '').toLowerCase()))]
   const cfg = {
@@ -156,7 +158,7 @@ function script (platform) {
     since: config.sweep.since || config.since,
     phrases: config.sweep[platform],
     handles: platform === 'tt' ? handles : [],
-    known: [...new Set([...posts.map(([k]) => k), ...Object.keys(db.rejected)].filter(k => k.startsWith(prefix)).map(k => k.slice(prefix.length)))],
+    known: [...new Set([...posts.map(([k]) => k), ...Object.keys(db.rejected), ...pending].filter(k => k.startsWith(prefix)).map(k => k.slice(prefix.length)))],
     track: posts.filter(([k, p]) => k.startsWith(prefix) && live(p)).map(([, p]) => platform === 'ig' ? p.id : p.url.replace('https://www.tiktok.com/', '')),
     creators: [...new Set(posts.filter(([, p]) => live(p) && p.author).map(([, p]) => p.author.toLowerCase()))],
     official: config.official.map(h => h.toLowerCase()),
@@ -204,8 +206,10 @@ function apply (file) {
   }
   save('db.json', db)
   const previous = fs.existsSync(path.join(DIR, CANDS)) ? load(CANDS) : []
-  const cands = [...previous.filter(c => !db.posts[c.k] && !db.rejected[c.k]), ...result.cands]
-  save(CANDS, cands)
+  // One entry per key; a fresh result replaces the older one.
+  const byKey = new Map()
+  for (const c of [...previous, ...result.cands]) if (!db.posts[c.k] && !db.rejected[c.k]) byKey.set(c.k, c)
+  save(CANDS, [...byKey.values()])
   console.log(`Escaneados ${result.scanned}, revisados ${result.checked}, errores ${result.errors}, visitas actualizadas ${updated}.`)
   for (const c of result.cands || []) console.log(`  ${c.v === 'likely' ? '★' : '?'} ${c.k} ${c.views} ${c.vertical ? '' : '[horizontal] '}${c.url} — ${c.cap.slice(0, 90)}`)
   if (!result.cands.length) console.log('  Sin candidatos nuevos.')
@@ -213,18 +217,27 @@ function apply (file) {
 
 function accept (keys) {
   const cands = load(CANDS)
+  const done = []
   for (const k of keys) {
     const c = cands.find(x => x.k === k)
     if (!c) { console.log('No está en la lista:', k); continue }
     const radar = (...a) => spawnSync(process.execPath, [path.join(DIR, 'radar.mjs'), ...a], { stdio: 'inherit' })
     const extra = c.k.startsWith('instagram:') ? ['--views', String(c.views), '--likes', String(c.likes), '--title', c.cap.split(' @')[0].slice(0, 80)] : []
-    radar('add', c.url, ...extra)
+    if (radar('add', c.url, ...extra).status !== 0 || !load('db.json').posts[c.k]) { console.log('No se pudo agregar, queda en la lista:', k); continue }
     radar('set', c.k, 'aprobado')
+    done.push(k)
   }
-  save(CANDS, cands.filter(c => !keys.includes(c.k)))
+  save(CANDS, cands.filter(c => !done.includes(c.k)))
 }
 
-function reject (keys) {
+// A post already on the site is only removed with --force, so a mistyped key cannot take it down.
+function reject (args) {
+  const force = args.includes('--force')
+  const keys = []
+  for (const k of args.filter(a => a !== '--force')) {
+    if (!force && db.posts[k] && live(db.posts[k])) console.log('Está publicado, no se descarta (usar --force):', k)
+    else keys.push(k)
+  }
   for (const k of keys) { delete db.posts[k]; db.rejected[k] = today() }
   save('db.json', db)
   if (fs.existsSync(path.join(DIR, CANDS))) save(CANDS, load(CANDS).filter(c => !keys.includes(c.k)))

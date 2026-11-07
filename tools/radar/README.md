@@ -112,6 +112,6 @@ Corre dentro de una pestaña de Chrome con sesión iniciada (Claude in Chrome), 
 
 1. `node tools/radar/sweep.mjs script ig` → pegar la salida en una pestaña de instagram.com (usa `history.pushState` para pasar por las búsquedas sin recargar). Para TikTok, `script tt` en tiktok.com/explore (usa un iframe oculto: búsquedas y perfiles de los creadores conocidos).
 2. Esperar a que `window.__radar.phase` diga `done`, guardar `JSON.stringify(window.__radar.result)` en un archivo y correr `sweep.mjs apply <archivo>`: actualiza visitas y lista candidatos (★ casi seguro, ? dudoso).
-3. `sweep.mjs accept <keys>` o `sweep.mjs reject <keys>`, después `radar.mjs site`.
+3. `sweep.mjs accept <keys>` o `sweep.mjs reject <keys>`, después `radar.mjs site`. Los candidatos que quedan pendientes no se vuelven a revisar ni se duplican en la lista. `reject` no borra un post que ya está en el sitio salvo con `--force`.
 
 Lo ya revisado que no es DUNK queda en `localStorage` de la pestaña (`dunkRadarSeen`) y no se vuelve a mirar. Frases y palabras: `config.json` → `sweep`. En Claude Code, el mod `dunk-radar` agrega `/radar`, que hace todo esto.
