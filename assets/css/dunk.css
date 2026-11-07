@@ -197,11 +197,10 @@ body.has-community-player { overflow: hidden; }
 .hangout__board-title { margin: 0 0 14px !important; color: var(--soft); font-size: 15px; font-weight: 700; text-align: center; transform: rotate(-1.5deg); }
 .hangout__board-title::before { content: "📌 "; }
 .hangout__photos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 14px; padding: 8px; }
-.dunk .hangout__photo { position: relative; padding: 8px 8px 34px; background: var(--cream); border-radius: 3px; box-shadow: 0 10px 24px rgba(0, 0, 0, .45); transform: rotate(var(--tilt, 0deg)); transition: transform .25s ease; }
+.dunk .hangout__photo { position: relative; padding: 8px 8px 22px; background: var(--cream); border-radius: 3px; box-shadow: 0 10px 24px rgba(0, 0, 0, .45); transform: rotate(var(--tilt, 0deg)); transition: transform .25s ease; }
 .hangout__photo:hover { transform: rotate(0deg) scale(1.04); z-index: 1; }
 .hangout__photo::before { content: ""; position: absolute; top: -9px; left: 50%; width: 64px; height: 18px; background: rgba(239, 138, 60, .75); transform: translateX(-50%) rotate(-3deg); }
 .hangout__photo img, .hangout__photo video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; }
-.hangout__photo figcaption { position: absolute; left: 0; right: 0; bottom: 8px; color: var(--ink); font: 700 14px/1 var(--body); text-align: center; transform: rotate(-1deg); }
 .hangout__chat { padding: 18px 18px 20px; background: #24211d; border: 1px solid var(--line); border-radius: 12px; }
 .hangout__channel { display: flex; align-items: flex-start; gap: 12px; margin: 0 0 6px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
 .hangout__heading { margin: 0 !important; color: var(--cream); font-size: 18px; font-weight: 800; }

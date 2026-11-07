@@ -658,20 +658,26 @@
     update()
   }
 
-  // Feedback highlights: shuffled on every visit, then a slow upward roll. The list is doubled so the
-  // -50% loop has no seam; the copies are hidden from screen readers.
-  function setupHangoutFeed () {
-    const feed = document.querySelector('[data-hangout-feed]')
-    const list = feed && feed.querySelector('[data-hangout-msgs]')
-    if (!list) return
-    const items = Array.from(list.children)
+  // Puts a container's children in a new random order and returns them in that order.
+  function shuffleChildren (parent) {
+    const items = Array.from(parent.children)
     for (let i = items.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1))
       const swap = items[i]
       items[i] = items[j]
       items[j] = swap
     }
-    items.forEach(function (item) { list.appendChild(item) })
+    items.forEach(function (item) { parent.appendChild(item) })
+    return items
+  }
+
+  // Feedback highlights: shuffled on every visit, then a slow upward roll. The list is doubled so the
+  // -50% loop has no seam; the copies are hidden from screen readers.
+  function setupHangoutFeed () {
+    const feed = document.querySelector('[data-hangout-feed]')
+    const list = feed && feed.querySelector('[data-hangout-msgs]')
+    if (!list) return
+    const items = shuffleChildren(list)
     if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
     if (list.scrollHeight <= feed.clientHeight) return
     items.forEach(function (item) {
@@ -687,6 +693,8 @@
   // Community clips: muted loops that only load and play while on screen (and not at all with
   // reduced motion, where the poster stays).
   function setupHangoutVideos () {
+    const board = document.querySelector('[data-hangout-photos]')
+    if (board) shuffleChildren(board)
     const videos = Array.from(document.querySelectorAll('[data-hangout-video]'))
     if (!videos.length || !('IntersectionObserver' in window)) return
     if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
