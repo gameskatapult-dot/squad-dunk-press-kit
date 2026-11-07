@@ -213,11 +213,10 @@ body.has-community-player { overflow: hidden; }
 .hangout__feed.is-rolling .hangout__msgs { animation: hangout-roll var(--hangout-time, 90s) linear infinite; }
 .hangout__feed:hover .hangout__msgs, .hangout__feed:focus-within .hangout__msgs { animation-play-state: paused; }
 @keyframes hangout-roll { to { transform: translateY(-50%); } }
-.hangout__msg { padding: 10px 8px; border-radius: 6px; }
+.hangout__msg { padding: 12px 8px; border-radius: 6px; }
+.hangout__msg + .hangout__msg { border-top: 1px solid var(--line); }
 .hangout__msg:hover { background: rgba(255, 248, 234, .04); }
-.hangout__meta { margin: 0 0 2px !important; color: var(--ball); font-size: 14px; font-weight: 800; }
-.hangout__build { margin-left: 6px; color: var(--soft); font-size: 12px; font-weight: 600; }
-.hangout__text { margin: 0 !important; color: var(--soft); font-size: 16px; font-weight: 500; line-height: 1.35; }
+.hangout__text { margin: 0 !important; color: var(--cream); font-size: 17px; font-weight: 600; line-height: 1.35; }
 .dunk .hangout__join { width: 100%; margin-top: 14px; }
 @media (max-width: 860px) {
   .hangout__grid { grid-template-columns: 1fr; }

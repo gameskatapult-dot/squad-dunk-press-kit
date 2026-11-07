@@ -158,7 +158,7 @@ localization:
           prev: "Previous articles"
           next: "Next articles"
         voices:
-          eyebrow: "Community"
+          eyebrow: "On X"
           title: "What people are saying"
           subtitle: "Reactions on X since the announcement"
         discord:
@@ -166,7 +166,6 @@ localization:
           subtitle: "Where the squad hangs out: clips and screenshots, finding teammates, new friends and tournaments people set up themselves."
           cta: "Join the Discord"
           members: "1,000+ members"
-          quote_by: "Playtester"
           highlights: "Feedback highlights"
           highlights_note: "A few favorites from the in-game survey"
           shared_title: "Shared by our players on Discord"
@@ -484,7 +483,7 @@ localization:
           prev: "Artículos anteriores"
           next: "Artículos siguientes"
         voices:
-          eyebrow: "Comunidad"
+          eyebrow: "En X"
           title: "Lo que dice la gente"
           subtitle: "Reacciones en X desde el anuncio"
         discord:
@@ -492,7 +491,6 @@ localization:
           subtitle: "Donde se junta la squad: clips y capturas, gente buscando equipo, amigos nuevos y torneos que arman los mismos jugadores."
           cta: "Entrar al Discord"
           members: "+1.000 miembros"
-          quote_by: "Jugador del playtest"
           highlights: "Feedback destacado"
           highlights_note: "Algunos favoritos de la encuesta del juego"
           shared_title: "Lo que suben los jugadores al Discord"
@@ -811,7 +809,7 @@ localization:
           prev: "Предыдущие статьи"
           next: "Следующие статьи"
         voices:
-          eyebrow: "Сообщество"
+          eyebrow: "В X"
           title: "Что говорят игроки"
           subtitle: "Реакции в X после анонса"
         discord:
@@ -819,7 +817,6 @@ localization:
           subtitle: "Здесь собирается вся команда: клипы и скриншоты, поиск напарников, новые друзья и турниры, которые придумывают сами игроки."
           cta: "Зайти в Discord"
           members: "1000+ участников"
-          quote_by: "Участник плейтеста"
           highlights: "Лучшие отзывы"
           highlights_note: "Несколько любимых ответов из опроса в игре"
           shared_title: "Это выложили игроки в нашем Discord"
@@ -1108,7 +1105,7 @@ localization:
           prev: "前の記事"
           next: "次の記事"
         voices:
-          eyebrow: "コミュニティ"
+          eyebrow: "Xより"
           title: "みんなの声"
           subtitle: "発表後の X での反応"
         discord:
@@ -1116,7 +1113,6 @@ localization:
           subtitle: "仲間が集まる場所。クリップやスクショの共有、チームメイト探し、新しい友達、プレイヤー主催の大会も。"
           cta: "Discordに参加"
           members: "メンバー1,000人以上"
-          quote_by: "プレイテスト参加者"
           highlights: "ピックアップした声"
           highlights_note: "ゲーム内アンケートからお気に入りをいくつか"
           shared_title: "プレイヤーがDiscordに投稿してくれたもの"
@@ -1396,7 +1392,7 @@ localization:
           prev: "上一篇"
           next: "下一篇"
         voices:
-          eyebrow: "社区"
+          eyebrow: "来自 X"
           title: "玩家怎么说"
           subtitle: "公布以来 X 上的反响"
         discord:
@@ -1404,7 +1400,6 @@ localization:
           subtitle: "玩家们的聚集地：分享片段和截图、找队友、交朋友，还有玩家自己组织的比赛。"
           cta: "加入 Discord"
           members: "1000+ 名成员"
-          quote_by: "试玩玩家"
           highlights: "精选反馈"
           highlights_note: "来自游戏内问卷的几条最爱"
           shared_title: "玩家们在 Discord 分享的内容"
@@ -1711,7 +1706,7 @@ localization:
           prev: "Vorherige Artikel"
           next: "Nächste Artikel"
         voices:
-          eyebrow: "Community"
+          eyebrow: "Auf X"
           title: "Was die Leute sagen"
           subtitle: "Reaktionen auf X seit der Ankündigung"
         discord:
@@ -1719,7 +1714,6 @@ localization:
           subtitle: "Hier hängt die Squad ab: Clips und Screenshots, Mitspielersuche, neue Freunde und Turniere, die die Spieler selbst organisieren."
           cta: "Zum Discord"
           members: "1.000+ Mitglieder"
-          quote_by: "Playtester"
           highlights: "Ausgewähltes Feedback"
           highlights_note: "Ein paar Lieblinge aus der Umfrage im Spiel"
           shared_title: "Von unseren Spielern auf Discord geteilt"
@@ -2039,7 +2033,7 @@ localization:
           prev: "Articles précédents"
           next: "Articles suivants"
         voices:
-          eyebrow: "Communauté"
+          eyebrow: "Sur X"
           title: "Ce que les gens en disent"
           subtitle: "Réactions sur X depuis l’annonce"
         discord:
@@ -2047,7 +2041,6 @@ localization:
           subtitle: "Là où la squad se retrouve : clips et captures, recherche de coéquipiers, nouveaux amis et tournois organisés par les joueurs eux-mêmes."
           cta: "Rejoindre le Discord"
           members: "1 000+ membres"
-          quote_by: "Testeur du playtest"
           highlights: "Retours à la une"
           highlights_note: "Quelques favoris du sondage en jeu"
           shared_title: "Partagé par nos joueurs sur Discord"
@@ -2368,7 +2361,7 @@ localization:
           prev: "Artigos anteriores"
           next: "Próximos artigos"
         voices:
-          eyebrow: "Comunidade"
+          eyebrow: "No X"
           title: "O que a galera está dizendo"
           subtitle: "Reações no X desde o anúncio"
         discord:
@@ -2376,7 +2369,6 @@ localization:
           subtitle: "Onde a galera se encontra: clipes e prints, gente procurando parceiro, amizades novas e torneios que os próprios jogadores organizam."
           cta: "Entrar no Discord"
           members: "1.000+ membros"
-          quote_by: "Jogador do playtest"
           highlights: "Feedback em destaque"
           highlights_note: "Alguns favoritos da pesquisa do jogo"
           shared_title: "Postado pelos jogadores no nosso Discord"
