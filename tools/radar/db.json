@@ -9243,7 +9243,7 @@
    "date": "2026-10-30",
    "views": 255,
    "likes": 5,
-   "status": "revisar",
+   "status": "aprobado",
    "reason": "agregado a mano",
    "source": "manual",
    "firstSeen": "2026-11-01",
@@ -10360,7 +10360,7 @@
    "published": "2026-11-02T07:00:10-08:00",
    "views": 88,
    "short": true,
-   "status": "revisar",
+   "status": "en-sitio",
    "reason": "DUNK + palabra de juego",
    "source": "búsqueda: DUNK basketball game",
    "firstSeen": "2026-11-02",
@@ -10759,7 +10759,7 @@
    "published": "2026-11-02T17:00:23-08:00",
    "views": 252,
    "short": true,
-   "status": "revisar",
+   "status": "descartado",
    "reason": "dunk + palabra de juego",
    "source": "búsqueda: DUNK basketball game",
    "firstSeen": "2026-11-03",
@@ -10841,7 +10841,7 @@
    "published": "2026-11-02T16:44:20-08:00",
    "views": 4857,
    "short": true,
-   "status": "revisar",
+   "status": "descartado",
    "reason": "dunk + palabra de juego",
    "source": "búsqueda: DUNK jogo basquete",
    "firstSeen": "2026-11-03",
@@ -18729,41 +18729,6 @@
  },
  "runs": [
   {
-   "date": "2026-11-03T23:54:03.912Z",
-   "command": "scan",
-   "found": 2,
-   "requests": 305,
-   "kb": 59233
-  },
-  {
-   "date": "2026-11-03T23:54:45.542Z",
-   "command": "set",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-11-03T23:54:46.034Z",
-   "command": "set",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-11-03T23:56:45.792Z",
-   "command": "site",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-11-04T00:50:48.103Z",
-   "command": "site",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
    "date": "2026-11-04T15:16:26.250Z",
    "command": "scan",
    "found": 6,
@@ -19074,6 +19039,41 @@
   {
    "date": "2026-11-07T15:11:40.559Z",
    "command": "report",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-07T15:14:48.723Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-07T15:14:48.829Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-07T15:14:48.921Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-07T15:14:49.014Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-07T15:14:51.698Z",
+   "command": "site",
    "found": 0,
    "requests": 0,
    "kb": 0
