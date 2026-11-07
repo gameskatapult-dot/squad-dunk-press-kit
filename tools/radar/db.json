@@ -12379,6 +12379,29 @@
      90
     ]
    ]
+  },
+  "instagram:DfUPW4jGdqF": {
+   "platform": "instagram",
+   "id": "DfUPW4jGdqF",
+   "url": "https://www.instagram.com/little.acrimony/reel/DfUPW4jGdqF/",
+   "author": "@little.acrimony",
+   "title": "Анонс Dunk Состоялся анонс кооперативной аркадной игры про уличный бас",
+   "desc": "",
+   "date": "2026-11-04",
+   "views": 2521,
+   "likes": 34,
+   "manual": true,
+   "status": "en-sitio",
+   "reason": "agregado a mano",
+   "source": "manual",
+   "firstSeen": "2026-11-07",
+   "checked": "2026-11-07",
+   "history": [
+    [
+     "2026-11-07",
+     2521
+    ]
+   ]
   }
  },
  "rejected": {
@@ -19011,27 +19034,6 @@
  },
  "runs": [
   {
-   "date": "2026-11-04T15:16:38.556Z",
-   "command": "site",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-11-04T19:36:10.309Z",
-   "command": "scan",
-   "found": 1,
-   "requests": 225,
-   "kb": 48188
-  },
-  {
-   "date": "2026-11-04T19:36:39.164Z",
-   "command": "set",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
    "date": "2026-11-04T19:59:27.225Z",
    "command": "site",
    "found": 0,
@@ -19359,6 +19361,27 @@
    "found": 0,
    "requests": 1,
    "kb": 393
+  },
+  {
+   "date": "2026-11-07T22:25:21.066Z",
+   "command": "add",
+   "found": 1,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-07T22:25:21.270Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-07T22:25:22.278Z",
+   "command": "site",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
   }
  ]
 }
