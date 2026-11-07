@@ -105,3 +105,13 @@ Las versiones AMP, móvil o con otro idioma en la ruta del mismo artículo cuent
 `dunkthegame.com/community/panel-yhqdojqq/` (en inglés) es una tabla técnica con todos los posts: hora de subida (Irlanda, Chile o UTC), visitas sumando copias, likes, visitas por hora, pago, estado y la historia de visitas. Se ordena por cualquier columna y exporta CSV.
 
 No está enlazada en el sitio y tiene `noindex`, pero **no tiene contraseña**: la ve cualquiera que tenga el link (GitHub Pages no permite más, y el repo es público). Cada comando del radar regenera `data.json`; las visitas más frescas las toma de `community.json`. Al final del panel está la tabla de prensa (`#press`), con todos los artículos que guardó `press.mjs`, también los que esperan revisión; cada comando de `press.mjs` regenera su `press.json`.
+
+## Barrido barato de Instagram y TikTok (`sweep.mjs`)
+
+Corre dentro de una pestaña de Chrome con sesión iniciada (Claude in Chrome), así una revisión completa son unas pocas llamadas:
+
+1. `node tools/radar/sweep.mjs script ig` → pegar la salida en una pestaña de instagram.com (usa `history.pushState` para pasar por las búsquedas sin recargar). Para TikTok, `script tt` en tiktok.com/explore (usa un iframe oculto: búsquedas y perfiles de los creadores conocidos).
+2. Esperar a que `window.__radar.phase` diga `done`, guardar `JSON.stringify(window.__radar.result)` en un archivo y correr `sweep.mjs apply <archivo>`: actualiza visitas y lista candidatos (★ casi seguro, ? dudoso).
+3. `sweep.mjs accept <keys>` o `sweep.mjs reject <keys>`, después `radar.mjs site`.
+
+Lo ya revisado que no es DUNK queda en `localStorage` de la pestaña (`dunkRadarSeen`) y no se vuelve a mirar. Frases y palabras: `config.json` → `sweep`. En Claude Code, el mod `dunk-radar` agrega `/radar`, que hace todo esto.
