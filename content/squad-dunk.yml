@@ -161,7 +161,7 @@ localization:
           subtitle: "Reactions since the announcement"
         discord:
           title: "Pull up to our Discord"
-          subtitle: "Where the squad hangs out: clips and screenshots, finding teammates, new friends and tournaments people set up themselves."
+          subtitle: "Clips, screenshots and first impressions from our early playtests."
           cta: "Join the Discord"
           members: "1,000+ members"
           highlights: "Feedback highlights"
@@ -484,7 +484,7 @@ localization:
           subtitle: "Reacciones desde el anuncio"
         discord:
           title: "Pásate por nuestro Discord"
-          subtitle: "Donde se junta la squad: clips y capturas, gente buscando equipo, amigos nuevos y torneos que arman los mismos jugadores."
+          subtitle: "Clips, capturas y primeras impresiones de nuestros primeros playtests."
           cta: "Entrar al Discord"
           members: "+1.000 miembros"
           highlights: "Feedback destacado"
@@ -808,7 +808,7 @@ localization:
           subtitle: "Реакции после анонса"
         discord:
           title: "Заглядывайте в наш Discord"
-          subtitle: "Здесь собирается вся команда: клипы и скриншоты, поиск напарников, новые друзья и турниры, которые придумывают сами игроки."
+          subtitle: "Клипы, скриншоты и первые впечатления с наших первых плейтестов."
           cta: "Зайти в Discord"
           members: "1000+ участников"
           highlights: "Лучшие отзывы"
@@ -1102,7 +1102,7 @@ localization:
           subtitle: "発表後の反応"
         discord:
           title: "Discordに遊びにおいで"
-          subtitle: "仲間が集まる場所。クリップやスクショの共有、チームメイト探し、新しい友達、プレイヤー主催の大会も。"
+          subtitle: "初期プレイテストのクリップ、スクショ、そして最初の感想。"
           cta: "Discordに参加"
           members: "メンバー1,000人以上"
           highlights: "ピックアップした声"
@@ -1387,7 +1387,7 @@ localization:
           subtitle: "公布以来的反响"
         discord:
           title: "来我们的 Discord 玩"
-          subtitle: "玩家们的聚集地：分享片段和截图、找队友、交朋友，还有玩家自己组织的比赛。"
+          subtitle: "来自早期试玩的片段、截图和第一印象。"
           cta: "加入 Discord"
           members: "1000+ 名成员"
           highlights: "精选反馈"
@@ -1699,7 +1699,7 @@ localization:
           subtitle: "Reaktionen seit der Ankündigung"
         discord:
           title: "Schau auf unserem Discord vorbei"
-          subtitle: "Hier hängt die Squad ab: Clips und Screenshots, Mitspielersuche, neue Freunde und Turniere, die die Spieler selbst organisieren."
+          subtitle: "Clips, Screenshots und erste Eindrücke aus unseren frühen Playtests."
           cta: "Zum Discord"
           members: "1.000+ Mitglieder"
           highlights: "Ausgewähltes Feedback"
@@ -2024,7 +2024,7 @@ localization:
           subtitle: "Réactions depuis l’annonce"
         discord:
           title: "Passez sur notre Discord"
-          subtitle: "Là où la squad se retrouve : clips et captures, recherche de coéquipiers, nouveaux amis et tournois organisés par les joueurs eux-mêmes."
+          subtitle: "Clips, captures et premières impressions de nos premiers playtests."
           cta: "Rejoindre le Discord"
           members: "1 000+ membres"
           highlights: "Retours à la une"
@@ -2350,7 +2350,7 @@ localization:
           subtitle: "Reações desde o anúncio"
         discord:
           title: "Cola no nosso Discord"
-          subtitle: "Onde a galera se encontra: clipes e prints, gente procurando parceiro, amizades novas e torneios que os próprios jogadores organizam."
+          subtitle: "Clipes, prints e primeiras impressões dos nossos primeiros playtests."
           cta: "Entrar no Discord"
           members: "1.000+ membros"
           highlights: "Feedback em destaque"
