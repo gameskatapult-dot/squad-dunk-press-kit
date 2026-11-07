@@ -150,13 +150,11 @@ localization:
           views_label: "views on creator videos"
           prompt: "Post your DUNK clips with #DUNKthegame and we might feature them here."
           prev: "Previous clips"
-          next: "Next clips"
         press:
           title: "What the press is saying"
           articles_label: "articles"
           languages_label: "languages"
           prev: "Previous articles"
-          next: "Next articles"
         voices:
           eyebrow: "On X"
           title: "What people are saying"
@@ -168,8 +166,6 @@ localization:
           members: "1,000+ members"
           highlights: "Feedback highlights"
           highlights_note: "A few favorites from the in-game survey"
-          prev: "Previous comments"
-          next: "Next comments"
           shared_title: "Shared by our players on Discord"
         quick_facts:
           developer: "Developer"
@@ -477,13 +473,11 @@ localization:
           views_label: "visualizaciones en videos de creadores"
           prompt: "Sube tus clips de DUNK con #DUNKthegame y puede que salgan aquí."
           prev: "Clips anteriores"
-          next: "Clips siguientes"
         press:
           title: "Lo que dice la prensa"
           articles_label: "artículos"
           languages_label: "idiomas"
           prev: "Artículos anteriores"
-          next: "Artículos siguientes"
         voices:
           eyebrow: "En X"
           title: "Lo que dice la gente"
@@ -495,8 +489,6 @@ localization:
           members: "+1.000 miembros"
           highlights: "Feedback destacado"
           highlights_note: "Algunos favoritos de la encuesta del juego"
-          prev: "Comentarios anteriores"
-          next: "Siguientes comentarios"
           shared_title: "Lo que suben los jugadores al Discord"
         quick_facts:
           developer: "Desarrollo"
@@ -805,13 +797,11 @@ localization:
           views_label: "просмотров роликов авторов"
           prompt: "Публикуйте клипы DUNK с тегом #DUNKthegame — возможно, мы покажем их здесь."
           prev: "Предыдущие клипы"
-          next: "Следующие клипы"
         press:
           title: "Что пишет пресса"
           articles_label: "статей"
           languages_label: "языков"
           prev: "Предыдущие статьи"
-          next: "Следующие статьи"
         voices:
           eyebrow: "В X"
           title: "Что говорят игроки"
@@ -823,8 +813,6 @@ localization:
           members: "1000+ участников"
           highlights: "Лучшие отзывы"
           highlights_note: "Несколько любимых ответов из опроса в игре"
-          prev: "Предыдущие отзывы"
-          next: "Следующие отзывы"
           shared_title: "Это выложили игроки в нашем Discord"
         quick_facts:
           developer: "Разработчик"
@@ -1103,13 +1091,11 @@ localization:
           views_label: "クリエイター動画の総再生数"
           prompt: "#DUNKthegame を付けてDUNKのクリップを投稿すると、ここで紹介されるかも。"
           prev: "前のクリップ"
-          next: "次のクリップ"
         press:
           title: "メディア掲載"
           articles_label: "件の記事"
           languages_label: "言語"
           prev: "前の記事"
-          next: "次の記事"
         voices:
           eyebrow: "Xより"
           title: "みんなの声"
@@ -1121,8 +1107,6 @@ localization:
           members: "メンバー1,000人以上"
           highlights: "ピックアップした声"
           highlights_note: "ゲーム内アンケートからお気に入りをいくつか"
-          prev: "前のコメント"
-          next: "次のコメント"
           shared_title: "プレイヤーがDiscordに投稿してくれたもの"
         quick_facts:
           developer: "開発"
@@ -1392,13 +1376,11 @@ localization:
           views_label: "创作者视频总播放量"
           prompt: "带上 #DUNKthegame 发布你的友尽大扣篮片段，说不定会出现在这里。"
           prev: "上一组片段"
-          next: "下一组片段"
         press:
           title: "媒体怎么说"
           articles_label: "篇文章"
           languages_label: "种语言"
           prev: "上一篇"
-          next: "下一篇"
         voices:
           eyebrow: "来自 X"
           title: "玩家怎么说"
@@ -1410,8 +1392,6 @@ localization:
           members: "1000+ 名成员"
           highlights: "精选反馈"
           highlights_note: "来自游戏内问卷的几条最爱"
-          prev: "上一条评论"
-          next: "下一条评论"
           shared_title: "玩家们在 Discord 分享的内容"
         quick_facts:
           developer: "开发商"
@@ -1708,13 +1688,11 @@ localization:
           views_label: "Aufrufe auf Creator-Videos"
           prompt: "Poste deine DUNK-Clips mit #DUNKthegame – vielleicht zeigen wir sie hier."
           prev: "Vorherige Clips"
-          next: "Nächste Clips"
         press:
           title: "Was die Presse sagt"
           articles_label: "Artikel"
           languages_label: "Sprachen"
           prev: "Vorherige Artikel"
-          next: "Nächste Artikel"
         voices:
           eyebrow: "Auf X"
           title: "Was die Leute sagen"
@@ -1726,8 +1704,6 @@ localization:
           members: "1.000+ Mitglieder"
           highlights: "Ausgewähltes Feedback"
           highlights_note: "Ein paar Lieblinge aus der Umfrage im Spiel"
-          prev: "Vorherige Kommentare"
-          next: "Nächste Kommentare"
           shared_title: "Von unseren Spielern auf Discord geteilt"
         quick_facts:
           developer: "Entwickler"
@@ -2037,13 +2013,11 @@ localization:
           views_label: "vues sur les vidéos de créateurs"
           prompt: "Publiez vos clips de DUNK avec #DUNKthegame : ils pourraient apparaître ici."
           prev: "Clips précédents"
-          next: "Clips suivants"
         press:
           title: "Ce qu'en dit la presse"
           articles_label: "articles"
           languages_label: "langues"
           prev: "Articles précédents"
-          next: "Articles suivants"
         voices:
           eyebrow: "Sur X"
           title: "Ce que les gens en disent"
@@ -2055,8 +2029,6 @@ localization:
           members: "1 000+ membres"
           highlights: "Retours à la une"
           highlights_note: "Quelques favoris du sondage en jeu"
-          prev: "Commentaires précédents"
-          next: "Commentaires suivants"
           shared_title: "Partagé par nos joueurs sur Discord"
         quick_facts:
           developer: "Développeur"
@@ -2367,13 +2339,11 @@ localization:
           views_label: "visualizações em vídeos de criadores"
           prompt: "Publique seus clipes de DUNK com #DUNKthegame e eles podem aparecer aqui."
           prev: "Clipes anteriores"
-          next: "Próximos clipes"
         press:
           title: "O que a imprensa está dizendo"
           articles_label: "artigos"
           languages_label: "idiomas"
           prev: "Artigos anteriores"
-          next: "Próximos artigos"
         voices:
           eyebrow: "No X"
           title: "O que a galera está dizendo"
@@ -2385,8 +2355,6 @@ localization:
           members: "1.000+ membros"
           highlights: "Feedback em destaque"
           highlights_note: "Alguns favoritos da pesquisa do jogo"
-          prev: "Comentários anteriores"
-          next: "Próximos comentários"
           shared_title: "Postado pelos jogadores no nosso Discord"
         quick_facts:
           developer: "Desenvolvedora"
