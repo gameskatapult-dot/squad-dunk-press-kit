@@ -1288,14 +1288,19 @@
     setupScenes()
     setupYoutubeEmbeds()
     setupTrailer()
-    setupCommunity()
-    setupPress()
-    setupVoices()
+    // These fill in from JSON and push the sections below them down, so a #section arrival is
+    // repeated once they are in, unless the visitor has started scrolling by then.
+    const loading = [setupCommunity(), setupPress(), setupVoices()]
     setupHangoutVideos()
     setupHangoutFeed()
     setupSteamWidgets()
     setupScreenshotCarousels()
     setupGalleryLightbox()
     scrollToInitialHash()
+    let moved = false
+    const stop = function () { moved = true }
+    ;['wheel', 'touchstart', 'keydown'].forEach(function (type) { window.addEventListener(type, stop, { once: true, passive: true }) })
+    await Promise.allSettled(loading)
+    if (!moved) scrollToInitialHash()
   })
 }())
