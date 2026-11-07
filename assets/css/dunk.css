@@ -208,16 +208,9 @@ body.has-community-player { overflow: hidden; }
 .hangout__note { margin: 0 !important; color: var(--soft); font-size: 13px; font-weight: 600; }
 .hangout__members { flex: none; margin: 4px 0 0 auto; white-space: nowrap; color: var(--soft); font-size: 13px; font-weight: 700; }
 .hangout__members::before { content: ""; display: inline-block; width: 8px; height: 8px; margin-right: 6px; background: #3ba55d; border-radius: 50%; }
-.hangout__feed-wrap { position: relative; padding-right: 52px; }
+.hangout__feed-wrap { position: relative; }
 .hangout__feed { height: 440px; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: none; -webkit-mask-image: linear-gradient(transparent, #000 12%, #000 86%, transparent); mask-image: linear-gradient(transparent, #000 12%, #000 86%, transparent); }
 .hangout__feed::-webkit-scrollbar { display: none; }
-.hangout__arrow { position: absolute; z-index: 1; right: 0; display: grid; place-items: center; width: 40px; height: 40px; padding: 0; color: var(--bg); background: var(--cream); border: 0; border-radius: 50%; box-shadow: 0 8px 22px rgba(0, 0, 0, .45); cursor: pointer; opacity: .85; transition: transform .2s ease, background .2s ease, opacity .2s ease; }
-.hangout__arrow:hover { opacity: 1; background: #fff; transform: scale(1.08); }
-.hangout__arrow:focus-visible { outline: 3px solid var(--ball); outline-offset: 3px; }
-.hangout__arrow svg { width: 24px; height: 24px; }
-.hangout__arrow--up { top: calc(50% - 46px); }
-.hangout__arrow--down { top: calc(50% + 6px); }
-.hangout__arrow[hidden] { display: none; }
 .hangout__msgs { display: flex; flex-direction: column; }
 .hangout__msg { padding: 12px 8px; border-radius: 6px; }
 .hangout__msg + .hangout__msg { border-top: 1px solid var(--line); }
