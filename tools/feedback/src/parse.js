@@ -8,7 +8,7 @@ export const CATEGORIES = {
   balance: ['op', 'overpowered', 'nerf', 'buff', 'balance', 'too strong', 'too weak', 'unfair', 'too easy', 'too hard', 'inconsistent', 'inconsistant', 'broken'],
   gameplay: ['shot', 'shoot', 'shooting', 'throw', 'layup', 'dunk', 'steal', 'dribble', 'pass', 'stamina', 'jump', 'movement', 'poke', 'swipe', 'block', 'meter', 'momentum', 'alley oop'],
   maps: ['map', 'court', 'arena', 'stage', 'jungle', 'vine', 'day and night'],
-  ui: ['menu', 'ui', 'hud', 'setting', 'tutorial', 'instruction', 'confusing', 'unclear', 'explained', 'scoreboard', 'slider', 'outline', 'icon', 'guide'],
+  ui: ['menu', 'ui', 'hud', 'settings', 'scoreboard', 'slider', 'interface', 'button prompt'],
   audio: ['sound', 'audio', 'music', 'volume', 'sfx', 'microphone', 'mic'],
   idea: ['add', 'would be cool', 'would be nice', 'would love', 'would like', 'i want', 'i wish', 'we need', 'should', 'suggest', 'feature', 'mode', 'bots', 'cosmetic', 'skin', 'customization', 'ranked', 'wish', 'option', 'more', 'new', '1v1', '2v2', '3v3'],
 };
@@ -29,7 +29,7 @@ export const SYSTEMS = {
   lobby: ['lobby', 'waiting area', 'practice', 'pregame', 'party', 'invite', 'queue', 'matchmaking', 'recall', 'call ball', 'respawn the ball'],
   social: ['friend', 'chat', 'emote', 'emoting', 'emoji', 'voice', 'speak', 'microphone', 'mic', 'team'],
   network: ['lag', 'ping', 'disconnect', 'server', 'desync', 'rubber'],
-  ui: ['menu', 'ui', 'hud', 'setting', 'scoreboard', 'slider', 'outline', 'icon'],
+  ui: ['menu', 'ui', 'hud', 'settings', 'scoreboard', 'slider', 'interface'],
   audio: ['sound', 'audio', 'music', 'sfx', 'volume'],
   bots: ['bot', 'ai', 'solo', 'alone', 'offline', 'by yourself', 'on my own', 'on your own', 'self alley', 'self assist', 'without help'],
   maps: ['map', 'court', 'jungle', 'vine', 'day and night'],

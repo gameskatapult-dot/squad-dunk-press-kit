@@ -273,6 +273,11 @@ details.sec[open] > summary { color: var(--text); }
 .sbtn.spam-btn { margin-left: auto; color: var(--muted); }
 .muted-link { color: var(--muted); font-weight: 500; }
 .mentions { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 10px; font-size: 13px; color: var(--muted); }
+.mchip { display: inline-flex; align-items: center; }
+.mchip .chip { border-top-right-radius: 0; border-bottom-right-radius: 0; }
+.mx { border: 1px solid var(--line, #ddd); border-left: 0; background: transparent; color: var(--muted); border-radius: 0 999px 999px 0; padding: 0 8px; align-self: stretch; cursor: pointer; font-size: 14px; }
+.mx:hover { color: var(--text); background: var(--surface-2); }
+.madd { font-size: 13px; padding: 3px 6px; border-radius: 999px; color: var(--muted); background: transparent; border: 1px dashed var(--line, #ccc); width: auto; }
 
 @media (max-width: 900px) {
   .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -865,7 +870,9 @@ function renderDetail(it, full) {
       ${it.reactions || it.replies ? `<div class="small muted" style="margin-top:10px">${it.reactions ? `${fmt(it.reactions)} reactions` : ''}${it.reactions && it.replies ? ' · ' : ''}${it.replies ? `${fmt(it.replies)} replies` : ''}</div>` : ''}
     </div>
 
-    ${(it.systems || []).length ? `<div class="mentions">Mentions ${it.systems.map((x) => `<button class="chip" data-sysq="${x}" title="See all feedback about this">${SYS[x] || esc(x)}</button>`).join('')}</div>` : ''}
+    <div class="mentions">Mentions ${(it.systems || []).map((x) => `<span class="mchip"><button class="chip" data-sysq="${x}" title="See all feedback about this">${SYS[x] || esc(x)}</button><button class="mx" data-sysdel="${x}" title="Remove this tag" aria-label="Remove ${SYS[x] || esc(x)}">×</button></span>`).join('')}
+      <select id="dSysAdd" class="madd" title="Add a part of the game this feedback talks about"><option value="">+ Add</option>${Object.entries(SYS).filter(([k]) => !(it.systems || []).includes(k)).map(([k, v]) => `<option value="${k}">${v}</option>`).join('')}</select>
+      ${it.systems_by_team ? '<span class="small muted">· set by the team</span>' : ''}</div>
 
     ${isSpam(it) ? `<div class="spam-note"><div><b>Filtered as spam.</b> ${it.category === 'spam' ? 'Someone on the team marked it.' : 'The AI found nothing useful here.'} It's hidden from the inbox and charts.</div><button class="btn" data-notspam="1">Not spam</button></div>` : ''}
     <div class="box"><h3>Status</h3>
@@ -1060,6 +1067,7 @@ document.addEventListener('click', async (e) => {
   if (sb && id) { await patch(id, { status: sb.dataset.status }, `Marked as ${STATUS[sb.dataset.status]}`); refresh(id); return; }
   const un = t.closest('[data-untag]'); if (un && id) { const it = byId.get(id); await patch(id, { tags: (it.tags || []).filter((x) => x !== un.dataset.untag) }); refresh(id); return; }
   const mi = t.closest('[data-mergeinto]'); if (mi && id) { await patch(id, { duplicate_of: mi.dataset.mergeinto }, 'Merged as duplicate'); refresh(id); return; }
+  const sd = t.closest('[data-sysdel]'); if (sd && id) { const it = byId.get(id); await patch(id, { systems: (it.systems || []).filter((x) => x !== sd.dataset.sysdel), systems_by_team: 1 }, 'Tag removed'); refresh(id); return; }
   if (t.closest('[data-spam]') && id) { await markSpam(id); return; }
   if (t.closest('[data-notspam]') && id) { await patch(id, { not_spam: true }, 'Moved out of spam'); await load(); return; }
   if (t.closest('[data-undup]') && id) { await patch(id, { duplicate_of: null }, 'Unmerged'); refresh(id); return; }
@@ -1095,6 +1103,7 @@ document.addEventListener('change', async (e) => {
   if (t.id === 'fSys') return set('sys', t.value);
   if (t.id === 'fSort') return set('sort', t.value);
   if (t.id === 'fDups') return set('dups', t.checked);
+  if (t.id === 'dSysAdd' && id && t.value) { const it = byId.get(id); await patch(id, { systems: [...(it.systems || []), t.value], systems_by_team: 1 }, 'Tag added'); refresh(id); return; }
   if (t.id === 'dCat' && id) { await patch(id, { category: t.value || null }, 'Topic saved'); refresh(id); return; }
   if (t.id === 'dPrio' && id) { await patch(id, { priority: t.value ? Number(t.value) : null }, 'Priority saved'); refresh(id); return; }
   if (t.id === 'dNotes' && id) { await patch(id, { notes: t.value }, 'Notes saved'); return; }

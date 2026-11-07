@@ -115,3 +115,20 @@ npx wrangler dev --test-scheduled
 | `src/auth.js` | Login con Discord y chequeo del rol |
 | `src/app.html` | La interfaz |
 | `schema.sql` | Tablas de la base de datos |
+
+## Clasificación más precisa (nov 2026)
+
+- La IA usa ahora `@cf/meta/llama-3.3-70b-instruct-fp8-fast` (el 8B confundía mucho, por ejemplo marcaba UI sin que se hablara de menús). Gasta más cuota gratis diaria; si se acaba, la clasificación sigue sola al día siguiente.
+- Instrucciones nuevas con reglas y ejemplos: un mecanismo confuso es *gameplay*, no *ui*; *ui* es solo menús, HUD, ajustes y marcador. Las partes del juego solo se marcan si el jugador las nombra.
+- Se sacaron palabras clave ambiguas de UI ("confusing", "unclear", "guide", "icon"…).
+- Los tags de "Mentions" se pueden quitar (×) o agregar (+ Add) a mano. Una vez que el equipo los toca, la IA no los vuelve a cambiar (columna `systems_by_team`).
+
+Para publicarlo:
+
+```
+npx wrangler d1 execute dunk-feedback --remote --file migrations/0003_systems_by_team.sql
+# en wrangler.toml, AI_MODEL = "@cf/meta/llama-3.3-70b-instruct-fp8-fast" (o borrar la línea)
+npx wrangler deploy
+# reclasificar todo con la IA nueva (lo que el equipo confirmó a mano no se toca):
+npx wrangler d1 execute dunk-feedback --remote --command "UPDATE items SET ai_at = NULL"
+```

@@ -45,7 +45,7 @@ const UPSERT = `INSERT INTO items (id, source, channel_id, thread_id, url, autho
     replies = MAX(items.replies, excluded.replies), liked = excluded.liked,
     -- Si el texto no cambió, se queda lo que decidió la IA; si cambió, se vuelve a clasificar.
     auto_category = CASE WHEN items.content IS excluded.content AND items.title IS excluded.title AND items.ai_at IS NOT NULL THEN items.auto_category ELSE excluded.auto_category END,
-    systems = CASE WHEN items.content IS excluded.content AND items.title IS excluded.title AND items.ai_at IS NOT NULL THEN items.systems ELSE excluded.systems END,
+    systems = CASE WHEN items.systems_by_team = 1 OR (items.content IS excluded.content AND items.title IS excluded.title AND items.ai_at IS NOT NULL) THEN items.systems ELSE excluded.systems END,
     ai_at = CASE WHEN items.content IS excluded.content AND items.title IS excluded.title THEN items.ai_at ELSE NULL END`;
 
 function upsertStmt(db, it) {
@@ -94,7 +94,7 @@ export async function repairTextAttachments(env, db, dc) {
     const it = { ...row, fields: JSON.parse(row.fields || '[]'), attachments: JSON.parse(row.attachments || '[]'), forum_tags: JSON.parse(row.forum_tags || '[]') };
     it.content = [msg.content, body].filter((x) => x && x.trim()).join('\n\n');
     deriveFields(it);
-    await db.prepare('UPDATE items SET content = ?, auto_category = ?, systems = ?, ai_at = NULL WHERE id = ?')
+    await db.prepare('UPDATE items SET content = ?, auto_category = ?, systems = CASE WHEN systems_by_team = 1 THEN systems ELSE ? END, ai_at = NULL WHERE id = ?')
       .bind(it.content, it.auto_category, JSON.stringify(it.systems || []), r.id).run();
     fixed++;
   }

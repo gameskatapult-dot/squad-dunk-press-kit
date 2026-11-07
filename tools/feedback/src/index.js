@@ -2,7 +2,7 @@ import APP_HTML from './app.html';
 import { currentUser, login, callback, logout, page } from './auth.js';
 import { syncAll, fetchThreadMessages, BUDGET } from './sync.js';
 import { classifyPending } from './ai.js';
-import { guessCategory } from './parse.js';
+import { guessCategory, SYSTEMS } from './parse.js';
 
 const STATUSES = ['new', 'reviewed', 'planned', 'in_progress', 'fixed', 'wontfix'];
 const CATEGORIES = ['bug', 'idea', 'gameplay', 'balance', 'controls', 'performance', 'network', 'maps', 'ui', 'audio', 'praise', 'other', 'spam'];
@@ -42,6 +42,17 @@ async function updateItem(env, id, body, user) {
   if (Array.isArray(body.tags)) {
     const tags = [...new Set(body.tags.map((t) => String(t).trim().toLowerCase()).filter(Boolean))].slice(0, 20);
     if (JSON.stringify(tags) !== cur.tags) { sets.push('tags = ?'); vals.push(JSON.stringify(tags)); log.push(`set tags to ${tags.join(', ') || 'none'}`); }
+  }
+  // Partes del juego ("Mentions") corregidas por el equipo: la IA ya no las toca.
+  if (Array.isArray(body.systems)) {
+    const systems = [...new Set(body.systems.map((x) => String(x)).filter((x) => x in SYSTEMS))];
+    const before = JSON.parse(cur.systems || '[]');
+    if (JSON.stringify(systems) !== JSON.stringify(before)) {
+      sets.push('systems = ?', 'systems_by_team = 1'); vals.push(JSON.stringify(systems));
+      const added = systems.filter((x) => !before.includes(x));
+      const removed = before.filter((x) => !systems.includes(x));
+      log.push([added.length ? `added tag ${added.join(', ')}` : '', removed.length ? `removed tag ${removed.join(', ')}` : ''].filter(Boolean).join(' and '));
+    }
   }
   if (typeof body.notes === 'string' && body.notes !== (cur.notes || '')) {
     sets.push('notes = ?'); vals.push(body.notes.slice(0, 5000)); log.push('edited the notes');
@@ -83,7 +94,7 @@ async function api(req, env, user, path) {
   if (path === '/api/items' && method === 'GET') {
     const rows = await env.DB.prepare(
       `SELECT id, source, url, author_name, title, content, fields, attachments, forum_tags, build, context, mode, reactions, replies,
-       created_at, status, category, auto_category, systems, liked, ai_at, ai_title, priority, tags, notes, duplicate_of, updated_at, updated_by,
+       created_at, status, category, auto_category, systems, systems_by_team, liked, ai_at, ai_title, priority, tags, notes, duplicate_of, updated_at, updated_by,
        (SELECT COUNT(*) FROM team_messages t WHERE t.item_id = items.id) AS team_count,
        (SELECT MAX(created_at) FROM team_messages t WHERE t.item_id = items.id) AS team_last
        FROM items ORDER BY created_at DESC`,
