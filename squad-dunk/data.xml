@@ -175,6 +175,11 @@ Play however you choose online, with matches up to 3v3 available for solo player
       <href>#media</href>
     </nav-section>
     <nav-section>
+      <id>community</id>
+      <title>Community</title>
+      <href>../#community</href>
+    </nav-section>
+    <nav-section>
       <id>contact</id>
       <title>Contact</title>
       <href>#contact</href>
