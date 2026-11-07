@@ -8,6 +8,8 @@
   "youtube": {
     "queries": [
       "DUNK basketball game",
+      "DUNK the game",
+      "dunkthegame",
       "DUNK katapult",
       "DUNK steam basketball",
       "first person basketball game",
@@ -21,8 +23,8 @@
       "DUNK jeu basket",
       "DUNK баскетбол игра",
       "友尽大扣篮",
-      "DUNK gameplay",
-      "DUNK playtest",
+      "DUNK the game gameplay",
+      "DUNK the game playtest",
       "basketball game where you can tackle",
       "basketball on the moon game",
       "6 player basketball game",
@@ -98,7 +100,7 @@
     "since": "2026-10-28",
     "ball": "basket|basquete|baloncesto|b[aá]squet|hoops?\\b|\\bdunk|enterrada|clavada|篮球|扣篮|バスケ|농구",
     "game": "steam|wishlist|playtest|\\bindie|gaming|videojuego|proximity|first[- ]person|primeira pessoa|primera persona|co-?op|multiplayer|\\bpc\\b",
-    "ig": ["dunk game", "dunk playtest", "dunk juego", "dunk jogo", "dunk basketball game", "game dunk", "dunk steam", "dunk videojuego", "dunk indie game", "dunk proximity chat", "dunk first person", "dunk friends game", "dunk basquete", "dunk baloncesto", "dunk jeu basket", "dunk spiel basketball", "dunk wishlist", "dunk co-op", "dunk physics", "basketball game steam", "jogo de basquete primeira pessoa", "jogo de basquete com amigos", "first person basketball", "basketball game proximity chat"],
-    "tt": ["dunk playtest", "dunk game steam", "dunk juego", "dunk jogo", "dunk basketball game", "dunk indie game", "dunk proximity chat", "dunk first person basketball", "dunk friends game", "dunk moon basketball", "dunk co-op basketball", "dunk physics basketball", "dunk jeu basket", "dunk wishlist", "dunkthegame", "basketball game with friends steam", "jogo de basquete steam", "juego de basquet steam", "dunk spiel basketball", "jogo de basquete primeira pessoa", "jogo de basquete na lua", "basquete com amigos jogo", "first person basketball game", "new basketball game steam", "basketball game proximity chat", "友尽大扣篮"]
+    "ig": ["dunk the game", "dunkthegame", "dunk game", "dunk the game playtest", "dunk juego", "dunk jogo", "dunk basketball game", "game dunk", "dunk steam", "dunk videojuego", "dunk indie game", "dunk proximity chat", "dunk first person", "dunk friends game", "dunk basquete", "dunk baloncesto", "dunk jeu basket", "dunk spiel basketball", "dunk wishlist", "dunk co-op", "dunk physics", "basketball game steam", "jogo de basquete primeira pessoa", "jogo de basquete com amigos", "first person basketball", "basketball game proximity chat"],
+    "tt": ["dunk the game", "dunk the game playtest", "dunk game steam", "dunk juego", "dunk jogo", "dunk basketball game", "dunk indie game", "dunk proximity chat", "dunk first person basketball", "dunk friends game", "dunk moon basketball", "dunk co-op basketball", "dunk physics basketball", "dunk jeu basket", "dunk wishlist", "dunkthegame", "basketball game with friends steam", "jogo de basquete steam", "juego de basquet steam", "dunk spiel basketball", "jogo de basquete primeira pessoa", "jogo de basquete na lua", "basquete com amigos jogo", "first person basketball game", "new basketball game steam", "basketball game proximity chat", "友尽大扣篮"]
   }
 }
