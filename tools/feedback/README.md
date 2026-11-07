@@ -142,3 +142,7 @@ npx wrangler d1 execute dunk-feedback --remote --file migrations/0004_voice.sql
 npx wrangler deploy
 npx wrangler d1 execute dunk-feedback --remote --command "UPDATE items SET ai_at = NULL WHERE fields != '[]'"
 ```
+
+## Nube de palabras (nov 2026)
+
+En la página principal, "Words players repeat the most": las palabras que más se repiten (contadas una vez por feedback, con plurales y "-ing" juntos: dribble/dribbling, dunk/dunks). El color dice en qué pregunta aparece más (naranja frustra, azul piden, verde gusta). Clic en una palabra abre esos feedbacks. Solo cambia `src/app.html`: basta con `npx wrangler deploy`.

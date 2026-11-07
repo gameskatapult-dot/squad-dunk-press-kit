@@ -274,6 +274,9 @@ details.sec[open] > summary { color: var(--text); }
 .muted-link { color: var(--muted); font-weight: 500; }
 .mentions { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 10px; font-size: 13px; color: var(--muted); }
 .voice-card { margin-bottom: 16px; }
+.cloud { display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline; gap: 4px 16px; padding: 8px 4px 14px; line-height: 1.15; }
+.cw { background: none; border: 0; padding: 2px 4px; border-radius: 8px; cursor: pointer; font-weight: 600; font-family: inherit; letter-spacing: -.01em; }
+.cw:hover { background: var(--surface-2); text-decoration: underline; }
 .vtable { width: 100%; border-collapse: collapse; font-size: 14px; }
 .vtable th, .vtable td { padding: 6px 8px; text-align: left; border-bottom: 1px solid var(--line); }
 .vtable thead th { font-weight: 600; color: var(--text-2); width: 26%; }
@@ -379,7 +382,7 @@ const unread = (it) => it.team_count > 0 && (!seen[it.id] || seen[it.id] < it.te
 const TALK_ICON = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></svg>';
 const DL_ICON = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 20h14"/></svg>';
 const state = {
-  mode: 'simple', tab: 'inbox', q: '', src: '', status: '', cat: '', build: '', sys: '', voice: '', sort: 'new', dups: false,
+  mode: 'simple', tab: 'inbox', q: '', src: '', status: '', cat: '', build: '', sys: '', voice: '', word: '', wordLabel: '', sort: 'new', dups: false,
   sel: null, checked: new Set(), sBuild: '', iBuild: '', iSrc: '',
   welcomed: false, fOpen: false, moreOpen: false, open: {},
 };
@@ -452,8 +455,55 @@ function rebuild() {
 const srcDot = (s) => `<span class="src"><i class="dot" style="background:${SRC_COLOR[s]}"></i>${SRC[s] || esc(s)}</span>`;
 const statusPill = (s) => `<span class="pill"><i class="dot" style="background:var(--st-${s})"></i>${STATUS[s]}</span>`;
 
-// ---------- Similar feedback ----------
+// ---------- Word cloud ----------
 const STOP = new Set('the a an and or but to of in on for is it i you we they that this be was are with as at by from my me so if not do does dont can cant would could should have has had more just like when what there their them its im ive game play playing players player really very also get got make maybe some any one all be please'.split(' '));
+const CLOUD_STOP = new Set([...STOP, ...'about after again against all almost already always amount another anyone anything around because been before being better both cause come could didnt doesnt done dont down each else enough etc even ever every everything feel feeling feels felt few find first game games give going gonna good great guys hard how idk into isnt its itself keep kind know less let lot lots made many most much must need never nice nothing now off often only other others our out over own pretty quite rather right same see seem seems since something sometimes still stuff such sure than thank thanks then these thing things think those though thought through time times too try trying under until use used using want wanted way well were where which while who why will wish without wont yes yet your youre fun cool love loved enjoy enjoyed liked lol add added bit little big huge near left right actually literally kinda probably definitely overall especially instead able unless possible whole part end start top back lil abit someone somebody'.split(' ')]);
+function stemWord(w) {
+  let s = w.replace(/(ing|ed|es|s|e)$/, '');
+  if (/([b-df-hj-np-tv-z])\1$/.test(s) && !/(ll|ss)$/.test(s)) s = s.slice(0, -1); // lagging → lag
+  return s.length > 2 ? s : w;
+}
+function cloudText(it) {
+  return it.fields?.length ? it.fields.map((f) => f.a).join(' ') : `${it.title || ''} ${it.content || ''}`;
+}
+const wordCache = new Map();
+function wordsOf(it) {
+  if (wordCache.has(it.id)) return wordCache.get(it.id);
+  const out = new Map(); // stem -> forma original
+  for (const w of cloudText(it).toLowerCase().replace(/<a?:\w+:\d+>|https?:\S+/g, ' ').replace(/[’']/g, '').replace(/[^a-z\s]/g, ' ').split(/\s+/)) {
+    if (w.length < 3 || CLOUD_STOP.has(w)) continue;
+    const st = stemWord(w); if (CLOUD_STOP.has(st)) continue;
+    if (!out.has(st)) out.set(st, w);
+  }
+  wordCache.set(it.id, out); return out;
+}
+// Las palabras que más se repiten (una vez por feedback), con el tipo de respuesta donde más aparecen.
+function cloudWords(list, n = 40) {
+  const m = new Map();
+  for (const it of list) {
+    const kinds = {};
+    if (it.fields?.length) for (const f of it.fields) { const k = answerKind(f.q); if (k) for (const st of wordsOf({ id: `${it.id}|${f.q}`, fields: [f] }).keys()) (kinds[st] ||= new Set()).add(k); }
+    for (const [st, w] of wordsOf(it)) {
+      const r = m.get(st) || { st, n: 0, forms: {}, love: 0, pain: 0, want: 0 };
+      r.n++; r.forms[w] = (r.forms[w] || 0) + 1;
+      for (const k of kinds[st] || []) r[k]++;
+      m.set(st, r);
+    }
+  }
+  return [...m.values()].filter((r) => r.n >= 2).sort((a, b) => b.n - a.n).slice(0, n)
+    .map((r) => ({ ...r, word: Object.entries(r.forms).sort((a, b) => b[1] - a[1])[0][0], tone: ['pain', 'want', 'love'].reduce((best, k) => (r[k] > (r[best] || 0) ? k : best), '') }));
+}
+function wordCloud(list) {
+  const words = cloudWords(list);
+  if (!words.length) return '<div class="empty">Not enough feedback yet.</div>';
+  const max = words[0].n, min = words[words.length - 1].n;
+  const size = (n) => Math.round(14 + (max === min ? 0.5 : Math.sqrt((n - min) / (max - min))) * 30);
+  const shuffled = words.map((w, i) => ({ w, k: (i * 7919) % words.length })).sort((a, b) => a.k - b.k).map((x) => x.w);
+  return `<div class="cloud">${shuffled.map((w) => `<button class="cw" data-word="${esc(w.st)}" data-label="${esc(w.word)}" style="font-size:${size(w.n)}px;color:${w.tone && w[w.tone] * 2 >= w.n ? VOICE_COLOR[w.tone] : 'var(--text-2)'}" data-tip="${esc(w.word)}: ${fmt(w.n)} feedback${w.love + w.pain + w.want ? ` · 👍 ${w.love} · 😤 ${w.pain} · ➕ ${w.want}` : ''}">${esc(w.word)}</button>`).join('')}</div>
+    <div class="legend small"><span><i style="background:var(--s2)"></i>Mostly frustrating</span><span><i style="background:var(--s1)"></i>Mostly wanted</span><span><i style="background:var(--s3)"></i>Mostly enjoyed</span><span><i style="background:var(--text-2)"></i>Mixed or free text</span></div>`;
+}
+
+// ---------- Similar feedback ----------
 const tokCache = new Map();
 function tokens(it) {
   if (tokCache.has(it.id)) return tokCache.get(it.id);
@@ -557,6 +607,7 @@ function filtered({ tab = state.tab } = {}) {
     if (state.cat && catOf(it) !== state.cat) return false;
     if (state.cat !== 'spam' && isSpam(it)) return false;
     if (state.build && buildOf(it) !== state.build) return false;
+    if (state.word && !wordsOf(it).has(state.word)) return false;
     if (state.voice) {
       const v = (it.voice || {})[state.voice] || [];
       if (state.sys ? !v.includes(state.sys) : !v.length) return false;
@@ -578,7 +629,7 @@ function filtered({ tab = state.tab } = {}) {
   return list.sort(sorts[state.sort] || sorts.new);
 }
 function goAdvanced(tab, filters = {}) {
-  Object.assign(state, { mode: 'advanced', tab, q: '', src: '', status: '', cat: '', build: '', sys: '', voice: '' }, filters);
+  Object.assign(state, { mode: 'advanced', tab, q: '', src: '', status: '', cat: '', build: '', sys: '', voice: '', word: '' }, filters);
   render();
 }
 
@@ -655,6 +706,7 @@ function renderSimple() {
       <div class="tile" data-go="talk"><span class="label">Team chats</span><span class="value">${fmt(talkN)}</span><span class="sub">${unreadN ? `<span class="trend-up">${fmt(unreadN)} with new comments</span>` : 'nothing new'}</span>
         <span class="go"><button class="link-btn" data-go="talk">See conversations →</button></span></div>
     </div>
+    <div class="card voice-card"><div class="card-h"><h2>Words players repeat the most</h2><span class="muted small">bigger = more feedback says it · click a word to read them</span></div>${wordCloud(canon)}</div>
     ${voiceCard}
     <div class="cards">
       <div class="card"><div class="card-h"><h2>Most requested</h2><span class="muted small">still open</span><div class="spacer"></div><button class="link-btn" data-go="top">See all</button></div>
@@ -698,14 +750,14 @@ function renderAdvanced() {
   if (state.tab === 'liked') return renderLiked();
   renderToolbarAndList();
 }
-const FILTER_LABEL = { src: 'Source', status: 'Status', sys: 'Game system', build: 'Version', voice: 'Answer' };
+const FILTER_LABEL = { src: 'Source', status: 'Status', sys: 'Game system', build: 'Version', voice: 'Answer', word: 'Word' };
 function filterValue(k) {
   const v = state[k];
-  if (k === 'voice') return VOICE[v]; if (k === 'src') return SRC[v]; if (k === 'status') return STATUS[v]; if (k === 'sys') return SYS[v];
+  if (k === 'word') return `“${state.wordLabel || v}”`; if (k === 'voice') return VOICE[v]; if (k === 'src') return SRC[v]; if (k === 'status') return STATUS[v]; if (k === 'sys') return SYS[v];
   if (k === 'build') return v === NO_VERSION ? v : 'v' + v; return v;
 }
 function toolbar() {
-  const hidden = ['voice', 'src', 'status', 'sys', 'build'].filter((k) => state[k] && !(k === 'status' && state.tab === 'inbox'));
+  const hidden = ['word', 'voice', 'src', 'status', 'sys', 'build'].filter((k) => state[k] && !(k === 'status' && state.tab === 'inbox'));
   const nHidden = hidden.length + (state.dups && state.tab === 'all' ? 1 : 0);
   const anyFilter = state.q || state.cat || nHidden;
   return `<div class="toolbar">
@@ -874,7 +926,7 @@ async function openItem(id, { keep = false } = {}) {
     const it = byId.get(id);
     state.mode = 'advanced';
     state.tab = it && it.status === 'new' && !it.duplicate_of ? 'inbox' : 'all';
-    Object.assign(state, { q: '', src: '', status: '', cat: '', build: '', sys: '', voice: '', dups: !!it?.duplicate_of });
+    Object.assign(state, { q: '', src: '', status: '', cat: '', build: '', sys: '', voice: '', word: '', dups: !!it?.duplicate_of });
     state.sel = id; render(); return;
   }
   state.sel = id;
@@ -1089,6 +1141,7 @@ document.addEventListener('click', async (e) => {
   const catBar = t.closest('[data-cat]'); if (catBar) { goAdvanced('all', { cat: catBar.dataset.cat, build: state.sBuild }); return; }
   const stBar = t.closest('[data-st]'); if (stBar) { goAdvanced('all', { status: stBar.dataset.st, build: state.sBuild }); return; }
   const heat = t.closest('[data-heat]'); if (heat) { const [bb, c] = heat.dataset.heat.split('|'); goAdvanced('all', { build: bb, cat: c, src: state.iSrc }); return; }
+  const cw = t.closest('[data-word]'); if (cw) { goAdvanced('all', { word: cw.dataset.word, wordLabel: cw.dataset.label }); return; }
   const vq = t.closest('[data-voiceq]'); if (vq) { const [voice, sys] = vq.dataset.voiceq.split('|'); goAdvanced('all', { voice, sys: sys || '' }); return; }
   const sq = t.closest('[data-sysq]'); if (sq) { goAdvanced('all', { sys: sq.dataset.sysq }); return; }
   const tq = t.closest('[data-tagq]'); if (tq) { goAdvanced('all', { q: tq.dataset.tagq }); return; }
@@ -1107,7 +1160,7 @@ document.addEventListener('click', async (e) => {
   if (t.id === 'dismissWelcome') { state.welcomed = true; render(); return; }
   if (t.closest('#fToggle')) { state.fOpen = !state.fOpen; render(); return; }
   const unf = t.closest('[data-unf]'); if (unf) { state[unf.dataset.unf] = unf.dataset.unf === 'dups' ? false : ''; render(); return; }
-  if (t.id === 'clearF') { Object.assign(state, { q: '', src: '', status: '', cat: '', build: '', sys: '', voice: '', dups: false }); render(); return; }
+  if (t.id === 'clearF') { Object.assign(state, { q: '', src: '', status: '', cat: '', build: '', sys: '', voice: '', word: '', dups: false }); render(); return; }
   const id = state.sel;
   const sb = t.closest('[data-status]');
   if (sb && id) { await patch(id, { status: sb.dataset.status }, `Marked as ${STATUS[sb.dataset.status]}`); refresh(id); return; }
