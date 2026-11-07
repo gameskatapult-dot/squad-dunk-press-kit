@@ -162,15 +162,16 @@ localization:
           title: "What people are saying"
           subtitle: "Reactions on X since the announcement"
         discord:
-          title: "Join 1,000+ players on Discord"
-          subtitle: "Share clips and screenshots, find teammates, make friends and set up tournaments. Come shape DUNK with us."
-          cta: "Join our Discord"
-          tags:
-            clips: "Clips & screenshots"
-            teammates: "Find teammates"
-            tournaments: "Tournaments"
-          quotes_title: "From our playtesters"
+          title: "Pull up to our Discord"
+          subtitle: "Where the squad hangs out: clips and screenshots, finding teammates, new friends and tournaments people set up themselves."
+          cta: "Join the Discord"
+          members: "1,000+ members"
           quote_by: "Playtester"
+          photos:
+            - "squad pic"
+            - "moon court nights"
+            - "jungle runs"
+            - "game day"
         quick_facts:
           developer: "Developer"
           developer_value: "Katapult Games · Ireland"
@@ -489,15 +490,16 @@ localization:
           title: "Lo que dice la gente"
           subtitle: "Reacciones en X desde el anuncio"
         discord:
-          title: "Únete a +1.000 jugadores en Discord"
-          subtitle: "Comparte clips y capturas, encuentra compañeros, haz amigos y arma torneos. Ven a construir DUNK con nosotros."
-          cta: "Únete a nuestro Discord"
-          tags:
-            clips: "Clips y capturas"
-            teammates: "Busca compañeros"
-            tournaments: "Torneos"
-          quotes_title: "Lo que dicen quienes lo probaron"
+          title: "Pásate por nuestro Discord"
+          subtitle: "Donde se junta la squad: clips y capturas, gente buscando equipo, amigos nuevos y torneos que arman los mismos jugadores."
+          cta: "Entrar al Discord"
+          members: "+1.000 miembros"
           quote_by: "Jugador del playtest"
+          photos:
+            - "foto de la squad"
+            - "noches en la luna"
+            - "partidas en la jungla"
+            - "día de partido"
         quick_facts:
           developer: "Desarrollo"
           developer_value: "Katapult Games · Irlanda"
@@ -817,15 +819,16 @@ localization:
           title: "Что говорят игроки"
           subtitle: "Реакции в X после анонса"
         discord:
-          title: "Более 1000 игроков уже в Discord"
-          subtitle: "Делитесь клипами и скриншотами, ищите напарников, заводите друзей и устраивайте турниры. Создавайте DUNK вместе с нами."
-          cta: "Присоединиться к Discord"
-          tags:
-            clips: "Клипы и скриншоты"
-            teammates: "Поиск напарников"
-            tournaments: "Турниры"
-          quotes_title: "Отзывы участников плейтеста"
+          title: "Заглядывайте в наш Discord"
+          subtitle: "Здесь собирается вся команда: клипы и скриншоты, поиск напарников, новые друзья и турниры, которые придумывают сами игроки."
+          cta: "Зайти в Discord"
+          members: "1000+ участников"
           quote_by: "Участник плейтеста"
+          photos:
+            - "фото команды"
+            - "ночи на Луне"
+            - "забеги в джунглях"
+            - "день игры"
         quick_facts:
           developer: "Разработчик"
           developer_value: "Katapult Games · Ирландия"
@@ -1115,15 +1118,16 @@ localization:
           title: "みんなの声"
           subtitle: "発表後の X での反応"
         discord:
-          title: "1,000人以上のプレイヤーが集まるDiscord"
-          subtitle: "クリップやスクショを共有して、チームメイトや友達を見つけ、大会も開こう。一緒にDUNKを作りましょう。"
+          title: "Discordに遊びにおいで"
+          subtitle: "仲間が集まる場所。クリップやスクショの共有、チームメイト探し、新しい友達、プレイヤー主催の大会も。"
           cta: "Discordに参加"
-          tags:
-            clips: "クリップ＆スクショ"
-            teammates: "チームメイト探し"
-            tournaments: "大会"
-          quotes_title: "プレイテスト参加者の声"
+          members: "メンバー1,000人以上"
           quote_by: "プレイテスト参加者"
+          photos:
+            - "集合写真"
+            - "月面コートの夜"
+            - "ジャングルで一戦"
+            - "試合の日"
         quick_facts:
           developer: "開発"
           developer_value: "Katapult Games · アイルランド"
@@ -1404,15 +1408,16 @@ localization:
           title: "玩家怎么说"
           subtitle: "公布以来 X 上的反响"
         discord:
-          title: "加入 Discord，与 1000+ 名玩家同乐"
-          subtitle: "分享精彩片段和截图，寻找队友，结交朋友，组织比赛。和我们一起打造 DUNK。"
-          cta: "加入我们的 Discord"
-          tags:
-            clips: "片段与截图"
-            teammates: "寻找队友"
-            tournaments: "比赛"
-          quotes_title: "试玩玩家的评价"
+          title: "来我们的 Discord 玩"
+          subtitle: "玩家们的聚集地：分享片段和截图、找队友、交朋友，还有玩家自己组织的比赛。"
+          cta: "加入 Discord"
+          members: "1000+ 名成员"
           quote_by: "试玩玩家"
+          photos:
+            - "全队合影"
+            - "月球球场之夜"
+            - "丛林对决"
+            - "比赛日"
         quick_facts:
           developer: "开发商"
           developer_value: "Katapult Games · 爱尔兰"
@@ -1720,15 +1725,16 @@ localization:
           title: "Was die Leute sagen"
           subtitle: "Reaktionen auf X seit der Ankündigung"
         discord:
-          title: "Über 1.000 Spieler auf Discord"
-          subtitle: "Teile Clips und Screenshots, finde Mitspieler, schließe Freundschaften und organisiere Turniere. Gestalte DUNK mit uns."
-          cta: "Unserem Discord beitreten"
-          tags:
-            clips: "Clips & Screenshots"
-            teammates: "Mitspieler finden"
-            tournaments: "Turniere"
-          quotes_title: "Stimmen aus dem Playtest"
+          title: "Schau auf unserem Discord vorbei"
+          subtitle: "Hier hängt die Squad ab: Clips und Screenshots, Mitspielersuche, neue Freunde und Turniere, die die Spieler selbst organisieren."
+          cta: "Zum Discord"
+          members: "1.000+ Mitglieder"
           quote_by: "Playtester"
+          photos:
+            - "Squad-Foto"
+            - "Nächte auf dem Mond"
+            - "Dschungel-Runden"
+            - "Spieltag"
         quick_facts:
           developer: "Entwickler"
           developer_value: "Katapult Games · Irland"
@@ -2049,15 +2055,16 @@ localization:
           title: "Ce que les gens en disent"
           subtitle: "Réactions sur X depuis l’annonce"
         discord:
-          title: "Rejoignez plus de 1 000 joueurs sur Discord"
-          subtitle: "Partagez vos clips et captures, trouvez des coéquipiers, faites-vous des amis et organisez des tournois. Construisez DUNK avec nous."
-          cta: "Rejoindre notre Discord"
-          tags:
-            clips: "Clips et captures"
-            teammates: "Trouver des coéquipiers"
-            tournaments: "Tournois"
-          quotes_title: "Ce qu’en disent nos testeurs"
+          title: "Passez sur notre Discord"
+          subtitle: "Là où la squad se retrouve : clips et captures, recherche de coéquipiers, nouveaux amis et tournois organisés par les joueurs eux-mêmes."
+          cta: "Rejoindre le Discord"
+          members: "1 000+ membres"
           quote_by: "Testeur du playtest"
+          photos:
+            - "photo de la squad"
+            - "soirées sur la Lune"
+            - "parties dans la jungle"
+            - "jour de match"
         quick_facts:
           developer: "Développeur"
           developer_value: "Katapult Games · Irlande"
@@ -2379,15 +2386,16 @@ localization:
           title: "O que a galera está dizendo"
           subtitle: "Reações no X desde o anúncio"
         discord:
-          title: "Junte-se a mais de 1.000 jogadores no Discord"
-          subtitle: "Compartilhe clipes e prints, encontre parceiros, faça amigos e organize torneios. Venha construir o DUNK com a gente."
-          cta: "Entrar no nosso Discord"
-          tags:
-            clips: "Clipes e prints"
-            teammates: "Encontre parceiros"
-            tournaments: "Torneios"
-          quotes_title: "O que dizem nossos playtesters"
+          title: "Cola no nosso Discord"
+          subtitle: "Onde a galera se encontra: clipes e prints, gente procurando parceiro, amizades novas e torneios que os próprios jogadores organizam."
+          cta: "Entrar no Discord"
+          members: "1.000+ membros"
           quote_by: "Jogador do playtest"
+          photos:
+            - "foto da galera"
+            - "noites na lua"
+            - "partidas na selva"
+            - "dia de jogo"
         quick_facts:
           developer: "Desenvolvedora"
           developer_value: "Katapult Games · Irlanda"
