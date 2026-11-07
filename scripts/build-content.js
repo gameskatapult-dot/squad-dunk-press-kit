@@ -471,7 +471,7 @@ function createNavSections (sections) {
   // The top bar stays short: description, features and links live inside other bands.
   const hiddenInNav = new Set(['description', 'features', 'links', 'team'])
 
-  return sections
+  const nav = sections
     .filter(enabled)
     .filter((section) => !hiddenInNav.has(section.id))
     .filter((section) => titles[section.id] && hrefs[section.id])
@@ -480,6 +480,12 @@ function createNavSections (sections) {
       title: titles[section.id],
       href: hrefs[section.id]
     }))
+
+  // The Discord community section lives on the home page; the press kit links to it before Contact.
+  const community = { id: 'community', title: 'Community', href: '../#community' }
+  const contactIndex = nav.findIndex((item) => item.id === 'contact')
+  nav.splice(contactIndex === -1 ? nav.length : contactIndex, 0, community)
+  return nav
 }
 
 function buildProductData (content) {

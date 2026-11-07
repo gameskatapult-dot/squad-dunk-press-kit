@@ -14,6 +14,10 @@
       const value = getPathValue(activeTranslation, node.getAttribute('data-l10n'))
       if (typeof value === 'string') node.textContent = value
     })
+    Array.from(scope.querySelectorAll('[data-l10n-template]')).forEach(function (node) {
+      const value = getPathValue(activeTranslation, node.getAttribute('data-l10n-template'))
+      if (typeof value === 'string') node.textContent = value.replace('{name}', node.getAttribute('data-name') || '')
+    })
     attributes.forEach(function (attribute) {
       const marker = 'data-l10n-' + attribute
       const targets = Array.from(scope.querySelectorAll('[' + marker + ']'))
@@ -654,6 +658,60 @@
     update()
   }
 
+  // Puts a container's children in a new random order and returns them in that order.
+  function shuffleChildren (parent) {
+    const items = Array.from(parent.children)
+    for (let i = items.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1))
+      const swap = items[i]
+      items[i] = items[j]
+      items[j] = swap
+    }
+    items.forEach(function (item) { parent.appendChild(item) })
+    return items
+  }
+
+  // Feedback highlights: shuffled on every visit, then a slow upward roll. The list is doubled so the
+  // -50% loop has no seam; the copies are hidden from screen readers.
+  function setupHangoutFeed () {
+    const feed = document.querySelector('[data-hangout-feed]')
+    const list = feed && feed.querySelector('[data-hangout-msgs]')
+    if (!list) return
+    const items = shuffleChildren(list)
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    if (list.scrollHeight <= feed.clientHeight) return
+    items.forEach(function (item) {
+      const twin = item.cloneNode(true)
+      twin.setAttribute('aria-hidden', 'true')
+      list.appendChild(twin)
+    })
+    // About 18px a second.
+    list.style.setProperty('--hangout-time', Math.round(list.scrollHeight / 2 / 18) + 's')
+    feed.classList.add('is-rolling')
+  }
+
+  // Community clips: muted loops that only load and play while on screen (and not at all with
+  // reduced motion, where the poster stays).
+  function setupHangoutVideos () {
+    const board = document.querySelector('[data-hangout-photos]')
+    if (board) shuffleChildren(board)
+    const videos = Array.from(document.querySelectorAll('[data-hangout-video]'))
+    if (!videos.length || !('IntersectionObserver' in window)) return
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        const video = entry.target
+        if (entry.isIntersecting) {
+          const playing = video.play()
+          if (playing && playing.catch) playing.catch(function () {})
+        } else {
+          video.pause()
+        }
+      })
+    }, { threshold: 0.25 })
+    videos.forEach(function (video) { observer.observe(video) })
+  }
+
   // Fan tweets from tweets.json (written by tools/radar/tweets.mjs) in two rows drifting opposite ways.
   // Each row repeats its quotes until half of it is wider than the screen, then doubles itself, so the
   // -50% loop never shows a gap. The repeats are hidden from screen readers and the keyboard.
@@ -1233,6 +1291,8 @@
     setupCommunity()
     setupPress()
     setupVoices()
+    setupHangoutVideos()
+    setupHangoutFeed()
     setupSteamWidgets()
     setupScreenshotCarousels()
     setupGalleryLightbox()
