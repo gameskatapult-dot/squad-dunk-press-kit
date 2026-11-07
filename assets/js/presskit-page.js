@@ -654,6 +654,26 @@
     update()
   }
 
+  // Community clips: muted loops that only load and play while on screen (and not at all with
+  // reduced motion, where the poster stays).
+  function setupHangoutVideos () {
+    const videos = Array.from(document.querySelectorAll('[data-hangout-video]'))
+    if (!videos.length || !('IntersectionObserver' in window)) return
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        const video = entry.target
+        if (entry.isIntersecting) {
+          const playing = video.play()
+          if (playing && playing.catch) playing.catch(function () {})
+        } else {
+          video.pause()
+        }
+      })
+    }, { threshold: 0.25 })
+    videos.forEach(function (video) { observer.observe(video) })
+  }
+
   // Fan tweets from tweets.json (written by tools/radar/tweets.mjs) in two rows drifting opposite ways.
   // Each row repeats its quotes until half of it is wider than the screen, then doubles itself, so the
   // -50% loop never shows a gap. The repeats are hidden from screen readers and the keyboard.
@@ -1233,6 +1253,7 @@
     setupCommunity()
     setupPress()
     setupVoices()
+    setupHangoutVideos()
     setupSteamWidgets()
     setupScreenshotCarousels()
     setupGalleryLightbox()

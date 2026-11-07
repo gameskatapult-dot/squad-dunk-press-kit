@@ -198,21 +198,19 @@ body.has-community-player { overflow: hidden; }
 .dunk .hangout__photo { position: relative; padding: 8px 8px 34px; background: var(--cream); border-radius: 3px; box-shadow: 0 10px 24px rgba(0, 0, 0, .45); transform: rotate(var(--tilt, 0deg)); transition: transform .25s ease; }
 .hangout__photo:hover { transform: rotate(0deg) scale(1.04); z-index: 1; }
 .hangout__photo::before { content: ""; position: absolute; top: -9px; left: 50%; width: 64px; height: 18px; background: rgba(239, 138, 60, .75); transform: translateX(-50%) rotate(-3deg); }
-.hangout__photo img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; }
+.hangout__photo img, .hangout__photo video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; }
 .hangout__photo figcaption { position: absolute; left: 0; right: 0; bottom: 7px; color: var(--ink); font: 700 15px/1 var(--body); text-align: center; transform: rotate(-1deg); }
 .hangout__chat { padding: 18px 18px 20px; background: #24211d; border: 1px solid var(--line); border-radius: 12px; }
-.hangout__channel { display: flex; align-items: baseline; gap: 6px; margin: 0 0 6px !important; padding-bottom: 12px; color: var(--cream); font-weight: 800; border-bottom: 1px solid var(--line); }
-.hangout__channel span[aria-hidden] { color: var(--soft); font-size: 20px; }
-.hangout__members { margin-left: auto; color: var(--soft); font-size: 13px; font-weight: 700; }
+.hangout__channel { display: flex; align-items: flex-start; gap: 12px; margin: 0 0 6px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+.hangout__heading { margin: 0 !important; color: var(--cream); font-size: 18px; font-weight: 800; }
+.hangout__heading span[aria-hidden] { color: var(--ball); }
+.hangout__note { margin: 0 !important; color: var(--soft); font-size: 13px; font-weight: 600; }
+.hangout__members { flex: none; margin: 4px 0 0 auto; white-space: nowrap; color: var(--soft); font-size: 13px; font-weight: 700; }
 .hangout__members::before { content: ""; display: inline-block; width: 8px; height: 8px; margin-right: 6px; background: #3ba55d; border-radius: 50%; }
 .hangout__msgs { display: flex; flex-direction: column; }
-.hangout__msg { display: flex; gap: 12px; padding: 10px 6px; border-radius: 6px; }
+.hangout__msg { padding: 10px 8px; border-radius: 6px; }
 .hangout__msg:hover { background: rgba(255, 248, 234, .04); }
-.hangout__avatar { flex: none; width: 36px; height: 36px; margin-top: 2px; border-radius: 50%; background: var(--ball) radial-gradient(circle at 50% 50%, transparent 46%, rgba(0, 0, 0, .35) 47% 52%, transparent 53%); }
-.hangout__avatar--1 { background-color: #5aa0d8; }
-.hangout__avatar--2 { background-color: #72b062; }
-.hangout__avatar--3 { background-color: #c77dc4; }
-.hangout__meta { margin: 0 0 2px !important; color: var(--cream); font-size: 14px; font-weight: 800; }
+.hangout__meta { margin: 0 0 2px !important; color: var(--ball); font-size: 14px; font-weight: 800; }
 .hangout__build { margin-left: 6px; color: var(--soft); font-size: 12px; font-weight: 600; }
 .hangout__text { margin: 0 !important; color: var(--soft); font-size: 16px; font-weight: 500; line-height: 1.35; }
 .dunk .hangout__join { width: 100%; margin-top: 14px; }
