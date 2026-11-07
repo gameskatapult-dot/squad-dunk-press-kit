@@ -397,7 +397,7 @@
    "image": "https://swikblog.com/wp-content/uploads/2026/11/5bd17cc640c6b6b7f59f2d480a9eb506_400x400.jpeg",
    "lang": "en",
    "date": "2026-11-03",
-   "status": "revisar",
+   "status": "descartado",
    "reason": "DUNK + basket + juego",
    "source": "bing: DUNK first-person basketball game",
    "firstSeen": "2026-11-04"
@@ -412,7 +412,7 @@
    "image": "https://images.t-online.de/2026/11/eIDO3Ya4btAW/0x68:2158x1214/fit-in/1200x0/antwerp-belgium-us-taurian-fontenette-in-action-during-the-gala-basket-match-between-the-belgian-legends-and-the-nba-basketball-herren-usa-legends-friday-13-november-2009-in-antwerp-julienxwarnand-publicationxinxgerxsuixautxonly-x16549805x.jpg",
    "lang": "de",
    "date": "2026-11-03",
-   "status": "revisar",
+   "status": "descartado",
    "reason": "DUNK + basket + juego",
    "source": "bing: DUNK Basketball Spiel",
    "firstSeen": "2026-11-04"
@@ -427,7 +427,7 @@
    "image": "https://s.yimg.com/lo/mysterio/api/cfd104d8063986b136fd10c4c3bfef89a3bc97d5d52f220b9d229d6b79978fe4/lightyear_networkapi/resizefill_w1200_h675%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fpeople_218%2F9a3cdd89d709fa499ece0a54d9ed508e.jpg",
    "lang": "en",
    "date": "2026-11-04",
-   "status": "revisar",
+   "status": "descartado",
    "reason": "DUNK + basket + juego",
    "source": "bing: DUNK first-person basketball game",
    "firstSeen": "2026-11-04"
@@ -442,7 +442,7 @@
    "image": "https://images.complex.com/complex/image/upload/c_crop,h_1081,w_1920,x_0,y_0/g_auto:aoi_768_433_384_216,ar_1.91,c_fill,q_auto,w_1200/sanity-new/d9ldx3n5gu0nj3ido4nx",
    "lang": "en",
    "date": "2026-11-04",
-   "status": "revisar",
+   "status": "descartado",
    "reason": "DUNK + basket + juego",
    "source": "bing: DUNK first-person basketball game",
    "firstSeen": "2026-11-05"
@@ -457,7 +457,7 @@
    "image": "https://www.wideopencountry.com/wp-content/uploads/sites/4/2026/11/WOC-Featured-Image-2880-x-1480.jpg",
    "lang": "en",
    "date": "2026-11-04",
-   "status": "revisar",
+   "status": "descartado",
    "reason": "DUNK + basket + juego",
    "source": "google: DUNK first-person basketball",
    "firstSeen": "2026-11-05"
@@ -472,7 +472,7 @@
    "image": "https://www.thatericalper.com/wp-content/uploads/2026/11/download-85.jpg",
    "lang": "en",
    "date": "2026-11-04",
-   "status": "revisar",
+   "status": "descartado",
    "reason": "DUNK + basket + juego",
    "source": "google: DUNK first-person basketball",
    "firstSeen": "2026-11-05"
@@ -487,7 +487,7 @@
    "image": "https://images.mgpd.de/img/115190654/crop/c16_9-w1200/1287721471/1610056700/testspiel-gegeb-bamberg28.jpg",
    "lang": "de",
    "date": "2026-11-05",
-   "status": "revisar",
+   "status": "descartado",
    "reason": "DUNK + basket + juego",
    "source": "google: DUNK Basketball Spiel",
    "firstSeen": "2026-11-05"
@@ -502,10 +502,72 @@
    "image": "https://animeanime.jp/imgs/ogp_f/951509.jpg",
    "lang": "ja",
    "date": "2026-11-05",
-   "status": "revisar",
+   "status": "descartado",
    "reason": "DUNK + basket + juego",
    "source": "google: DUNK バスケ ゲーム",
    "firstSeen": "2026-11-06"
+  },
+  "mundodrix.com.br/dunk-e-anunciado-para-pc-e-promete-revolucionar-os-jogos-de-basquete-com-visao-em-primeira-pessoa": {
+   "id": "234d391c7a",
+   "url": "https://mundodrix.com.br/dunk-e-anunciado-para-pc-e-promete-revolucionar-os-jogos-de-basquete-com-visao-em-primeira-pessoa/",
+   "outlet": "Mundo Drix",
+   "host": "mundodrix.com.br",
+   "title": "DUNK é anunciado para PC e promete revolucionar os jogos de basquete com visão em primeira pessoa",
+   "desc": "DUNK foi anunciado para PC e promete partidas de basquete em primeira pessoa com física realista, multiplayer competitivo e foco total em habilidade e trabalho…",
+   "image": "https://mundodrix.com.br/site/wp-content/uploads/2026/10/DUNK.webp",
+   "lang": "pt",
+   "date": "2026-10-30",
+   "status": "en-sitio",
+   "reason": "agregado a mano",
+   "source": "manual",
+   "firstSeen": "2026-11-07",
+   "thumb": "press/234d391c7a.jpg"
+  },
+  "mohtm.com/%D8%A7%D9%84%D8%A5%D8%B9%D9%84%D8%A7%D9%86-%D8%B1%D8%B3%D9%85%D9%8A%D8%A7%D9%8B-%D8%B9%D9%86-%D9%84%D8%B9%D8%A8%D8%A9-%D9%83%D8%B1%D8%A9-%D8%A7%D9%84%D8%B3%D9%84%D8%A9-%D8%A7%D9%84%D8%AC%D9%85%D8%A7": {
+   "id": "65e626930d",
+   "url": "https://www.mohtm.com/الإعلان-رسمياً-عن-لعبة-كرة-السلة-الجما/",
+   "outlet": "Mohtm مهتم",
+   "host": "mohtm.com",
+   "title": "الإعلان رسمياً عن لعبة كرة السلة الجماعية بمنظور الشخص الأول DUNK وقادمة في 2027",
+   "desc": "تعرف على تفاصيل الإعلان عن لعبة كرة السلة الجماعية بمنظور الشخص الأول DUNK من استوديو Katapult Games والقادمة إلى PC في 2027.",
+   "image": "https://www.mohtm.com/wp-content/uploads/2026/10/dunk_1.webp",
+   "lang": "ar",
+   "date": "2026-10-29",
+   "status": "en-sitio",
+   "reason": "agregado a mano",
+   "source": "manual",
+   "firstSeen": "2026-11-07",
+   "thumb": "press/65e626930d.jpg"
+  },
+  "games.headliner.nl/item/dunk-is-aangekondigd-voor-pc-thatsgaming-57643": {
+   "id": "a2c34cc96a",
+   "url": "https://games.headliner.nl/item/dunk-is-aangekondigd-voor-pc-thatsgaming-57643",
+   "outlet": "games.headliner.nl",
+   "host": "games.headliner.nl",
+   "title": "DUNK is aangekondigd voor PC",
+   "desc": "Katapult Games kondigt DUNK aan, een first-personbasketbalgame voor pc. Spelers combineren vaardigheid en teamwork met realistische physics, vanaf 2027 op Steam.",
+   "lang": "nl",
+   "date": "2026-10-30",
+   "status": "descartado",
+   "reason": "agregado a mano",
+   "source": "manual",
+   "firstSeen": "2026-11-07"
+  },
+  "thatsgaming.nl/dunk-is-aangekondigd-voor-pc": {
+   "id": "2cd13f8e99",
+   "url": "https://thatsgaming.nl/dunk-is-aangekondigd-voor-pc/",
+   "outlet": "That's Gaming",
+   "host": "thatsgaming.nl",
+   "title": "DUNK is aangekondigd voor PC",
+   "desc": "De onafhankelijke gamestudio Katapult Games heeft DUNK aangekondigd: een basketbalgame in first-personperspectief waarin vaardigheid, teamwork en realistische physics samenkomen. Dit zorgt…",
+   "image": "https://thatsgaming.nl/wp-content/uploads/2026/10/dunk-1024x587.png",
+   "lang": "nl",
+   "date": "2026-10-30",
+   "status": "en-sitio",
+   "reason": "agregado a mano",
+   "source": "manual",
+   "firstSeen": "2026-11-07",
+   "thumb": "press/2cd13f8e99.jpg"
   }
  },
  "rejected": {
@@ -562,135 +624,10 @@
   "gn:CBMif0FVX3lxTE1uU2hfN3V4MFJNZmwyMVd2dGRHeDhKdk5KbjhKYy1mNGRuZkwwcXhjOUctZFFoQXo1SXY4TkR1R0RfenZfalFWZ1FkdUdkak5oVjhVSWtPQ0s5al80ZDUzTjF3NVRDZmVxSlVpWkZsOTNxTkREd0Nya1RBWmRtRm8": "2026-11-05",
   "msn.com/nachrichten/other/sehr-sehr-viel-potenzial-schafft-diese-basketballerin-den-ersten-dunk-f%C3%BCr-n%C3%B6rdlingen/ar-AA2gNRdR": "2026-11-05",
   "gn:CBMi1gFBVV95cUxOOWk5cERiTVBJbUdSM1Q0a2hvcl9taHdTdzlVdjkzcW9VR216UkJYRk9GMHY1TmpYdEpNai1qMWRPd2FwdGpMUHYxREF3V2ktNl9BOF9KVVZiVmcwYm5vbkJldGs2Vkc1eWhlR3hwbUlPZFluVjVVSVpBdVZIN2pfVnFpZWh6VW9CcS1YWmtJUU1GZnM2TmJuVUphbVgwcklwdHIxc1ZlUjN6TXpWUXlkcXhlWlZueF9yWG5qMWxsOEhKNkJsUElkVUQ0dzVORFVQc0djaktR": "2026-11-05",
-  "gn:CBMiYkFVX3lxTE1DeGp0ZlRaOG1PaXVhOU4tMFd6MDNZSXhBQkNmbkh2bkpSX1BzMVp3RGRxZ25GdVhudHlFc3htQzRBbmxoS3hVUHdzZENRSi1pcmg5OFEyUVBrTmtVaHZSZHZn": "2026-11-06"
+  "gn:CBMiYkFVX3lxTE1DeGp0ZlRaOG1PaXVhOU4tMFd6MDNZSXhBQkNmbkh2bkpSX1BzMVp3RGRxZ25GdVhudHlFc3htQzRBbmxoS3hVUHdzZENRSi1pcmg5OFEyUVBrTmtVaHZSZHZn": "2026-11-06",
+  "gn:CBMiXkFVX3lxTE9BdS1yVTBVVElnSjVhbTJFN0dkRm9wdVI5UHZYeXNLMEFoUHlISmNIMy10YWljLW5UUWZLNXluRTRDaC1zTkFiWV9mT0YzVDU2b0poSldZNVNRSFhVcXc": "2026-11-07"
  },
  "runs": [
-  {
-   "date": "2026-10-30T19:20:02.972Z",
-   "command": "site",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-10-30T21:33:37.187Z",
-   "command": "scan",
-   "found": 1,
-   "requests": 26,
-   "kb": 1761
-  },
-  {
-   "date": "2026-10-30T21:33:48.897Z",
-   "command": "set",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-10-30T21:33:49.714Z",
-   "command": "site",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-10-31T16:50:16.744Z",
-   "command": "scan",
-   "found": 2,
-   "requests": 30,
-   "kb": 2201
-  },
-  {
-   "date": "2026-10-31T16:50:16.985Z",
-   "command": "approve",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-10-31T16:50:18.274Z",
-   "command": "site",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-10-31T19:18:48.748Z",
-   "command": "scan",
-   "found": 0,
-   "requests": 25,
-   "kb": 1207
-  },
-  {
-   "date": "2026-10-31T22:27:11.915Z",
-   "command": "scan",
-   "found": 0,
-   "requests": 23,
-   "kb": 714
-  },
-  {
-   "date": "2026-10-31T22:38:00.988Z",
-   "command": "site",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-10-31T23:20:59.325Z",
-   "command": "add",
-   "found": 1,
-   "requests": 1,
-   "kb": 324
-  },
-  {
-   "date": "2026-10-31T23:21:01.195Z",
-   "command": "add",
-   "found": 1,
-   "requests": 1,
-   "kb": 340
-  },
-  {
-   "date": "2026-10-31T23:21:12.884Z",
-   "command": "site",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-11-01T04:50:44.477Z",
-   "command": "scan",
-   "found": 0,
-   "requests": 28,
-   "kb": 1974
-  },
-  {
-   "date": "2026-11-01T04:56:12.542Z",
-   "command": "site",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-11-01T10:46:38.376Z",
-   "command": "scan",
-   "found": 0,
-   "requests": 23,
-   "kb": 655
-  },
-  {
-   "date": "2026-11-01T10:46:38.586Z",
-   "command": "approve",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-11-01T10:46:38.832Z",
-   "command": "site",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
   {
    "date": "2026-11-01T20:22:28.845Z",
    "command": "scan",
@@ -910,6 +847,132 @@
   },
   {
    "date": "2026-11-06T15:22:08.193Z",
+   "command": "site",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-07T00:45:57.873Z",
+   "command": "scan",
+   "found": 0,
+   "requests": 29,
+   "kb": 1094
+  },
+  {
+   "date": "2026-11-07T00:46:46.512Z",
+   "command": "add",
+   "found": 1,
+   "requests": 1,
+   "kb": 120
+  },
+  {
+   "date": "2026-11-07T00:46:47.945Z",
+   "command": "add",
+   "found": 1,
+   "requests": 1,
+   "kb": 278
+  },
+  {
+   "date": "2026-11-07T00:46:48.990Z",
+   "command": "add",
+   "found": 1,
+   "requests": 1,
+   "kb": 14
+  },
+  {
+   "date": "2026-11-07T00:46:49.281Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-07T00:46:49.462Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-07T00:46:49.623Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-07T00:46:49.802Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-07T00:46:49.998Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-07T00:46:50.160Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-07T00:46:50.339Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-07T00:46:50.522Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-07T00:47:38.007Z",
+   "command": "site",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-07T00:48:08.806Z",
+   "command": "site",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-07T00:48:22.171Z",
+   "command": "add",
+   "found": 1,
+   "requests": 1,
+   "kb": 470
+  },
+  {
+   "date": "2026-11-07T00:48:22.361Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-07T00:48:23.072Z",
+   "command": "site",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-07T00:48:33.132Z",
    "command": "site",
    "found": 0,
    "requests": 0,

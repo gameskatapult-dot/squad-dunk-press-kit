@@ -1,19 +1,11 @@
-# Prensa DUNK — 2026-11-06
+# Prensa DUNK — 2026-11-07
 
-28 artículos · 20 en el sitio · 9 idiomas
+23 artículos · 23 en el sitio · 11 idiomas
 
 ## Para revisar
 
 | Fecha | Medio | Título | Idioma | Por qué | Estado | id |
 |---|---|---|---|---|---|---|
-| 2026-11-05 | Augsburger Allgemeine | [„Sehr, sehr viel Potenzial“: Schafft diese Basketballerin den ersten Dunk für Nördlingen?](https://www.augsburger-allgemeine.de/sport/sehr-sehr-viel-potenzial-schafft-diese-basketballerin-den-ersten-dunk-fuer-noerdlingen-115627649) | de | DUNK + basket + juego | revisar | `5cf8b11ad5` |
-| 2026-11-05 | アニメ！アニメ！ | [乙女ゲームなのに恋愛禁止!? イケメン選手たちとの“激アツ青春”に胸キュン！『MIX DUNK』先行プレイ＆開発者インタビュー](https://www.gamespark.jp/article/2026/11/05/174501.html) | ja | DUNK + basket + juego | revisar | `3663e08906` |
-| 2026-11-04 | Yahoo Sports | [Taurian Fontenette, Streetball Legend Who Made History with 720 Dunk, Dies at 43](https://people.com/taurian-fontenette-streetball-legend-dies-at-43-12236409) | en | DUNK + basket + juego | revisar | `66cce95d1a` |
-| 2026-11-04 | Complex | [Taurian Fontenette, AND1 Legend Who Made History With 720 Dunk, Dead at 43](https://www.complex.com/sports/a/bernadette-giacomazzo/taurian-fontenette-dead-43) | en | DUNK + basket + juego | revisar | `e806b13ffe` |
-| 2026-11-04 | Wide Open Country | [Legendary Basketball Player Who Made History With First-Ever 720-Degree Dunk Dead at 43](https://www.wideopencountry.com/legendary-basketball-player-who-made-history-with-first-ever-720-degree-dunk-dead-at-43/) | en | DUNK + basket + juego | revisar | `5e5b1cebf6` |
-| 2026-11-04 | That Eric Alper | [Taurian Fontenette, AND1 Streetball Dunker Known as “Air Up There” Who Landed the First Do](https://www.thatericalper.com/2026/11/04/taurian-fontenette-and1-streetball-dunker-known-as-air-up-there-who-landed-the-first-documented-720-dunk-dies-at-43/) | en | DUNK + basket + juego | revisar | `0e481df19c` |
-| 2026-11-03 | swikblog | [Taurian Fontenette ‘Air Up There’ Dies, Streetball Great](https://swikblog.com/taurian-fontenette-air-up-there-dies/) | en | DUNK + basket + juego | revisar | `3f42bd6737` |
-| 2026-11-03 | t-online.de | ["Mr. 720" ist tot: Basketball-Legende Taurian Fontenette mit 43 Jahren gestorben](https://www.t-online.de/sport/mehr-sport/basketball/id_101511432/720-dunk-basketballspieler-taurian-fontenette-mit-43-jahren-gestorben.html) | de | DUNK + basket + juego | revisar | `12c53dd0ff` |
 
 ## Nuevos (sin publicar)
 
@@ -28,6 +20,8 @@
 | 2026-10-30 | Última Ficha | [DUNK: Simulador de basquete em primeira pessoa é anunciado para PC](https://ultimaficha.com.br/2026/10/30/dunk-simulador-basquete-pc/) | pt | agregado a mano (Katapult) | en-sitio | `85b74a3705` |
 | 2026-10-30 | Gomultiplayer | [Katapult Games anunció su próximo juego de baloncesto en primera persona basado en físicas](https://gomultiplayer.com/katapult-games-anuncio-su-proximo-juego-de-baloncesto-en-primera-persona-basado-en-fisicas-dunk-746/) | es | Katapult Games | en-sitio | `4b5d1687b1` |
 | 2026-10-30 | Tecnogus | [DUNK juego de baloncesto PC: precio, fecha y requisitos](https://www.tecnogus.com.co/dunk-juego-baloncesto-primera-persona-caracteristicas-colombia/) | es | Katapult Games | en-sitio | `4964a7a94b` |
+| 2026-10-30 | Mundo Drix | [DUNK é anunciado para PC e promete revolucionar os jogos de basquete com visão em primeira](https://mundodrix.com.br/dunk-e-anunciado-para-pc-e-promete-revolucionar-os-jogos-de-basquete-com-visao-em-primeira-pessoa/) | pt | agregado a mano | en-sitio | `234d391c7a` |
+| 2026-10-30 | That's Gaming | [DUNK is aangekondigd voor PC](https://thatsgaming.nl/dunk-is-aangekondigd-voor-pc/) | nl | agregado a mano | en-sitio | `2cd13f8e99` |
 | 2026-10-29 | Gamemeca 게임메카 | [1인칭 속도감 있는 농구게임 '덩크' 발표, 2027년 출시](https://www.gamemeca.com/view.php?gid=1782556) | ko | Katapult Games | en-sitio | `5f9cd4bf97` |
 | 2026-10-29 | Games Press | [DUNK brings first-person basketball slamming and skill-based multiplayer jamming to PC in ](https://www.gamespress.com/DUNK-brings-first-person-basketball-slamming-and-skill-based-multiplay) | en | agregado a mano | en-sitio | `c0f59be4af` |
 | 2026-10-29 | Blue's News | [DUNK Announced](https://www.bluesnews.com/s/304856/dunk-announced) | en | Katapult Games | en-sitio | `efc407f0a9` |
@@ -36,6 +30,7 @@
 | 2026-10-29 | La Pause Geek | [DUNK : dunker sur la Lune, dans la jungle ou dans la cour d’école, c’est possible en 2027](https://lapausegeek.com/dunk-dunker-sur-la-lune-dans-la-jungle-ou-dans-la-cour-decole-cest-possible-en-2027/) | fr | agregado a mano | en-sitio | `f58a8114e6` |
 | 2026-10-29 | 巴哈姆特 GNN | [第一人稱多人籃球運動新作《街頭大灌籃》預定 2027 年登上 Steam 平台](https://gnn.gamer.com.tw/detail.php?sn=314165) | zh | agregado a mano | en-sitio | `7b91f27289` |
 | 2026-10-29 | PChome Online新聞 | [第一人稱多人籃球運動新作《街頭大灌籃》預定 2027 年登上 Steam 平台 - 遊戲新聞](https://news.pchome.com.tw/game/gamer/20261029/index-79326695040363203104.html) | zh | 街頭大灌籃 | en-sitio | `15a0f2aa57` |
+| 2026-10-29 | Mohtm مهتم | [الإعلان رسمياً عن لعبة كرة السلة الجماعية بمنظور الشخص الأول DUNK وقادمة في 2027](https://www.mohtm.com/الإعلان-رسمياً-عن-لعبة-كرة-السلة-الجما/) | ar | agregado a mano | en-sitio | `65e626930d` |
 | 2026-10-28 | PlayGround.ru | [Dunk предлагает баскетбол от первого лица с физикой бросков и матчами до шести игроков](https://www.playground.ru/dunk/news/dunk_predlagaet_basketbol_ot_pervogo_litsa_s_fizikoj_broskov_i_matchami_do_shesti_igrokov-1885652) | ru | noticias de Steam | en-sitio | `c13161199b` |
 | 2026-10-28 | Pizza Fria | [DUNK é anunciado para PC com lançamento previsto para 2027](https://pizzafria.ig.com.br/news/dunk-anunciado-pc-2027/) | pt | Katapult Games | en-sitio | `a04a0ce45c` |
 | 2026-10-28 | Gamers & Games | [Katapult Games anuncia DUNK, jogo de basquete em primeira pessoa para PC](https://www.gamersegames.com.br/2026/10/28/katapult-games-anuncia-dunk-jogo-de-basquete-em-primeira-pessoa-para-pc/) | pt | Katapult Games | en-sitio | `cd021901a7` |

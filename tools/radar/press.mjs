@@ -318,7 +318,7 @@ async function saveThumb (a) {
   if (!a.image) return null
   const name = `press/${a.id}.jpg`
   if (fs.existsSync(path.join(SITE_DIR, name))) return name
-  const res = await fetch(new URL(a.image, a.url), { headers: { 'user-agent': UA, referer: a.url } })
+  const res = await fetch(new URL(a.image, a.url), { headers: { 'user-agent': UA, referer: new URL(a.url).href } })
   if (!res.ok) throw new Error('imagen ' + res.status)
   fs.mkdirSync(THUMBS, { recursive: true })
   const tmp = path.join(DIR, '.press.tmp')
