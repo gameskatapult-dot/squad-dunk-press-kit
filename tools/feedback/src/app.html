@@ -273,6 +273,21 @@ details.sec[open] > summary { color: var(--text); }
 .sbtn.spam-btn { margin-left: auto; color: var(--muted); }
 .muted-link { color: var(--muted); font-weight: 500; }
 .mentions { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 10px; font-size: 13px; color: var(--muted); }
+.voice-card { margin-bottom: 16px; }
+.vtable { width: 100%; border-collapse: collapse; font-size: 14px; }
+.vtable th, .vtable td { padding: 6px 8px; text-align: left; border-bottom: 1px solid var(--line); }
+.vtable thead th { font-weight: 600; color: var(--text-2); width: 26%; }
+.vtable thead th:first-child { width: 22%; }
+.vtable tbody th { font-weight: 500; white-space: nowrap; }
+.vtable tr:last-child th, .vtable tr:last-child td { border-bottom: 0; }
+.link-btn.plain { color: inherit; font-weight: inherit; }
+.vcell { display: flex; align-items: center; gap: 8px; width: 100%; background: none; border: 0; padding: 4px 0; cursor: pointer; color: var(--text); font: inherit; }
+.vcell:hover b { text-decoration: underline; }
+.vbar { height: 10px; border-radius: 5px; display: inline-block; }
+.vzero { color: var(--line-strong); }
+.vtags { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0 4px; }
+.vtag { font-size: 12px; border: 1px solid var(--line); border-left: 3px solid var(--vc); background: var(--surface); color: var(--text-2); border-radius: 8px; padding: 2px 8px; cursor: pointer; }
+.vtag:hover { color: var(--text); }
 .mchip { display: inline-flex; align-items: center; }
 .mchip .chip { border-top-right-radius: 0; border-bottom-right-radius: 0; }
 .mx { border: 1px solid var(--line, #ddd); border-left: 0; background: transparent; color: var(--muted); border-radius: 0 999px 999px 0; padding: 0 8px; align-self: stretch; cursor: pointer; font-size: 14px; }
@@ -340,6 +355,16 @@ const CAT_ONE = { bug: 'Bug', idea: 'Idea', gameplay: 'Gameplay', balance: 'Bala
 const SRC = { 'player-feedback': 'player-feedback', game: 'In-game', 'beta-feedback': 'beta-feedback', 'bug-reports': 'bug-reports' };
 const SRC_COLOR = { 'player-feedback': 'var(--s1)', game: 'var(--s2)', 'beta-feedback': 'var(--s3)', 'bug-reports': 'var(--s4)' };
 const PRIO = { 1: 'High', 2: 'Medium', 3: 'Low' };
+const VOICE = { love: 'Enjoyed', pain: 'Frustrating', want: 'Want added' };
+const VOICE_ICON = { love: '👍', pain: '😤', want: '➕' };
+const VOICE_COLOR = { love: 'var(--s3)', pain: 'var(--s2)', want: 'var(--s1)' };
+function answerKind(q) {
+  const t = String(q || '').toLowerCase();
+  if (/enjoy|like|fun|best/.test(t)) return 'love';
+  if (/frustrat|confus|annoy|worst|hate|problem|issue/.test(t)) return 'pain';
+  if (/add|wish|want|improve|change|missing/.test(t)) return 'want';
+  return null;
+}
 const SYS = { shooting: 'Shooting', layup: 'Layups', dunk: 'Dunking', steal: 'Steals & blocks', dribble: 'Dribbling', passing: 'Passing & plays', movement: 'Movement', stamina: 'Stamina', camera: 'Camera', tutorial: 'Tutorial', lobby: 'Lobby', social: 'Friends & social', network: 'Connection', ui: 'Menus & UI', audio: 'Sound', bots: 'Solo play & bots', maps: 'Maps & courts', cosmetics: 'Shop & cosmetics' };
 const NO_VERSION = 'No version';
 const DAY = 86400000;
@@ -354,7 +379,7 @@ const unread = (it) => it.team_count > 0 && (!seen[it.id] || seen[it.id] < it.te
 const TALK_ICON = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></svg>';
 const DL_ICON = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 20h14"/></svg>';
 const state = {
-  mode: 'simple', tab: 'inbox', q: '', src: '', status: '', cat: '', build: '', sys: '', sort: 'new', dups: false,
+  mode: 'simple', tab: 'inbox', q: '', src: '', status: '', cat: '', build: '', sys: '', voice: '', sort: 'new', dups: false,
   sel: null, checked: new Set(), sBuild: '', iBuild: '', iSrc: '',
   welcomed: false, fOpen: false, moreOpen: false, open: {},
 };
@@ -532,7 +557,10 @@ function filtered({ tab = state.tab } = {}) {
     if (state.cat && catOf(it) !== state.cat) return false;
     if (state.cat !== 'spam' && isSpam(it)) return false;
     if (state.build && buildOf(it) !== state.build) return false;
-    if (state.sys && !(it.systems || []).includes(state.sys)) return false;
+    if (state.voice) {
+      const v = (it.voice || {})[state.voice] || [];
+      if (state.sys ? !v.includes(state.sys) : !v.length) return false;
+    } else if (state.sys && !(it.systems || []).includes(state.sys)) return false;
     if (q) {
       const hay = `${it.title || ''} ${it.content || ''} ${it.author_name || ''} ${(it.tags || []).join(' ')} ${it.notes || ''}`.toLowerCase();
       if (!q.split(/\s+/).every((w) => hay.includes(w))) return false;
@@ -550,7 +578,7 @@ function filtered({ tab = state.tab } = {}) {
   return list.sort(sorts[state.sort] || sorts.new);
 }
 function goAdvanced(tab, filters = {}) {
-  Object.assign(state, { mode: 'advanced', tab, q: '', src: '', status: '', cat: '', build: '', sys: '' }, filters);
+  Object.assign(state, { mode: 'advanced', tab, q: '', src: '', status: '', cat: '', build: '', sys: '', voice: '' }, filters);
   render();
 }
 
@@ -582,6 +610,21 @@ function renderSimple() {
   const statusParts = STATUSES.map((s) => ({ key: s, label: STATUS[s], value: canon.filter((i) => i.status === s).length, color: `var(--st-${s})` }));
   const likedAll = pool.filter((i) => i.liked).sort((a, b) => b.created_at.localeCompare(a.created_at));
 
+  const surveys = canon.filter((i) => i.voice && Object.keys(i.voice).length);
+  const vrows = Object.keys(SYS).map((k) => {
+    const r = { k, love: 0, pain: 0, want: 0 };
+    for (const i of surveys) for (const v of ['love', 'pain', 'want']) if ((i.voice[v] || []).includes(k)) r[v]++;
+    r.total = r.love + r.pain + r.want; return r;
+  }).filter((r) => r.total).sort((a, b) => b.pain + b.want - (a.pain + a.want) || b.total - a.total);
+  const vmax = Math.max(1, ...vrows.flatMap((r) => [r.love, r.pain, r.want]));
+  const vcell = (r, v) => r[v] ? `<td><button class="vcell" data-voiceq="${v}|${r.k}" data-tip="${SYS[r.k]} · ${VOICE[v]}: ${r[v]}"><span class="vbar" style="width:${Math.max(8, (r[v] / vmax) * 100)}%;background:${VOICE_COLOR[v]}"></span><b>${fmt(r[v])}</b></button></td>` : '<td><span class="vzero">·</span></td>';
+  const vrow = (r) => `<tr><th scope="row"><button class="link-btn plain" data-sysq="${r.k}">${SYS[r.k]}</button></th>${['love', 'pain', 'want'].map((v) => vcell(r, v)).join('')}</tr>`;
+  const voiceCard = `<div class="card voice-card"><div class="card-h"><h2>What players say about each part of the game</h2><span class="muted small">from ${fmt(surveys.length)} in-game surveys · click a number to read them</span></div>
+    ${vrows.length ? `<div class="scroll-x"><table class="vtable"><thead><tr><th></th>${['love', 'pain', 'want'].map((v) => `<th><button class="link-btn plain" data-voiceq="${v}|">${VOICE_ICON[v]} ${VOICE[v]}</button></th>`).join('')}</tr></thead>
+      <tbody>${vrows.slice(0, 8).map(vrow).join('')}</tbody>${vrows.length > 8 ? `<tbody class="vmore" ${state.vMore ? '' : 'hidden'}>${vrows.slice(8).map(vrow).join('')}</tbody>` : ''}</table></div>
+      ${vrows.length > 8 ? `<button class="link-btn" id="vMore">${state.vMore ? 'Show less' : `Show all ${vrows.length} parts`}</button>` : ''}`
+      : '<div class="empty">Nothing yet. This fills in as the AI reads the in-game survey answers.</div>'}</div>`;
+
   const unreadN = canon.filter(unread).length;
   const talkN = canon.filter((i) => i.team_count).length;
   const qrow = (it) => `<div class="li" data-open="${it.id}"><div style="min-width:0"><div class="li-t">${esc(headline(it))}</div><div class="li-s">${CAT_ONE[catOf(it)]}${it.build ? ' · v' + esc(it.build) : ''} · ${STATUS[it.status]}</div></div>${asked(it) > 1 ? `<span class="count" title="People who asked for this">×${asked(it)}</span>` : it.reactions ? `<span class="li-s">${fmt(it.reactions)} reactions</span>` : ''}</div>`;
@@ -612,6 +655,7 @@ function renderSimple() {
       <div class="tile" data-go="talk"><span class="label">Team chats</span><span class="value">${fmt(talkN)}</span><span class="sub">${unreadN ? `<span class="trend-up">${fmt(unreadN)} with new comments</span>` : 'nothing new'}</span>
         <span class="go"><button class="link-btn" data-go="talk">See conversations →</button></span></div>
     </div>
+    ${voiceCard}
     <div class="cards">
       <div class="card"><div class="card-h"><h2>Most requested</h2><span class="muted small">still open</span><div class="spacer"></div><button class="link-btn" data-go="top">See all</button></div>
         <div class="list-simple">${top.slice(0, 5).map(qrow).join('') || '<div class="empty">Nothing open.</div>'}</div></div>
@@ -654,14 +698,14 @@ function renderAdvanced() {
   if (state.tab === 'liked') return renderLiked();
   renderToolbarAndList();
 }
-const FILTER_LABEL = { src: 'Source', status: 'Status', sys: 'Game system', build: 'Version' };
+const FILTER_LABEL = { src: 'Source', status: 'Status', sys: 'Game system', build: 'Version', voice: 'Answer' };
 function filterValue(k) {
   const v = state[k];
-  if (k === 'src') return SRC[v]; if (k === 'status') return STATUS[v]; if (k === 'sys') return SYS[v];
+  if (k === 'voice') return VOICE[v]; if (k === 'src') return SRC[v]; if (k === 'status') return STATUS[v]; if (k === 'sys') return SYS[v];
   if (k === 'build') return v === NO_VERSION ? v : 'v' + v; return v;
 }
 function toolbar() {
-  const hidden = ['src', 'status', 'sys', 'build'].filter((k) => state[k] && !(k === 'status' && state.tab === 'inbox'));
+  const hidden = ['voice', 'src', 'status', 'sys', 'build'].filter((k) => state[k] && !(k === 'status' && state.tab === 'inbox'));
   const nHidden = hidden.length + (state.dups && state.tab === 'all' ? 1 : 0);
   const anyFilter = state.q || state.cat || nHidden;
   return `<div class="toolbar">
@@ -678,6 +722,7 @@ function toolbar() {
     <select class="select" id="fSrc" aria-label="Source"><option value="">All sources</option>${Object.entries(SRC).map(([k, v]) => `<option value="${k}" ${state.src === k ? 'selected' : ''}>${v}</option>`).join('')}</select>
     ${state.tab === 'inbox' ? '' : `<select class="select" id="fStatus" aria-label="Status"><option value="">Any status</option>${STATUSES.map((x) => `<option value="${x}" ${state.status === x ? 'selected' : ''}>${STATUS[x]}</option>`).join('')}</select>`}
     <select class="select" id="fSys" aria-label="Game system"><option value="">All game systems</option>${Object.entries(SYS).map(([k, v]) => `<option value="${k}" ${state.sys === k ? 'selected' : ''}>${v}</option>`).join('')}</select>
+    <select class="select" id="fVoice" aria-label="Answer"><option value="">Any answer</option>${Object.entries(VOICE).map(([k, v]) => `<option value="${k}" ${state.voice === k ? 'selected' : ''}>${VOICE_ICON[k]} ${v}</option>`).join('')}</select>
     <select class="select" id="fBuild" aria-label="Version"><option value="">All versions</option>${builds().map((x) => `<option value="${esc(x)}" ${state.build === x ? 'selected' : ''}>${esc(x === NO_VERSION ? x : 'Version ' + x)}</option>`).join('')}</select>
     ${state.tab === 'all' ? `<label class="toggle"><input type="checkbox" id="fDups" ${state.dups ? 'checked' : ''}> Show duplicates</label>` : ''}
   </div>` : ''}
@@ -829,7 +874,7 @@ async function openItem(id, { keep = false } = {}) {
     const it = byId.get(id);
     state.mode = 'advanced';
     state.tab = it && it.status === 'new' && !it.duplicate_of ? 'inbox' : 'all';
-    Object.assign(state, { q: '', src: '', status: '', cat: '', build: '', sys: '', dups: !!it?.duplicate_of });
+    Object.assign(state, { q: '', src: '', status: '', cat: '', build: '', sys: '', voice: '', dups: !!it?.duplicate_of });
     state.sel = id; render(); return;
   }
   state.sel = id;
@@ -864,7 +909,7 @@ function renderDetail(it, full) {
       <span>${esc(it.author_name || '')} · ${new Date(it.created_at).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })}</span>
       ${it.url ? `<a href="${esc(it.url)}" target="_blank" rel="noopener">Open in Discord ↗</a>` : '<span>Imported from the spreadsheet</span>'}</div>
     <h2>${esc(headline(it))}</h2>
-    <div class="content" ${onlyHeadline(it) ? 'hidden' : ''}>${it.fields?.length ? it.fields.map((f) => `<div class="q">${esc(f.q)}</div><div class="a">${esc(f.a)}</div>`).join('') : `<div class="a">${esc(it.content || '(no text)')}</div>`}
+    <div class="content" ${onlyHeadline(it) ? 'hidden' : ''}>${it.fields?.length ? it.fields.map((f) => { const k = answerKind(f.q); const v = k ? (it.voice || {})[k] || [] : []; return `<div class="q">${esc(f.q)}</div><div class="a">${esc(f.a)}</div>${v.length ? `<div class="vtags">${v.map((x) => `<button class="vtag" style="--vc:${VOICE_COLOR[k]}" data-voiceq="${k}|${x}" title="See everyone who said this">${VOICE_ICON[k]} ${SYS[x] || esc(x)}</button>`).join('')}</div>` : ''}`; }).join('') : `<div class="a">${esc(it.content || '(no text)')}</div>`}
       ${imgs.length ? `<div class="imgs">${imgs.map((a) => `<a href="${esc(a.url)}" target="_blank" rel="noopener"><img src="${esc(a.url)}" alt="${esc(a.name)}" loading="lazy"></a>`).join('')}</div>` : ''}
       ${files.length ? `<div class="small" style="margin-top:8px">${files.map((a) => `<a href="${esc(a.url)}" target="_blank" rel="noopener">📎 ${esc(a.name)}</a>`).join(' ')}</div>` : ''}
       ${it.reactions || it.replies ? `<div class="small muted" style="margin-top:10px">${it.reactions ? `${fmt(it.reactions)} reactions` : ''}${it.reactions && it.replies ? ' · ' : ''}${it.replies ? `${fmt(it.replies)} replies` : ''}</div>` : ''}
@@ -1044,6 +1089,7 @@ document.addEventListener('click', async (e) => {
   const catBar = t.closest('[data-cat]'); if (catBar) { goAdvanced('all', { cat: catBar.dataset.cat, build: state.sBuild }); return; }
   const stBar = t.closest('[data-st]'); if (stBar) { goAdvanced('all', { status: stBar.dataset.st, build: state.sBuild }); return; }
   const heat = t.closest('[data-heat]'); if (heat) { const [bb, c] = heat.dataset.heat.split('|'); goAdvanced('all', { build: bb, cat: c, src: state.iSrc }); return; }
+  const vq = t.closest('[data-voiceq]'); if (vq) { const [voice, sys] = vq.dataset.voiceq.split('|'); goAdvanced('all', { voice, sys: sys || '' }); return; }
   const sq = t.closest('[data-sysq]'); if (sq) { goAdvanced('all', { sys: sq.dataset.sysq }); return; }
   const tq = t.closest('[data-tagq]'); if (tq) { goAdvanced('all', { q: tq.dataset.tagq }); return; }
   if (t.matches('[data-check]')) { e.stopPropagation(); t.checked ? state.checked.add(t.dataset.check) : state.checked.delete(t.dataset.check); renderBulk(); return; }
@@ -1061,13 +1107,14 @@ document.addEventListener('click', async (e) => {
   if (t.id === 'dismissWelcome') { state.welcomed = true; render(); return; }
   if (t.closest('#fToggle')) { state.fOpen = !state.fOpen; render(); return; }
   const unf = t.closest('[data-unf]'); if (unf) { state[unf.dataset.unf] = unf.dataset.unf === 'dups' ? false : ''; render(); return; }
-  if (t.id === 'clearF') { Object.assign(state, { q: '', src: '', status: '', cat: '', build: '', sys: '', dups: false }); render(); return; }
+  if (t.id === 'clearF') { Object.assign(state, { q: '', src: '', status: '', cat: '', build: '', sys: '', voice: '', dups: false }); render(); return; }
   const id = state.sel;
   const sb = t.closest('[data-status]');
   if (sb && id) { await patch(id, { status: sb.dataset.status }, `Marked as ${STATUS[sb.dataset.status]}`); refresh(id); return; }
   const un = t.closest('[data-untag]'); if (un && id) { const it = byId.get(id); await patch(id, { tags: (it.tags || []).filter((x) => x !== un.dataset.untag) }); refresh(id); return; }
   const mi = t.closest('[data-mergeinto]'); if (mi && id) { await patch(id, { duplicate_of: mi.dataset.mergeinto }, 'Merged as duplicate'); refresh(id); return; }
   const sd = t.closest('[data-sysdel]'); if (sd && id) { const it = byId.get(id); await patch(id, { systems: (it.systems || []).filter((x) => x !== sd.dataset.sysdel), systems_by_team: 1 }, 'Tag removed'); refresh(id); return; }
+  if (t.id === 'vMore') { state.vMore = !state.vMore; render(); return; }
   if (t.closest('[data-spam]') && id) { await markSpam(id); return; }
   if (t.closest('[data-notspam]') && id) { await patch(id, { not_spam: true }, 'Moved out of spam'); await load(); return; }
   if (t.closest('[data-undup]') && id) { await patch(id, { duplicate_of: null }, 'Unmerged'); refresh(id); return; }
@@ -1101,6 +1148,7 @@ document.addEventListener('change', async (e) => {
   if (t.id === 'fCat') return set('cat', t.value);
   if (t.id === 'fBuild') return set('build', t.value);
   if (t.id === 'fSys') return set('sys', t.value);
+  if (t.id === 'fVoice') return set('voice', t.value);
   if (t.id === 'fSort') return set('sort', t.value);
   if (t.id === 'fDups') return set('dups', t.checked);
   if (t.id === 'dSysAdd' && id && t.value) { const it = byId.get(id); await patch(id, { systems: [...(it.systems || []), t.value], systems_by_team: 1 }, 'Tag added'); refresh(id); return; }

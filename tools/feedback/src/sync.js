@@ -38,21 +38,22 @@ async function setCursor(db, key, value) {
 }
 
 const UPSERT = `INSERT INTO items (id, source, channel_id, thread_id, url, author_id, author_name, title, content, fields, attachments,
-  forum_tags, build, context, mode, submission_id, reactions, replies, created_at, auto_category, systems, liked)
-  VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14, ?15, ?16, ?17, ?18, ?19, ?20, ?21, ?22)
+  forum_tags, build, context, mode, submission_id, reactions, replies, created_at, auto_category, systems, liked, voice)
+  VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14, ?15, ?16, ?17, ?18, ?19, ?20, ?21, ?22, ?23)
   ON CONFLICT(id) DO UPDATE SET title = excluded.title, content = excluded.content, fields = excluded.fields,
     attachments = excluded.attachments, forum_tags = excluded.forum_tags, reactions = excluded.reactions,
     replies = MAX(items.replies, excluded.replies), liked = excluded.liked,
     -- Si el texto no cambió, se queda lo que decidió la IA; si cambió, se vuelve a clasificar.
     auto_category = CASE WHEN items.content IS excluded.content AND items.title IS excluded.title AND items.ai_at IS NOT NULL THEN items.auto_category ELSE excluded.auto_category END,
     systems = CASE WHEN items.systems_by_team = 1 OR (items.content IS excluded.content AND items.title IS excluded.title AND items.ai_at IS NOT NULL) THEN items.systems ELSE excluded.systems END,
+    voice = CASE WHEN items.content IS excluded.content AND items.title IS excluded.title AND items.ai_at IS NOT NULL THEN items.voice ELSE excluded.voice END,
     ai_at = CASE WHEN items.content IS excluded.content AND items.title IS excluded.title THEN items.ai_at ELSE NULL END`;
 
 function upsertStmt(db, it) {
   return db.prepare(UPSERT).bind(
     it.id, it.source, it.channel_id, it.thread_id, it.url, it.author_id, it.author_name, it.title, it.content,
     JSON.stringify(it.fields), JSON.stringify(it.attachments), JSON.stringify(it.forum_tags), it.build, it.context,
-    it.mode, it.submission_id, it.reactions, it.replies, it.created_at, it.auto_category, JSON.stringify(it.systems || []), it.liked || null,
+    it.mode, it.submission_id, it.reactions, it.replies, it.created_at, it.auto_category, JSON.stringify(it.systems || []), it.liked || null, JSON.stringify(it.voice || {}),
   );
 }
 
@@ -94,8 +95,8 @@ export async function repairTextAttachments(env, db, dc) {
     const it = { ...row, fields: JSON.parse(row.fields || '[]'), attachments: JSON.parse(row.attachments || '[]'), forum_tags: JSON.parse(row.forum_tags || '[]') };
     it.content = [msg.content, body].filter((x) => x && x.trim()).join('\n\n');
     deriveFields(it);
-    await db.prepare('UPDATE items SET content = ?, auto_category = ?, systems = CASE WHEN systems_by_team = 1 THEN systems ELSE ? END, ai_at = NULL WHERE id = ?')
-      .bind(it.content, it.auto_category, JSON.stringify(it.systems || []), r.id).run();
+    await db.prepare('UPDATE items SET content = ?, auto_category = ?, systems = CASE WHEN systems_by_team = 1 THEN systems ELSE ? END, voice = ?, ai_at = NULL WHERE id = ?')
+      .bind(it.content, it.auto_category, JSON.stringify(it.systems || []), JSON.stringify(it.voice || {}), r.id).run();
     fixed++;
   }
   return fixed;

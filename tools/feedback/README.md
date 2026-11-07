@@ -132,3 +132,13 @@ npx wrangler deploy
 # reclasificar todo con la IA nueva (lo que el equipo confirmó a mano no se toca):
 npx wrangler d1 execute dunk-feedback --remote --command "UPDATE items SET ai_at = NULL"
 ```
+
+## Las 3 preguntas del juego (nov 2026)
+
+Cada envío del juego trae 3 respuestas: qué le gustó, qué le frustró y qué agregaría. Ahora cada respuesta tiene sus propias partes del juego (columna `voice`, JSON `{love, pain, want}`), las marca la IA y, si no alcanza a pasar, las palabras clave. La página principal muestra la tabla "What players say about each part of the game" (👍 Enjoyed · 😤 Frustrating · ➕ Want added) y cada número abre esas respuestas. En Filters está "Any answer" para filtrar por pregunta.
+
+```
+npx wrangler d1 execute dunk-feedback --remote --file migrations/0004_voice.sql
+npx wrangler deploy
+npx wrangler d1 execute dunk-feedback --remote --command "UPDATE items SET ai_at = NULL WHERE fields != '[]'"
+```

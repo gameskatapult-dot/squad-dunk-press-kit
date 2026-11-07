@@ -25,6 +25,7 @@ CREATE TABLE IF NOT EXISTS items (
   auto_category TEXT,                  -- sugerida automáticamente
   systems TEXT NOT NULL DEFAULT '[]',  -- JSON: sistemas del juego mencionados (shooting, dunk, steal…)
   liked TEXT,                          -- lo que le gustó al jugador (respuesta del formulario)
+  voice TEXT NOT NULL DEFAULT '{}',    -- JSON {love,pain,want}: partes del juego por cada una de las 3 preguntas
   ai_title TEXT,                       -- título corto que puso la IA
   systems_by_team INTEGER DEFAULT 0,   -- 1 = el equipo corrigió los systems; la IA no los toca
   ai_at TEXT,                          -- cuándo lo clasificó la IA (NULL = pendiente)

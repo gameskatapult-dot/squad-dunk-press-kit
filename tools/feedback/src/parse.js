@@ -176,6 +176,26 @@ export function messageToItem(msg, { guildId, channelId, source, thread = null, 
   return deriveFields(item, forumTags);
 }
 
+// Las 3 preguntas del formulario del juego: qué le gustó, qué le frustró, qué agregaría.
+export const VOICES = ['love', 'pain', 'want'];
+export function answerKind(q) {
+  const t = String(q || '').toLowerCase();
+  if (/enjoy|like|fun|best/.test(t)) return 'love';
+  if (/frustrat|confus|annoy|worst|hate|problem|issue/.test(t)) return 'pain';
+  if (/add|wish|want|improve|change|missing/.test(t)) return 'want';
+  return null;
+}
+// Partes del juego por respuesta ({love:[], pain:[], want:[]}). Vacío si no es del formulario.
+export function guessVoice(fields = []) {
+  const out = {};
+  for (const f of fields) {
+    const k = answerKind(f.q);
+    if (!k || isJunkAnswer(f.a)) continue;
+    out[k] = [...new Set([...(out[k] || []), ...guessSystems(f.a)])];
+  }
+  return out;
+}
+
 // Calcula lo automático (lo que le gustó, sistemas, tema sugerido, spam) a partir del texto.
 export function deriveFields(item, forumTags = item.forum_tags || []) {
   // En los envíos del juego se clasifica solo por las respuestas, no por las preguntas.
@@ -188,6 +208,7 @@ export function deriveFields(item, forumTags = item.forum_tags || []) {
   item.auto_category = guessCategory(`${item.title || ''} ${answers}`, forumTags);
   const allAnswers = item.fields.length ? item.fields.map((f) => f.a) : [item.title, item.content].filter(Boolean);
   if (!item.attachments.length && !forumTags.length && isJunk(allAnswers)) item.auto_category = 'spam';
+  item.voice = guessVoice(item.fields);
   return item;
 }
 

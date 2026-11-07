@@ -8,7 +8,7 @@
 // Si después el mismo envío llega por Discord, la versión de Discord reemplaza a la de la planilla.
 
 import { readFileSync } from 'node:fs';
-import { guessCategory, guessSystems, isJunk } from '../src/parse.js';
+import { guessCategory, guessSystems, guessVoice, isJunk } from '../src/parse.js';
 
 function parseCsv(text) {
   const rows = [];
@@ -73,10 +73,10 @@ for (const r of rows) {
   const content = fields.map((f) => `${f.q}\n${f.a}`).join('\n\n');
   const id = `sheet:${submission || `row${++n}`}`;
   const player = get(KNOWN.player);
-  out += `INSERT INTO items (id, source, channel_id, url, author_name, content, fields, attachments, forum_tags, build, context, mode, submission_id, created_at, auto_category, systems, liked)
+  out += `INSERT INTO items (id, source, channel_id, url, author_name, content, fields, attachments, forum_tags, build, context, mode, submission_id, created_at, auto_category, systems, liked, voice)
 SELECT ${sql(id)}, 'game', 'sheet', '', ${sql(player && !/^anonymous$/i.test(player) ? player : 'Player (in-game)')}, ${sql(content)}, ${sql(JSON.stringify(fields))}, '[]', '[]',
   ${sql(get(KNOWN.build).replace(/^v/i, ''))}, ${sql(get(KNOWN.origin))}, ${sql(get(KNOWN.location))}, ${sql(submission)}, ${sql(toIso(get(KNOWN.date)))},
-  ${sql(isJunk(fields.map((f) => f.a)) ? 'spam' : guessCategory(problem))}, ${sql(JSON.stringify(guessSystems(problem)))}, ${sql(liked)}
+  ${sql(isJunk(fields.map((f) => f.a)) ? 'spam' : guessCategory(problem))}, ${sql(JSON.stringify(guessSystems(problem)))}, ${sql(liked)}, ${sql(JSON.stringify(guessVoice(fields)))}
 WHERE NOT EXISTS (SELECT 1 FROM items WHERE id = ${sql(id)}${submission ? ` OR submission_id = ${sql(submission)}` : ''});
 `;
 }

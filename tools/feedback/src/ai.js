@@ -2,7 +2,7 @@
 // Lee cada feedback y decide el tema, las partes del juego que menciona y si es spam.
 // Lo que el equipo confirma a mano (columna category) nunca se toca: la IA solo llena auto_category y systems.
 
-import { CATEGORIES, SYSTEMS, guessSystems } from './parse.js';
+import { CATEGORIES, SYSTEMS, VOICES, answerKind, guessSystems } from './parse.js';
 
 // Palabras que casi nunca se usan en otro sentido.
 const SURE = ['dunk', 'layup', 'steal', 'dribble', 'stamina', 'shooting', 'camera'];
@@ -33,7 +33,7 @@ const SYSTEM_HELP = {
 
 const PROMPT = `You sort player feedback for DUNK, an online 3v3 arcade basketball game.
 Reply with ONLY a JSON object, no other text:
-{"title": "...", "topic": "...", "systems": ["..."], "spam": false}
+{"title": "...", "topic": "...", "systems": ["..."], "voice": {"love": [], "pain": [], "want": []}, "spam": false}
 
 title: a short English headline of 3 to 8 words that says what the feedback is about, like "Steals feel random" or "Disconnected mid match" or "Wants a 1v1 mode". No quotes, no period.
 
@@ -54,16 +54,19 @@ systems: the parts of the game the player EXPLICITLY talks about, from this list
 ${Object.entries(SYSTEM_HELP).map(([k, v]) => `- ${k}: ${v}`).join('\n')}
 Do not guess: if a part is not named or clearly described, leave it out. Never add ui or tutorial unless menus/HUD/settings or the tutorial are mentioned.
 
+voice: only for the in-game survey, which has 3 questions: "What did you enjoy most?" (love), "Was anything frustrating or confusing?" (pain) and "If you could add one thing, what would it be?" (want). For EACH answer, list the parts of the game (same list as systems) that THAT answer talks about. An answer that names no part gets []. For any other feedback, voice is {}.
+
 spam: true only when topic is spam.
 The answer to "What did you enjoy most?" is praise, not a problem: use it for systems but do not let it decide the topic if there are other answers.
 
 Examples:
-"steals are confusing, sometimes i press and nothing happens" -> {"title":"Steals feel unresponsive","topic":"gameplay","systems":["steal"],"spam":false}
+"steals are confusing, sometimes i press and nothing happens" -> {"title":"Steals feel unresponsive","topic":"gameplay","systems":["steal"],"voice":{},"spam":false}
 "cant find where to change sensitivity in the menu" -> {"title":"Sensitivity setting hard to find","topic":"ui","systems":["ui"],"spam":false}
 "let us dunk without a teammate" -> {"title":"Wants solo dunks","topic":"idea","systems":["dunk","bots"],"spam":false}
 "shooting from far is way too easy" -> {"title":"Long shots too easy","topic":"balance","systems":["shooting"],"spam":false}
 "i didnt understand how to play at first" -> {"title":"Hard to learn how to play","topic":"gameplay","systems":["tutorial"],"spam":false}
-"fun game" -> {"title":"Fun game","topic":"praise","systems":[],"spam":false}`;
+"What did you enjoy most?: BAMSKETBALL / Was anything frustrating or confusing?: layups were not explained / If you could add one thing?: diving" -> {"title":"Layups not explained, wants diving","topic":"gameplay","systems":["layup","tutorial","movement"],"voice":{"love":[],"pain":["layup","tutorial"],"want":["movement"]},"spam":false}
+"fun game" -> {"title":"Fun game","topic":"praise","systems":[],"voice":{},"spam":false}`;
 
 export function itemText(it) {
   const fields = typeof it.fields === 'string' ? JSON.parse(it.fields || '[]') : it.fields || [];
@@ -86,8 +89,13 @@ export function parseAnswer(raw) {
   if (o.spam === true) topic = 'spam';
   if (!TOPICS.includes(topic)) topic = 'other';
   const systems = [...new Set((Array.isArray(o.systems) ? o.systems : []).map((x) => String(x).toLowerCase().trim()).filter((x) => x in SYSTEMS))];
+  let voice = null;
+  if (o.voice && typeof o.voice === 'object' && !Array.isArray(o.voice)) {
+    voice = {};
+    for (const k of VOICES) if (Array.isArray(o.voice[k])) voice[k] = [...new Set(o.voice[k].map((x) => String(x).toLowerCase().trim()).filter((x) => x in SYSTEMS))];
+  }
   const title = String(o.title || '').replace(/^["'\s]+|["'.\s]+$/g, '').slice(0, 90) || null;
-  return { topic, systems, title };
+  return { topic, systems, title, voice };
 }
 
 export async function classify(env, it) {
@@ -101,10 +109,24 @@ export async function classify(env, it) {
   return parseAnswer(raw);
 }
 
+// Solo las preguntas que el envío trae de verdad; si la IA no contestó una, queda lo que encontraron las palabras clave.
+function surveyVoice(it, aiVoice) {
+  const fields = JSON.parse(it.fields || '[]');
+  const kinds = [...new Set(fields.map((f) => answerKind(f.q)).filter(Boolean))];
+  if (!kinds.length) return null;
+  const kw = JSON.parse(it.voice || '{}');
+  const out = {};
+  for (const k of kinds) {
+    const ai = aiVoice && Array.isArray(aiVoice[k]) ? aiVoice[k] : null;
+    out[k] = ai ? [...new Set([...ai, ...(kw[k] || []).filter((x) => SURE.includes(x))])] : kw[k] || [];
+  }
+  return out;
+}
+
 // Clasifica los feedbacks que todavía no pasó por la IA, los más nuevos primero.
 export async function classifyPending(env, limit = 10) {
   if (!env.AI || limit <= 0) return { classified: 0, skipped: 'no AI binding' };
-  const rows = await env.DB.prepare('SELECT id, title, content, fields, attachments, forum_tags, systems_by_team FROM items WHERE ai_at IS NULL ORDER BY created_at DESC LIMIT ?').bind(limit).all();
+  const rows = await env.DB.prepare('SELECT id, title, content, fields, attachments, forum_tags, systems_by_team, voice FROM items WHERE ai_at IS NULL ORDER BY created_at DESC LIMIT ?').bind(limit).all();
   let done = 0;
   let failed = 0;
   let error;
@@ -118,8 +140,9 @@ export async function classifyPending(env, limit = 10) {
     if (r.topic === 'spam' && hasStuff) r.topic = 'other';
     // La IA a veces se olvida de un sistema obvio; se suman los que se nombran literalmente.
     const systems = it.systems_by_team ? null : r.systems ? [...new Set([...r.systems, ...guessSystems(itemText(it)).filter((s) => SURE.includes(s))])] : null;
-    await env.DB.prepare(`UPDATE items SET ai_at = ?, auto_category = COALESCE(?, auto_category), systems = COALESCE(?, systems), ai_title = ? WHERE id = ?`)
-      .bind(now, r.topic, systems ? JSON.stringify(systems) : null, r.topic === 'spam' ? null : r.title, it.id).run();
+    const voice = surveyVoice(it, r.voice);
+    await env.DB.prepare(`UPDATE items SET ai_at = ?, auto_category = COALESCE(?, auto_category), systems = COALESCE(?, systems), ai_title = ?, voice = COALESCE(?, voice) WHERE id = ?`)
+      .bind(now, r.topic, systems ? JSON.stringify(systems) : null, r.topic === 'spam' ? null : r.title, voice ? JSON.stringify(voice) : null, it.id).run();
     done++;
   }
   const left = await env.DB.prepare('SELECT COUNT(*) AS n FROM items WHERE ai_at IS NULL').first();

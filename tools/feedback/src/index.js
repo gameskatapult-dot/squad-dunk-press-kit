@@ -14,6 +14,7 @@ const json = (data, status = 200) =>
 const JSON_COLS = ['fields', 'attachments', 'forum_tags', 'tags', 'systems'];
 function decode(row) {
   for (const c of JSON_COLS) if (typeof row[c] === 'string') try { row[c] = JSON.parse(row[c]); } catch { row[c] = []; }
+  if (typeof row.voice === 'string') try { row.voice = JSON.parse(row.voice); } catch { row.voice = {}; }
   return row;
 }
 
@@ -94,7 +95,7 @@ async function api(req, env, user, path) {
   if (path === '/api/items' && method === 'GET') {
     const rows = await env.DB.prepare(
       `SELECT id, source, url, author_name, title, content, fields, attachments, forum_tags, build, context, mode, reactions, replies,
-       created_at, status, category, auto_category, systems, systems_by_team, liked, ai_at, ai_title, priority, tags, notes, duplicate_of, updated_at, updated_by,
+       created_at, status, category, auto_category, systems, systems_by_team, liked, voice, ai_at, ai_title, priority, tags, notes, duplicate_of, updated_at, updated_by,
        (SELECT COUNT(*) FROM team_messages t WHERE t.item_id = items.id) AS team_count,
        (SELECT MAX(created_at) FROM team_messages t WHERE t.item_id = items.id) AS team_last
        FROM items ORDER BY created_at DESC`,
