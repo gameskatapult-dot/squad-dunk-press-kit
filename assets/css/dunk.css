@@ -201,22 +201,17 @@ body.has-community-player { overflow: hidden; }
 .hangout__photo:hover { transform: rotate(0deg) scale(1.04); z-index: 1; }
 .hangout__photo::before { content: ""; position: absolute; top: -9px; left: 50%; width: 64px; height: 18px; background: rgba(239, 138, 60, .75); transform: translateX(-50%) rotate(-3deg); }
 .hangout__photo img, .hangout__photo video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; }
-.hangout__chat { padding: 18px 18px 20px; background: #24211d; border: 1px solid var(--line); border-radius: 12px; }
-.hangout__channel { display: flex; align-items: flex-start; gap: 12px; margin: 0 0 6px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
-.hangout__heading { margin: 0 !important; color: var(--cream); font-size: 18px; font-weight: 800; }
-.hangout__heading span[aria-hidden] { color: var(--ball); }
-.hangout__note { margin: 0 !important; color: var(--soft); font-size: 13px; font-weight: 600; }
-.hangout__members { flex: none; margin: 4px 0 0 auto; white-space: nowrap; color: var(--soft); font-size: 13px; font-weight: 700; }
-.hangout__members::before { content: ""; display: inline-block; width: 8px; height: 8px; margin-right: 6px; background: #3ba55d; border-radius: 50%; }
-.hangout__feed-wrap { position: relative; }
-.hangout__feed { height: 440px; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: none; -webkit-mask-image: linear-gradient(transparent, #000 12%, #000 86%, transparent); mask-image: linear-gradient(transparent, #000 12%, #000 86%, transparent); }
-.hangout__feed::-webkit-scrollbar { display: none; }
-.hangout__msgs { display: flex; flex-direction: column; }
-.hangout__msg { padding: 12px 8px; border-radius: 6px; }
-.hangout__msg + .hangout__msg { border-top: 1px solid var(--line); }
-.hangout__msg:hover { background: rgba(255, 248, 234, .04); }
-.hangout__text { margin: 0 !important; color: var(--cream); font-size: 17px; font-weight: 600; line-height: 1.35; }
-.dunk .hangout__join { width: 100%; margin-top: 14px; }
+.invite { padding: 22px 22px 24px; background: #24211d; border: 1px solid var(--line); border-radius: 12px; }
+.invite__label { margin: 0 0 14px !important; color: var(--soft); font-size: 13px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.invite__server { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
+.invite__icon { flex: none; width: 64px; height: 64px; object-fit: cover; background: var(--bg-deep); border-radius: 18px; }
+.invite__name { margin: 0 0 4px !important; color: var(--cream); font-size: 22px; font-weight: 800; line-height: 1.1; }
+.invite__counts { display: flex; flex-wrap: wrap; gap: 4px 16px; margin: 0 !important; color: var(--soft); font-size: 14px; font-weight: 600; }
+.invite__count strong { color: var(--cream); font-weight: 800; }
+.invite__count[hidden] { display: none; }
+.invite__dot { display: inline-block; width: 9px; height: 9px; margin-right: 6px; background: #80848e; border-radius: 50%; }
+.invite__dot--online { background: #3ba55d; }
+.dunk .invite .hangout__join { width: 100%; }
 @media (max-width: 860px) {
   .hangout__grid { grid-template-columns: 1fr; }
   .hangout__photos { max-width: 520px; margin: 0 auto; }

@@ -671,69 +671,33 @@
     return items
   }
 
-  // Feedback highlights: shuffled on every visit, then a slow upward drift of the box's own scroll.
-  // The list is doubled and the scroll wraps at the seam, so it never runs out either way. With the
-  // mouse over the box, its top third scrolls up and its bottom third down (faster nearer the edge)
-  // and the middle holds still; wheel and touch scrolling work too, and the drift waits after them.
-  function setupHangoutFeed () {
-    const feed = document.querySelector('[data-hangout-feed]')
-    const list = feed && feed.querySelector('[data-hangout-msgs]')
-    if (!list) return
-    const items = shuffleChildren(list)
-    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
-    if (list.scrollHeight <= feed.clientHeight) return
-
-    items.forEach(function (item) {
-      const twin = item.cloneNode(true)
-      twin.setAttribute('aria-hidden', 'true')
-      list.appendChild(twin)
-    })
-    const half = list.children[items.length].offsetTop - list.children[0].offsetTop
-
-    let position = 1
-    let pointer = null
-    let quietUntil = 0
-    function wrap (value) {
-      if (value >= half) return value - half
-      if (value < 0) return value + half
-      return value
+  // Discord invite card: live member and online counts (and the server's name and icon) from
+  // Discord's public invite endpoint. If that can't be reached the card keeps its static text.
+  async function setupDiscordInvite () {
+    const card = document.querySelector('[data-discord-invite]')
+    if (!card || !card.dataset.code) return
+    let data = null
+    try {
+      const response = await fetch('https://discord.com/api/v10/invites/' + encodeURIComponent(card.dataset.code) + '?with_counts=true')
+      if (response.ok) data = await response.json()
+    } catch (error) {}
+    if (!data || !data.guild) return
+    const number = new Intl.NumberFormat(activeLanguage || 'en')
+    const name = card.querySelector('[data-discord-name]')
+    if (name && data.guild.name) name.textContent = data.guild.name
+    const icon = card.querySelector('[data-discord-icon]')
+    if (icon && data.guild.icon) icon.src = 'https://cdn.discordapp.com/icons/' + data.guild.id + '/' + data.guild.icon + '.png?size=128'
+    const members = card.querySelector('[data-discord-members]')
+    if (members && data.approximate_member_count) {
+      members.removeAttribute('data-l10n')
+      members.textContent = number.format(data.approximate_member_count)
     }
-
-    feed.addEventListener('mousemove', function (event) {
-      const box = feed.getBoundingClientRect()
-      pointer = (event.clientY - box.top) / box.height
-    })
-    feed.addEventListener('mouseleave', function () { pointer = null })
-    ;['wheel', 'touchstart', 'touchmove'].forEach(function (type) {
-      feed.addEventListener(type, function () { quietUntil = Date.now() + 3000 }, { passive: true })
-    })
-    feed.addEventListener('scroll', function () {
-      if (Date.now() < quietUntil) {
-        feed.scrollTop = position = wrap(feed.scrollTop)
-      }
-    }, { passive: true })
-
-    feed.scrollTop = position
-    let last = 0
-    function tick (now) {
-      const dt = last ? Math.min(now - last, 100) / 1000 : 0
-      last = now
-      let speed = 18
-      if (Date.now() < quietUntil) {
-        speed = 0
-      } else if (pointer !== null) {
-        // Up to 160px a second at the very edge, easing in from the zone's inner edge.
-        if (pointer < 1 / 3) speed = -160 * Math.pow(1 - pointer * 3, 1.5)
-        else if (pointer > 2 / 3) speed = 160 * Math.pow((pointer - 2 / 3) * 3, 1.5)
-        else speed = 0
-      }
-      if (speed) {
-        position = wrap(position + speed * dt)
-        feed.scrollTop = position
-      }
-      window.requestAnimationFrame(tick)
+    const online = card.querySelector('[data-discord-online]')
+    const onlineWrap = card.querySelector('[data-discord-online-wrap]')
+    if (online && onlineWrap && data.approximate_presence_count) {
+      online.textContent = number.format(data.approximate_presence_count)
+      onlineWrap.hidden = false
     }
-    window.requestAnimationFrame(tick)
   }
 
   // Community clips: muted loops that only load and play while on screen (and not at all with
@@ -1338,7 +1302,7 @@
     // repeated once they are in, unless the visitor has started scrolling by then.
     const loading = [setupCommunity(), setupPress(), setupVoices()]
     setupHangoutVideos()
-    setupHangoutFeed()
+    setupDiscordInvite()
     setupSteamWidgets()
     setupScreenshotCarousels()
     setupGalleryLightbox()
