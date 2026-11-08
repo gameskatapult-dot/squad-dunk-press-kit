@@ -627,30 +627,11 @@
   "gn:CBMiYkFVX3lxTE1DeGp0ZlRaOG1PaXVhOU4tMFd6MDNZSXhBQkNmbkh2bkpSX1BzMVp3RGRxZ25GdVhudHlFc3htQzRBbmxoS3hVUHdzZENRSi1pcmg5OFEyUVBrTmtVaHZSZHZn": "2026-11-06",
   "gn:CBMiXkFVX3lxTE9BdS1yVTBVVElnSjVhbTJFN0dkRm9wdVI5UHZYeXNLMEFoUHlISmNIMy10YWljLW5UUWZLNXluRTRDaC1zTkFiWV9mT0YzVDU2b0poSldZNVNRSFhVcXc": "2026-11-07",
   "gn:CBMiSkFVX3lxTE1yWGNvYXM2RzQzaGg2THJaQVo3VDJDY3lydEViUWpYdFhfcldvUjBnMjEzbDczRDdqVmo0QkQ0bVdERjBoMElraDhn": "2026-11-07",
-  "gn:CBMiUEFVX3lxTE56Zm10cWstZFA3MTN2LVFiVjB6Y05DclRiZGNOUzhyaG53WXRPTWN6STNSYlQ5N25xRllsZ1pxVm1yVDNuVkd3dmt3bk9VczI0": "2026-11-07"
+  "gn:CBMiUEFVX3lxTE56Zm10cWstZFA3MTN2LVFiVjB6Y05DclRiZGNOUzhyaG53WXRPTWN6STNSYlQ5N25xRllsZ1pxVm1yVDNuVkd3dmt3bk9VczI0": "2026-11-07",
+  "gn:CBMiZEFVX3lxTE1EaXRtR2dhYmwwakdMUkZ0SHZPZ2hxV2pUSkM5djJTLW1UMjVJR0tNRHQ1cEtvSjBISmNwU1ZpSF9pczlNYWlnaHZoMGxmbkt4ZlUweUxTTDc4d25rM0ZfWWg4QVA": "2026-11-08",
+  "s.animeanime.jp/article/2026/11/05/104510.html": "2026-11-08"
  },
  "runs": [
-  {
-   "date": "2026-11-01T23:00:19.586Z",
-   "command": "add",
-   "found": 1,
-   "requests": 1,
-   "kb": 85
-  },
-  {
-   "date": "2026-11-01T23:00:49.796Z",
-   "command": "scan",
-   "found": 0,
-   "requests": 30,
-   "kb": 1878
-  },
-  {
-   "date": "2026-11-01T23:00:57.320Z",
-   "command": "site",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
   {
    "date": "2026-11-01T23:05:13.551Z",
    "command": "site",
@@ -979,6 +960,27 @@
    "found": 0,
    "requests": 22,
    "kb": 1028
+  },
+  {
+   "date": "2026-11-08T12:20:07.610Z",
+   "command": "scan",
+   "found": 0,
+   "requests": 30,
+   "kb": 1195
+  },
+  {
+   "date": "2026-11-08T12:20:07.818Z",
+   "command": "approve",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-08T12:20:08.044Z",
+   "command": "site",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
   }
  ]
 }
