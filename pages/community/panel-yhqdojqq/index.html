@@ -49,6 +49,16 @@
   .hist { font-size: 11px; }
   .sub { margin: 18px 0 6px; font-weight: 700; }
   .small td, .small th { position: static; }
+  .miles { border: 1px solid var(--line); background: var(--row); padding: 6px 10px; margin: 8px 0 0; }
+  .miles h2 { font-size: 12px; margin: 0 0 4px; }
+  .miles ol { list-style: none; margin: 0; padding: 0; }
+  .miles li { padding: 2px 4px; display: flex; gap: 10px; }
+  .miles li .when { color: var(--dim); min-width: 84px; }
+  .miles li.new { background: var(--hi); font-weight: 700; }
+  .miles li.new .when { color: var(--fg); }
+  .miles li.more { display: none; }
+  .miles.all li.more { display: flex; }
+  .miles button { margin-top: 4px; }
 </style>
 </head>
 <body>
@@ -72,6 +82,7 @@
   <button id="csv">CSV</button>
 </div>
 <div class="bar stats" id="stats"></div>
+<div class="miles" id="miles" hidden><h2>Milestones</h2><ol></ol><button type="button" id="milesMore" hidden></button></div>
 
 <div class="charts">
   <div class="card"><h2>Who brings the views</h2><div class="note">top 12 creators, all copies added up</div><div class="legend"><span class="org">no paid signal</span><span class="paid">paid</span></div><div id="cCreators"></div></div>
@@ -458,6 +469,59 @@
     el.querySelector('.gHit').addEventListener('mouseleave', function () { hover.style.display = 'none'; hideTip() })
   }
 
+  // ---------- milestones ----------
+  // Worked out from the readings: the first post to pass each mark, and when the
+  // total passed each mark. Same readings as the growth chart, so a mark dates
+  // from the radar reading that first saw it (day-only readings are approximate).
+  var POST_MARKS = [1e5, 2.5e5, 5e5, 1e6, 1.5e6, 2e6, 3e6, 5e6, 1e7, 2e7, 5e7]
+  var TOTAL_MARKS = [1e6, 2e6, 3e6, 4e6, 5e6, 7.5e6, 1e7, 1.5e7, 2e7, 3e7, 5e7, 1e8]
+  var big = function (n) { return n >= 1e6 ? String(n / 1e6).replace(/\.0$/, '') + 'M' : Math.round(n / 1e3) + 'k' }
+  var NETWORK = { youtube: 'YouTube', tiktok: 'TikTok', instagram: 'Instagram', bilibili: 'Bilibili' }
+
+  function milestones (posts) {
+    var counted = posts.filter(function (p) { return p.status !== 'descartado' })
+    var list = []
+    POST_MARKS.forEach(function (m) {
+      var first = null
+      counted.forEach(function (p) {
+        var hit = (p.history || []).find(function (h) { return h[1] >= m })
+        if (hit && (!first || readingTime(hit[0]) < first.t)) first = { t: readingTime(hit[0]), p: p, v: hit[1] }
+      })
+      if (first) list.push({ t: first.t, mark: m, kind: 'post', p: first.p })
+    })
+    var seen = {}
+    counted.forEach(function (p) { (p.history || []).forEach(function (h) { seen[readingTime(h[0])] = 1 }) })
+    var last = {}, total = 0, next = 0
+    Object.keys(seen).map(Number).sort(function (a, b) { return a - b }).forEach(function (t) {
+      counted.forEach(function (p) {
+        ;(p.history || []).forEach(function (h) { if (readingTime(h[0]) <= t) last[p.platform + p.id] = h[1] })
+      })
+      total = 0
+      for (var k in last) total += last[k]
+      while (next < TOTAL_MARKS.length && total >= TOTAL_MARKS[next]) list.push({ t: t, mark: TOTAL_MARKS[next++], kind: 'total' })
+    })
+    // Newest first; on the same reading, the post mark first.
+    return list.sort(function (a, b) { return b.t - a.t || (a.kind === 'post' ? -1 : 1) })
+  }
+
+  function renderMiles () {
+    var box = $('miles'), list = state.miles || []
+    if (!list.length) { box.hidden = true; return }
+    box.hidden = false
+    var newest = list[0].t, all = box.classList.contains('all'), SHOW = 5
+    box.querySelector('ol').innerHTML = list.map(function (m, i) {
+      var what = m.kind === 'total'
+        ? 'all DUNK posts together passed <b>' + big(m.mark) + '</b> views'
+        : '★ first post past <b>' + big(m.mark) + '</b> views: ' + esc(m.p.author) + ' on ' + esc(NETWORK[m.p.platform] || m.p.platform) +
+          ' · <a href="' + esc(m.p.url) + '" target="_blank" rel="noopener noreferrer">' + esc(m.p.title || '(no title)') + '</a>'
+      var cls = (m.t === newest ? 'new' : '') + (i >= SHOW ? ' more' : '')
+      return '<li class="' + cls + '"><span class="when">' + when(new Date(m.t).toISOString(), true) + '</span><span>' + what + '</span></li>'
+    }).join('')
+    var more = $('milesMore')
+    more.hidden = list.length <= SHOW
+    more.textContent = all ? 'show fewer' : 'show all ' + list.length
+  }
+
   function showTip (e, text) {
     var t = $('tip')
     t.textContent = text
@@ -505,6 +569,8 @@
     render()
   })
   ;['q', 'platform', 'paid', 'status', 'copies', 'tz'].forEach(function (id) { $(id).addEventListener('input', render) })
+  $('tz').addEventListener('input', function () { if (state.miles) renderMiles() })
+  $('milesMore').addEventListener('click', function () { $('miles').classList.toggle('all'); renderMiles() })
   $('csv').addEventListener('click', csv)
 
   var bust = '?t=' + Date.now()
@@ -514,7 +580,9 @@
   ]).then(function (res) {
     state.posts = prepare(res[0], res[1])
     $('updated').textContent = '· radar ' + when(res[0].updated, true)
+    state.miles = milestones(state.posts)
     render()
+    renderMiles()
   })
 })()
 
