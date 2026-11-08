@@ -1,7 +1,7 @@
 {
   "since": "2026-10-20",
   "strong": ["katapult games", "katapultgames", "katapult_games", "4591520", "dunkthegame", "dunk the game", "squaddunk", "友尽大扣篮", "友尽 大扣篮", "街頭大灌籃"],
-  "gameWords": "\\bgame\\b|\\bgames\\b|gaming|steam|wishlist|\\bdemo\\b|playtest|co-?op|multiplayer|proximity|first[- ]person|trailer|\\bjogo\\b|\\bjuego\\b|videojuego|primera persona|primeira pessoa|\\bspiel\\b|\\bjeu\\b|\\bgioco\\b|игра|游戏|ゲーム|indie|\\bpc\\b",
+  "gameWords": "\\bgame\\b|\\bgames\\b|gaming|steam|wishlist|\\bdemo\\b|playtest|co-?op|multiplayer|proximity|first[- ]person|trailer|\\bjogo\\b|\\bjuego\\b|videojuego|primera persona|primeira pessoa|\\bspiel\\b|\\bjeu\\b|\\bgioco\\b|игра|游戏|ゲーム|indie|\\bpc\\b|\\boyun\\w*|birinci şahıs",
   "exclude": "\\bnba\\b|lebron|giannis|wemby|curry|dude perfect|high ?school|\\bncaa\\b|\\bwnba\\b|2k2\\d|roblox|nike|jordan|sneaker|slam tank|fortnite|dunk contest|\\bdunks? on\\b|gym ?class|dunk ?verse|dunk ?max|mixtape|game[- ]winning|playstore|android|dunk ?c.ty|mokami|project dunk|swish ?(&|and) ?dunk|swishanddunk|flappy dunk|hoop ?world|usa basketball|capcut|dunk template|hangtime|kuroko|\bovr\b",
   "paid": "#ad\\b|\\[ ?a ?d ?\\]|\\bad\\)|\\(ad|sponsor|patrocin|publi\\b|#publi|paid partnership|uwu biz|jestr",
   "official": ["@dunkthegame", "@DUNKthegame", "@dunk.thegame", "@katapultgames", "@katapult_games"],
@@ -35,7 +35,11 @@
       "Basketball Spiel mit Freunden",
       "DUNK バスケ ゲーム",
       "DUNK 농구 게임",
-      "街頭大灌籃"
+      "街頭大灌籃",
+      "DUNK oyunu",
+      "DUNK basketbol oyunu",
+      "birinci şahıs basketbol oyunu",
+      "arkadaşlarla basketbol oyunu"
     ]
   },
   "bilibili": {
@@ -85,7 +89,8 @@
       ["友尽大扣篮", "zh"],
       ["DUNK 第一人称 篮球 Katapult", "zh"],
       ["街頭大灌籃", "tw"],
-      ["DUNK 第一人稱 籃球 Katapult", "tw"]
+      ["DUNK 第一人稱 籃球 Katapult", "tw"],
+      ["DUNK basketbol oyunu", "tr"]
     ],
     "bing": [
       ["Katapult Games DUNK", "en-US"],
@@ -98,9 +103,9 @@
   },
   "sweep": {
     "since": "2026-10-28",
-    "ball": "basket|basquete|baloncesto|b[aá]squet|hoops?\\b|\\bdunk|enterrada|clavada|篮球|扣篮|バスケ|농구",
-    "game": "steam|wishlist|playtest|\\bindie|gaming|videojuego|proximity|first[- ]person|primeira pessoa|primera persona|co-?op|multiplayer|\\bpc\\b",
-    "ig": ["dunk the game", "dunkthegame", "dunk game", "dunk the game playtest", "dunk juego", "dunk jogo", "dunk basketball game", "game dunk", "dunk steam", "dunk videojuego", "dunk indie game", "dunk proximity chat", "dunk first person", "dunk friends game", "dunk basquete", "dunk baloncesto", "dunk jeu basket", "dunk spiel basketball", "dunk wishlist", "dunk co-op", "dunk physics", "basketball game steam", "jogo de basquete primeira pessoa", "jogo de basquete com amigos", "first person basketball", "basketball game proximity chat"],
-    "tt": ["dunk the game", "dunk the game playtest", "dunk game steam", "dunk juego", "dunk jogo", "dunk basketball game", "dunk indie game", "dunk proximity chat", "dunk first person basketball", "dunk friends game", "dunk moon basketball", "dunk co-op basketball", "dunk physics basketball", "dunk jeu basket", "dunk wishlist", "dunkthegame", "basketball game with friends steam", "jogo de basquete steam", "juego de basquet steam", "dunk spiel basketball", "jogo de basquete primeira pessoa", "jogo de basquete na lua", "basquete com amigos jogo", "first person basketball game", "new basketball game steam", "basketball game proximity chat", "友尽大扣篮"]
+    "ball": "basket|basquete|baloncesto|b[aá]squet|hoops?\\b|\\bdunk|enterrada|clavada|basketbol|smaç|篮球|扣篮|バスケ|농구",
+    "game": "steam|wishlist|playtest|\\bindie|gaming|videojuego|proximity|first[- ]person|primeira pessoa|primera persona|birinci şahıs|\\boyun|co-?op|multiplayer|\\bpc\\b",
+    "ig": ["dunk the game", "dunkthegame", "dunk game", "dunk the game playtest", "dunk juego", "dunk jogo", "dunk basketball game", "game dunk", "dunk steam", "dunk videojuego", "dunk indie game", "dunk proximity chat", "dunk first person", "dunk friends game", "dunk basquete", "dunk baloncesto", "dunk jeu basket", "dunk spiel basketball", "dunk wishlist", "dunk co-op", "dunk physics", "basketball game steam", "jogo de basquete primeira pessoa", "jogo de basquete com amigos", "first person basketball", "basketball game proximity chat", "dunk oyunu", "dunk basketbol oyunu", "basketbol oyunu", "arkadaşlarla basketbol"],
+    "tt": ["dunk the game", "dunk the game playtest", "dunk game steam", "dunk juego", "dunk jogo", "dunk basketball game", "dunk indie game", "dunk proximity chat", "dunk first person basketball", "dunk friends game", "dunk moon basketball", "dunk co-op basketball", "dunk physics basketball", "dunk jeu basket", "dunk wishlist", "dunkthegame", "basketball game with friends steam", "jogo de basquete steam", "juego de basquet steam", "dunk spiel basketball", "jogo de basquete primeira pessoa", "jogo de basquete na lua", "basquete com amigos jogo", "first person basketball game", "new basketball game steam", "basketball game proximity chat", "友尽大扣篮", "dunk oyunu", "dunk basketbol oyunu", "basketbol oyunu steam", "arkadaşlarla basketbol oyunu"]
   }
 }
