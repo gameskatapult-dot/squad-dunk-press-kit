@@ -1,12 +1,12 @@
 # Radar DUNK — 2026-11-08
 
-141 posts · 5.0 M visitas en total · 97 creadores
+142 posts · 5.0 M visitas en total · 98 creadores
 
 | Origen | Posts | Visitas |
 |---|---:|---:|
 | Jestr | 0 | 0 |
 | orgánico | 0 | 0 |
-| sin marcar | 141 | 5.0 M |
+| sin marcar | 142 | 5.0 M |
 
 ## Para revisar
 
@@ -139,6 +139,7 @@
 | tiktok | [@spielfund5](https://www.tiktok.com/@spielfund5/video/7703178711922642209) | Ball direkt ins GESICHT 🏀💥 DUNK: Physik-Basketball bis 3 gegen 3, Li | 958 | +3 | 2026-11-01 | ? | en-sitio |
 | youtube | [@B1GMBB](https://www.youtube.com/watch?v=W37drJjZeMU) | Compton Dunk vs. Montana / Oregon Men's Basketball | 950 | +0 | 2026-11-05 | ? | revisar |
 | instagram | [@gamesfound](https://www.instagram.com/gamesfound/reel/DfCm92kifsl/) | This Basketball Game Is So Unfair | 938 | +7 | 2026-10-28 | ? · pagado | en-sitio |
+| tiktok | [@exabisplays](https://www.tiktok.com/@exabisplays/video/7703291392038112543) | Pull Up Jumper Highlights #gaming #gamingmemes #DUNK #highlights | 926 |  | 2026-11-01 | ? | en-sitio |
 | tiktok | [@sointhisgame8](https://www.tiktok.com/@sointhisgame8/video/7702833240205249814) | You can throw the ball right at your rival's FACE 🏀💥 DUNK: 3v3 physi | 847 | +37 | 2026-10-31 | ? | en-sitio |
 | instagram | [@chewyradar](https://www.instagram.com/p/DfCmVDaS4z3/) | [ad] 3 co-op steam playtests you need to play! 1. DUNK 2. Buried Whisp | 804 | +26 | 2026-10-28 | ? · pagado | en-sitio |
 | tiktok | [@game_reviews1100](https://www.tiktok.com/@game_reviews1100/video/7703287372854742280) | Basketball on the MOON 🌕🏀 DUNK: low-gravity physics basketball, jung | 715 | +10 | 2026-11-01 | ? | en-sitio |
