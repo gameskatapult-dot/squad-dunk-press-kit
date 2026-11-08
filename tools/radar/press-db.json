@@ -629,16 +629,10 @@
   "gn:CBMiSkFVX3lxTE1yWGNvYXM2RzQzaGg2THJaQVo3VDJDY3lydEViUWpYdFhfcldvUjBnMjEzbDczRDdqVmo0QkQ0bVdERjBoMElraDhn": "2026-11-07",
   "gn:CBMiUEFVX3lxTE56Zm10cWstZFA3MTN2LVFiVjB6Y05DclRiZGNOUzhyaG53WXRPTWN6STNSYlQ5N25xRllsZ1pxVm1yVDNuVkd3dmt3bk9VczI0": "2026-11-07",
   "gn:CBMiZEFVX3lxTE1EaXRtR2dhYmwwakdMUkZ0SHZPZ2hxV2pUSkM5djJTLW1UMjVJR0tNRHQ1cEtvSjBISmNwU1ZpSF9pczlNYWlnaHZoMGxmbkt4ZlUweUxTTDc4d25rM0ZfWWg4QVA": "2026-11-08",
-  "s.animeanime.jp/article/2026/11/05/104510.html": "2026-11-08"
+  "s.animeanime.jp/article/2026/11/05/104510.html": "2026-11-08",
+  "gn:CBMikgFBVV95cUxOWGdMMmwwNE5ybjlPd3pZcTJSU0RTV3FoaVpKaEtnMDhuYW9iZHJqQzBjRTR2ZUFob1FtcU01aDFtWE15Y1lSRzRoMlptRTAwNVoyeVUwSEdvUng2dlFTRkI2dFg2X2ZSeFlNX1l2Sl83THN3LTctdmFaMUdSZ1NkQ3FEOWFMWXpyWEhKN1gxeEM2UQ": "2026-11-08"
  },
  "runs": [
-  {
-   "date": "2026-11-01T23:05:13.551Z",
-   "command": "site",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
   {
    "date": "2026-11-02T12:21:12.132Z",
    "command": "scan",
@@ -981,6 +975,13 @@
    "found": 0,
    "requests": 0,
    "kb": 0
+  },
+  {
+   "date": "2026-11-08T20:22:18.148Z",
+   "command": "scan",
+   "found": 0,
+   "requests": 23,
+   "kb": 1067
   }
  ]
 }
