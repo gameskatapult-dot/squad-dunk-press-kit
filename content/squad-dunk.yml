@@ -150,17 +150,24 @@ localization:
           views_label: "views on creator videos"
           prompt: "Post your DUNK clips with #DUNKthegame and we might feature them here."
           prev: "Previous clips"
-          next: "Next clips"
         press:
           title: "What the press is saying"
           articles_label: "articles"
           languages_label: "languages"
           prev: "Previous articles"
-          next: "Next articles"
         voices:
-          eyebrow: "Community"
+          eyebrow: "On X"
           title: "What people are saying"
-          subtitle: "Reactions on X since the announcement"
+          subtitle: "Reactions since the announcement"
+        discord:
+          title: "Pull up to our Discord"
+          subtitle: "Clips, screenshots and first impressions from our early playtests."
+          cta: "Join the Discord"
+          invited: "You've been invited to join"
+          online: "online"
+          members_label: "members"
+          members_count: "1,000+"
+          shared_title: "Shared by our players on Discord"
         quick_facts:
           developer: "Developer"
           developer_value: "Katapult Games · Ireland"
@@ -200,6 +207,7 @@ localization:
           menu: Menu
           sections:
             creators: "Creators"
+            community: "Community"
             press: "Press"
             announcement: "Announcement"
             factsheet: "The game"
@@ -466,17 +474,24 @@ localization:
           views_label: "visualizaciones en videos de creadores"
           prompt: "Sube tus clips de DUNK con #DUNKthegame y puede que salgan aquí."
           prev: "Clips anteriores"
-          next: "Clips siguientes"
         press:
           title: "Lo que dice la prensa"
           articles_label: "artículos"
           languages_label: "idiomas"
           prev: "Artículos anteriores"
-          next: "Artículos siguientes"
         voices:
-          eyebrow: "Comunidad"
+          eyebrow: "En X"
           title: "Lo que dice la gente"
-          subtitle: "Reacciones en X desde el anuncio"
+          subtitle: "Reacciones desde el anuncio"
+        discord:
+          title: "Pásate por nuestro Discord"
+          subtitle: "Clips, capturas y primeras impresiones de nuestros primeros playtests."
+          cta: "Entrar al Discord"
+          invited: "Te invitaron a unirte a"
+          online: "conectados"
+          members_label: "miembros"
+          members_count: "+1.000"
+          shared_title: "Lo que suben los jugadores al Discord"
         quick_facts:
           developer: "Desarrollo"
           developer_value: "Katapult Games · Irlanda"
@@ -516,6 +531,7 @@ localization:
           menu: Menú
           sections:
             creators: "Creadores"
+            community: "Comunidad"
             press: "Prensa"
             announcement: "Anuncio"
             factsheet: "El juego"
@@ -783,17 +799,24 @@ localization:
           views_label: "просмотров роликов авторов"
           prompt: "Публикуйте клипы DUNK с тегом #DUNKthegame — возможно, мы покажем их здесь."
           prev: "Предыдущие клипы"
-          next: "Следующие клипы"
         press:
           title: "Что пишет пресса"
           articles_label: "статей"
           languages_label: "языков"
           prev: "Предыдущие статьи"
-          next: "Следующие статьи"
         voices:
-          eyebrow: "Сообщество"
+          eyebrow: "В X"
           title: "Что говорят игроки"
-          subtitle: "Реакции в X после анонса"
+          subtitle: "Реакции после анонса"
+        discord:
+          title: "Заглядывайте в наш Discord"
+          subtitle: "Клипы, скриншоты и первые впечатления с наших первых плейтестов."
+          cta: "Зайти в Discord"
+          invited: "Вас приглашают в"
+          online: "в сети"
+          members_label: "участников"
+          members_count: "1000+"
+          shared_title: "Это выложили игроки в нашем Discord"
         quick_facts:
           developer: "Разработчик"
           developer_value: "Katapult Games · Ирландия"
@@ -833,6 +856,7 @@ localization:
           menu: Меню
           sections:
             creators: "Авторы"
+            community: "Сообщество"
             press: "Пресса"
             announcement: "Анонс"
             factsheet: "Об игре"
@@ -1070,17 +1094,24 @@ localization:
           views_label: "クリエイター動画の総再生数"
           prompt: "#DUNKthegame を付けてDUNKのクリップを投稿すると、ここで紹介されるかも。"
           prev: "前のクリップ"
-          next: "次のクリップ"
         press:
           title: "メディア掲載"
           articles_label: "件の記事"
           languages_label: "言語"
           prev: "前の記事"
-          next: "次の記事"
         voices:
-          eyebrow: "コミュニティ"
+          eyebrow: "Xより"
           title: "みんなの声"
-          subtitle: "発表後の X での反応"
+          subtitle: "発表後の反応"
+        discord:
+          title: "Discordに遊びにおいで"
+          subtitle: "初期プレイテストのクリップ、スクショ、そして最初の感想。"
+          cta: "Discordに参加"
+          invited: "招待が届いています"
+          online: "オンライン"
+          members_label: "メンバー"
+          members_count: "1,000+"
+          shared_title: "プレイヤーがDiscordに投稿してくれたもの"
         quick_facts:
           developer: "開発"
           developer_value: "Katapult Games · アイルランド"
@@ -1120,6 +1151,7 @@ localization:
           menu: メニュー
           sections:
             creators: "クリエイター"
+            community: "コミュニティ"
             press: "プレス"
             announcement: "アナウンス"
             factsheet: "ゲーム概要"
@@ -1348,17 +1380,24 @@ localization:
           views_label: "创作者视频总播放量"
           prompt: "带上 #DUNKthegame 发布你的友尽大扣篮片段，说不定会出现在这里。"
           prev: "上一组片段"
-          next: "下一组片段"
         press:
           title: "媒体怎么说"
           articles_label: "篇文章"
           languages_label: "种语言"
           prev: "上一篇"
-          next: "下一篇"
         voices:
-          eyebrow: "社区"
+          eyebrow: "来自 X"
           title: "玩家怎么说"
-          subtitle: "公布以来 X 上的反响"
+          subtitle: "公布以来的反响"
+        discord:
+          title: "来我们的 Discord 玩"
+          subtitle: "来自早期试玩的片段、截图和第一印象。"
+          cta: "加入 Discord"
+          invited: "邀请你加入"
+          online: "在线"
+          members_label: "成员"
+          members_count: "1000+"
+          shared_title: "玩家们在 Discord 分享的内容"
         quick_facts:
           developer: "开发商"
           developer_value: "Katapult Games · 爱尔兰"
@@ -1398,6 +1437,7 @@ localization:
           menu: 菜单
           sections:
             creators: "创作者"
+            community: "社区"
             press: "媒体报道"
             announcement: "公告"
             factsheet: "游戏介绍"
@@ -1653,17 +1693,24 @@ localization:
           views_label: "Aufrufe auf Creator-Videos"
           prompt: "Poste deine DUNK-Clips mit #DUNKthegame – vielleicht zeigen wir sie hier."
           prev: "Vorherige Clips"
-          next: "Nächste Clips"
         press:
           title: "Was die Presse sagt"
           articles_label: "Artikel"
           languages_label: "Sprachen"
           prev: "Vorherige Artikel"
-          next: "Nächste Artikel"
         voices:
-          eyebrow: "Community"
+          eyebrow: "Auf X"
           title: "Was die Leute sagen"
-          subtitle: "Reaktionen auf X seit der Ankündigung"
+          subtitle: "Reaktionen seit der Ankündigung"
+        discord:
+          title: "Schau auf unserem Discord vorbei"
+          subtitle: "Clips, Screenshots und erste Eindrücke aus unseren frühen Playtests."
+          cta: "Zum Discord"
+          invited: "Du wurdest eingeladen zu"
+          online: "online"
+          members_label: "Mitglieder"
+          members_count: "1.000+"
+          shared_title: "Von unseren Spielern auf Discord geteilt"
         quick_facts:
           developer: "Entwickler"
           developer_value: "Katapult Games · Irland"
@@ -1703,6 +1750,7 @@ localization:
           menu: Menü
           sections:
             creators: "Creator"
+            community: "Community"
             press: "Presse"
             announcement: "Ankündigung"
             factsheet: "Das Spiel"
@@ -1971,17 +2019,24 @@ localization:
           views_label: "vues sur les vidéos de créateurs"
           prompt: "Publiez vos clips de DUNK avec #DUNKthegame : ils pourraient apparaître ici."
           prev: "Clips précédents"
-          next: "Clips suivants"
         press:
           title: "Ce qu'en dit la presse"
           articles_label: "articles"
           languages_label: "langues"
           prev: "Articles précédents"
-          next: "Articles suivants"
         voices:
-          eyebrow: "Communauté"
+          eyebrow: "Sur X"
           title: "Ce que les gens en disent"
-          subtitle: "Réactions sur X depuis l’annonce"
+          subtitle: "Réactions depuis l’annonce"
+        discord:
+          title: "Passez sur notre Discord"
+          subtitle: "Clips, captures et premières impressions de nos premiers playtests."
+          cta: "Rejoindre le Discord"
+          invited: "Vous êtes invité à rejoindre"
+          online: "en ligne"
+          members_label: "membres"
+          members_count: "1 000+"
+          shared_title: "Partagé par nos joueurs sur Discord"
         quick_facts:
           developer: "Développeur"
           developer_value: "Katapult Games · Irlande"
@@ -2021,6 +2076,7 @@ localization:
           menu: Menu
           sections:
             creators: "Créateurs"
+            community: "Communauté"
             press: "Presse"
             announcement: "Annonce"
             factsheet: "Le jeu"
@@ -2290,17 +2346,24 @@ localization:
           views_label: "visualizações em vídeos de criadores"
           prompt: "Publique seus clipes de DUNK com #DUNKthegame e eles podem aparecer aqui."
           prev: "Clipes anteriores"
-          next: "Próximos clipes"
         press:
           title: "O que a imprensa está dizendo"
           articles_label: "artigos"
           languages_label: "idiomas"
           prev: "Artigos anteriores"
-          next: "Próximos artigos"
         voices:
-          eyebrow: "Comunidade"
+          eyebrow: "No X"
           title: "O que a galera está dizendo"
-          subtitle: "Reações no X desde o anúncio"
+          subtitle: "Reações desde o anúncio"
+        discord:
+          title: "Cola no nosso Discord"
+          subtitle: "Clipes, prints e primeiras impressões dos nossos primeiros playtests."
+          cta: "Entrar no Discord"
+          invited: "Você foi convidado para entrar em"
+          online: "online"
+          members_label: "membros"
+          members_count: "1.000+"
+          shared_title: "Postado pelos jogadores no nosso Discord"
         quick_facts:
           developer: "Desenvolvedora"
           developer_value: "Katapult Games · Irlanda"
@@ -2340,6 +2403,7 @@ localization:
           menu: Menu
           sections:
             creators: "Criadores"
+            community: "Comunidade"
             press: "Imprensa"
             announcement: "Anúncio"
             factsheet: "O jogo"

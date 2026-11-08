@@ -14,6 +14,10 @@
       const value = getPathValue(activeTranslation, node.getAttribute('data-l10n'))
       if (typeof value === 'string') node.textContent = value
     })
+    Array.from(scope.querySelectorAll('[data-l10n-template]')).forEach(function (node) {
+      const value = getPathValue(activeTranslation, node.getAttribute('data-l10n-template'))
+      if (typeof value === 'string') node.textContent = value.replace('{name}', node.getAttribute('data-name') || '')
+    })
     attributes.forEach(function (attribute) {
       const marker = 'data-l10n-' + attribute
       const targets = Array.from(scope.querySelectorAll('[' + marker + ']'))
@@ -654,6 +658,70 @@
     update()
   }
 
+  // Puts a container's children in a new random order and returns them in that order.
+  function shuffleChildren (parent) {
+    const items = Array.from(parent.children)
+    for (let i = items.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1))
+      const swap = items[i]
+      items[i] = items[j]
+      items[j] = swap
+    }
+    items.forEach(function (item) { parent.appendChild(item) })
+    return items
+  }
+
+  // Discord invite card: live member and online counts (and the server's name and icon) from
+  // Discord's public invite endpoint. If that can't be reached the card keeps its static text.
+  async function setupDiscordInvite () {
+    const card = document.querySelector('[data-discord-invite]')
+    if (!card || !card.dataset.code) return
+    let data = null
+    try {
+      const response = await fetch('https://discord.com/api/v10/invites/' + encodeURIComponent(card.dataset.code) + '?with_counts=true')
+      if (response.ok) data = await response.json()
+    } catch (error) {}
+    if (!data || !data.guild) return
+    const number = new Intl.NumberFormat(activeLanguage || 'en')
+    const name = card.querySelector('[data-discord-name]')
+    if (name && data.guild.name) name.textContent = data.guild.name
+    const icon = card.querySelector('[data-discord-icon]')
+    if (icon && data.guild.icon) icon.src = 'https://cdn.discordapp.com/icons/' + data.guild.id + '/' + data.guild.icon + '.png?size=128'
+    const members = card.querySelector('[data-discord-members]')
+    if (members && data.approximate_member_count) {
+      members.removeAttribute('data-l10n')
+      members.textContent = number.format(data.approximate_member_count)
+    }
+    const online = card.querySelector('[data-discord-online]')
+    const onlineWrap = card.querySelector('[data-discord-online-wrap]')
+    if (online && onlineWrap && data.approximate_presence_count) {
+      online.textContent = number.format(data.approximate_presence_count)
+      onlineWrap.hidden = false
+    }
+  }
+
+  // Community clips: muted loops that only load and play while on screen (and not at all with
+  // reduced motion, where the poster stays).
+  function setupHangoutVideos () {
+    const board = document.querySelector('[data-hangout-photos]')
+    if (board) shuffleChildren(board)
+    const videos = Array.from(document.querySelectorAll('[data-hangout-video]'))
+    if (!videos.length || !('IntersectionObserver' in window)) return
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        const video = entry.target
+        if (entry.isIntersecting) {
+          const playing = video.play()
+          if (playing && playing.catch) playing.catch(function () {})
+        } else {
+          video.pause()
+        }
+      })
+    }, { threshold: 0.25 })
+    videos.forEach(function (video) { observer.observe(video) })
+  }
+
   // Fan tweets from tweets.json (written by tools/radar/tweets.mjs) in two rows drifting opposite ways.
   // Each row repeats its quotes until half of it is wider than the screen, then doubles itself, so the
   // -50% loop never shows a gap. The repeats are hidden from screen readers and the keyboard.
@@ -1230,12 +1298,19 @@
     setupScenes()
     setupYoutubeEmbeds()
     setupTrailer()
-    setupCommunity()
-    setupPress()
-    setupVoices()
+    // These fill in from JSON and push the sections below them down, so a #section arrival is
+    // repeated once they are in, unless the visitor has started scrolling by then.
+    const loading = [setupCommunity(), setupPress(), setupVoices()]
+    setupHangoutVideos()
+    setupDiscordInvite()
     setupSteamWidgets()
     setupScreenshotCarousels()
     setupGalleryLightbox()
     scrollToInitialHash()
+    let moved = false
+    const stop = function () { moved = true }
+    ;['wheel', 'touchstart', 'keydown'].forEach(function (type) { window.addEventListener(type, stop, { once: true, passive: true }) })
+    await Promise.allSettled(loading)
+    if (!moved) scrollToInitialHash()
   })
 }())

@@ -188,6 +188,35 @@ body.has-community-player { overflow: hidden; }
 .voices__text { font: 600 16px/1.3 var(--body); }
 .voices__who { color: var(--soft); font-size: 13px; font-weight: 700; }
 
+/* Community: a casual "hangout" board, taped-up game photos next to a Discord-style chat of
+   hand-picked playtest quotes (anonymous, from the in-game survey). */
+.hangout { padding: clamp(56px, 7vw, 88px) 0; text-align: center; border-bottom: 1px solid var(--line); overflow: hidden; }
+.hangout .title { margin-bottom: 10px; }
+.hangout .community__prompt { max-width: 620px; margin-left: auto; margin-right: auto; }
+.hangout__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 4vw, 56px); align-items: center; margin-top: 12px; text-align: left; }
+.hangout__board-title { margin: 0 0 14px !important; color: var(--soft); font-size: 15px; font-weight: 700; text-align: center; transform: rotate(-1.5deg); }
+.hangout__board-title::before { content: "📌 "; }
+.hangout__photos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 14px; padding: 8px; }
+.dunk .hangout__photo { position: relative; padding: 8px 8px 22px; background: var(--cream); border-radius: 3px; box-shadow: 0 10px 24px rgba(0, 0, 0, .45); transform: rotate(var(--tilt, 0deg)); transition: transform .25s ease; }
+.hangout__photo:hover { transform: rotate(0deg) scale(1.04); z-index: 1; }
+.hangout__photo::before { content: ""; position: absolute; top: -9px; left: 50%; width: 64px; height: 18px; background: rgba(239, 138, 60, .75); transform: translateX(-50%) rotate(-3deg); }
+.hangout__photo img, .hangout__photo video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; }
+.invite { padding: 22px 22px 24px; background: #24211d; border: 1px solid var(--line); border-radius: 12px; }
+.invite__label { margin: 0 0 14px !important; color: var(--soft); font-size: 13px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.invite__server { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
+.invite__icon { flex: none; width: 64px; height: 64px; object-fit: cover; background: var(--bg-deep); border-radius: 18px; }
+.invite__name { margin: 0 0 4px !important; color: var(--cream); font-size: 22px; font-weight: 800; line-height: 1.1; }
+.invite__counts { display: flex; flex-wrap: wrap; gap: 4px 16px; margin: 0 !important; color: var(--soft); font-size: 14px; font-weight: 600; }
+.invite__count strong { color: var(--cream); font-weight: 800; }
+.invite__count[hidden] { display: none; }
+.invite__dot { display: inline-block; width: 9px; height: 9px; margin-right: 6px; background: #80848e; border-radius: 50%; }
+.invite__dot--online { background: #3ba55d; }
+.dunk .invite .hangout__join { width: 100%; }
+@media (max-width: 860px) {
+  .hangout__grid { grid-template-columns: 1fr; }
+  .hangout__photos { max-width: 520px; margin: 0 auto; }
+}
+
 /* Press: articles about DUNK in a row of link cards, newest first. */
 .press { padding: clamp(56px, 7vw, 88px) 0; text-align: center; border-bottom: 1px solid var(--line); }
 .press .title { margin-bottom: 10px; }
