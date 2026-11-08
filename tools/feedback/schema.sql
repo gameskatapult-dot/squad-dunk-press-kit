@@ -79,3 +79,5 @@ CREATE TABLE IF NOT EXISTS team_messages (
 CREATE INDEX IF NOT EXISTS idx_team_item ON team_messages(item_id, id);
 CREATE INDEX IF NOT EXISTS idx_team_created ON team_messages(created_at);
 CREATE INDEX IF NOT EXISTS idx_items_ai ON items(ai_at);
+CREATE INDEX IF NOT EXISTS idx_items_submission ON items(submission_id);
+CREATE INDEX IF NOT EXISTS idx_items_ai_created ON items(ai_at, created_at);

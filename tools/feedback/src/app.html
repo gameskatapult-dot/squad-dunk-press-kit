@@ -1235,7 +1235,7 @@ async function load() {
   if (sel && byId.has(sel) && state.mode === 'advanced') openItem(sel, { keep: true });
 }
 load().catch((e) => { $('#app').innerHTML = `<div class="empty"><b>Couldn't load feedback</b>${esc(e.message)}</div>`; });
-setInterval(() => { if (!document.hidden && !document.activeElement?.matches('input,textarea,select')) load().catch(() => {}); }, 120000);
+setInterval(() => { if (!document.hidden && !document.activeElement?.matches('input,textarea,select')) load().catch(() => {}); }, 600000); // cada 10 min: cada recarga lee toda la tabla
 </script>
 </body>
 </html>

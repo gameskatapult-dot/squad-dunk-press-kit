@@ -80,7 +80,9 @@ async function fillTextAttachment(db, dc, it) {
 }
 
 // Mensajes viejos que ya estaban guardados sin leer su message.txt (pocos por corrida).
-export async function repairTextAttachments(env, db, dc) {
+export async function repairTextAttachments(env, db, dc, { force = false } = {}) {
+  // Recorre la tabla, así que corre una vez por hora y no cada 5 minutos.
+  if (!force && new Date().getUTCMinutes() >= 5) return 0;
   const rows = await db.prepare(`SELECT id, channel_id, thread_id, content, attachments FROM items
     WHERE (content IS NULL OR TRIM(content) = '') AND attachments LIKE '%.txt%'
     AND ('txtfail:' || id) NOT IN (SELECT key FROM cursors) ORDER BY created_at DESC LIMIT 3`).all();
@@ -111,6 +113,24 @@ async function storeMessages(env, db, messages, channelId, source, dc) {
     .filter((m) => m.type === 19 && m.message_reference?.message_id)
     .map((m) => m.message_reference.message_id);
   const known = new Set();
+  // Envíos que todavía están como fila de la planilla (rango por id: usa el índice, no recorre la tabla).
+  const sheetSubs = new Set();
+  if (messages.some((m) => m.embeds?.length)) {
+    const sr = await db.prepare("SELECT submission_id FROM items WHERE id >= 'sheet:' AND id < 'sheet;' AND submission_id IS NOT NULL").all();
+    sr.results.forEach((r) => sheetSubs.add(r.submission_id));
+  }
+  // Lo que ya está guardado: si no cambió nada, no se vuelve a escribir (cada corrida relee los últimos 100 mensajes).
+  const stored = new Map();
+  const seenComments = new Set();
+  const idList = [...ids];
+  for (let i = 0; i < idList.length; i += 90) {
+    const chunk = idList.slice(i, i + 90);
+    const marks = chunk.map(() => '?').join(',');
+    const r1 = await db.prepare(`SELECT id, title, content, reactions FROM items WHERE id IN (${marks})`).bind(...chunk).all();
+    r1.results.forEach((r) => stored.set(r.id, r));
+    const r2 = await db.prepare(`SELECT id FROM comments WHERE id IN (${marks})`).bind(...chunk).all();
+    r2.results.forEach((r) => seenComments.add(r.id));
+  }
   if (replyTargets.length) {
     const q = `SELECT id FROM items WHERE id IN (${replyTargets.map(() => '?').join(',')})`;
     const rows = await db.prepare(q).bind(...replyTargets).all();
@@ -120,6 +140,7 @@ async function storeMessages(env, db, messages, channelId, source, dc) {
     if (isSkippable(m, env.DISCORD_CLIENT_ID)) continue;
     const parent = m.type === 19 ? m.message_reference?.message_id : null;
     if (parent && (known.has(parent) || ids.has(parent)) && !m.author?.bot) {
+      if (seenComments.has(m.id)) continue;
       stmts.push(
         db.prepare('INSERT OR IGNORE INTO comments (id, item_id, author_name, content, created_at) VALUES (?, ?, ?, ?, ?)')
           .bind(m.id, parent, m.author?.global_name || m.author?.username, m.content, m.timestamp),
@@ -128,12 +149,18 @@ async function storeMessages(env, db, messages, channelId, source, dc) {
       continue;
     }
     const it = messageToItem(m, { guildId: env.GUILD_ID, channelId, source });
+    const old = stored.get(it.id);
+    const hasTxt = (it.attachments || []).some(isTextFile);
+    if (old && old.title === (it.title ?? null) && old.reactions === it.reactions
+      && (old.content === it.content || (hasTxt && old.content))) continue; // sin cambios
     await fillTextAttachment(db, dc, it);
     stmts.push(upsertStmt(db, it));
     // Si este envío ya estaba importado desde la planilla, se queda la versión de Discord.
-    if (it.submission_id) {
-      stmts.push(db.prepare("UPDATE items SET duplicate_of = ?1 WHERE duplicate_of IN (SELECT id FROM items WHERE submission_id = ?2 AND id LIKE 'sheet:%')").bind(it.id, it.submission_id));
-      stmts.push(db.prepare("DELETE FROM items WHERE submission_id = ? AND id LIKE 'sheet:%'").bind(it.submission_id));
+    // Antes esto recorría la tabla entera por cada mensaje en cada corrida (millones de lecturas al día).
+    if (it.submission_id && sheetSubs.has(it.submission_id)) {
+      sheetSubs.delete(it.submission_id);
+      stmts.push(db.prepare("UPDATE items SET duplicate_of = ?1 WHERE duplicate_of IN (SELECT id FROM items WHERE id >= 'sheet:' AND id < 'sheet;' AND submission_id = ?2)").bind(it.id, it.submission_id));
+      stmts.push(db.prepare("DELETE FROM items WHERE id >= 'sheet:' AND id < 'sheet;' AND submission_id = ?").bind(it.submission_id));
     }
   }
   if (stmts.length) await db.batch(stmts);
@@ -217,11 +244,12 @@ async function syncForum(env, db, dc, forumId, source) {
 
   // Los posts nuevos necesitan leer su primer mensaje; los conocidos solo se actualizan.
   const ids = [...new Set(threads.map((t) => t.id))];
+  const knownRows = new Map();
   const known = new Set();
   for (let i = 0; i < ids.length; i += 90) {
     const chunk = ids.slice(i, i + 90);
-    const rows = await db.prepare(`SELECT id FROM items WHERE id IN (${chunk.map(() => '?').join(',')})`).bind(...chunk).all();
-    rows.results.forEach((r) => known.add(r.id));
+    const rows = await db.prepare(`SELECT id, title, forum_tags, replies FROM items WHERE id IN (${chunk.map(() => '?').join(',')})`).bind(...chunk).all();
+    rows.results.forEach((r) => { known.add(r.id); knownRows.set(r.id, r); });
   }
 
   const stmts = [];
@@ -232,6 +260,8 @@ async function syncForum(env, db, dc, forumId, source) {
     seen.add(t.id);
     const tags = (t.applied_tags || []).map((id) => tagNames[id]).filter(Boolean);
     if (known.has(t.id)) {
+      const k = knownRows.get(t.id);
+      if (k && k.title === t.name && k.forum_tags === JSON.stringify(tags) && k.replies === (t.message_count || 0)) continue; // sin cambios
       stmts.push(
         db.prepare('UPDATE items SET title = ?, forum_tags = ?, replies = ? WHERE id = ?')
           .bind(t.name, JSON.stringify(tags), t.message_count || 0, t.id),

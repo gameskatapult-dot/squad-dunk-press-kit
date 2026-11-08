@@ -142,3 +142,12 @@ npx wrangler d1 execute dunk-feedback --remote --file migrations/0004_voice.sql
 npx wrangler deploy
 npx wrangler d1 execute dunk-feedback --remote --command "UPDATE items SET ai_at = NULL WHERE fields != '[]'"
 ```
+
+## Límite gratis de D1 (nov 2026)
+
+El 8-nov la app pasó el límite diario gratis de D1 (5 millones de filas leídas). Causa: en cada corrida (cada 5 min) se releen los últimos 100 mensajes, y por cada envío del juego se buscaba en la tabla completa si estaba repetido en la planilla (2 recorridos completos × 100 mensajes × 288 corridas al día). Arreglo:
+- La búsqueda de la planilla usa el rango de ids `sheet:` (índice), y solo cuando ese envío sigue como fila de la planilla.
+- Los mensajes y hilos del foro que no cambiaron ya no se vuelven a escribir.
+- La reparación de message.txt corre una vez por hora.
+- La página se recarga sola cada 10 min (antes 2).
+- `migrations/0005_indexes.sql` agrega índices (correr cuando D1 vuelva a aceptar lecturas).
