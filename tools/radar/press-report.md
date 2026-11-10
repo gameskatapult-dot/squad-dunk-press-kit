@@ -1,11 +1,12 @@
-# Prensa DUNK — 2026-11-09
+# Prensa DUNK — 2026-11-10
 
-23 artículos · 23 en el sitio · 11 idiomas
+24 artículos · 23 en el sitio · 11 idiomas
 
 ## Para revisar
 
 | Fecha | Medio | Título | Idioma | Por qué | Estado | id |
 |---|---|---|---|---|---|---|
+| 2021-08-06 | Slamdunk.ru | [Розыгрыш от Slam Dunk Kicks совместно с Puma](https://www.slamdunk.ru/news/world/rozygrysh-ot-slam-dunk-kicks-sovmestno-s-puma-r63759/) | ru | DUNK + basket + juego | revisar | `d6253d525e` |
 
 ## Nuevos (sin publicar)
 

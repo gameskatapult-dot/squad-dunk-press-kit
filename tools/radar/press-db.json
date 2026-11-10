@@ -568,6 +568,21 @@
    "source": "manual",
    "firstSeen": "2026-11-07",
    "thumb": "press/2cd13f8e99.jpg"
+  },
+  "slamdunk.ru/news/world/rozygrysh-ot-slam-dunk-kicks-sovmestno-s-puma-r63759": {
+   "id": "d6253d525e",
+   "url": "https://www.slamdunk.ru/news/world/rozygrysh-ot-slam-dunk-kicks-sovmestno-s-puma-r63759/",
+   "outlet": "Slamdunk.ru",
+   "host": "slamdunk.ru",
+   "title": "Розыгрыш от Slam Dunk Kicks совместно с Puma",
+   "desc": "Делаем ещё один экспресс розыгрыш, будем разыгрывать баскетбольный мяч Puma! Отдельное спасибо PUMA RUSSIA! К мячу мы добавим баскетбольные шорты или футболку, на выбор самих участников комьюнити…",
+   "image": "https://www.slamdunk.ru/uploads/monthly_2021_08/uOmcbAft7J0.jpeg.fd083f4247e78efa6e7830999935d413.jpeg",
+   "lang": "ru",
+   "date": "2021-08-06",
+   "status": "revisar",
+   "reason": "DUNK + basket + juego",
+   "source": "google: Dunk баскетбол игра",
+   "firstSeen": "2026-11-10"
   }
  },
  "rejected": {
@@ -630,30 +645,10 @@
   "gn:CBMiUEFVX3lxTE56Zm10cWstZFA3MTN2LVFiVjB6Y05DclRiZGNOUzhyaG53WXRPTWN6STNSYlQ5N25xRllsZ1pxVm1yVDNuVkd3dmt3bk9VczI0": "2026-11-07",
   "gn:CBMiZEFVX3lxTE1EaXRtR2dhYmwwakdMUkZ0SHZPZ2hxV2pUSkM5djJTLW1UMjVJR0tNRHQ1cEtvSjBISmNwU1ZpSF9pczlNYWlnaHZoMGxmbkt4ZlUweUxTTDc4d25rM0ZfWWg4QVA": "2026-11-08",
   "s.animeanime.jp/article/2026/11/05/104510.html": "2026-11-08",
-  "gn:CBMikgFBVV95cUxOWGdMMmwwNE5ybjlPd3pZcTJSU0RTV3FoaVpKaEtnMDhuYW9iZHJqQzBjRTR2ZUFob1FtcU01aDFtWE15Y1lSRzRoMlptRTAwNVoyeVUwSEdvUng2dlFTRkI2dFg2X2ZSeFlNX1l2Sl83THN3LTctdmFaMUdSZ1NkQ3FEOWFMWXpyWEhKN1gxeEM2UQ": "2026-11-08"
+  "gn:CBMikgFBVV95cUxOWGdMMmwwNE5ybjlPd3pZcTJSU0RTV3FoaVpKaEtnMDhuYW9iZHJqQzBjRTR2ZUFob1FtcU01aDFtWE15Y1lSRzRoMlptRTAwNVoyeVUwSEdvUng2dlFTRkI2dFg2X2ZSeFlNX1l2Sl83THN3LTctdmFaMUdSZ1NkQ3FEOWFMWXpyWEhKN1gxeEM2UQ": "2026-11-08",
+  "gn:CBMikgFBVV95cUxOOXJFTVNZOENiWEhYNm9fTXA2UjdQZWhHM3BHMDRRU1BhdS1XcEw0Ukt5SzVJVTJIOEk2a1JLZjg0SEFWX01TM3VuTEFvUkc3aU55a2dFM1JGZzg1cU9hbDRYOHVlMFJ6UWktUGtzcEQteWtlNU54d0JfNUFxWEhPa21oTGxiQ2lhbE5mNnBkZXpwZw": "2026-11-10"
  },
  "runs": [
-  {
-   "date": "2026-11-02T12:24:54.083Z",
-   "command": "scan",
-   "found": 0,
-   "requests": 26,
-   "kb": 722
-  },
-  {
-   "date": "2026-11-02T17:08:58.931Z",
-   "command": "scan",
-   "found": 0,
-   "requests": 26,
-   "kb": 843
-  },
-  {
-   "date": "2026-11-02T17:58:04.273Z",
-   "command": "scan",
-   "found": 0,
-   "requests": 26,
-   "kb": 940
-  },
   {
    "date": "2026-11-02T19:54:40.002Z",
    "command": "scan",
@@ -978,6 +973,27 @@
   },
   {
    "date": "2026-11-09T14:55:41.850Z",
+   "command": "site",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-10T11:39:52.843Z",
+   "command": "scan",
+   "found": 1,
+   "requests": 30,
+   "kb": 1356
+  },
+  {
+   "date": "2026-11-10T11:39:56.156Z",
+   "command": "approve",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-10T11:39:56.375Z",
    "command": "site",
    "found": 0,
    "requests": 0,
