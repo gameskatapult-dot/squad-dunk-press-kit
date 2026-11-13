@@ -615,6 +615,21 @@
    "source": "google: DUNK basquete primeira pessoa 2027",
    "firstSeen": "2026-11-11",
    "thumb": "press/7f196dc005.jpg"
+  },
+  "themainstreetmouse.com/2026/11/11/dunk-the-halls-2026-knicks-spurs-christmas-day-magic-kingdom": {
+   "id": "86b9d5ad06",
+   "url": "https://themainstreetmouse.com/2026/11/11/dunk-the-halls-2026-knicks-spurs-christmas-day-magic-kingdom/",
+   "outlet": "The Main Street Mouse",
+   "host": "themainstreetmouse.com",
+   "title": "Dunk the Halls Returns: Mickey, Stitch and Angel Bring the Knicks vs. Spurs to Magic Kingdom",
+   "desc": "Disney, ESPN and the NBA's animated Christmas Day game puts the Knicks and Spurs on Main Street, U.S.A. at noon ET, with Angel's halftime dance party and Daisy Duck on the sideline.",
+   "image": "https://themainstreetmouse.com/wp-content/uploads/2026/11/DTH3_Pressroom-Featured-Image.webp",
+   "lang": "en",
+   "date": "2026-11-12",
+   "status": "revisar",
+   "reason": "DUNK + basket + juego",
+   "source": "bing: Katapult Games DUNK",
+   "firstSeen": "2026-11-13"
   }
  },
  "rejected": {
@@ -683,27 +698,6 @@
   "gn:CBMitgFBVV95cUxNaVpueWNUd0hXVjVBZE0xazNOVmszN2JGU0t2Z01QN1ZlaHFfQ3pIeTN4Uk9RUV9CLVdFYmdrbjZuMXBNY3VvbXhjRHU5Y3QxWnhsV0wtSlRNRm1KX0tjQzlKc3NQZDVGTnNJRHZ0NllxdWdzc21pUmg3RzgxQ3BvbGNCYjJCQVJNYU5jRlB4VFJ4bFVNVTlmMDBVb1dDZWNzZlJzc2JteW5kV0haYzdkVUE3TV9iUQ": "2026-11-11"
  },
  "runs": [
-  {
-   "date": "2026-11-03T16:45:58.224Z",
-   "command": "site",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-11-03T16:59:34.563Z",
-   "command": "scan",
-   "found": 0,
-   "requests": 26,
-   "kb": 772
-  },
-  {
-   "date": "2026-11-03T23:54:25.862Z",
-   "command": "scan",
-   "found": 0,
-   "requests": 29,
-   "kb": 1333
-  },
   {
    "date": "2026-11-04T15:17:16.750Z",
    "command": "scan",
@@ -1028,6 +1022,27 @@
   },
   {
    "date": "2026-11-11T18:14:09.066Z",
+   "command": "site",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-13T00:35:40.873Z",
+   "command": "scan",
+   "found": 1,
+   "requests": 28,
+   "kb": 611
+  },
+  {
+   "date": "2026-11-13T00:35:44.060Z",
+   "command": "approve",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-13T00:35:44.295Z",
    "command": "site",
    "found": 0,
    "requests": 0,

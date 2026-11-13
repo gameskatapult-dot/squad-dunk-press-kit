@@ -1,11 +1,12 @@
-# Prensa DUNK — 2026-11-11
+# Prensa DUNK — 2026-11-13
 
-26 artículos · 25 en el sitio · 11 idiomas
+27 artículos · 25 en el sitio · 11 idiomas
 
 ## Para revisar
 
 | Fecha | Medio | Título | Idioma | Por qué | Estado | id |
 |---|---|---|---|---|---|---|
+| 2026-11-12 | The Main Street Mouse | [Dunk the Halls Returns: Mickey, Stitch and Angel Bring the Knicks vs. Spurs to Magic Kingd](https://themainstreetmouse.com/2026/11/11/dunk-the-halls-2026-knicks-spurs-christmas-day-magic-kingdom/) | en | DUNK + basket + juego | revisar | `86b9d5ad06` |
 | 2021-08-06 | Slamdunk.ru | [Розыгрыш от Slam Dunk Kicks совместно с Puma](https://www.slamdunk.ru/news/world/rozygrysh-ot-slam-dunk-kicks-sovmestno-s-puma-r63759/) | ru | DUNK + basket + juego | revisar | `d6253d525e` |
 
 ## Nuevos (sin publicar)
