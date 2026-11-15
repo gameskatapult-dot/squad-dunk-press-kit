@@ -730,13 +730,6 @@
  },
  "runs": [
   {
-   "date": "2026-11-05T11:12:13.241Z",
-   "command": "scan",
-   "found": 3,
-   "requests": 41,
-   "kb": 4226
-  },
-  {
    "date": "2026-11-05T11:12:13.445Z",
    "command": "approve",
    "found": 0,
@@ -1078,6 +1071,13 @@
    "found": 0,
    "requests": 0,
    "kb": 0
+  },
+  {
+   "date": "2026-11-15T11:40:44.132Z",
+   "command": "scan",
+   "found": 0,
+   "requests": 28,
+   "kb": 527
   }
  ]
 }
