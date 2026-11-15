@@ -274,9 +274,9 @@ export function fixTopic(it, topic) {
   const hasStuff = arr(it.attachments).length || tags.length;
   // 1. El jugador eligió un tag de bug o de gravedad en el foro.
   if (tagHints(tags).some((h) => h.cat === 'bug')) return 'bug';
-  // 2. Nada útil en ninguna respuesta ("idk idk idk", "Not answered" en todo): spam aunque la IA dudara.
+  // 2. Nada útil en ninguna respuesta ("idk idk idk", "???"): spam aunque la IA dudara. Un "GREAT" suelto sigue siendo praise.
   const answers = fields.length ? fields.filter((f) => !isStatField(f.q)).map((f) => f.a) : [it.title, it.content].filter(Boolean);
-  if (!hasStuff && ['other', 'praise'].includes(topic) && isJunk(answers)) return 'spam';
+  if (!hasStuff && topic === 'other' && isJunk(answers)) return 'spam';
   // 3. Encuesta del juego marcada "praise" pero que sí cuenta un problema o pide algo.
   if (topic === 'praise' && fields.length) {
     const pain = fields.filter((f) => answerKind(f.q) === 'pain' && !isNoProblem(f.a)).map((f) => f.a).join(' ');
