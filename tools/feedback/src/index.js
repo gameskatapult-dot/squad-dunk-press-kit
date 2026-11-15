@@ -1,7 +1,7 @@
 import APP_HTML from './app.html';
 import { currentUser, login, callback, logout, page } from './auth.js';
 import { syncAll, fetchThreadMessages, BUDGET } from './sync.js';
-import { classifyPending } from './ai.js';
+import { classifyPending, relabelOnce } from './ai.js';
 import { guessCategory, SYSTEMS } from './parse.js';
 
 const STATUSES = ['new', 'reviewed', 'planned', 'in_progress', 'fixed', 'wontfix'];
@@ -174,6 +174,7 @@ async function api(req, env, user, path) {
 // Lee Discord y, con las llamadas que sobran, clasifica con IA lo pendiente.
 async function runSync(env) {
   const report = await syncAll(env);
+  try { const r = await relabelOnce(env); if (r) report.relabel = r; } catch (e) { report.relabel = { error: String(e.message || e) }; }
   try { report.ai = await classifyPending(env, Math.min(15, 46 - (report.calls || BUDGET))); } catch (e) { report.ai = { error: String(e.message || e) }; }
   return report;
 }
