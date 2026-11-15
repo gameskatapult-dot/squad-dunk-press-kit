@@ -39,6 +39,8 @@ La interfaz está en inglés y tiene dos modos (arriba a la izquierda). La prime
    - **OAuth2**: copia el **Client ID** y el **Client Secret** (*Reset Secret*).
    - **OAuth2 → Redirects**: agrega `https://dunk-feedback.TU-SUBDOMINIO.workers.dev/auth/callback`. El subdominio lo muestra Cloudflare al hacer el deploy, así que puedes volver a este paso después.
 3. Asegúrate de que el bot vea `bug-reports`, `player-feedback` y `beta-feedback`.
+   - Si un canal cambia de tipo (ej. `beta-feedback` pasó a foro con tickets), no hace falta tocar `CHANNELS`: una vez por hora la app mira los canales del servidor, usa el tipo real de cada uno y suma cualquier canal nuevo con el mismo nombre. Lo que sí hay que hacer es sumar el bot al canal nuevo en Discord (Editar canal > Permisos > Add members or roles). Si no puede entrar, el panel lo avisa en rojo al lado de "Synced".
+   - En los foros, los tags del post (Gameplay, Settings, Modes, Customisation, Bug…) se guardan, se ven en el detalle, se pueden buscar y ayudan a la IA a elegir tema y sistema.
 
 ### 2. Cloudflare (desde esta carpeta, en la terminal)
 

@@ -69,10 +69,33 @@ export function isJunk(texts) {
   return list.length === 0 || list.every(isJunkAnswer);
 }
 
+// Tags de los foros de Discord (bug-reports, beta-feedback): el jugador ya dijo de qué se trata.
+// Se busca por pedazo de palabra para aguantar variantes ("Customisation", "Customization", "Settings & UI").
+const TAG_HINTS = [
+  { m: /bug|crash|glitch/, cat: 'bug' },
+  { m: /perform|fps|lag/, cat: 'performance', systems: ['network'] },
+  { m: /network|server|connect|matchmak/, cat: 'network', systems: ['network'] },
+  { m: /control|keybind|input/, cat: 'controls' },
+  { m: /balanc/, cat: 'balance' },
+  // "Settings" sin sistema: a veces piden una opción para una mecánica (ej. marcas en el medidor de tiro).
+  { m: /setting|menu|\bui\b|hud|interface/, cat: 'ui' },
+  { m: /audio|sound|music/, cat: 'audio', systems: ['audio'] },
+  { m: /\bmaps?\b|court/, cat: 'maps', systems: ['maps'] },
+  { m: /custom|cosmetic|skin|outfit|shop/, cat: 'idea', systems: ['cosmetics'] },
+  { m: /tutorial|onboard/, cat: 'gameplay', systems: ['tutorial'] },
+  { m: /suggest|idea|feature|request|\bmodes?\b/, cat: 'idea' },
+  { m: /gameplay|mechanic/, cat: 'gameplay' },
+];
+const tagHints = (forumTags = []) => forumTags.map((x) => String(x).toLowerCase()).flatMap((t) => TAG_HINTS.filter((h) => h.m.test(t)));
+// Partes del juego que salen directo de los tags del post.
+export function systemsFromTags(forumTags = []) {
+  return [...new Set(tagHints(forumTags).flatMap((h) => h.systems || []))];
+}
+
 export function guessCategory(text, forumTags = []) {
   const t = clean(text);
-  const tags = forumTags.map((x) => x.toLowerCase());
-  if (tags.some((x) => x.includes('bug'))) return 'bug';
+  const hints = tagHints(forumTags);
+  if (hints.some((h) => h.cat === 'bug')) return 'bug';
   let best = null;
   let bestScore = 0;
   for (const [cat, words] of Object.entries(CATEGORIES)) {
@@ -81,6 +104,9 @@ export function guessCategory(text, forumTags = []) {
     if (score > bestScore) { bestScore = score; best = cat; }
   }
   if (best) return best;
+  // Si el texto no dice nada claro, manda el tag (primero los concretos como Settings o Audio, después Gameplay/Modes).
+  const specific = hints.find((h) => !['gameplay', 'idea'].includes(h.cat)) || hints[0];
+  if (specific) return specific.cat;
   if (PRAISE.some((w) => has(t, w))) return 'praise';
   return 'other';
 }
@@ -204,7 +230,7 @@ export function deriveFields(item, forumTags = item.forum_tags || []) {
   item.liked = likedField && !/^(nothing|none|n\/?a|no|-|\.)$/i.test(likedField.a.trim()) ? likedField.a : null;
   const problemFields = item.fields.filter((f) => f !== likedField);
   const answers = item.fields.length ? problemFields.map((f) => f.a).join(' ') : item.content;
-  item.systems = guessSystems(`${item.title || ''} ${answers}`);
+  item.systems = [...new Set([...guessSystems(`${item.title || ''} ${answers}`), ...systemsFromTags(forumTags)])];
   item.auto_category = guessCategory(`${item.title || ''} ${answers}`, forumTags);
   const allAnswers = item.fields.length ? item.fields.map((f) => f.a) : [item.title, item.content].filter(Boolean);
   if (!item.attachments.length && !forumTags.length && isJunk(allAnswers)) item.auto_category = 'spam';

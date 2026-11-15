@@ -89,7 +89,10 @@ async function api(req, env, user, path) {
 
   if (path === '/api/me') {
     const last = await env.DB.prepare("SELECT value FROM cursors WHERE key = 'last_sync'").first();
-    return json({ user, last_sync: last?.value || null, statuses: STATUSES, categories: CATEGORIES });
+    const rep = await env.DB.prepare("SELECT value FROM cursors WHERE key = 'last_report'").first();
+    let no_access = [];
+    try { no_access = JSON.parse(rep?.value || '{}').no_access || []; } catch {}
+    return json({ user, last_sync: last?.value || null, no_access, statuses: STATUSES, categories: CATEGORIES });
   }
 
   if (path === '/api/items' && method === 'GET') {

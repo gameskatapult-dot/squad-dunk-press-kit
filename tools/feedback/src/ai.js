@@ -2,7 +2,7 @@
 // Lee cada feedback y decide el tema, las partes del juego que menciona y si es spam.
 // Lo que el equipo confirma a mano (columna category) nunca se toca: la IA solo llena auto_category y systems.
 
-import { CATEGORIES, SYSTEMS, VOICES, answerKind, guessSystems } from './parse.js';
+import { CATEGORIES, SYSTEMS, VOICES, answerKind, guessSystems, systemsFromTags } from './parse.js';
 
 // Palabras que casi nunca se usan en otro sentido.
 const SURE = ['dunk', 'layup', 'steal', 'dribble', 'stamina', 'shooting', 'camera'];
@@ -57,6 +57,7 @@ Do not guess: if a part is not named or clearly described, leave it out. Never a
 voice: only for the in-game survey, which has 3 questions: "What did you enjoy most?" (love), "Was anything frustrating or confusing?" (pain) and "If you could add one thing, what would it be?" (want). For EACH answer, list the parts of the game (same list as systems) that THAT answer talks about. An answer that names no part gets []. For any other feedback, voice is {}.
 
 spam: true only when topic is spam.
+Forum posts may say "Tags chosen by the player": use them as a strong hint (Settings -> ui, Customisation -> cosmetics, Bug -> bug), but the text decides if it says something more specific.
 The answer to "What did you enjoy most?" is praise, not a problem: use it for systems but do not let it decide the topic if there are other answers.
 
 Examples:
@@ -72,6 +73,8 @@ export function itemText(it) {
   const fields = typeof it.fields === 'string' ? JSON.parse(it.fields || '[]') : it.fields || [];
   const parts = [];
   if (it.title) parts.push(`Title: ${it.title}`);
+  const tags = typeof it.forum_tags === 'string' ? JSON.parse(it.forum_tags || '[]') : it.forum_tags || [];
+  if (tags.length) parts.push(`Tags chosen by the player: ${tags.join(', ')}`);
   if (fields.length) for (const f of fields) parts.push(`${f.q}: ${f.a}`);
   else if (it.content) parts.push(it.content);
   return parts.join('\n').slice(0, 1500);
@@ -139,7 +142,8 @@ export async function classifyPending(env, limit = 10) {
     const hasStuff = JSON.parse(it.attachments || '[]').length || JSON.parse(it.forum_tags || '[]').length;
     if (r.topic === 'spam' && hasStuff) r.topic = 'other';
     // La IA a veces se olvida de un sistema obvio; se suman los que se nombran literalmente.
-    const systems = it.systems_by_team ? null : r.systems ? [...new Set([...r.systems, ...guessSystems(itemText(it)).filter((s) => SURE.includes(s))])] : null;
+    const tagSystems = systemsFromTags(JSON.parse(it.forum_tags || '[]'));
+    const systems = it.systems_by_team ? null : r.systems ? [...new Set([...r.systems, ...guessSystems(itemText(it)).filter((s) => SURE.includes(s)), ...tagSystems])] : null;
     const voice = surveyVoice(it, r.voice);
     await env.DB.prepare(`UPDATE items SET ai_at = ?, auto_category = COALESCE(?, auto_category), systems = COALESCE(?, systems), ai_title = ?, voice = COALESCE(?, voice) WHERE id = ?`)
       .bind(now, r.topic, systems ? JSON.stringify(systems) : null, r.topic === 'spam' ? null : r.title, voice ? JSON.stringify(voice) : null, it.id).run();

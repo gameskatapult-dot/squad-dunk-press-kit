@@ -562,7 +562,7 @@ function filtered({ tab = state.tab } = {}) {
       if (state.sys ? !v.includes(state.sys) : !v.length) return false;
     } else if (state.sys && !(it.systems || []).includes(state.sys)) return false;
     if (q) {
-      const hay = `${it.title || ''} ${it.content || ''} ${it.author_name || ''} ${(it.tags || []).join(' ')} ${it.notes || ''}`.toLowerCase();
+      const hay = `${it.title || ''} ${it.content || ''} ${it.author_name || ''} ${(it.tags || []).join(' ')} ${(it.forum_tags || []).join(' ')} ${it.notes || ''}`.toLowerCase();
       if (!q.split(/\s+/).every((w) => hay.includes(w))) return false;
     }
     return true;
@@ -1230,6 +1230,13 @@ async function load() {
   if (me?.avatar) av.src = me.avatar; else av.style.display = 'none';
   av.title = me?.name || '';
   $('#synced').textContent = info.last_sync ? `Synced ${ago(info.last_sync)}` : 'Not synced yet';
+  // El bot no puede leer algún canal (por ejemplo un foro nuevo): se avisa arriba.
+  const blocked = (info.no_access || []).map((k) => '#' + k.split(' ')[0]);
+  if (blocked.length) {
+    $('#synced').textContent += ` · Can't read ${[...new Set(blocked)].join(', ')}`;
+    $('#synced').title = 'Add the "DUNK Feedback" bot to that channel in Discord (Edit channel > Permissions > Add members or roles).';
+    $('#synced').style.color = 'var(--bad, #d33)';
+  } else { $('#synced').title = ''; $('#synced').style.color = ''; }
   const sel = state.sel;
   render();
   if (sel && byId.has(sel) && state.mode === 'advanced') openItem(sel, { keep: true });

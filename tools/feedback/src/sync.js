@@ -222,7 +222,9 @@ async function syncForum(env, db, dc, forumId, source) {
   const tagNames = Object.fromEntries((forum.available_tags || []).map((t) => [t.id, t.name]));
 
   const threads = [];
-  const active = await dc.get(`/guilds/${env.GUILD_ID}/threads/active`);
+  // Una sola llamada por corrida aunque haya varios foros (bug-reports y beta-feedback).
+  if (dc.activeThreads === undefined) dc.activeThreads = await dc.get(`/guilds/${env.GUILD_ID}/threads/active`);
+  const active = dc.activeThreads;
   (active?.threads || []).filter((t) => t.parent_id === forumId).forEach((t) => threads.push(t));
 
   const archived = await dc.get(`/channels/${forumId}/threads/archived/public?limit=100`);
@@ -262,9 +264,10 @@ async function syncForum(env, db, dc, forumId, source) {
     if (known.has(t.id)) {
       const k = knownRows.get(t.id);
       if (k && k.title === t.name && k.forum_tags === JSON.stringify(tags) && k.replies === (t.message_count || 0)) continue; // sin cambios
+      const tagsChanged = k && k.forum_tags !== JSON.stringify(tags);
       stmts.push(
-        db.prepare('UPDATE items SET title = ?, forum_tags = ?, replies = ? WHERE id = ?')
-          .bind(t.name, JSON.stringify(tags), t.message_count || 0, t.id),
+        db.prepare('UPDATE items SET title = ?, forum_tags = ?, replies = ?, ai_at = CASE WHEN ? THEN NULL ELSE ai_at END WHERE id = ?')
+          .bind(t.name, JSON.stringify(tags), t.message_count || 0, tagsChanged ? 1 : 0, t.id),
       );
       continue;
     }
@@ -297,29 +300,76 @@ export function parseChannels(spec) {
     });
 }
 
+// Discord no deja convertir un canal de texto en foro: cuando el equipo cambia un canal
+// (como beta-feedback, que pasó a foro con tickets) aparece un canal NUEVO con otro id.
+// Una vez por hora se mira la lista de canales del servidor y:
+//  - se usa el tipo real de cada canal configurado (texto o foro), diga lo que diga wrangler.toml;
+//  - se suma cualquier otro canal con el mismo nombre (el foro nuevo), sin tocar la config.
+const TEXT_TYPES = [0, 5];
+const FORUM_TYPE = 15;
+const norm = (n) => String(n || '').toLowerCase().replace(/^[^a-z0-9]+/, '').replace(/[^a-z0-9]+/g, '-');
+export function resolveChannels(configured, guildChannels) {
+  if (!Array.isArray(guildChannels)) return configured;
+  const byId = new Map(guildChannels.map((c) => [c.id, c]));
+  const out = [];
+  const add = (id, source, kind) => { if (!out.some((c) => c.id === id)) out.push({ id, source, kind }); };
+  for (const ch of configured) {
+    const real = byId.get(ch.id);
+    if (real) add(ch.id, ch.source, real.type === FORUM_TYPE ? 'forum' : TEXT_TYPES.includes(real.type) ? 'text' : ch.kind);
+    // Canal nuevo con el mismo nombre (ej. el foro beta-feedback que reemplazó al canal de texto).
+    for (const c of guildChannels) {
+      if (c.id === ch.id || norm(c.name) !== norm(ch.source)) continue;
+      if (c.type === FORUM_TYPE) add(c.id, ch.source, 'forum');
+      else if (TEXT_TYPES.includes(c.type)) add(c.id, ch.source, 'text');
+    }
+    // Si el canal configurado ya no existe y no hay reemplazo, se deja para que el reporte lo muestre.
+    if (!real && !out.some((c) => c.source === ch.source)) add(ch.id, ch.source, ch.kind);
+  }
+  return out;
+}
+async function channelList(env, db, dc) {
+  const configured = parseChannels(env.CHANNELS);
+  const cached = await getCursor(db, 'channels_resolved');
+  try {
+    const c = cached ? JSON.parse(cached) : null;
+    if (c && c.spec === env.CHANNELS && Date.now() - Date.parse(c.at) < 60 * 60 * 1000) return c.list;
+  } catch {}
+  const guild = await dc.get(`/guilds/${env.GUILD_ID}/channels`);
+  if (!guild) return configured;
+  const list = resolveChannels(configured, guild);
+  await setCursor(db, 'channels_resolved', JSON.stringify({ at: new Date().toISOString(), spec: env.CHANNELS, list }));
+  return list;
+}
+
 export async function syncAll(env) {
   const db = env.DB;
   const dc = new Discord(env.DISCORD_BOT_TOKEN, env.DISCORD_API || API);
   const report = {};
   // Se rota el orden para que ningún canal se quede siempre sin presupuesto.
-  const channels = parseChannels(env.CHANNELS);
+  let channels;
+  try { channels = await channelList(env, db, dc); } catch { channels = parseChannels(env.CHANNELS); }
   const turn = Number((await getCursor(db, 'turn')) || 0);
   await setCursor(db, 'turn', String((turn + 1) % Math.max(1, channels.length)));
   const ordered = channels.slice(turn % Math.max(1, channels.length)).concat(channels.slice(0, turn % Math.max(1, channels.length)));
+  report.channels = {};
   for (const ch of ordered) {
+    const key = `${ch.source} (${ch.kind} ${ch.id})`;
     try {
-      report[ch.source] = ch.kind === 'forum' ? await syncForum(env, db, dc, ch.id, ch.source) : await syncTextChannel(env, db, dc, ch.id, ch.source);
+      report.channels[key] = ch.kind === 'forum' ? await syncForum(env, db, dc, ch.id, ch.source) : await syncTextChannel(env, db, dc, ch.id, ch.source);
     } catch (e) {
       if (e instanceof BudgetError) {
-        report[ch.source] = { stopped: e.message || 'call budget used up, continues next run' };
+        report.channels[key] = { stopped: e.message || 'call budget used up, continues next run' };
         break;
       }
-      report[ch.source] = { error: String(e.message || e) };
+      report.channels[key] = { error: String(e.message || e) };
     }
   }
+  // Canales a los que el bot no puede entrar (hay que sumarlo en "Add members or roles").
+  report.no_access = Object.entries(report.channels).filter(([, r]) => r?.error === 'no access').map(([k]) => k);
   try { report.text_files = await repairTextAttachments(env, db, dc); } catch (e) { report.text_files = String(e.message || e); }
   await setCursor(db, 'last_sync', new Date().toISOString());
   report.calls = dc.calls;
+  await setCursor(db, 'last_report', JSON.stringify(report)).catch(() => {});
   return report;
 }
 
