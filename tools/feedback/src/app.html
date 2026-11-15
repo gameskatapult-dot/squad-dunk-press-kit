@@ -639,7 +639,7 @@ function renderSimple() {
       <select class="select" id="sBuild" aria-label="Game version"><option value="">All versions</option>${builds().map((b) => `<option value="${esc(b)}" ${vb === b ? 'selected' : ''}>${esc(b === NO_VERSION ? b : 'Version ' + b)}</option>`).join('')}</select>
       <div class="spacer"></div>
       ${spamN ? `<button class="link-btn muted-link" data-go="spam" title="Nonsense answers are hidden from the inbox and charts">${fmt(spamN)} hidden as spam</button>` : ''}
-      <button class="icon-btn dl" id="exportSimple" title="Download all feedback as a spreadsheet">${DL_ICON}<span>Download sheet</span></button></div>
+      <button class="icon-btn dl" id="exportSimple" title="Download every feedback as an Excel file (also opens in Google Sheets)">${DL_ICON}<span>Download sheet</span></button></div>
     <section class="hero">
       <div style="flex:1;min-width:220px">
         <h1>${inbox ? `${fmt(inbox)} new ${inbox === 1 ? 'feedback' : 'feedback'} to review` : 'All caught up 🙌'}</h1>
@@ -716,7 +716,7 @@ function toolbar() {
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"/></svg>Filters${nHidden ? ` · ${nHidden}` : ''}</button>
     ${state.tab === 'top' ? '' : `<select class="select" id="fSort" aria-label="Sort"><option value="new">Newest first</option><option value="old">Oldest first</option><option value="asked">Most requested</option><option value="votes">Most reactions</option><option value="prio">Priority</option><option value="talk">Recently discussed</option></select>`}
     <div class="spacer"></div>
-    <button class="icon-btn dl" id="exportBtn" title="Download what you see as a spreadsheet (opens in Google Sheets or Excel)">${DL_ICON}<span>Download sheet</span></button>
+    <button class="icon-btn dl" id="exportBtn" title="Download what you see as an Excel file (also opens in Google Sheets)">${DL_ICON}<span>Download sheet</span></button>
   </div>
   ${state.fOpen ? `<div class="fpanel">
     <select class="select" id="fSrc" aria-label="Source"><option value="">All sources</option>${Object.entries(SRC).map(([k, v]) => `<option value="${k}" ${state.src === k ? 'selected' : ''}>${v}</option>`).join('')}</select>
@@ -1025,21 +1025,102 @@ function shortQ(q) {
   if (/add|one thing|would add/i.test(q)) return 'Would add';
   return q.replace(/[?:]+$/, '');
 }
-function exportCsv(list, label) {
-  const cols = ['Date', 'Version', 'Source', 'Moment', 'Topic', 'Game systems', 'Status', 'Priority', 'People asking', 'Reactions', 'Feedback', 'What they liked', 'Team notes', 'Team comments', 'Link'];
-  const cell = (v) => { const s = String(v ?? ''); return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s; };
+// Survey answer for one of the 3 in-game questions ('Liked' | 'Frustrating' | 'Would add').
+function surveyAnswer(it, which) {
+  const f = (it.fields || []).find((x) => shortQ(x.q) === which);
+  return f ? f.a : (which === 'Liked' ? it.liked || '' : '');
+}
+// One row per feedback with every useful field, saved as a real Excel file (.xlsx).
+// Excel opens it with columns already split in any language, and Google Sheets imports it as is.
+function exportSheet(list, label) {
+  const D = 'date', N = 'num';
+  const cols = [
+    ['Date', 16, D], ['Version', 9], ['Channel', 15], ['Author', 16], ['Title', 32], ['Feedback', 60],
+    ['Liked', 30], ['Frustrating', 30], ['Would add', 30], ['Discord tags', 18], ['Topic', 12], ['Game systems', 22],
+    ['Status', 11], ['Priority', 9], ['Team tags', 16], ['Moment', 12], ['Mode', 10], ['People asking', 8, N], ['Reactions', 8, N],
+    ['Replies', 8, N], ['Duplicate of', 22], ['Team notes', 30], ['Team comments', 8, N], ['Attachments', 8, N], ['Link', 40], ['ID', 22],
+  ];
   const rows = list.map((it) => [
-    new Date(it.created_at).toISOString().slice(0, 10), it.build || '', SRC[it.source] || it.source, it.context || '',
-    CAT_ONE[catOf(it)], (it.systems || []).map((x) => SYS[x] || x).join(', '), STATUS[it.status], PRIO[it.priority] || '',
-    asked(it), it.reactions || 0, plainFeedback(it), it.liked || '', it.notes || '', it.team_count || 0, it.url || '',
-  ].map(cell).join(','));
-  const csv = '\uFEFF' + [cols.join(','), ...rows].join('\r\n');
+    new Date(it.created_at), it.build || '', SRC[it.source] || it.source, it.author_name || '', it.title || it.ai_title || '', it.fields?.length ? plainFeedback(it) : it.content || '',
+    surveyAnswer(it, 'Liked'), surveyAnswer(it, 'Frustrating'), surveyAnswer(it, 'Would add'), (it.forum_tags || []).join(', '),
+    CAT_ONE[catOf(it)] || catOf(it), (it.systems || []).map((x) => SYS[x] || x).join(', '), STATUS[it.status] || it.status, PRIO[it.priority] || '',
+    (it.tags || []).join(', '), it.context || '', it.mode || '', it.duplicate_of ? '' : asked(it), it.reactions || 0,
+    it.replies || 0, it.duplicate_of || '', it.notes || '', it.team_count || 0, (it.attachments || []).length, it.url || '', it.id,
+  ]);
+  const blob = xlsxBlob('Feedback', cols, rows);
   const a = document.createElement('a');
-  a.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8' }));
-  a.download = `dunk-feedback-${label}-${new Date().toISOString().slice(0, 10)}.csv`;
+  a.href = URL.createObjectURL(blob);
+  a.download = `dunk-feedback-${label}-${new Date().toISOString().slice(0, 10)}.xlsx`;
   document.body.appendChild(a); a.click(); a.remove();
   setTimeout(() => URL.revokeObjectURL(a.href), 2000);
-  toast(`Downloaded ${list.length} rows. In Google Sheets: File → Import → Upload.`);
+  toast(`Downloaded ${list.length} feedback. Opens in Excel, or Google Sheets: File → Import → Upload.`);
+}
+
+// ---------- Tiny .xlsx writer (no library: XML files inside an uncompressed zip) ----------
+function xlsxBlob(sheetName, cols, rows) {
+  const x = (v) => String(v).replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F￾￿]/g, '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  const colName = (c) => { let s = ''; for (c++; c; c = Math.floor((c - 1) / 26)) s = String.fromCharCode(65 + ((c - 1) % 26)) + s; return s; };
+  const cell = (v, c, r, type, head) => {
+    const at = colName(c) + r;
+    if (head) return `<c r="${at}" s="1" t="inlineStr"><is><t>${x(v)}</t></is></c>`;
+    if (type === 'date' && v instanceof Date && !isNaN(v)) return `<c r="${at}" s="2"><v>${v.getTime() / 86400000 + 25569}</v></c>`;
+    if (type === 'num' && v !== '' && v != null && isFinite(v)) return `<c r="${at}"><v>${Number(v)}</v></c>`;
+    const s = String(v ?? '').slice(0, 32000);
+    return s ? `<c r="${at}" t="inlineStr"><is><t xml:space="preserve">${x(s)}</t></is></c>` : '';
+  };
+  const lastCol = colName(cols.length - 1), lastRow = rows.length + 1;
+  const sheet = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">
+<sheetViews><sheetView workbookViewId="0"><pane ySplit="1" topLeftCell="A2" activePane="bottomLeft" state="frozen"/></sheetView></sheetViews>
+<cols>${cols.map((c, i) => `<col min="${i + 1}" max="${i + 1}" width="${c[1]}" customWidth="1"/>`).join('')}</cols>
+<sheetData><row r="1">${cols.map((c, i) => cell(c[0], i, 1, '', true)).join('')}</row>
+${rows.map((row, ri) => `<row r="${ri + 2}">${row.map((v, ci) => cell(v, ci, ri + 2, cols[ci][2])).join('')}</row>`).join('\n')}</sheetData>
+<autoFilter ref="A1:${lastCol}${lastRow}"/></worksheet>`;
+  const files = {
+    '[Content_Types].xml': `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/><Override PartName="/xl/worksheets/sheet1.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/><Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/></Types>`,
+    '_rels/.rels': `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/></Relationships>`,
+    'xl/workbook.xml': `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><sheets><sheet name="${x(sheetName)}" sheetId="1" r:id="rId1"/></sheets><definedNames><definedName name="_xlnm._FilterDatabase" localSheetId="0" hidden="1">'${x(sheetName)}'!$A$1:$${lastCol}$${lastRow}</definedName></definedNames></workbook>`,
+    'xl/_rels/workbook.xml.rels': `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet1.xml"/><Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/></Relationships>`,
+    'xl/styles.xml': `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><numFmts count="1"><numFmt numFmtId="164" formatCode="yyyy-mm-dd hh:mm"/></numFmts><fonts count="2"><font><sz val="11"/><name val="Calibri"/></font><font><b/><sz val="11"/><name val="Calibri"/></font></fonts><fills count="2"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/></fill></fills><borders count="1"><border><left/><right/><top/><bottom/><diagonal/></border></borders><cellStyleXfs count="1"><xf numFmtId="0" fontId="0" fillId="0" borderId="0"/></cellStyleXfs><cellXfs count="3"><xf numFmtId="0" fontId="0" fillId="0" borderId="0" xfId="0"/><xf numFmtId="0" fontId="1" fillId="0" borderId="0" xfId="0" applyFont="1"/><xf numFmtId="164" fontId="0" fillId="0" borderId="0" xfId="0" applyNumberFormat="1"/></cellXfs><cellStyles count="1"><cellStyle name="Normal" xfId="0" builtinId="0"/></cellStyles></styleSheet>`,
+    'xl/worksheets/sheet1.xml': sheet,
+  };
+  return new Blob([zipStore(files)], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+}
+let CRC_TABLE;
+function crc32(b) {
+  if (!CRC_TABLE) { CRC_TABLE = new Uint32Array(256); for (let n = 0; n < 256; n++) { let c = n; for (let k = 0; k < 8; k++) c = c & 1 ? 0xEDB88320 ^ (c >>> 1) : c >>> 1; CRC_TABLE[n] = c >>> 0; } }
+  let c = 0xFFFFFFFF; for (let i = 0; i < b.length; i++) c = CRC_TABLE[(c ^ b[i]) & 0xFF] ^ (c >>> 8);
+  return (c ^ 0xFFFFFFFF) >>> 0;
+}
+function zipStore(files) {
+  const enc = new TextEncoder(), parts = [], central = [];
+  let off = 0, n = 0;
+  for (const [name, text] of Object.entries(files)) {
+    const nb = enc.encode(name), data = enc.encode(text), crc = crc32(data);
+    const h = new DataView(new ArrayBuffer(30));
+    h.setUint32(0, 0x04034b50, true); h.setUint16(4, 20, true); h.setUint16(6, 0x0800, true);
+    h.setUint32(14, crc, true); h.setUint32(18, data.length, true); h.setUint32(22, data.length, true); h.setUint16(26, nb.length, true);
+    parts.push(new Uint8Array(h.buffer), nb, data);
+    const c = new DataView(new ArrayBuffer(46));
+    c.setUint32(0, 0x02014b50, true); c.setUint16(4, 20, true); c.setUint16(6, 20, true); c.setUint16(8, 0x0800, true);
+    c.setUint32(16, crc, true); c.setUint32(20, data.length, true); c.setUint32(24, data.length, true); c.setUint16(28, nb.length, true); c.setUint32(42, off, true);
+    central.push(new Uint8Array(c.buffer), nb);
+    off += 30 + nb.length + data.length; n++;
+  }
+  const size = central.reduce((s, p) => s + p.length, 0);
+  const e = new DataView(new ArrayBuffer(22));
+  e.setUint32(0, 0x06054b50, true); e.setUint16(8, n, true); e.setUint16(10, n, true); e.setUint32(12, size, true); e.setUint32(16, off, true);
+  return concat([...parts, ...central, new Uint8Array(e.buffer)]);
+}
+function concat(arrs) {
+  const out = new Uint8Array(arrs.reduce((s, a) => s + a.length, 0));
+  let o = 0; for (const a of arrs) { out.set(a, o); o += a.length; }
+  return out;
 }
 
 // ---------- Saving ----------
@@ -1096,8 +1177,8 @@ document.addEventListener('click', async (e) => {
   const open = t.closest('[data-open]'); if (open && !t.closest('button')) { openItem(open.dataset.open); return; }
   const row = t.closest('.row'); if (row) { openItem(row.dataset.id); return; }
   if (t.id === 'back') { $('#detail').classList.remove('open'); return; }
-  if (t.closest('#exportBtn')) { const list = (state.tab === 'top' ? filtered({ tab: 'all' }).filter((i) => !i.duplicate_of && isOpen(i)) : current.length ? current : filtered()); exportCsv(list, state.tab); return; }
-  if (t.closest('#exportSimple')) { const list = items.filter((i) => !i.duplicate_of && (!state.sBuild || buildOf(i) === state.sBuild)).sort((a, b) => b.created_at.localeCompare(a.created_at)); exportCsv(list, state.sBuild ? 'v' + state.sBuild : 'all'); return; }
+  if (t.closest('#exportBtn')) { const list = (state.tab === 'top' ? filtered({ tab: 'all' }).filter((i) => !i.duplicate_of && isOpen(i)) : current.length ? current : filtered()); exportSheet(list, state.tab); return; }
+  if (t.closest('#exportSimple')) { const list = items.filter((i) => !state.sBuild || buildOf(i) === state.sBuild).sort((a, b) => b.created_at.localeCompare(a.created_at)); exportSheet(list, state.sBuild ? 'v' + state.sBuild : 'all'); return; }
   const dm = t.closest('[data-delmsg]');
   if (dm) {
     try { await call(`/api/chat/${dm.dataset.delmsg}`, { method: 'DELETE', body: '{}' }); const el = document.querySelector(`[data-msg="${dm.dataset.delmsg}"]`); el?.remove(); const it = byId.get(chatFor); if (it) { it.team_count = Math.max(0, (it.team_count || 1) - 1); updateRowTalk(it); } toast('Comment deleted'); }
