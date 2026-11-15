@@ -101,6 +101,8 @@ h1, h2, h3 { margin: 0; }
 .like blockquote { margin: 0; font-size: 14px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .like figcaption { font-size: 12px; color: var(--muted); margin-top: auto; }
 .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.play { display: inline-flex; align-items: center; gap: 4px; white-space: nowrap; }
+.play svg { opacity: .7; }
 .chip { font-size: 12px; background: var(--surface-2); border-radius: 999px; padding: 2px 10px; color: var(--text-2); border: 0; }
 button.chip:hover { color: var(--text); }
 .trend-up { color: var(--accent); font-weight: 600; }
@@ -367,6 +369,42 @@ function answerKind(q) {
 }
 const SYS = { shooting: 'Shooting', layup: 'Layups', dunk: 'Dunking', steal: 'Steals & blocks', dribble: 'Dribbling', passing: 'Passing & plays', movement: 'Movement', stamina: 'Stamina', camera: 'Camera', tutorial: 'Tutorial', lobby: 'Lobby', social: 'Friends & social', network: 'Connection', ui: 'Menus & UI', audio: 'Sound', bots: 'Solo play & bots', maps: 'Maps & courts', cosmetics: 'Shop & cosmetics' };
 const NO_VERSION = 'No version';
+// Datos de juego que manda el juego como campos del embed ("Completed matches: 48", "Hours in completed matches: 4.39").
+const isStatQ = (q) => /completed matches|hours in/i.test(String(q || ''));
+const answersOf = (it) => (it.fields || []).filter((f) => !isStatQ(f.q));
+function playOf(it) {
+  if (it._play !== undefined) return it._play;
+  let matches = null, hours = null;
+  for (const f of it.fields || []) {
+    const n = parseFloat(String(f.a).replace(',', '.'));
+    if (!Number.isFinite(n)) continue;
+    if (/completed matches/i.test(f.q) && !/hours/i.test(f.q)) matches = n;
+    else if (/hours/i.test(f.q)) hours = n;
+  }
+  return (it._play = matches == null && hours == null ? null : { matches, hours });
+}
+function fmtHours(h) {
+  if (h == null) return '';
+  const m = Math.round(h * 60);
+  if (m < 60) return `${m} min`;
+  const hh = Math.floor(m / 60), mm = m % 60;
+  return mm ? `${hh} h ${mm} min` : `${hh} h`;
+}
+function playText(it) {
+  const p = playOf(it); if (!p) return '';
+  const parts = [];
+  if (p.matches != null) parts.push(`${fmt(p.matches)} ${p.matches === 1 ? 'match' : 'matches'}`);
+  if (p.hours != null) parts.push(fmtHours(p.hours));
+  return parts.join(' · ');
+}
+const PLAY_ICON = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3v18M5.6 5.6c3.5 3.5 3.5 9.3 0 12.8M18.4 5.6c-3.5 3.5-3.5 9.3 0 12.8"/></svg>';
+const playSpan = (it) => (playText(it) ? `<span class="play" title="How much this player had played when they sent it">${PLAY_ICON}${esc(playText(it))}</span>` : '');
+// Grupos para el filtro "Played".
+const PLAYED = { first: 'First match (0–1)', few: '2–9 matches', many: '10–49 matches', lots: '50+ matches' };
+function playedGroup(it) {
+  const m = playOf(it)?.matches; if (m == null) return '';
+  return m <= 1 ? 'first' : m < 10 ? 'few' : m < 50 ? 'many' : 'lots';
+}
 const DAY = 86400000;
 
 // ---------- State ----------
@@ -379,7 +417,7 @@ const unread = (it) => it.team_count > 0 && (!seen[it.id] || seen[it.id] < it.te
 const TALK_ICON = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></svg>';
 const DL_ICON = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 20h14"/></svg>';
 const state = {
-  mode: 'simple', tab: 'inbox', q: '', src: '', status: '', cat: '', build: '', sys: '', voice: '', sort: 'new', dups: false,
+  mode: 'simple', tab: 'inbox', q: '', src: '', status: '', cat: '', build: '', sys: '', voice: '', played: '', sort: 'new', dups: false,
   sel: null, checked: new Set(), sBuild: '', iBuild: '', iSrc: '',
   welcomed: false, fOpen: false, moreOpen: false, open: {},
 };
@@ -388,8 +426,8 @@ state.checked = new Set(); state.sel = null;
 if (state.tab === 'top') { state.tab = 'all'; state.sort = 'asked'; }
 function persist() {
   try {
-    const { mode, tab, src, status, cat, build, sys, sort, dups, sBuild, iBuild, iSrc, welcomed, fOpen, moreOpen, open } = state;
-    localStorage.setItem('fb_state', JSON.stringify({ mode, tab, src, status, cat, build, sys, sort, dups, sBuild, iBuild, iSrc, welcomed, fOpen, moreOpen, open }));
+    const { mode, tab, src, status, cat, build, sys, played, sort, dups, sBuild, iBuild, iSrc, welcomed, fOpen, moreOpen, open } = state;
+    localStorage.setItem('fb_state', JSON.stringify({ mode, tab, src, status, cat, build, sys, played, sort, dups, sBuild, iBuild, iSrc, welcomed, fOpen, moreOpen, open }));
   } catch {}
 }
 
@@ -423,7 +461,8 @@ const isOpen = (it) => OPEN.includes(it.status);
 const asked = (it) => 1 + (dupCount.get(it.id) || 0);
 function headline(it) {
   if (it.title) return it.title;
-  const text = it.fields?.length ? (it.fields.find((f) => /add|feedback|frustrat/i.test(f.q)) || it.fields[0]).a : it.content;
+  const ans = answersOf(it);
+  const text = ans.length ? (ans.find((f) => /add|feedback|frustrat/i.test(f.q)) || ans[0]).a : it.content;
   // Si el texto es largo o no hay texto, se usa el título corto que puso la IA.
   if (it.ai_title && (!text || !text.trim() || text.length > 70 || text.includes('\n'))) return it.ai_title;
   return (text || (it.attachments?.length ? '(attachment only)' : '(no text)')).split('\n')[0].slice(0, 160);
@@ -431,12 +470,12 @@ function headline(it) {
 function preview(it) {
   const h = headline(it);
   let p;
-  if (it.fields?.length) p = it.fields.map((f) => f.a).filter((a) => a.split('\n')[0].slice(0, 160) !== h).join(' · ');
+  if (answersOf(it).length) p = answersOf(it).map((f) => f.a).filter((a) => a.split('\n')[0].slice(0, 160) !== h).join(' · ');
   else p = it.title || (it.ai_title && h === it.ai_title) ? it.content : (it.content || '').split('\n').slice(1).join(' ');
   return p && p.trim() !== h.trim() ? p : '';
 }
 // Si todo el feedback cabe en el título, no se repite abajo.
-const onlyHeadline = (it) => !it.title && !it.reactions && !it.replies && it.fields?.length <= 1 && !(it.attachments || []).length && (it.fields?.[0]?.a || it.content || '').trim() === headline(it).trim();
+const onlyHeadline = (it) => !it.title && !it.reactions && !it.replies && answersOf(it).length <= 1 && !(it.attachments || []).length && (answersOf(it)[0]?.a || it.content || '').trim() === headline(it).trim();
 function cmpBuild(a, b) {
   if (a === NO_VERSION) return -1; if (b === NO_VERSION) return 1;
   const pa = a.split('.').map(Number), pb = b.split('.').map(Number);
@@ -557,6 +596,7 @@ function filtered({ tab = state.tab } = {}) {
     if (state.cat && catOf(it) !== state.cat) return false;
     if (state.cat !== 'spam' && isSpam(it)) return false;
     if (state.build && buildOf(it) !== state.build) return false;
+    if (state.played && playedGroup(it) !== state.played) return false;
     if (state.voice) {
       const v = (it.voice || {})[state.voice] || [];
       if (state.sys ? !v.includes(state.sys) : !v.length) return false;
@@ -574,11 +614,13 @@ function filtered({ tab = state.tab } = {}) {
     votes: (a, b) => b.reactions - a.reactions || asked(b) - asked(a),
     prio: (a, b) => (a.priority || 9) - (b.priority || 9) || b.created_at.localeCompare(a.created_at),
     talk: (a, b) => (b.team_last || '').localeCompare(a.team_last || '') || b.created_at.localeCompare(a.created_at),
+    // Los que no traen el dato van al final.
+    played: (a, b) => (playOf(b)?.hours ?? playOf(b)?.matches ?? -1) - (playOf(a)?.hours ?? playOf(a)?.matches ?? -1) || b.created_at.localeCompare(a.created_at),
   };
   return list.sort(sorts[state.sort] || sorts.new);
 }
 function goAdvanced(tab, filters = {}) {
-  Object.assign(state, { mode: 'advanced', tab, q: '', src: '', status: '', cat: '', build: '', sys: '', voice: '' }, filters);
+  Object.assign(state, { mode: 'advanced', tab, q: '', src: '', status: '', cat: '', build: '', sys: '', voice: '', played: '' }, filters);
   render();
 }
 
@@ -639,7 +681,7 @@ function renderSimple() {
       <select class="select" id="sBuild" aria-label="Game version"><option value="">All versions</option>${builds().map((b) => `<option value="${esc(b)}" ${vb === b ? 'selected' : ''}>${esc(b === NO_VERSION ? b : 'Version ' + b)}</option>`).join('')}</select>
       <div class="spacer"></div>
       ${spamN ? `<button class="link-btn muted-link" data-go="spam" title="Nonsense answers are hidden from the inbox and charts">${fmt(spamN)} hidden as spam</button>` : ''}
-      <button class="icon-btn dl" id="exportSimple" title="Download all feedback as a spreadsheet">${DL_ICON}<span>Download sheet</span></button></div>
+      <button class="icon-btn dl" id="exportSimple" title="Download every feedback as an Excel file (also opens in Google Sheets)">${DL_ICON}<span>Download sheet</span></button></div>
     <section class="hero">
       <div style="flex:1;min-width:220px">
         <h1>${inbox ? `${fmt(inbox)} new ${inbox === 1 ? 'feedback' : 'feedback'} to review` : 'All caught up 🙌'}</h1>
@@ -698,14 +740,14 @@ function renderAdvanced() {
   if (state.tab === 'liked') return renderLiked();
   renderToolbarAndList();
 }
-const FILTER_LABEL = { src: 'Source', status: 'Status', sys: 'Game system', build: 'Version', voice: 'Answer' };
+const FILTER_LABEL = { src: 'Source', status: 'Status', sys: 'Game system', build: 'Version', voice: 'Answer', played: 'Played' };
 function filterValue(k) {
   const v = state[k];
-  if (k === 'voice') return VOICE[v]; if (k === 'src') return SRC[v]; if (k === 'status') return STATUS[v]; if (k === 'sys') return SYS[v];
+  if (k === 'voice') return VOICE[v]; if (k === 'src') return SRC[v]; if (k === 'status') return STATUS[v]; if (k === 'sys') return SYS[v]; if (k === 'played') return PLAYED[v];
   if (k === 'build') return v === NO_VERSION ? v : 'v' + v; return v;
 }
 function toolbar() {
-  const hidden = ['voice', 'src', 'status', 'sys', 'build'].filter((k) => state[k] && !(k === 'status' && state.tab === 'inbox'));
+  const hidden = ['voice', 'src', 'status', 'sys', 'build', 'played'].filter((k) => state[k] && !(k === 'status' && state.tab === 'inbox'));
   const nHidden = hidden.length + (state.dups && state.tab === 'all' ? 1 : 0);
   const anyFilter = state.q || state.cat || nHidden;
   return `<div class="toolbar">
@@ -714,9 +756,9 @@ function toolbar() {
     <select class="select" id="fCat" aria-label="Topic"><option value="">All topics</option>${Object.entries(CAT).map(([k, v]) => `<option value="${k}" ${state.cat === k ? 'selected' : ''}>${v}</option>`).join('')}</select>
     <button class="icon-btn fbtn ${state.fOpen ? 'on' : ''}" id="fToggle" aria-expanded="${state.fOpen}">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"/></svg>Filters${nHidden ? ` · ${nHidden}` : ''}</button>
-    ${state.tab === 'top' ? '' : `<select class="select" id="fSort" aria-label="Sort"><option value="new">Newest first</option><option value="old">Oldest first</option><option value="asked">Most requested</option><option value="votes">Most reactions</option><option value="prio">Priority</option><option value="talk">Recently discussed</option></select>`}
+    ${state.tab === 'top' ? '' : `<select class="select" id="fSort" aria-label="Sort"><option value="new">Newest first</option><option value="old">Oldest first</option><option value="asked">Most requested</option><option value="votes">Most reactions</option><option value="prio">Priority</option><option value="talk">Recently discussed</option><option value="played">Most time played</option></select>`}
     <div class="spacer"></div>
-    <button class="icon-btn dl" id="exportBtn" title="Download what you see as a spreadsheet (opens in Google Sheets or Excel)">${DL_ICON}<span>Download sheet</span></button>
+    <button class="icon-btn dl" id="exportBtn" title="Download what you see as an Excel file (also opens in Google Sheets)">${DL_ICON}<span>Download sheet</span></button>
   </div>
   ${state.fOpen ? `<div class="fpanel">
     <select class="select" id="fSrc" aria-label="Source"><option value="">All sources</option>${Object.entries(SRC).map(([k, v]) => `<option value="${k}" ${state.src === k ? 'selected' : ''}>${v}</option>`).join('')}</select>
@@ -724,6 +766,7 @@ function toolbar() {
     <select class="select" id="fSys" aria-label="Game system"><option value="">All game systems</option>${Object.entries(SYS).map(([k, v]) => `<option value="${k}" ${state.sys === k ? 'selected' : ''}>${v}</option>`).join('')}</select>
     <select class="select" id="fVoice" aria-label="Answer"><option value="">Any answer</option>${Object.entries(VOICE).map(([k, v]) => `<option value="${k}" ${state.voice === k ? 'selected' : ''}>${VOICE_ICON[k]} ${v}</option>`).join('')}</select>
     <select class="select" id="fBuild" aria-label="Version"><option value="">All versions</option>${builds().map((x) => `<option value="${esc(x)}" ${state.build === x ? 'selected' : ''}>${esc(x === NO_VERSION ? x : 'Version ' + x)}</option>`).join('')}</select>
+    <select class="select" id="fPlayed" aria-label="Played"><option value="">Any time played</option>${Object.entries(PLAYED).map(([k, v]) => `<option value="${k}" ${state.played === k ? 'selected' : ''}>${v}</option>`).join('')}</select>
     ${state.tab === 'all' ? `<label class="toggle"><input type="checkbox" id="fDups" ${state.dups ? 'checked' : ''}> Show duplicates</label>` : ''}
   </div>` : ''}
   ${anyFilter ? `<div class="fchips">${hidden.map((k) => `<button class="fchip" data-unf="${k}">${FILTER_LABEL[k]}: ${esc(filterValue(k))}<span aria-hidden="true">×</span></button>`).join('')}${state.dups && state.tab === 'all' ? '<button class="fchip" data-unf="dups">Showing duplicates<span aria-hidden="true">×</span></button>' : ''}
@@ -766,7 +809,7 @@ function rowHtml(it) {
     <div style="min-width:0">
       <div class="t">${esc(headline(it))}</div>
       ${preview(it) ? `<div class="p">${esc(preview(it))}</div>` : ''}
-      <div class="m">${srcDot(it.source)}<span class="${it.category ? '' : 'suggested'}" title="${it.category ? '' : 'Suggested topic, not confirmed'}">${CAT_ONE[catOf(it)]}</span>${it.build ? `<span>v${esc(it.build)}</span>` : ''}<span>${ago(it.created_at)}</span></div>
+      <div class="m">${srcDot(it.source)}<span class="${it.category ? '' : 'suggested'}" title="${it.category ? '' : 'Suggested topic, not confirmed'}">${CAT_ONE[catOf(it)]}</span>${it.build ? `<span>v${esc(it.build)}</span>` : ''}${playSpan(it)}<span>${ago(it.created_at)}</span></div>
     </div>
     <div class="r">${statusPill(it.status)}${it.team_count ? `<span class="talk ${unread(it) ? 'unread' : ''}" title="${unread(it) ? 'New team comments' : 'Team comments'}">${TALK_ICON}${it.team_count}</span>` : ''}${n > 1 ? `<span class="count" title="People who asked for the same thing">×${n}</span>` : ''}${it.priority === 1 ? '<span class="small" style="color:var(--accent);font-weight:600">High priority</span>' : ''}</div>
   </div>`;
@@ -905,11 +948,11 @@ function renderDetail(it, full) {
   chatFor = it.id;
   d.innerHTML = `
     <button class="btn back" id="back">← Back to list</button>
-    <div class="crumbs">${srcDot(it.source)}${it.build ? `<span>Build ${esc(it.build)}</span>` : ''}${it.context ? `<span>${esc(it.context)}</span>` : ''}${it.mode ? `<span>${esc(it.mode)}</span>` : ''}${(it.forum_tags || []).map((t) => `<span>${esc(t)}</span>`).join('')}
+    <div class="crumbs">${srcDot(it.source)}${it.build ? `<span>Build ${esc(it.build)}</span>` : ''}${it.context ? `<span>${esc(it.context)}</span>` : ''}${it.mode ? `<span>${esc(it.mode)}</span>` : ''}${playSpan(it)}${(it.forum_tags || []).map((t) => `<span>${esc(t)}</span>`).join('')}
       <span>${esc(it.author_name || '')} · ${new Date(it.created_at).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })}</span>
       ${it.url ? `<a href="${esc(it.url)}" target="_blank" rel="noopener">Open in Discord ↗</a>` : '<span>Imported from the spreadsheet</span>'}</div>
     <h2>${esc(headline(it))}</h2>
-    <div class="content" ${onlyHeadline(it) ? 'hidden' : ''}>${it.fields?.length ? it.fields.map((f) => { const k = answerKind(f.q); const v = k ? (it.voice || {})[k] || [] : []; return `<div class="q">${esc(f.q)}</div><div class="a">${esc(f.a)}</div>${v.length ? `<div class="vtags">${v.map((x) => `<button class="vtag" style="--vc:${VOICE_COLOR[k]}" data-voiceq="${k}|${x}" title="See everyone who said this">${VOICE_ICON[k]} ${SYS[x] || esc(x)}</button>`).join('')}</div>` : ''}`; }).join('') : `<div class="a">${esc(it.content || '(no text)')}</div>`}
+    <div class="content" ${onlyHeadline(it) ? 'hidden' : ''}>${answersOf(it).length ? answersOf(it).map((f) => { const k = answerKind(f.q); const v = k ? (it.voice || {})[k] || [] : []; return `<div class="q">${esc(f.q)}</div><div class="a">${esc(f.a)}</div>${v.length ? `<div class="vtags">${v.map((x) => `<button class="vtag" style="--vc:${VOICE_COLOR[k]}" data-voiceq="${k}|${x}" title="See everyone who said this">${VOICE_ICON[k]} ${SYS[x] || esc(x)}</button>`).join('')}</div>` : ''}`; }).join('') : `<div class="a">${esc(it.content || '(no text)')}</div>`}
       ${imgs.length ? `<div class="imgs">${imgs.map((a) => `<a href="${esc(a.url)}" target="_blank" rel="noopener"><img src="${esc(a.url)}" alt="${esc(a.name)}" loading="lazy"></a>`).join('')}</div>` : ''}
       ${files.length ? `<div class="small" style="margin-top:8px">${files.map((a) => `<a href="${esc(a.url)}" target="_blank" rel="noopener">📎 ${esc(a.name)}</a>`).join(' ')}</div>` : ''}
       ${it.reactions || it.replies ? `<div class="small muted" style="margin-top:10px">${it.reactions ? `${fmt(it.reactions)} reactions` : ''}${it.reactions && it.replies ? ' · ' : ''}${it.replies ? `${fmt(it.replies)} replies` : ''}</div>` : ''}
@@ -1016,7 +1059,7 @@ async function loadDiscussions() {
 
 // ---------- Spreadsheet export ----------
 function plainFeedback(it) {
-  if (it.fields?.length) return it.fields.filter((f) => f.a !== it.liked).map((f) => (/^feedback$/i.test(f.q.trim()) ? f.a : `${shortQ(f.q)}: ${f.a}`)).join('\n');
+  if (answersOf(it).length) return answersOf(it).filter((f) => f.a !== it.liked).map((f) => (/^feedback$/i.test(f.q.trim()) ? f.a : `${shortQ(f.q)}: ${f.a}`)).join('\n');
   return [it.title, it.content].filter(Boolean).join('\n');
 }
 function shortQ(q) {
@@ -1025,21 +1068,102 @@ function shortQ(q) {
   if (/add|one thing|would add/i.test(q)) return 'Would add';
   return q.replace(/[?:]+$/, '');
 }
-function exportCsv(list, label) {
-  const cols = ['Date', 'Version', 'Source', 'Moment', 'Topic', 'Game systems', 'Status', 'Priority', 'People asking', 'Reactions', 'Feedback', 'What they liked', 'Team notes', 'Team comments', 'Link'];
-  const cell = (v) => { const s = String(v ?? ''); return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s; };
+// Survey answer for one of the 3 in-game questions ('Liked' | 'Frustrating' | 'Would add').
+function surveyAnswer(it, which) {
+  const f = (it.fields || []).find((x) => shortQ(x.q) === which);
+  return f ? f.a : (which === 'Liked' ? it.liked || '' : '');
+}
+// One row per feedback with every useful field, saved as a real Excel file (.xlsx).
+// Excel opens it with columns already split in any language, and Google Sheets imports it as is.
+function exportSheet(list, label) {
+  const D = 'date', N = 'num';
+  const cols = [
+    ['Date', 16, D], ['Version', 9], ['Channel', 15], ['Author', 16], ['Title', 32], ['Feedback', 60],
+    ['Liked', 30], ['Frustrating', 30], ['Would add', 30], ['Discord tags', 18], ['Topic', 12], ['Game systems', 22],
+    ['Status', 11], ['Priority', 9], ['Team tags', 16], ['Moment', 12], ['Mode', 10], ['Matches played', 9, N], ['Hours played', 9, N], ['People asking', 8, N], ['Reactions', 8, N],
+    ['Replies', 8, N], ['Duplicate of', 22], ['Team notes', 30], ['Team comments', 8, N], ['Attachments', 8, N], ['Link', 40], ['ID', 22],
+  ];
   const rows = list.map((it) => [
-    new Date(it.created_at).toISOString().slice(0, 10), it.build || '', SRC[it.source] || it.source, it.context || '',
-    CAT_ONE[catOf(it)], (it.systems || []).map((x) => SYS[x] || x).join(', '), STATUS[it.status], PRIO[it.priority] || '',
-    asked(it), it.reactions || 0, plainFeedback(it), it.liked || '', it.notes || '', it.team_count || 0, it.url || '',
-  ].map(cell).join(','));
-  const csv = '\uFEFF' + [cols.join(','), ...rows].join('\r\n');
+    new Date(it.created_at), it.build || '', SRC[it.source] || it.source, it.author_name || '', it.title || it.ai_title || '', answersOf(it).length ? plainFeedback(it) : it.content || '',
+    surveyAnswer(it, 'Liked'), surveyAnswer(it, 'Frustrating'), surveyAnswer(it, 'Would add'), (it.forum_tags || []).join(', '),
+    CAT_ONE[catOf(it)] || catOf(it), (it.systems || []).map((x) => SYS[x] || x).join(', '), STATUS[it.status] || it.status, PRIO[it.priority] || '',
+    (it.tags || []).join(', '), it.context || '', it.mode || '', playOf(it)?.matches ?? '', playOf(it)?.hours ?? '', it.duplicate_of ? '' : asked(it), it.reactions || 0,
+    it.replies || 0, it.duplicate_of || '', it.notes || '', it.team_count || 0, (it.attachments || []).length, it.url || '', it.id,
+  ]);
+  const blob = xlsxBlob('Feedback', cols, rows);
   const a = document.createElement('a');
-  a.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8' }));
-  a.download = `dunk-feedback-${label}-${new Date().toISOString().slice(0, 10)}.csv`;
+  a.href = URL.createObjectURL(blob);
+  a.download = `dunk-feedback-${label}-${new Date().toISOString().slice(0, 10)}.xlsx`;
   document.body.appendChild(a); a.click(); a.remove();
   setTimeout(() => URL.revokeObjectURL(a.href), 2000);
-  toast(`Downloaded ${list.length} rows. In Google Sheets: File → Import → Upload.`);
+  toast(`Downloaded ${list.length} feedback. Opens in Excel, or Google Sheets: File → Import → Upload.`);
+}
+
+// ---------- Tiny .xlsx writer (no library: XML files inside an uncompressed zip) ----------
+function xlsxBlob(sheetName, cols, rows) {
+  const x = (v) => String(v).replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F￾￿]/g, '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  const colName = (c) => { let s = ''; for (c++; c; c = Math.floor((c - 1) / 26)) s = String.fromCharCode(65 + ((c - 1) % 26)) + s; return s; };
+  const cell = (v, c, r, type, head) => {
+    const at = colName(c) + r;
+    if (head) return `<c r="${at}" s="1" t="inlineStr"><is><t>${x(v)}</t></is></c>`;
+    if (type === 'date' && v instanceof Date && !isNaN(v)) return `<c r="${at}" s="2"><v>${v.getTime() / 86400000 + 25569}</v></c>`;
+    if (type === 'num' && v !== '' && v != null && isFinite(v)) return `<c r="${at}"><v>${Number(v)}</v></c>`;
+    const s = String(v ?? '').slice(0, 32000);
+    return s ? `<c r="${at}" t="inlineStr"><is><t xml:space="preserve">${x(s)}</t></is></c>` : '';
+  };
+  const lastCol = colName(cols.length - 1), lastRow = rows.length + 1;
+  const sheet = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">
+<sheetViews><sheetView workbookViewId="0"><pane ySplit="1" topLeftCell="A2" activePane="bottomLeft" state="frozen"/></sheetView></sheetViews>
+<cols>${cols.map((c, i) => `<col min="${i + 1}" max="${i + 1}" width="${c[1]}" customWidth="1"/>`).join('')}</cols>
+<sheetData><row r="1">${cols.map((c, i) => cell(c[0], i, 1, '', true)).join('')}</row>
+${rows.map((row, ri) => `<row r="${ri + 2}">${row.map((v, ci) => cell(v, ci, ri + 2, cols[ci][2])).join('')}</row>`).join('\n')}</sheetData>
+<autoFilter ref="A1:${lastCol}${lastRow}"/></worksheet>`;
+  const files = {
+    '[Content_Types].xml': `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/><Override PartName="/xl/worksheets/sheet1.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/><Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/></Types>`,
+    '_rels/.rels': `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/></Relationships>`,
+    'xl/workbook.xml': `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><sheets><sheet name="${x(sheetName)}" sheetId="1" r:id="rId1"/></sheets><definedNames><definedName name="_xlnm._FilterDatabase" localSheetId="0" hidden="1">'${x(sheetName)}'!$A$1:$${lastCol}$${lastRow}</definedName></definedNames></workbook>`,
+    'xl/_rels/workbook.xml.rels': `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet1.xml"/><Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/></Relationships>`,
+    'xl/styles.xml': `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><numFmts count="1"><numFmt numFmtId="164" formatCode="yyyy-mm-dd hh:mm"/></numFmts><fonts count="2"><font><sz val="11"/><name val="Calibri"/></font><font><b/><sz val="11"/><name val="Calibri"/></font></fonts><fills count="2"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/></fill></fills><borders count="1"><border><left/><right/><top/><bottom/><diagonal/></border></borders><cellStyleXfs count="1"><xf numFmtId="0" fontId="0" fillId="0" borderId="0"/></cellStyleXfs><cellXfs count="3"><xf numFmtId="0" fontId="0" fillId="0" borderId="0" xfId="0"/><xf numFmtId="0" fontId="1" fillId="0" borderId="0" xfId="0" applyFont="1"/><xf numFmtId="164" fontId="0" fillId="0" borderId="0" xfId="0" applyNumberFormat="1"/></cellXfs><cellStyles count="1"><cellStyle name="Normal" xfId="0" builtinId="0"/></cellStyles></styleSheet>`,
+    'xl/worksheets/sheet1.xml': sheet,
+  };
+  return new Blob([zipStore(files)], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+}
+let CRC_TABLE;
+function crc32(b) {
+  if (!CRC_TABLE) { CRC_TABLE = new Uint32Array(256); for (let n = 0; n < 256; n++) { let c = n; for (let k = 0; k < 8; k++) c = c & 1 ? 0xEDB88320 ^ (c >>> 1) : c >>> 1; CRC_TABLE[n] = c >>> 0; } }
+  let c = 0xFFFFFFFF; for (let i = 0; i < b.length; i++) c = CRC_TABLE[(c ^ b[i]) & 0xFF] ^ (c >>> 8);
+  return (c ^ 0xFFFFFFFF) >>> 0;
+}
+function zipStore(files) {
+  const enc = new TextEncoder(), parts = [], central = [];
+  let off = 0, n = 0;
+  for (const [name, text] of Object.entries(files)) {
+    const nb = enc.encode(name), data = enc.encode(text), crc = crc32(data);
+    const h = new DataView(new ArrayBuffer(30));
+    h.setUint32(0, 0x04034b50, true); h.setUint16(4, 20, true); h.setUint16(6, 0x0800, true);
+    h.setUint32(14, crc, true); h.setUint32(18, data.length, true); h.setUint32(22, data.length, true); h.setUint16(26, nb.length, true);
+    parts.push(new Uint8Array(h.buffer), nb, data);
+    const c = new DataView(new ArrayBuffer(46));
+    c.setUint32(0, 0x02014b50, true); c.setUint16(4, 20, true); c.setUint16(6, 20, true); c.setUint16(8, 0x0800, true);
+    c.setUint32(16, crc, true); c.setUint32(20, data.length, true); c.setUint32(24, data.length, true); c.setUint16(28, nb.length, true); c.setUint32(42, off, true);
+    central.push(new Uint8Array(c.buffer), nb);
+    off += 30 + nb.length + data.length; n++;
+  }
+  const size = central.reduce((s, p) => s + p.length, 0);
+  const e = new DataView(new ArrayBuffer(22));
+  e.setUint32(0, 0x06054b50, true); e.setUint16(8, n, true); e.setUint16(10, n, true); e.setUint32(12, size, true); e.setUint32(16, off, true);
+  return concat([...parts, ...central, new Uint8Array(e.buffer)]);
+}
+function concat(arrs) {
+  const out = new Uint8Array(arrs.reduce((s, a) => s + a.length, 0));
+  let o = 0; for (const a of arrs) { out.set(a, o); o += a.length; }
+  return out;
 }
 
 // ---------- Saving ----------
@@ -1096,8 +1220,8 @@ document.addEventListener('click', async (e) => {
   const open = t.closest('[data-open]'); if (open && !t.closest('button')) { openItem(open.dataset.open); return; }
   const row = t.closest('.row'); if (row) { openItem(row.dataset.id); return; }
   if (t.id === 'back') { $('#detail').classList.remove('open'); return; }
-  if (t.closest('#exportBtn')) { const list = (state.tab === 'top' ? filtered({ tab: 'all' }).filter((i) => !i.duplicate_of && isOpen(i)) : current.length ? current : filtered()); exportCsv(list, state.tab); return; }
-  if (t.closest('#exportSimple')) { const list = items.filter((i) => !i.duplicate_of && (!state.sBuild || buildOf(i) === state.sBuild)).sort((a, b) => b.created_at.localeCompare(a.created_at)); exportCsv(list, state.sBuild ? 'v' + state.sBuild : 'all'); return; }
+  if (t.closest('#exportBtn')) { const list = (state.tab === 'top' ? filtered({ tab: 'all' }).filter((i) => !i.duplicate_of && isOpen(i)) : current.length ? current : filtered()); exportSheet(list, state.tab); return; }
+  if (t.closest('#exportSimple')) { const list = items.filter((i) => !state.sBuild || buildOf(i) === state.sBuild).sort((a, b) => b.created_at.localeCompare(a.created_at)); exportSheet(list, state.sBuild ? 'v' + state.sBuild : 'all'); return; }
   const dm = t.closest('[data-delmsg]');
   if (dm) {
     try { await call(`/api/chat/${dm.dataset.delmsg}`, { method: 'DELETE', body: '{}' }); const el = document.querySelector(`[data-msg="${dm.dataset.delmsg}"]`); el?.remove(); const it = byId.get(chatFor); if (it) { it.team_count = Math.max(0, (it.team_count || 1) - 1); updateRowTalk(it); } toast('Comment deleted'); }
@@ -1107,7 +1231,7 @@ document.addEventListener('click', async (e) => {
   if (t.id === 'dismissWelcome') { state.welcomed = true; render(); return; }
   if (t.closest('#fToggle')) { state.fOpen = !state.fOpen; render(); return; }
   const unf = t.closest('[data-unf]'); if (unf) { state[unf.dataset.unf] = unf.dataset.unf === 'dups' ? false : ''; render(); return; }
-  if (t.id === 'clearF') { Object.assign(state, { q: '', src: '', status: '', cat: '', build: '', sys: '', voice: '', dups: false }); render(); return; }
+  if (t.id === 'clearF') { Object.assign(state, { q: '', src: '', status: '', cat: '', build: '', sys: '', voice: '', played: '', dups: false }); render(); return; }
   const id = state.sel;
   const sb = t.closest('[data-status]');
   if (sb && id) { await patch(id, { status: sb.dataset.status }, `Marked as ${STATUS[sb.dataset.status]}`); refresh(id); return; }
@@ -1149,6 +1273,7 @@ document.addEventListener('change', async (e) => {
   if (t.id === 'fBuild') return set('build', t.value);
   if (t.id === 'fSys') return set('sys', t.value);
   if (t.id === 'fVoice') return set('voice', t.value);
+  if (t.id === 'fPlayed') return set('played', t.value);
   if (t.id === 'fSort') return set('sort', t.value);
   if (t.id === 'fDups') return set('dups', t.checked);
   if (t.id === 'dSysAdd' && id && t.value) { const it = byId.get(id); await patch(id, { systems: [...(it.systems || []), t.value], systems_by_team: 1 }, 'Tag added'); refresh(id); return; }
