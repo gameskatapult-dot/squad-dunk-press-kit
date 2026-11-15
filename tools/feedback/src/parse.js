@@ -1,7 +1,7 @@
 // Convierte mensajes de Discord en items de feedback.
 
 export const CATEGORIES = {
-  bug: ['bug', 'glitch', 'crash', 'stuck', 'broken', 'error', 'freeze', 'froze', 'doesnt work', "doesn't work", 'not working', 'falls through', 'clip', 'softlock', 'invisible wall', 'janky'],
+  bug: ['bug', 'glitch', 'crash', 'stuck', 'broken', 'error', 'freeze', 'froze', 'doesnt work', "doesn't work", 'not working', 'falls through', 'went through', 'goes through', 'clip', 'teleport', 'invisible', 'softlock', 'invisible wall', 'janky'],
   performance: ['lag', 'fps', 'stutter', 'performance', 'frame', 'slow', 'ping', 'laggy'],
   network: ['disconnect', 'desync', 'server', 'connection', 'matchmaking', 'queue', 'kicked'],
   controls: ['control', 'keybind', 'key bind', 'controller', 'mouse', 'click', 'input', 'sensitivity', 'rebind'],
@@ -48,12 +48,16 @@ export function guessSystems(text) {
 }
 
 // ¿Es una tontera? (vacío, una palabra suelta sin sentido, teclado aplastado, "test"…)
-const EMPTY_ANSWERS = /^(nothing|none|nope|no|nah|idk|i dont know|i don't know|n\/?a|na|ok|okay|k|lol|lmao|xd|test|testing|asdf|hi|hello|yo|-+|\.+|\?+)$/i;
+// "Not answered" es lo que manda el juego cuando el jugador deja la pregunta vacía.
+const EMPTY_ANSWERS = /^(not answered|no answer|nothing|nothing really|nothing much|not really|none|nope|no|nah|idk|i dont know|i don't know|n\/?a|na|ok|okay|k|lol|lmao|xd|test|testing|asdf|hi|hello|yo|-+|\.+|\?+)$/i;
+const EMPTY_WORDS = new Set(['idk', 'nothing', 'none', 'no', 'nah', 'nope', 'na', 'ok', 'okay', 'lol', 'lmao', 'xd', 'test', 'hi', 'hello', 'yo', 'not', 'answered']);
+const normAnswer = (text) => String(text || '').toLowerCase().replace(/<a?:\w+:\d+>/g, ' ').replace(/[^\p{L}\p{N}\s']/gu, ' ').replace(/\s+/g, ' ').trim();
 export function isJunkAnswer(text) {
-  const t = String(text || '').toLowerCase().replace(/<a?:\w+:\d+>/g, ' ').replace(/[^\p{L}\p{N}\s']/gu, ' ').replace(/\s+/g, ' ').trim();
+  const t = normAnswer(text);
   if (!t) return true;
   if (EMPTY_ANSWERS.test(t)) return true;
   const words = t.split(' ');
+  if (words.every((w) => EMPTY_WORDS.has(w))) return true; // "idk idk idk", "nothing nothing"
   if (/(.)\1{3,}/.test(t.replace(/\s/g, '')) && words.length <= 2) return true; // "aaaaa", "lolllll"
   if (words.length === 1) {
     const w = words[0];
@@ -63,6 +67,15 @@ export function isJunkAnswer(text) {
   if (words.length <= 3 && !/[aeiouy]/.test(t)) return true; // "sdfg hjk"
   return false;
 }
+// Respuesta a "¿algo te frustró?" que en realidad dice que no ("nothing really, fun game", "nah all good").
+const NO_PROBLEM = /^(nothing|not really|not much|nah|no|nope|none|idk|all good|everything (was )?(good|fine|great))\b/;
+export function isNoProblem(text) {
+  if (isJunkAnswer(text)) return true;
+  const t = normAnswer(text);
+  return NO_PROBLEM.test(t) && !guessSystems(t).length && !['bug', 'performance', 'network', 'balance', 'controls'].includes(guessCategory(t));
+}
+// Campos del embed que son datos, no respuestas ("Completed matches: 3", "Hours in completed matches: 0.4").
+export const isStatField = (q) => /completed matches|hours/i.test(String(q || ''));
 // Spam = no dice nada útil en ninguna respuesta.
 export function isJunk(texts) {
   const list = (Array.isArray(texts) ? texts : [texts]).filter((x) => x != null);
@@ -73,6 +86,9 @@ export function isJunk(texts) {
 // Se busca por pedazo de palabra para aguantar variantes ("Customisation", "Customization", "Settings & UI").
 const TAG_HINTS = [
   { m: /bug|crash|glitch/, cat: 'bug' },
+  // Tags de gravedad del foro bug-reports ("Critical", "Hardly Playable", "Playable"): siempre es un bug.
+  { m: /playable|critical|severe|blocker|game.?breaking/, cat: 'bug' },
+  { m: /practice/, cat: 'gameplay', systems: ['lobby'] },
   { m: /perform|fps|lag/, cat: 'performance', systems: ['network'] },
   { m: /network|server|connect|matchmak/, cat: 'network', systems: ['network'] },
   { m: /control|keybind|input/, cat: 'controls' },
@@ -227,12 +243,12 @@ export function deriveFields(item, forumTags = item.forum_tags || []) {
   // En los envíos del juego se clasifica solo por las respuestas, no por las preguntas.
   // "Lo que le gustó" se guarda aparte y no cuenta como problema.
   const likedField = item.fields.find((f) => /enjoy|like|fun|best/i.test(f.q));
-  item.liked = likedField && !/^(nothing|none|n\/?a|no|-|\.)$/i.test(likedField.a.trim()) ? likedField.a : null;
-  const problemFields = item.fields.filter((f) => f !== likedField);
+  item.liked = likedField && !isJunkAnswer(likedField.a) ? likedField.a : null;
+  const problemFields = item.fields.filter((f) => f !== likedField && !isStatField(f.q) && !isJunkAnswer(f.a));
   const answers = item.fields.length ? problemFields.map((f) => f.a).join(' ') : item.content;
   item.systems = [...new Set([...guessSystems(`${item.title || ''} ${answers}`), ...systemsFromTags(forumTags)])];
   item.auto_category = guessCategory(`${item.title || ''} ${answers}`, forumTags);
-  const allAnswers = item.fields.length ? item.fields.map((f) => f.a) : [item.title, item.content].filter(Boolean);
+  const allAnswers = item.fields.length ? item.fields.filter((f) => !isStatField(f.q)).map((f) => f.a) : [item.title, item.content].filter(Boolean);
   if (!item.attachments.length && !forumTags.length && isJunk(allAnswers)) item.auto_category = 'spam';
   item.voice = guessVoice(item.fields);
   return item;
@@ -247,4 +263,42 @@ export function isSkippable(msg, botUserId) {
   if (!hasText && !hasStuff) return true;
   if (msg.author?.bot && !isGameEmbed(msg)) return true;
   return false;
+}
+
+// Reglas baratas (sin IA) que corrigen errores típicos del tema que puso la IA.
+// Recibe el item como viene de la base (strings JSON o ya decodificado) y el tema propuesto.
+export function fixTopic(it, topic) {
+  const arr = (v) => (typeof v === 'string' ? JSON.parse(v || '[]') : v || []);
+  const fields = arr(it.fields);
+  const tags = arr(it.forum_tags);
+  const hasStuff = arr(it.attachments).length || tags.length;
+  // 1. El jugador eligió un tag de bug o de gravedad en el foro.
+  if (tagHints(tags).some((h) => h.cat === 'bug')) return 'bug';
+  // 2. Nada útil en ninguna respuesta ("idk idk idk", "???"): spam aunque la IA dudara. Un "GREAT" suelto sigue siendo praise.
+  const answers = fields.length ? fields.filter((f) => !isStatField(f.q)).map((f) => f.a) : [it.title, it.content].filter(Boolean);
+  if (!hasStuff && topic === 'other' && isJunk(answers)) return 'spam';
+  // 3. Encuesta del juego marcada "praise" pero que sí cuenta un problema o pide algo.
+  if (topic === 'praise' && fields.length) {
+    const pain = fields.filter((f) => answerKind(f.q) === 'pain' && !isNoProblem(f.a)).map((f) => f.a).join(' ');
+    const want = fields.filter((f) => answerKind(f.q) === 'want' && !isNoProblem(f.a)).map((f) => f.a).join(' ');
+    const free = fields.filter((f) => /^feedback$/i.test(f.q)).map((f) => f.a).join(' ');
+    if (pain) {
+      const c = guessCategory(pain);
+      return ['praise', 'other', 'idea', 'spam'].includes(c) ? 'gameplay' : c;
+    }
+    if (want) return 'idea';
+    if (free) {
+      const c = guessCategory(free);
+      if (!['praise', 'other', 'spam'].includes(c)) return c;
+    }
+  }
+  return topic;
+}
+
+// "Set a screen" / "pick and roll" es una jugada de básquet, no una pantalla del menú.
+export function fixSystems(text, systems) {
+  const t = clean(text);
+  if (!/(set(ting)?|make|do) (a |some )?screens?|pick and roll|pick n roll/.test(t)) return systems;
+  const menu = SYSTEMS.ui.some((w) => has(t, w));
+  return [...new Set([...systems.filter((s) => menu || s !== 'ui'), 'passing'])];
 }

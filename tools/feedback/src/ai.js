@@ -2,7 +2,7 @@
 // Lee cada feedback y decide el tema, las partes del juego que menciona y si es spam.
 // Lo que el equipo confirma a mano (columna category) nunca se toca: la IA solo llena auto_category y systems.
 
-import { CATEGORIES, SYSTEMS, VOICES, answerKind, guessSystems, systemsFromTags } from './parse.js';
+import { CATEGORIES, SYSTEMS, VOICES, answerKind, guessSystems, systemsFromTags, isStatField, isJunkAnswer, fixTopic, fixSystems } from './parse.js';
 
 // Palabras que casi nunca se usan en otro sentido.
 const SURE = ['dunk', 'layup', 'steal', 'dribble', 'stamina', 'shooting', 'camera'];
@@ -16,7 +16,7 @@ const SYSTEM_HELP = {
   dunk: 'dunking, alley-oops',
   steal: 'stealing, poking, swiping, blocking, taking the ball',
   dribble: 'dribbling, ball handling, crossovers',
-  passing: 'passing, teammates, plays',
+  passing: 'passing, teammates, plays, setting a screen or pick and roll',
   movement: 'running, jumping, diving, pushing, character movement',
   stamina: 'stamina, energy',
   camera: 'the in-game camera, camera angle, field of view',
@@ -53,6 +53,8 @@ topic: exactly one of ${TOPICS.join(', ')}. Pick the MAIN point of the feedback.
 systems: the parts of the game the player EXPLICITLY talks about, from this list (can be empty, usually 0 to 2):
 ${Object.entries(SYSTEM_HELP).map(([k, v]) => `- ${k}: ${v}`).join('\n')}
 Do not guess: if a part is not named or clearly described, leave it out. Never add ui or tutorial unless menus/HUD/settings or the tutorial are mentioned.
+"Set a screen" or "screens" in basketball is a play (passing), not ui.
+"Not answered" means the player skipped that question: ignore it.
 
 voice: only for the in-game survey, which has 3 questions: "What did you enjoy most?" (love), "Was anything frustrating or confusing?" (pain) and "If you could add one thing, what would it be?" (want). For EACH answer, list the parts of the game (same list as systems) that THAT answer talks about. An answer that names no part gets []. For any other feedback, voice is {}.
 
@@ -75,7 +77,7 @@ export function itemText(it) {
   if (it.title) parts.push(`Title: ${it.title}`);
   const tags = typeof it.forum_tags === 'string' ? JSON.parse(it.forum_tags || '[]') : it.forum_tags || [];
   if (tags.length) parts.push(`Tags chosen by the player: ${tags.join(', ')}`);
-  if (fields.length) for (const f of fields) parts.push(`${f.q}: ${f.a}`);
+  if (fields.length) for (const f of fields) { if (!isStatField(f.q)) parts.push(`${f.q}: ${f.a}`); }
   else if (it.content) parts.push(it.content);
   return parts.join('\n').slice(0, 1500);
 }
@@ -141,6 +143,8 @@ export async function classifyPending(env, limit = 10) {
     // Un feedback con imagen o tag del foro nunca es spam.
     const hasStuff = JSON.parse(it.attachments || '[]').length || JSON.parse(it.forum_tags || '[]').length;
     if (r.topic === 'spam' && hasStuff) r.topic = 'other';
+    if (r.topic) r.topic = fixTopic(it, r.topic);
+    if (r.systems) r.systems = fixSystems(itemText(it), r.systems);
     // La IA a veces se olvida de un sistema obvio; se suman los que se nombran literalmente.
     const tagSystems = systemsFromTags(JSON.parse(it.forum_tags || '[]'));
     const systems = it.systems_by_team ? null : r.systems ? [...new Set([...r.systems, ...guessSystems(itemText(it)).filter((s) => SURE.includes(s)), ...tagSystems])] : null;
@@ -151,4 +155,31 @@ export async function classifyPending(env, limit = 10) {
   }
   const left = await env.DB.prepare('SELECT COUNT(*) AS n FROM items WHERE ai_at IS NULL').first();
   return { classified: done, unreadable: failed, left: left?.n ?? null, ...(error ? { error } : {}) };
+}
+
+// Arreglo de una sola vez (sin IA) de las etiquetas que la IA ya puso con los errores de antes:
+// encuestas "praise" con quejas, spam marcado "other", tags de gravedad del foro, "set a screen" como UI
+// y "Not answered" guardado como lo que le gustó. Lee la tabla una vez y escribe solo lo que cambia.
+const RELABEL_KEY = 'relabel_v1';
+export async function relabelOnce(env) {
+  const done = await env.DB.prepare('SELECT value FROM cursors WHERE key = ?').bind(RELABEL_KEY).first();
+  if (done) return null;
+  const rows = await env.DB.prepare('SELECT id, title, content, fields, attachments, forum_tags, auto_category, systems, systems_by_team, liked FROM items WHERE ai_at IS NOT NULL').all();
+  const stmts = [];
+  const changed = { topic: 0, systems: 0, liked: 0 };
+  for (const it of rows.results) {
+    const topic = it.auto_category ? fixTopic(it, it.auto_category) : it.auto_category;
+    const sys = JSON.parse(it.systems || '[]');
+    const newSys = it.systems_by_team ? sys : fixSystems(itemText(it), sys);
+    const liked = it.liked && isJunkAnswer(it.liked) ? null : it.liked;
+    const sysChanged = JSON.stringify(newSys) !== JSON.stringify(sys);
+    if (topic === it.auto_category && !sysChanged && liked === it.liked) continue;
+    if (topic !== it.auto_category) changed.topic++;
+    if (sysChanged) changed.systems++;
+    if (liked !== it.liked) changed.liked++;
+    stmts.push(env.DB.prepare('UPDATE items SET auto_category = ?, systems = ?, liked = ? WHERE id = ?').bind(topic, JSON.stringify(newSys), liked, it.id));
+  }
+  for (let i = 0; i < stmts.length; i += 50) await env.DB.batch(stmts.slice(i, i + 50));
+  await env.DB.prepare('INSERT INTO cursors (key, value) VALUES (?, ?) ON CONFLICT(key) DO UPDATE SET value = excluded.value').bind(RELABEL_KEY, new Date().toISOString()).run();
+  return changed;
 }
