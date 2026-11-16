@@ -1,11 +1,12 @@
-# Prensa DUNK — 2026-11-15
+# Prensa DUNK — 2026-11-16
 
-29 artículos · 25 en el sitio · 11 idiomas
+30 artículos · 25 en el sitio · 11 idiomas
 
 ## Para revisar
 
 | Fecha | Medio | Título | Idioma | Por qué | Estado | id |
 |---|---|---|---|---|---|---|
+| 2026-11-16 | Yahoo Sports | [YouTube Gold: When There Was No Dunk](https://www.dukebasketballreport.com/main/97406/youtube-gold-when-there-was-no-dunk) | en | DUNK + basket + juego | revisar | `0e3b59c1cd` |
 | 2026-11-12 | The Main Street Mouse | [Dunk the Halls Returns: Mickey, Stitch and Angel Bring the Knicks vs. Spurs to Magic Kingd](https://themainstreetmouse.com/2026/11/11/dunk-the-halls-2026-knicks-spurs-christmas-day-magic-kingdom/) | en | DUNK + basket + juego | revisar | `86b9d5ad06` |
 | 2026-11-12 | note | [[Slam Dunk] What if the Shohoku members were office workers? A former salesman seriously a](https://note.com/taku_challenge/n/nfa111566ae24?hl=en) | ja | DUNK + basket + juego | revisar | `9eeef559e2` |
 | 2026-11-11 | youthsportsbusinessreport | [Dunk the Halls Returns for Third Year as ESPN Animates Spurs-Knicks Christmas Finals Remat](https://youthsportsbusinessreport.com/dunk-the-halls-espn-animated-nba-christmas/) | en | DUNK + basket + juego | revisar | `43fc432868` |
