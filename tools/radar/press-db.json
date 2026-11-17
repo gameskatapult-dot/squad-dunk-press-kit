@@ -675,6 +675,21 @@
    "reason": "DUNK + basket + juego",
    "source": "bing: DUNK first-person basketball game",
    "firstSeen": "2026-11-16"
+  },
+  "newsbreak.com/travis-reynolds-395590152/5008360082236-11-foot-dunk-crazy-dunk-session-at-dunk-camp-2022-travis-reynolds": {
+   "id": "6de49871d1",
+   "url": "https://www.newsbreak.com/travis-reynolds-395590152/5008360082236-11-foot-dunk-crazy-dunk-session-at-dunk-camp-2022-travis-reynolds",
+   "outlet": "NewsBreak: Local News & Alerts",
+   "host": "newsbreak.com",
+   "title": "11 FOOT DUNK!! CRAZY DUNK SESSION AT DUNK CAMP 2022!! Travis Reynolds",
+   "desc": "11 FOOT DUNK!! CRAZY DUNK SESSION AT DUNK CAMP 2022!! Travis Reynolds",
+   "image": "https://dcusoqhsuupgy.cloudfront.net/cover/4qmie000_cover_with_play_icon.jpg",
+   "lang": "en",
+   "date": "2026-11-15",
+   "status": "revisar",
+   "reason": "DUNK + basket + juego",
+   "source": "google: DUNK first-person basketball",
+   "firstSeen": "2026-11-17"
   }
  },
  "rejected": {
@@ -741,37 +756,11 @@
   "gn:CBMikgFBVV95cUxOOXJFTVNZOENiWEhYNm9fTXA2UjdQZWhHM3BHMDRRU1BhdS1XcEw0Ukt5SzVJVTJIOEk2a1JLZjg0SEFWX01TM3VuTEFvUkc3aU55a2dFM1JGZzg1cU9hbDRYOHVlMFJ6UWktUGtzcEQteWtlNU54d0JfNUFxWEhPa21oTGxiQ2lhbE5mNnBkZXpwZw": "2026-11-10",
   "gn:CBMiwwFBVV95cUxNSm5aNVpNeWI3cFNGZ3J5VTJRYTEzUXVlRjhYLVp0dUxieXBxWU5jM1dZcUg1dURfVWhXbHVJVEhFVEpGdGZzcG5Vd0FkNzZwNjRKVHdoY3E3R3NlNTZ2UXR6dmFUZDBSSGhfeElhVG92anN0NHJsR3RZdTB2Z2lMNDUzaUVES3hSY0lXcWlZWGF5clFpT3htaEtzd25WTGlFSkhycExQOWh6Q2pCa25rNDFMT1RLU2RVMXlnd285T21MSEU": "2026-11-11",
   "gn:CBMitgFBVV95cUxNaVpueWNUd0hXVjVBZE0xazNOVmszN2JGU0t2Z01QN1ZlaHFfQ3pIeTN4Uk9RUV9CLVdFYmdrbjZuMXBNY3VvbXhjRHU5Y3QxWnhsV0wtSlRNRm1KX0tjQzlKc3NQZDVGTnNJRHZ0NllxdWdzc21pUmg3RzgxQ3BvbGNCYjJCQVJNYU5jRlB4VFJ4bFVNVTlmMDBVb1dDZWNzZlJzc2JteW5kV0haYzdkVUE3TV9iUQ": "2026-11-11",
-  "gn:CBMihAFBVV95cUxNTHJuREQ0TlZuTTNia1NHT2FBamdsMVNFaGtJY0VDVmJtNnp5UXhsM3hoZFJpTFBNZFl1TG1Bc0Jsd0VTRzdaMWRmVUxrRFdaR2w3S3g0UlpxOG1Gc01JM285V0FwTE1TYXQ5dVFGUkJ5enpSVzUxaDRYSk5nYjlSQ0NjeTk": "2026-11-14"
+  "gn:CBMihAFBVV95cUxNTHJuREQ0TlZuTTNia1NHT2FBamdsMVNFaGtJY0VDVmJtNnp5UXhsM3hoZFJpTFBNZFl1TG1Bc0Jsd0VTRzdaMWRmVUxrRFdaR2w3S3g0UlpxOG1Gc01JM285V0FwTE1TYXQ5dVFGUkJ5enpSVzUxaDRYSk5nYjlSQ0NjeTk": "2026-11-14",
+  "sports.yahoo.com/articles/youtube-gold-no-dunk-111100871.html": "2026-11-17",
+  "gn:CBMiywFBVV95cUxNZWxISEswbUNDaGN4Rm12eGJoRzFleFV4QVlyTi1NM2ktNTNCdG1oOWFlQ01oRzA1RTlsc2xISFRSYVg2Z3N1dFJ1anZwR0Y1UFZFX1BmM0N6cjVMSUY2VXdRYk9SUGV2aktINVRSQ1ZvcDROZVZIRnRnR0FuRXVvbElWWm1KZWcyN2k3emdhaVlBM1A2elVfZDBJNnI0b3VuV0U1TENFLVNpY0xxR0ZaRjJsZkVKaW9pNjhCUDFjSHhmMDV6WUVPbmZyZw": "2026-11-17"
  },
  "runs": [
-  {
-   "date": "2026-11-06T15:22:07.734Z",
-   "command": "scan",
-   "found": 1,
-   "requests": 30,
-   "kb": 1205
-  },
-  {
-   "date": "2026-11-06T15:22:07.920Z",
-   "command": "approve",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-11-06T15:22:08.193Z",
-   "command": "site",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-11-07T00:45:57.873Z",
-   "command": "scan",
-   "found": 0,
-   "requests": 29,
-   "kb": 1094
-  },
   {
    "date": "2026-11-07T00:46:46.512Z",
    "command": "add",
@@ -1089,6 +1078,34 @@
   },
   {
    "date": "2026-11-16T17:48:34.730Z",
+   "command": "site",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-17T11:07:07.844Z",
+   "command": "scan",
+   "found": 1,
+   "requests": 31,
+   "kb": 1854
+  },
+  {
+   "date": "2026-11-17T11:07:24.930Z",
+   "command": "scan",
+   "found": 0,
+   "requests": 27,
+   "kb": 498
+  },
+  {
+   "date": "2026-11-17T11:07:25.128Z",
+   "command": "approve",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-17T11:07:25.322Z",
    "command": "site",
    "found": 0,
    "requests": 0,
