@@ -2918,8 +2918,8 @@ team:
   credits: Katapult Games
 
 contacts:
-  - title: Press
-    email: press@dunkthegame.com
+  - title: Contact
+    email: contact@dunkthegame.com
     enabled: true
   - title: Creators
     email: creators@dunkthegame.com

@@ -240,7 +240,7 @@ Play however you choose online, with matches up to 3v3 available for solo player
       <poster>images/features/friendly.jpg</poster>
     </feature-video>
   </feature-videos>
-  <press-email>press@dunkthegame.com</press-email>
+  <press-email>contact@dunkthegame.com</press-email>
   <media-videos/>
   <manifest-screenshots>
     <manifest-screenshot>
@@ -366,8 +366,8 @@ We are Katapult Games and we build games with our community, not just for them. 
   </team>
   <contacts>
     <contact>
-      <name>Press</name>
-      <mail>press@dunkthegame.com</mail>
+      <name>Contact</name>
+      <mail>contact@dunkthegame.com</mail>
     </contact>
     <contact>
       <name>Creators</name>
