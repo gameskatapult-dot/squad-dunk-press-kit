@@ -758,30 +758,10 @@
   "gn:CBMitgFBVV95cUxNaVpueWNUd0hXVjVBZE0xazNOVmszN2JGU0t2Z01QN1ZlaHFfQ3pIeTN4Uk9RUV9CLVdFYmdrbjZuMXBNY3VvbXhjRHU5Y3QxWnhsV0wtSlRNRm1KX0tjQzlKc3NQZDVGTnNJRHZ0NllxdWdzc21pUmg3RzgxQ3BvbGNCYjJCQVJNYU5jRlB4VFJ4bFVNVTlmMDBVb1dDZWNzZlJzc2JteW5kV0haYzdkVUE3TV9iUQ": "2026-11-11",
   "gn:CBMihAFBVV95cUxNTHJuREQ0TlZuTTNia1NHT2FBamdsMVNFaGtJY0VDVmJtNnp5UXhsM3hoZFJpTFBNZFl1TG1Bc0Jsd0VTRzdaMWRmVUxrRFdaR2w3S3g0UlpxOG1Gc01JM285V0FwTE1TYXQ5dVFGUkJ5enpSVzUxaDRYSk5nYjlSQ0NjeTk": "2026-11-14",
   "sports.yahoo.com/articles/youtube-gold-no-dunk-111100871.html": "2026-11-17",
-  "gn:CBMiywFBVV95cUxNZWxISEswbUNDaGN4Rm12eGJoRzFleFV4QVlyTi1NM2ktNTNCdG1oOWFlQ01oRzA1RTlsc2xISFRSYVg2Z3N1dFJ1anZwR0Y1UFZFX1BmM0N6cjVMSUY2VXdRYk9SUGV2aktINVRSQ1ZvcDROZVZIRnRnR0FuRXVvbElWWm1KZWcyN2k3emdhaVlBM1A2elVfZDBJNnI0b3VuV0U1TENFLVNpY0xxR0ZaRjJsZkVKaW9pNjhCUDFjSHhmMDV6WUVPbmZyZw": "2026-11-17"
+  "gn:CBMiywFBVV95cUxNZWxISEswbUNDaGN4Rm12eGJoRzFleFV4QVlyTi1NM2ktNTNCdG1oOWFlQ01oRzA1RTlsc2xISFRSYVg2Z3N1dFJ1anZwR0Y1UFZFX1BmM0N6cjVMSUY2VXdRYk9SUGV2aktINVRSQ1ZvcDROZVZIRnRnR0FuRXVvbElWWm1KZWcyN2k3emdhaVlBM1A2elVfZDBJNnI0b3VuV0U1TENFLVNpY0xxR0ZaRjJsZkVKaW9pNjhCUDFjSHhmMDV6WUVPbmZyZw": "2026-11-17",
+  "gn:CBMiiwFBVV95cUxORjdhZkdxenBDY3RzYWZMeTNid3B1dDZSVnE2NmRVd1pWWnRxa3JaTU90VmdhT2VaMWs4Smh2R0EzSHVHcTJJcjZpSUNhWTBEWWlUZXR6SUtSTjBwc0NjU2lMY0w4NGtPa1dRQzdVekJxdzFJbTRuVHBCdkhEcUZ2T013VlFLYTBOblRj": "2026-11-18"
  },
  "runs": [
-  {
-   "date": "2026-11-07T00:46:46.512Z",
-   "command": "add",
-   "found": 1,
-   "requests": 1,
-   "kb": 120
-  },
-  {
-   "date": "2026-11-07T00:46:47.945Z",
-   "command": "add",
-   "found": 1,
-   "requests": 1,
-   "kb": 278
-  },
-  {
-   "date": "2026-11-07T00:46:48.990Z",
-   "command": "add",
-   "found": 1,
-   "requests": 1,
-   "kb": 14
-  },
   {
    "date": "2026-11-07T00:46:49.281Z",
    "command": "set",
@@ -1106,6 +1086,27 @@
   },
   {
    "date": "2026-11-17T11:07:25.322Z",
+   "command": "site",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-18T13:20:24.101Z",
+   "command": "scan",
+   "found": 0,
+   "requests": 29,
+   "kb": 1092
+  },
+  {
+   "date": "2026-11-18T13:20:27.139Z",
+   "command": "approve",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-18T13:20:27.369Z",
    "command": "site",
    "found": 0,
    "requests": 0,
