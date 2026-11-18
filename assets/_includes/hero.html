@@ -23,7 +23,7 @@
       </a>
       {{/if}}
       {{#if presskit.pressEmail}}
-      <a class="button button--cloud" href="mailto:{{presskit.pressEmail}}" data-analytics-event="Contact Email Click">
+      <a class="button button--cloud" href="#contact">
         <svg class="button__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 5h18v14H3zm2 2v.5l7 4.5 7-4.5V7zm14 2.9-7 4.5-7-4.5V17h14z"/></svg>
         <span data-l10n="ui.contact.title">Contact</span>
       </a>
@@ -33,11 +33,6 @@
       <div><dt data-l10n="ui.quick_facts.developer">Developer</dt><dd data-l10n="ui.quick_facts.developer_value">Katapult Games · Ireland</dd></div>
       <div><dt data-l10n="ui.quick_facts.platform">Platform</dt><dd data-l10n="ui.quick_facts.platform_value">PC · Steam</dd></div>
       <div><dt data-l10n="ui.quick_facts.players">Players</dt><dd data-l10n="ui.quick_facts.players_value">1–6 · online 1v1 to 3v3</dd></div>
-      <div><dt data-l10n="ui.quick_facts.release">Release</dt><dd data-l10n="ui.quick_facts.release_value">To be announced</dd></div>
-      <div><dt data-l10n="ui.quick_facts.price">Price</dt><dd data-l10n="ui.quick_facts.price_value">To be announced</dd></div>
-      {{#if presskit.pressEmail}}
-      <div><dt data-l10n="ui.quick_facts.press">Press</dt><dd><a href="mailto:{{presskit.pressEmail}}" data-analytics-event="Contact Email Click">{{presskit.pressEmail}}</a></dd></div>
-      {{/if}}
     </dl>
   </div>
 </section>
