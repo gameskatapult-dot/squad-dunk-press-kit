@@ -626,7 +626,7 @@
    "image": "https://themainstreetmouse.com/wp-content/uploads/2026/11/DTH3_Pressroom-Featured-Image.webp",
    "lang": "en",
    "date": "2026-11-12",
-   "status": "revisar",
+   "status": "descartado",
    "reason": "DUNK + basket + juego",
    "source": "bing: Katapult Games DUNK",
    "firstSeen": "2026-11-13"
@@ -761,13 +761,6 @@
   "gn:CBMiywFBVV95cUxNZWxISEswbUNDaGN4Rm12eGJoRzFleFV4QVlyTi1NM2ktNTNCdG1oOWFlQ01oRzA1RTlsc2xISFRSYVg2Z3N1dFJ1anZwR0Y1UFZFX1BmM0N6cjVMSUY2VXdRYk9SUGV2aktINVRSQ1ZvcDROZVZIRnRnR0FuRXVvbElWWm1KZWcyN2k3emdhaVlBM1A2elVfZDBJNnI0b3VuV0U1TENFLVNpY0xxR0ZaRjJsZkVKaW9pNjhCUDFjSHhmMDV6WUVPbmZyZw": "2026-11-17"
  },
  "runs": [
-  {
-   "date": "2026-11-07T00:46:46.512Z",
-   "command": "add",
-   "found": 1,
-   "requests": 1,
-   "kb": 120
-  },
   {
    "date": "2026-11-07T00:46:47.945Z",
    "command": "add",
@@ -1107,6 +1100,13 @@
   {
    "date": "2026-11-17T11:07:25.322Z",
    "command": "site",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-18T13:15:02.678Z",
+   "command": "set",
    "found": 0,
    "requests": 0,
    "kb": 0
