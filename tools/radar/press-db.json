@@ -690,6 +690,22 @@
    "reason": "DUNK + basket + juego",
    "source": "google: DUNK first-person basketball",
    "firstSeen": "2026-11-17"
+  },
+  "pro-gamer.fr/dunk-steam-basket-playtest": {
+   "id": "8ec8e03079",
+   "url": "https://pro-gamer.fr/dunk-steam-basket-playtest/",
+   "outlet": "pro-gamer.fr",
+   "host": "pro-gamer.fr",
+   "title": "DUNK sur Steam : basket FPS à 6 joueurs et Playtest ouvert",
+   "desc": "Katapult Games dévoile DUNK sur PC (Steam) : un jeu de basket à la première personne jusqu'à 6 joueurs avec physique réelle et Playtest déjà ouvert.",
+   "image": "https://pro-gamer.fr/wp-content/uploads/2026/11/dunk-steam-featured.webp",
+   "lang": "fr",
+   "date": "2026-11-05",
+   "status": "en-sitio",
+   "reason": "Katapult Games",
+   "source": "google: DUNK jeu basket",
+   "firstSeen": "2026-11-21",
+   "thumb": "press/8ec8e03079.jpg"
   }
  },
  "rejected": {
@@ -759,30 +775,15 @@
   "gn:CBMihAFBVV95cUxNTHJuREQ0TlZuTTNia1NHT2FBamdsMVNFaGtJY0VDVmJtNnp5UXhsM3hoZFJpTFBNZFl1TG1Bc0Jsd0VTRzdaMWRmVUxrRFdaR2w3S3g0UlpxOG1Gc01JM285V0FwTE1TYXQ5dVFGUkJ5enpSVzUxaDRYSk5nYjlSQ0NjeTk": "2026-11-14",
   "sports.yahoo.com/articles/youtube-gold-no-dunk-111100871.html": "2026-11-17",
   "gn:CBMiywFBVV95cUxNZWxISEswbUNDaGN4Rm12eGJoRzFleFV4QVlyTi1NM2ktNTNCdG1oOWFlQ01oRzA1RTlsc2xISFRSYVg2Z3N1dFJ1anZwR0Y1UFZFX1BmM0N6cjVMSUY2VXdRYk9SUGV2aktINVRSQ1ZvcDROZVZIRnRnR0FuRXVvbElWWm1KZWcyN2k3emdhaVlBM1A2elVfZDBJNnI0b3VuV0U1TENFLVNpY0xxR0ZaRjJsZkVKaW9pNjhCUDFjSHhmMDV6WUVPbmZyZw": "2026-11-17",
-  "gn:CBMiiwFBVV95cUxORjdhZkdxenBDY3RzYWZMeTNid3B1dDZSVnE2NmRVd1pWWnRxa3JaTU90VmdhT2VaMWs4Smh2R0EzSHVHcTJJcjZpSUNhWTBEWWlUZXR6SUtSTjBwc0NjU2lMY0w4NGtPa1dRQzdVekJxdzFJbTRuVHBCdkhEcUZ2T013VlFLYTBOblRj": "2026-11-18"
+  "gn:CBMiiwFBVV95cUxORjdhZkdxenBDY3RzYWZMeTNid3B1dDZSVnE2NmRVd1pWWnRxa3JaTU90VmdhT2VaMWs4Smh2R0EzSHVHcTJJcjZpSUNhWTBEWWlUZXR6SUtSTjBwc0NjU2lMY0w4NGtPa1dRQzdVekJxdzFJbTRuVHBCdkhEcUZ2T013VlFLYTBOblRj": "2026-11-18",
+  "rds.ca/basketball/nba/videos/2026/11/21/dunk-completement-rate-la-ballon-presque-au-2e-balcon": "2026-11-21",
+  "gn:CBMiekFVX3lxTE9fZWZqMVRpVXBnRWstY0pUdXZpLXBuc19pb3BtQzJnaGNYQ1VpbmdYYmtNbW84cS1fWUlJb0tmOHNsNXNEQ0lERXA1YWh4V2FmeFdUVjhBQVJlVU5hRnZsNjhtcURpeXRiN19DbFRURExrcEtBaEROajN3": "2026-11-21",
+  "starnewskorea.com/sports/2026/11/18/2026111820292636837": "2026-11-21",
+  "gn:CBMinAFBVV95cUxOMndHTEJRdEJTZ3MzcE1HUlBJU3V5X2Zxb3VoX2lEc0EyVVViU1FRTldiZE1NZXl5NVFQXzY2T3dpWkNKZ3ZPOEtfbU1aY285SU5qSkl3dFJSYjRtZHVvUGQ5Q2VEaFVNR1MwMnN2OWJBTUtTSEtMMFBtWS1pWTY5NU5RNVUwbTFGSThDN3Fqd0RmQVd3c2ZnMC1lTmc": "2026-11-21",
+  "gn:CBMiU0FVX3lxTE9MUzg2blhRLVBiQ25EbVpYZnFzTDB1ZWU4QWlmdjhiMWp4UkFHSGNnUHJHbzZZSWF2NV9SQ2R3NENGbmZZV01uU2Y2bGpNekhUeS1j": "2026-11-21",
+  "gn:CBMiXEFVX3lxTFBxb0RjTWU0YXRPN18xXzJWRERTa0t5WkliclVNb3Z0SFhWdE1aUkQzM0ZoOFEyQlFnUWFCdjRocXc1bXRSWFlYYm94cEtZbnVMa2ViekdZX3hZeWNY": "2026-11-21"
  },
  "runs": [
-  {
-   "date": "2026-11-07T00:46:49.281Z",
-   "command": "set",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-11-07T00:46:49.462Z",
-   "command": "set",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-11-07T00:46:49.623Z",
-   "command": "set",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
   {
    "date": "2026-11-07T00:46:49.802Z",
    "command": "set",
@@ -1107,6 +1108,27 @@
   },
   {
    "date": "2026-11-18T13:20:27.369Z",
+   "command": "site",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-21T12:45:49.930Z",
+   "command": "scan",
+   "found": 1,
+   "requests": 39,
+   "kb": 4014
+  },
+  {
+   "date": "2026-11-21T12:45:52.644Z",
+   "command": "approve",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-21T12:45:54.410Z",
    "command": "site",
    "found": 0,
    "requests": 0,
