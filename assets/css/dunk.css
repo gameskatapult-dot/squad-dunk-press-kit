@@ -322,8 +322,10 @@ a.frame:hover { border-color: #fff; }
 .dunk .social__icon { display: grid; place-items: center; width: 48px; height: 48px; color: var(--bg); background: var(--cream); border-radius: 50%; transition: transform .15s ease, background .15s ease; }
 .social__icon svg { width: 22px; height: 22px; }
 .dunk .social__icon:hover { background: #fff; transform: translateY(-2px); }
-.studio__email { display: inline-block; margin: 0 0 18px; font-family: var(--display); font-size: clamp(22px, 2.1vw, 27px); font-weight: 800; line-height: 1.2; overflow-wrap: anywhere; }
-.studio__line { color: var(--soft); }
+.studio__contact-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 12px; margin-bottom: 8px; }
+.studio__contact-row span { min-width: 64px; color: var(--soft); font-size: 15px; }
+.studio__email { min-width: 0; font-family: var(--display); font-size: clamp(18px, 2vw, 22px); font-weight: 800; line-height: 1.2; overflow-wrap: anywhere; }
+.studio__line { margin-top: 14px; color: var(--soft); }
 .studio__line a { margin-left: 4px; color: var(--cream); font-weight: 800; }
 
 /* Footer */

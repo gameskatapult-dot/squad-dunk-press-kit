@@ -1,6 +1,6 @@
-# Prensa DUNK — 2026-11-18
+# Prensa DUNK — 2026-11-23
 
-30 artículos · 25 en el sitio · 11 idiomas
+31 artículos · 26 en el sitio · 11 idiomas
 
 ## Para revisar
 
@@ -22,6 +22,7 @@
 | Fecha | Medio | Título | Idioma | Por qué | Estado | id |
 |---|---|---|---|---|---|---|
 | 2026-11-10 | Gamerscore Brasil | [DUNK: Basquete Arcade em Primeira Pessoa Chega ao PC com Física Detalhada e Chat de Proxim](https://www.gamerscore.com.br/?p=82210) | pt | Katapult Games | en-sitio | `7f196dc005` |
+| 2026-11-05 | pro-gamer.fr | [DUNK sur Steam : basket FPS à 6 joueurs et Playtest ouvert](https://pro-gamer.fr/dunk-steam-basket-playtest/) | fr | Katapult Games | en-sitio | `8ec8e03079` |
 | 2026-10-31 | GameIt ES | [DUNK llevará el baloncesto en primera persona al competitivo](https://www.gameit.es/dunk-llevara-baloncesto-primera-persona-competitivo-pc-2027/) | es | Katapult Games | en-sitio | `98943b6f9f` |
 | 2026-10-31 | 手机网易网 | [第一人称多人街机篮球新作《友尽大扣篮》官宣，计划于2027年登陆 Steam_手机网易网](https://www.163.com/dy/article/LAJVONM305268R0M.html) | zh | 友尽大扣篮 | en-sitio | `64d3e408dc` |
 | 2026-10-30 | Última Ficha | [DUNK: Simulador de basquete em primeira pessoa é anunciado para PC](https://ultimaficha.com.br/2026/10/30/dunk-simulador-basquete-pc/) | pt | agregado a mano (Katapult) | en-sitio | `85b74a3705` |

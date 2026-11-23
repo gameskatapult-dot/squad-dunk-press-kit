@@ -2918,8 +2918,14 @@ team:
   credits: Katapult Games
 
 contacts:
-  - title: Email
-    email: games.katapult@gmail.com
+  - title: Contact
+    email: contact@dunkthegame.com
+    enabled: true
+  - title: Creators
+    email: creators@dunkthegame.com
+    enabled: true
+  - title: Business
+    email: business@dunkthegame.com
     enabled: true
   - title: Bug Reports
     url: https://discord.com/channels/1352308997365043250/1518207906778972271

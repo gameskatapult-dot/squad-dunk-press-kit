@@ -20,7 +20,10 @@
       <h2 id="contact" class="title title--small" data-l10n="ui.contact.title">Contact</h2>
       {{#each presskit.contacts}}
       {{#if mail}}
-      <a class="studio__email" href="mailto:{{mail}}" data-analytics-event="Contact Email Click">{{mail}}</a>
+      <p class="studio__contact-row">
+        <span {{#ifEq name "Contact"}}data-l10n="ui.nav.sections.contact"{{/ifEq}} {{#ifEq name "Creators"}}data-l10n="ui.nav.sections.creators"{{/ifEq}}>{{name}}</span>
+        <a class="studio__email" href="mailto:{{mail}}" data-analytics-event="Contact Email Click">{{mail}}</a>
+      </p>
       {{/if}}
       {{/each}}
       {{#each presskit.contacts}}
