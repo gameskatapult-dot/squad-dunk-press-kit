@@ -1,19 +1,11 @@
 # Prensa DUNK — 2026-11-23
 
-35 artículos · 27 en el sitio · 11 idiomas
+28 artículos · 28 en el sitio · 11 idiomas
 
 ## Para revisar
 
 | Fecha | Medio | Título | Idioma | Por qué | Estado | id |
 |---|---|---|---|---|---|---|
-| 2026-11-23 | Project N | [Notas da Famitsu: MIX DUNK e Taxi Chaos 2 no Switch](https://projectn.com.br/notas-famitsu-mix-dunk-taxi-chaos-2-21-novembro/) | pt | DUNK + basket + juego | revisar | `84ad6f872e` |
-| 2026-11-16 | Yahoo Sports | [YouTube Gold: When There Was No Dunk](https://www.dukebasketballreport.com/main/97406/youtube-gold-when-there-was-no-dunk) | en | DUNK + basket + juego | revisar | `0e3b59c1cd` |
-| 2026-11-15 | NewsBreak: Local News & Alerts | [11 FOOT DUNK!! CRAZY DUNK SESSION AT DUNK CAMP 2022!! Travis Reynolds](https://www.newsbreak.com/travis-reynolds-395590152/5008360082236-11-foot-dunk-crazy-dunk-session-at-dunk-camp-2022-travis-reynolds) | en | DUNK + basket + juego | revisar | `6de49871d1` |
-| 2026-11-12 | The Main Street Mouse | [Dunk the Halls Returns: Mickey, Stitch and Angel Bring the Knicks vs. Spurs to Magic Kingd](https://themainstreetmouse.com/2026/11/11/dunk-the-halls-2026-knicks-spurs-christmas-day-magic-kingdom/) | en | DUNK + basket + juego | revisar | `86b9d5ad06` |
-| 2026-11-12 | note | [[Slam Dunk] What if the Shohoku members were office workers? A former salesman seriously a](https://note.com/taku_challenge/n/nfa111566ae24?hl=en) | ja | DUNK + basket + juego | revisar | `9eeef559e2` |
-| 2026-11-11 | youthsportsbusinessreport | [Dunk the Halls Returns for Third Year as ESPN Animates Spurs-Knicks Christmas Finals Remat](https://youthsportsbusinessreport.com/dunk-the-halls-espn-animated-nba-christmas/) | en | DUNK + basket + juego | revisar | `43fc432868` |
-| 2026-10-29 | 红板报 on MSN | [MSN](https://www.msn.com/zh-cn/gaming/steam/%E7%AC%AC%E4%B8%80%E4%BA%BA%E7%A7%B0%E5%A4%9A%E4%BA%BA%E8%A1%97%E6%9C%BA%E7%AF%AE%E7%90%83%E6%96%B0%E4%BD%9C-%E5%8F%8B%E5%B0%BD%E5%A4%A7%E6%89%A3%E7%AF%AE-%E5%AE%98%E5%AE%A3-%E8%AE%A1%E5%88%92%E4%BA%8E2027%E5%B9%B4%E7%99%BB%E9%99%86steam/ar-AA2gnJge) | zh | DUNK + basket + juego | revisar | `1b11397719` |
-| 2021-08-06 | Slamdunk.ru | [Розыгрыш от Slam Dunk Kicks совместно с Puma](https://www.slamdunk.ru/news/world/rozygrysh-ot-slam-dunk-kicks-sovmestno-s-puma-r63759/) | ru | DUNK + basket + juego | revisar | `d6253d525e` |
 
 ## Nuevos (sin publicar)
 
@@ -43,6 +35,7 @@
 | 2026-10-29 | 巴哈姆特 GNN | [第一人稱多人籃球運動新作《街頭大灌籃》預定 2027 年登上 Steam 平台](https://gnn.gamer.com.tw/detail.php?sn=314165) | zh | agregado a mano | en-sitio | `7b91f27289` |
 | 2026-10-29 | PChome Online新聞 | [第一人稱多人籃球運動新作《街頭大灌籃》預定 2027 年登上 Steam 平台 - 遊戲新聞](https://news.pchome.com.tw/game/gamer/20261029/index-79326695040363203104.html) | zh | 街頭大灌籃 | en-sitio | `15a0f2aa57` |
 | 2026-10-29 | Mohtm مهتم | [الإعلان رسمياً عن لعبة كرة السلة الجماعية بمنظور الشخص الأول DUNK وقادمة في 2027](https://www.mohtm.com/الإعلان-رسمياً-عن-لعبة-كرة-السلة-الجما/) | ar | agregado a mano | en-sitio | `65e626930d` |
+| 2026-10-29 | MSN (红板报) | [第一人称多人街机篮球新作《友尽大扣篮》官宣 计划于2027年登陆Steam](https://www.msn.com/zh-cn/gaming/steam/%E7%AC%AC%E4%B8%80%E4%BA%BA%E7%A7%B0%E5%A4%9A%E4%BA%BA%E8%A1%97%E6%9C%BA%E7%AF%AE%E7%90%83%E6%96%B0%E4%BD%9C-%E5%8F%8B%E5%B0%BD%E5%A4%A7%E6%89%A3%E7%AF%AE-%E5%AE%98%E5%AE%A3-%E8%AE%A1%E5%88%92%E4%BA%8E2027%E5%B9%B4%E7%99%BB%E9%99%86steam/ar-AA2gnJge) | zh | DUNK + basket + juego | en-sitio | `1b11397719` |
 | 2026-10-28 | PlayGround.ru | [Dunk предлагает баскетбол от первого лица с физикой бросков и матчами до шести игроков](https://www.playground.ru/dunk/news/dunk_predlagaet_basketbol_ot_pervogo_litsa_s_fizikoj_broskov_i_matchami_do_shesti_igrokov-1885652) | ru | noticias de Steam | en-sitio | `c13161199b` |
 | 2026-10-28 | Pizza Fria | [DUNK é anunciado para PC com lançamento previsto para 2027](https://pizzafria.ig.com.br/news/dunk-anunciado-pc-2027/) | pt | Katapult Games | en-sitio | `a04a0ce45c` |
 | 2026-10-28 | Gamers & Games | [Katapult Games anuncia DUNK, jogo de basquete em primeira pessoa para PC](https://www.gamersegames.com.br/2026/10/28/katapult-games-anuncia-dunk-jogo-de-basquete-em-primeira-pessoa-para-pc/) | pt | Katapult Games | en-sitio | `cd021901a7` |

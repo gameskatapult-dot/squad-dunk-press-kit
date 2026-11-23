@@ -579,7 +579,7 @@
    "image": "https://www.slamdunk.ru/uploads/monthly_2021_08/uOmcbAft7J0.jpeg.fd083f4247e78efa6e7830999935d413.jpeg",
    "lang": "ru",
    "date": "2021-08-06",
-   "status": "revisar",
+   "status": "descartado",
    "reason": "DUNK + basket + juego",
    "source": "google: Dunk баскетбол игра",
    "firstSeen": "2026-11-10"
@@ -626,7 +626,7 @@
    "image": "https://themainstreetmouse.com/wp-content/uploads/2026/11/DTH3_Pressroom-Featured-Image.webp",
    "lang": "en",
    "date": "2026-11-12",
-   "status": "revisar",
+   "status": "descartado",
    "reason": "DUNK + basket + juego",
    "source": "bing: Katapult Games DUNK",
    "firstSeen": "2026-11-13"
@@ -641,7 +641,7 @@
    "image": "https://youthsportsbusinessreport.com/wp-content/uploads/2026/11/Youth-Sports-Business-Report-YSBR-Journal-News-Kids-Parents-NIL-ESPN.png",
    "lang": "en",
    "date": "2026-11-11",
-   "status": "revisar",
+   "status": "descartado",
    "reason": "DUNK + basket + juego",
    "source": "bing: Katapult Games DUNK",
    "firstSeen": "2026-11-14"
@@ -656,7 +656,7 @@
    "image": "https://assets.st-note.com/production/uploads/images/335200052/rectangle_large_type_2_f2b3bbb5efccf283f1fd6f3aac552266.jpg?fit=bounds&quality=85&width=1280",
    "lang": "ja",
    "date": "2026-11-12",
-   "status": "revisar",
+   "status": "descartado",
    "reason": "DUNK + basket + juego",
    "source": "bing: DUNK first-person basketball game",
    "firstSeen": "2026-11-14"
@@ -671,7 +671,7 @@
    "image": "https://s.yimg.com/lo/mysterio/api/1df42e020ef35fa44ddd000b46535c420200c32c326e4968be2418198f8751e0/lightyear_networkapi/resizefill_w1200_h675%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fsb_nation_articles_115%2Facdd5109a69eb11db28e86adcdcf9836.jpg",
    "lang": "en",
    "date": "2026-11-16",
-   "status": "revisar",
+   "status": "descartado",
    "reason": "DUNK + basket + juego",
    "source": "bing: DUNK first-person basketball game",
    "firstSeen": "2026-11-16"
@@ -686,7 +686,7 @@
    "image": "https://dcusoqhsuupgy.cloudfront.net/cover/4qmie000_cover_with_play_icon.jpg",
    "lang": "en",
    "date": "2026-11-15",
-   "status": "revisar",
+   "status": "descartado",
    "reason": "DUNK + basket + juego",
    "source": "google: DUNK first-person basketball",
    "firstSeen": "2026-11-17"
@@ -726,12 +726,12 @@
   "msn.com/gaming/steam/%E7%AC%AC%E4%B8%80%E4%BA%BA%E7%A7%B0%E5%A4%9A%E4%BA%BA%E8%A1%97%E6%9C%BA%E7%AF%AE%E7%90%83%E6%96%B0%E4%BD%9C-%E5%8F%8B%E5%B0%BD%E5%A4%A7%E6%89%A3%E7%AF%AE-%E5%AE%98%E5%AE%A3-%E8%AE%A1%E5%88%92%E4%BA%8E2027%E5%B9%B4%E7%99%BB%E9%99%86steam/ar-AA2gnJge": {
    "id": "1b11397719",
    "url": "https://www.msn.com/zh-cn/gaming/steam/%E7%AC%AC%E4%B8%80%E4%BA%BA%E7%A7%B0%E5%A4%9A%E4%BA%BA%E8%A1%97%E6%9C%BA%E7%AF%AE%E7%90%83%E6%96%B0%E4%BD%9C-%E5%8F%8B%E5%B0%BD%E5%A4%A7%E6%89%A3%E7%AF%AE-%E5%AE%98%E5%AE%A3-%E8%AE%A1%E5%88%92%E4%BA%8E2027%E5%B9%B4%E7%99%BB%E9%99%86steam/ar-AA2gnJge",
-   "outlet": "红板报 on MSN",
+   "outlet": "MSN (红板报)",
    "host": "msn.com",
-   "title": "MSN",
+   "title": "第一人称多人街机篮球新作《友尽大扣篮》官宣 计划于2027年登陆Steam",
    "lang": "zh",
    "date": "2026-10-29",
-   "status": "revisar",
+   "status": "en-sitio",
    "reason": "DUNK + basket + juego",
    "source": "bing: Katapult Games DUNK",
    "firstSeen": "2026-11-23"
@@ -746,7 +746,7 @@
    "image": "https://projectn.com.br/wp-content/uploads/2026/11/MIX-DUNK-KING-OF-BASKETBALL-Famitsu-1.jpg",
    "lang": "pt",
    "date": "2026-11-23",
-   "status": "revisar",
+   "status": "descartado",
    "reason": "DUNK + basket + juego",
    "source": "google: DUNK jogo basquete",
    "firstSeen": "2026-11-23"
@@ -831,62 +831,6 @@
   "gn:CBMifEFVX3lxTFB4MFNESFB0dGlacjlDWXAtZkZIMElYWm4wVGJqelBZamdETkZsNWxtQ3NTUHdBaXc4OThBYzlNT1QwOV9FODktN1hHcElXUTUweVN0WVJOZDQ5TlNlWXlmZDd5dWZpSVZfOUhsOUFCeW1ZcnFuMS1SSDNqR3U": "2026-11-23"
  },
  "runs": [
-  {
-   "date": "2026-11-07T00:46:50.339Z",
-   "command": "set",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-11-07T00:46:50.522Z",
-   "command": "set",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-11-07T00:47:38.007Z",
-   "command": "site",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-11-07T00:48:08.806Z",
-   "command": "site",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-11-07T00:48:22.171Z",
-   "command": "add",
-   "found": 1,
-   "requests": 1,
-   "kb": 470
-  },
-  {
-   "date": "2026-11-07T00:48:22.361Z",
-   "command": "set",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-11-07T00:48:23.072Z",
-   "command": "site",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-11-07T00:48:33.132Z",
-   "command": "site",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
   {
    "date": "2026-11-07T12:14:39.476Z",
    "command": "scan",
@@ -1176,6 +1120,62 @@
   },
   {
    "date": "2026-11-23T20:34:39.717Z",
+   "command": "site",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-23T21:08:27.123Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-23T21:08:27.296Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-23T21:08:27.469Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-23T21:08:27.650Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-23T21:08:27.821Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-23T21:08:28.007Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-23T21:08:28.186Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-23T21:08:45.052Z",
    "command": "site",
    "found": 0,
    "requests": 0,
