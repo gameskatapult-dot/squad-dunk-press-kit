@@ -1,12 +1,14 @@
-# Prensa DUNK — 2026-11-23
+# Prensa DUNK — 2026-11-24
 
-35 artículos · 27 en el sitio · 11 idiomas
+37 artículos · 27 en el sitio · 11 idiomas
 
 ## Para revisar
 
 | Fecha | Medio | Título | Idioma | Por qué | Estado | id |
 |---|---|---|---|---|---|---|
 | 2026-11-23 | Project N | [Notas da Famitsu: MIX DUNK e Taxi Chaos 2 no Switch](https://projectn.com.br/notas-famitsu-mix-dunk-taxi-chaos-2-21-novembro/) | pt | DUNK + basket + juego | revisar | `84ad6f872e` |
+| 2026-11-21 | selecta bisso | [DUNK-SPIEL: Toulouse verwandelt Basketball im Grand Palais des Sports in ein wahres Spekta](https://selectabisso.com/de/Dunk-Game-Toulouse-verwandelt-Basketball-im-Grand-Palais-des-Sports-in-eine-wahre-Show./) | de | DUNK + basket + juego | revisar | `2221d61c8a` |
+| 2026-11-21 | selecta bisso | [DUNK GAME : Toulouse transforme le basket en véritable show au Grand Palais des Sports !](https://selectabisso.com/dunk-game-toulouse-transforme-le-basket-en-veritable-show-au-grand-palais-des-sports/) | fr | DUNK + basket + juego | revisar | `b7a278a244` |
 | 2026-11-16 | Yahoo Sports | [YouTube Gold: When There Was No Dunk](https://www.dukebasketballreport.com/main/97406/youtube-gold-when-there-was-no-dunk) | en | DUNK + basket + juego | revisar | `0e3b59c1cd` |
 | 2026-11-15 | NewsBreak: Local News & Alerts | [11 FOOT DUNK!! CRAZY DUNK SESSION AT DUNK CAMP 2022!! Travis Reynolds](https://www.newsbreak.com/travis-reynolds-395590152/5008360082236-11-foot-dunk-crazy-dunk-session-at-dunk-camp-2022-travis-reynolds) | en | DUNK + basket + juego | revisar | `6de49871d1` |
 | 2026-11-12 | The Main Street Mouse | [Dunk the Halls Returns: Mickey, Stitch and Angel Bring the Knicks vs. Spurs to Magic Kingd](https://themainstreetmouse.com/2026/11/11/dunk-the-halls-2026-knicks-spurs-christmas-day-magic-kingdom/) | en | DUNK + basket + juego | revisar | `86b9d5ad06` |

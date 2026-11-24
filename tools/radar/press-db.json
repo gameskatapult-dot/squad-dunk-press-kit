@@ -750,6 +750,36 @@
    "reason": "DUNK + basket + juego",
    "source": "google: DUNK jogo basquete",
    "firstSeen": "2026-11-23"
+  },
+  "selectabisso.com/Dunk-Game-Toulouse-verwandelt-Basketball-im-Grand-Palais-des-Sports-in-eine-wahre-Show.": {
+   "id": "2221d61c8a",
+   "url": "https://selectabisso.com/de/Dunk-Game-Toulouse-verwandelt-Basketball-im-Grand-Palais-des-Sports-in-eine-wahre-Show./",
+   "outlet": "selecta bisso",
+   "host": "selectabisso.com",
+   "title": "DUNK-SPIEL: Toulouse verwandelt Basketball im Grand Palais des Sports in ein wahres Spektakel!",
+   "desc": "Am Freitag, dem 13. November 2026, pulsierte der Grand Palais des Sports in Toulouse im Rhythmus des DUNK GAME. Dieses Event fand im Rahmen des Spiels des Toulouse Basketball Club (@toulousebasketball_club) gegen das Team Chartres statt und lockte über 3700 Zuschauer an. Das von Rémi Abdoulaye und s",
+   "image": "https://selectabisso.com/wp-content/uploads/2026/11/www.selectabisso.com-05902-scaled.jpg",
+   "lang": "de",
+   "date": "2026-11-21",
+   "status": "revisar",
+   "reason": "DUNK + basket + juego",
+   "source": "google: DUNK Basketball Spiel",
+   "firstSeen": "2026-11-24"
+  },
+  "selectabisso.com/dunk-game-toulouse-transforme-le-basket-en-veritable-show-au-grand-palais-des-sports": {
+   "id": "b7a278a244",
+   "url": "https://selectabisso.com/dunk-game-toulouse-transforme-le-basket-en-veritable-show-au-grand-palais-des-sports/",
+   "outlet": "selecta bisso",
+   "host": "selectabisso.com",
+   "title": "DUNK GAME : Toulouse transforme le basket en véritable show au Grand Palais des Sports !",
+   "desc": "Le vendredi 13 novembre 2026, le Grand Palais des Sports de Toulouse a vibré au rythme du DUNK GAME. Cet event était organisé lors du match du Toulouse Basketball Club (@toulousebasketball_club) contre l’équipe de Chartres, qui a rassemblé plus de 3700 spectateurs. Le concept, imaginé par Rémi Abdou",
+   "image": "https://selectabisso.com/wp-content/uploads/2026/11/www.selectabisso.com-05902-scaled.jpg",
+   "lang": "fr",
+   "date": "2026-11-21",
+   "status": "revisar",
+   "reason": "DUNK + basket + juego",
+   "source": "google: DUNK jeu basket",
+   "firstSeen": "2026-11-24"
   }
  },
  "rejected": {
@@ -828,37 +858,11 @@
   "gn:CBMiXEFVX3lxTFBxb0RjTWU0YXRPN18xXzJWRERTa0t5WkliclVNb3Z0SFhWdE1aUkQzM0ZoOFEyQlFnUWFCdjRocXc1bXRSWFlYYm94cEtZbnVMa2ViekdZX3hZeWNY": "2026-11-21",
   "thedroidguy.com/gta-6-painkiller-supplier-mission-1294265": "2026-11-23",
   "thedroidguy.com/gta-6-slam-dunk-mission-1294128": "2026-11-23",
-  "gn:CBMifEFVX3lxTFB4MFNESFB0dGlacjlDWXAtZkZIMElYWm4wVGJqelBZamdETkZsNWxtQ3NTUHdBaXc4OThBYzlNT1QwOV9FODktN1hHcElXUTUweVN0WVJOZDQ5TlNlWXlmZDd5dWZpSVZfOUhsOUFCeW1ZcnFuMS1SSDNqR3U": "2026-11-23"
+  "gn:CBMifEFVX3lxTFB4MFNESFB0dGlacjlDWXAtZkZIMElYWm4wVGJqelBZamdETkZsNWxtQ3NTUHdBaXc4OThBYzlNT1QwOV9FODktN1hHcElXUTUweVN0WVJOZDQ5TlNlWXlmZDd5dWZpSVZfOUhsOUFCeW1ZcnFuMS1SSDNqR3U": "2026-11-23",
+  "gn:CBMitwFBVV95cUxPbHBZc0ZVZ2dXT09obEJzUkZTVmJkaTFxWGlXWGNXYVRUM1JTTXo4YXlWNGpXY1Y1cEtqT2czdmtWMXE5eDJRQjhTWVY2Z3BtWFlnQWZEN0hBXzlvWjJrR2xMNUZtQ0RxMndPYVM4WmVDQ0dYRkJEQjQ3TVR5STgxN1l0TDBNNmtpbHdFUDNtQ0F4Y1l6ZEpyWUI1V1U0UlY2b2JOX1hod1FJRzloMTF3ekhxc2MwdFE": "2026-11-24",
+  "gn:CBMirwFBVV95cUxOMGw4cU1RUWFYczZhb1RwUXZISlpPTldRRU96R0ZHSW1Dbnh2YzNlcWFKQU9ybUVrSnFSRmtPS0lHanRBb29PTDdwS2ZxRXZhZ3FrdWpEYW5lUGdQdk9HeUE3Nk4yTGRoRjZXN0JnV09fNzBHeDlTcGZRTUh4OUUyclhDUzVQanlfaloyQWQyazJ1cWpwazE5WExzdDk5YWRkNkVJT2NyZUY5TXN4VTZF": "2026-11-24"
  },
  "runs": [
-  {
-   "date": "2026-11-07T00:46:50.339Z",
-   "command": "set",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-11-07T00:46:50.522Z",
-   "command": "set",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-11-07T00:47:38.007Z",
-   "command": "site",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-11-07T00:48:08.806Z",
-   "command": "site",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
   {
    "date": "2026-11-07T00:48:22.171Z",
    "command": "add",
@@ -1180,6 +1184,34 @@
    "found": 0,
    "requests": 0,
    "kb": 0
+  },
+  {
+   "date": "2026-11-24T12:06:23.136Z",
+   "command": "scan",
+   "found": 2,
+   "requests": 33,
+   "kb": 2757
+  },
+  {
+   "date": "2026-11-24T12:06:23.333Z",
+   "command": "approve",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-24T12:06:23.572Z",
+   "command": "site",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-24T12:06:39.154Z",
+   "command": "scan",
+   "found": 0,
+   "requests": 27,
+   "kb": 782
   }
  ]
 }
