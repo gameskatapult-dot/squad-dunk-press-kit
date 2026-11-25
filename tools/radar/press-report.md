@@ -1,11 +1,12 @@
-# Prensa DUNK — 2026-11-24
+# Prensa DUNK — 2026-11-25
 
-37 artículos · 27 en el sitio · 11 idiomas
+38 artículos · 27 en el sitio · 11 idiomas
 
 ## Para revisar
 
 | Fecha | Medio | Título | Idioma | Por qué | Estado | id |
 |---|---|---|---|---|---|---|
+| 2026-11-24 | note | ["SLAM DUNK" Hanamichi Sakuragi: A Genius at Turning Things into Passions? - To Nationals i](https://note.com/firm_murre4709/n/n4731b6c1ac78?hl=en) | ja | DUNK + basket + juego | revisar | `eba96523a5` |
 | 2026-11-23 | Project N | [Notas da Famitsu: MIX DUNK e Taxi Chaos 2 no Switch](https://projectn.com.br/notas-famitsu-mix-dunk-taxi-chaos-2-21-novembro/) | pt | DUNK + basket + juego | revisar | `84ad6f872e` |
 | 2026-11-21 | selecta bisso | [DUNK-SPIEL: Toulouse verwandelt Basketball im Grand Palais des Sports in ein wahres Spekta](https://selectabisso.com/de/Dunk-Game-Toulouse-verwandelt-Basketball-im-Grand-Palais-des-Sports-in-eine-wahre-Show./) | de | DUNK + basket + juego | revisar | `2221d61c8a` |
 | 2026-11-21 | selecta bisso | [DUNK GAME : Toulouse transforme le basket en véritable show au Grand Palais des Sports !](https://selectabisso.com/dunk-game-toulouse-transforme-le-basket-en-veritable-show-au-grand-palais-des-sports/) | fr | DUNK + basket + juego | revisar | `b7a278a244` |

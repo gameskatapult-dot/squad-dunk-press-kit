@@ -780,6 +780,37 @@
    "reason": "DUNK + basket + juego",
    "source": "google: DUNK jeu basket",
    "firstSeen": "2026-11-24"
+  },
+  "gamerscore.com.br/dunk-basquete-arcade-em-primeira-pessoa-chega-ao-pc-com-fisica-detalhada-e-chat-de-proximidade": {
+   "id": "a368e75639",
+   "url": "https://www.gamerscore.com.br/dunk-basquete-arcade-em-primeira-pessoa-chega-ao-pc-com-fisica-detalhada-e-chat-de-proximidade/",
+   "outlet": "gamerscore",
+   "host": "gamerscore.com.br",
+   "title": "DUNK: Basquete Arcade em Primeira Pessoa Chega ao PC com Física Detalhada e Chat de Proximidade",
+   "desc": "DUNK, o novo game de basquete arcade em primeira pessoa da Katapult Games, chega ao PC em 2027, prometendo física realista e multiplayer intenso.",
+   "image": "https://www.gamerscore.com.br/wp-content/uploads/2026/10/DUNK.jpg",
+   "lang": "pt",
+   "date": "2026-11-10",
+   "status": "descartado",
+   "reason": "Katapult Games",
+   "source": "bing: Katapult Games DUNK",
+   "firstSeen": "2026-11-25",
+   "thumb": "press/a368e75639.jpg"
+  },
+  "note.com/firm_murre4709/n/n4731b6c1ac78?hl=en": {
+   "id": "eba96523a5",
+   "url": "https://note.com/firm_murre4709/n/n4731b6c1ac78?hl=en",
+   "outlet": "note",
+   "host": "note.com",
+   "title": "\"SLAM DUNK\" Hanamichi Sakuragi: A Genius at Turning Things into Passions? - To Nationals in 4 Months, Analyzed Through \"Drive\" (Motivation 3.0)｜ショウ　精神科勤務の作業療法士",
+   "desc": "One of my favorite manga is \"SLAM DUNK.\" I bought the newly restructured edition of the manga, and I went to see the movie as well.Hanamichi Sakuragi, a high school freshman with no basketball experience, stands on the national tournament stage after just four months.I think there were plenty of",
+   "image": "https://assets.st-note.com/production/uploads/images/340161883/rectangle_large_type_2_c186786307fbd7fb6f8eab0c5d1565a9.jpg?fit=bounds&quality=85&width=1280",
+   "lang": "ja",
+   "date": "2026-11-24",
+   "status": "revisar",
+   "reason": "DUNK + basket + juego",
+   "source": "bing: DUNK first-person basketball game",
+   "firstSeen": "2026-11-25"
   }
  },
  "rejected": {
@@ -860,44 +891,10 @@
   "thedroidguy.com/gta-6-slam-dunk-mission-1294128": "2026-11-23",
   "gn:CBMifEFVX3lxTFB4MFNESFB0dGlacjlDWXAtZkZIMElYWm4wVGJqelBZamdETkZsNWxtQ3NTUHdBaXc4OThBYzlNT1QwOV9FODktN1hHcElXUTUweVN0WVJOZDQ5TlNlWXlmZDd5dWZpSVZfOUhsOUFCeW1ZcnFuMS1SSDNqR3U": "2026-11-23",
   "gn:CBMitwFBVV95cUxPbHBZc0ZVZ2dXT09obEJzUkZTVmJkaTFxWGlXWGNXYVRUM1JTTXo4YXlWNGpXY1Y1cEtqT2czdmtWMXE5eDJRQjhTWVY2Z3BtWFlnQWZEN0hBXzlvWjJrR2xMNUZtQ0RxMndPYVM4WmVDQ0dYRkJEQjQ3TVR5STgxN1l0TDBNNmtpbHdFUDNtQ0F4Y1l6ZEpyWUI1V1U0UlY2b2JOX1hod1FJRzloMTF3ekhxc2MwdFE": "2026-11-24",
-  "gn:CBMirwFBVV95cUxOMGw4cU1RUWFYczZhb1RwUXZISlpPTldRRU96R0ZHSW1Dbnh2YzNlcWFKQU9ybUVrSnFSRmtPS0lHanRBb29PTDdwS2ZxRXZhZ3FrdWpEYW5lUGdQdk9HeUE3Nk4yTGRoRjZXN0JnV09fNzBHeDlTcGZRTUh4OUUyclhDUzVQanlfaloyQWQyazJ1cWpwazE5WExzdDk5YWRkNkVJT2NyZUY5TXN4VTZF": "2026-11-24"
+  "gn:CBMirwFBVV95cUxOMGw4cU1RUWFYczZhb1RwUXZISlpPTldRRU96R0ZHSW1Dbnh2YzNlcWFKQU9ybUVrSnFSRmtPS0lHanRBb29PTDdwS2ZxRXZhZ3FrdWpEYW5lUGdQdk9HeUE3Nk4yTGRoRjZXN0JnV09fNzBHeDlTcGZRTUh4OUUyclhDUzVQanlfaloyQWQyazJ1cWpwazE5WExzdDk5YWRkNkVJT2NyZUY5TXN4VTZF": "2026-11-24",
+  "gn:CBMinAFBVV95cUxOa09TV18yY3k0S01kdXlMV0pxR3dPREk5bHZLakplVFRST1BxYkFpV0FVb29UQkcwbkxCcGloNUFrR1NZelQ4TGZrMV83LUJ4TlhSSzJTdklTc2R5YlNIbXN0Um1RdlZrNUp4UVd3Zml6bUl0QUhkbGlIZUtKemVXX1Fiamx2OTVTQ0xDMFdIRkdaa2NZUVlTTXFvNEQ": "2026-11-25"
  },
  "runs": [
-  {
-   "date": "2026-11-07T00:48:22.171Z",
-   "command": "add",
-   "found": 1,
-   "requests": 1,
-   "kb": 470
-  },
-  {
-   "date": "2026-11-07T00:48:22.361Z",
-   "command": "set",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-11-07T00:48:23.072Z",
-   "command": "site",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-11-07T00:48:33.132Z",
-   "command": "site",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-11-07T12:14:39.476Z",
-   "command": "scan",
-   "found": 0,
-   "requests": 29,
-   "kb": 1089
-  },
   {
    "date": "2026-11-07T12:14:39.698Z",
    "command": "approve",
@@ -1212,6 +1209,41 @@
    "found": 0,
    "requests": 27,
    "kb": 782
+  },
+  {
+   "date": "2026-11-25T14:54:09.633Z",
+   "command": "scan",
+   "found": 2,
+   "requests": 32,
+   "kb": 2072
+  },
+  {
+   "date": "2026-11-25T14:54:13.062Z",
+   "command": "approve",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-25T14:54:16.042Z",
+   "command": "site",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-25T14:54:27.820Z",
+   "command": "set",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-25T14:54:27.999Z",
+   "command": "site",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
   }
  ]
 }
