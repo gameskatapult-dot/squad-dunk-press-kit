@@ -892,37 +892,10 @@
   "gn:CBMifEFVX3lxTFB4MFNESFB0dGlacjlDWXAtZkZIMElYWm4wVGJqelBZamdETkZsNWxtQ3NTUHdBaXc4OThBYzlNT1QwOV9FODktN1hHcElXUTUweVN0WVJOZDQ5TlNlWXlmZDd5dWZpSVZfOUhsOUFCeW1ZcnFuMS1SSDNqR3U": "2026-11-23",
   "gn:CBMitwFBVV95cUxPbHBZc0ZVZ2dXT09obEJzUkZTVmJkaTFxWGlXWGNXYVRUM1JTTXo4YXlWNGpXY1Y1cEtqT2czdmtWMXE5eDJRQjhTWVY2Z3BtWFlnQWZEN0hBXzlvWjJrR2xMNUZtQ0RxMndPYVM4WmVDQ0dYRkJEQjQ3TVR5STgxN1l0TDBNNmtpbHdFUDNtQ0F4Y1l6ZEpyWUI1V1U0UlY2b2JOX1hod1FJRzloMTF3ekhxc2MwdFE": "2026-11-24",
   "gn:CBMirwFBVV95cUxOMGw4cU1RUWFYczZhb1RwUXZISlpPTldRRU96R0ZHSW1Dbnh2YzNlcWFKQU9ybUVrSnFSRmtPS0lHanRBb29PTDdwS2ZxRXZhZ3FrdWpEYW5lUGdQdk9HeUE3Nk4yTGRoRjZXN0JnV09fNzBHeDlTcGZRTUh4OUUyclhDUzVQanlfaloyQWQyazJ1cWpwazE5WExzdDk5YWRkNkVJT2NyZUY5TXN4VTZF": "2026-11-24",
-  "gn:CBMinAFBVV95cUxOa09TV18yY3k0S01kdXlMV0pxR3dPREk5bHZLakplVFRST1BxYkFpV0FVb29UQkcwbkxCcGloNUFrR1NZelQ4TGZrMV83LUJ4TlhSSzJTdklTc2R5YlNIbXN0Um1RdlZrNUp4UVd3Zml6bUl0QUhkbGlIZUtKemVXX1Fiamx2OTVTQ0xDMFdIRkdaa2NZUVlTTXFvNEQ": "2026-11-25"
+  "gn:CBMinAFBVV95cUxOa09TV18yY3k0S01kdXlMV0pxR3dPREk5bHZLakplVFRST1BxYkFpV0FVb29UQkcwbkxCcGloNUFrR1NZelQ4TGZrMV83LUJ4TlhSSzJTdklTc2R5YlNIbXN0Um1RdlZrNUp4UVd3Zml6bUl0QUhkbGlIZUtKemVXX1Fiamx2OTVTQ0xDMFdIRkdaa2NZUVlTTXFvNEQ": "2026-11-25",
+  "gn:CBMiiAFBVV95cUxNYVREV0Q3a1o5VGJGbWdDVGZqNFpqVlYyNFdzWnJTX2ZVQ2k0V2xOazJ1bTcxU0FranhRMDFKQXRWdzJnLVp0Wm5vRHFETm4zckg2TkJSYjdpWFR2RFh1TGtRRGk5TEF4a1ZPb3ota1NOd2VfYWFKYURvckdqTTlvNlNwTzB6cUNI": "2026-11-26"
  },
  "runs": [
-  {
-   "date": "2026-11-07T12:14:39.698Z",
-   "command": "approve",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-11-07T12:14:39.916Z",
-   "command": "site",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-11-07T15:11:25.629Z",
-   "command": "scan",
-   "found": 0,
-   "requests": 22,
-   "kb": 1028
-  },
-  {
-   "date": "2026-11-08T12:20:07.610Z",
-   "command": "scan",
-   "found": 0,
-   "requests": 30,
-   "kb": 1195
-  },
   {
    "date": "2026-11-08T12:20:07.818Z",
    "command": "approve",
@@ -1240,6 +1213,34 @@
   },
   {
    "date": "2026-11-25T14:54:27.999Z",
+   "command": "site",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-26T11:02:14.572Z",
+   "command": "scan",
+   "found": 0,
+   "requests": 27,
+   "kb": 603
+  },
+  {
+   "date": "2026-11-26T11:02:32.524Z",
+   "command": "scan",
+   "found": 0,
+   "requests": 29,
+   "kb": 1337
+  },
+  {
+   "date": "2026-11-26T11:02:32.719Z",
+   "command": "approve",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-26T11:02:32.925Z",
    "command": "site",
    "found": 0,
    "requests": 0,
