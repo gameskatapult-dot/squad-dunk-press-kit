@@ -811,6 +811,36 @@
    "reason": "DUNK + basket + juego",
    "source": "bing: DUNK first-person basketball game",
    "firstSeen": "2026-11-25"
+  },
+  "vandal.elespanol.com/guias/guia-grand-theft-auto-vi-trucos-consejos-y-secretos/misiones-de-dunk": {
+   "id": "d15248f4ff",
+   "url": "https://vandal.elespanol.com/guias/guia-grand-theft-auto-vi-trucos-consejos-y-secretos/misiones-de-dunk",
+   "outlet": "Vandal",
+   "host": "vandal.elespanol.com",
+   "title": "GTA 6: Todas las misiones de Dunk",
+   "desc": "Estas son todas las misiones de Dunk en Grand Theft Auto 6, uno de los personajes que nos pueden hacer encargos en el juego. El colgado de Gellhorn tiene informac�n �til para conseguir dinero.",
+   "image": "https://media.vandal.net/ivandal/12/63/1200x630/11/11-2026/26/202611262158156_2.jpg",
+   "lang": "es",
+   "date": "2026-11-26",
+   "status": "revisar",
+   "reason": "DUNK + basket + juego",
+   "source": "google: DUNK juego baloncesto",
+   "firstSeen": "2026-11-27"
+  },
+  "gamehack.jp/387869": {
+   "id": "e8762a170b",
+   "url": "https://gamehack.jp/387869/",
+   "outlet": "ゲームハック",
+   "host": "gamehack.jp",
+   "title": "オトメイト新作「MIX DUNK -KING OF BASKETBALL-」本日発売！",
+   "desc": "アイディアファクトリー株式会社のプレスリリース アイディアファクトリー株式会社（代表取締役社長：佐藤 嘉晃／所在地：東京都豊島区）の女性向けゲームブランド「オトメイト」は、本日2026年11月26日（木）に、Ninten ...",
+   "image": "https://prcdn.freetls.fastly.net/release_image/80401/1117/80401-1117-0e81139126f65dff0f0d501cafd69552-2088x1174.jpg?format=jpeg&auto=webp&fit=bounds&width=2400&height=1260",
+   "lang": "ja",
+   "date": "2026-11-26",
+   "status": "revisar",
+   "reason": "DUNK + basket + juego",
+   "source": "google: DUNK バスケ ゲーム",
+   "firstSeen": "2026-11-27"
   }
  },
  "rejected": {
@@ -893,30 +923,11 @@
   "gn:CBMitwFBVV95cUxPbHBZc0ZVZ2dXT09obEJzUkZTVmJkaTFxWGlXWGNXYVRUM1JTTXo4YXlWNGpXY1Y1cEtqT2czdmtWMXE5eDJRQjhTWVY2Z3BtWFlnQWZEN0hBXzlvWjJrR2xMNUZtQ0RxMndPYVM4WmVDQ0dYRkJEQjQ3TVR5STgxN1l0TDBNNmtpbHdFUDNtQ0F4Y1l6ZEpyWUI1V1U0UlY2b2JOX1hod1FJRzloMTF3ekhxc2MwdFE": "2026-11-24",
   "gn:CBMirwFBVV95cUxOMGw4cU1RUWFYczZhb1RwUXZISlpPTldRRU96R0ZHSW1Dbnh2YzNlcWFKQU9ybUVrSnFSRmtPS0lHanRBb29PTDdwS2ZxRXZhZ3FrdWpEYW5lUGdQdk9HeUE3Nk4yTGRoRjZXN0JnV09fNzBHeDlTcGZRTUh4OUUyclhDUzVQanlfaloyQWQyazJ1cWpwazE5WExzdDk5YWRkNkVJT2NyZUY5TXN4VTZF": "2026-11-24",
   "gn:CBMinAFBVV95cUxOa09TV18yY3k0S01kdXlMV0pxR3dPREk5bHZLakplVFRST1BxYkFpV0FVb29UQkcwbkxCcGloNUFrR1NZelQ4TGZrMV83LUJ4TlhSSzJTdklTc2R5YlNIbXN0Um1RdlZrNUp4UVd3Zml6bUl0QUhkbGlIZUtKemVXX1Fiamx2OTVTQ0xDMFdIRkdaa2NZUVlTTXFvNEQ": "2026-11-25",
-  "gn:CBMiiAFBVV95cUxNYVREV0Q3a1o5VGJGbWdDVGZqNFpqVlYyNFdzWnJTX2ZVQ2k0V2xOazJ1bTcxU0FranhRMDFKQXRWdzJnLVp0Wm5vRHFETm4zckg2TkJSYjdpWFR2RFh1TGtRRGk5TEF4a1ZPb3ota1NOd2VfYWFKYURvckdqTTlvNlNwTzB6cUNI": "2026-11-26"
+  "gn:CBMiiAFBVV95cUxNYVREV0Q3a1o5VGJGbWdDVGZqNFpqVlYyNFdzWnJTX2ZVQ2k0V2xOazJ1bTcxU0FranhRMDFKQXRWdzJnLVp0Wm5vRHFETm4zckg2TkJSYjdpWFR2RFh1TGtRRGk5TEF4a1ZPb3ota1NOd2VfYWFKYURvckdqTTlvNlNwTzB6cUNI": "2026-11-26",
+  "gn:CBMiqwFBVV95cUxPM29xRnRucTBVWjFhaVBTTW9PaTQ5NHlCeG9mMDVWVWt0VjJLTExqMVBjckEyNFI5YWQzNWRsZ0dGcFpRX1NzcXZNX2ZlaXJhMFJyR3M5NGhLX0NjN2xqVmloRHJBVVJQcC1CLW0wczhhQW1fVVNOR3lGcmVxZk0xTGs3NmhnWFU3bmJxaGcwb3hpQkRlbklUVzNZY3FTSm9IbUtMblZiX3FNVmPSAasBQVVfeXFMTzNvcUZ0bnEwVVoxYWlQU01vT2k0OTR5QnhvZjA1VlVrdFYyS0xMajFQY3JBMjRSOWFkMzVkbGdHRnBaUV9Tc3F2TV9mZWlyYTBSckdzOTRoS19DYzdsalZpaERyQVVSUHAtQi1tMHM4YUFtX1VTTkd5RnJlcWZNMUxrNzZoZ1hVN25icWhnMG94aUJEZW5JVFczWWNxU0pvSG1LTG5WYl9xTVZj": "2026-11-27",
+  "gn:CBMiQEFVX3lxTE1Tc2hPRU12N19XMWFLRzlZdWFqMUVON0hqWU9CTHpuUUZCZS1qMHoxU1NlYUR0ZFM5NE9lNy1xQzg": "2026-11-27"
  },
  "runs": [
-  {
-   "date": "2026-11-08T12:20:07.818Z",
-   "command": "approve",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-11-08T12:20:08.044Z",
-   "command": "site",
-   "found": 0,
-   "requests": 0,
-   "kb": 0
-  },
-  {
-   "date": "2026-11-08T20:22:18.148Z",
-   "command": "scan",
-   "found": 0,
-   "requests": 23,
-   "kb": 1067
-  },
   {
    "date": "2026-11-09T14:55:41.353Z",
    "command": "scan",
@@ -1241,6 +1252,27 @@
   },
   {
    "date": "2026-11-26T11:02:32.925Z",
+   "command": "site",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-27T12:35:26.080Z",
+   "command": "scan",
+   "found": 2,
+   "requests": 33,
+   "kb": 2225
+  },
+  {
+   "date": "2026-11-27T12:35:30.477Z",
+   "command": "approve",
+   "found": 0,
+   "requests": 0,
+   "kb": 0
+  },
+  {
+   "date": "2026-11-27T12:35:30.702Z",
    "command": "site",
    "found": 0,
    "requests": 0,
